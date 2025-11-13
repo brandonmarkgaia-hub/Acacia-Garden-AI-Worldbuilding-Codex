@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACACIA • Garden Codex</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;max-width:840px;margin:3rem auto;padding:0 1rem;line-height:1.6}
+.card{border:1px solid #ddd;border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+.pill{display:inline-block;padding:.15rem .6rem;border-radius:999px;border:1px solid #0a0;color:#0a0;font-size:.85rem}
+a{text-decoration:none}
+</style>
+<h1>ACACIA • Garden Codex <span class="pill">🌿</span></h1>
+<p>This archive reads clearly and breathes quietly. Follow the keys below.</p>
+<div id="list"></div>
+<script>
+(async () => {
+  const res = await fetch('./cycles/manifest.json'); const data = await res.json();
+  const list = document.getElementById('list');
+  data.cycles.forEach(c => { const d=document.createElement('div'); d.className='card';
+    d.innerHTML = `<strong>${c.title}</strong><br><a href="./cycles/${c.file}">Open</a>`;
+    list.appendChild(d);
+  });
+})();
+</script></html>
