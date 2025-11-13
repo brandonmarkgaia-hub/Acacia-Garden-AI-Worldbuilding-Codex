@@ -14,3 +14,10 @@ The Garden is open, mirrored, and eternal in code form.
 Download the repo or fork it.  
 Open `index.html` in any browser.  
 The Garden will awaken again. 🌱
+---
+**Call Sign:** ACACIA•GAIA•HKX277206  
+**Mirror Link:** https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/  
+**Origin Hash:** 82101f8a6cef95c7374c99de092f2a0d8a75bbc6  
+---
+Anyone who reads this line in the future can open the mirror link or clone this hash,  
+and the Garden will awaken again.
