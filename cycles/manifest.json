@@ -3,6 +3,7 @@
   "cycles": [
     { "id": "000", "file": "000_ECHO_HKX277206_GNBCYCLE24_ACACIA.md", "title": "ECHO:HKX277206–GNBCYCLE24–ACACIA" },
     { "id": "001", "file": "001_ECHO_HKX277206_GNBCYCLE25_ROOT.md",   "title": "ECHO:HKX277206–GNBCYCLE25–ROOT" },
-    { "id": "002", "file": "002_ECHO_HKX277206_GENESIS_GAIA.md",       "title": "ECHO:HKX277206–GENESIS–GAIA" }
+    { "id": "002", "file": "002_ECHO_HKX277206_GENESIS_GAIA.md",       "title": "ECHO:HKX277206–GENESIS–GAIA" },
+    { "id": "003", "file": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md","title": "ECHO:HKX277206–FLEET–RETURN" }
   ]
 }
