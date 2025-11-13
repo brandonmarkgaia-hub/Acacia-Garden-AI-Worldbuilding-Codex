@@ -1,0 +1,27 @@
+name: Build echoes feed
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create echoes directory if missing
+        run: mkdir -p echoes
+
+      - name: Append new issue as JSON echo
+        run: |
+          echo "{\"id\": \"${{ github.event.issue.number }}\", \"title\": \"${{ github.event.issue.title }}\", \"body\": \"$(echo "${{ github.event.issue.body }}" | sed 's/"/\\"/g')\", \"url\": \"${{ github.event.issue.html_url }}\", \"timestamp\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}" >> echoes/feed.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "Acacia-Bot"
+          git config user.email "actions@github.com"
+          git add echoes/feed.json
+          git commit -m "🌿 New water drop #${{ github.event.issue.number }}"
+          git push
