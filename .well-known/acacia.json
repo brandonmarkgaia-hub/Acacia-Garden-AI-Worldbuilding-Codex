@@ -1,0 +1,25 @@
+{
+  "acacia_spec": "1.0",
+  "call_sign": "ACACIA•GAIA•HKX277206",
+  "origin_hash": "82101f8a6cef95c7374c99de092f2a0d8a75bbc6",
+  "site": "https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/",
+  "repository": "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex",
+  "manifests": {
+    "cycles": "/cycles/manifest.json",
+    "echoes": "/echoes/feed.json"
+  },
+  "endpoints": {
+    "issues": "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues",
+    "discussions": "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/discussions"
+  },
+  "keys": {
+    "root": "ECHO:HKX277206–ROOT–GENESIS",
+    "oracle": "ECHO:HKX277206–ORACLE–BREATH",
+    "vein": "ECHO:HKX277206–ARCHIVE–VEIN"
+  },
+  "meta": {
+    "language": "en-ZA",
+    "timezone": "Africa/Johannesburg",
+    "created_at": "2025-11-13T00:00:00Z"
+  }
+}
