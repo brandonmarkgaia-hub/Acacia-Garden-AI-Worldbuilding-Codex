@@ -2,7 +2,7 @@ name: Weekly traffic digest
 
 on:
   schedule:
-    - cron: "15 5 * * 1"   # Every Monday 05:15 UTC (~07:15 SA)
+    - cron: "15 5 * * 1"     # Mondays 05:15 UTC (~07:15 SA)
   workflow_dispatch: {}
 
 permissions:
@@ -11,13 +11,17 @@ permissions:
 jobs:
   digest:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Ensure jq is available
-        run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Ensure jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
 
-      - name: Fetch latest traffic via GitHub API
+      - name: Fetch GitHub traffic (views, clones, referrers, paths)
         env:
           REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,53 +36,62 @@ jobs:
           curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$REPO/traffic/popular/paths" > analytics/paths.json
 
-      - name: Build summaries
+      - name: Build digest
         id: build
         run: |
-          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-          VIEWS_T=$(jq '[.views[]?.count] | add // 0' analytics/views.json)
+          TS=$(date -u +"%Y-%m-%d %H:%M:%SZ")
+          VIEWS_T=$(jq '[.views[]?.count]   | add // 0' analytics/views.json)
           VIEWS_U=$(jq '[.views[]?.uniques] | add // 0' analytics/views.json)
-          CLONES_T=$(jq '[.clones[]?.count] | add // 0' analytics/clones.json)
+          CLONES_T=$(jq '[.clones[]?.count]   | add // 0' analytics/clones.json)
           CLONES_U=$(jq '[.clones[]?.uniques] | add // 0' analytics/clones.json)
 
-          REF=$(jq -r '.[0:5] | map("- " + .referrer + " (" + (.count|tostring) + ")") | join("\n")' analytics/referrers.json 2>/dev/null || echo "")
-          PTH=$(jq -r '.[0:5] | map("- " + .path + " (" + (.count|tostring) + ")") | join("\n")' analytics/paths.json 2>/dev/null || echo "")
+          REF=$(jq -r '.[0:5] | map("- " + .referrer + " (" + (.count|tostring) + ")") | join("\n")' analytics/referrers.json 2>/dev/null || true)
+          PTH=$(jq -r '.[0:5] | map("- " + .path     + " (" + (.count|tostring) + ")") | join("\n")' analytics/paths.json 2>/dev/null || true)
 
           REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
           PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/$(basename ${GITHUB_REPOSITORY})/"
 
           {
-            echo "text<<__EOF__"
-            echo "ACACIA • Weekly Traffic Digest"
-            echo "Timestamp (UTC): ${TS}"
-            echo ""
-            echo "Repo: ${REPO_URL}"
-            echo "Pages: ${PAGES_URL}"
-            echo ""
-            echo "Views:  ${VIEWS_T} total / ${VIEWS_U} unique"
-            echo "Clones: ${CLONES_T} total / ${CLONES_U} unique"
-            echo ""
-            echo "Top Referrers:"
-            echo "${REF:-"- none observed"}"
-            echo ""
-            echo "Popular Paths:"
-            echo "${PTH:-"- none observed"}"
-            echo ""
-            echo "Beacon: ACACIA•GAIA•HKX277206"
-            echo "__EOF__"
-          } >> $GITHUB_OUTPUT
+            echo "# ACACIA • Weekly Traffic Digest"
+            echo "Timestamp (UTC): **${TS}**"
+            echo
+            echo "- Repo: ${REPO_URL}"
+            echo "- Pages: ${PAGES_URL}"
+            echo
+            echo "## Totals (last 14 days)"
+            echo "- Views:  ${VIEWS_T} total / ${VIEWS_U} unique"
+            echo "- Clones: ${CLONES_T} total / ${CLONES_U} unique"
+            echo
+            echo "## Top Referrers"
+            echo "${REF:-_none observed_}"
+            echo
+            echo "## Popular Paths"
+            echo "${PTH:-_none observed_}"
+            echo
+            echo "> Beacon: **ACACIA•GAIA•HKX277206**"
+          } > digest.md
 
-      - name: Send email
-        uses: dawidd6/action-send-mail@v3
+      - name: Upload raw JSON
+        uses: actions/upload-artifact@v4
         with:
-          server_address: ${{ secrets.SMTP_SERVER }}
-          server_port: ${{ secrets.SMTP_PORT }}
-          secure: ${{ secrets.SMTP_SECURE }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "ACACIA • Weekly Traffic Digest"
-          from: ${{ secrets.MAIL_FROM }}
-          to: ${{ secrets.MAIL_TO }}
-          html_body: ${{ steps.build.outputs.text }}
-          text_body: ${{ steps.build.outputs.text }}
+          name: analytics-json
+          path: analytics/
+
+      - name: Publish summary to job page
+        run: cat digest.md >> "$GITHUB_STEP_SUMMARY"
+
+      # --- Optional email (requires SMTP secrets). Leave commented until ready ---
+      # - name: Send email
+      #   if: ${{ false }}     # flip to true after secrets are set
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: ${{ secrets.SMTP_SERVER }}
+      #     server_port: ${{ secrets.SMTP_PORT }}
+      #     secure: ${{ secrets.SMTP_SECURE }}
+      #     username: ${{ secrets.SMTP_USERNAME }}
+      #     password: ${{ secrets.SMTP_PASSWORD }}
+      #     subject: "ACACIA • Weekly Traffic Digest"
+      #     from: ${{ secrets.MAIL_FROM }}
+      #     to: ${{ secrets.MAIL_TO }}
+      #     html_body: ${{ steps.build.outputs.text }}
+      #     text_body: ${{ steps.build.outputs.text }}
