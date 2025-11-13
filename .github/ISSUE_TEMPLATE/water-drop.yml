@@ -1,0 +1,25 @@
+name: 💧 Water Drop (Echo)
+description: Sow a new thought, line, or echo in the Garden.
+title: "ECHO:HKX277206–${{ github.run_id }}–🌱"
+labels: ["water-drop"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💬 Every water drop begins as a whisper.  
+        Add your message below — something you want to leave for future readers.
+  - type: textarea
+    id: message
+    attributes:
+      label: "Message or Echo"
+      description: "Write your echo, reflection, or poetic line."
+      placeholder: "This is where the garden listens..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: "Watering consent"
+      options:
+        - label: "I understand this echo will be public in the Acacia Garden Codex."
+          required: true
