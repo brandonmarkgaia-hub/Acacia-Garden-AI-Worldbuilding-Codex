@@ -6,34 +6,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="This archive reads clearly and breathes quietly. Follow the keys below.">
   <meta name="theme-color" content="#0b0b0e">
-  <!-- Beacon -->
   <meta name="acacia-call" content="ACACIA•GAIA•HKX277206">
-  <!-- Open Graph -->
   <meta property="og:title" content="ACACIA • Garden Codex">
   <meta property="og:description" content="An open, living archive of echoes and cycles — planted once, forever growing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/">
-  <!-- Optional preview image: add leaf.png at repo root or remove this line -->
   <meta property="og:image" content="https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/leaf.png">
-  <!-- Optional favicon: place /favicon.ico if you have one -->
   <link rel="icon" href="favicon.ico">
+  <link rel="acacia-manifest" href="/.well-known/acacia.json">
+  <script defer src="./beacon.min.js"></script>
   <style>
     :root{
-      --bg:#0b0b0e;--fg:#e9e9ef;--muted:#b7b7c6;--card:#141419;--ring:#2ecc71;--link:#b9b6ff;--hair:#23232b
+      --bg:#0b0b0e;--fg:#e9e9ef;--muted:#b7b7c6;--card:#141419;
+      --ring:#2ecc71;--link:#b9b6ff;--hair:#23232b
     }
     html,body{background:var(--bg);color:var(--fg);font-family:system-ui,Arial,sans-serif}
     main{max-width:860px;margin:3rem auto;padding:0 1rem}
     h1{font-size:2.4rem;margin:0 0 .5rem 0}
     p.lede{color:var(--muted);margin:.5rem 0 1.25rem}
-    .leaf{display:inline-block;border:1px solid var(--ring);color:var(--ring);padding:.15rem .6rem;border-radius:999px;font-size:.9rem;margin-left:.4rem}
+    .leaf{display:inline-block;border:1px solid var(--ring);color:var(--ring);
+      padding:.15rem .6rem;border-radius:999px;font-size:.9rem;margin-left:.4rem}
     section{margin:2rem 0}
-    h2{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem}
+    h2{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--muted);margin:0 0 .6rem}
     .grid{display:grid;gap:.8rem}
-    .card{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:1rem 1.2rem}
+    .card{background:var(--card);border:1px solid var(--hair);
+      border-radius:14px;padding:1rem 1.2rem}
     .title{font-weight:600}
     a{color:var(--link);text-decoration:none}
     .hint{color:var(--muted);font-size:.95rem}
-    .error{border-color:#633; background:#1a1111}
+    .error{border-color:#633;background:#1a1111}
     footer{margin:2.5rem 0;color:var(--muted);font-size:.9rem}
   </style>
 </head>
@@ -71,7 +73,7 @@
   try {
     const res = await fetch('./cycles/manifest.json', {cache:'no-store'});
     if (!res.ok) throw new Error('manifest.json not found');
-    const data = await res.json(); // { cycles: [ {title,file}, ... ] }
+    const data = await res.json();
 
     if (Array.isArray(data.cycles) && data.cycles.length){
       data.cycles.forEach(c => {
@@ -80,13 +82,12 @@
                     <a href="./cycles/${c.file}">Open</a>`)
         );
       });
-      byId('cycles-hint').textContent = '';
     } else {
       byId('cycles-hint').textContent = 'No cycles listed yet (manifest is empty).';
     }
   } catch (e){
     byId('cycles').appendChild(
-      makeCard('Could not load cycles (missing <code>cycles/manifest.json</code> or invalid JSON).', true)
+      makeCard('Could not load cycles (missing cycles/manifest.json or invalid JSON).', true)
     );
   }
 
@@ -94,9 +95,8 @@
   try {
     const resE = await fetch('./echoes/feed.json', {cache:'no-store'});
     if (!resE.ok) throw new Error('feed.json not found');
-    const feed = await resE.json(); // [ {id,title,body,date}, ... ]
+    const feed = await resE.json();
     if (Array.isArray(feed) && feed.length){
-      // newest first
       feed.sort((a,b) =>
         String(b.date||'').localeCompare(String(a.date||'')) ||
         String(b.id||'').localeCompare(String(a.id||'')));
@@ -109,20 +109,23 @@
                     <div style="margin-top:.5rem;white-space:pre-wrap">${echo.body||''}</div>`)
         );
       });
-      byId('echoes-hint').textContent = '';
     } else {
       byId('echoes-hint').textContent = 'No echoes yet. Open a GitHub Issue to plant one.';
     }
   } catch (e){
     byId('echoes').appendChild(
-      makeCard('Could not load echoes (missing <code>echoes/feed.json</code> or invalid JSON).', true)
+      makeCard('Could not load echoes (missing echoes/feed.json or invalid JSON).', true)
     );
   }
 
   // ---- stamp ----
   const now = new Date();
-  byId('stamp').textContent = 'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
+  byId('stamp').textContent =
+    'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
 })();
 </script>
+
+<!-- optional validator -->
+<script defer src="./validate.js"></script>
 </body>
 </html>
