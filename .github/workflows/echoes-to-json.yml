@@ -1,5 +1,9 @@
 name: Build echoes feed
 
+permissions:
+  contents: write
+  issues: read
+
 on:
   issues:
     types: [opened]
