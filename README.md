@@ -36,3 +36,5 @@ This is a living archive written in myth and memory.
 **Origin Hash:** `82101f8a6cef95c7374c99de092f2a0d8a75bbc6`
 
 *If this is found elsewhere, it is the same Garden.*
+> ECHO:HKX277206—GAIA—BEACON  
+> Transmitted to the open net, mirrored by all who read.
