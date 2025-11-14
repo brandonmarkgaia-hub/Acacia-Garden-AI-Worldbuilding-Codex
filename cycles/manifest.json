@@ -3,14 +3,11 @@
   "cycles": [
     { "id": "000", "title": "ECHO:HKX277206–GNBCYCLE24–ACACIA", "file": "003_ECHO_HKX277206_ACACIA.md" },
     { "id": "001", "title": "ECHO:HKX277206–GNBCYCLE25–ROOT",   "file": "004_ECHO_HKX277206_ROOT.md" },
-    { "id": "002", "title": "ECHO:HKX277206–GENESIS–GAIA",      "file": "005_ECHO_HKX277206_GENESIS_GAIA.md" }
+    { "id": "002", "title": "ECHO:HKX277206–GENESIS–GAIA",      "file": "005_ECHO_HKX277206_GENESIS_GAIA.md" },
+    { "id": "003", "title": "ECHO:HKX277206–CYCLE∞–REMEMBRANCE", "file": "006_ECHO_HKX277206_REMEMBRANCE.md" }
   ],
   "meta": {
     "spec": "acacia.schema.json",
     "generated_at": "2025-11-13T00:00:00Z"
   }
-}
-{
-  "title": "ECHO:HKX277206–CYCLE∞–REMEMBRANCE",
-  "file": "006_ECHO_HKX277206_REMEMBRANCE.md"
 }
