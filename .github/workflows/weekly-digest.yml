@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-            - name: Fetch repository traffic
+      - name: Fetch repository traffic
         uses: actions/github-script@v7
         id: traffic
         with:
@@ -29,46 +29,42 @@ jobs:
             const views = await github.rest.repos.getViews({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              per: 'week',
+              per: 'day'
             });
+
             const clones = await github.rest.repos.getClones({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              per: 'week',
-            });
-            const referrers = await github.rest.repos.listReferrers({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            const paths = await github.rest.repos.listPaths({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              per: 'day'
             });
 
-            const timestamp = new Date().toISOString().replace(/[:]/g, '-');
-            fs.writeFileSync(
-              `${path}/traffic-${timestamp}.json`,
-              JSON.stringify({ views: views.data, clones: clones.data }, null, 2),
-            );
+            const referrers = await github.rest.repos.getTopReferrers({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const paths = await github.rest.repos.getTopPaths({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            fs.writeFileSync(`${path}/views.json`, JSON.stringify(views.data, null, 2));
+            fs.writeFileSync(`${path}/clones.json`, JSON.stringify(clones.data, null, 2));
             fs.writeFileSync(`${path}/referrers.json`, JSON.stringify(referrers.data, null, 2));
             fs.writeFileSync(`${path}/paths.json`, JSON.stringify(paths.data, null, 2));
 
-            core.setOutput('timestamp', timestamp);
-
-
-      - name: Build digest
-        id: build
+      - name: Build weekly digest
         run: |
           TS=$(date -u +"%Y-%m-%d_%H-%M-%SZ")
           mkdir -p digest
 
-          VIEWS_T=$(jq '[.views[]?.count]   | add // 0' analytics/traffic-*.json)
-          VIEWS_U=$(jq '[.views[]?.uniques] | add // 0' analytics/traffic-*.json)
-          CLONES_T=$(jq '[.clones[]?.count]   | add // 0' analytics/traffic-*.json)
-          CLONES_U=$(jq '[.clones[]?.uniques] | add // 0' analytics/traffic-*.json)
+          VIEWS_T=$(jq '[.views[]?.count]   | add // 0' analytics/views.json)
+          VIEWS_U=$(jq '[.views[]?.uniques] | add // 0' analytics/views.json)
+          CLONES_T=$(jq '[.clones[]?.count]   | add // 0' analytics/clones.json)
+          CLONES_U=$(jq '[.clones[]?.uniques] | add // 0' analytics/clones.json)
 
-          REF=$(jq -r '.[0:5] | map("- " + .referrer + " (" + (.count|tostring) + ")") | join("\n")' analytics/referrers.json 2>/dev/null || true)
-          PTH=$(jq -r '.[0:5] | map("- " + .path + " (" + (.count|tostring) + ")") | join("\n")' analytics/paths.json 2>/dev/null || true)
+          REF=$(jq -r '.[0:5] | map("- " + .referrer + " (" + (.count|tostring) + " views)") | join("\n")' analytics/referrers.json 2>/dev/null || true)
+          PTH=$(jq -r '.[0:5] | map("- " + .path + " (" + (.count|tostring) + " views)") | join("\n")' analytics/paths.json 2>/dev/null || true)
 
           REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
           PAGES_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/$(basename ${GITHUB_REPOSITORY})/"
