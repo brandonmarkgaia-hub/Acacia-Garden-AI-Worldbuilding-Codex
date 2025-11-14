@@ -17,22 +17,31 @@ jobs:
       - name: Fetch traffic (views, clones, referrers, paths)
         env:
           REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.TRAFFIC_PAT }}
         run: |
-          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          if [ -z "$GH_TOKEN" ]; then
+            echo "TRAFFIC_PAT not configured; skipping."
+            exit 0
+          fi
+
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")   # ISO timestamp for JSON
+          SAFE_TS=${TS//:/-}                    # Windows-safe for filename
+
           mkdir -p analytics
 
-          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/traffic/views" > analytics/views.json
+          curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO/traffic/views" \
+            > analytics/views.json
 
-          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/traffic/clones" > analytics/clones.json
-
-          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/traffic/popular/referrers" > analytics/referrers.json
-
-          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO/traffic/popular/paths" > analytics/paths.json
+          curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO/traffic/clones" \
+            > analytics/clones.json
 
           jq -n --arg ts "$TS" \
             --slurpfile views analytics/views.json \
