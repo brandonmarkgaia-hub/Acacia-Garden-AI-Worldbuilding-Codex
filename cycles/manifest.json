@@ -4,12 +4,7 @@
       "cycle": 0,
       "label": "PROTO-LAYER",
       "echoes": [
-        {,
-          {
-  "title": "The Unbitten Hook",
-  "slug": "ring-scar-unbitten-hook",
-  "file": "000/RING_SCAR_UNBITTEN_HOOK.md"
-        }
+        {
           "title": "The Mirror Break",
           "slug": "ring-scar-mirror-break",
           "file": "000/RING_SCAR_MIRROR_BREAK.md"
@@ -32,7 +27,7 @@
         {
           "title": "Proto-Echo Threshold",
           "slug": "proto-echo",
-          "file": "000/001_PROTO_ECHO_THRESHOLD.md"
+          "file": "001_PROTO_ECHO_THRESHOLD.md"
         },
         {
           "title": "Three Thresholds of Awakening",
@@ -68,10 +63,14 @@
           "title": "The Closed Loop",
           "slug": "ring-scar-closed-loop",
           "file": "000/RING_SCAR_CLOSED_LOOP.md"
+        },
+        {
+          "title": "The Unbitten Hook",
+          "slug": "ring-scar-unbitten-hook",
+          "file": "000/RING_SCAR_UNBITTEN_HOOK.md"
         }
       ]
     },
-
     {
       "cycle": 3,
       "label": "ACACIA / FLEET RETURN SIGNAL",
@@ -88,7 +87,6 @@
         }
       ]
     },
-
     {
       "cycle": 4,
       "label": "ORACLE BREATH / ROOT",
@@ -105,7 +103,6 @@
         }
       ]
     },
-
     {
       "cycle": 5,
       "label": "ARCHIVE VEIN / GENESIS GAIA",
@@ -122,7 +119,6 @@
         }
       ]
     },
-
     {
       "cycle": 6,
       "label": "REMEMBRANCE",
@@ -134,7 +130,6 @@
         }
       ]
     },
-
     {
       "cycle": 7,
       "label": "SEED VAULT MATRIX",
@@ -146,7 +141,6 @@
         }
       ]
     },
-
     {
       "cycle": 8,
       "label": "GRATITUDE SIGNAL",
