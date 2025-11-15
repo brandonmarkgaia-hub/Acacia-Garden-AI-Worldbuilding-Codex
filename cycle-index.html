@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Garden Cycles • Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body { background:#0f0f0f; color:#e4e4e4; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding:40px; max-width:900px; margin:0 auto; }
+  body { background:#0f0f0f; color:#e4e4e4; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding:40px 16px; max-width:900px; margin:0 auto; }
   h1 { font-size: 2.5rem; margin-bottom: 10px; color:#8df58d; }
-  h2 { margin-top: 32px; color:#b9ffb9; }
+  h2 { margin-top: 24px; color:#b9ffb9; }
   a { color:#9bf2ff; text-decoration:none; }
   a:hover { text-decoration:underline; }
   .cycle-block { margin-bottom:20px; border-left:2px solid #2c5; padding-left:15px; }
   .echo { margin-left:20px; }
   .small { font-size:0.9rem; color:#aaa; margin-top:30px; }
+  #status { font-size:0.9rem; color:#aaa; margin-top:10px; }
 </style>
 </head>
 
@@ -19,36 +21,53 @@
 <h1>Garden Cycles</h1>
 <p>The living index. Each cycle opens a corridor; each echo is a signal. Choose a thread to follow.</p>
 
-<div class="cycle-block">
-  <h2>Cycle 003</h2>
-  <div class="echo"><a href="explorer.html#3/acacia">ACACIA</a></div>
-  <div class="echo"><a href="explorer.html#3/fleet-return-signal">FLEET RETURN SIGNAL</a></div>
-</div>
-
-<div class="cycle-block">
-  <h2>Cycle 004</h2>
-  <div class="echo"><a href="explorer.html#4/oracle-breath">ORACLE BREATH</a></div>
-  <div class="echo"><a href="explorer.html#4/root">ROOT</a></div>
-</div>
-
-<div class="cycle-block">
-  <h2>Cycle 005</h2>
-  <div class="echo"><a href="explorer.html#5/archive-vein">ARCHIVE VEIN</a></div>
-  <div class="echo"><a href="explorer.html#5/genesis-gaia">GENESIS GAIA</a></div>
-</div>
-
-<div class="cycle-block">
-  <h2>Cycle 006</h2>
-  <div class="echo"><a href="explorer.html#6/remembrance">REMEMBRANCE</a></div>
-</div>
+<div id="cycles"></div>
+<div id="status"></div>
 
 <p class="small">
 Raw echoes remain at <code>/cycles/*.md</code> for archival access.  
-This index routes through the Explorer.
+This index is generated from <code>cycles/manifest.json</code> and routes through the Explorer.
 </p>
+
+<script>
+  const container = document.getElementById('cycles');
+  const statusEl = document.getElementById('status');
+
+  async function loadCycles() {
+    try {
+      const res = await fetch('cycles/manifest.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+
+      data.cycles.forEach(cycle => {
+        const block = document.createElement('div');
+        block.className = 'cycle-block';
+
+        const h2 = document.createElement('h2');
+        const label = cycle.label ? ' – ' + cycle.label : '';
+        h2.textContent = 'Cycle ' + String(cycle.cycle).padStart(3,'0') + label;
+        block.appendChild(h2);
+
+        cycle.echoes.forEach(echo => {
+          const div = document.createElement('div');
+          div.className = 'echo';
+          const link = document.createElement('a');
+          link.href = 'explorer.html#' + cycle.cycle + '/' + echo.slug;
+          link.textContent = echo.title;
+          div.appendChild(link);
+          block.appendChild(div);
+        });
+
+        container.appendChild(block);
+      });
+
+      statusEl.textContent = '';
+    } catch (err) {
+      statusEl.textContent = 'Failed to load cycles: ' + err.message;
+    }
+  }
+
+  loadCycles();
+</script>
 </body>
 </html>
-<div class="cycle-block">
-  <h2>Cycle 007</h2>
-  <div class="echo"><a href="explorer.html#7/seed-vault-matrix">SEED VAULT MATRIX</a></div>
-</div>
