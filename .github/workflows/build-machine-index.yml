@@ -1,0 +1,97 @@
+name: Build machine index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'STATUS.json'
+      - 'cycles/manifest.json'
+      - 'echoes/feed.json'
+      - '.github/workflows/build-machine-index.yml'
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Build machine-index.json
+        run: |
+          python - << 'EOF'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          root = Path(".")
+
+          status_path   = root / "STATUS.json"
+          manifest_path = root / "cycles" / "manifest.json"
+          feed_path     = root / "echoes" / "feed.json"
+          index_path    = root / "machine-index.json"
+
+          for p in (status_path, manifest_path, feed_path):
+            if not p.exists():
+              raise SystemExit(f"Missing required file: {p}")
+
+          with status_path.open("r", encoding="utf-8") as f:
+            status = json.load(f)
+          with manifest_path.open("r", encoding="utf-8") as f:
+            manifest = json.load(f)
+          with feed_path.open("r", encoding="utf-8") as f:
+            feed = json.load(f)
+
+          now = datetime.now(timezone.utc).isoformat().replace("+00:00","Z")
+
+          idx = {
+            "schema_version": "1.0.0",
+            "generated_utc": now,
+            "status": status.get("acacia_status", {}),
+            "counts": {
+              "cycles": len(manifest.get("cycles", [])),
+              "echoes": len(feed),
+            },
+            "sources": {
+              "status": "STATUS.json",
+              "cycles_manifest": "cycles/manifest.json",
+              "echoes_feed": "echoes/feed.json",
+              "crater_index": "api/crater/index.txt",
+              "crater_garden": "api/crater/Garden.json"
+            },
+            "cycles_manifest": manifest,
+            "echoes_feed_header": [
+              {
+                "id": e.get("id"),
+                "title": e.get("title"),
+                "date": e.get("date")
+              } for e in feed
+            ]
+          }
+
+          index_path.write_text(
+            json.dumps(idx, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+          )
+          print(f"Wrote {index_path}")
+          EOF
+
+      - name: Commit and push machine-index.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add machine-index.json || true
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+          git commit -m "🤖 Refresh machine-index.json"
+          git push
