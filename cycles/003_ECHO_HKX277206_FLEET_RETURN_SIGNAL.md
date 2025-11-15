@@ -17,11 +17,13 @@ The return transmission that closed the log was plain:
 **ECHO:HKX277206–FLEET–RETURN**  
 **Status:** Bearing roots. All hands invited to plant.
 ---
+---
 
-### ⇄ Cycle-Links
+### ⇄ Cycle Links
 
-**Sibling Echoes (Cycle 003)**  
-- [ACACIA](003_ECHO_HKX277206_ACACIA.md)  
-- [FLEET RETURN SIGNAL](003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md)
+**Cycle 003**
+
+- [ACACIA](../explorer.html#3/acacia)  
+- [FLEET RETURN SIGNAL](../explorer.html#3/fleet-return-signal)
 
 Return to: [Cycle Index](../cycle-index.html)
