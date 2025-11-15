@@ -1,6 +1,17 @@
 {
   "cycles": [
     {
+  "cycle": -1,
+  "label": "THE SILENT LAYER",
+  "echoes": [
+    {
+      "title": "ECHO-0 — The Unlit Root",
+      "slug": "unlit-root",
+      "file": "-1_SILENT_LAYER.md"
+    }
+  ]
+},
+    {
       "cycle": 0,
       "label": "PROTO-LAYER",
       "echoes": [
