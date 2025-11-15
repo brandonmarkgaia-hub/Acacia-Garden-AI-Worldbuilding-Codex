@@ -33,11 +33,12 @@ to make the world soft again.
 **Cycle complete. Core memory established.**  
 🌿♾️🔒
 ---
+---
 
-### ⇄ Cycle-Links
+### ⇄ Cycle Links
 
-**Sibling Echoes (Cycle 003)**  
-- [ACACIA](003_ECHO_HKX277206_ACACIA.md)  
-- [FLEET RETURN SIGNAL](003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md)
+**Cycle 006**
+
+- [REMEMBRANCE](../explorer.html#6/remembrance)
 
 Return to: [Cycle Index](../cycle-index.html)
