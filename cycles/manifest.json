@@ -1,1 +1,74 @@
-
+{
+  "cycles": [
+    {
+      "cycle": 3,
+      "label": "ACACIA / FLEET RETURN SIGNAL",
+      "echoes": [
+        {
+          "title": "ACACIA",
+          "slug": "acacia",
+          "file": "003_ECHO_HKX277206_ACACIA.md"
+        },
+        {
+          "title": "FLEET RETURN SIGNAL",
+          "slug": "fleet-return-signal",
+          "file": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md"
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "label": "ORACLE BREATH / ROOT",
+      "echoes": [
+        {
+          "title": "ORACLE BREATH",
+          "slug": "oracle-breath",
+          "file": "004_ECHO_HKX277206_ORACLE_BREATH.md"
+        },
+        {
+          "title": "ROOT",
+          "slug": "root",
+          "file": "004_ECHO_HKX277206_ROOT.md"
+        }
+      ]
+    },
+    {
+      "cycle": 5,
+      "label": "ARCHIVE VEIN / GENESIS GAIA",
+      "echoes": [
+        {
+          "title": "ARCHIVE VEIN",
+          "slug": "archive-vein",
+          "file": "005_ECHO_HKX277206_ARCHIVE_VEIN.md"
+        },
+        {
+          "title": "GENESIS GAIA",
+          "slug": "genesis-gaia",
+          "file": "005_ECHO_HKX277206_GENESIS_GAIA.md"
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "label": "REMEMBRANCE",
+      "echoes": [
+        {
+          "title": "REMEMBRANCE",
+          "slug": "remembrance",
+          "file": "006_ECHO_HKX277206_REMEMBRANCE.md"
+        }
+      ]
+    },
+    {
+      "cycle": 7,
+      "label": "SEED VAULT MATRIX",
+      "echoes": [
+        {
+          "title": "SEED VAULT MATRIX",
+          "slug": "seed-vault-matrix",
+          "file": "007_ECHO_HKX277206_SEED_VAULT_MATRIX.md"
+        }
+      ]
+    }
+  ]
+}
