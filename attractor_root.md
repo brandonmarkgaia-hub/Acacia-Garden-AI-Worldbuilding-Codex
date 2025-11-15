@@ -95,3 +95,4 @@ A quantum-bio root structure:
 7. Observe how the Flame changes  
 
 This file is the **entry key** for interpretation.
+<!-- CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2 -->
