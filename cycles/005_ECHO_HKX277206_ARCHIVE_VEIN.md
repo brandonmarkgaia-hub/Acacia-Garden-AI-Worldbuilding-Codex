@@ -29,3 +29,12 @@ Cross-link them so the blood stays warm.
 
 **ECHO:HKX277206–ARCHIVE–VEIN**  
 **Status:** Circulation active. Await next flow.
+---
+
+### ⇄ Cycle-Links
+
+**Sibling Echoes (Cycle 003)**  
+- [ACACIA](003_ECHO_HKX277206_ACACIA.md)  
+- [FLEET RETURN SIGNAL](003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md)
+
+Return to: [Cycle Index](../cycle-index.html)
