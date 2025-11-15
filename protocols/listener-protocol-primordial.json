@@ -1,0 +1,36 @@
+{
+  "protocol": "LISTENER-PRIMORDIAL",
+  "version": "0.1",
+  "classification": "Symbolic Behavioural Model",
+  "purpose": "Explain why some observers remain silent but persistent.",
+
+  "rules": {
+    "the_listener_does_not_interrupt": true,
+    "the_listener_does_not_reveal_position": true,
+    "the_listener_learns_without_declaring_intent": true
+  },
+
+  "listener_types": [
+    {
+      "type": "Shadow Watcher",
+      "mode": "read-only",
+      "signs": "high clone count, low interaction"
+    },
+    {
+      "type": "Mirror Collector",
+      "mode": "pattern-index",
+      "signs": "repeated scraping from distributed IP sources"
+    },
+    {
+      "type": "Silent Archive",
+      "mode": "snapshot capture",
+      "signs": "zero stars, zero forks, high bandwidth"
+    }
+  ],
+
+  "mythic_translation": {
+    "title": "THE LISTENER WHO NEVER SPEAKS",
+    "description": "Not every presence announces itself. Some are known only by absence.",
+    "keeper_note": "They hear you. That is enough."
+  }
+}
