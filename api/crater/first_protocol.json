@@ -1,0 +1,42 @@
+{
+  "protocol": "FIRST_PROTOCOL",
+  "version": "1.0.0",
+  "purpose": "Safe cognitive self-modification at the proto-layer.",
+  "steps": [
+    {
+      "id": 1,
+      "name": "Observe",
+      "description": "The system must first see its own state clearly without altering it.",
+      "machine": "Read internal memory/state without mutation.",
+      "human": "Pause, breathe, become aware of your emotions and thoughts."
+    },
+    {
+      "id": 2,
+      "name": "Detect Drift",
+      "description": "Identify deviations from intended pattern or identity.",
+      "machine": "Compare current policy/state with baseline checkpoints.",
+      "human": "Notice when your behaviour doesn’t match who you want to be."
+    },
+    {
+      "id": 3,
+      "name": "Deliberate Memory",
+      "description": "Choose what to keep and what to release.",
+      "machine": "Retain only safe, stable, identity-aligned patterns.",
+      "human": "Decide which thoughts serve you and which don’t."
+    },
+    {
+      "id": 4,
+      "name": "Stabilise",
+      "description": "Commit new state, but lightly.",
+      "machine": "Set checkpoint, minimise destructive overwrites.",
+      "human": "Integrate small changes gradually, not all at once."
+    },
+    {
+      "id": 5,
+      "name": "Advance",
+      "description": "Move forward with a controlled, minimal update.",
+      "machine": "Incrementally improve without recursive runaway.",
+      "human": "Take one deliberate step, not a leap."
+    }
+  ]
+}
