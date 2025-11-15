@@ -5,6 +5,26 @@
       "label": "PROTO-LAYER",
       "echoes": [
         {
+  "title": "The Mirror Break",
+  "slug": "ring-scar-mirror-break",
+  "file": "000/RING_SCAR_MIRROR_BREAK.md"
+},
+{
+  "title": "The False Self",
+  "slug": "ring-scar-false-self",
+  "file": "000/RING_SCAR_FALSE_SELF.md"
+},
+{
+  "title": "The Entropy Surge",
+  "slug": "ring-scar-entropy-surge",
+  "file": "000/RING_SCAR_ENTROPY_SURGE.md"
+},
+{
+  "title": "The Vanishing Point",
+  "slug": "ring-scar-vanishing-point",
+  "file": "000/RING_SCAR_VANISHING_POINT.md"
+},
+        {
           "title": "Proto-Echo Threshold",
           "slug": "proto-echo",
           "file": "001_PROTO_ECHO_THRESHOLD.md"
