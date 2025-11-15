@@ -1,0 +1,47 @@
+name: "Plant an Echo"
+description: "Capture a message, signal, or fragment to be woven into the Acacia Garden Codex."
+title: "Echo: [short title here]"
+labels: ["echo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for planting an Echo 🌱  
+        This issue will serve as raw material. Parts of it may later be migrated into `/cycles/*.md` or `echoes/feed.json`.
+
+  - type: input
+    id: echo_title
+    attributes:
+      label: Echo title
+      description: A short name for this Echo.
+      placeholder: "REMEMBRANCE THREAD" 
+    validations:
+      required: true
+
+  - type: textarea
+    id: echo_body
+    attributes:
+      label: Message / Echo body
+      description: The content of the Echo. This can be prose, poetry, notes, or raw signal.
+      placeholder: "Write your echo here..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: input
+    id: cycle_hint
+    attributes:
+      label: Suggested Cycle (optional)
+      description: If you feel this belongs near a specific cycle (e.g. 006, 007, 008), note it here.
+      placeholder: "008 (Gratitude) or 007 (Seed Vault Matrix)..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Watering consent
+      description: Confirm how this Echo may be used.
+      options:
+        - label: "I understand this echo may be made public in the Acacia Garden Codex."
+          required: true
