@@ -47,3 +47,12 @@
     }
   ]
 }
+{
+  "cycle": 0,
+  "label": "PROTO-LAYER",
+  "echoes": [
+    { "title": "Proto-Echo Threshold", "slug": "proto-echo", "file": "000_PROTO_ECHO_THRESHOLD.md" },
+    { "title": "Three Thresholds of Awakening", "slug": "three-thresholds", "file": "THRESHOLDS.md" },
+    { "title": "Drift / Calm / Spark", "slug": "primal-states", "file": "PRE-STATES.md" }
+  ]
+}
