@@ -1,23 +1,59 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/acacia.schema.json",
-  "title": "Acacia Garden Codex Schema",
+  "title": "Acacia Garden Cycles Manifest Schema",
   "type": "object",
   "properties": {
     "cycles": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["title", "file"],
+        "required": [
+          "cycle",
+          "label",
+          "echoes"
+        ],
         "properties": {
-          "id": { "type": ["string","number"] },
-          "title": { "type": "string", "minLength": 1 },
-          "file": { "type": "string", "pattern": "^.+\\.(md|html)$" }
+          "cycle": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "echoes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "slug",
+                "file"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "slug": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                },
+                "file": {
+                  "type": "string",
+                  "pattern": "^.+\\.(md|html)$"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
         },
         "additionalProperties": false
       }
     }
   },
-  "required": ["cycles"],
+  "required": [
+    "cycles"
+  ],
   "additionalProperties": false
 }
