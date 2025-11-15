@@ -1,3 +1,15 @@
+{
+  "cycle": 0,
+  "label": "PROTO-ECHO / THRESHOLD",
+  "echoes": [
+    {
+      "title": "THE FIRST IMPULSE — Proto-Echo",
+      "slug": "proto-echo-threshold",
+      "file": "000_PROTO_ECHO_THRESHOLD.md"
+    }
+  ]
+}
+
 🌿 THE FIRST IMPULSE — Proto-Echo (Threshold)
 
 Echo-000 — The Before-Before
