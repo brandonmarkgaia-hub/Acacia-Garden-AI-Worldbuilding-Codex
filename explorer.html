@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Garden Cycles • Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing:border-box; }
+  body {
+    margin:0;
+    background:#050608;
+    color:#e6e6e6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header {
+    padding:12px 20px;
+    border-bottom:1px solid #222;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(90deg,#050608,#0c1510);
+  }
+  header h1 {
+    margin:0;
+    font-size:1.2rem;
+    color:#8df58d;
+  }
+  header a {
+    color:#9bf2ff;
+    text-decoration:none;
+    font-size:0.9rem;
+  }
+  header a:hover { text-decoration:underline; }
+
+  .container {
+    flex:1;
+    display:flex;
+    min-height:0;
+  }
+  #sidebar {
+    width:260px;
+    border-right:1px solid #222;
+    padding:10px;
+    overflow-y:auto;
+    background:#070a0c;
+  }
+  #content {
+    flex:1;
+    padding:18px;
+    overflow-y:auto;
+  }
+
+  .cycle-title {
+    margin:10px 0 4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:#9adf9a;
+  }
+  .echo-button {
+    display:block;
+    width:100%;
+    text-align:left;
+    border:none;
+    background:transparent;
+    color:#e6e6e6;
+    padding:6px 6px;
+    margin:1px 0;
+    font-size:0.9rem;
+    cursor:pointer;
+    border-radius:4px;
+  }
+  .echo-button:hover {
+    background:#151b18;
+  }
+  .echo-button.active {
+    background:#1f2a22;
+    color:#b9ffb9;
+  }
+
+  #content h1, #content h2, #content h3 {
+    color:#c0ffc0;
+  }
+  #content a { color:#9bf2ff; }
+  #content a:hover { text-decoration:underline; }
+  #content code {
+    background:#111;
+    padding:0 3px;
+    border-radius:3px;
+    font-size:0.9em;
+  }
+  #content pre {
+    background:#111;
+    padding:10px;
+    border-radius:6px;
+    overflow-x:auto;
+  }
+  #status {
+    font-size:0.85rem;
+    color:#aaa;
+    margin-bottom:10px;
+  }
+
+  @media (max-width: 800px) {
+    #sidebar { width:190px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>ACACIA • Garden Cycles Explorer</h1>
+  <div>
+    <a href="index.html">Codex Home</a> ·
+    <a href="cycle-index.html">Cycle Index</a>
+  </div>
+</header>
+
+<div class="container">
+  <aside id="sidebar">
+    <!-- Filled by JS -->
+  </aside>
+  <main id="content">
+    <div id="status">Loading manifest…</div>
+    <p>This explorer reads the manifest and renders each Echo in place.  
+    Choose a Cycle on the left, or use direct links like:</p>
+    <ul>
+      <li><code>…/explorer.html#3/acacia</code></li>
+      <li><code>…/explorer.html#5/genesis-gaia</code></li>
+      <li><code>…/explorer.html#6/remembrance</code></li>
+    </ul>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  let manifest = null;
+  let activeButton = null;
+  const sidebar = document.getElementById('sidebar');
+  const content = document.getElementById('content');
+  const statusEl = document.getElementById('status');
+
+  async function loadManifest() {
+    try {
+      const res = await fetch('cycles/manifest.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      manifest = await res.json();
+      buildSidebar();
+      statusEl.textContent = '';
+      restoreFromHash();
+    } catch (err) {
+      statusEl.textContent = 'Failed to load manifest.json: ' + err.message;
+    }
+  }
+
+  function buildSidebar() {
+    sidebar.innerHTML = '';
+    manifest.cycles.forEach(cycle => {
+      const h = document.createElement('div');
+      h.className = 'cycle-title';
+      h.textContent = 'Cycle ' + String(cycle.cycle).padStart(3, '0') +
+                      (cycle.label ? ' – ' + cycle.label : '');
+      sidebar.appendChild(h);
+
+      cycle.echoes.forEach(echo => {
+        const btn = document.createElement('button');
+        btn.className = 'echo-button';
+        btn.textContent = echo.title;
+        btn.dataset.cycle = cycle.cycle;
+        btn.dataset.slug = echo.slug;
+        btn.addEventListener('click', () => selectEcho(cycle.cycle, echo.slug, true, btn));
+        sidebar.appendChild(btn);
+      });
+    });
+  }
+
+  async function selectEcho(cycleNum, slug, updateHash = true, btnFromClick = null) {
+    if (!manifest) return;
+    const cycle = manifest.cycles.find(c => String(c.cycle) === String(cycleNum));
+    if (!cycle) {
+      statusEl.textContent = 'Cycle not found: ' + cycleNum;
+      return;
+    }
+    const echo = cycle.echoes.find(e => e.slug === slug);
+    if (!echo) {
+      statusEl.textContent = 'Echo not found in cycle ' + cycleNum + ': ' + slug;
+      return;
+    }
+
+    if (!btnFromClick) {
+      const selector = '.echo-button[data-cycle="' + cycleNum + '"][data-slug="' + slug + '"]';
+      const btn = sidebar.querySelector(selector);
+      if (btn) btnFromClick = btn;
+    }
+    if (activeButton) activeButton.classList.remove('active');
+    if (btnFromClick) {
+      btnFromClick.classList.add('active');
+      activeButton = btnFromClick;
+    }
+
+    statusEl.textContent = 'Loading echo…';
+    try {
+      const res = await fetch('cycles/' + echo.file);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const md = await res.text();
+      const html = marked.parse(md);
+      content.innerHTML = '<div id="status"></div>' + html;
+      statusEl.textContent = '';
+
+      if (updateHash) {
+        location.hash = cycleNum + '/' + slug;
+      }
+    } catch (err) {
+      content.innerHTML = '<p>Failed to load echo: ' + err.message + '</p>';
+    }
+  }
+
+  function restoreFromHash() {
+    const hash = location.hash.replace(/^#/, '');
+    if (!hash) return;
+    const parts = hash.split('/');
+    if (parts.length !== 2) return;
+    const cycleNum = parts[0];
+    const slug = parts[1];
+    selectEcho(cycleNum, slug, false, null);
+  }
+
+  window.addEventListener('hashchange', restoreFromHash);
+  loadManifest();
+</script>
+</body>
+</html>
