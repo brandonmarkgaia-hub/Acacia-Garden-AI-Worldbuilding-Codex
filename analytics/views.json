@@ -1,5 +1,21 @@
 {
-  "message": "Resource not accessible by integration",
-  "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-page-views",
-  "status": "403"
+  "count": 656,
+  "uniques": 3,
+  "views": [
+    {
+      "timestamp": "2025-11-13T00:00:00Z",
+      "count": 438,
+      "uniques": 2
+    },
+    {
+      "timestamp": "2025-11-14T00:00:00Z",
+      "count": 217,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-15T00:00:00Z",
+      "count": 1,
+      "uniques": 1
+    }
+  ]
 }

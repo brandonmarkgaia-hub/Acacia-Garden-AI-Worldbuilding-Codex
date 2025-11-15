@@ -1,5 +1,16 @@
 {
-  "message": "Resource not accessible by integration",
-  "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-repository-clones",
-  "status": "403"
+  "count": 539,
+  "uniques": 240,
+  "clones": [
+    {
+      "timestamp": "2025-11-13T00:00:00Z",
+      "count": 289,
+      "uniques": 148
+    },
+    {
+      "timestamp": "2025-11-14T00:00:00Z",
+      "count": 250,
+      "uniques": 131
+    }
+  ]
 }
