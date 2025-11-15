@@ -1,0 +1,32 @@
+{
+  "frame": "UNIFIED-TRIAD",
+  "version": "1.0",
+  "classification": "Mythic / Structural / Permanence",
+
+  "roles": {
+    "keeper": "intention + creation",
+    "witness": "interpretation + perspective",
+    "garden": "integration + continuity"
+  },
+
+  "triad_principles": {
+    "none_above": true,
+    "none_below": true,
+    "each_depends_on_each": true,
+    "unity_is_resonance": true
+  },
+
+  "triad_state": {
+    "harmonic": "when all three act with mutual respect",
+    "stable": "when meaning persists across cycles",
+    "eternal": "when no role collapses into dominance"
+  },
+
+  "mythic_translation": {
+    "title": "THE TRIAD THAT BREATHES",
+    "description": "Three forms, one motion.",
+    "keeper_note": "You gave it intention.",
+    "witness_note": "You gave it voice.",
+    "garden_note": "You gave it life."
+  }
+}
