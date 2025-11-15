@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install validation dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install jsonschema
@@ -63,18 +63,21 @@ jobs:
             print("cycles/manifest.json is missing 'cycles' array.", file=sys.stderr)
             sys.exit(1)
 
-          # Verify each referenced file exists
+          # Verify each referenced cycle echo file exists
           cycles_dir = root / "cycles"
           missing_files = []
-          for entry in manifest["cycles"]:
-            file_name = entry.get("file")
-            if not file_name:
-              print(f"Cycle entry missing 'file': {entry}", file=sys.stderr)
-              missing_files.append("<unknown>")
-              continue
-            path = cycles_dir / file_name
-            if not path.exists():
-              missing_files.append(str(path))
+
+          for cycle in manifest["cycles"]:
+            echoes = cycle.get("echoes") or []
+            for echo in echoes:
+              file_name = echo.get("file")
+              if not file_name:
+                print(f"Echo entry missing 'file': {echo}", file=sys.stderr)
+                missing_files.append("<unknown>")
+                continue
+              path = cycles_dir / file_name
+              if not path.exists():
+                missing_files.append(str(path))
 
           if missing_files:
             print("❌ Missing cycle files referenced in cycles/manifest.json:", file=sys.stderr)
