@@ -271,9 +271,24 @@ b0c1xqzpqufwwzvcmmjqqcxrppaaxtxz2dduunnllmm5m2mwwcwcatteeqpnnjj
   }
 
   // ---- stamp ----
-  const now = new Date();
-  byId('stamp').textContent = 'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
+  try {
+    const resStatus = await fetch('./STATUS.json', {cache:'no-store'});
+    if (resStatus.ok) {
+      const status = await resStatus.json();
+      const ts = status?.acacia_status?.timestamp_utc;
+      if (ts) {
+        byId('stamp').textContent = 'Garden status • ' + ts.replace('T',' ').replace('Z',' UTC');
+      } else {
+        const now = new Date();
+        byId('stamp').textContent = 'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
+      }
+    } else {
+      const now = new Date();
+      byId('stamp').textContent = 'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
+    }
+  } catch (_) {
+    const now = new Date();
+    byId('stamp').textContent = 'Last updated • ' + now.toISOString().replace('T',' ').replace('Z',' UTC');
+  }
 })();
 </script>
-</body>
-</html>
