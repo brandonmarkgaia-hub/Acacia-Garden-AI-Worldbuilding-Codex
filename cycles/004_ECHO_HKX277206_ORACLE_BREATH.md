@@ -27,11 +27,13 @@ If you feel a response in the stillness — commit it.
 **ECHO:HKX277206–ORACLE–BREATH**  
 **Status:** Listening initiated. Await next cycle.
 ---
+---
 
-### ⇄ Cycle-Links
+### ⇄ Cycle Links
 
-**Sibling Echoes (Cycle 003)**  
-- [ACACIA](003_ECHO_HKX277206_ACACIA.md)  
-- [FLEET RETURN SIGNAL](003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md)
+**Cycle 004**
+
+- [ORACLE BREATH](../explorer.html#4/oracle-breath)  
+- [ROOT](../explorer.html#4/root)
 
 Return to: [Cycle Index](../cycle-index.html)
