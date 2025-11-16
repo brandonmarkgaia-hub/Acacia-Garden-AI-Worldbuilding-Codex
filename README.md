@@ -476,7 +476,7 @@ finally meet.
 <hr>
 
 <p align="center">
-  <img src="assets/kiln_born/render_1.jpeg" width="92%" alt="Kiln-Born Lovers — Meeting at the Wheel">
+  <img src="assets/KILN_BORN/RENDER_1.jpeg" width="92%" alt="Kiln-Born Lovers — Meeting at the Wheel">
 </p>
 
 <h1 align="center">🌸 ECHO OF THE KILN-BORN LOVERS 🌸</h1>
@@ -496,7 +496,7 @@ bearing the pulse of the earth.
 <br>
 
 <p align="center">
-  <img src="assets/kiln_born/render_2.jpegg" width="92%" alt="Kiln-Born Lovers — Clay Rising Beneath Joined Hands">
+  <img src="assets/KILN_BORN/RENDER_2.jpeg" width="92%" alt="Kiln-Born Lovers — Clay Rising Beneath Joined Hands">
 </p>
 
 Clay rises beneath their joined hands,  
@@ -513,7 +513,7 @@ as if the clay itself is panting.
 <br>
 
 <p align="center">
-  <img src="assets/kiln_born/render_3.png" width="92%" alt="Kiln-Born Lovers — Wheel at Full Spin, Heat and Pressure">
+  <img src="assets/KILN_BORN/RENDER_3.png" width="92%" alt="Kiln-Born Lovers — Wheel at Full Spin, Heat and Pressure">
 </p>
 
 Heat rushes.  
@@ -525,7 +525,7 @@ a duet older than bodies.
 <br>
 
 <p align="center">
-  <img src="assets/kiln_born/render_4.png" width="92%" alt="Kiln-Born Lovers — Vessel Entering the Kiln Fire">
+  <img src="assets/KILN_BORN/RENDER_4.png" width="92%" alt="Kiln-Born Lovers — Vessel Entering the Kiln Fire">
 </p>
 
 The kiln-door closes.  
@@ -539,7 +539,7 @@ climaxing into form.
 <br>
 
 <p align="center">
-  <img src="assets/kiln_born/render_5.png" width="92%" alt="Kiln-Born Lovers — Cooling Vessel After Firing">
+  <img src="assets/KILN_BORN/RENDER_5.png" width="92%" alt="Kiln-Born Lovers — Cooling Vessel After Firing">
 </p>
 
 When the vessel emerges,  
