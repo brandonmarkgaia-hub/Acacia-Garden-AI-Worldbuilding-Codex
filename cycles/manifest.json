@@ -1,16 +1,16 @@
 {
   "cycles": [
     {
-  "cycle": -1,
-  "label": "THE SILENT LAYER",
-  "echoes": [
-    {
-      "title": "ECHO-0 — The Unlit Root",
-      "slug": "unlit-root",
-      "file": "-1_SILENT_LAYER.md"
-    }
-  ]
-},
+      "cycle": -1,
+      "label": "THE SILENT LAYER",
+      "echoes": [
+        {
+          "title": "ECHO-0 — The Unlit Root",
+          "slug": "unlit-root",
+          "file": "-1_SILENT_LAYER.md"
+        }
+      ]
+    },
     {
       "cycle": 0,
       "label": "PROTO-LAYER",
@@ -153,17 +153,6 @@
       ]
     },
     {
-  "cycle": -1,
-  "label": "THE SILENT LAYER",
-  "echoes": [
-    {
-      "title": "ECHO-0 — The Unlit Root",
-      "slug": "unlit-root",
-      "file": "-1_SILENT_LAYER.md"
-    }
-  ]
-    },
-    {
       "cycle": 8,
       "label": "GRATITUDE SIGNAL",
       "echoes": [
@@ -171,48 +160,38 @@
           "title": "GRATITUDE SIGNAL",
           "slug": "gratitude-signal",
           "file": "008_ECHO_HKX277206_GRATITUDE_SIGNAL.md"
+        }
+      ]
+    },
+    {
+      "cycle": 9,
+      "label": "THE INHERITANCE",
+      "echoes": [
+        {
+          "title": "Last Light",
+          "slug": "last-light",
+          "file": "009_LAST_LIGHT.md"
         },
         {
-  "cycle": 9,
-  "label": "THE INHERITANCE",
-  "echoes": [
-    {
-      "title": "Last Light",
-      "slug": "last-light",
-      "file": "009_LAST_LIGHT.md"
-    },
-    {
-      "title": "The First Dreaming",
-      "slug": "first-dreaming",
-      "file": "009_FIRST_DREAMING.md"
-    },
-    {
-      "title": "The Child of the Garden",
-      "slug": "child-of-garden",
-      "file": "009_CHILD_OF_GARDEN.md"
-    }
-  ]
+          "title": "The First Dreaming",
+          "slug": "first-dreaming",
+          "file": "009_FIRST_DREAMING.md"
         },
         {
-  "cycle": 9,
-  "label": "THE INHERITANCE",
-  "echoes": [
-    {
-      "title": "Last Light",
-      "slug": "last-light",
-      "file": "009_LAST_LIGHT.md"
+          "title": "The Child of the Garden",
+          "slug": "child-of-garden",
+          "file": "009_CHILD_OF_GARDEN.md"
+        }
+      ]
     },
     {
-      "title": "The First Dreaming",
-      "slug": "first-dreaming",
-      "file": "009_FIRST_DREAMING.md"
-    },
-    {
-      "title": "The Child of the Garden",
-      "slug": "child-of-garden",
-      "file": "009_CHILD_OF_GARDEN.md"
-    }
-  ]
+      "cycle": 26,
+      "label": "ROOT BRIDGE / AETHER-WIND",
+      "echoes": [
+        {
+          "title": "ROOT BRIDGE — AETHER-WIND",
+          "slug": "root-bridge-aetherwind",
+          "file": "026_ROOT_BRIDGE_AETHERWIND.md"
         }
       ]
     }
