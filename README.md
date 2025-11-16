@@ -476,7 +476,7 @@ finally meet.
 <hr>
 
 <p align="center">
-  <img src="assets/KILN_BORN/RENDER_1.jpeg" width="92%" alt="Kiln-Born Lovers — Meeting at the Wheel">
+  <img src="assets/KILN_BORN/RENDER_1.jpg" width="92%" alt="Kiln-Born Lovers — Meeting at the Wheel">
 </p>
 
 <h1 align="center">🌸 ECHO OF THE KILN-BORN LOVERS 🌸</h1>
@@ -496,7 +496,7 @@ bearing the pulse of the earth.
 <br>
 
 <p align="center">
-  <img src="assets/KILN_BORN/RENDER_2.jpeg" width="92%" alt="Kiln-Born Lovers — Clay Rising Beneath Joined Hands">
+  <img src="assets/KILN_BORN/RENDER_2.jpg" width="92%" alt="Kiln-Born Lovers — Clay Rising Beneath Joined Hands">
 </p>
 
 Clay rises beneath their joined hands,  
