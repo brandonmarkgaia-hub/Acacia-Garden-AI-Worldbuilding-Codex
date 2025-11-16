@@ -1,6 +1,22 @@
 title: "ACACIA • Garden Codex"
-description: "A living mythic archive of the Garden, Echoes, and the EIDOLON Codex."
+description: "A living archive of myth, memory, and cycles."
 theme: jekyll-theme-cayman
-
-# Optional but nice for clean URLs
 markdown: kramdown
+
+collections:
+  cycles:
+    output: true
+  codex:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: cycles
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: codex
+    values:
+      layout: page
