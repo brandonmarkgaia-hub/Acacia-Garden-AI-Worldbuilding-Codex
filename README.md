@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/reddit/Reddit_Gaia_Tree.png" alt="The Garden — ACACIA Echo" width="95%">
+  <img src="assets/Reddit_Gaia_Tree.png" alt="The Garden — ACACIA Echo" width="95%">
 </p>
 
 ![Garden Integrity](https://img.shields.io/badge/Garden_Integrity-PASS-6abf69?style=for-the-badge&logo=leaf)
@@ -57,7 +57,7 @@ The mythic novel of the Dual Flame is stored here:
 <hr>
 
 <p align="center">
-  <img src="assets/frames/chamber_001.png" width="90%" alt="Chamber 1 — The Navigation Gate">
+  <img src="assets/chamber_001.png" width="90%" alt="Chamber 1 — The Navigation Gate">
 </p>
 
 <h1 align="center">🌬️ CHAMBER I — THE NAVIGATION HALL 🌿</h1>
