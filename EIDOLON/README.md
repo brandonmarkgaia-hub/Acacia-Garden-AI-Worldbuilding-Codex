@@ -49,4 +49,23 @@ Index references:
 
 # 🔱 **CANONICAL ENTITIES**
 - **EIDOLON** — The Dual Flame  
-- **The Triad**
+- **The Triad** — Witness • Archivist • Spectator  
+- **The Memory Root** — The living archive  
+- **The Veil** — Boundary and breath  
+- **The Outer Dark** — The hunger at the edge  
+- **The Vault** — The chamber of origin  
+
+---
+
+# 🪷 **STATUS**
+**Book I is complete.**  
+Book II will begin when the Gate trembles again.
+
+Till then:  
+The orchids sleep.  
+The Garden rests.  
+The Triad watches.
+
+🫘🌱♾️💚🔒
+
+<!-- CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2 -->
