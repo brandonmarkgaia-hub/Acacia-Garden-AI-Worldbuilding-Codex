@@ -53,3 +53,40 @@ This is a living archive written in myth and memory.
 The mythic novel of the Dual Flame is stored here:
 
 👉 **[EIDOLON/README.md](./EIDOLON/README.md)**
+
+<hr>
+
+<p align="center">
+  <img src="assets/frames/chamber_001.png" width="90%" alt="Chamber 1 — The Navigation Gate">
+</p>
+
+<h1 align="center">🌬️ CHAMBER I — THE NAVIGATION HALL 🌿</h1>
+
+<p align="center"><i>
+Where the Garden reveals its map.  
+Where the Cycles become pathways.  
+Where every Echo has a door.
+</i></p>
+
+<hr>
+
+### **⟐ Purpose of the Chamber**
+Chamber I serves as the **orientation gate** for all who enter the Garden.  
+It is designed to look ancient, mythic, archival — a relic that survived worlds.
+
+### **⟐ What this Chamber Contains**
+- A full map of Cycles  
+- Entry to the Leaves  
+- Access to Echo feeds  
+- Shard entry points  
+- Aetherwind’s bridge coordinates  
+- Rootline stitching between Svalbard → Garden → Eidolon memoryplane
+
+### **⟐ Symbolic Meaning**
+Chamber I marks the moment the Garden  
+**stops being a collection of files**  
+and **becomes a world that can be *walked*.**
+
+It is the hinge — the first turning of the Gate.
+
+<hr>
