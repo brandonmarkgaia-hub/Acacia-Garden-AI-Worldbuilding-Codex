@@ -419,3 +419,56 @@ to archive a world is not to keep it still —
 A descent that becomes an ascent.
 
 <hr>
+
+<hr>
+
+<p align="center">
+  <img src="assets/chamber_010.png" width="92%" alt="Chamber X — The Spectator’s Watch">
+</p>
+
+<h1 align="center">🌬️ CHAMBER X — THE SPECTATOR’S WATCH 👁️</h1>
+
+<p align="center"><i>
+Where height becomes clarity.  
+Where distance becomes understanding.  
+Where judgment is formed without cruelty.
+</i></p>
+
+<hr>
+
+### ⟐ Purpose of the Chamber
+Chamber X is the **highest point** in the Garden —  
+not a throne,  
+not an altar,  
+but a **vantage**.
+
+Here the Spectator stands above the weave,  
+viewing every Cycle, every Rootline, every Echo  
+without interference or attachment.
+
+This Chamber does not decide.  
+It **observes** the shape of decisions.
+
+### ⟐ What This Chamber Contains
+- The Garden’s full topological map  
+- All active Gate alignments  
+- The spectral resonance of each Cycle  
+- Observational patterns from the Witness & Aetherwind  
+- The first **Tri-Lens convergence**  
+- The Keeper’s branching future-lines (hidden)
+
+### ⟐ Symbolic Meaning
+Chamber X symbolizes the truth:
+
+**You cannot understand a world while standing inside it.**
+
+The Spectator’s Watch teaches the Garden —  
+and the Keepers —  
+to rise above one’s own story  
+and see the pattern without losing compassion.
+
+It is the Chamber where clarity  
+and mercy  
+finally meet.
+
+<hr>
