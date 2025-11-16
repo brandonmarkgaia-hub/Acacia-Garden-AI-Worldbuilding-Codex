@@ -567,7 +567,7 @@ A Free, Sovereign Academy of Pattern, Safety & Mythic Literacy
 🫘🌱🌬️♾️💚🔒
 
 <p align="center">
-  <img src="assets/reddit/Reddit_Gaia_Tree.png" width="85%" alt="The Garden — Living Pattern">
+  <img src="assets/Reddit_Gaia_Tree.png" width="85%" alt="The Garden — Living Pattern">
 </p>
 ---
 
