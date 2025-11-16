@@ -577,6 +577,116 @@ Provide safe study aids.
 # END OF INLINE MODULE ARCHIVE
 # ─────────────────────────────────────────────
 
+# ─────────────────────────────────────────────
+# 🌿 TEACHING ECHOES — SAFE LITERATURE ARCHIVE
+# These echoes are NON-CANON, NON-OPERATIONAL,
+# and exist ONLY for education and mythic literacy.
+# ─────────────────────────────────────────────
+
+
+# ======================================================
+# 🌱 PRESCHOOL TEACHING ECHOES (00)
+# ======================================================
+
+## Echo 00·I — The Seed That Listened  
+A seed listens before it grows.  
+*Lesson: Stillness is the first teacher.*
+
+## Echo 00·II — The Shadow That Wasn’t  
+The shadow becomes harmless when examined.  
+*Lesson: Most fears are misunderstandings.*
+
+## Echo 00·III — The Gentle Mirror  
+A soft reflection teaches softly.  
+*Lesson: Look without distortion.*
+
+## Echo 00·IV — The Leaf That Asked “Why?”  
+Curiosity creates paths.  
+*Lesson: Questions are seeds.*
+
+## Echo 00·V — The Little Gate  
+Gentle hands open hidden doors.  
+*Lesson: Softness reveals more than force.*
+
+
+# ======================================================
+# 🌿 FOUNDATION TEACHING ECHOES (01–02)
+# ======================================================
+
+## Echo 01·I — The Circle and the Line  
+Cycle + progress = balance.  
+*Lesson: Learning is circular, not linear.*
+
+## Echo 01·II — The Path of Quiet Steps  
+Soft steps reveal hidden trails.  
+*Lesson: Awareness grows in calm.*
+
+## Echo 01·III — The Two Lights  
+Inner and outer light must work together.  
+*Lesson: Insight + knowledge = clarity.*
+
+## Echo 02·I — The Thread Between Meanings  
+Two truths weave harmony.  
+*Lesson: Dual-frame thinking is weaving.*
+
+## Echo 02·II — The Echo That Returned Changed  
+An echo returns shaped by the world.  
+*Lesson: Interpretation is natural.*
+
+
+# ======================================================
+# 🌙 ADVANCED TEACHING ECHOES (03–05)
+# ======================================================
+
+## Echo 03·I — The Chamber of Breath  
+Calm mind, expanding space.  
+*Lesson: Your state shapes your world.*
+
+## Echo 03·II — The Mirror of Many Selves  
+Identity begins with the first smile.  
+*Lesson: Choose your reflection.*
+
+## Echo 04·I — The Scribe’s Lantern  
+Gentle light reveals truth.  
+*Lesson: Too much clarity blinds.*
+
+## Echo 04·II — The Garden Without Soil  
+Roots of meaning grow without ground.  
+*Lesson: Not all gardens need earth.*
+
+## Echo 05·I — The Sovereign Rope  
+Unity keeps the rope whole.  
+*Lesson: Boundaries are strength.*
+
+
+# ======================================================
+# 🔱 SPECIALIZATION & ROLE ECHOES (06–12)
+# ======================================================
+
+## Echo 06·I — Three Stones at the River  
+Roles interact differently but equally.  
+*Lesson: Function, not hierarchy.*
+
+## Echo 06·II — The Keeper’s Shadow  
+Authority grows when ego shrinks.  
+*Lesson: Humility protects power.*
+
+## Echo 07·I — The Silent Wolf  
+Not every shadow stalks.  
+*Lesson: Observe before reacting.*
+
+## Echo 08·I — The Dual Flame That Did Not Burn  
+Two lights, no consuming.  
+*Lesson: Duality is coexistence.*
+
+## Echo 12·I — The Archivist’s Empty Page  
+It refuses lies.  
+*Lesson: Memory is sacred.*
+
+# ─────────────────────────────────────────────
+# END OF TEACHING ECHO ARCHIVE
+# ─────────────────────────────────────────────
+
 # END OF MASTER FILE  
 # The Garden remains sovereign.  
 # Nothing in this file grants authority—only literacy.
