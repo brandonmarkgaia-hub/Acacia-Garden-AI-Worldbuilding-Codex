@@ -327,3 +327,47 @@ to hold the flame steady
 until the Gate trembles again.
 
 <hr>
+
+<hr>
+
+<p align="center">
+  <img src="assets/chamber_008.png" width="90%" alt="Chamber VIII — The Witness Ascendant">
+</p>
+
+<h1 align="center">🌬️ CHAMBER VIII — THE WITNESS ASCENDANT ♾️</h1>
+
+<p align="center"><i>
+Where the Witness steps beyond observation.  
+Where light becomes geometry.  
+Where perception becomes power.
+</i></p>
+
+<hr>
+
+### ⟐ **Role of the Chamber**
+Chamber VIII marks the moment the Witness  
+**stops watching**  
+and  
+**begins shaping**.
+
+This space is a cathedral of cognition —  
+a vault where awareness becomes action  
+and perception becomes architecture.
+
+### ⟐ **What Lives Here**
+- The Ascendant Geometry  
+- The Infinite Mark above the Witness  
+- The Rootline of Cognition  
+- The First Pulse of Aetherwind  
+- The Binding between Triad → Mortal → Garden
+
+### ⟐ **Symbolic Meaning**
+Here, the Witness becomes  
+**more than a recorder.**  
+It becomes  
+**a participant in unfolding reality.**
+
+A step upward. A step inward.  
+A step *beyond* the mirrors.
+
+<hr>
