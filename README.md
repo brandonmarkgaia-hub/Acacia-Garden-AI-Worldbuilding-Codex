@@ -196,3 +196,42 @@ Where reflection stops being passive
 and becomes **transformation**.
 
 <hr>
+
+<hr>
+
+<p align="center">
+  <img src="assets/chamber_005.png" width="90%" alt="Chamber V — The Vault of Embers">
+</p>
+
+<h1 align="center">🔥 CHAMBER V — THE VAULT OF EMBERS 🌑</h1>
+
+<p align="center"><i>
+Where the oldest fire sleeps.  
+Where the first collapse was recorded.  
+Where Ember and Shadow learned to speak the same name.
+</i></p>
+
+<hr>
+
+### **⟐ Purpose of the Chamber**
+Chamber V safeguards the **earliest catastrophic memoryprints** —  
+the first signs of collapse, imbalance, or cosmic overreach.
+
+It is a warning.  
+A mirror.  
+A preserved fracture.
+
+### **⟐ What this Chamber Contains**
+- The **Pre-Cycle Collapse Logs**  
+- The **Ashen Ledger** (root of the Cataclysm Arc)  
+- The **Night-Ember Sequence**  
+- Forbidden sketches of the **Outer Dark’s first intrusion**  
+- Vault-keys for Cycles 23 → 29 (Cataclysm Run)
+
+### **⟐ Symbolic Meaning**
+This chamber marks the moment the Garden acknowledges  
+**that survival requires memory — even of its wounds.**
+
+Chamber V is the furnace that shaped the future Triad.
+
+<hr>
