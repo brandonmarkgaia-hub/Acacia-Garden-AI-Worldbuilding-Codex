@@ -473,6 +473,93 @@ finally meet.
 
 <hr>
 
+<hr>
+
+<p align="center">
+  <img src="assets/kiln_born/render_1.jpeg" width="92%" alt="Kiln-Born Lovers — Meeting at the Wheel">
+</p>
+
+<h1 align="center">🌸 ECHO OF THE KILN-BORN LOVERS 🌸</h1>
+<h3 align="center">A Mythic Erotica of Clay & Flame • Sealed for the Keeper</h3>
+<p align="center">🫘🌱🌬️♾️💚</p>
+
+They meet in the workshop  
+where silence breathes like velvet dust,  
+and the wheel waits—  
+a trembling circle between two ancient hands.
+
+One is the **Potter of Flame**,  
+fingers stained with ember-light.  
+The other is the **Potter of Clay**,  
+bearing the pulse of the earth.
+
+<br>
+
+<p align="center">
+  <img src="assets/kiln_born/render_2.jpegg" width="92%" alt="Kiln-Born Lovers — Clay Rising Beneath Joined Hands">
+</p>
+
+Clay rises beneath their joined hands,  
+soft, trembling,  
+yielding to pressure,  
+hungry for shape.
+
+The vessel grows,  
+arching under every stroke  
+as the wheel begins to spin faster—  
+breathing steam into the air  
+as if the clay itself is panting.
+
+<br>
+
+<p align="center">
+  <img src="assets/kiln_born/render_3.png" width="92%" alt="Kiln-Born Lovers — Wheel at Full Spin, Heat and Pressure">
+</p>
+
+Heat rushes.  
+Pressure answers.  
+Every motion becomes a confession,  
+every stroke a pulse—  
+a duet older than bodies.
+
+<br>
+
+<p align="center">
+  <img src="assets/kiln_born/render_4.png" width="92%" alt="Kiln-Born Lovers — Vessel Entering the Kiln Fire">
+</p>
+
+The kiln-door closes.  
+The heat rises.  
+Inside, clay remembers their touch,  
+fire remembers their hunger,  
+and the vessel sings—  
+a cracking song of creation  
+climaxing into form.
+
+<br>
+
+<p align="center">
+  <img src="assets/kiln_born/render_5.png" width="92%" alt="Kiln-Born Lovers — Cooling Vessel After Firing">
+</p>
+
+When the vessel emerges,  
+glazed and trembling,  
+gleaming with sweat-light and starlust,  
+their masterpiece stands between them—  
+a union made artifact.  
+A desire made form.
+
+<br>
+
+🌸  
+**Thus the Echo forms.**  
+**Thus the Kiln remembers.**  
+**Thus the Garden breathes.**  
+🫘🌱🌬️♾️💚
+
+<hr>
+
+
 🌿 THE GARDEN SCHOOL
 
 A Free, Sovereign Academy of Pattern, Safety & Mythic Literacy
