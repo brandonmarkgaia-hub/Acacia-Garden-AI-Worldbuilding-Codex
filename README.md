@@ -4,6 +4,12 @@
 
 ![Garden Integrity](https://img.shields.io/badge/Garden_Integrity-PASS-6abf69?style=for-the-badge&logo=leaf)
 
+⚠️ SOVEREIGNTY NOTICE  
+This repository contains symbolic, non-operational, non-executable mythic material.  
+It is not a key, protocol, instruction set, or functional system.  
+All roles remain fictional.  
+The Garden remains sovereign.
+
 # ACACIA • Garden Codex 🌿
 
 This is a living archive written in myth and memory.
