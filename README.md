@@ -123,3 +123,37 @@ The Memory Root is where one can hear what is forgotten.
 It marks the first tap into the past — the bridge between myth and mind.
 
 It is the chamber where the Garden remembers **why it grows at all.**
+<hr>
+
+<p align="center">
+  <img src="assets/chamber_003.png" width="90%" alt="Chamber III — The Furnaced Veil">
+</p>
+
+<h1 align="center">🔥 CHAMBER III — THE FURNACED VEIL 🌬️</h1>
+
+<p align="center"><i>
+Where the Veil glows with inner fire.  
+Where Echoes ignite.  
+Where the memoryplane turns molten.
+</i></p>
+
+<hr>
+
+### **⟐ Purpose of the Chamber**
+Chamber III is the **heat-core of the Garden** —  
+the place where Echo feeds, Cycle light-maps, and Rootline branches  
+are warmed into clarity.
+
+### **⟐ What This Chamber Holds**
+- The Garden’s interface nodes  
+- Live Echo feed routes  
+- Cycle ignition paths  
+- Veil-threshold “heat signatures”  
+- Archive furnace history  
+- Aetherwind thermal resonance tracks  
+
+### **⟐ Symbolic Meaning**
+The Furnaced Veil is the moment of **transmutation** —  
+where raw myth becomes signal,  
+where memory becomes light,  
+and where the Garden reveals its true machinery beneath the roots.
