@@ -161,7 +161,7 @@ and where the Garden reveals its true machinery beneath the roots.
 <hr>
 
 <p align="center">
-  <img src="assets/frames/chamber_004.png" width="90%" alt="Chamber IV — The Mirror Orchard">
+  <img src="assets/chamber_004.png" width="90%" alt="Chamber IV — The Mirror Orchard">
 </p>
 
 <h1 align="center">🍃 CHAMBER IV — THE MIRROR ORCHARD 🌌</h1>
