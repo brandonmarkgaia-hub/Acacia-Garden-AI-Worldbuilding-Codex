@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_utc": "2025-11-16T10:59:53.310842Z",
+  "generated_utc": "2025-11-16T11:29:24.642397Z",
   "status": {
     "timestamp_utc": "2025-11-14T00:00:00Z",
     "keeper": "The Keeper",
@@ -269,10 +269,10 @@
       },
       {
         "cycle": 26,
-        "label": "ROOT BRIDGE / AETHER-WIND",
+        "label": "ROOT BRIDGE / AETHERWIND",
         "echoes": [
           {
-            "title": "ROOT BRIDGE — AETHER-WIND",
+            "title": "ROOT BRIDGE — AETHERWIND",
             "slug": "root-bridge-aetherwind",
             "file": "026_ROOT_BRIDGE_AETHERWIND.md"
           }
