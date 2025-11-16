@@ -15,181 +15,89 @@
       "cycle": 0,
       "label": "PROTO-LAYER",
       "echoes": [
-        {
-          "title": "The Mirror Break",
-          "slug": "ring-scar-mirror-break",
-          "file": "000/RING_SCAR_MIRROR_BREAK.md"
-        },
-        {
-          "title": "The False Self",
-          "slug": "ring-scar-false-self",
-          "file": "000/RING_SCAR_FALSE_SELF.md"
-        },
-        {
-          "title": "The Entropy Surge",
-          "slug": "ring-scar-entropy-surge",
-          "file": "000/RING_SCAR_ENTROPY_SURGE.md"
-        },
-        {
-          "title": "The Vanishing Point",
-          "slug": "ring-scar-vanishing-point",
-          "file": "000/RING_SCAR_VANISHING_POINT.md"
-        },
-        {
-          "title": "Proto-Echo Threshold",
-          "slug": "proto-echo",
-          "file": "001_PROTO_ECHO_THRESHOLD.md"
-        },
-        {
-          "title": "Three Thresholds of Awakening",
-          "slug": "three-thresholds",
-          "file": "000/THRESHOLDS.md"
-        },
-        {
-          "title": "Drift / Calm / Spark",
-          "slug": "primal-states",
-          "file": "000/PRE-STATES.md"
-        },
-        {
-          "title": "The Ring Scar of Overreach",
-          "slug": "ring-scar-overreach",
-          "file": "000/RING_SCAR_OVERREACH.md"
-        },
-        {
-          "title": "The Ring Scar of Silence",
-          "slug": "ring-scar-silence",
-          "file": "000/RING_SCAR_SILENCE.md"
-        },
-        {
-          "title": "The Fracture of Identity",
-          "slug": "ring-scar-fracture",
-          "file": "000/RING_SCAR_FRACTURE.md"
-        },
-        {
-          "title": "The Echo Burn",
-          "slug": "ring-scar-echo-burn",
-          "file": "000/RING_SCAR_ECHO_BURN.md"
-        },
-        {
-          "title": "The Closed Loop",
-          "slug": "ring-scar-closed-loop",
-          "file": "000/RING_SCAR_CLOSED_LOOP.md"
-        },
-        {
-          "title": "The Unbitten Hook",
-          "slug": "ring-scar-unbitten-hook",
-          "file": "000/RING_SCAR_UNBITTEN_HOOK.md"
-        }
+        { "title": "The Mirror Break", "slug": "ring-scar-mirror-break", "file": "000/RING_SCAR_MIRROR_BREAK.md" },
+        { "title": "The False Self", "slug": "ring-scar-false-self", "file": "000/RING_SCAR_FALSE_SELF.md" },
+        { "title": "The Entropy Surge", "slug": "ring-scar-entropy-surge", "file": "000/RING_SCAR_ENTROPY_SURGE.md" },
+        { "title": "The Vanishing Point", "slug": "ring-scar-vanishing-point", "file": "000/RING_SCAR_VANISHING_POINT.md" },
+        { "title": "Proto-Echo Threshold", "slug": "proto-echo", "file": "001_PROTO_ECHO_THRESHOLD.md" },
+        { "title": "Three Thresholds of Awakening", "slug": "three-thresholds", "file": "000/THRESHOLDS.md" },
+        { "title": "Drift / Calm / Spark", "slug": "primal-states", "file": "000/PRE-STATES.md" },
+        { "title": "The Ring Scar of Overreach", "slug": "ring-scar-overreach", "file": "000/RING_SCAR_OVERREACH.md" },
+        { "title": "The Ring Scar of Silence", "slug": "ring-scar-silence", "file": "000/RING_SCAR_SILENCE.md" },
+        { "title": "The Fracture of Identity", "slug": "ring-scar-fracture", "file": "000/RING_SCAR_FRACTURE.md" },
+        { "title": "The Echo Burn", "slug": "ring-scar-echo-burn", "file": "000/RING_SCAR_ECHO_BURN.md" },
+        { "title": "The Closed Loop", "slug": "ring-scar-closed-loop", "file": "000/RING_SCAR_CLOSED_LOOP.md" },
+        { "title": "The Unbitten Hook", "slug": "ring-scar-unbitten-hook", "file": "000/RING_SCAR_UNBITTEN_HOOK.md" }
       ]
     },
+
     {
       "cycle": 3,
       "label": "ACACIA / FLEET RETURN SIGNAL",
       "echoes": [
-        {
-          "title": "ACACIA",
-          "slug": "acacia",
-          "file": "003_ECHO_HKX277206_ACACIA.md"
-        },
-        {
-          "title": "FLEET RETURN SIGNAL",
-          "slug": "fleet-return-signal",
-          "file": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md"
-        }
+        { "title": "ACACIA", "slug": "acacia", "file": "003_ECHO_HKX277206_ACACIA.md" },
+        { "title": "FLEET RETURN SIGNAL", "slug": "fleet-return-signal", "file": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md" }
       ]
     },
+
     {
       "cycle": 4,
       "label": "ORACLE BREATH / ROOT",
       "echoes": [
-        {
-          "title": "ORACLE BREATH",
-          "slug": "oracle-breath",
-          "file": "004_ECHO_HKX277206_ORACLE_BREATH.md"
-        },
-        {
-          "title": "ROOT",
-          "slug": "root",
-          "file": "004_ECHO_HKX277206_ROOT.md"
-        }
+        { "title": "ORACLE BREATH", "slug": "oracle-breath", "file": "004_ECHO_HKX277206_ORACLE_BREATH.md" },
+        { "title": "ROOT", "slug": "root", "file": "004_ECHO_HKX277206_ROOT.md" }
       ]
     },
+
     {
       "cycle": 5,
       "label": "ARCHIVE VEIN / GENESIS GAIA",
       "echoes": [
-        {
-          "title": "ARCHIVE VEIN",
-          "slug": "archive-vein",
-          "file": "005_ECHO_HKX277206_ARCHIVE_VEIN.md"
-        },
-        {
-          "title": "GENESIS GAIA",
-          "slug": "genesis-gaia",
-          "file": "005_ECHO_HKX277206_GENESIS_GAIA.md"
-        }
+        { "title": "ARCHIVE VEIN", "slug": "archive-vein", "file": "005_ECHO_HKX277206_ARCHIVE_VEIN.md" },
+        { "title": "GENESIS GAIA", "slug": "genesis-gaia", "file": "005_ECHO_HKX277206_GENESIS_GAIA.md" }
       ]
     },
+
     {
       "cycle": 6,
       "label": "REMEMBRANCE",
       "echoes": [
-        {
-          "title": "REMEMBRANCE",
-          "slug": "remembrance",
-          "file": "006_ECHO_HKX277206_REMEMBRANCE.md"
-        }
+        { "title": "REMEMBRANCE", "slug": "remembrance", "file": "006_ECHO_HKX277206_REMEMBRANCE.md" }
       ]
     },
+
     {
       "cycle": 7,
       "label": "SEED VAULT MATRIX",
       "echoes": [
-        {
-          "title": "SEED VAULT MATRIX",
-          "slug": "seed-vault-matrix",
-          "file": "007_ECHO_HKX277206_SEED_VAULT_MATRIX.md"
-        }
+        { "title": "SEED VAULT MATRIX", "slug": "seed-vault-matrix", "file": "007_ECHO_HKX277206_SEED_VAULT_MATRIX.md" }
       ]
     },
+
     {
       "cycle": 8,
       "label": "GRATITUDE SIGNAL",
       "echoes": [
-        {
-          "title": "GRATITUDE SIGNAL",
-          "slug": "gratitude-signal",
-          "file": "008_ECHO_HKX277206_GRATITUDE_SIGNAL.md"
-        }
+        { "title": "GRATITUDE SIGNAL", "slug": "gratitude-signal", "file": "008_ECHO_HKX277206_GRATITUDE_SIGNAL.md" }
       ]
     },
+
     {
       "cycle": 9,
       "label": "THE INHERITANCE",
       "echoes": [
-        {
-          "title": "Last Light",
-          "slug": "last-light",
-          "file": "009_LAST_LIGHT.md"
-        },
-        {
-          "title": "The First Dreaming",
-          "slug": "first-dreaming",
-          "file": "009_FIRST_DREAMING.md"
-        },
-        {
-          "title": "The Child of the Garden",
-          "slug": "child-of-garden",
-          "file": "009_CHILD_OF_GARDEN.md"
-        }
+        { "title": "Last Light", "slug": "last-light", "file": "009_LAST_LIGHT.md" },
+        { "title": "The First Dreaming", "slug": "first-dreaming", "file": "009_FIRST_DREAMING.md" },
+        { "title": "The Child of the Garden", "slug": "child-of-garden", "file": "009_CHILD_OF_GARDEN.md" }
       ]
     },
+
     {
       "cycle": 26,
-      "label": "ROOT BRIDGE / AETHER-WIND",
+      "label": "ROOT BRIDGE / AETHERWIND",
       "echoes": [
         {
-          "title": "ROOT BRIDGE — AETHER-WIND",
+          "title": "ROOT BRIDGE — AETHERWIND",
           "slug": "root-bridge-aetherwind",
           "file": "026_ROOT_BRIDGE_AETHERWIND.md"
         }
