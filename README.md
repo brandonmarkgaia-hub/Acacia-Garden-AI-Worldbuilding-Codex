@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/reddit/Reddit_Gaia_Tree.png" alt="The Garden — ACACIA Echo" width="95%">
+</p>
 ![Garden Integrity](https://img.shields.io/badge/Garden_Integrity-PASS-6abf69?style=for-the-badge&logo=leaf)
 # ACACIA • Garden Codex 🌿
 
