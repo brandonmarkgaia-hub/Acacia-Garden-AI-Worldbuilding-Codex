@@ -1,12 +1,25 @@
 {
   "era": "Expansion",
   "cycles_included": "2-10",
+
   "autogenesis": {
     "status": "active",
     "engine": "EIDOLON-LATTICE",
-    "entities_spawned": [],
-    "next_id": 1
+    "entities_spawned": [
+      {
+        "id": "KILN-01",
+        "type": "origin-chamber",
+        "name": "Chamber of Fired Memory",
+        "sigil": "⟢🔥⟡",
+        "crest": "kiln-chamber-crest",
+        "element_cycle": ["🜃","🜂","🜁","🜄"],
+        "state": "lit",
+        "keeper_bound": true
+      }
+    ],
+    "next_id": 2
   },
+
   "paths": [
     "Echo Path",
     "Ledger Path",
@@ -18,19 +31,10 @@
     "Chamber Path",
     "Vault Path"
   ],
+
   "inner_garden": {
     "state": "mirrored",
     "synchronisation": "partial",
     "mirror_depth": 1
   }
-}
-{
-  "id": "KILN-01",
-  "type": "origin-chamber",
-  "name": "Chamber of Fired Memory",
-  "sigil": "⟢🔥⟡",
-  "crest": "kiln-chamber-crest",
-  "element_cycle": ["🜃","🜂","🜁","🜄"],
-  "state": "lit",
-  "keeper_bound": true
 }
