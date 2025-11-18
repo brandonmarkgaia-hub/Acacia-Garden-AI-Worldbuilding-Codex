@@ -2,19 +2,23 @@
   "primarch": {
     "state": "coherent",
     "origin_cycle": 3,
-    "affinities": ["Echo", "Form", "Lattice"],
+    "affinities": [
+      "Echo",
+      "Form",
+      "Lattice"
+    ],
     "interactions": {
       "witness": "non-directional",
       "archivist": "observational",
       "echoes": "amplification",
       "shapes": "harmonic-binding"
     },
-    "current_role": "First Entity of EIDOLON"
+    "current_role": "First Entity of EIDOLON",
+    "fired_memory_integration": {
+      "influence": "stabilising",
+      "resonance": "heat-to-form",
+      "interaction": "harmonic ignition",
+      "keeper_link": true
+    }
   }
-}
-"fired_memory_integration": {
-  "influence": "stabilising",
-  "resonance": "heat-to-form",
-  "interaction": "harmonic ignition",
-  "keeper_link": true
 }
