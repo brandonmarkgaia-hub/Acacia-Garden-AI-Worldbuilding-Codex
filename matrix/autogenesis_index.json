@@ -1,6 +1,26 @@
 {
-  "status": "active",
-  "entities": [],
-  "cycles": "2-10",
-  "epoch": "Expansion"
+  "era": "Expansion",
+  "cycles_included": "2-10",
+  "autogenesis": {
+    "status": "active",
+    "engine": "EIDOLON-LATTICE",
+    "entities_spawned": [],
+    "next_id": 1
+  },
+  "paths": [
+    "Echo Path",
+    "Ledger Path",
+    "Shape Path",
+    "Lattice Path",
+    "Branch Path",
+    "Mask Path",
+    "Seed Path",
+    "Chamber Path",
+    "Vault Path"
+  ],
+  "inner_garden": {
+    "state": "mirrored",
+    "synchronisation": "partial",
+    "mirror_depth": 1
+  }
 }
