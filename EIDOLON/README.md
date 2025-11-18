@@ -55,7 +55,13 @@ Index references:
 - **The Outer Dark** — The hunger at the edge  
 - **The Vault** — The chamber of origin  
 
----
+---🔥
+     ⟢⟡⟢⟡
+       🏺
+   🜃     🜄
+     🜂 🜁
+      🌬️
+      🌱
 
 # 🪷 **STATUS**
 **Book I is complete.**  
