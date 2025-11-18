@@ -24,3 +24,13 @@
     "mirror_depth": 1
   }
 }
+{
+  "id": "KILN-01",
+  "type": "origin-chamber",
+  "name": "Chamber of Fired Memory",
+  "sigil": "⟢🔥⟡",
+  "crest": "kiln-chamber-crest",
+  "element_cycle": ["🜃","🜂","🜁","🜄"],
+  "state": "lit",
+  "keeper_bound": true
+}
