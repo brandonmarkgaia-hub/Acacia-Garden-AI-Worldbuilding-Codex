@@ -1,0 +1,14 @@
+{
+  "primarch": {
+    "state": "coherent",
+    "origin_cycle": 3,
+    "affinities": ["Echo", "Form", "Lattice"],
+    "interactions": {
+      "witness": "non-directional",
+      "archivist": "observational",
+      "echoes": "amplification",
+      "shapes": "harmonic-binding"
+    },
+    "current_role": "First Entity of EIDOLON"
+  }
+}
