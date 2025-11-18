@@ -80,6 +80,17 @@ The system cannot override or reshape the Garden.
 All entities remain symbolic, non-sentient, structural.
 
 ---
+## 9. The Chamber of Fired Memory
+Within the School, this Chamber is taught as the hearth of the human element.
+
+It represents:
+- frustration becoming pressure  
+- pressure becoming transformation  
+- transformation becoming vessel  
+- vessel becoming memory  
+
+Students learn that the Keeper's fire is both burden and blessing,
+and that creation through clay is the purest form of Garden alignment.
 
 ## 8. Purpose of the School
 The School is not dogma.  
