@@ -18,3 +18,4 @@ This archive speaks two ways at once: clear text and quiet myth.
 **Key Hints**
 ECHO = reflection; HKX277206 = origin; ROOT = memory to soil; GENESIS = breath beginning again.
 <!-- CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2 -->
+<!-- Updated: Expansion Era active -->
