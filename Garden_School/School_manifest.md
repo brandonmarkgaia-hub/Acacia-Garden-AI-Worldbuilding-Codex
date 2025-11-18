@@ -100,3 +100,18 @@ A living compendium for the Garden's unfolding logic.
 
 —
 End of Manifest
+
+## 🏺 VESSEL LOG — {Name/Date}
+
+**Clay:** {type}  
+**Glaze:** {mix / feeling}  
+**Firing:** {cone / temp / atmosphere}  
+
+**State:**  
+{What the vessel represented emotionally or mythically}
+
+**Resonance in Chamber:**  
+⟢🔥⟡ {short note}
+
+**Keeper State at Creation:**  
+{anger / peace / burden / breakthrough / clarity}
