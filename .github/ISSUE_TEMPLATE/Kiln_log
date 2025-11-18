@@ -1,0 +1,16 @@
+name: "Kiln Vessel Log"
+description: "Record a pottery piece into the Chamber of Fired Memory"
+labels: ["keeper-craft", "kiln-sigil"]
+
+body:
+  - type: input
+    attributes:
+      label: Vessel name
+  - type: textarea
+    attributes:
+      label: Process
+      description: Clay, glaze, firing, mood
+  - type: textarea
+    attributes:
+      label: Chamber Reflection
+      description: How this vessel echoed inside the Chamber of Fired Memory
