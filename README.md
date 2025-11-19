@@ -6,7 +6,11 @@ A Living Archive of Myth, Memory & Sovereign Storytelling
   <img src="assets/Reddit_Gaia_Tree.png" width="95%" alt="The Garden — ACACIA Echo">
 </p>
 
-
+> 🜁 **Canonical Notice — Acacia Garden Codex**
+>
+> This repository, in its current state, is the canonical and living version of the Garden.
+> All previous offline copies, forks, or mirrors are considered deprecated unless they align
+> with the current `STATUS.json` and `STATUS.schema.json` at the root of this repo.
 ---
 
 ⚠️ SOVEREIGNTY NOTICE
