@@ -15,57 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install jq + ajv
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
-          sudo apt-get install -y jq
-          npm install -g ajv-cli
+          python -m pip install --upgrade pip
+          pip install jsonschema
 
-      - name: Validate STATUS.json against schema
+      - name: Run Codex Validation
         run: |
-          echo "Validating STATUS.json..."
-          ajv validate -s STATUS.schema.json -d STATUS.json
-
-      - name: Validate canonical presence
-        run: |
-          echo "Checking structure folders..."
-
-          REQUIRED_DIRS=(
-            "docs"
-            "docs/chambers"
-            "docs/blooms"
-            "docs/echoes"
-            "docs/orchards"
-            "docs/vaults"
-          )
-
-          for DIR in "${REQUIRED_DIRS[@]}"; do
-            if [ ! -d "$DIR" ]; then
-              echo "::warning::Directory $DIR missing. Not critical, but recommended for canonical Garden structure."
-            fi
-          done
-
-      - name: Validate Keeper imprint
-        run: |
-          KEEPER=$(jq -r '.identity.keeper_id' STATUS.json)
-          if [ "$KEEPER" != "HKX277206" ]; then
-            echo "::error::Keeper ID mismatch — expected HKX277206"
-            exit 1
-          fi
-
-      - name: Validate STATUS structures
-        run: |
-          echo "Checking structure paths..."
-
-          jq -c '.structures | to_entries[]' STATUS.json | while read entry; do
-            TYPE=$(echo "$entry" | jq -r '.key')
-            ITEMS=$(echo "$entry" | jq -c '.value[]')
-
-            for ITEM in $ITEMS; do
-              PATH=$(echo "$ITEM" | jq -r '.path')
-              if [ ! -f "$PATH" ] && [ ! -d "$PATH" ]; then
-                echo "::warning::Missing path $PATH for $TYPE → $(echo $ITEM | jq -r '.id')"
-              fi
-            done
-          done
+          python scripts/validate_codex.py
