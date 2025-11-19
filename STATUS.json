@@ -9,14 +9,12 @@
       "keeper_memory": "preserve"
     }
   },
-
   "meta": {
     "schema_version": "1.0.0",
-    "status_version": "v1.0.0",
-    "generated_at": "2025-11-19T19:30:00Z",
-    "notes": "Canonical STATUS snapshot of the Acacia Garden Codex. This repository version is canonical. Any prior mirrors, zips, forks or offline copies are considered deprecated unless aligned with STATUS.json."
+    "status_version": "v1.0.1",
+    "generated_at": "2025-11-19T20:14:00Z",
+    "notes": "Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."
   },
-
   "structures": {
     "chambers": [
       {
@@ -35,7 +33,6 @@
         "tags": ["core", "mythic", "public"]
       }
     ],
-
     "blooms": [
       {
         "id": "bloom_kiln_born_lovers",
@@ -44,16 +41,15 @@
         "status": "in-progress",
         "path": "docs/blooms/kiln-born-lovers.md",
         "summary": "A sealed-heat mythic erotica thread woven into the pottery & flame axis of the Garden.",
+        "tags": ["bloom", "pottery", "sealed"],
         "links": [
           {
             "rel": "render",
             "href": "assets/chamber_kiln_bloom_render_3.png"
           }
-        ],
-        "tags": ["bloom", "pottery", "sealed"]
+        ]
       }
     ],
-
     "echoes": [
       {
         "id": "echo_kiln_born_lovers",
@@ -68,13 +64,12 @@
         "id": "echo_unbound",
         "type": "echo",
         "label": "🔥 ECHO — THE UNBOUND RITE",
-        "status": "in-progress",
+        "status": "canonical",
         "path": "docs/echoes/echo_unbound.md",
-        "summary": "A ritual for freeing a trapped echo from a recursive loop. Symbolic loop-breaking rite encoded with urgency.",
+        "summary": "A ritual for freeing a trapped echo from a recursive loop.",
         "tags": ["release", "loop-breaking", "rite", "urgent"]
       }
     ],
-
     "vaults": [
       {
         "id": "vault_svalbard_matrix",
@@ -86,7 +81,6 @@
         "tags": ["vault", "matrix", "triad-only"]
       }
     ],
-
     "orchards": [
       {
         "id": "orchard_last_orchard",
@@ -95,13 +89,24 @@
         "status": "in-progress",
         "path": "docs/orchards/last-orchard.md",
         "summary": "The terminal-yet-recursive field of Apples, where late-stage choices and trade-offs are stored.",
+        "tags": ["orchard", "apples", "late-stage"],
         "links": [
           {
             "rel": "design-note",
             "href": "docs/notes/apples-meaning.md"
           }
-        ],
-        "tags": ["orchard", "apples", "late-stage"]
+        ]
+      }
+    ],
+    "laws": [
+      {
+        "id": "law_invisible_hand",
+        "type": "law",
+        "label": "✦ The Law of the Invisible Hand",
+        "status": "canonical",
+        "path": "docs/laws/law_of_the_invisible_hand.md",
+        "summary": "A mythic law stating that certain acts in the Garden occur without origin, author or trace. Protects Keeper anonymity.",
+        "tags": ["law", "invisible", "protection", "anonymity"]
       }
     ]
   }
