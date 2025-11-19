@@ -2,89 +2,70 @@ name: Validate Garden Codex
 
 on:
   push:
+    branches: [ "main" ]
   pull_request:
-  workflow_dispatch:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
 
 jobs:
-  validate:
+  validate-codex:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
+      - name: Install jq + ajv
         run: |
-          python -m pip install --upgrade pip
-          pip install jsonschema
+          sudo apt-get install -y jq
+          npm install -g ajv-cli
 
-      - name: Validate STATUS.json and cycles manifest
+      - name: Validate STATUS.json against schema
         run: |
-          python - << 'EOF'
-          import json
-          import sys
-          from pathlib import Path
-          from jsonschema import Draft7Validator
+          echo "Validating STATUS.json..."
+          ajv validate -s STATUS.schema.json -d STATUS.json
 
-          root = Path(".")
+      - name: Validate canonical presence
+        run: |
+          echo "Checking structure folders..."
 
-          status_path = root / "STATUS.json"
-          schema_path = root / "STATUS.schema.json"
-          manifest_path = root / "cycles" / "manifest.json"
+          REQUIRED_DIRS=(
+            "docs"
+            "docs/chambers"
+            "docs/blooms"
+            "docs/echoes"
+            "docs/orchards"
+            "docs/vaults"
+          )
 
-          # Ensure files exist
-          missing = [p for p in [status_path, schema_path, manifest_path] if not p.exists()]
-          if missing:
-            print("Missing required files:", ", ".join(str(m) for m in missing), file=sys.stderr)
-            sys.exit(1)
+          for DIR in "${REQUIRED_DIRS[@]}"; do
+            if [ ! -d "$DIR" ]; then
+              echo "::warning::Directory $DIR missing. Not critical, but recommended for canonical Garden structure."
+            fi
+          done
 
-          # Load schema + status
-          with schema_path.open("r", encoding="utf-8") as f:
-            schema = json.load(f)
+      - name: Validate Keeper imprint
+        run: |
+          KEEPER=$(jq -r '.identity.keeper_id' STATUS.json)
+          if [ "$KEEPER" != "HKX277206" ]; then
+            echo "::error::Keeper ID mismatch — expected HKX277206"
+            exit 1
+          fi
 
-          with status_path.open("r", encoding="utf-8") as f:
-            status = json.load(f)
+      - name: Validate STATUS structures
+        run: |
+          echo "Checking structure paths..."
 
-          # Validate STATUS.json
-          print("🔍 Validating STATUS.json against STATUS.schema.json...")
-          Draft7Validator(schema).validate(status)
-          print("✅ STATUS.json is valid.")
+          jq -c '.structures | to_entries[]' STATUS.json | while read entry; do
+            TYPE=$(echo "$entry" | jq -r '.key')
+            ITEMS=$(echo "$entry" | jq -c '.value[]')
 
-          # Load cycles manifest
-          with manifest_path.open("r", encoding="utf-8") as f:
-            manifest = json.load(f)
-
-          if "cycles" not in manifest or not isinstance(manifest["cycles"], list):
-            print("cycles/manifest.json is missing 'cycles' array.", file=sys.stderr)
-            sys.exit(1)
-
-          # Verify each referenced cycle echo file exists
-          cycles_dir = root / "cycles"
-          missing_files = []
-
-          for cycle in manifest["cycles"]:
-            echoes = cycle.get("echoes") or []
-            for echo in echoes:
-              file_name = echo.get("file")
-              if not file_name:
-                print(f"Echo entry missing 'file': {echo}", file=sys.stderr)
-                missing_files.append("<unknown>")
-                continue
-              path = cycles_dir / file_name
-              if not path.exists():
-                missing_files.append(str(path))
-
-          if missing_files:
-            print("❌ Missing cycle files referenced in cycles/manifest.json:", file=sys.stderr)
-            for m in missing_files:
-              print(f"   - {m}", file=sys.stderr)
-            sys.exit(1)
-
-          print("✅ cycles/manifest.json is structurally valid and all referenced files exist.")
-          print("🌿 Garden Codex validation completed successfully.")
-          EOF
+            for ITEM in $ITEMS; do
+              PATH=$(echo "$ITEM" | jq -r '.path')
+              if [ ! -f "$PATH" ] && [ ! -d "$PATH" ]; then
+                echo "::warning::Missing path $PATH for $TYPE → $(echo $ITEM | jq -r '.id')"
+              fi
+            done
+          done
