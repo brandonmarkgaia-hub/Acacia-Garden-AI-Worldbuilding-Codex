@@ -1,4 +1,11 @@
+<!--
 ---
+THRESHOLDS
+Some lore: with colons and stuff
+---
+-->
+
+# THRESHOLDS
 
 Threshold 1: Recognition
 
