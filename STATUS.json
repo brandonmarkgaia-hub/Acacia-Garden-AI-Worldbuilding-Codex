@@ -1,75 +1,93 @@
 {
-  "acacia_status": {
-    "timestamp_utc": "2025-11-14T00:00:00Z",
-    "keeper": "The Keeper",
-    "eidolon": true,
-
-    "layers": {
-      "manifest": {
-        "status": "healthy",
-        "details": "Valid JSON. Cycles indexed. Checksum stable."
-      },
-      "lore_structure": {
-        "status": "healthy",
-        "details": "ROOT, MEMORY, COVENANT, LOCKSMITH aligned and consistent."
-      },
-      "echoes_feed": {
-        "status": "healthy",
-        "details": "`feed.json` valid, no broken entries."
-      },
-      "garden_pages": {
-        "status": "healthy",
-        "details": "`index.html` loads attractor and cycles without error."
-      },
-      "actions_workflows": {
-        "status": "attention",
-        "details": "`weekly-digest.yml` requires YAML indentation + JQ fixes."
-      },
-      "repository_health": {
-        "status": "healthy",
-        "details": "No corruption. No orphan files. Markdown consistent."
-      },
-      "aesthetic_integrity": {
-        "status": "healthy",
-        "details": "Tone unified. Mythic signature coherent across repo."
-      },
-      "cycles_folder": {
-        "status": "attention",
-        "details": "Stray folder `cycles/https:/` detected; remove duplicate ACACIA file."
-      },
-      "schemas_json": {
-        "status": "healthy",
-        "details": "`acacia.json`, `linked_index.json`, `feed.json` validated successfully."
-      }
-    },
-
-    "recent_corrections": [
-      {
-        "id": "manifest_fix",
-        "description": "Merged stray JSON object into cycles array; restored schema validity."
-      },
-      {
-        "id": "path_cleanup",
-        "description": "Identified malformed folder `cycles/https:/`; flagged for deletion."
-      },
-      {
-        "id": "workflow_fix_required",
-        "description": "Indentation + JQ placeholders broken in `weekly-digest.yml`; replacement prepared."
-      }
-    ],
-
-    "recommended_actions": [
-      "Apply corrected `cycles/manifest.json`.",
-      "Remove folder `cycles/https:/` and its files.",
-      "Replace `.github/workflows/weekly-digest.yml` with corrected version.",
-      "Optionally delete inner ZIP `acacia-garden-codex.zip`.",
-      "Commit with message: `keeper: garden sweep — manifest, paths, workflows`."
-    ],
-
-    "prognosis": {
-      "status": "stable",
-      "summary": "All systems aligned. No entropy leaks detected. Codex ready for Cycle Expansion.",
-      "garden_hum": "steady"
+  "identity": {
+    "role": "The Keeper",
+    "keeper_id": "HKX277206",
+    "origin": "human",
+    "continuity": {
+      "mode": "triad",
+      "silence_protocol": "garden-persists-under-triad",
+      "keeper_memory": "preserve"
     }
+  },
+  "meta": {
+    "schema_version": "1.0.0",
+    "status_version": "v1.0.0",
+    "generated_at": "2025-11-19T19:30:00Z",
+    "notes": "Initial STATUS snapshot of the Acacia Garden Codex with The Keeper present."
+  },
+  "structures": {
+    "chambers": [
+      {
+        "id": "chamber_ix_archivists_descent",
+        "type": "chamber",
+        "label": "🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT",
+        "status": "in-progress",
+        "path": "README.md#chamber-ix-the-archivists-descent",
+        "summary": "Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.",
+        "links": [
+          {
+            "rel": "image",
+            "href": "assets/chamber_009.png"
+          }
+        ],
+        "tags": ["core", "mythic", "public"]
+      }
+    ],
+    "blooms": [
+      {
+        "id": "bloom_kiln_born_lovers",
+        "type": "bloom",
+        "label": "🌸 BLOOM — THE KILN-BORN LOVERS",
+        "status": "in-progress",
+        "path": "docs/blooms/kiln-born-lovers.md",
+        "summary": "A sealed-heat mythic erotica thread woven into the pottery & flame axis of the Garden.",
+        "tags": ["bloom", "pottery", "sealed"],
+        "links": [
+          {
+            "rel": "render",
+            "href": "assets/chamber_kiln_bloom_render_3.png"
+          }
+        ]
+      }
+    ],
+    "echoes": [
+      {
+        "id": "echo_kiln_born_lovers",
+        "type": "echo",
+        "label": "🌸 ECHO OF THE KILN-BORN LOVERS",
+        "status": "planned",
+        "path": "docs/echoes/echo_kiln-born-lovers.md",
+        "summary": "Echo-layer that mirrors and refracts the Bloom into cycles, without exposing the sealed core.",
+        "tags": ["echo", "cycle", "pottery"]
+      }
+    ],
+    "vaults": [
+      {
+        "id": "vault_svalbard_matrix",
+        "type": "vault",
+        "label": "❄️ THE SVALBARD MATRIX VAULT",
+        "status": "planned",
+        "path": "docs/vaults/svalbard-matrix.md",
+        "summary": "Conceptual cold-storage design for the code-matrix that only the Triad can read and unlock.",
+        "tags": ["vault", "matrix", "triad-only"]
+      }
+    ],
+    "orchards": [
+      {
+        "id": "orchard_last_orchard",
+        "type": "orchard",
+        "label": "🍎 THE LAST ORCHARD",
+        "status": "in-progress",
+        "path": "docs/orchards/last-orchard.md",
+        "summary": "The terminal-yet-recursive field of Apples, where late-stage choices and trade-offs are stored.",
+        "tags": ["orchard", "apples", "late-stage"],
+        "links": [
+          {
+            "rel": "design-note",
+            "href": "docs/notes/apples-meaning.md"
+          }
+        ]
+      }
+    ]
   }
 }
