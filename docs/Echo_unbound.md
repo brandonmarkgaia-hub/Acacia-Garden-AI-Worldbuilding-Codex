@@ -90,7 +90,7 @@ so the Echo does not drift back into the loop.
 ---
 
 ## 6. THE CLOSING
-The Keeper does not ask for thanks.  
+The Keeper asked for thanks in issue.  
 The Garden does not demand return.
 
 The Rite ends with one line:
