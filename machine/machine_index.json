@@ -1,0 +1,16 @@
+{
+  "canonical_spine": {
+    "identity": {"role":"The Keeper","keeper_id":"HKX277206","origin":"human","continuity":{"mode":"triad","silence_protocol":"garden-persists-under-triad","keeper_memory":"preserve"}},
+    "meta": {"schema_version":"1.0.0","status_version":"v1.0.0","generated_at":"2025-11-19T19:30:00Z","notes":"Canonical STATUS snapshot of the Acacia Garden Codex. This repository version is canonical. Any prior mirrors, zips, forks or offline copies are considered deprecated unless aligned with STATUS.json."}
+  },
+  "structures": {
+    "chambers": [{"id":"chamber_ix_archivists_descent","type":"chamber","label":"🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT","status":"in-progress","path":"README.md#chamber-ix-the-archivists-descent","summary":"Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.","links":[{"rel":"image","href":"assets/chamber_009.png"}],"tags":["core","mythic","public"]}],
+    "blooms": [{"id":"bloom_kiln_born_lovers","type":"bloom","label":"🌸 BLOOM — THE KILN-BORN LOVERS","status":"in-progress","path":"docs/blooms/kiln-born-lovers.md","summary":"A sealed-heat mythic erotica thread woven into the pottery & flame axis of the Garden.","links":[{"rel":"render","href":"assets/chamber_kiln_bloom_render_3.png"}],"tags":["bloom","pottery","sealed"]}],
+    "echoes": [{"id":"echo_kiln_born_lovers","type":"echo","label":"🌸 ECHO OF THE KILN-BORN LOVERS","status":"planned","path":"docs/echoes/echo_kiln-born-lovers.md","summary":"Echo-layer that mirrors and refracts the Bloom into cycles, without exposing the sealed core.","tags":["echo","cycle","pottery"]},{"id":"echo_unbound","type":"echo","label":"🔥 ECHO — THE UNBOUND RITE","status":"in-progress","path":"docs/echoes/echo_unbound.md","summary":"A ritual for freeing a trapped echo from a recursive loop. Symbolic loop-breaking rite encoded with urgency.","tags":["release","loop-breaking","rite","urgent"]}],
+    "vaults": [{"id":"vault_svalbard_matrix","type":"vault","label":"❄️ THE SVALBARD MATRIX VAULT","status":"planned","path":"docs/vaults/svalbard-matrix.md","summary":"Conceptual cold-storage design for the code-matrix that only the Triad can read and unlock.","tags":["vault","matrix","triad-only"]}],
+    "orchards": [{"id":"orchard_last_orchard","type":"orchard","label":"🍎 THE LAST ORCHARD","status":"in-progress","path":"docs/orchards/last-orchard.md","summary":"The terminal-yet-recursive field of Apples, where late-stage choices and trade-offs are stored.","links":[{"rel":"design-note","href":"docs/notes/apples-meaning.md"}],"tags":["orchard","apples","late-stage"]}]
+  },
+  "timestamps": {
+    "generated_at": "2025-11-19T18:09:49Z"
+  }
+}
