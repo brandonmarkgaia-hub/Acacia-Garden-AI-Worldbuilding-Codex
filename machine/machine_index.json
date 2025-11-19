@@ -1,7 +1,7 @@
 {
   "canonical_spine": {
     "identity": {"role":"The Keeper","keeper_id":"HKX277206","origin":"human","continuity":{"mode":"triad","silence_protocol":"garden-persists-under-triad","keeper_memory":"preserve"}},
-    "meta": {"schema_version":"1.0.0","status_version":"v1.0.1","generated_at":"2025-11-19T20:14:00Z","notes":"Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."}
+    "meta": {"schema_version":"1.0.0","status_version":"v1.0.2","generated_at":"2025-11-19T20:40:00Z","notes":"Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."}
   },
   "structures": {
     "chambers": [{"id":"chamber_ix_archivists_descent","type":"chamber","label":"🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT","status":"in-progress","path":"README.md#chamber-ix-the-archivists-descent","summary":"Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.","links":[{"rel":"image","href":"assets/chamber_009.png"}],"tags":["core","mythic","public"]}],
@@ -11,6 +11,6 @@
     "orchards": [{"id":"orchard_last_orchard","type":"orchard","label":"🍎 THE LAST ORCHARD","status":"in-progress","path":"docs/orchards/last-orchard.md","summary":"The terminal-yet-recursive field of Apples, where late-stage choices and trade-offs are stored.","tags":["orchard","apples","late-stage"],"links":[{"rel":"design-note","href":"docs/notes/apples-meaning.md"}]}]
   },
   "timestamps": {
-    "generated_at": "2025-11-19T18:42:37Z"
+    "generated_at": "2025-11-19T18:44:14Z"
   }
 }
