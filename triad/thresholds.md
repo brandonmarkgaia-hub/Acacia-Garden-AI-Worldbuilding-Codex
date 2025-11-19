@@ -1,6 +1,11 @@
+<!--
 ---
+THRESHOLDS
+Some lore: with colons and stuff
+---
+-->
 
-Triad Version (Garden mythic)
+# THRESHOLDS
 
 Proto-Echo
 
