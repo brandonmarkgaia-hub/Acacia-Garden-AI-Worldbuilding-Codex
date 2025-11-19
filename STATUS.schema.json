@@ -1,127 +1,149 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
-  "title": "ACACIA Garden Status Schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Acacia Garden Codex STATUS",
   "type": "object",
-  "required": ["acacia_status"],
+  "required": ["identity", "meta", "structures"],
   "properties": {
-    "acacia_status": {
+    "identity": {
       "type": "object",
-      "required": [
-        "timestamp_utc",
-        "keeper",
-        "eidolon",
-        "layers",
-        "recent_corrections",
-        "recommended_actions",
-        "prognosis"
-      ],
+      "required": ["role", "keeper_id", "origin", "continuity"],
       "properties": {
-        "timestamp_utc": {
+        "role": {
           "type": "string",
-          "description": "ISO-8601 UTC timestamp for the last sweep.",
-          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+          "const": "The Keeper"
         },
-        "keeper": {
+        "keeper_id": {
           "type": "string",
-          "description": "Human-readable keeper identifier."
+          "const": "HKX277206"
         },
-        "eidolon": {
-          "type": "boolean",
-          "description": "Flag indicating whether the EIDOLON companion is considered active."
+        "origin": {
+          "type": "string",
+          "enum": ["human"]
         },
-        "layers": {
+        "continuity": {
           "type": "object",
-          "description": "Status by logical subsystem of the Garden Codex.",
+          "required": ["mode", "silence_protocol", "keeper_memory"],
           "properties": {
-            "manifest": {
-              "$ref": "#/definitions/layerStatus"
+            "mode": {
+              "type": "string",
+              "enum": ["triad"]
             },
-            "lore_structure": {
-              "$ref": "#/definitions/layerStatus"
+            "silence_protocol": {
+              "type": "string",
+              "enum": ["garden-persists-under-triad"]
             },
-            "echoes_feed": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "garden_pages": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "actions_workflows": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "repository_health": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "aesthetic_integrity": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "cycles_folder": {
-              "$ref": "#/definitions/layerStatus"
-            },
-            "schemas_json": {
-              "$ref": "#/definitions/layerStatus"
+            "keeper_memory": {
+              "type": "string",
+              "enum": ["preserve"]
             }
           },
           "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "required": ["schema_version", "status_version", "generated_at"],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^1\\.0\\.0$"
         },
-        "recent_corrections": {
+        "status_version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "structures": {
+      "type": "object",
+      "required": ["chambers", "blooms", "echoes", "vaults", "orchards"],
+      "properties": {
+        "chambers": {
           "type": "array",
-          "description": "Chronicle of recent Keeper interventions.",
+          "items": { "$ref": "#/$defs/node" }
+        },
+        "blooms": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/node" }
+        },
+        "echoes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/node" }
+        },
+        "vaults": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/node" }
+        },
+        "orchards": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/node" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "required": ["id", "type", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9._-]+$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["chamber", "bloom", "echo", "vault", "orchard"]
+        },
+        "label": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["planned", "in-progress", "complete", "sealed", "archived"]
+        },
+        "path": {
+          "type": "string",
+          "description": "File or URL path in the Codex (e.g. docs/chambers/ix.md)"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
           "items": {
             "type": "object",
-            "required": ["id", "description"],
+            "required": ["rel", "href"],
             "properties": {
-              "id": {
+              "rel": {
                 "type": "string"
               },
-              "description": {
+              "href": {
                 "type": "string"
               }
             },
             "additionalProperties": false
           }
         },
-        "recommended_actions": {
+        "tags": {
           "type": "array",
-          "description": "Suggested next Keeper steps.",
           "items": {
             "type": "string"
           }
-        },
-        "prognosis": {
-          "type": "object",
-          "required": ["status", "summary", "garden_hum"],
-          "properties": {
-            "status": {
-              "type": "string",
-              "enum": ["stable", "degraded", "critical"]
-            },
-            "summary": {
-              "type": "string"
-            },
-            "garden_hum": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
         }
       },
       "additionalProperties": false
     }
   },
-  "definitions": {
-    "layerStatus": {
-      "type": "object",
-      "required": ["status", "details"],
-      "properties": {
-        "status": {
-          "type": "string",
-          "enum": ["healthy", "attention", "degraded"]
-        },
-        "details": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": false
-    }
-  }
+  "additionalProperties": false
 }
