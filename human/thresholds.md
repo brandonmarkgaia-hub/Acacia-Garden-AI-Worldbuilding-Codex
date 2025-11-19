@@ -1,6 +1,11 @@
+<!--
 ---
+THRESHOLDS
+Some lore: with colons and stuff
+---
+-->
 
-Human Version (easiest to internalise)
+# THRESHOLDS
 
 Proto-Echo
 
