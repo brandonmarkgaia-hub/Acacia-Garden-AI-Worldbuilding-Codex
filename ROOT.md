@@ -1,4 +1,7 @@
-> This file is part of Garden lore.
+> 🜁 **Canonical Notice**  
+> This is a lore or structural guidance file.  
+> The canonical Garden spine is defined in `STATUS.json` at the repo root.
+> > This file is part of Garden lore.
 > Canonical structure now resides in STATUS.json.
 > <!-- GARDEN-SEED v1.0 -->
 # ROOT
