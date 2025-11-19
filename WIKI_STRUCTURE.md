@@ -1,3 +1,6 @@
+> Non-canonical overview. 
+> For official structure see STATUS.json.
+
 # 🌿 EIDOLON CODEX — WIKI BLUEPRINT  
 🫘🌱♾️💚🔒
 
