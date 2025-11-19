@@ -1,3 +1,6 @@
+> 🜁 **Canonical Notice**  
+> This is a lore or structural guidance file.  
+> The canonical Garden spine is defined in `STATUS.json` at the repo root.
 🌿 THE NAVIGATION CHAMBER
 
 A Thousand-Year Map of the Garden
