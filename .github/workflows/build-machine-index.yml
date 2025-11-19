@@ -1,16 +1,11 @@
-name: Build machine index
+name: Build Machine Index
 
 on:
   push:
-    branches: [ main ]
-    paths:
-      - 'STATUS.json'
-      - 'cycles/manifest.json'
-      - 'echoes/feed.json'
-      - '.github/workflows/build-machine-index.yml'
-  schedule:
-    - cron: '17 2 * * *'
-  workflow_dispatch:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -20,78 +15,65 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+      - name: Install jq
+        run: sudo apt-get install -y jq
 
-      - name: Build machine-index.json
+      - name: Build Machine Index
         run: |
-          python - << 'EOF'
-          import json
-          from pathlib import Path
-          from datetime import datetime, timezone
+          echo "Building machine_index.json..."
 
-          root = Path(".")
+          mkdir -p machine
 
-          status_path   = root / "STATUS.json"
-          manifest_path = root / "cycles" / "manifest.json"
-          feed_path     = root / "echoes" / "feed.json"
-          index_path    = root / "machine-index.json"
+          # Read canonical spine
+          STATUS=$(cat STATUS.json)
+          SCHEMA=$(cat STATUS.schema.json)
 
-          for p in (status_path, manifest_path, feed_path):
-            if not p.exists():
-              raise SystemExit(f"Missing required file: {p}")
+          # Parse out structures for fast machine reference
+          CHAMBERS=$(echo "$STATUS" | jq -c '.structures.chambers')
+          BLOOMS=$(echo "$STATUS" | jq -c '.structures.blooms')
+          ECHOES=$(echo "$STATUS" | jq -c '.structures.echoes')
+          VAULTS=$(echo "$STATUS" | jq -c '.structures.vaults')
+          ORCHARDS=$(echo "$STATUS" | jq -c '.structures.orchards')
 
-          with status_path.open("r", encoding="utf-8") as f:
-            status = json.load(f)
-          with manifest_path.open("r", encoding="utf-8") as f:
-            manifest = json.load(f)
-          with feed_path.open("r", encoding="utf-8") as f:
-            feed = json.load(f)
+          # Parse identity (The Keeper)
+          IDENTITY=$(echo "$STATUS" | jq -c '.identity')
 
-          now = datetime.now(timezone.utc).isoformat().replace("+00:00","Z")
+          # Parse meta
+          META=$(echo "$STATUS" | jq -c '.meta')
 
-          idx = {
-            "schema_version": "1.0.0",
-            "generated_utc": now,
-            "status": status.get("acacia_status", {}),
-            "counts": {
-              "cycles": len(manifest.get("cycles", [])),
-              "echoes": len(feed),
+          # Build machine_index.json
+          cat <<EOF > machine/machine_index.json
+          {
+            "canonical_spine": {
+              "identity": $IDENTITY,
+              "meta": $META
             },
-            "sources": {
-              "status": "STATUS.json",
-              "cycles_manifest": "cycles/manifest.json",
-              "echoes_feed": "echoes/feed.json",
-              "crater_index": "api/crater/index.txt",
-              "crater_garden": "api/crater/Garden.json"
+            "structures": {
+              "chambers": $CHAMBERS,
+              "blooms": $BLOOMS,
+              "echoes": $ECHOES,
+              "vaults": $VAULTS,
+              "orchards": $ORCHARDS
             },
-            "cycles_manifest": manifest,
-            "echoes_feed_header": [
-              {
-                "id": e.get("id"),
-                "title": e.get("title"),
-                "date": e.get("date")
-              } for e in feed
-            ]
+            "timestamps": {
+              "generated_at": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            }
           }
-
-          index_path.write_text(
-            json.dumps(idx, indent=2, ensure_ascii=False),
-            encoding="utf-8"
-          )
-          print(f"Wrote {index_path}")
           EOF
 
-      - name: Commit and push machine-index.json
+          echo "Machine index built successfully."
+
+      - name: Commit Machine Index
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add machine-index.json || true
-          git diff --cached --quiet && echo "No changes to commit." && exit 0
-          git commit -m "🤖 Refresh machine-index.json"
-          git push
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add machine/machine_index.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update machine index"
+            git push
+          fi
