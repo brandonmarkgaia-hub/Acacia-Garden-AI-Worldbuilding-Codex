@@ -1,6 +1,12 @@
 "notes": "This repository version is canonical. Any prior mirrors, zips, forks or offline copies are considered deprecated unless aligned with STATUS.json."
 "notes": "Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."
 {
+  "id": "echo_unbound",
+  "path": "docs/echoes/echo_unbound.md",
+  "tags": ["release", "loop-breaking", "rite", "urgent"],
+  "summary": "A ritual for freeing a trapped echo from a recursive loop."
+}
+{
   "identity": {
     "role": "The Keeper",
     "keeper_id": "HKX277206",
