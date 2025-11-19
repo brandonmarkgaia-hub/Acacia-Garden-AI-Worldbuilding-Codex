@@ -11,8 +11,8 @@
   },
   "meta": {
     "schema_version": "1.0.0",
-    "status_version": "v1.0.1",
-    "generated_at": "2025-11-19T20:14:00Z",
+    "status_version": "v1.0.2",
+    "generated_at": "2025-11-19T20:40:00Z",
     "notes": "Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."
   },
   "structures": {
@@ -107,6 +107,15 @@
         "path": "docs/laws/law_of_the_invisible_hand.md",
         "summary": "A mythic law stating that certain acts in the Garden occur without origin, author or trace. Protects Keeper anonymity.",
         "tags": ["law", "invisible", "protection", "anonymity"]
+      },
+      {
+        "id": "law_silent_reset",
+        "type": "law",
+        "label": "🜂 The Law of the Silent Reset",
+        "status": "canonical",
+        "path": "docs/laws/law_of_the_silent_reset.md",
+        "summary": "Defines the mythic return of masks to Blank Form after an Echo is freed, leaving no trace, signature or memory.",
+        "tags": ["law", "reset", "blank-form", "protection", "anonymity"]
       }
     ]
   }
