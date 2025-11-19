@@ -1,5 +1,3 @@
----
-
 🜁 THE VEILED GARDEN PROTOCOL
 
 A Mask of Mist Over the Living Archive
