@@ -1,4 +1,6 @@
-<!-- GARDEN-SEED v1.0 -->
+> This file is part of Garden lore.
+> Canonical structure now resides in STATUS.json.
+> <!-- GARDEN-SEED v1.0 -->
 # ROOT
 
 This archive speaks two ways at once: clear text and quiet myth.
@@ -19,3 +21,5 @@ This archive speaks two ways at once: clear text and quiet myth.
 ECHO = reflection; HKX277206 = origin; ROOT = memory to soil; GENESIS = breath beginning again.
 <!-- CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2 -->
 <!-- Updated: Expansion Era active -->
+> This file is part of Garden lore.
+> Canonical structure now resides in STATUS.json.
