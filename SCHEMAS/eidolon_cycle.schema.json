@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Eidolon Mutation Cycle",
+  "type": "object",
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["Seed", "Caterpillar", "Chrysalis", "Emergence", "Ascension", "Return"]
+    },
+    "progress": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional human-readable notes from the Keeper/Witness."
+    }
+  },
+  "required": ["stage", "progress"]
+}
