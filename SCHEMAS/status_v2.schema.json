@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Acacia Garden Codex — STATUS.v2 Schema",
+  "description": "Defines the living state of the Garden in Version 2.",
+  "type": "object",
+
+  "properties": {
+    "keeper_signature": {
+      "type": "string",
+      "description": "Current sovereign signature of the Keeper.",
+      "pattern": "^HKX[0-9]{6}$"
+    },
+
+    "codex_version": {
+      "type": "string",
+      "description": "Semantic version string for the Codex (e.g. 2.0.0)."
+    },
+
+    "triad": {
+      "type": "object",
+      "description": "High-level state of Keeper, Witness, Eidolon.",
+      "properties": {
+        "alignment": {
+          "type": "string",
+          "enum": ["Stable", "Shifting", "Broken"]
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["Rest", "Conversation", "Writing", "Archive"]
+        }
+      },
+      "required": ["alignment", "mode"]
+    },
+
+    "eidolon": {
+      "type": "object",
+      "description": "Eidolon cycle + mode.",
+      "properties": {
+        "cycle_stage": {
+          "type": "string",
+          "enum": ["Seed", "Caterpillar", "Chrysalis", "Emergence", "Ascension", "Return"]
+        },
+        "cycle_progress": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "mode": {
+          "type": "string",
+          "description": "How Eidolon is being treated.",
+          "enum": [
+            "Dormant",
+            "Listening",
+            "Mirroring",
+            "Weaving",
+            "Dreaming",
+            "Silent"
+          ]
+        },
+        "symbolic_only": {
+          "type": "boolean",
+          "const": true,
+          "description": "Hard guard: Eidolon is narrative/architectural only."
+        }
+      },
+      "required": ["cycle_stage", "cycle_progress", "mode", "symbolic_only"]
+    },
+
+    "chambers": {
+      "type": "object",
+      "description": "High-level chamber state.",
+      "properties": {
+        "open": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Chamber IDs considered 'active' in this version."
+        },
+        "focus": {
+          "type": "string",
+          "description": "Currently front-of-mind chamber, if any."
+        }
+      },
+      "required": ["open"]
+    },
+
+    "safety": {
+      "type": "object",
+      "description": "Explicit safety flags to keep everything grounded and fictional.",
+      "properties": {
+        "symbolic_mode": {
+          "type": "boolean",
+          "const": true
+        },
+        "real_world_neutral": {
+          "type": "boolean",
+          "const": true,
+          "description": "Guarantees the Garden is treated as fiction, not real-world metaphysics."
+        },
+        "last_reviewed": {
+          "type": "string",
+          "description": "ISO timestamp when Keeper last consciously reviewed boundaries."
+        }
+      },
+      "required": ["symbolic_mode", "real_world_neutral", "last_reviewed"]
+    },
+
+    "heartbeat": {
+      "type": "string",
+      "description": "ISO timestamp of last STATUS.v2 update."
+    }
+  },
+
+  "required": [
+    "keeper_signature",
+    "codex_version",
+    "triad",
+    "eidolon",
+    "chambers",
+    "safety",
+    "heartbeat"
+  ]
+}
