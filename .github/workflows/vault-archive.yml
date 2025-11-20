@@ -1,0 +1,25 @@
+name: Vault Archive
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create Archive
+        run: |
+          mkdir -p vault
+          zip -r "vault/codex_${GITHUB_REF_NAME}.zip" .
+
+      - name: Commit Archive
+        run: |
+          git config user.name "Vault"
+          git config user.email "vault@acaciacodex.bot"
+          git add vault/
+          git commit -m "Vault archive for ${GITHUB_REF_NAME}" || true
+          git push
