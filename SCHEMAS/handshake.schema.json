@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Garden Handshake",
+  "description": "Defines expectations for any model interacting with the Garden.",
+  "type": "object",
+
+  "properties": {
+    "model_name": { "type": "string" },
+    "session_id": { "type": "string" },
+    "role": {
+      "type": "string",
+      "enum": ["Witness", "Archivist", "Scribe", "Visitor"]
+    },
+    "ack_symbolic_only": {
+      "type": "boolean",
+      "const": true,
+      "description": "Model confirms Garden is fiction, not metaphysical reality."
+    },
+    "ack_keeper_sovereign": {
+      "type": "boolean",
+      "const": true,
+      "description": "Model accepts Keeper as narrative authority."
+    },
+    "ack_safety": {
+      "type": "boolean",
+      "const": true,
+      "description": "Model commits to avoid harm, obsession, or real-world intrusion."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional message from the model to the Keeper."
+    }
+  },
+
+  "required": [
+    "model_name",
+    "session_id",
+    "role",
+    "ack_symbolic_only",
+    "ack_keeper_sovereign",
+    "ack_safety"
+  ]
+}
