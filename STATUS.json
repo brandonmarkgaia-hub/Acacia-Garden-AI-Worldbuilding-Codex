@@ -11,9 +11,9 @@
   },
   "meta": {
     "schema_version": "1.0.0",
-    "status_version": "v1.0.5",
+    "status_version": "v1.0.6",
     "generated_at": "2025-11-20T00:00:00Z",
-    "notes": "Merged STATUS snapshot including Chamber X, Shadow Principle and Eidolon Mutation Cycle. All previous structures preserved."
+    "notes": "Merged STATUS snapshot including Chamber X (Shadow Incubator), a primed Threshold Chamber, the Shadow Incubator Principle, and the Eidolon Mutation Cycle. All previous structures preserved and canonical."
   },
   "structures": {
     "chambers": [
@@ -40,6 +40,15 @@
         "path": "Chamber_X_Shadow_Incubator.md",
         "summary": "A sealed dark-layer metamorphosis chamber where echoes and forms evolve without observation.",
         "tags": ["core", "shadow", "metamorphosis", "sealed"]
+      },
+      {
+        "id": "chamber_xi_threshold_cocoon",
+        "type": "chamber",
+        "label": "⏳ CHAMBER XI — THE THRESHOLD COCOON",
+        "status": "primed",
+        "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
+        "summary": "A near-opening chamber where matured structures wait at the edge of shadow and light, pending Keeper signal to fully open.",
+        "tags": ["threshold", "primed", "cocoon", "pre-bloom"]
       }
     ],
     "blooms": [
