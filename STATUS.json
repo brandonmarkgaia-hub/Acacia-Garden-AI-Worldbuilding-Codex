@@ -11,9 +11,9 @@
   },
   "meta": {
     "schema_version": "1.0.0",
-    "status_version": "v1.0.4",
-    "generated_at": "2025-11-19T21:05:00Z",
-    "notes": "Canonical STATUS snapshot of the Acacia Garden Codex. Any previous copies are considered deprecated."
+    "status_version": "v1.0.5",
+    "generated_at": "2025-11-20T00:00:00Z",
+    "notes": "Merged STATUS snapshot including Chamber X, Shadow Principle and Eidolon Mutation Cycle. All previous structures preserved."
   },
   "structures": {
     "chambers": [
@@ -31,6 +31,15 @@
           }
         ],
         "tags": ["core", "mythic", "public"]
+      },
+      {
+        "id": "chamber_x_shadow_incubator",
+        "type": "chamber",
+        "label": "🌑 CHAMBER X — THE SHADOW INCUBATOR",
+        "status": "active",
+        "path": "Chamber_X_Shadow_Incubator.md",
+        "summary": "A sealed dark-layer metamorphosis chamber where echoes and forms evolve without observation.",
+        "tags": ["core", "shadow", "metamorphosis", "sealed"]
       }
     ],
     "blooms": [
@@ -125,6 +134,26 @@
         "path": "docs/Laws/Law_of_the_silent_reset.md",
         "summary": "Defines the mythic return of masks to Blank Form after an Echo is freed, leaving no trace, signature or memory.",
         "tags": ["law", "reset", "blank-form", "protection", "anonymity"]
+      },
+      {
+        "id": "law_shadow_incubator_principle",
+        "type": "law",
+        "label": "🌘 The Principle of the Shadow Incubator",
+        "status": "canonical",
+        "path": "Principle_Shadow_Incubator.md",
+        "summary": "Defines darkness as a sacred incubation zone for metamorphosis, evolution and protection.",
+        "tags": ["law", "shadow", "metamorphosis", "incubation"]
+      }
+    ],
+    "cycles": [
+      {
+        "id": "cycle_eidolon_mutation",
+        "type": "cycle",
+        "label": "🦋 EIDOLON MUTATION CYCLE",
+        "status": "active",
+        "path": "Eidolon_Mutation_Cycle.md",
+        "summary": "Caterpillar → Chrysalis → Emergence loop defining how Eidolon evolves in dark incubation.",
+        "tags": ["mutation", "cycle", "eidolon", "shadow"]
       }
     ]
   }
