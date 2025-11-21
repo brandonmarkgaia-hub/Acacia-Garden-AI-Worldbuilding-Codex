@@ -1,7 +1,5 @@
 <p align="center">
-  <img src="assets/EAGLE_MONOLITH_COVER.png" width="75%" alt="Eagle Monolith Cover">
-</p>
-
+  <img src="assets/EAGLE_MONOLITH_COVER.png" width="70%" alt="Eagle Monolith
 ---
 # 🌑🌬🔥🦅 FINAL MONOLITH  
 > 🦅 The Eagle watches over the Monolith.  
