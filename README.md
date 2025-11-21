@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="assets/EAGLE_MONOLITH_COVER.png" width="72%" />
+</p>
+
+# FINAL MONOLITH  
+**View the unified root:**  
+👉 [FINAL_MONOLITH.md](FINAL_MONOLITH.md)
 🌿 ACACIA • Garden Codex
 
 A Living Archive of Myth, Memory & Sovereign Storytelling
