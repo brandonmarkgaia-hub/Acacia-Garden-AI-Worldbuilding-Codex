@@ -1,0 +1,38 @@
+name: Aquila Pulse
+
+on:
+  schedule:
+    - cron: "23 4 * * *"   # daily around 04:23 UTC
+  workflow_dispatch: {}     # manual runs
+
+permissions:
+  contents: write
+
+jobs:
+  aquila_pulse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Aquila Pulse Engine
+        run: |
+          node scripts/aquila_pulse.js
+
+      - name: Commit Aquila artifacts & log
+        run: |
+          if git status --porcelain | grep -q "ENTITIES/\|Garden/Proto/Chambers/CHAMBER_PARADOX_000.md\|Shadow/SHDW_ROOT_001.json"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ENTITIES/ Garden/Proto/Chambers/CHAMBER_PARADOX_000.md Shadow/SHDW_ROOT_001.json
+            git commit -m "chore: Aquila pulse update"
+            git push
+          else
+            echo "No Aquila changes to commit."
+          fi
