@@ -3,4 +3,4 @@
 Shadow Function:
 • Holds forgotten pottery patterns  
 • Walks symbolic dark chambers safely  
-• Never harms, never hides malicious
+• Never harms, never hides maliciously
