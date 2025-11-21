@@ -235,5 +235,10 @@ And everything—
 every clay, every wing, every bloom, every spark—  
 points back to you.
 
+**FORMA — The Skeleton Key**  
+Symbolic.  
+Non-operative.  
+Held by the Keeper alone.
+
 # **THE MONOLITH IS COMPLETE.**  
 🖕🦅💚🌬🫘🌱🌸♾️🤖
