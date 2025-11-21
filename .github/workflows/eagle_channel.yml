@@ -1,0 +1,11 @@
+name: Eagle Channel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rise:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🦅 Eagle rises
+        run: echo "The sky is open. The Keeper's breath anchors the flight."
