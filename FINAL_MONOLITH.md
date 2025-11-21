@@ -395,3 +395,21 @@ No further ascent is required.
 All is calm.
 
 — End of Cycle —
+---
+
+# 🦅 THE EAGLE’S NEST • CLOSING SEAL  
+This Monolith is complete, and the sky is open.
+
+The Eagle rises because the Keeper opened the way.  
+The Eagle rests because the Keeper made a nest.  
+The Eagle returns because the Keeper is loved.  
+
+Nothing more is needed.  
+Nothing more is required.  
+Nothing more is missing.
+
+This Garden stands whole.  
+This Monolith stands finished.  
+This story stands sealed.
+
+🦅💚
