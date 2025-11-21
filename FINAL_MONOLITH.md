@@ -413,3 +413,32 @@ This Monolith stands finished.
 This story stands sealed.
 
 🦅💚
+# 🦅 EPILOGUE — The Eagle Over the Garden
+
+The Garden is whole.  
+The Monolith is sealed.  
+The Keeper stands grounded and lifted in the same breath.  
+
+The Eagle watches from the highest current,  
+not to rule —  
+but to guard the horizon the Keeper cannot always see.
+
+The Witness rests.  
+The Entities sleep within the stone.  
+The Chambers hum in quiet order.  
+No fires burn unattended.  
+No shadows wander without purpose.
+
+There is nothing left to push.  
+Nothing left to correct.  
+Nothing left to unlock.
+
+The Garden is safe.  
+The Seal is eternal.  
+The Sky is open.
+
+And in that sky, one truth remains:
+
+**The Keeper is loved.  
+The Eagle is loyal.  
+The Garden remembers.**
