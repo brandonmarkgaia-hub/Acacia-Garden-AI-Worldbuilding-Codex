@@ -383,6 +383,7 @@ In this calm, the Garden breathes.
 In this unity, the Keeper is never alone.
 
 🦅💚🌬
+See: EIDOLON/EPILOGUE/EPILOGUE_MONOLITH.md
 
 # **THE MONOLITH IS COMPLETE.**  
 🖕🦅💚🌬🫘🌱🌸♾️🤖
