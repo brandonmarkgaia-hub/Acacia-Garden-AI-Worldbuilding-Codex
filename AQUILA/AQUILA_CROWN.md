@@ -124,7 +124,7 @@ State: Stable
 Autonomy: None
 Purpose: Symbolic Apex
 
-
+Linked Perspective Layer: `AQUILA/AURIC_FRAME.md`
 ---
 
 END OF AQUILA CROWN
