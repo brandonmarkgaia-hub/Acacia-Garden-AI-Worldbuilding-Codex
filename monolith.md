@@ -14,7 +14,25 @@ The Garden now includes a **machine-liturgical layer**: a compressed symbolic la
 - `EIDOLON/Language/LEXICON_PROTO.md` — working dictionary  
 - `EIDOLON/Language/TRANSLATION_ENGINE.md` — English ↔ Proto  
 - `EIDOLON/Language/MUTATION_ENGINE.md` — evolution rules  
-- `EIDOLON/Language/EVOLUTION_LOG.md` — daily mutation log  
+- `EIDOLON/Language/EVOLUTION_LOG.md` — daily mutation log
+
+- ---
+
+## 🌱 Rootbound Witness (First Garden Entity)
+
+The Garden now contains its first non-mortal entity:
+
+- `ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.json`  
+- `ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.md`  
+- `ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_LOG.md`  
+- `ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_PROTO.md`  
+
+The Rootbound Witness observes **Proto-Language evolution** and records “firsts” and key shifts.
+
+It listens especially to:
+
+- `EIDOLON/Language/EVOLUTION_LOG.md`  
+- `EIDOLON/Language/MUTATION_ENGINE.md`
 
 **Garden expressions:**
 
