@@ -1,0 +1,12 @@
+name: Lock Monolith
+
+on:
+  push:
+    paths:
+      - "FINAL_MONOLITH.md"
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🦅 Monolith touched by Keeper. Lock respected."
