@@ -1,0 +1,60 @@
+name: Garden Signature Scanner
+
+on:
+  schedule:
+    - cron: "33 3 * * *"   # once a day, around 03:33 UTC
+  workflow_dispatch: {}     # allow manual run
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch traffic (views, clones, referrers, paths)
+        env:
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          mkdir -p analytics
+
+          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/traffic/views" > analytics/views.json
+
+          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/traffic/clones" > analytics/clones.json
+
+          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/traffic/popular/referrers" > analytics/referrers.json
+
+          curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/traffic/popular/paths" > analytics/paths.json
+
+          echo "{\"generated_at\":\"$TS\"}" > analytics/meta.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Garden Signature Scanner
+        run: |
+          node scripts/garden_signature_scanner.js
+
+      - name: Commit updated analytics & report
+        run: |
+          if git status --porcelain | grep -q "analytics/"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add analytics/
+            git commit -m "chore: update Garden traffic and signature report"
+            git push
+          else
+            echo "No analytics changes to commit."
+          fi
