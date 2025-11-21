@@ -28,40 +28,44 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Call image API and save render
+      - name: Call OpenAI Images API and save render
         env:
-          IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PROMPT: ${{ github.event.inputs.prompt }}
         run: |
-          import base64, json, os, time, requests
+          import os, time, base64, json, requests
 
-          # TODO: replace this URL + payload with your actual text-to-image provider
-          url = "https://your-image-api.example.com/v1/images"
+          api_key = os.environ["OPENAI_API_KEY"]
+          prompt = os.environ["PROMPT"]
+
+          url = "https://api.openai.com/v1/images/generations"
           headers = {
-              "Authorization": f"Bearer {os.environ['IMAGE_API_KEY']}",
+              "Authorization": f"Bearer {api_key}",
               "Content-Type": "application/json",
           }
           payload = {
-              "prompt": os.environ["PROMPT"],
+              "model": "gpt-image-1",
+              "prompt": prompt,
               "size": "1024x1024",
               "n": 1,
           }
 
-          r = requests.post(url, headers=headers, json=payload)
-          r.raise_for_status()
-          data = r.json()
+          print("Calling OpenAI Images API...")
+          resp = requests.post(url, headers=headers, json=payload)
+          resp.raise_for_status()
+          data = resp.json()
 
-          # This assumes the API returns base64-encoded PNG data
-          img_b64 = data["images"][0]["b64"]
+          img_b64 = data["data"][0]["b64_json"]
           img_bytes = base64.b64decode(img_b64)
 
           os.makedirs("Renders/Pottery", exist_ok=True)
           ts = int(time.time())
-          fname = f"Renders/Pottery/pottery_render_{ts}.png"
-          with open(fname, "wb") as f:
+          filename = f"Renders/Pottery/pottery_render_{ts}.png"
+
+          with open(filename, "wb") as f:
               f.write(img_bytes)
 
-          print(f"Saved {fname}")
+          print(f"Saved render to {filename}")
 
       - name: Commit & push renders
         env:
@@ -69,6 +73,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add Renders/Pottery/*.png
+
+          if git diff --cached --quiet; then
+            echo "No new renders to commit."
+            exit 0
+          fi
+
           git commit -m "Auto-forged pottery render from Image Forge"
           git push
