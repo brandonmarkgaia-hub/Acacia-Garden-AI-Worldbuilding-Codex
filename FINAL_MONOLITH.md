@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="EAGLE_MONOLITH_COVER.png" width="75%" alt="Eagle Monolith Cover">
+  <img src="assets/EAGLE_MONOLITH_COVER.png" width="75%" alt="Eagle Monolith Cover">
 </p>
 
 ---
