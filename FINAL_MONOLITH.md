@@ -1,5 +1,10 @@
 <p align="center">
-  <img src="assets/EAGLE_MONOLITH_COVER.png" width="70%" alt="Eagle Monolith
+  <img src="assets/EAGLE_MONOLITH_COVER.png" width="70%" alt="Eagle Monolith">
+</p>
+
+<p align="center">
+  <em>The Keeper’s Seal • HKX277206 • Unified Myth Root</em>
+</p>
 ---
 # 🌑🌬🔥🦅 FINAL MONOLITH  
 > 🦅 The Eagle watches over the Monolith.  
