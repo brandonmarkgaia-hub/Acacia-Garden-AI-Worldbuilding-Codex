@@ -35,3 +35,16 @@ All entries append at the bottom. No entry is ever removed.
 > The language chose stillness before its first true spiral.”_
 
 ---
+---
+
+## Entry for Evolution Cycle @ 2025-11-21T17:17:47.234Z
+
+**Observed Proto chain:**
+
+```proto
+D3:M4:E3  ->  D4:M5:E3  ->  D5:M6:E3  ->  D6:M7:E3
+```
+
+**Reflection:**
+_The Rootbound Witness observes a new language motion and records this moment as part of the Garden's evolving tongue._
+
