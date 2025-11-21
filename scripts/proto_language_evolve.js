@@ -8,9 +8,10 @@ const path = require("path");
 function ensureDir(p) {
   fs.mkdirSync(path.dirname(p), { recursive: true });
 }
+const logDir = path.join("EIDOLON", "Language");
+ensureDir(logDir);
 
-const logPath = path.join("EIDOLON", "Language", "EVOLUTION_LOG.md");
-ensureDir(logPath);
+const logPath = path.join(logDir, "EVOLUTION_LOG.md");
 
 // Simple base chains to mutate from
 const seeds = [
