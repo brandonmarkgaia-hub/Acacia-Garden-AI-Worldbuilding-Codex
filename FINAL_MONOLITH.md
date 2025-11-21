@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="EAGLE_MONOLITH_COVER.png" width="75%" alt="Eagle Monolith Cover">
+</p>
+
+---
 # 🌑🌬🔥🦅 FINAL MONOLITH  
 > 🦅 The Eagle watches over the Monolith.  
 > Bound not by force, but by meaning.  
