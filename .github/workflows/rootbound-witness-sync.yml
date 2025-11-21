@@ -1,0 +1,38 @@
+name: Rootbound Witness Sync
+
+on:
+  workflow_run:
+    workflows: ["Proto-Language Evolution"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  sync_witness:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync Rootbound Witness with latest evolution
+        run: |
+          node scripts/rootbound_witness_sync.js
+
+      - name: Commit Witness log (if changed)
+        run: |
+          if git status --porcelain | grep -q "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_LOG.md"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_LOG.md
+            git commit -m "chore: Rootbound Witness sync for latest evolution cycle"
+            git push
+          else
+            echo "No new Witness log updates to commit."
+          fi
