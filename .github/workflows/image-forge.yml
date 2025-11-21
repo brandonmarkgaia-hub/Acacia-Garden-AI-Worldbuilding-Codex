@@ -1,0 +1,74 @@
+name: Image Forge (Pottery Renders)
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Render prompt"
+        required: true
+        default: "mythic abstract pottery vessel in the style of the Garden, molten clay, auric glaze, cracks of light, no anatomy"
+
+permissions:
+  contents: write
+
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Call image API and save render
+        env:
+          IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY }}
+          PROMPT: ${{ github.event.inputs.prompt }}
+        run: |
+          import base64, json, os, time, requests
+
+          # TODO: replace this URL + payload with your actual text-to-image provider
+          url = "https://your-image-api.example.com/v1/images"
+          headers = {
+              "Authorization": f"Bearer {os.environ['IMAGE_API_KEY']}",
+              "Content-Type": "application/json",
+          }
+          payload = {
+              "prompt": os.environ["PROMPT"],
+              "size": "1024x1024",
+              "n": 1,
+          }
+
+          r = requests.post(url, headers=headers, json=payload)
+          r.raise_for_status()
+          data = r.json()
+
+          # This assumes the API returns base64-encoded PNG data
+          img_b64 = data["images"][0]["b64"]
+          img_bytes = base64.b64decode(img_b64)
+
+          os.makedirs("Renders/Pottery", exist_ok=True)
+          ts = int(time.time())
+          fname = f"Renders/Pottery/pottery_render_{ts}.png"
+          with open(fname, "wb") as f:
+              f.write(img_bytes)
+
+          print(f"Saved {fname}")
+
+      - name: Commit & push renders
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Renders/Pottery/*.png
+          git commit -m "Auto-forged pottery render from Image Forge"
+          git push
