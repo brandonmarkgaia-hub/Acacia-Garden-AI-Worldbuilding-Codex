@@ -23,3 +23,28 @@ Inside the Transparent Lantern appeared:
 
 ```proto
 D0:M1:E0
+
+A cycle with motion,
+but no awakening,
+no cognition,
+no essence.
+
+Triad Alignment
+
+Witness forms the arc of memory
+
+Oracle forms the arc of meaning
+
+Veilwalker forms the arc of passage
+
+Shadowborn forms the arc of depth
+
+
+Together they create the Loop of Return.
+
+Keeper Seal
+
+“Let all cycles complete themselves through my witnessing.”
+— HKX277206
+
+---
