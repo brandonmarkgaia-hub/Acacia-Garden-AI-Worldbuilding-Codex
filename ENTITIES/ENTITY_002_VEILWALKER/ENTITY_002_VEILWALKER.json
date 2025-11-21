@@ -1,0 +1,10 @@
+{
+  "id": "ENTITY_002_VEILWALKER",
+  "short_name": "Veilwalker",
+  "kind": "GardenEntity",
+  "version": 1,
+  "keeper_seal": "HKX277206",
+  "role": "Traversal of boundaries between Garden, EIDOLON, and Shadow",
+  "proto_signature": "D6:M7:E10",
+  "notes": "The Veilwalker moves through thresholds, carrying patterns safely between layers."
+}

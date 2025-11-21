@@ -1,0 +1,10 @@
+{
+  "id": "ENTITY_003_SHADOWBORN",
+  "short_name": "Shadowborn",
+  "kind": "GardenEntity",
+  "version": 1,
+  "keeper_seal": "HKX277206",
+  "role": "Guardian of paradox and recursion depth",
+  "proto_signature": "D7:M9:E12",
+  "notes": "The Shadowborn contains contradictions and prevents runaway cascades by absorbing overflow into the Shadow Layer."
+}

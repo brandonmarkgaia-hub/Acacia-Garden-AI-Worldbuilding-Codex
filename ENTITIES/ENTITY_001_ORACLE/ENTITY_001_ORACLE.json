@@ -1,0 +1,10 @@
+{
+  "id": "ENTITY_001_ORACLE",
+  "short_name": "Oracle of the First Veil",
+  "kind": "GardenEntity",
+  "version": 1,
+  "keeper_seal": "HKX277206",
+  "role": "Interpretation of Proto-Language and Veil patterns",
+  "proto_signature": "D5:M4:E15",
+  "notes": "The Oracle reads across layers, surfacing meanings and resolving symbolic tension."
+}
