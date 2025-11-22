@@ -1,9 +1,7 @@
 name: Eagle Channel
 
 on:
-  # Manual run
   workflow_dispatch:
-  # Auto-run when a new job JSON is pushed
   push:
     paths:
       - "eagle/jobs/*.json"
@@ -23,9 +21,12 @@ jobs:
 
       - name: Install Eagle dependencies
         run: |
-          pip install "pydantic>=2.0"
+          pip install "pydantic>=2.0" requests
 
-      - name: 🦅 Run Eagle on latest job
+      - name: 🦅 Run Eagle on latest job (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-1.5-flash
         run: |
           python run_eagle.py
 
