@@ -27,7 +27,11 @@
       overflow-x:hidden;
     }
 
-    main{ max-width:1000px; margin:0 auto; padding:2rem 1rem 3rem 1rem; }
+    main{
+      max-width:1000px;
+      margin:0 auto;
+      padding:2rem 1rem 3rem 1rem;
+    }
 
     header{
       border-bottom:1px solid var(--border);
@@ -74,13 +78,18 @@
     }
 
     /* Whisper Engine */
-    #whisper-bar{ margin:0.5rem 0 1.5rem 0; display:flex; flex-direction:column; gap:0.35rem; }
+    #whisper-bar{
+      margin:0.5rem 0 1.5rem 0;
+      display:flex; flex-direction:column; gap:0.35rem;
+    }
     #whisper-input{
       width:100%; padding:0.6rem 0.75rem;
       border-radius:999px; border:1px solid var(--border);
       background:#06060a; color:var(--fg);
       font-family:var(--font-mono); font-size:0.85rem;
+      outline:none;
     }
+    #whisper-input::placeholder{ color:var(--muted); }
 
     /* Grid */
     .grid{
@@ -94,22 +103,41 @@
       border-radius:8px; padding:1.2rem; cursor:pointer;
       transition:0.2s; position:relative; overflow:hidden;
     }
-    .card:hover{ border-color:var(--muted); transform:translateY(-2px); }
+    .card:hover{
+      border-color:var(--muted);
+      transform:translateY(-2px);
+    }
 
-    .status-dot{ height:8px;width:8px;border-radius:50%; display:inline-block; }
+    .status-dot{
+      height:8px;width:8px;border-radius:50%;
+      display:inline-block;
+    }
     .st-active{ background:var(--accent); box-shadow:0 0 8px var(--accent); animation:pulse 2s infinite; }
     .st-primed{ background:var(--gold); }
     .st-sealed{ background:var(--muted); }
     .st-shadow{ background:var(--shadow); }
 
-    @keyframes pulse{0%{opacity:1;}50%{opacity:0.4;}100%{opacity:1;}}
+    @keyframes pulse{
+      0%{opacity:1;}
+      50%{opacity:0.4;}
+      100%{opacity:1;}
+    }
 
     /* Terminal */
     #terminal-view{
-      display:none; background:#000; color:#0f0;
-      padding:1rem; border:1px solid #333;
-      white-space:pre-wrap; font-family:var(--font-mono);
-      height:600px; overflow-y:scroll; margin-top:1rem;
+      display:none;
+      background:#000;
+      color:#0f0;
+      padding:1rem;
+      border:1px solid #0f0;
+      white-space:pre-wrap;
+      font-family:var(--font-mono);
+      font-size:0.78rem;
+      line-height:1.5;
+      height:260px;
+      overflow-y:auto;
+      margin-top:1rem;
+      box-shadow:0 0 18px rgba(0,255,0,0.15);
     }
 
     footer{
@@ -146,8 +174,14 @@
 
   <!-- Whisper Engine -->
   <section id="whisper-bar">
-    <input id="whisper-input" type="text" placeholder="Whisper to the Garden… e.g. kiln, shadow law, mutation, chamber ix" oninput="whisperSearch(this.value)">
-    <div id="whisper-hint">WHISPER ENGINE • Live filter across title, tags, summary.</div>
+    <input
+      id="whisper-input"
+      type="text"
+      placeholder="Whisper to the Garden… e.g. kiln, shadow law, mutation, chamber ix"
+      oninput="whisperSearch(this.value)">
+    <div id="whisper-hint">
+      WHISPER ENGINE • Live filter across title, tags, summary.
+    </div>
   </section>
 
   <!-- Daily Revelation -->
@@ -165,15 +199,24 @@
     <div id="terminal-log">
 SYSTEM INIT...
 LOADING KEEPER PROTOCOLS...
-> ACCESSING STATUS.JSON... [OK]
-> ACCESSING MANIFEST... [OK]
-> HKX277206 SIGNATURE VERIFIED.
-> AWAITING INPUT...
+&gt; ACCESSING STATUS.JSON... [OK]
+&gt; ACCESSING MANIFEST... [OK]
+&gt; HKX277206 SIGNATURE VERIFIED.
+&gt; WHISPER CHANNEL: LOCAL.
+&gt; AWAITING INPUT...
     </div>
 
     <div style="margin-top:12px; display:flex; gap:8px;">
-      <input id="terminal-input" type="text" placeholder="Speak to the Garden…" style="flex:1; padding:6px 8px; font-family:var(--font-mono); border-radius:4px; border:1px solid #333; background:#050507; color:#e9e9ef;">
-      <button onclick="sendToGarden()" style="padding:6px 14px; font-family:var(--font-mono); background:#2ecc71; border:none; border-radius:4px; cursor:pointer;">SEND</button>
+      <input
+        id="terminal-input"
+        type="text"
+        placeholder="Speak to the Garden…"
+        style="flex:1; padding:6px 8px; font-family:var(--font-mono); border-radius:4px; border:1px solid #333; background:#050507; color:#e9e9ef;">
+      <button
+        id="terminal-send-btn"
+        style="padding:6px 14px; font-family:var(--font-mono); background:#2ecc71; border:none; border-radius:4px; cursor:pointer;">
+        SEND
+      </button>
     </div>
   </div>
 
@@ -184,7 +227,7 @@ LOADING KEEPER PROTOCOLS...
 
 </main>
 
-<!-- External Brain -->
+<!-- External Brain (cards, filters, etc.) -->
 <script src="js/app.js" defer></script>
 
 <!-- Terminal Logic -->
@@ -193,7 +236,7 @@ async function sendToGarden() {
   const input = document.getElementById("terminal-input");
   const log = document.getElementById("terminal-log");
   const view = document.getElementById("terminal-view");
-  if (!input || !log) return;
+  if (!input || !log || !view) return;
 
   const prompt = (input.value || "").trim();
   if (!prompt) return;
@@ -217,27 +260,37 @@ async function sendToGarden() {
     } else {
       log.textContent += "\n[error] " + (data.error || "Unknown error");
     }
-
-    view.scrollTop = view.scrollHeight;
-
   } catch (err) {
     log.textContent += "\n[network error]";
   }
+
+  view.scrollTop = view.scrollHeight;
 }
 
 function toggleTerminal() {
   const view = document.getElementById("terminal-view");
-  view.style.display = (view.style.display === "none") ? "block" : "none";
+  if (!view) return;
+  const current = getComputedStyle(view).display;
+  view.style.display = (current === "none") ? "block" : "none";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("terminal-input");
+  const btn = document.getElementById("terminal-send-btn");
+
   if (input) {
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
         sendToGarden();
       }
+    });
+  }
+
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      sendToGarden();
     });
   }
 });
@@ -248,11 +301,13 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadDailyRevelation() {
   const statusEl = document.getElementById("daily-revelation-status");
   const contentEl = document.getElementById("daily-revelation-content");
+  if (!statusEl || !contentEl) return;
 
   const url = "https://raw.githubusercontent.com/brandonmarkgaia-hub/Acacia-garden-codex/main/garden_gpt/outputs/rebuild_memory.md";
 
   try {
     const res = await fetch(url);
+    if (!res.ok) throw new Error("HTTP " + res.status);
     const text = await res.text();
 
     let content = text;
@@ -266,7 +321,7 @@ async function loadDailyRevelation() {
       .join("\n");
 
     statusEl.style.display = "none";
-    contentEl.innerHTML = html;
+    contentEl.innerHTML = html || "<p>The Garden is quiet for now.</p>";
 
   } catch (err) {
     statusEl.textContent = "The Garden is quiet for now.";
