@@ -35,6 +35,16 @@ jobs:
         run: |
           python -m garden_gpt.runner "${{ github.event.inputs.job_path }}"
 
+      - name: Run Memory Worker
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python garden_gpt/memory_worker.py
+
+      - name: Shadow / Scribe Handshake
+        run: |
+          python garden_gpt/shadow_status_handshake.py
+
       # 🔥 FIXED COMMIT STEP (SAFE, NEVER FAILS)
       - name: Commit Garden GPT output (safe)
         run: |
