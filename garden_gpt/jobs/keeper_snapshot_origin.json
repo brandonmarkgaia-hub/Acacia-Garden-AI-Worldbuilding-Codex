@@ -1,0 +1,7 @@
+{
+  "job_id": "keeper_snapshot_origin",
+  "kind": "keeper",
+  "keeper_id": "HKX277206",
+  "prompt": "Write a concise Keeper Profile Snapshot that could live in docs/Keeper/PROFILE_Snapshot.md, describing the Keeper's mythic role without any real-world data.",
+  "write_to": "docs/Keeper/PROFILE_Snapshot.md"
+}
