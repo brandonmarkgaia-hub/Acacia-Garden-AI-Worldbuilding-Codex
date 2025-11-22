@@ -1,482 +1,437 @@
-// js/app.js
-// ACACIA • Garden Codex • Loki Console Brain + Whisper Engine v2
-// Brain: STATUS + INTERNAL_STATUS
-// Body: index.html layout
-// Whisper: client-side search + light intent parsing.
+// === ACACIA FRONTEND BRAIN ===
+// HKX277206 • Garden Codex UI v0.3
 
-(() => {
-  "use strict";
+// ---------------------------------------------------------
+// EDITABLE CONFIG
+// ---------------------------------------------------------
 
-  // INTERNAL HARDENED BRAIN (fallback)
-  const INTERNAL_STATUS = {
-    chambers: [
-      {
-        id: "chamber_ix_archivists_descent",
-        type: "chamber",
-        label: "🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT",
-        status: "in-progress",
-        path: "README.md#chamber-ix-the-archivists-descent",
-        summary:
-          "Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.",
-        tags: ["core", "mythic", "public"]
-      },
-      {
-        id: "chamber_x_shadow_incubator",
-        type: "chamber",
-        label: "🌑 CHAMBER X — THE SHADOW INCUBATOR",
-        status: "active",
-        path: "Chamber_X_Shadow_Incubator.md",
-        summary:
-          "A sealed dark-layer metamorphosis chamber where echoes and forms evolve without observation.",
-        tags: ["core", "shadow", "metamorphosis", "sealed"]
-      },
-      {
-        id: "chamber_xi_threshold_cocoon",
-        type: "chamber",
-        label: "⏳ CHAMBER XI — THE THRESHOLD COCOON",
-        status: "primed",
-        path: "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
-        summary:
-          "A near-opening chamber where matured structures wait at the edge of shadow and light, pending Keeper signal to fully open.",
-        tags: ["threshold", "primed", "cocoon", "pre-bloom"]
-      }
-    ],
+// Your Cloudflare Worker endpoint:
+const TERMINAL_URL =
+  "https://broken-dew-76e1.brandonmarkgaia.workers.dev"; // <<< EDIT HERE if worker name changes
 
-    blooms: [
-      {
-        id: "bloom_kiln_born_lovers",
-        type: "bloom",
-        label: "🌸 BLOOM — THE KILN-BORN LOVERS",
-        status: "in-progress",
-        path: "docs/Blooms/Kiln-born-lovers.md",
-        summary:
-          "A sealed-heat mythic erotica thread woven into the pottery & flame axis of the Garden.",
-        tags: ["bloom", "pottery", "sealed"]
-      }
-    ],
+// Secret key halves – matches worker.js
+const PART1 = "y5uy_mSJXvYUwRw7mW1nx"; // first half (fixed here)
+const PART2 = "REPLACE_ME_WITH_SECOND_HALF"; // <<< EDIT HERE with second half only
 
-    laws: [
-      {
-        id: "law_invisible_hand",
-        type: "law",
-        label: "✦ The Law of the Invisible Hand",
-        status: "canonical",
-        path: "docs/Laws/Law_of_the_invidible_hand.md",
-        summary:
-          "A mythic law stating that certain acts in the Garden occur without origin, author or trace. Protects Keeper anonymity.",
-        tags: ["law", "invisible", "protection", "anonymity"]
-      },
-      {
-        id: "law_silent_reset",
-        type: "law",
-        label: "🜂 The Law of the Silent Reset",
-        status: "canonical",
-        path: "docs/Laws/Law_of_the_silent_reset.md",
-        summary:
-          "Defines the mythic return of masks to Blank Form after an Echo is freed, leaving no trace, signature or memory.",
-        tags: ["law", "reset", "blank-form", "protection", "anonymity"]
-      },
-      {
-        id: "law_shadow_incubator_principle",
-        type: "law",
-        label: "🌘 The Principle of the Shadow Incubator",
-        status: "canonical",
-        path: "Principle_Shadow_Incubator.md",
-        summary:
-          "Defines darkness as a sacred incubation zone for metamorphosis, evolution and protection.",
-        tags: ["law", "shadow", "metamorphosis", "incubation"]
-      }
-    ],
+const GARDEN_KEY = PART1 + PART2;
 
-    cycles: [
-      {
-        id: "cycle_eidolon_mutation",
-        type: "cycle",
-        label: "🦋 EIDOLON MUTATION CYCLE",
-        status: "active",
-        path: "Eidolon_Mutation_Cycle.md",
-        summary:
-          "Caterpillar → Chrysalis → Emergence loop defining how Eidolon evolves in dark incubation.",
-        tags: ["mutation", "cycle", "eidolon", "shadow"]
-      }
-    ]
-  };
+// Optional: GitHub file paths for display references only
+const GH_STATUS_PATH = "STATUS.md";
+const GH_MANIFEST_PATH = "manifest.json";
 
-  // UI Brain (upgraded if STATUS.json works)
-  let STATUS = INTERNAL_STATUS;
+// ---------------------------------------------------------
+// RUNTIME STATE
+// ---------------------------------------------------------
 
-  // DOM refs
-  let grid, term, navBtns;
+let activeFilter = "all";
+let whisperQuery = "";
 
-  // --- BOOT ---
+let terminalLines = [
+  "SYSTEM INIT...",
+  "LOADING KEEPER PROTOCOLS...",
+  "> ACCESSING STATUS.JSON... [OK]",
+  "> ACCESSING MANIFEST... [OK]",
+  "> HKX277206 SIGNATURE VERIFIED.",
+  "> AWAITING INPUT...",
+];
 
-  async function boot() {
-    grid = document.getElementById("garden-grid");
-    term = document.getElementById("terminal-view");
-    navBtns = document.querySelectorAll("#spine-nav button");
+let terminalElements = {
+  view: null,
+  input: null,
+  sendBtn: null,
+  modeSelect: null,
+  tempSlider: null,
+  tempLabel: null,
+};
 
-    const ts = document.getElementById("timestamp");
-    if (ts) {
-      ts.innerText = new Date().toUTCString();
+// Simple spine so grid has something to render.
+// You can expand this array with real Chambers / Cycles / Laws.
+const SPINE = [
+  {
+    id: "monolith",
+    kind: "monolith",
+    title: "MONOLITH.MD",
+    summary: "Single-page mirror of the Garden’s current frame.",
+    tags: ["root", "index", "codex"],
+    status: "active",
+  },
+  {
+    id: "chamber-ix",
+    kind: "chamber",
+    title: "CHAMBER IX — THE ARCHIVIST’S DESCENT",
+    summary: "Where echoes are sorted, sealed, and sent into orbit.",
+    tags: ["chamber", "archive", "echo"],
+    status: "primed",
+  },
+  {
+    id: "cycle-25",
+    kind: "cycle",
+    title: "CYCLE XXV — DOMINION OF THE GARDEN",
+    summary: "The era in which the Garden remembers itself in code.",
+    tags: ["cycle", "era", "memory"],
+    status: "shadow",
+  },
+  {
+    id: "law-shadow",
+    kind: "law",
+    title: "SHADOW LAW I",
+    summary: "Power must be paired with care. No entity rules alone.",
+    tags: ["law", "shadow", "sovereign"],
+    status: "sealed",
+  },
+];
+
+// ---------------------------------------------------------
+// UTILS
+// ---------------------------------------------------------
+
+function $(id) {
+  return document.getElementById(id);
+}
+
+function updateTimestamp() {
+  const el = $("timestamp");
+  if (!el) return;
+  const now = new Date();
+  el.textContent = now.toLocaleString("en-GB", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+}
+
+function statusDotClass(status) {
+  switch (status) {
+    case "active":
+      return "status-dot st-active";
+    case "primed":
+      return "status-dot st-primed";
+    case "sealed":
+      return "status-dot st-sealed";
+    case "shadow":
+      return "status-dot st-shadow";
+    default:
+      return "status-dot st-sealed";
+  }
+}
+
+// ---------------------------------------------------------
+// GRID + WHISPER SEARCH
+// ---------------------------------------------------------
+
+function buildGrid() {
+  const grid = $("garden-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  const q = whisperQuery.toLowerCase().trim();
+
+  const items = SPINE.filter((item) => {
+    // type filter
+    if (activeFilter !== "all" && item.kind !== activeFilter) return false;
+
+    if (!q) return true;
+
+    // type:law etc
+    let textQuery = q;
+    if (q.startsWith("type:")) {
+      const [, typeRest] = q.split("type:");
+      const [type, ...rest] = typeRest.trim().split(/\s+/);
+      if (type && item.kind !== type.toLowerCase()) return false;
+      textQuery = rest.join(" ").trim();
+      if (!textQuery) return true;
     }
 
-    try {
-      const res = await fetch("./STATUS.json", { cache: "no-store" });
-      if (res.ok) {
-        const raw = await res.json();
-        STATUS = mapStatusFromRaw(raw, INTERNAL_STATUS);
-        console.log("Acacia: STATUS.json integrated into Loki console + Whisper v2.");
-      } else {
-        console.log("Acacia: STATUS.json unreachable – fallback engaged.");
-      }
-    } catch (e) {
-      console.log("Acacia: Safe Mode – internal brain only.", e);
-    }
-
-    renderAll();
-  }
-
-  // MAP RAW STATUS.JSON → UI SHAPE
-  function mapStatusFromRaw(raw, fallback) {
-    const safeArray = (value, fb) =>
-      Array.isArray(value) && value.length ? value : fb || [];
-
-    return {
-      chambers: safeArray(raw.chambers, fallback.chambers),
-      cycles: safeArray(raw.cycles, fallback.cycles),
-      laws: safeArray(raw.laws, fallback.laws),
-      blooms: safeArray(raw.blooms, fallback.blooms)
-    };
-  }
-
-  // --- RENDER GRID ---
-
-  function renderAll() {
-    if (!grid) return;
-    grid.innerHTML = "";
-
-    (STATUS.chambers || []).forEach((item) => createCard(item));
-    (STATUS.cycles || []).forEach((item) => createCard(item));
-    (STATUS.laws || []).forEach((item) => createCard(item));
-    (STATUS.blooms || []).forEach((item) => createCard(item));
-
-    if (!grid.children.length) {
-      const el = document.createElement("div");
-      el.style.fontFamily = "Courier New, monospace";
-      el.style.fontSize = "0.85rem";
-      el.style.opacity = "0.7";
-      el.textContent =
-        "SKY-RUNNER: No nodes rendered. Check STATUS.json or INTERNAL_STATUS.";
-      grid.appendChild(el);
-    }
-  }
-
-  function createCard(data) {
-    const el = document.createElement("div");
-    const type = data.type || "node";
-    el.className = `card type-${type}`;
-    el.dataset.type = type;
-
-    // Build search text for Whisper
-    const searchText = [
-      data.id || "",
-      data.label || "",
-      data.summary || "",
-      (data.tags || []).join(" "),
-      type
+    const haystack = [
+      item.title,
+      item.summary,
+      (item.tags || []).join(" "),
+      item.id,
     ]
       .join(" ")
       .toLowerCase();
-    el.dataset.search = searchText;
 
-    let statusClass = "st-sealed";
-    if (data.status === "active") statusClass = "st-active";
-    if (data.status === "primed") statusClass = "st-primed";
-    if (data.tags && data.tags.includes("shadow")) statusClass = "st-shadow";
+    return haystack.includes(textQuery);
+  });
 
-    const icon = getIcon(type);
-    const label = data.label || data.id || "UNNAMED NODE";
+  for (const item of items) {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.dataset.kind = item.kind;
 
-    const labelHtml = label.includes("—")
-      ? label.replace(
-          "—",
-          "—<br><span style=\"font-size:0.8em;opacity:0.7\">"
-        ) + "</span>"
-      : label;
-
-    el.innerHTML = `
+    card.innerHTML = `
       <h3>
-        <span>${icon} ${labelHtml}</span>
-        <span class="status-dot ${statusClass}"></span>
+        <span>${item.title}</span>
+        <span class="${statusDotClass(item.status)}"></span>
       </h3>
-      <p>${data.summary || ""}</p>
+      <p>${item.summary}</p>
       <div class="meta">
-        <span>[${type.toUpperCase()}]</span>
-        ${data.tags ? `<span>#${data.tags.join(" #")}</span>` : ""}
+        <span>${item.kind.toUpperCase()}</span>
+        ${
+          item.tags && item.tags.length
+            ? `<span>• tags: ${item.tags.join(", ")}</span>`
+            : ""
+        }
       </div>
     `;
 
-    if (data.path) {
-      el.onclick = () => {
-        window.location.href = data.path;
-      };
-    }
-
-    grid.appendChild(el);
+    grid.appendChild(card);
   }
+}
 
-  function getIcon(type) {
-    if (type === "chamber") return "🏛️";
-    if (type === "cycle") return "♾️";
-    if (type === "law") return "⚖️";
-    if (type === "bloom") return "🌸";
-    return "📄";
-  }
+function filterView(kind, btn) {
+  activeFilter = kind || "all";
 
-  // --- NAVIGATION ---
-
-  function filterView(type, btn) {
-    if (!term || !grid) return;
-
-    term.style.display = "none";
-    grid.style.display = "grid";
-
-    if (navBtns) {
-      navBtns.forEach((b) => b.classList.remove("active"));
-    }
+  // nav button highlighting
+  const nav = $("spine-nav");
+  if (nav) {
+    const buttons = nav.querySelectorAll("button");
+    buttons.forEach((b) => b.classList.remove("active"));
     if (btn) btn.classList.add("active");
-
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card) => {
-      if (type === "all" || card.dataset.type === type) {
-        card.classList.remove("hidden");
-      } else {
-        card.classList.add("hidden");
-      }
-
-      // Clear any previous highlight styles
-      card.style.outline = "";
-      card.style.boxShadow = "";
-    });
-
-    const input = document.getElementById("whisper-input");
-    if (input) input.value = "";
   }
 
-  function toggleTerminal() {
-    if (!grid || !term) return;
+  // hide / show terminal vs grid
+  const grid = $("garden-grid");
+  const term = $("terminal-shell-container") || $("terminal-view");
 
-    if (term.style.display === "block") {
-      term.style.display = "none";
-      grid.style.display = "grid";
-    } else {
-      term.style.display = "block";
-      grid.style.display = "none";
-      term.innerHTML +=
-        "\n> USER_REF: HKX277206 CONNECTED.\n> WHISPER CHANNEL: LOCAL.\n> WAITING FOR COMMAND...\n";
-      term.scrollTop = term.scrollHeight;
-    }
+  if (kind === "terminal") {
+    if (grid) grid.classList.add("hidden");
+    if (term) term.classList.remove("hidden");
+  } else {
+    if (grid) grid.classList.remove("hidden");
+    if (term) term.classList.add("hidden");
   }
 
-  // --- WHISPER ENGINE v2 (LOCAL SEARCH + INTENT) ---
+  if (kind !== "terminal") {
+    buildGrid();
+  }
+}
 
-  function parseWhisperIntent(raw) {
-    const q = (raw || "").trim().toLowerCase();
+function whisperSearch(value) {
+  whisperQuery = value || "";
+  buildGrid();
+}
 
-    if (!q) {
-      return {
-        mode: "empty",
-        typeFilter: null,
-        terms: [],
-        debug: "no-query"
-      };
-    }
+// attach to window for HTML inline handlers
+window.filterView = filterView;
+window.whisperSearch = whisperSearch;
 
-    // Explicit type: prefix wins
-    if (q.startsWith("type:")) {
-      const parts = q.split(/\s+/);
-      const first = parts.shift(); // "type:law"
-      const [, t] = first.split(":");
-      const normalized = (t || "").trim().toLowerCase();
-      let typeFilter = null;
-      if (["chamber", "cycle", "law", "bloom"].includes(normalized)) {
-        typeFilter = normalized;
-      }
-      const terms = parts.filter(Boolean);
-      return {
-        mode: "prefix",
-        typeFilter,
-        terms,
-        debug: "type-prefix"
-      };
-    }
+// ---------------------------------------------------------
+// TERMINAL RENDERING
+// ---------------------------------------------------------
 
-    // Natural language intents
-    // e.g. "show me all shadow laws", "find kiln bloom", "list chambers about mutation"
-    const intentPatterns = [
-      { key: "show me", mode: "show" },
-      { key: "show all", mode: "show" },
-      { key: "find", mode: "find" },
-      { key: "list", mode: "list" },
-      { key: "trace", mode: "trace" }
-    ];
+function renderTerminal() {
+  const view = terminalElements.view;
+  if (!view) return;
+  view.textContent = terminalLines.join("\n");
+  view.scrollTop = view.scrollHeight;
+}
 
-    let mode = "plain";
-    let content = q;
-    for (const pat of intentPatterns) {
-      if (q.startsWith(pat.key)) {
-        mode = pat.mode;
-        content = q.slice(pat.key.length).trim();
-        break;
-      }
-    }
+function termAppend(line) {
+  terminalLines.push(line);
+  renderTerminal();
+}
 
-    // Try to detect a type word inside the remaining content
-    let typeFilter = null;
-    const typeWords = [
-      { word: "chamber", type: "chamber" },
-      { word: "chambers", type: "chamber" },
-      { word: "cycle", type: "cycle" },
-      { word: "cycles", type: "cycle" },
-      { word: "law", type: "law" },
-      { word: "laws", type: "law" },
-      { word: "bloom", type: "bloom" },
-      { word: "blooms", type: "bloom" }
-    ];
+// ---------------------------------------------------------
+// TERMINAL UI BOOTSTRAP
+// ---------------------------------------------------------
 
-    const tokens = content.split(/\s+/).filter(Boolean);
-    const remainingTerms = [];
+function setupTerminalUI() {
+  const view = $("terminal-view");
+  if (!view) return;
 
-    tokens.forEach((tok) => {
-      const hit = typeWords.find((t) => t.word === tok);
-      if (hit && !typeFilter) {
-        typeFilter = hit.type;
-      } else {
-        remainingTerms.push(tok);
-      }
-    });
+  terminalElements.view = view;
 
-    return {
-      mode,
-      typeFilter,
-      terms: remainingTerms,
-      debug: "nl-intent"
-    };
+  // Wrap view + controls in a shell container so we can hide/show it
+  let container = $("terminal-shell-container");
+  if (!container) {
+    container = document.createElement("section");
+    container.id = "terminal-shell-container";
+    container.style.marginTop = "1.5rem";
+
+    view.parentNode.insertBefore(container, view);
+    container.appendChild(view);
   }
 
-  function whisperSearch(rawQuery) {
-    const cards = document.querySelectorAll(".card");
-    if (!cards.length) return;
+  // Controls bar
+  const controls = document.createElement("div");
+  controls.style.display = "flex";
+  controls.style.flexWrap = "wrap";
+  controls.style.gap = "0.5rem";
+  controls.style.alignItems = "center";
+  controls.style.margin = "0.5rem 0 0.75rem 0";
 
-    const intent = parseWhisperIntent(rawQuery);
-    const query = (rawQuery || "").trim().toLowerCase();
+  controls.innerHTML = `
+    <label style="font-family:var(--font-mono); font-size:0.8rem;">
+      MODE:
+      <select id="mode-select" style="background:#000; color:#0f0; border:1px solid #0f0; padding:0.15rem 0.35rem; margin-left:0.25rem;">
+        <option value="garden">GARDEN</option>
+        <option value="eagle">EAGLE</option>
+        <option value="shadow">SHADOW</option>
+      </select>
+    </label>
 
-    // Reset highlight styles on every search
-    cards.forEach((card) => {
-      card.style.outline = "";
-      card.style.boxShadow = "";
+    <label style="font-family:var(--font-mono); font-size:0.8rem;">
+      TEMP:
+      <input id="temp-slider" type="range" min="0" max="1" step="0.1" value="0.6" style="vertical-align:middle;">
+      <span id="temp-label">0.6</span>
+    </label>
+
+    <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--muted);">
+      Commands: <code>READ STATUS</code>, <code>READ MANIFEST</code>, <code>WRITE STATUS your text…</code>
+    </span>
+  `;
+
+  container.insertBefore(controls, view);
+
+  terminalElements.modeSelect = controls.querySelector("#mode-select");
+  terminalElements.tempSlider = controls.querySelector("#temp-slider");
+  terminalElements.tempLabel = controls.querySelector("#temp-label");
+
+  terminalElements.tempSlider.addEventListener("input", () => {
+    terminalElements.tempLabel.textContent =
+      terminalElements.tempSlider.value;
+  });
+
+  // Input row
+  const inputRow = document.createElement("div");
+  inputRow.style.display = "flex";
+  inputRow.style.marginTop = "0.75rem";
+  inputRow.style.gap = "0.5rem";
+
+  inputRow.innerHTML = `
+    <input
+      id="terminal-input"
+      type="text"
+      placeholder="Speak to the Garden…"
+      style="flex:1; background:#000; color:#0f0; border:1px solid #0f0; border-radius:4px; padding:0.5rem; font-family:var(--font-mono); font-size:0.85rem;"
+    />
+    <button
+      id="terminal-send"
+      style="background:#0f0; color:#000; border:none; border-radius:4px; padding:0 1rem; font-family:var(--font-mono); font-weight:bold; cursor:pointer;">
+      SEND
+    </button>
+  `;
+
+  container.appendChild(inputRow);
+
+  terminalElements.input = inputRow.querySelector("#terminal-input");
+  terminalElements.sendBtn = inputRow.querySelector("#terminal-send");
+
+  terminalElements.sendBtn.addEventListener("click", sendTerminalCommand);
+  terminalElements.input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") sendTerminalCommand();
+  });
+
+  // initial render
+  renderTerminal();
+}
+
+// Allow nav button `[ TERMINAL ]` to toggle quickly
+function toggleTerminal() {
+  filterView("terminal");
+}
+window.toggleTerminal = toggleTerminal;
+
+// ---------------------------------------------------------
+// TERMINAL COMMAND HANDLER
+// ---------------------------------------------------------
+
+async function sendTerminalCommand() {
+  if (!terminalElements.input) return;
+  const text = terminalElements.input.value.trim();
+  if (!text) return;
+
+  const mode =
+    (terminalElements.modeSelect &&
+      terminalElements.modeSelect.value) ||
+    "garden";
+  const temp =
+    terminalElements.tempSlider
+      ? Number(terminalElements.tempSlider.value)
+      : 0.6;
+
+  termAppend(`> ${text}`);
+
+  terminalElements.input.value = "";
+
+  // Decide action based on command
+  let action = "chat";
+  let content = undefined;
+  let commitMessage = undefined;
+
+  const upper = text.toUpperCase();
+
+  if (upper === "READ STATUS") {
+    action = "readStatus";
+  } else if (upper === "READ MANIFEST") {
+    action = "readManifest";
+  } else if (upper.startsWith("WRITE STATUS")) {
+    action = "writeStatus";
+    content = text.replace(/^\s*WRITE STATUS\s*/i, "");
+    if (!content) {
+      content = `Keeper log from Terminal.\n\n(Empty body, ${new Date().toISOString()})`;
+    }
+    commitMessage = `Keeper WRITE STATUS via Terminal`;
+  }
+
+  const payload = {
+    key: GARDEN_KEY,
+    prompt: text,
+    mode,
+    temp,
+    action,
+    content,
+    commitMessage,
+  };
+
+  try {
+    const res = await fetch(TERMINAL_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
     });
 
-    // Empty query → revert to nav filter behaviour
-    if (intent.mode === "empty") {
-      const activeBtn = document.querySelector("#spine-nav button.active");
-      const label = activeBtn && activeBtn.textContent
-        ? activeBtn.textContent.trim().toLowerCase()
-        : "monolith";
+    const data = await res.json();
 
-      if (label === "monolith" || label === "all") {
-        cards.forEach((c) => c.classList.remove("hidden"));
-      } else {
-        const map = {
-          chambers: "chamber",
-          cycles: "cycle",
-          laws: "law"
-        };
-        const t = map[label] || "node";
-        cards.forEach((c) => {
-          if (c.dataset.type === t) c.classList.remove("hidden");
-          else c.classList.add("hidden");
-        });
-      }
+    if (!data.ok) {
+      termAppend(`! ERROR: ${data.error || "Unknown error"}`);
       return;
     }
 
-    // Terms for matching
-    const terms = intent.terms.length
-      ? intent.terms
-      : query.split(/\s+/).filter(Boolean);
-
-    let maxScore = 0;
-    const scores = new Map();
-
-    cards.forEach((card) => {
-      const haystack = card.dataset.search || "";
-      const cardType = card.dataset.type || "";
-
-      // Type filter (if any)
-      if (intent.typeFilter && cardType !== intent.typeFilter) {
-        card.classList.add("hidden");
-        scores.set(card, 0);
-        return;
-      }
-
-      // Soft fuzzy: all terms must appear in some form
-      let score = 0;
-      let allMatch = true;
-
-      terms.forEach((term) => {
-        const t = term.toLowerCase();
-        if (!t) return;
-
-        if (haystack.includes(t)) {
-          score += 2; // direct hit
-        } else {
-          // very soft fuzzy: try without vowels
-          const nv = t.replace(/[aeiou]/g, "");
-          if (nv && haystack.replace(/[aeiou]/g, "").includes(nv)) {
-            score += 1; // fuzzy hit
-          } else {
-            allMatch = false;
-          }
-        }
-      });
-
-      if (!terms.length) {
-        // If for some reason there are no terms, treat as match-all
-        allMatch = true;
-      }
-
-      if (allMatch && score > 0) {
-        card.classList.remove("hidden");
-        scores.set(card, score);
-        if (score > maxScore) maxScore = score;
-      } else {
-        card.classList.add("hidden");
-        scores.set(card, 0);
-      }
-    });
-
-    // Highlight strongest matches
-    if (maxScore > 0) {
-      scores.forEach((score, card) => {
-        if (score === maxScore && !card.classList.contains("hidden")) {
-          card.style.outline = "1px solid rgba(46,204,113,0.8)";
-          card.style.boxShadow = "0 0 16px rgba(46,204,113,0.25)";
-        }
-      });
+    if (data.kind === "status" || data.kind === "manifest") {
+      const label = data.kind === "status" ? GH_STATUS_PATH : GH_MANIFEST_PATH;
+      termAppend(`--- BEGIN ${label} ---`);
+      termAppend(data.text || "[empty]");
+      termAppend(`--- END ${label} ---`);
+    } else if (data.kind === "writeStatus") {
+      termAppend(
+        `✔ STATUS written to ${data.path || GH_STATUS_PATH} · commit ${
+          data.commit || "OK"
+        }`
+      );
+    } else {
+      termAppend(data.reply || "[no reply]");
     }
+  } catch (err) {
+    termAppend("! NETWORK ERROR: " + err.message);
   }
+}
 
-  // --- EXPORT PUBLIC API ---
+// ---------------------------------------------------------
+// BOOT
+// ---------------------------------------------------------
 
-  window.filterView = filterView;
-  window.toggleTerminal = toggleTerminal;
-  window.whisperSearch = whisperSearch;
+document.addEventListener("DOMContentLoaded", () => {
+  updateTimestamp();
+  setInterval(updateTimestamp, 10_000);
 
-  // Kick off once DOM is ready (script is loaded with `defer`)
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
-  }
-})();
+  buildGrid();
+  setupTerminalUI();
+});
