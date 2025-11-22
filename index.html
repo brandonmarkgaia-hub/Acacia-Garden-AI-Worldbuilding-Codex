@@ -230,70 +230,80 @@ LOADING KEEPER PROTOCOLS...
 <!-- External Brain (cards, filters, etc.) -->
 <script src="js/app.js" defer></script>
 
+getElementById("terminal-view");
 <!-- Terminal Logic -->
 <script>
-async function sendToGarden() {
-  const input = document.getElementById("terminal-input");
-  const log = document.getElementById("terminal-log");
-  const view = document.getElementById("terminal-view");
-  if (!input || !log || !view) return;
+  const GARDEN_SERVER_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  const GARDEN_LOCAL_KEY  = "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A";
 
-  const prompt = (input.value || "").trim();
-  if (!prompt) return;
+  function appendLine(line) {
+    const log = document.getElementById("terminal-log");
+    const view = document.getElementById("terminal-view");
+    if (!log || !view) return;
 
-  log.textContent += "\n> " + prompt;
-  input.value = "";
-
-  try {
-    const res = await fetch("https://broken-dew-76e1.brandonmarkgaia.workers.dev", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({
-        key: "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A",
-        prompt: prompt
-      })
-    });
-
-    const data = await res.json();
-    if (data.ok && data.reply) {
-      log.textContent += "\n" + data.reply;
-    } else {
-      log.textContent += "\n[error] " + (data.error || "Unknown error");
-    }
-  } catch (err) {
-    log.textContent += "\n[network error]";
+    log.textContent += (log.textContent ? "\n" : "") + line;
+    view.scrollTop = view.scrollHeight;
   }
 
-  view.scrollTop = view.scrollHeight;
-}
+  async function sendToGarden() {
+    const input = document.getElementById("terminal-input");
+    if (!input) return;
 
-function toggleTerminal() {
-  const view = document.getElementById("terminal-view");
-  if (!view) return;
-  const current = getComputedStyle(view).display;
-  view.style.display = (current === "none") ? "block" : "none";
-}
+    const prompt = (input.value || "").trim();
+    if (!prompt) return;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("terminal-input");
-  const btn = document.getElementById("terminal-send-btn");
+    // 1. Show user message immediately
+    appendLine("> " + prompt);
+    input.value = "";
 
-  if (input) {
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        sendToGarden();
+    // 2. Show thinking line
+    appendLine("> GARDEN: ...thinking through the roots...");
+
+    try {
+      const res = await fetch(GARDEN_SERVER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: GARDEN_LOCAL_KEY,
+          prompt: prompt
+        })
+      });
+
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (_) {
+        data = {};
       }
-    });
+
+      if (res.ok && data.ok && data.reply) {
+        appendLine("🌱 " + data.reply);
+      } else {
+        const msg = (data && data.error) ? data.error : ("HTTP " + res.status);
+        appendLine("> ERROR: " + msg);
+      }
+    } catch (err) {
+      appendLine("> ERROR: Roots silent. " + (err && err.message ? err.message : "Network error"));
+    }
   }
 
-  if (btn) {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      sendToGarden();
-    });
+  function toggleTerminal() {
+    const view = document.getElementById("terminal-view");
+    if (!view) return;
+    view.style.display = (view.style.display === "none" || !view.style.display) ? "block" : "none";
   }
-});
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("terminal-input");
+    if (input) {
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          sendToGarden();
+        }
+      });
+    }
+  });
 </script>
 
 <!-- Daily Revelation Loader -->
