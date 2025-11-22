@@ -1,0 +1,6 @@
+{
+  "type": "memory",
+  "job_id": "rebuild_memory",
+  "keeper_id": "HKX277206",
+  "prompt": "Read STATUS.json and recent Garden GPT outputs, then write a concise MEMORY SUMMARY of the Garden's current state, themes, and active structures in GitHub-safe language."
+}
