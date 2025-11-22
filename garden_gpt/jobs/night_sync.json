@@ -1,0 +1,6 @@
+{
+  "type": "cycle",
+  "job_id": "night_sync",
+  "keeper_id": "HKX277206",
+  "prompt": "Perform NIGHT ORCHARD memory evolution: Read STATUS.json, AUTO_LEDGER.md, and all outputs. Summarize changes, refine memory, and generate a nightly evolution log."
+}
