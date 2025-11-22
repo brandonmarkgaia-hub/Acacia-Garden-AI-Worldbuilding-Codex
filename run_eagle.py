@@ -3,14 +3,10 @@
 """
 RUN EAGLE • HKX277206
 
-This script:
-- Looks in eagle/jobs/ for the latest *.json job
-- Reads its fields (type/kind + prompt)
+- Reads the latest JSON job in eagle/jobs/
 - Builds an EagleJob
-- Dispatches to the correct Eagle handler
+- Dispatches to the Eagle core
 - Writes output into eagle/output/
-
-Designed to be called from GitHub Actions or manually.
 """
 
 import json
@@ -33,11 +29,9 @@ def load_latest_job() -> EagleJob | None:
     latest = max(jobs, key=lambda p: p.stat().st_mtime)
     data = json.loads(latest.read_text(encoding="utf-8"))
 
-    # Allow either "kind" or "type" in the JSON
     kind = (data.get("kind") or data.get("type") or "language").lower()
     prompt = data.get("prompt", "").strip() or "(no prompt provided)"
 
-    # Everything else in the JSON goes into meta
     meta = {k: v for k, v in data.items() if k not in ("kind", "type", "prompt")}
 
     job_id = latest.stem
@@ -58,7 +52,6 @@ def load_latest_job() -> EagleJob | None:
 def main() -> int:
     job = load_latest_job()
     if job is None:
-        # Not an error; just nothing to do
         return 0
 
     out_path = run_job(job)
