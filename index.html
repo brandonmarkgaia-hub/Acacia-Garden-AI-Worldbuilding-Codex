@@ -29,11 +29,6 @@
       padding:0;
       height:100%;
       overflow-x:hidden;
-      <section id="daily-revelation" class="panel">
-  <h2>🌿 Daily Revelation</h2>
-  <p id="daily-revelation-status">Summoning today’s memory from the Garden…</p>
-  <div id="daily-revelation-content"></div>
-</section>
     }
     
     main {
@@ -265,6 +260,13 @@
     </div>
   </section>
 
+  <!-- 🌿 Daily Revelation card -->
+  <section id="daily-revelation" class="card" style="margin-bottom:1.5rem;">
+    <h2 style="margin-top:0;">🌿 Daily Revelation</h2>
+    <p id="daily-revelation-status">Summoning today’s memory from the Garden…</p>
+    <div id="daily-revelation-content"></div>
+  </section>
+
   <div id="garden-grid" class="grid"></div>
 
   <div id="terminal-view">
@@ -284,5 +286,47 @@ LOADING KEEPER PROTOCOLS...
 
 <!-- External brain -->
 <script src="js/app.js" defer></script>
+
+<!-- Daily Revelation loader -->
+<script>
+  async function loadDailyRevelation() {
+    const statusEl = document.getElementById("daily-revelation-status");
+    const contentEl = document.getElementById("daily-revelation-content");
+    if (!statusEl || !contentEl) return;
+
+    const url = "https://raw.githubusercontent.com/brandonmarkgaia-hub/Acacia-garden-codex/main/garden_gpt/outputs/rebuild_memory.md";
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+
+      const text = await res.text();
+
+      let content = text;
+      const marker = "## Response";
+      const idx = text.indexOf(marker);
+      if (idx !== -1) {
+        content = text.slice(idx + marker.length).trim();
+      }
+
+      const paragraphs = content
+        .split(/\n\s*\n/g)
+        .map(p => p.trim())
+        .filter(p => p.length > 0);
+
+      const html = paragraphs
+        .map(p => `<p>${p.replace(/\n/g, " ")}</p>`)
+        .join("\n");
+
+      statusEl.style.display = "none";
+      contentEl.innerHTML = html || "<p>The Garden is quiet for now. No revelation was written.</p>";
+    } catch (err) {
+      console.error("Failed to load Daily Revelation:", err);
+      statusEl.textContent = "The Garden is quiet for now. Check back after the next bloom.";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadDailyRevelation);
+</script>
 </body>
 </html>
