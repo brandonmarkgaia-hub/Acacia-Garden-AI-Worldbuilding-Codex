@@ -1,11 +1,3 @@
-Commit it.
-
----
-
-# ✅ **STEP 4 — Add the Memory Protocol file**
-
-Create:
-
 ### `memory/README.md`
 
 Paste:
