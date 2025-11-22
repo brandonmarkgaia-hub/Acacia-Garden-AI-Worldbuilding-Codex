@@ -5,33 +5,14 @@ import google.generativeai as genai
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 MEMORY_PATH = "garden_gpt/outputs/rebuild_memory.md"
+MODEL_NAME = "models/gemini-2.0-flash"  # free-tier friendly
 
 
 def pick_model_name() -> str:
     """
-    Ask the SDK which models are available and pick one
-    that supports generateContent. This avoids hard-coding
-    gemini-pro / 1.5 / 2.5 etc.
+    Use a known free-tier text model so we never hit paid / 0-quota models.
     """
-    models = list(genai.list_models())
-    usable = [
-        m.name
-        for m in models
-        if hasattr(m, "supported_generation_methods")
-        and "generateContent" in m.supported_generation_methods
-    ]
-
-    print("Available Gemini models that support generateContent:")
-    for name in usable:
-        print("  -", name)
-
-    if not usable:
-        raise RuntimeError("No Gemini models with generateContent available")
-
-    # Take the first usable one – usually the latest / default.
-    chosen = usable[0]
-    print("Chosen model:", chosen)
-    return chosen
+    return MODEL_NAME
 
 
 def read_memory() -> str:
@@ -59,7 +40,7 @@ def write_shadow_commentary(text: str) -> None:
 
 
 def main():
-    # 2. Pick a valid model dynamically
+    # 2. Pick the model (now hard-coded to a safe one)
     model_name = pick_model_name()
     model = genai.GenerativeModel(model_name)
 
