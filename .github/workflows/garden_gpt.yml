@@ -35,14 +35,20 @@ jobs:
         run: |
           python -m garden_gpt.runner "${{ github.event.inputs.job_path }}"
 
-      - name: Commit Garden GPT output (if changed)
+      # 🔥 FIXED COMMIT STEP (SAFE, NEVER FAILS)
+      - name: Commit Garden GPT output (safe)
         run: |
-          if git status --porcelain | grep "garden_gpt/output" ; then
-            git config user.name "garden-gpt-bot"
-            git config user.email "actions@github.com"
-            git add garden_gpt/output
-            git commit -m "Garden GPT output for ${{ github.event.inputs.job_path }}"
-            git push
-          else
+          git config user.name "garden-gpt-bot"
+          git config user.email "actions@github.com"
+
+          # Add ALL changes (jobs_done, outputs, etc.)
+          git add -A
+
+          # If nothing staged, exit safely
+          if git diff --cached --quiet; then
             echo "No Garden GPT changes to commit."
+            exit 0
           fi
+
+          git commit -m "Garden GPT output for ${{ github.event.inputs.job_path }}"
+          git push
