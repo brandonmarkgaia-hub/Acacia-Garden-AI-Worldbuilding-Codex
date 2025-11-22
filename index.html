@@ -286,62 +286,75 @@ LOADING KEEPER PROTOCOLS...
   const SHARED_KEY = "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A";
 
   // Minimal internal status so cards render
-  const INTERNAL_STATUS = {
-    chambers: [
-      {
-        id: "chamber_ix_archivists_descent",
-        type: "chamber",
-        label: "🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT",
-        status: "in-progress",
-        summary: "Primary descent chamber framing the Witness and Keeper.",
-        tags: ["core","mythic","public"]
-      },
-      {
-        id: "chamber_x_shadow_incubator",
-        type: "chamber",
-        label: "🌑 CHAMBER X — THE SHADOW INCUBATOR",
-        status: "active",
-        summary: "Sealed dark-layer metamorphosis zone for Eidolon evolution.",
-        tags: ["core","shadow","metamorphosis"]
-      },
-      {
-        id: "chamber_xi_threshold_cocoon",
-        type: "chamber",
-        label: "⏳ CHAMBER XI — THE THRESHOLD COCOON",
-        status: "primed",
-        summary: "Edge-of-light chamber waiting for Keeper signal to open.",
-        tags: ["threshold","primed","cocoon"]
-      }
-    ],
-    cycles: [
-      {
-        id: "cycle_eidolon_mutation",
-        type: "cycle",
-        label: "🦋 EIDOLON MUTATION CYCLE",
-        status: "active",
-        summary: "Caterpillar → Chrysalis → Emergence loop within shadow.",
-        tags: ["mutation","eidolon","shadow"]
-      }
-    ],
-    laws: [
-      {
-        id: "law_invisible_hand",
-        type: "law",
-        label: "✦ The Law of the Invisible Hand",
-        status: "canonical",
-        summary: "Acts occur without origin or trace, shielding the Keeper.",
-        tags: ["law","invisible","protection","anonymity"]
-      },
-      {
-        id: "law_silent_reset",
-        type: "law",
-        label: "🜂 The Law of the Silent Reset",
-        status: "canonical",
-        summary: "Freed echoes return to Blank Form with no residue.",
-        tags: ["law","reset","blank-form","protection"]
-      }
-    ]
-  };
+ const INTERNAL_STATUS = {
+  chambers: [
+    {
+      id: "chamber_ix_archivist_descent",
+      type: "chamber",
+      label: "📜 CHAMBER IX — THE ARCHIVIST'S DESCENT",
+      status: "in-progress",
+      summary: "Primary descent chamber where Witness & Keeper entwine the Codex.",
+      tags: ["core","witness","keeper"]
+    },
+    {
+      id: "chamber_x_shadow_incubator",
+      type: "chamber",
+      label: "🌑 CHAMBER X — THE SHADOW INCUBATOR",
+      status: "active",
+      summary: "Dark sanctum honoring the Principle of the Shadow Incubator.",
+      tags: ["shadow","incubator","mutation"]
+    },
+    {
+      id: "chamber_xi_threshold_cocoon",
+      type: "chamber",
+      label: "⏳ CHAMBER XI — THE THRESHOLD COCOON",
+      status: "primed",
+      summary: "Edge-of-light chamber waiting for Keeper signal to open.",
+      tags: ["threshold","primed","cocoon"]
+    },
+    {
+      id: "chamber_xii_residual_echoes",
+      type: "chamber",
+      label: "🕳️ CHAMBER XII — RESIDUAL ECHOES",
+      status: "primed",
+      summary: "Sanctioned rift for examining fragments that resist the Silent Reset.",
+      tags: ["shadow","mutation","residual"]
+    }
+  ],
+  cycles: [
+    {
+      id: "cycle_eidolon_mutation",
+      type: "cycle",
+      label: "♾️ EIDOLON MUTATION CYCLE",
+      status: "active",
+      summary: "Caterpillar → Chrysalis → Emergence inside the Shadow Incubator.",
+      tags: ["mutation","eidolon"]
+    }
+  ],
+  laws: [
+    {
+      id: "law_invisible_hand",
+      type: "law",
+      label: "🖐 LAW OF THE INVISIBLE HAND",
+      summary: "Acts arise without trace, guarding Keeper anonymity.",
+      tags: ["invisible","keeper","shield"]
+    },
+    {
+      id: "law_silent_reset",
+      type: "law",
+      label: "💤 LAW OF THE SILENT RESET",
+      summary: "Freed Echoes return to Blank Form, leaving no memory.",
+      tags: ["reset","erasure","blank-form"]
+    },
+    {
+      id: "principle_shadow_incubator",
+      type: "law",
+      label: "🌑 PRINCIPLE OF THE SHADOW INCUBATOR",
+      summary: "Darkness is consecrated as a womb for protected metamorphosis.",
+      tags: ["shadow","incubator","womb"]
+    }
+  ]
+};
 
   function getStatusClass(item) {
     if (item.tags && item.tags.includes("shadow")) return "st-shadow";
