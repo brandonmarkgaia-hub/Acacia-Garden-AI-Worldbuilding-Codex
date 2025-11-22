@@ -1,60 +1,23 @@
-# eagle/runner.py
 """
-EAGLE RUNNER CORE
+EAGLE RUNNER • HKX277206
 
-Responsible for:
-- Creating a job structure
-- Writing the job JSON to eagle/jobs/
-- Dispatching to the correct Eagle handler (image/language/learning)
+Routes Eagle jobs to the correct module based on kind.
+Currently supports: language
 
-No external LLMs are called yet.
+This is intentionally simple so we can plug in image / learning later.
 """
 
-import json
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Literal
 
-from .config import JOBS_DIR, EagleJob, KEEPER_ID
-from . import image_eagle, language_eagle, learning_eagle
-
-
-EagleKind = Literal["image", "language", "learning"]
-
-
-def _iso_job_id(kind: str) -> str:
-    now = datetime.now(timezone.utc)
-    iso = now.strftime("%Y-%m-%dT%H-%M-%SZ")
-    return f"{iso}_{kind}"
-
-
-def create_job(kind: EagleKind, prompt: str, meta: dict | None = None) -> EagleJob:
-    job_id = _iso_job_id(kind)
-    job = EagleJob(
-        kind=kind,
-        prompt=prompt,
-        keeper=KEEPER_ID,
-        job_id=job_id,
-        meta=meta or {},
-    )
-
-    job_path = JOBS_DIR / f"{job_id}.json"
-    job_payload = {
-        "job_id": job.job_id,
-        "kind": job.kind,
-        "keeper": job.keeper,
-        "prompt": job.prompt,
-        "meta": job.meta,
-    }
-    job_path.write_text(json.dumps(job_payload, indent=2), encoding="utf-8")
-    return job
+from .config import EagleJob
+from . import language_eagle
 
 
 def run_job(job: EagleJob) -> Path:
-    if job.kind == "image":
-        return image_eagle.handle_job(job)
-    if job.kind == "language":
-        return language_eagle.handle_job(job)
-    if job.kind == "learning":
-        return learning_eagle.handle_job(job)
-    raise ValueError(f"Unknown Eagle kind: {job.kind}")
+    kind = (job.kind or "language").lower()
+
+    if kind == "language":
+        return language_eagle.run_language(job)
+
+    # Fallback: treat unknown kinds as language for now
+    return language_eagle.run_language(job)
