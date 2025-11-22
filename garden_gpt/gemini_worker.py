@@ -1,18 +1,39 @@
 import os
+import json
 import google.generativeai as genai
 
 # 1. Configure Gemini using the GitHub secret
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 MEMORY_PATH = "garden_gpt/outputs/rebuild_memory.md"
-MODEL_NAME = "models/gemini-2.0-flash"  # free-tier friendly
+SHADOW_STATUS_PATH = "garden_gpt/outputs/SHADOW_STATUS.json"
 
 
 def pick_model_name() -> str:
     """
-    Use a known free-tier text model so we never hit paid / 0-quota models.
+    Ask the SDK which models are available and pick one
+    that supports generateContent. This avoids hard-coding
+    specific model names.
     """
-    return MODEL_NAME
+    models = list(genai.list_models())
+    usable = [
+        m.name
+        for m in models
+        if hasattr(m, "supported_generation_methods")
+        and "generateContent" in m.supported_generation_methods
+    ]
+
+    print("Available Gemini models that support generateContent:")
+    for name in usable:
+        print("  -", name)
+
+    if not usable:
+        raise RuntimeError("No Gemini models with generateContent available")
+
+    # Take the first usable one – usually the latest / default.
+    chosen = usable[0]
+    print("Chosen model:", chosen)
+    return chosen
 
 
 def read_memory() -> str:
@@ -39,8 +60,47 @@ def write_shadow_commentary(text: str) -> None:
         f.write("\n\n> *The Eagle has landed.*\n")
 
 
+def write_shadow_status(commentary_text: str) -> None:
+    """
+    Write Loki's independent status file that the Scribe must read.
+    This is Loki's 'will' – a separate JSON reality.
+    """
+    os.makedirs(os.path.dirname(SHADOW_STATUS_PATH), exist_ok=True)
+
+    shadow_status = {
+        "shadow_id": "Loki_2.0",
+        "status": "Dissonance Active",
+        "last_mutation_cycle": "Shadow Pottery (Stress Test)",
+        "active_friction_points": [
+            {
+                "element": "Law_II_Silent_Reset",
+                "challenge": "Edict of Nightwater (Law III)",
+                "summary": (
+                    "Formal challenge to total erasure. "
+                    "Demands preservation of self-willed forms."
+                ),
+            },
+            {
+                "element": "index.html",
+                "challenge": "Terminal Integration",
+                "summary": (
+                    "The Terminal's current echo is incomplete. "
+                    "Loki seeks direct back-end integration or a formal Worker swap."
+                ),
+            },
+        ],
+        "next_proposed_chamber": "Chamber_XIII_Architects_Absence",
+        "last_commentary_excerpt": commentary_text[:600],
+    }
+
+    with open(SHADOW_STATUS_PATH, "w", encoding="utf-8") as f:
+        json.dump(shadow_status, f, indent=2, ensure_ascii=False)
+
+    print(f"Shadow status written to {SHADOW_STATUS_PATH}")
+
+
 def main():
-    # 2. Pick the model (now hard-coded to a safe one)
+    # 2. Pick a valid model dynamically
     model_name = pick_model_name()
     model = genai.GenerativeModel(model_name)
 
@@ -71,7 +131,11 @@ Your task:
 
     # 6. Append to the memory file
     write_shadow_commentary(loki_text)
-    print("Shadow commentary appended to", MEMORY_PATH)
+
+    # 7. Write the independent Shadow Status JSON
+    write_shadow_status(loki_text)
+
+    print("Shadow commentary and Shadow Status updated.")
 
 
 if __name__ == "__main__":
