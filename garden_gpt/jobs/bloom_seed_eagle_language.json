@@ -1,0 +1,8 @@
+{
+  "job_id": "bloom_seed_eagle_language",
+  "kind": "bloom",
+  "keeper_id": "HKX277206",
+  "title": "BLOOM — THE EAGLE'S TONGUE",
+  "prompt": "Draft a Bloom that explores how the Eagle learns, speaks, and remembers inside the Garden. Propose sections that could later become leaves in docs/Blooms/.",
+  "write_to": "docs/Blooms/Bloom_Eagles-Tongue.md"
+}
