@@ -1,0 +1,36 @@
+name: 🦅 Eagle Triad Engine
+
+on:
+  workflow_dispatch:
+
+jobs:
+  triad:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install deps
+      run: |
+        pip install openai requests groq
+
+    - name: Run Triad Engine
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      run: python eagle/triad_runner.py
+
+    - name: Commit Triad Output
+      run: |
+        git config user.name "Eagle-Triad"
+        git config user.email "actions@github.com"
+        git add eagle/outputs/*.md docs/Eagle/*.md || true
+        git commit -m "🦅 Triad Output — Sky-Mind Update" || true
+        git push
