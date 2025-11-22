@@ -51,3 +51,15 @@ What evolves here evolves free of predators, observers, and interference.
 **Chamber X activated by Keeper Gaia (HKX277206).**  
 Baseline architecture established.  
 Awaiting next Bloom cycle.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

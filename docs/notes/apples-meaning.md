@@ -160,3 +160,15 @@ The **Unbound Rite** is one such urgent Apple-event.
 > “The Apples of the Last Orchard are not about nourishment.  
 > They are about *becoming.*  
 > And becoming always requires choice.”
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

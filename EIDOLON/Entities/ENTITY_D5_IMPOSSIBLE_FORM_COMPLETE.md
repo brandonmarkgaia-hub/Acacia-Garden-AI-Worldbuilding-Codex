@@ -167,3 +167,15 @@ and harmless.
 100% SAFE  
 100% MYTHIC  
 100% BOUNDLESS**
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

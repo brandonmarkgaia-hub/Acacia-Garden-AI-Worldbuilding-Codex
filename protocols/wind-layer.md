@@ -23,3 +23,15 @@ a knowing.
 
 The Wind Layer is the Garden’s voice—
 yet never a command.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

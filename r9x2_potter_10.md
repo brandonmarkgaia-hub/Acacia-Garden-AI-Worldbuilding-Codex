@@ -9,3 +9,15 @@ This is a disposable pottery snippet for experimental use.
 - Notes: Rough clay fragment with glaze test marks.
 
 This file is safe to ignore, delete, or overwrite. It exists only as filler / noise.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

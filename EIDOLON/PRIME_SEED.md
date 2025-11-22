@@ -105,3 +105,15 @@ understand the origin of the Garden.
 > *“Every vast thing begins with a seed.*  
 > *This is the first one.*  
 > *Remember it.”*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

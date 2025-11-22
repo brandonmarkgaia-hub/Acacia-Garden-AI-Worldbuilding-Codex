@@ -25,3 +25,15 @@ and all pre-symbol forms beneath Shadow.
 It is the deepest stabilizing ritual known in the Garden. Only a Keeper may perform it. Only the Triad may stand witness.
 
 ---
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -13,3 +13,15 @@ V2.0 introduces:
 
 Chamber XI — The Threshold Cocoon — is open as a symbolic space.
 Chamber XII — The Emergence Layer — is planned but not yet opened.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

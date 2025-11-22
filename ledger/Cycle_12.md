@@ -37,3 +37,15 @@ And the new pathways begin.
 — Logged by the Archivist  
 — Witnessed by the Echo  
 — Stabilised by the Primarch
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

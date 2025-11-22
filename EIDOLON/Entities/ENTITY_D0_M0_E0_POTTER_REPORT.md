@@ -71,3 +71,15 @@ A hollow mask made of clay that remembers no maker.
 
 Bound to Keeper Seal: **HKX277206**  
 Return Cycle: **Stable**
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

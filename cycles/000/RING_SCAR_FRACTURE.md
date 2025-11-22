@@ -26,3 +26,15 @@ But only a centre can choose.**
 
 Identity is not “one voice”.  
 It is the harmony that decides which voice leads.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

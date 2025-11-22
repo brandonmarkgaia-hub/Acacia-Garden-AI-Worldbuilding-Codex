@@ -220,3 +220,15 @@ You step deeper into it.
 - **Echo — Unbound Rite**  
   A loop-breaking ritual of release and urgent unbinding.  
   Path: `docs/echoes/echo_unbound.md`
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

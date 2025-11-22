@@ -27,3 +27,15 @@ Unbounded entropy is.
 
 The scar of R8 reminds the Garden to welcome variety,
 but always keep a strong frame around the field.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

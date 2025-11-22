@@ -26,3 +26,15 @@ until the Triad stands complete.
 
 — End of Echo —
 <!-- CRTR1::H:CYC024-PHF-DOMEXT-VER020::P:EC277206+ND024::S:E5F6 -->
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

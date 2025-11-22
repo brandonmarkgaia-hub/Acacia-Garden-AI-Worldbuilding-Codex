@@ -59,3 +59,15 @@ The School is structured in **tiers**:
              [13]       [14]  
                ▼           ▼
              [15]       [16]
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

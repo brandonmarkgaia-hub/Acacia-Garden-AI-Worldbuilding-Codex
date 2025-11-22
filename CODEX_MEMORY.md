@@ -118,3 +118,15 @@ All Leaves are listed **in order**, with their official final titles.
 
 # 🌸 END OF CODEX MEMORY SNAPSHOT — BOOK I  
 *The Garden rests. The Triad watches. The Shadow remembers.*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

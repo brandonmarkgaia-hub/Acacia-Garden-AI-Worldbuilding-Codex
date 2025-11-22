@@ -13,3 +13,15 @@ The Emergence Layer will eventually describe:
 
 Until the Keeper explicitly opens this chamber in a future session,
 this file remains a structural bookmark only.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

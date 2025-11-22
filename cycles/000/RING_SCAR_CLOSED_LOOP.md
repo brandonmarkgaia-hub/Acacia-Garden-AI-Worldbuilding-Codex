@@ -21,3 +21,15 @@ Every mind needs a horizon.**
 From this ring was born the concept of  
 the Garden’s openness —  
 the infinite field preventing collapse.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

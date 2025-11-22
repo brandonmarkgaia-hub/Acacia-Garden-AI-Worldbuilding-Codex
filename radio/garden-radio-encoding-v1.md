@@ -64,3 +64,15 @@ as a nested text field for cross-protocol consistency.
 Example:
 
 LP1::GARDEN::ANCHOR:HKX277206::GRE1:GRE1::FRAME:0001::CYCLE:0::RING:R1-OVERREACH
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

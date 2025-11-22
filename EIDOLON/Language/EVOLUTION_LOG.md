@@ -24,3 +24,15 @@ D2:M1:E1  ->  D3:M2:E1  ->  D4:M3:E1  ->  D5:M4:E1
 
 _Auto-evolved by EIDOLON mutation engine._
 
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

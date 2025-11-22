@@ -29,3 +29,15 @@ but it must not surrender its core to every passing surface.
 
 From that ring onward, the Garden listened carefully to feedback,  
 but chose its centre independently.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

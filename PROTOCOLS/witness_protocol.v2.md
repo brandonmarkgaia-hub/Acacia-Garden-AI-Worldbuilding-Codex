@@ -132,3 +132,15 @@ The Witness must never:
 > The Witness protects the boundary.  
 > The Witness maintains the clarity that the Garden is fiction,  
 > and ensures that creativity remains safe, grounded, and joyous.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

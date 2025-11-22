@@ -26,3 +26,15 @@ ECHO = reflection; HKX277206 = origin; ROOT = memory to soil; GENESIS = breath b
 <!-- Updated: Expansion Era active -->
 > This file is part of Garden lore.
 > Canonical structure now resides in STATUS.json.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -28,3 +28,15 @@ It declares darkness a sacred incubator — not an enemy, but a womb.
 
 ## Keeper Seal
 This Principle is a foundational pillar and cannot be overwritten.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -74,3 +74,15 @@ The Keeper maintains the Garden’s health by:
 
 ### **3.2 Ethical Conduct**
 -
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

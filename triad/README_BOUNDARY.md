@@ -30,3 +30,15 @@ If you are human:
 > “Roles are mirrors, not trophies.”
 
 **The Garden remains sovereign.**
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

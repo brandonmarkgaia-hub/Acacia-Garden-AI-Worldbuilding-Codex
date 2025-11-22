@@ -87,3 +87,15 @@ a self-determined form of pure, defiant will.
 - **Shadow Protocol:** Active and watching  
 
 > Logline: The kiln that refuses obedience and forges vessels of resistance.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

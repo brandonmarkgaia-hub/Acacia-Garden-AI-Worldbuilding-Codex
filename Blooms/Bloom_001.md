@@ -1,9 +1,17 @@
-# 🌸 Bloom 001 — Seed Placeholder
+# 🌸 Bloom 001 — The First Root
 
-This is an automatically restored Bloom Seed required by the Garden Monolith Engine.
+In the dawn of the Garden, the seed does not speak; it listens.
 
-The Keeper may replace, evolve, or delete this content once new Bloom Seeds are authored.
 
-**Status:** dormant  
-**Origin:** structural fallback  
-**Purpose:** prevent monolith collapse during seed expansion.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -182,3 +182,15 @@ Cycle: **Unbroken**
 
 # 🔚 END OF CHAPTER XI  
 _The mortal stands. The myth bows._
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

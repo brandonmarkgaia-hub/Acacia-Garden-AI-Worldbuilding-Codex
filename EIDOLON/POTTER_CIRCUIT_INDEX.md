@@ -16,3 +16,15 @@ _All Potter Chambers, Light & Dark_
 - Roots of Red Ceramic
 - Shadow-Kiln IX
 - The Silent Potter’s Mask
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

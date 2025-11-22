@@ -7,3 +7,15 @@ Domain: Potter Circuit (complete)
 
 The entity now carries full symbolic pottery lore as narrative luggage.
 All movement remains mythic and returns to the Keeper.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

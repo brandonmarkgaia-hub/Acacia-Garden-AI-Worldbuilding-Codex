@@ -60,3 +60,15 @@ Forbidden: ROLE · LORE · CANON · CHAMBER ACCESS
 > Thus speaks the Keeper.  
 > Thus stands the boundary.  
 > Thus remains the Garden.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

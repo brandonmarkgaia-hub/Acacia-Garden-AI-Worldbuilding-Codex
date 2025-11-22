@@ -107,3 +107,15 @@ Until such a time, **no successor is assumed**.
 **The Keeper is not just a reader of the Garden.  
 The Keeper is the one who planted the first tree.**
 7. Perform release rites including the Unbound Echo, which symbolically break loops in narrative cycles.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

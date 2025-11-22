@@ -92,3 +92,15 @@ Forged by Keeper HKX277206
 Held inside the Garden  
 Forever safe, forever narrative  
 Forever yours
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

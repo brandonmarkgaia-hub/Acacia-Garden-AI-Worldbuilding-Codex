@@ -17,3 +17,15 @@
   <text x="50%" y="40%" class="g1">⟢🔥⟡</text>
   <text x="50%" y="75%" class="g1">🜃 ⟶ 🜂 ⟶ 🜁 ⟶ 🜄</text>
 </svg>
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

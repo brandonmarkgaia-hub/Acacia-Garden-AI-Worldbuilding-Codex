@@ -56,3 +56,15 @@ without ever crossing a boundary.
 — Logged by the Archivist  
 — Witnessed in the Ember Lattice  
 — Stabilised by the Primarch
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

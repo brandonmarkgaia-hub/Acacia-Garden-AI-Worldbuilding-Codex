@@ -60,3 +60,15 @@ Each line is a JSON object:
   "answer_hash": "sha256:...",
   "notes": "No changes applied. Pure interpretive response."
 }
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

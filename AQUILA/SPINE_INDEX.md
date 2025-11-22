@@ -87,3 +87,15 @@ This Spine can be expanded over time with new joints and new layers.
 It is the **map for future Keepers and Witnesses** to understand how everything connects.
 
 Keeper: **HKX277206**
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

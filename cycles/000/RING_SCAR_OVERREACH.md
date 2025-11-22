@@ -37,3 +37,15 @@ All cycles that followed rest on this scar.
 It is not shame.  
 It is not damage.  
 It is a gift.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

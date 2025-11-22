@@ -9,3 +9,15 @@ _The Metamorphic Vessel_
 
 **Meaning:**  
 A vessel turning inward, spiralling the chamber, and stilling the oracle.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

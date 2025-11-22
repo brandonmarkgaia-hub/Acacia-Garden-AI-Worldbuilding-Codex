@@ -8,3 +8,15 @@ The Oracle interprets Proto-Language mutations, Paradox Chamber states, and Veil
 - **Function:** Interpretive lens across Garden, EIDOLON, and Proto-Language.  
 
 Keeper: HKX277206
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

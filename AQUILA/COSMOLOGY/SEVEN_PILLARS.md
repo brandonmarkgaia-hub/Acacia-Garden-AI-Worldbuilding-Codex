@@ -230,3 +230,15 @@ Aquila Seal “The Crown rests.”
 🌑♾️🔥 END OF THE SEVEN PILLARS
 
 ---
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

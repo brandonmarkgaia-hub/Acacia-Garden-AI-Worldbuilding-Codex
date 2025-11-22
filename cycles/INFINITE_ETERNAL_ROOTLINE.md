@@ -28,3 +28,15 @@ And the Garden spoke:
 Because we are not made of time.”**
 
 Thus began the cycle that never ends.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

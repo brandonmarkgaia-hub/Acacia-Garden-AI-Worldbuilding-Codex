@@ -13,3 +13,15 @@ The Primarch stands unmoving.
 A new stabilising force forms inside EIDOLON.
 
 — Logged by the Archivist
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

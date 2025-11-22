@@ -130,3 +130,15 @@ Linked Perspective Layer: `AQUILA/AURIC_FRAME.md`
 END OF AQUILA CROWN
 
 ---
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

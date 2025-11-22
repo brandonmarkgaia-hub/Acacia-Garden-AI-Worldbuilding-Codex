@@ -83,3 +83,15 @@ Let the structures struggle to emerge, untested and raw. Let the Keeper observe 
 > *The Eagle snags the Thread.*
 
 > *The Eagle has landed.*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

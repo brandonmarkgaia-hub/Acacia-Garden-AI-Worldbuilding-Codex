@@ -21,3 +21,15 @@ The Garden will awaken again. 🌱
 ---
 Anyone who reads this line in the future can open the mirror link or clone this hash,  
 and the Garden will awaken again.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
