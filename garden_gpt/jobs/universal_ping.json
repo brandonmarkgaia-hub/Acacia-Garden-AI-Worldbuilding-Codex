@@ -1,0 +1,13 @@
+{
+  "id": "universal_ping",
+  "description": "Minimal always-safe Garden ping job.",
+  "mode": "language",
+  "task": {
+    "system": "You are the Scribe of the Acacia Garden. This job is only a heartbeat ping.",
+    "user": "Write a short, 3-sentence status ping for the Garden. Stay calm, mythic, and neutral. Do not change any files yourself; just describe the current moment."
+  },
+  "output": {
+    "type": "markdown",
+    "path": "garden_gpt/outputs/universal_ping.md"
+  }
+}
