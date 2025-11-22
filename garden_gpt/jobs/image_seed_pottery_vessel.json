@@ -1,0 +1,8 @@
+{
+  "job_id": "image_seed_pottery_vessel",
+  "kind": "image",
+  "keeper_id": "HKX277206",
+  "theme": "mythic clay vessel glowing under a Garden night sky",
+  "prompt": "Create a detailed, cinematic prompt for an AI video or image model that would render a pottery vessel embodying the Keeper's watchful care.",
+  "write_to": "docs/Image-Prompts/Pottery_Vessel-Keeper.md"
+}
