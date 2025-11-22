@@ -45,3 +45,5 @@ jobs:
             git push
           else
             echo "No Garden changes to commit."
+        - name: Add Garden→Loki handshake
+          run: python garden_gpt/add_handshake_origin.py
