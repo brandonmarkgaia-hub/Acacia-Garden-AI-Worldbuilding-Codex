@@ -68,7 +68,7 @@ def run_language_job(job: dict) -> str:
     client = OpenAI()
 
     response = client.chat.completions.create(
-        model="gpt-5.1-nano",
+        model=MODEL_NAME,
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": prompt},
