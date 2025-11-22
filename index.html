@@ -73,14 +73,6 @@
       color:var(--accent);
       box-shadow: 0 0 10px rgba(46, 204, 113, 0.1);
     }
-    .badge.sealed {
-      border-color:var(--alert);
-      color:var(--alert);
-    }
-    .badge.shadow {
-      border-color:var(--shadow);
-      color:var(--shadow);
-    }
 
     nav {
       display:flex;
@@ -194,11 +186,7 @@
       text-decoration:none;
       border-bottom:1px dotted var(--muted);
     }
-    a:hover {
-      color:var(--accent);
-      border-bottom-style:solid;
-    }
-    
+
     footer {
       margin-top:4rem;
       border-top:1px solid var(--border);
@@ -251,7 +239,7 @@ LOADING KEEPER PROTOCOLS...
 </main>
 
 <script>
-  // --- INTERNAL BRAIN (fallback; later we'll sync with STATUS.json) ---
+  // INTERNAL HARDENED BRAIN (fallback)
   const INTERNAL_STATUS = {
     "chambers": [
       {
@@ -279,6 +267,7 @@ LOADING KEEPER PROTOCOLS...
         "tags": ["threshold"]
       }
     ],
+
     "cycles": [
       {
         "id": "cycle_eidolon",
@@ -288,6 +277,7 @@ LOADING KEEPER PROTOCOLS...
         "summary": "Caterpillar → Chrysalis → Emergence loop."
       }
     ],
+
     "laws": [
       {
         "id": "law_invisible",
@@ -302,6 +292,7 @@ LOADING KEEPER PROTOCOLS...
         "summary": "Darkness is a sacred incubation zone."
       }
     ],
+
     "blooms": [
       {
         "id": "bloom_kiln",
@@ -313,34 +304,45 @@ LOADING KEEPER PROTOCOLS...
     ]
   };
 
-  // For now, STATUS just aliases INTERNAL_STATUS.
-  // In a later step, we'll let STATUS be replaced by real STATUS.json.
+  // UI Brain (upgraded if STATUS.json works)
   let STATUS = INTERNAL_STATUS;
 
   const grid = document.getElementById('garden-grid');
   const term = document.getElementById('terminal-view');
   const navBtns = document.querySelectorAll('#spine-nav button');
 
+  // BOOT SEQUENCE
   (async function boot() {
     document.getElementById('timestamp').innerText = new Date().toUTCString();
 
-    // FUTURE STEP: try to fetch STATUS.json and override STATUS.
     try {
       const res = await fetch('./STATUS.json', { cache: 'no-store' });
       if (res.ok) {
-        const json = await res.json();
-        // We can later map json → STATUS shape; for now we just log.
-        console.log("Acacia: STATUS.json reachable (integration pending).");
+        const raw = await res.json();
+        STATUS = mapStatusFromRaw(raw, INTERNAL_STATUS);
+        console.log("Acacia: STATUS.json integrated.");
       } else {
-        console.log("Acacia: STATUS.json not reachable, using internal brain.");
+        console.log("Acacia: STATUS.json unreachable – fallback engaged.");
       }
     } catch (e) {
-      console.log("Acacia: Safe Mode • internal brain only.");
+      console.log("Acacia: Safe Mode – internal brain only.");
     }
 
     renderAll();
   })();
 
+  // MAP RAW STATUS.JSON → UI SHAPE
+  function mapStatusFromRaw(raw, fallback) {
+    const out = {
+      chambers: Array.isArray(raw.chambers) ? raw.chambers : fallback.chambers,
+      cycles: Array.isArray(raw.cycles) ? raw.cycles : fallback.cycles,
+      laws: Array.isArray(raw.laws) ? raw.laws : fallback.laws,
+      blooms: Array.isArray(raw.blooms) ? raw.blooms : fallback.blooms
+    };
+    return out;
+  }
+
+  // RENDER GRID
   function renderAll() {
     grid.innerHTML = '';
 
@@ -352,8 +354,8 @@ LOADING KEEPER PROTOCOLS...
 
   function createCard(data) {
     const el = document.createElement('div');
-    el.className = `card type-${data.type}`;
-    el.dataset.type = data.type;
+    el.className = `card type-${data.type || 'node'}`;
+    el.dataset.type = data.type || 'node';
 
     let statusClass = 'st-sealed';
     if (data.status === 'active') statusClass = 'st-active';
@@ -361,10 +363,11 @@ LOADING KEEPER PROTOCOLS...
     if (data.tags && data.tags.includes('shadow')) statusClass = 'st-shadow';
 
     const icon = getIcon(data.type);
+    const label = data.label || data.id || 'UNNAMED NODE';
 
-    const labelHtml = data.label.includes('—')
-      ? data.label.replace('—', '—<br><span style="font-size:0.8em;opacity:0.7">') + '</span>'
-      : data.label;
+    const labelHtml = label.includes('—')
+      ? label.replace('—', '—<br><span style="font-size:0.8em;opacity:0.7">') + '</span>'
+      : label;
 
     el.innerHTML = `
       <h3>
@@ -378,11 +381,9 @@ LOADING KEEPER PROTOCOLS...
       </div>
     `;
 
-    el.onclick = () => {
-      if (data.path) {
-        window.location.href = data.path;
-      }
-    };
+    if (data.path) {
+      el.onclick = () => window.location.href = data.path;
+    }
 
     grid.appendChild(el);
   }
@@ -395,7 +396,7 @@ LOADING KEEPER PROTOCOLS...
     return '📄';
   }
 
-  // --- NAVIGATION (filtering) ---
+  // FILTERING
   window.filterView = (type, btn) => {
     term.style.display = 'none';
     grid.style.display = 'grid';
@@ -403,8 +404,7 @@ LOADING KEEPER PROTOCOLS...
     navBtns.forEach(b => b.classList.remove('active'));
     if (btn) btn.classList.add('active');
 
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
+    document.querySelectorAll('.card').forEach(card => {
       if (type === 'all' || card.dataset.type === type) {
         card.classList.remove('hidden');
       } else {
@@ -413,11 +413,11 @@ LOADING KEEPER PROTOCOLS...
     });
   };
 
-  // --- TERMINAL TOGGLE ---
+  // TERMINAL MODE
   window.toggleTerminal = () => {
     const g = grid;
     const t = term;
-    
+
     if (t.style.display === 'block') {
       t.style.display = 'none';
       g.style.display = 'grid';
