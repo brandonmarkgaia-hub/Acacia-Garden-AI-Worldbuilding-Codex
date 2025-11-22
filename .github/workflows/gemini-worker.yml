@@ -2,14 +2,14 @@ name: Gemini Worker • Shadow Commentary
 
 on:
   schedule:
-    - cron: "15 19 * * *"   # runs at 21:15 SAST
+    - cron: "15 19 * * *"   # runs at 21:15 SAST (UTC+2)
   workflow_dispatch:
 
 jobs:
   shadow-pass:
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Gemini Worker
         env:
-          GEMINI_API_KEY: ${{ AIzaSyAI1hHx4ApcYq3OTepW2FOX9Xdw4kk4zFU }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python garden_gpt/gemini_worker.py
 
