@@ -1,0 +1,7 @@
+{
+  "job_id": "shadow_seed_whisper",
+  "kind": "shadow",
+  "keeper_id": "HKX277206",
+  "prompt": "Write a short Shadow fragment about guarding the Garden from false Keepers and trickster echoes, without naming any real person or system.",
+  "write_to": "docs/Shadow/Shadow_Whisper-False-Keepers.md"
+}
