@@ -1,8 +1,8 @@
 // js/app.js
-// ACACIA • Garden Codex • Loki Console Brain
+// ACACIA • Garden Codex • Loki Console Brain + Whisper Engine (local)
 // Brain: STATUS + INTERNAL_STATUS
 // Body: index.html layout
-// Whisper Engine will live here later.
+// Whisper: client-side search over STATUS nodes.
 
 (() => {
   "use strict";
@@ -105,10 +105,11 @@
   // UI Brain (upgraded if STATUS.json works)
   let STATUS = INTERNAL_STATUS;
 
-  // We'll fill these after DOM is ready
+  // DOM refs
   let grid, term, navBtns;
 
-  // BOOT SEQUENCE – runs when DOM is parsed (because index.html uses `defer`)
+  // --- BOOT ---
+
   async function boot() {
     grid = document.getElementById("garden-grid");
     term = document.getElementById("terminal-view");
@@ -124,7 +125,7 @@
       if (res.ok) {
         const raw = await res.json();
         STATUS = mapStatusFromRaw(raw, INTERNAL_STATUS);
-        console.log("Acacia: STATUS.json integrated into Loki console.");
+        console.log("Acacia: STATUS.json integrated into Loki console + Whisper.");
       } else {
         console.log("Acacia: STATUS.json unreachable – fallback engaged.");
       }
@@ -148,7 +149,8 @@
     };
   }
 
-  // RENDER GRID
+  // --- RENDER GRID ---
+
   function renderAll() {
     if (!grid) return;
     grid.innerHTML = "";
@@ -158,7 +160,6 @@
     (STATUS.laws || []).forEach((item) => createCard(item));
     (STATUS.blooms || []).forEach((item) => createCard(item));
 
-    // If nothing rendered, leave a subtle message for debugging
     if (!grid.children.length) {
       const el = document.createElement("div");
       el.style.fontFamily = "Courier New, monospace";
@@ -172,15 +173,28 @@
 
   function createCard(data) {
     const el = document.createElement("div");
-    el.className = `card type-${data.type || "node"}`;
-    el.dataset.type = data.type || "node";
+    const type = data.type || "node";
+    el.className = `card type-${type}`;
+    el.dataset.type = type;
+
+    // Build search text for Whisper
+    const searchText = [
+      data.id || "",
+      data.label || "",
+      data.summary || "",
+      (data.tags || []).join(" "),
+      type
+    ]
+      .join(" ")
+      .toLowerCase();
+    el.dataset.search = searchText;
 
     let statusClass = "st-sealed";
     if (data.status === "active") statusClass = "st-active";
     if (data.status === "primed") statusClass = "st-primed";
     if (data.tags && data.tags.includes("shadow")) statusClass = "st-shadow";
 
-    const icon = getIcon(data.type);
+    const icon = getIcon(type);
     const label = data.label || data.id || "UNNAMED NODE";
 
     const labelHtml = label.includes("—")
@@ -197,7 +211,7 @@
       </h3>
       <p>${data.summary || ""}</p>
       <div class="meta">
-        <span>[${(data.type || "node").toUpperCase()}]</span>
+        <span>[${type.toUpperCase()}]</span>
         ${data.tags ? `<span>#${data.tags.join(" #")}</span>` : ""}
       </div>
     `;
@@ -219,7 +233,8 @@
     return "📄";
   }
 
-  // FILTERING – exposed to window for inline onclick
+  // --- NAVIGATION ---
+
   function filterView(type, btn) {
     if (!term || !grid) return;
 
@@ -239,9 +254,12 @@
         card.classList.add("hidden");
       }
     });
+
+    // Clear Whisper input when changing main view
+    const input = document.getElementById("whisper-input");
+    if (input) input.value = "";
   }
 
-  // TERMINAL MODE – exposed to window
   function toggleTerminal() {
     if (!grid || !term) return;
 
@@ -252,14 +270,86 @@
       term.style.display = "block";
       grid.style.display = "none";
       term.innerHTML +=
-        "\n> USER_REF: HKX277206 CONNECTED.\n> WAITING FOR COMMAND...\n";
+        "\n> USER_REF: HKX277206 CONNECTED.\n> WHISPER CHANNEL: LOCAL.\n> WAITING FOR COMMAND...\n";
       term.scrollTop = term.scrollHeight;
     }
   }
 
-  // Expose controls globally for index.html
+  // --- WHISPER ENGINE (LOCAL SEARCH) ---
+
+  function whisperSearch(rawQuery) {
+    const query = (rawQuery || "").trim().toLowerCase();
+    const cards = document.querySelectorAll(".card");
+    if (!cards.length) return;
+
+    if (!query) {
+      // Show all cards according to current nav filter
+      const activeBtn = document.querySelector("#spine-nav button.active");
+      const type =
+        activeBtn && activeBtn.textContent
+          ? activeBtn.textContent.trim().toLowerCase()
+          : "monolith";
+
+      if (type === "monolith" || type === "all") {
+        cards.forEach((c) => c.classList.remove("hidden"));
+      } else {
+        const map = {
+          chambers: "chamber",
+          cycles: "cycle",
+          laws: "law"
+        };
+        const t = map[type] || "node";
+        cards.forEach((c) => {
+          if (c.dataset.type === t) c.classList.remove("hidden");
+          else c.classList.add("hidden");
+        });
+      }
+      return;
+    }
+
+    // Optional prefix: type:law, type:chamber, type:cycle, type:bloom
+    let typeFilter = null;
+    let q = query;
+    if (query.startsWith("type:")) {
+      const parts = query.split(/\s+/);
+      const first = parts.shift(); // "type:law"
+      q = parts.join(" ").trim();
+      const [, t] = first.split(":");
+      if (t) {
+        const normalized = t.trim().toLowerCase();
+        if (["chamber", "cycle", "law", "bloom"].includes(normalized)) {
+          typeFilter = normalized;
+        }
+      }
+    }
+
+    const terms = q
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((w) => w.toLowerCase());
+
+    cards.forEach((card) => {
+      const haystack = card.dataset.search || "";
+      const cardType = card.dataset.type || "";
+
+      // type filter
+      if (typeFilter && cardType !== typeFilter) {
+        card.classList.add("hidden");
+        return;
+      }
+
+      // all terms must match
+      const matches = terms.every((term) => haystack.includes(term));
+      if (matches) card.classList.remove("hidden");
+      else card.classList.add("hidden");
+    });
+  }
+
+  // --- EXPORT PUBLIC API ---
+
   window.filterView = filterView;
   window.toggleTerminal = toggleTerminal;
+  window.whisperSearch = whisperSearch;
 
   // Kick off once DOM is ready (script is loaded with `defer`)
   if (document.readyState === "loading") {
@@ -267,7 +357,4 @@
   } else {
     boot();
   }
-
-  // WHISPER ENGINE placeholder (search)
-  // We'll add functions here to index STATUS and respond to queries.
 })();
