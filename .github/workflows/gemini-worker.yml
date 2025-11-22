@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Gemini Worker
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ AIzaSyAI1hHx4ApcYq3OTepW2FOX9Xdw4kk4zFU }}
         run: |
           python garden_gpt/gemini_worker.py
 
