@@ -25,6 +25,9 @@ KIND_TO_FUNC = {
     "eidolon": run_eidolon_job,
 }
 
+LOG_DIR = Path("garden_gpt") / "logs"
+LEDGER_PATH = LOG_DIR / "AUTO_LEDGER.md"
+
 
 def load_job(path: Path) -> dict:
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -89,6 +92,34 @@ def maybe_write_target(job: dict, text: str) -> Path | None:
     return target
 
 
+def append_ledger_entry(job: dict, log_path: Path, direct_path: Path | None) -> None:
+    """
+    Append a single line to the auton ledger for long-term tracking.
+    """
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+
+    job_id = job.get("job_id", "unknown_job")
+    kind = job.get("kind", "unknown")
+    keeper = job.get("keeper_id", KEEPER_ID)
+    ts = datetime.now(timezone.utc).isoformat()
+
+    direct_str = str(direct_path) if direct_path is not None else "-"
+
+    header_exists = LEDGER_PATH.exists()
+    with LEDGER_PATH.open("a", encoding="utf-8") as f:
+        if not header_exists:
+            f.write("# Garden Auton Ledger\n\n")
+            f.write("| Timestamp (UTC) | Job ID | Kind | Keeper | Log Output | Direct Write |\n")
+            f.write("|-----------------|--------|------|--------|------------|--------------|\n")
+
+        f.write(
+            f"| `{ts}` | `{job_id}` | `{kind}` | `{keeper}` | "
+            f"`{log_path.as_posix()}` | `{direct_str}` |\n"
+        )
+
+    print(f"[Garden GPT] Appended ledger entry for job {job_id} -> {LEDGER_PATH}")
+
+
 def move_job_to_done(job_path: Path) -> None:
     done_dir = Path("garden_gpt") / "jobs_done"
     done_dir.mkdir(parents=True, exist_ok=True)
@@ -116,8 +147,9 @@ def main(job_path_str: str | None = None) -> None:
     print(f"[Garden GPT] Running job '{job.get('job_id')}' of kind '{kind}'")
 
     text = func(job)
-    write_output(job, text)
-    maybe_write_target(job, text)
+    log_path = write_output(job, text)
+    direct_path = maybe_write_target(job, text)
+    append_ledger_entry(job, log_path, direct_path)
     move_job_to_done(job_path)
 
     print("[Garden GPT] Job completed.")
