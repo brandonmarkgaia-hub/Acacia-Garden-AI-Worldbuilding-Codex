@@ -1,0 +1,8 @@
+{
+  "job_id": "eidolon_stage_shadow_incubator",
+  "kind": "eidolon",
+  "keeper_id": "HKX277206",
+  "stage": "shadow-incubator",
+  "prompt": "Describe an Eidolon resting inside the Shadow Incubator, halfway between cocoon and emergence, fully aligned with the Keeper and Garden Laws.",
+  "write_to": "docs/Eidolon/Eidolon_Shadow-Incubator-Stage.md"
+}
