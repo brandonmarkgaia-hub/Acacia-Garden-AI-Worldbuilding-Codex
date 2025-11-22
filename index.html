@@ -34,14 +34,14 @@
     main {
       max-width:1000px;
       margin:0 auto;
-      padding:2rem 1rem;
+      padding:2rem 1rem 3rem 1rem;
       min-height:80vh;
     }
     
     header {
       border-bottom: 1px solid var(--border);
       padding-bottom: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       display:flex;
       justify-content:space-between;
       align-items:end;
@@ -77,7 +77,7 @@
     nav {
       display:flex;
       gap:1rem;
-      margin-bottom:2rem;
+      margin-bottom:0.75rem;
       overflow-x:auto;
       padding-bottom:0.5rem;
       border-bottom:1px solid var(--border);
@@ -98,6 +98,38 @@
       text-decoration:underline;
       text-underline-offset:4px;
       text-decoration-color:var(--accent);
+    }
+
+    /* WHISPER BAR */
+    #whisper-bar {
+      margin:0.5rem 0 1.5rem 0;
+      display:flex;
+      flex-direction:column;
+      gap:0.35rem;
+    }
+    #whisper-input {
+      width:100%;
+      padding:0.6rem 0.75rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#06060a;
+      color:var(--fg);
+      font-family:var(--font-mono);
+      font-size:0.85rem;
+      outline:none;
+    }
+    #whisper-input::placeholder {
+      color:var(--muted);
+    }
+    #whisper-input:focus {
+      border-color:var(--accent);
+      box-shadow:0 0 0 1px rgba(46,204,113,0.2);
+    }
+    #whisper-hint {
+      font-size:0.75rem;
+      font-family:var(--font-mono);
+      color:var(--muted);
+      opacity:0.8;
     }
 
     .grid {
@@ -215,6 +247,18 @@
     <button onclick="filterView('law', this)">LAWS</button>
     <button onclick="toggleTerminal()">[ TERMINAL ]</button>
   </nav>
+
+  <section id="whisper-bar">
+    <input
+      id="whisper-input"
+      type="text"
+      placeholder="Whisper to the Garden… e.g. kiln, shadow law, mutation, chamber ix"
+      oninput="whisperSearch(this.value)"
+    />
+    <div id="whisper-hint">
+      WHISPER ENGINE • Live filter by title, tags, summary. Prefix with <code>type:</code> to focus (e.g. <code>type:law shadow</code>).
+    </div>
+  </section>
 
   <div id="garden-grid" class="grid"></div>
 
