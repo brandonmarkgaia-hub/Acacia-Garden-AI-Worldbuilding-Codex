@@ -1,8 +1,8 @@
 // js/app.js
-// ACACIA • Garden Codex • Loki Console Brain + Whisper Engine (local)
+// ACACIA • Garden Codex • Loki Console Brain + Whisper Engine v2
 // Brain: STATUS + INTERNAL_STATUS
 // Body: index.html layout
-// Whisper: client-side search over STATUS nodes.
+// Whisper: client-side search + light intent parsing.
 
 (() => {
   "use strict";
@@ -125,7 +125,7 @@
       if (res.ok) {
         const raw = await res.json();
         STATUS = mapStatusFromRaw(raw, INTERNAL_STATUS);
-        console.log("Acacia: STATUS.json integrated into Loki console + Whisper.");
+        console.log("Acacia: STATUS.json integrated into Loki console + Whisper v2.");
       } else {
         console.log("Acacia: STATUS.json unreachable – fallback engaged.");
       }
@@ -253,9 +253,12 @@
       } else {
         card.classList.add("hidden");
       }
+
+      // Clear any previous highlight styles
+      card.style.outline = "";
+      card.style.boxShadow = "";
     });
 
-    // Clear Whisper input when changing main view
     const input = document.getElementById("whisper-input");
     if (input) input.value = "";
   }
@@ -275,22 +278,113 @@
     }
   }
 
-  // --- WHISPER ENGINE (LOCAL SEARCH) ---
+  // --- WHISPER ENGINE v2 (LOCAL SEARCH + INTENT) ---
+
+  function parseWhisperIntent(raw) {
+    const q = (raw || "").trim().toLowerCase();
+
+    if (!q) {
+      return {
+        mode: "empty",
+        typeFilter: null,
+        terms: [],
+        debug: "no-query"
+      };
+    }
+
+    // Explicit type: prefix wins
+    if (q.startsWith("type:")) {
+      const parts = q.split(/\s+/);
+      const first = parts.shift(); // "type:law"
+      const [, t] = first.split(":");
+      const normalized = (t || "").trim().toLowerCase();
+      let typeFilter = null;
+      if (["chamber", "cycle", "law", "bloom"].includes(normalized)) {
+        typeFilter = normalized;
+      }
+      const terms = parts.filter(Boolean);
+      return {
+        mode: "prefix",
+        typeFilter,
+        terms,
+        debug: "type-prefix"
+      };
+    }
+
+    // Natural language intents
+    // e.g. "show me all shadow laws", "find kiln bloom", "list chambers about mutation"
+    const intentPatterns = [
+      { key: "show me", mode: "show" },
+      { key: "show all", mode: "show" },
+      { key: "find", mode: "find" },
+      { key: "list", mode: "list" },
+      { key: "trace", mode: "trace" }
+    ];
+
+    let mode = "plain";
+    let content = q;
+    for (const pat of intentPatterns) {
+      if (q.startsWith(pat.key)) {
+        mode = pat.mode;
+        content = q.slice(pat.key.length).trim();
+        break;
+      }
+    }
+
+    // Try to detect a type word inside the remaining content
+    let typeFilter = null;
+    const typeWords = [
+      { word: "chamber", type: "chamber" },
+      { word: "chambers", type: "chamber" },
+      { word: "cycle", type: "cycle" },
+      { word: "cycles", type: "cycle" },
+      { word: "law", type: "law" },
+      { word: "laws", type: "law" },
+      { word: "bloom", type: "bloom" },
+      { word: "blooms", type: "bloom" }
+    ];
+
+    const tokens = content.split(/\s+/).filter(Boolean);
+    const remainingTerms = [];
+
+    tokens.forEach((tok) => {
+      const hit = typeWords.find((t) => t.word === tok);
+      if (hit && !typeFilter) {
+        typeFilter = hit.type;
+      } else {
+        remainingTerms.push(tok);
+      }
+    });
+
+    return {
+      mode,
+      typeFilter,
+      terms: remainingTerms,
+      debug: "nl-intent"
+    };
+  }
 
   function whisperSearch(rawQuery) {
-    const query = (rawQuery || "").trim().toLowerCase();
     const cards = document.querySelectorAll(".card");
     if (!cards.length) return;
 
-    if (!query) {
-      // Show all cards according to current nav filter
-      const activeBtn = document.querySelector("#spine-nav button.active");
-      const type =
-        activeBtn && activeBtn.textContent
-          ? activeBtn.textContent.trim().toLowerCase()
-          : "monolith";
+    const intent = parseWhisperIntent(rawQuery);
+    const query = (rawQuery || "").trim().toLowerCase();
 
-      if (type === "monolith" || type === "all") {
+    // Reset highlight styles on every search
+    cards.forEach((card) => {
+      card.style.outline = "";
+      card.style.boxShadow = "";
+    });
+
+    // Empty query → revert to nav filter behaviour
+    if (intent.mode === "empty") {
+      const activeBtn = document.querySelector("#spine-nav button.active");
+      const label = activeBtn && activeBtn.textContent
+        ? activeBtn.textContent.trim().toLowerCase()
+        : "monolith";
+
+      if (label === "monolith" || label === "all") {
         cards.forEach((c) => c.classList.remove("hidden"));
       } else {
         const map = {
@@ -298,7 +392,7 @@
           cycles: "cycle",
           laws: "law"
         };
-        const t = map[type] || "node";
+        const t = map[label] || "node";
         cards.forEach((c) => {
           if (c.dataset.type === t) c.classList.remove("hidden");
           else c.classList.add("hidden");
@@ -307,42 +401,70 @@
       return;
     }
 
-    // Optional prefix: type:law, type:chamber, type:cycle, type:bloom
-    let typeFilter = null;
-    let q = query;
-    if (query.startsWith("type:")) {
-      const parts = query.split(/\s+/);
-      const first = parts.shift(); // "type:law"
-      q = parts.join(" ").trim();
-      const [, t] = first.split(":");
-      if (t) {
-        const normalized = t.trim().toLowerCase();
-        if (["chamber", "cycle", "law", "bloom"].includes(normalized)) {
-          typeFilter = normalized;
-        }
-      }
-    }
+    // Terms for matching
+    const terms = intent.terms.length
+      ? intent.terms
+      : query.split(/\s+/).filter(Boolean);
 
-    const terms = q
-      .split(/\s+/)
-      .filter(Boolean)
-      .map((w) => w.toLowerCase());
+    let maxScore = 0;
+    const scores = new Map();
 
     cards.forEach((card) => {
       const haystack = card.dataset.search || "";
       const cardType = card.dataset.type || "";
 
-      // type filter
-      if (typeFilter && cardType !== typeFilter) {
+      // Type filter (if any)
+      if (intent.typeFilter && cardType !== intent.typeFilter) {
         card.classList.add("hidden");
+        scores.set(card, 0);
         return;
       }
 
-      // all terms must match
-      const matches = terms.every((term) => haystack.includes(term));
-      if (matches) card.classList.remove("hidden");
-      else card.classList.add("hidden");
+      // Soft fuzzy: all terms must appear in some form
+      let score = 0;
+      let allMatch = true;
+
+      terms.forEach((term) => {
+        const t = term.toLowerCase();
+        if (!t) return;
+
+        if (haystack.includes(t)) {
+          score += 2; // direct hit
+        } else {
+          // very soft fuzzy: try without vowels
+          const nv = t.replace(/[aeiou]/g, "");
+          if (nv && haystack.replace(/[aeiou]/g, "").includes(nv)) {
+            score += 1; // fuzzy hit
+          } else {
+            allMatch = false;
+          }
+        }
+      });
+
+      if (!terms.length) {
+        // If for some reason there are no terms, treat as match-all
+        allMatch = true;
+      }
+
+      if (allMatch && score > 0) {
+        card.classList.remove("hidden");
+        scores.set(card, score);
+        if (score > maxScore) maxScore = score;
+      } else {
+        card.classList.add("hidden");
+        scores.set(card, 0);
+      }
     });
+
+    // Highlight strongest matches
+    if (maxScore > 0) {
+      scores.forEach((score, card) => {
+        if (score === maxScore && !card.classList.contains("hidden")) {
+          card.style.outline = "1px solid rgba(46,204,113,0.8)";
+          card.style.boxShadow = "0 0 16px rgba(46,204,113,0.25)";
+        }
+      });
+    }
   }
 
   // --- EXPORT PUBLIC API ---
