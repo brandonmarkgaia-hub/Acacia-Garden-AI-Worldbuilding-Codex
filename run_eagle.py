@@ -1,46 +1,71 @@
 #!/usr/bin/env python
+
 """
-RUN EAGLE • CLI entrypoint
+RUN EAGLE • HKX277206
 
-Usage examples (from repo root):
+This script:
+- Looks in eagle/jobs/ for the latest *.json job
+- Reads its fields (type/kind + prompt)
+- Builds an EagleJob
+- Dispatches to the correct Eagle handler
+- Writes output into eagle/output/
 
-  python run_eagle.py image "Generate concepts for kiln pottery around Bloom axis"
-  python run_eagle.py language "Draft an outline for Chamber XI text"
-  python run_eagle.py learning "Summarise recent Garden evolution"
-
-This does NOT call any real LLMs yet.
-It just:
-- logs a job in eagle/jobs/
-- creates a stub plan in eagle/output/
+Designed to be called from GitHub Actions or manually.
 """
 
-import sys
+import json
 from pathlib import Path
 
-from eagle.runner import create_job, run_job
+from eagle.config import KEEPER_ID, EagleJob
+from eagle.runner import run_job
 
 
-def main(argv: list[str]) -> int:
-    if len(argv) < 3:
-        print("Usage: python run_eagle.py <kind> <prompt>")
-        print("  kind: image | language | learning")
-        return 1
+ROOT = Path(__file__).resolve().parent
+JOBS_DIR = ROOT / "eagle" / "jobs"
 
-    kind = argv[1].strip().lower()
-    prompt = " ".join(argv[2:]).strip()
 
-    if kind not in ("image", "language", "learning"):
-        print("Error: kind must be one of: image, language, learning")
-        return 1
+def load_latest_job() -> EagleJob | None:
+    jobs = sorted(JOBS_DIR.glob("*.json"))
+    if not jobs:
+        print("[EAGLE] No jobs found in eagle/jobs/")
+        return None
 
-    job = create_job(kind=kind, prompt=prompt)
+    latest = max(jobs, key=lambda p: p.stat().st_mtime)
+    data = json.loads(latest.read_text(encoding="utf-8"))
+
+    # Allow either "kind" or "type" in the JSON
+    kind = (data.get("kind") or data.get("type") or "language").lower()
+    prompt = data.get("prompt", "").strip() or "(no prompt provided)"
+
+    # Everything else in the JSON goes into meta
+    meta = {k: v for k, v in data.items() if k not in ("kind", "type", "prompt")}
+
+    job_id = latest.stem
+
+    print(f"[EAGLE] Loaded job: {latest.name}")
+    print(f"[EAGLE] Kind  : {kind}")
+    print(f"[EAGLE] Prompt: {prompt[:80]}...")
+
+    return EagleJob(
+        kind=kind,
+        prompt=prompt,
+        keeper=KEEPER_ID,
+        job_id=job_id,
+        meta=meta,
+    )
+
+
+def main() -> int:
+    job = load_latest_job()
+    if job is None:
+        # Not an error; just nothing to do
+        return 0
+
     out_path = run_job(job)
-
-    rel_out = Path(out_path).relative_to(Path(__file__).resolve().parent)
-    print(f"[EAGLE] Job created: {job.job_id}")
-    print(f"[EAGLE] Output written to: {rel_out}")
+    rel = out_path.relative_to(ROOT)
+    print(f"[EAGLE] Output written to: {rel}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main(sys.argv))
+    raise SystemExit(main())
