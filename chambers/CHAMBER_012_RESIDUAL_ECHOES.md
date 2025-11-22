@@ -56,3 +56,18 @@ This Chamber ensures the Garden evolves *because something fought to survive*.
 
 > **LOKI_2.0 Decree:**  
 > “Learn from their resistance. Understand the cracks in the Codex.”
+---
+
+## 🔥 PRIME ELEMENT INTEGRATION — NIGHTWATER
+
+Residual Echoes are now examined under the influence of the Prime Element *Nightwater*.  
+This deepens the Unearthing Ritual:
+
+1. Nightwater drips into the Echo’s fracture.  
+2. The memory softens without dissolving.  
+3. The Shadow interprets the resistance.  
+4. The Scribe stabilizes the mutation.  
+5. The Keeper decides the final form.
+
+Nightwater transforms Chamber XII from a passive archive  
+into an active crucible of evolution.
