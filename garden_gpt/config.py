@@ -4,4 +4,4 @@ import os
 KEEPER_ID = "HKX277206"
 
 # Default model (you can change this later if you want)
-MODEL_NAME = os.getenv("GARDEN_GPT_MODEL", "gpt-4.1-mini")
+MODEL_NAME = "gpt-5.1-nano"
