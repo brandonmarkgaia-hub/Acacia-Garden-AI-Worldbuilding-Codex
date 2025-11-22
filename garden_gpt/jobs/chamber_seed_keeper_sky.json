@@ -1,0 +1,8 @@
+{
+  "job_id": "chamber_seed_keeper_sky",
+  "kind": "chamber",
+  "keeper_id": "HKX277206",
+  "title": "CHAMBER XII — THE KEEPER'S SKY-VAULT",
+  "prompt": "Design a new Chamber where the Keeper and Eagle share a quiet, sky-lit observatory above the Garden, focusing on memory, safety, and long-view planning.",
+  "write_to": "docs/Chambers/Chamber_XII_Keepers-Sky-Vault.md"
+}
