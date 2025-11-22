@@ -1,0 +1,6 @@
+{
+  "id": "test_language_gpt",
+  "type": "language",
+  "keeper_id": "HKX277206",
+  "prompt": "Describe the Keeper in one mythic, family-friendly sentence in Garden style."
+}
