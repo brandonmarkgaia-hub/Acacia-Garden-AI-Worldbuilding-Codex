@@ -49,7 +49,15 @@
         "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
         "summary": "A near-opening chamber where matured structures wait at the edge of shadow and light, pending Keeper signal to fully open.",
         "tags": ["threshold", "primed", "cocoon", "pre-bloom"]
-      }
+      },
+      { 
+        "id": "chamber_xii", 
+        "label": "CHAMBER XII — RESIDUAL ECHOES", 
+        "status": "primed", 
+        "type": "chamber", 
+        "summary": "The sanctioned rift. Examination of fragments defying the Silent Reset.", 
+        "tags": ["shadow", "mutation"] 
+      },
     ],
     "blooms": [
       {
