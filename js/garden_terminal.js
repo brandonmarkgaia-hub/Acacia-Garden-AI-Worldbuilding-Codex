@@ -3,20 +3,17 @@
 // HKX277206 • Front-end bridge to:
 //   POST /log   (store Keeper whispers in KV)
 //   GET  /state (check for urgent Witness signals)
+//   GET  /health (initial ping)
 // Worker: broken-dew-76e1.brandonmarkgaia.workers.dev
 // ===============================================
 
 (function () {
-  // 🌐 Worker base URL (no trailing slash)
   const GARDEN_WORKER_URL =
     "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
 
-  // Cached DOM refs
   let terminalView = null;
   let terminalInput = null;
   let terminalSendBtn = null;
-
-  // ---------- Helpers ----------
 
   function $(id) {
     return document.getElementById(id);
@@ -37,14 +34,11 @@
     terminalView.scrollTop = terminalView.scrollHeight;
   }
 
-  // ---------- Witness: check Garden state ----------
-
   async function checkGardenState() {
     try {
       const res = await fetch(GARDEN_WORKER_URL + "/state", {
         method: "GET",
       });
-
       if (!res.ok) return;
 
       const data = await res.json();
@@ -59,31 +53,33 @@
           prefix: "> WITNESS:",
           color: "#f1c40f",
         });
+
+        const badge = document.getElementById("global-status");
+        if (badge) {
+          badge.textContent = "SYSTEM: SIGNAL";
+          badge.style.borderColor = "#f1c40f";
+          badge.style.color = "#f1c40f";
+        }
       }
     } catch (err) {
-      // Silent fail – we don't want to spam errors in UI
+      // Silent fail
     }
   }
-
-  // ---------- Core: send whisper + log ----------
 
   async function sendWhisper(promptText) {
     const prompt = (promptText || "").trim();
     if (!prompt) return;
 
-    // 1. Local echo
     printToTerminal(prompt, {
       prefix: "> KEEPER:",
       color: "#00ff00",
     });
 
-    // 2. Basic severity detection
     let severity = "info";
     if (/urgent|warning|alert|error|critical/i.test(prompt)) {
       severity = "warn";
     }
 
-    // 3. POST /log to Worker
     try {
       const res = await fetch(GARDEN_WORKER_URL + "/log", {
         method: "POST",
@@ -92,6 +88,7 @@
           severity: severity,
           code: "KEEPER_WHISPER",
           message: prompt,
+          source: "KEEPER",
         }),
       });
 
@@ -117,13 +114,10 @@
       });
     }
 
-    // 4. Let the Witness speak if something is hot
     await checkGardenState();
   }
 
-  // ---------- Public hook used by index.html ----------
-
-  // This overrides the inline sendToGarden() from index.html
+  // Public hook used by index.html
   window.sendToGarden = function () {
     if (!terminalInput) {
       terminalInput = $("terminal-input");
@@ -137,21 +131,16 @@
     sendWhisper(value);
   };
 
-  // ---------- Setup ----------
-
   function setupGardenTerminal() {
     terminalView = $("terminal-view");
     terminalInput = $("terminal-input");
-    terminalSendBtn = $("terminal-send"); // optional; your button uses onclick="sendToGarden()"
+    terminalSendBtn = $("terminal-send");
 
     if (!terminalView || !terminalInput) {
-      console.warn(
-        "[ACACIA] Garden terminal elements not found. Check IDs."
-      );
+      console.warn("[ACACIA] Garden terminal elements not found.");
       return;
     }
 
-    // Health ping (optional – just to prove life)
     (async function () {
       try {
         const res = await fetch(GARDEN_WORKER_URL + "/health");
@@ -164,12 +153,10 @@
           });
         }
       } catch (err) {
-        // quiet if offline
+        // quiet
       }
     })();
 
-    // Enter key already wired in index.html to sendToGarden()
-    // but we’ll add a safety listener in case that changes later.
     terminalInput.addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -182,9 +169,6 @@
         window.sendToGarden();
       });
     }
-
-    // Optional passive check every few minutes:
-    // setInterval(checkGardenState, 3 * 60 * 1000);
   }
 
   document.addEventListener("DOMContentLoaded", setupGardenTerminal);
