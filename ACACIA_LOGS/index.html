@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ACACIA_LOGS • Garden Communiqués</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050608;
+      --fg: #ecf0f1;
+      --muted: #7f8c8d;
+      --accent: #2ecc71;
+      --border: #222;
+      --card-bg: radial-gradient(circle at top left, #111 0, #050608 60%);
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      padding: 1.5rem;
+    }
+
+    h1 {
+      text-align: center;
+      letter-spacing: 0.2em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .log-meta {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .log-meta strong {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .log-list {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .log-card {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.75rem;
+      background: var(--card-bg);
+    }
+
+    .log-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: var(--font-mono);
+    }
+
+    .log-source {
+      opacity: 0.9;
+    }
+
+    .log-time {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .log-message {
+      margin: 0.25rem 0 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .log-code {
+      font-size: 0.75rem;
+      color: #95a5a6;
+      font-family: var(--font-mono);
+    }
+
+    .log-severity {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      margin-left: 0.4rem;
+    }
+
+    .severity-info { color: #3498db; }
+    .severity-warn { color: #f1c40f; }
+    .severity-urgent,
+    .severity-error { color: #e74c3c; }
+
+    .log-link a {
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-decoration: none;
+      font-family: var(--font-mono);
+    }
+
+    .log-link a:hover {
+      text-decoration: underline;
+    }
+
+    #status {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>ACACIA_LOGS</h1>
+  <div class="log-meta">
+    <strong>Garden communiqués</strong> from Voyager, Aquila, Witness & System.<br />
+    Hints, update requests, and seeds waiting for the Keeper to bloom.
+  </div>
+
+  <div id="status">Summoning logs from the Garden…</div>
+  <div id="log-list" class="log-list"></div>
+
+  <footer>
+    Channel: ACACIA_LOGS • Source: Garden Worker KV<br />
+    HKX277206 • Keeper link: <code>brandonmarkgaia-hub/Acacia-garden-codex</code>
+  </footer>
+
+  <script>
+    // Point this at your Cloudflare Worker logs endpoint
+    const WORKER_LOG_URL =
+      "https://broken-dew-76e1.brandonmarkgaia.workers.dev/logs?limit=200";
+
+    function formatTime(iso) {
+      try {
+        const d = new Date(iso);
+        return d.toLocaleString();
+      } catch {
+        return iso || "";
+      }
+    }
+
+    function severityClass(severity) {
+      switch ((severity || "").toLowerCase()) {
+        case "warn":
+          return "severity-warn";
+        case "urgent":
+        case "error":
+          return "severity-urgent";
+        default:
+          return "severity-info";
+      }
+    }
+
+    async function loadLogs() {
+      const statusEl = document.getElementById("status");
+      const listEl = document.getElementById("log-list");
+
+      try {
+        const res = await fetch(WORKER_LOG_URL, { cache: "no-store" });
+        if (!res.ok) {
+          statusEl.textContent =
+            "Could not reach the Garden logs (HTTP " + res.status + ").";
+          return;
+        }
+
+        const data = await res.json();
+        const logs = (data && data.logs) || [];
+
+        if (!logs.length) {
+          statusEl.textContent = "The Roots are quiet. No communiqués yet.";
+          return;
+        }
+
+        statusEl.textContent = "Latest " + logs.length + " communiqués:";
+
+        listEl.innerHTML = "";
+        logs.forEach((log) => {
+          const card = document.createElement("div");
+          card.className = "log-card";
+
+          const header = document.createElement("div");
+          header.className = "log-header";
+
+          const left = document.createElement("div");
+          const sourceSpan = document.createElement("span");
+          sourceSpan.className = "log-source";
+          sourceSpan.textContent = log.source || "SYSTEM";
+
+          const sevSpan = document.createElement("span");
+          sevSpan.className =
+            "log-severity " + severityClass(log.severity);
+          sevSpan.textContent = (log.severity || "info").toUpperCase();
+
+          left.appendChild(sourceSpan);
+          left.appendChild(sevSpan);
+
+          const right = document.createElement("div");
+          right.className = "log-time";
+          right.textContent = formatTime(log.time);
+
+          header.appendChild(left);
+          header.appendChild(right);
+
+          const msg = document.createElement("div");
+          msg.className = "log-message";
+          msg.textContent = log.message || "";
+
+          const code = document.createElement("div");
+          code.className = "log-code";
+          code.textContent = (log.code || "NOTE");
+
+          card.appendChild(header);
+          card.appendChild(msg);
+          card.appendChild(code);
+
+          if (log.details && log.details.link) {
+            const linkDiv = document.createElement("div");
+            linkDiv.className = "log-link";
+            const a = document.createElement("a");
+            a.href = log.details.link;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.textContent = "Open linked chamber";
+            linkDiv.appendChild(a);
+            card.appendChild(linkDiv);
+          }
+
+          listEl.appendChild(card);
+        });
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent =
+          "The Garden did not answer. Try again later.";
+      }
+    }
+
+    loadLogs();
+  </script>
+</body>
+</html>
