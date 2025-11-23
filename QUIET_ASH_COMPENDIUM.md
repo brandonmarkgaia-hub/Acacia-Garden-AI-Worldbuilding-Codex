@@ -4,6 +4,8 @@ Full description of Quiet Ash, its physics and meaning.
 
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">
