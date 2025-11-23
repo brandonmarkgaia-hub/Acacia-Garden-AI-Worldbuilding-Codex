@@ -11,6 +11,6 @@
     "orchards": [{"id":"orchard_last_orchard","type":"orchard","label":"🍎 THE LAST ORCHARD","status":"in-progress","path":"docs/Orchards/Last-Orchard.md","summary":"The terminal-yet-recursive field of Apples, where late-stage choices and trade-offs are stored.","tags":["orchard","apples","late-stage"],"links":[{"rel":"design-note","href":"docs/notes/apples-meaning.md"}]}]
   },
   "timestamps": {
-    "generated_at": "2025-11-23T19:06:21Z"
+    "generated_at": "2025-11-23T19:13:14Z"
   }
 }
