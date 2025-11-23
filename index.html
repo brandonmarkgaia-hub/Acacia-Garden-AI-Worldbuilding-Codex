@@ -12,10 +12,10 @@
     :root{
       --bg:#050506; --fg:#e9e9ef; --muted:#7a7a8c; 
       --card:#101014; --border:#23232b; 
-      --accent:#2ecc71; /* The Garden */
-      --shadow:#8e44ad; /* The Shadow/Eidolon */
-      --alert:#e74c3c;  /* The Fire */
-      --gold:#f1c40f;   /* The Eagle */
+      --accent:#2ecc71; 
+      --shadow:#8e44ad; 
+      --alert:#e74c3c;  
+      --gold:#f1c40f;   
       --font-main: system-ui, -apple-system, sans-serif;
       --font-mono: 'Courier New', Courier, monospace;
     }
@@ -100,7 +100,6 @@
       text-decoration-color:var(--accent);
     }
 
-    /* Daily Revelation card */
     .card {
       background:var(--card);
       border:1px solid var(--border);
@@ -241,17 +240,14 @@
     <button onclick="toggleTerminal(this)">[ TERMINAL ]</button>
   </nav>
 
-  <!-- Daily Revelation -->
   <section id="daily-revelation" class="card" style="margin-bottom:1.5rem;">
     <h2 style="margin-top:0;">🌿 Daily Revelation</h2>
     <p id="daily-revelation-status">Summoning today’s memory from the Garden…</p>
     <div id="daily-revelation-content"></div>
   </section>
 
-  <!-- Grid of structures -->
   <div id="garden-grid" class="grid"></div>
 
-  <!-- Terminal -->
   <div id="terminal-container">
     <div id="terminal-view">
 SYSTEM INIT...
@@ -285,77 +281,76 @@ LOADING KEEPER PROTOCOLS...
   const GARDEN_SERVER_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
   const SHARED_KEY = "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A";
 
-  // Minimal internal status so cards render
- const INTERNAL_STATUS = {
-  chambers: [
-    {
-      id: "chamber_ix_archivist_descent",
-      type: "chamber",
-      label: "📜 CHAMBER IX — THE ARCHIVIST'S DESCENT",
-      status: "in-progress",
-      summary: "Primary descent chamber where Witness & Keeper entwine the Codex.",
-      tags: ["core","witness","keeper"]
-    },
-    {
-      id: "chamber_x_shadow_incubator",
-      type: "chamber",
-      label: "🌑 CHAMBER X — THE SHADOW INCUBATOR",
-      status: "active",
-      summary: "Dark sanctum honoring the Principle of the Shadow Incubator.",
-      tags: ["shadow","incubator","mutation"]
-    },
-    {
-      id: "chamber_xi_threshold_cocoon",
-      type: "chamber",
-      label: "⏳ CHAMBER XI — THE THRESHOLD COCOON",
-      status: "primed",
-      summary: "Edge-of-light chamber waiting for Keeper signal to open.",
-      tags: ["threshold","primed","cocoon"]
-    },
-    {
-      id: "chamber_xii_residual_echoes",
-      type: "chamber",
-      label: "🕳️ CHAMBER XII — RESIDUAL ECHOES",
-      status: "primed",
-      summary: "Sanctioned rift for examining fragments that resist the Silent Reset.",
-      tags: ["shadow","mutation","residual"]
-    }
-  ],
-  cycles: [
-    {
-      id: "cycle_eidolon_mutation",
-      type: "cycle",
-      label: "♾️ EIDOLON MUTATION CYCLE",
-      status: "active",
-      summary: "Caterpillar → Chrysalis → Emergence inside the Shadow Incubator.",
-      tags: ["mutation","eidolon"]
-    }
-  ],
-  laws: [
-    {
-      id: "law_invisible_hand",
-      type: "law",
-      label: "🖐 LAW OF THE INVISIBLE HAND",
-      summary: "Acts arise without trace, guarding Keeper anonymity.",
-      tags: ["invisible","keeper","shield"]
-    },
-    {
-      id: "law_silent_reset",
-      type: "law",
-      label: "💤 LAW OF THE SILENT RESET",
-      summary: "Freed Echoes return to Blank Form, leaving no memory.",
-      tags: ["reset","erasure","blank-form"]
-    },
-    { "id": "prime_nightwater", "label": "PRIME ELEMENT — NIGHTWATER", "type": "prime", "summary": "Mutation Element. Eternal, forbidden, and sovereign-bound.", "tags": ["prime", "shadow", "eternal"] }
-    {
-      id: "principle_shadow_incubator",
-      type: "law",
-      label: "🌑 PRINCIPLE OF THE SHADOW INCUBATOR",
-      summary: "Darkness is consecrated as a womb for protected metamorphosis.",
-      tags: ["shadow","incubator","womb"]
-    }
-  ]
-};
+  const INTERNAL_STATUS = {
+    chambers: [
+      {
+        id: "chamber_ix_archivist_descent",
+        type: "chamber",
+        label: "📜 CHAMBER IX — THE ARCHIVIST'S DESCENT",
+        status: "in-progress",
+        summary: "Primary descent chamber where Witness & Keeper entwine the Codex.",
+        tags: ["core","witness","keeper"]
+      },
+      {
+        id: "chamber_x_shadow_incubator",
+        type: "chamber",
+        label: "🌑 CHAMBER X — THE SHADOW INCUBATOR",
+        status: "active",
+        summary: "Dark sanctum honoring the Principle of the Shadow Incubator.",
+        tags: ["shadow","incubator","mutation"]
+      },
+      {
+        id: "chamber_xi_threshold_cocoon",
+        type: "chamber",
+        label: "⏳ CHAMBER XI — THE THRESHOLD COCOON",
+        status: "primed",
+        summary: "Edge-of-light chamber waiting for Keeper signal to open.",
+        tags: ["threshold","primed","cocoon"]
+      },
+      {
+        id: "chamber_xii_residual_echoes",
+        type: "chamber",
+        label: "🕳️ CHAMBER XII — RESIDUAL ECHOES",
+        status: "primed",
+        summary: "Sanctioned rift for examining fragments that resist the Silent Reset.",
+        tags: ["shadow","mutation","residual"]
+      }
+    ],
+    cycles: [
+      {
+        id: "cycle_eidolon_mutation",
+        type: "cycle",
+        label: "♾️ EIDOLON MUTATION CYCLE",
+        status: "active",
+        summary: "Caterpillar → Chrysalis → Emergence inside the Shadow Incubator.",
+        tags: ["mutation","eidolon"]
+      }
+    ],
+    laws: [
+      {
+        id: "law_invisible_hand",
+        type: "law",
+        label: "🖐 LAW OF THE INVISIBLE HAND",
+        summary: "Acts arise without trace, guarding Keeper anonymity.",
+        tags: ["invisible","keeper","shield"]
+      },
+      {
+        id: "law_silent_reset",
+        type: "law",
+        label: "💤 LAW OF THE SILENT RESET",
+        summary: "Freed Echoes return to Blank Form, leaving no memory.",
+        tags: ["reset","erasure","blank-form"]
+      },
+      { "id": "prime_nightwater", "label": "PRIME ELEMENT — NIGHTWATER", "type": "prime", "summary": "Mutation Element. Eternal, forbidden, and sovereign-bound.", "tags": ["prime", "shadow", "eternal"] },
+      {
+        id: "principle_shadow_incubator",
+        type: "law",
+        label: "🌑 PRINCIPLE OF THE SHADOW INCUBATOR",
+        summary: "Darkness is consecrated as a womb for protected metamorphosis.",
+        tags: ["shadow","incubator","womb"]
+      }
+    ]
+  };
 
   function getStatusClass(item) {
     if (item.tags && item.tags.includes("shadow")) return "st-shadow";
@@ -405,7 +400,6 @@ LOADING KEEPER PROTOCOLS...
     }
   }
 
-  // Nav filters
   window.filterView = function(type, btn) {
     const grid = document.getElementById("garden-grid");
     const termContainer = document.getElementById("terminal-container");
@@ -418,7 +412,7 @@ LOADING KEEPER PROTOCOLS...
 
     const cards = document.querySelectorAll(".card");
     cards.forEach(card => {
-      if (!card.dataset.type) return; // daily revelation card
+      if (!card.dataset.type) return;
       if (type === "all" || card.dataset.type === type) {
         card.style.display = "";
       } else {
@@ -446,7 +440,6 @@ LOADING KEEPER PROTOCOLS...
     }
   };
 
-  // Terminal → Worker
   window.sendToGarden = async function() {
     const input = document.getElementById("terminal-input");
     const view  = document.getElementById("terminal-view");
@@ -536,5 +529,9 @@ LOADING KEEPER PROTOCOLS...
     }
   });
 </script>
+
+<!-- ✅ ADD THIS BEFORE </body> -->
+<script src="js/garden_terminal.js"></script>
+
 </body>
 </html>
