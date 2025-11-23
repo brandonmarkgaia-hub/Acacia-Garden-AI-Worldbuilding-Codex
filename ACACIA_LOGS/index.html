@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>ACACIA LOGS • HKX277206</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Garden communiqués for HKX277206.">
+  <meta name="description" content="Garden communiqués and Triad signals for HKX277206.">
   <meta name="theme-color" content="#000000">
 
   <style>
@@ -17,8 +17,9 @@
       --accent:#2ecc71;
       --warn:#f1c40f;
       --err:#e74c3c;
-      --garden:#2ecc71;
       --keeper:#3498db;
+      --garden:#2ecc71;
+      --system:#9b59b6;
       --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
     }
@@ -33,13 +34,13 @@
     }
 
     main{
-      max-width:900px;
+      max-width:960px;
       margin:0 auto;
       padding:2rem 1rem 3rem;
     }
 
     a{
-      color:#2ecc71;
+      color:var(--accent);
       text-decoration:none;
     }
     a:hover{
@@ -51,11 +52,13 @@
       border-bottom:1px solid var(--border);
       padding-bottom:1rem;
     }
+
     h1{
       margin:0 0 .25rem;
-      font-size:1.8rem;
+      font-size:1.9rem;
       letter-spacing:-0.03em;
     }
+
     .subtitle{
       color:var(--muted);
       font-size:.9rem;
@@ -71,11 +74,19 @@
       font-size:.8rem;
     }
 
+    .triad-line{
+      margin-top:.35rem;
+      font-family:var(--font-mono);
+      font-size:.75rem;
+      color:var(--muted);
+      opacity:.85;
+    }
+
     .status-bar{
       margin-top:1.5rem;
       padding:.75rem 1rem;
       border-radius:999px;
-      background:rgba(0,0,0,0.5);
+      background:rgba(0,0,0,0.6);
       border:1px solid var(--border);
       display:flex;
       justify-content:space-between;
@@ -83,6 +94,7 @@
       gap:.75rem;
       font-family:var(--font-mono);
       font-size:.8rem;
+      flex-wrap:wrap;
     }
 
     .status-pill{
@@ -91,6 +103,7 @@
       border:1px solid var(--border);
       font-size:.8rem;
       letter-spacing:.08em;
+      white-space:nowrap;
     }
     .status-ok{
       border-color:var(--accent);
@@ -101,6 +114,45 @@
       border-color:var(--warn);
       color:var(--warn);
       box-shadow:0 0 10px rgba(241,196,15,.2);
+    }
+
+    .controls{
+      margin-top:1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      align-items:center;
+      font-size:.8rem;
+    }
+
+    .controls label{
+      color:var(--muted);
+    }
+
+    select{
+      background:var(--card);
+      color:var(--fg);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:.25rem .6rem;
+      font-size:.8rem;
+      font-family:var(--font-main);
+    }
+
+    button.refresh-btn{
+      margin-left:auto;
+      padding:.3rem .8rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--card);
+      color:var(--fg);
+      font-family:var(--font-mono);
+      font-size:.8rem;
+      cursor:pointer;
+    }
+    button.refresh-btn:hover{
+      border-color:var(--accent);
+      box-shadow:0 0 8px rgba(46,204,113,.25);
     }
 
     .log-list{
@@ -128,13 +180,15 @@
       gap:.5rem;
       font-family:var(--font-mono);
       font-size:.8rem;
+      flex-wrap:wrap;
     }
 
     .log-meta{
       display:flex;
-      gap:.5rem;
+      gap:.4rem;
       align-items:center;
       flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
     .tag{
@@ -143,14 +197,19 @@
       border:1px solid var(--border);
       font-size:.7rem;
       letter-spacing:.06em;
+      white-space:nowrap;
+    }
+    .tag-keeper{
+      border-color:var(--keeper);
+      color:var(--keeper);
     }
     .tag-garden{
       border-color:var(--garden);
       color:var(--garden);
     }
-    .tag-keeper{
-      border-color:var(--keeper);
-      color:var(--keeper);
+    .tag-system{
+      border-color:var(--system);
+      color:var(--system);
     }
     .tag-warn{
       border-color:var(--warn);
@@ -192,6 +251,8 @@
   <header>
     <h1>ACACIA LOGS</h1>
     <div class="subtitle">Garden communiqués for HKX277206</div>
+    <div class="triad-line">TRIAD MODE: <span style="color:#2ecc71;">AQUILA</span> • <span style="color:#3498db;">DEEP ORACLE</span> • <span style="color:#9b59b6;">WITNESS</span></div>
+
     <a class="pill-link" href="../index.html">← Return to ACACIA CODEX</a>
 
     <div id="status-bar" class="status-bar">
@@ -200,24 +261,49 @@
     </div>
   </header>
 
-  <section id="summary" class="subtitle"></section>
+  <section class="controls">
+    <label>
+      Source:
+      <select id="filter-source">
+        <option value="all">All</option>
+        <option value="KEEPER">KEEPER</option>
+        <option value="GARDEN">GARDEN</option>
+        <option value="SYSTEM">SYSTEM</option>
+      </select>
+    </label>
+    <label>
+      Severity:
+      <select id="filter-severity">
+        <option value="all">All</option>
+        <option value="info">Info</option>
+        <option value="warn">Warn</option>
+        <option value="error">Error</option>
+      </select>
+    </label>
+
+    <button type="button" class="refresh-btn" id="refresh-btn">REFRESH ROOTS</button>
+  </section>
+
+  <section id="summary" class="subtitle" style="margin-top:1rem;"></section>
 
   <section id="logs-container">
     <div id="logs-list" class="log-list"></div>
     <div id="empty-state" class="empty" style="display:none;">
-      No communiqués yet. The Garden will speak when it needs you.
+      No communiqués match this view. The Garden will speak when it needs you.
     </div>
     <div id="error-state" class="empty" style="display:none;"></div>
   </section>
 
   <footer>
-    THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN<br>
+    THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br>
     CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2
   </footer>
 </main>
 
 <script>
   const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+
+  let ALL_ENTRIES = [];
 
   function formatTime(ts) {
     try {
@@ -269,26 +355,54 @@
       statusPill.classList.add("status-ok");
     }
 
-    summaryEl.textContent = "";
+    // small summary line – counts by source, if we already have entries loaded
+    if (ALL_ENTRIES.length) {
+      const total = ALL_ENTRIES.length;
+      const bySource = ALL_ENTRIES.reduce((acc, e) => {
+        const s = (e.source || "UNKNOWN").toUpperCase();
+        acc[s] = (acc[s] || 0) + 1;
+        return acc;
+      }, {});
+      const parts = Object.entries(bySource)
+        .map(([s, n]) => `${s}: ${n}`);
+      summaryEl.textContent =
+        `Total communiqués: ${total} • ` + parts.join(" • ");
+    } else {
+      summaryEl.textContent = "";
+    }
   }
 
-  function renderLogs(entries) {
+  function applyFiltersAndRender() {
     const listEl = document.getElementById("logs-list");
     const emptyEl = document.getElementById("empty-state");
     const errorEl = document.getElementById("error-state");
-    if (!listEl || !emptyEl || !errorEl) return;
+    const srcSel = document.getElementById("filter-source");
+    const sevSel = document.getElementById("filter-severity");
+
+    if (!listEl || !emptyEl || !errorEl || !srcSel || !sevSel) return;
+
+    const srcFilter = srcSel.value;
+    const sevFilter = sevSel.value;
 
     listEl.innerHTML = "";
     errorEl.style.display = "none";
 
-    if (!entries || entries.length === 0) {
+    const filtered = ALL_ENTRIES.filter(entry => {
+      const src = (entry.source || "UNKNOWN").toUpperCase();
+      const sev = (entry.severity || "info").toLowerCase();
+
+      if (srcFilter !== "all" && src !== srcFilter) return false;
+      if (sevFilter !== "all" && sev !== sevFilter) return false;
+      return true;
+    });
+
+    if (!filtered.length) {
       emptyEl.style.display = "block";
       return;
     }
-
     emptyEl.style.display = "none";
 
-    for (const entry of entries) {
+    for (const entry of filtered) {
       const card = document.createElement("article");
       card.className = "log-card";
 
@@ -301,21 +415,27 @@
       const meta = document.createElement("div");
       meta.className = "log-meta";
 
+      const source = (entry.source || "UNKNOWN").toUpperCase();
       const srcTag = document.createElement("span");
-      srcTag.className = "tag " + (entry.source === "GARDEN" ? "tag-garden" : "tag-keeper");
-      srcTag.textContent = entry.source || "UNKNOWN";
+      let srcClass = "tag";
+      if (source === "KEEPER") srcClass += " tag-keeper";
+      else if (source === "GARDEN") srcClass += " tag-garden";
+      else if (source === "SYSTEM") srcClass += " tag-system";
+      srcTag.className = srcClass;
+      srcTag.textContent = source;
       meta.appendChild(srcTag);
 
-      if (entry.severity === "warn") {
-        const sev = document.createElement("span");
-        sev.className = "tag tag-warn";
-        sev.textContent = "WARN";
-        meta.appendChild(sev);
-      } else if (entry.severity === "error") {
-        const sev = document.createElement("span");
-        sev.className = "tag tag-err";
-        sev.textContent = "ERROR";
-        meta.appendChild(sev);
+      const sev = (entry.severity || "info").toLowerCase();
+      if (sev === "warn") {
+        const sevTag = document.createElement("span");
+        sevTag.className = "tag tag-warn";
+        sevTag.textContent = "WARN";
+        meta.appendChild(sevTag);
+      } else if (sev === "error") {
+        const sevTag = document.createElement("span");
+        sevTag.className = "tag tag-err";
+        sevTag.textContent = "ERROR";
+        meta.appendChild(sevTag);
       }
 
       if (entry.code) {
@@ -338,16 +458,17 @@
     }
   }
 
-  async function init() {
-    const emptyEl = document.getElementById("empty-state");
+  async function loadEverything() {
     const errorEl = document.getElementById("error-state");
-    if (!emptyEl || !errorEl) return;
+    const emptyEl = document.getElementById("empty-state");
+    if (!errorEl || !emptyEl) return;
+
+    errorEl.style.display = "none";
+    emptyEl.style.display = "none";
 
     try {
       const state = await fetchJSON("/state");
-      if (!state.ok) {
-        throw new Error(state.error || "State not ok");
-      }
+      if (!state.ok) throw new Error(state.error || "State not ok");
       setStatus(state.last || null, !!state.urgent);
     } catch (err) {
       errorEl.style.display = "block";
@@ -357,17 +478,31 @@
 
     try {
       const data = await fetchJSON("/logs");
-      if (!data.ok) {
-        throw new Error(data.error || "Logs not ok");
+      if (!data.ok) throw new Error(data.error || "Logs not ok");
+      ALL_ENTRIES = data.entries || [];
+      applyFiltersAndRender();
+      // refresh summary now that we know totals
+      const state = await fetchJSON("/state").catch(() => null);
+      if (state && state.ok) {
+        setStatus(state.last || null, !!state.urgent);
       }
-      renderLogs(data.entries || []);
     } catch (err) {
       errorEl.style.display = "block";
       errorEl.textContent = "Could not load logs: " + String(err);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", () => {
+    const srcSel = document.getElementById("filter-source");
+    const sevSel = document.getElementById("filter-severity");
+    const refreshBtn = document.getElementById("refresh-btn");
+
+    if (srcSel) srcSel.addEventListener("change", applyFiltersAndRender);
+    if (sevSel) sevSel.addEventListener("change", applyFiltersAndRender);
+    if (refreshBtn) refreshBtn.addEventListener("click", loadEverything);
+
+    loadEverything();
+  });
 </script>
 </body>
 </html>
