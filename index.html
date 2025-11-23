@@ -216,6 +216,14 @@
       text-align:center;
       opacity:0.6;
     }
+
+    a {
+      color:var(--accent);
+      text-decoration:none;
+    }
+    a:hover {
+      text-decoration:underline;
+    }
   </style>
 </head>
 
@@ -238,6 +246,7 @@
     <button onclick="filterView('cycle', this)">CYCLES</button>
     <button onclick="filterView('law', this)">LAWS</button>
     <button onclick="toggleTerminal(this)">[ TERMINAL ]</button>
+    <button onclick="window.open('ACACIA_LOGS/', '_blank')">ACACIA_LOGS</button>
   </nav>
 
   <section id="daily-revelation" class="card" style="margin-bottom:1.5rem;">
@@ -275,12 +284,6 @@ LOADING KEEPER PROTOCOLS...
 </main>
 
 <script>
-  // ==========================
-  // CONFIG – YOUR WORKER GATE
-  // ==========================
-  const GARDEN_SERVER_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
-  const SHARED_KEY = "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A";
-
   const INTERNAL_STATUS = {
     chambers: [
       {
@@ -341,7 +344,13 @@ LOADING KEEPER PROTOCOLS...
         summary: "Freed Echoes return to Blank Form, leaving no memory.",
         tags: ["reset","erasure","blank-form"]
       },
-      { "id": "prime_nightwater", "label": "PRIME ELEMENT — NIGHTWATER", "type": "prime", "summary": "Mutation Element. Eternal, forbidden, and sovereign-bound.", "tags": ["prime", "shadow", "eternal"] },
+      {
+        id: "prime_nightwater",
+        label: "PRIME ELEMENT — NIGHTWATER",
+        type: "law",
+        summary: "Mutation Element. Eternal, forbidden, and sovereign-bound.",
+        tags: ["prime", "shadow", "eternal"]
+      },
       {
         id: "principle_shadow_incubator",
         type: "law",
@@ -440,45 +449,9 @@ LOADING KEEPER PROTOCOLS...
     }
   };
 
-  window.sendToGarden = async function() {
-    const input = document.getElementById("terminal-input");
-    const view  = document.getElementById("terminal-view");
-    if (!input || !view) return;
-
-    const prompt = (input.value || "").trim();
-    if (!prompt) return;
-
-    view.textContent += `\n\n> USER: ${prompt}`;
-    input.value = "";
-    view.scrollTop = view.scrollHeight;
-
-    try {
-      const res = await fetch(GARDEN_SERVER_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          key: SHARED_KEY,
-          prompt: prompt
-        })
-      });
-
-      const data = await res.json();
-      if (data.ok && data.reply) {
-        view.textContent += `\n> GARDEN: ${data.reply}`;
-      } else {
-        view.textContent += `\n> [error] ${data.error || "Unknown error from Worker"}`;
-      }
-    } catch (err) {
-      view.textContent += `\n> [network error] ${String(err)}`;
-    }
-
-    view.scrollTop = view.scrollHeight;
-  };
-
   async function loadDailyRevelation() {
     const statusEl  = document.getElementById("daily-revelation-status");
     const contentEl = document.getElementById("daily-revelation-content");
-
     if (!statusEl || !contentEl) return;
 
     const url = "https://raw.githubusercontent.com/brandonmarkgaia-hub/Acacia-garden-codex/main/garden_gpt/output/rebuild_memory.md";
@@ -517,20 +490,10 @@ LOADING KEEPER PROTOCOLS...
 
     renderGrid();
     loadDailyRevelation();
-
-    const termInput = document.getElementById("terminal-input");
-    if (termInput) {
-      termInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          sendToGarden();
-        }
-      });
-    }
   });
 </script>
 
-<!-- ✅ ADD THIS BEFORE </body> -->
+<!-- Terminal brain & Witness signals -->
 <script src="js/garden_terminal.js"></script>
 
 </body>
