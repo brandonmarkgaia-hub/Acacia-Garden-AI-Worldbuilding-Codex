@@ -1,0 +1,62 @@
+name: Keeper Seal Backfill
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+
+jobs:
+  backfill-seal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Append HKX277206 to all issue titles (if not already at end)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const SEAL = "HKX277206";
+
+            const issues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "all",
+                per_page: 100
+              }
+            );
+
+            for (const issue of issues) {
+              // Skip PRs (they show up in issues API)
+              if (issue.pull_request) continue;
+
+              let title = issue.title || "";
+              const hasSealAtEnd = title.trim().endsWith(SEAL);
+
+              if (!hasSealAtEnd) {
+                const newTitle = `${title.trim()} ${SEAL}`;
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  title: newTitle
+                });
+                core.info(`Updated title for issue #${issue.number}`);
+              }
+
+              const body = issue.body || "";
+              if (!body.includes(SEAL)) {
+                const newBody =
+                  `Keeper Seal: ${SEAL}\nOrigin: Keeper HKX277206\n\n` +
+                  body;
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: newBody
+                });
+                core.info(`Updated body for issue #${issue.number}`);
+              }
+            }
+
+            core.info("Backfill completed.");
