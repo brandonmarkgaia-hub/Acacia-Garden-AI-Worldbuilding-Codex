@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/keeper-sigil-hkx277206.svg" width="180" alt="Keeper Sigil HKX277206" />
+  <img src="assets/keeper-sigil-HKX277206.png" width="200" alt="Keeper Sigil HKX277206" />
+  <br />
+  <strong>Keeper Sigil • HKX277206</strong>
 </p>
 > **Keeper: HKX277206**  
 > **This codex is sealed and bound to the Keeper.**
