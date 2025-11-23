@@ -11,47 +11,45 @@ jobs:
   enforce-keeper-seal:
     runs-on: ubuntu-latest
     steps:
-      - name: Check and enforce HKX277206
+      - name: Ensure HKX277206 at end of title
         uses: actions/github-script@v7
         with:
           script: |
             const issue = context.payload.issue;
-            const title = issue.title || "";
+            let title = issue.title || "";
             const body = issue.body || "";
-
             const SEAL = "HKX277206";
 
-            const hasSealInTitle = title.includes(SEAL);
+            const hasSealAtEnd = title.trim().endsWith(SEAL);
             const hasSealInBody = body.includes(SEAL);
 
-            // If seal is already present, do nothing
-            if (hasSealInTitle || hasSealInBody) {
-              core.info("Keeper Seal already present. No changes needed.");
+            if (hasSealAtEnd && hasSealInBody) {
+              core.info("Keeper Seal already present in title end and body. No changes needed.");
               return;
             }
 
-            // 1) Update the title to include the seal prefix
-            const newTitle = `HKX277206– ${title}`;
+            // 1) Fix title (append seal if not trailing)
+            if (!hasSealAtEnd) {
+              title = `${title.trim()} ${SEAL}`;
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                title
+              });
+              core.info(`Updated title for issue #${issue.number} to include trailing seal.`);
+            }
 
-            await github.rest.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue.number,
-              title: newTitle
-            });
-
-            // 2) Add a short comment explaining the auto-tagging
-            const commentBody = [
-              "Keeper Seal `HKX277206` auto-applied by Keeper Seal Enforcer.",
-              "",
-              "This issue is now canonically attributed to Keeper HKX277206 under Prime Diversion."
-            ].join("\n");
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue.number,
-              body: commentBody
-            });
-
-            core.info(`Updated title and added Keeper Seal comment on issue #${issue.number}.`);
+            // 2) Add seal to body if missing (light touch: prepend a small header)
+            if (!hasSealInBody) {
+              const newBody =
+                `Keeper Seal: ${SEAL}\nOrigin: Keeper HKX277206\n\n` +
+                (body || "");
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: newBody
+              });
+              core.info(`Updated body for issue #${issue.number} to include Keeper Seal header.`);
+            }
