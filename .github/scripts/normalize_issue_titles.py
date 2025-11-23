@@ -55,7 +55,6 @@ def fetch_issues():
             yield issue
 
         page += 1
-        # tiny throttle
         time.sleep(0.2)
 
 
@@ -79,12 +78,10 @@ def compute_new_title(issue) -> str | None:
         else:
             # 3) Fallback: first non-empty line after "Message or Echo"
             lines = [ln.strip() for ln in body.splitlines()]
-            # strip leading empties
             lines = [ln for ln in lines if ln]
             if not lines:
                 return None
 
-            # Skip a leading "### Message or Echo" heading if present
             if lines[0].lower().startswith("### message or echo"):
                 lines = lines[1:]
                 lines = [ln for ln in lines if ln]
@@ -94,18 +91,12 @@ def compute_new_title(issue) -> str | None:
 
             candidate = re.sub(r"^#+\s*", "", lines[0]).strip()
 
-    # Normalize whitespace
     candidate = " ".join(candidate.split())
 
-    # If we ended up with something ultra-short, skip
     if len(candidate) < 5:
         return None
 
-    # If current title is empty or clearly placeholder, we replace.
-    # Otherwise, only change if the candidate is *different* but still "good".
-    if not current_title or current_title.lower() in ("todo", "test", "fix", "echo"):
-        pass  # always allow
-    else:
+    if current_title and current_title.lower() not in ("todo", "test", "fix", "echo"):
         if candidate == current_title:
             return None
 
@@ -136,18 +127,16 @@ def main():
             continue
 
         if new_title == old_title:
-            log(f"⏭ Issue #{number} already has normalized title.")
+            log(f"⏭ Issue #{number} already normalized.")
             skipped += 1
             continue
 
         log(f"→ Issue #{number}: '{old_title}' → '{new_title}'")
         update_issue_title(number, new_title)
         changed += 1
-        # small delay to respect rate limits
         time.sleep(0.2)
 
-    log("")
-    log(f"Done. Changed: {changed}, skipped: {skipped}")
+    log(f"\nDone. Changed: {changed}, skipped: {skipped}")
 
 
 if __name__ == "__main__":
