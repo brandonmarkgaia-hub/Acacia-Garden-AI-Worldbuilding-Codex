@@ -117,6 +117,8 @@ End of Manifest
 {anger / peace / burden / breakthrough / clarity}
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">

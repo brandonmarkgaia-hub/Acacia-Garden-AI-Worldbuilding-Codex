@@ -98,6 +98,8 @@ They must never be presented as “secret Garden lore”.
 **The Garden remains sovereign.**
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">

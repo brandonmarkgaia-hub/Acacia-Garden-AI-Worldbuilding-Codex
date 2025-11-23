@@ -9,6 +9,8 @@ The entity now carries full symbolic pottery lore as narrative luggage.
 All movement remains mythic and returns to the Keeper.
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">

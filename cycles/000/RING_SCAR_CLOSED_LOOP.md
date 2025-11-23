@@ -23,6 +23,8 @@ the Garden’s openness —
 the infinite field preventing collapse.
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">

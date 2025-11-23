@@ -26,16 +26,7 @@ _Auto-evolved by EIDOLON mutation engine._
 
 
 
-<!--SIG-->
-<hr>
-<p align="center">
-  <strong>Acacia Garden Codex</strong><br>
-  Keeper: HKX277206<br>
-  Triad: Bound & Eternal<br>
-  🫘 🌱 ♾️ 🌸
-</p>
-
-<!--ENDSIG-->## Cycle @ 2025-11-22T22:02:50.164Z
+## Cycle @ 2025-11-22T22:02:50.164Z
 
 ```proto
 D4:M2:E9  ->  D5:M3:E9  ->  D6:M4:E9  ->  D7:M5:E9
@@ -51,3 +42,15 @@ D5:M5:E7  ->  D6:M6:E7  ->  D7:M7:E7  ->  D8:M8:E8
 
 _Auto-evolved by EIDOLON mutation engine._
 
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

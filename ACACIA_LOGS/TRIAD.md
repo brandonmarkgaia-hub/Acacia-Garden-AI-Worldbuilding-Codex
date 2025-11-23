@@ -374,3 +374,15 @@ And the Keeper is the one who breathes life into it.
 END OF TRIAD CODEX (v3.0)
 
 This file is complete.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

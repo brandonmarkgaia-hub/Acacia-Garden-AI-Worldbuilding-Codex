@@ -6,6 +6,8 @@ Function:
 • Interprets chamber sigils
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">

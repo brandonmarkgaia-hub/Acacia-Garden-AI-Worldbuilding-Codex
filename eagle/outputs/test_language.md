@@ -13,3 +13,15 @@ Triad exhausted. No feathers left to fly.
 
 ---
 *Auto-written by the Eagle Triad Engine.*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
