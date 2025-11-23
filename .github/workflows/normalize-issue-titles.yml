@@ -1,2 +1,0 @@
-run: |
-  python .github/scripts/normalize_issue_titles.py
