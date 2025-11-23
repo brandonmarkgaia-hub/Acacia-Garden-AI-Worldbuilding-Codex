@@ -37,6 +37,13 @@ IGNORE_DIRS = {
     "build", "dist", "out", "node_modules",
 }
 
+IGNORE_FILES = {
+    "garden_scan_report.json",
+    "garden_scan_report.md",
+    "garden_vault_index.json",
+    "garden_vault_index.md",
+}
+
 PATTERNS = {
     "keeper_seal": re.compile(r"HKX\d{6}", re.IGNORECASE),
     "keeper_seal_exact": re.compile(r"HKX277206"),
@@ -65,8 +72,14 @@ def is_text_file(path: str) -> bool:
 def walk_files(root: str) -> List[str]:
     files: List[str] = []
     for dirpath, dirnames, filenames in os.walk(root):
+        # Skip ignored directories
         dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
+
         for name in filenames:
+            # Skip self-generated Garden reports
+            if name in IGNORE_FILES:
+                continue
+
             full = os.path.join(dirpath, name)
             if is_text_file(full):
                 files.append(full)
