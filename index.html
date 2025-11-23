@@ -12,10 +12,10 @@
     :root{
       --bg:#050506; --fg:#e9e9ef; --muted:#7a7a8c; 
       --card:#101014; --border:#23232b; 
-      --accent:#2ecc71; 
-      --shadow:#8e44ad; 
-      --alert:#e74c3c;  
-      --gold:#f1c40f;   
+      --accent:#2ecc71;  /* Garden */
+      --shadow:#8e44ad;  /* Shadow / Eidolon */
+      --alert:#e74c3c;   /* Fire */
+      --gold:#f1c40f;    /* Eagle */
       --font-main: system-ui, -apple-system, sans-serif;
       --font-mono: 'Courier New', Courier, monospace;
     }
@@ -100,6 +100,7 @@
       text-decoration-color:var(--accent);
     }
 
+    /* Cards */
     .card {
       background:var(--card);
       border:1px solid var(--border);
@@ -134,6 +135,7 @@
       display:flex;
       gap:0.5rem;
       align-items:center;
+      flex-wrap:wrap;
     }
 
     .grid {
@@ -249,14 +251,17 @@
     <button onclick="window.open('ACACIA_LOGS/', '_blank')">ACACIA_LOGS</button>
   </nav>
 
+  <!-- Daily Revelation -->
   <section id="daily-revelation" class="card" style="margin-bottom:1.5rem;">
     <h2 style="margin-top:0;">🌿 Daily Revelation</h2>
     <p id="daily-revelation-status">Summoning today’s memory from the Garden…</p>
     <div id="daily-revelation-content"></div>
   </section>
 
+  <!-- Structure grid -->
   <div id="garden-grid" class="grid"></div>
 
+  <!-- Garden Terminal -->
   <div id="terminal-container">
     <div id="terminal-view">
 SYSTEM INIT...
@@ -284,6 +289,9 @@ LOADING KEEPER PROTOCOLS...
 </main>
 
 <script>
+  // ------------------------
+  // Local ACACIA spine map
+  // ------------------------
   const INTERNAL_STATUS = {
     chambers: [
       {
@@ -409,6 +417,7 @@ LOADING KEEPER PROTOCOLS...
     }
   }
 
+  // Tab filter
   window.filterView = function(type, btn) {
     const grid = document.getElementById("garden-grid");
     const termContainer = document.getElementById("terminal-container");
@@ -421,7 +430,7 @@ LOADING KEEPER PROTOCOLS...
 
     const cards = document.querySelectorAll(".card");
     cards.forEach(card => {
-      if (!card.dataset.type) return;
+      if (!card.dataset.type) return; // ignore Daily Revelation card
       if (type === "all" || card.dataset.type === type) {
         card.style.display = "";
       } else {
@@ -430,6 +439,7 @@ LOADING KEEPER PROTOCOLS...
     });
   };
 
+  // Toggle Garden terminal
   window.toggleTerminal = function(btn) {
     const grid = document.getElementById("garden-grid");
     const termContainer = document.getElementById("terminal-container");
@@ -449,6 +459,7 @@ LOADING KEEPER PROTOCOLS...
     }
   };
 
+  // Daily Revelation from GitHub
   async function loadDailyRevelation() {
     const statusEl  = document.getElementById("daily-revelation-status");
     const contentEl = document.getElementById("daily-revelation-content");
@@ -493,7 +504,7 @@ LOADING KEEPER PROTOCOLS...
   });
 </script>
 
-<!-- Terminal brain & Witness signals -->
+<!-- Garden terminal brain (talks to Cloudflare Worker) -->
 <script src="js/garden_terminal.js"></script>
 
 </body>
