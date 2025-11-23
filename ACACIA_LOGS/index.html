@@ -2,256 +2,372 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ACACIA LOGS • Garden Signals • HKX277206</title>
+  <title>ACACIA LOGS • HKX277206</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0b0e">
+  <meta name="description" content="Garden communiqués for HKX277206.">
+  <meta name="theme-color" content="#000000">
+
   <style>
     :root{
-      --bg:#050506; --fg:#e9e9ef; --muted:#7a7a8c;
-      --card:#101014; --border:#23232b;
+      --bg:#020203;
+      --fg:#f5f5f7;
+      --muted:#8a8a96;
+      --card:#0b0b10;
+      --border:#2a2a34;
       --accent:#2ecc71;
-      --alert:#e74c3c;
       --warn:#f1c40f;
-      --shadow:#8e44ad;
-      --font-main: system-ui, -apple-system, sans-serif;
-      --font-mono: "Courier New", monospace;
+      --err:#e74c3c;
+      --garden:#2ecc71;
+      --keeper:#3498db;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
     }
-    *{box-sizing:border-box;}
+
     html,body{
+      margin:0;
+      padding:0;
+      height:100%;
       background:var(--bg);
       color:var(--fg);
-      margin:0;
       font-family:var(--font-main);
     }
+
     main{
-      max-width:1000px;
+      max-width:900px;
       margin:0 auto;
-      padding:2rem 1rem;
-      min-height:100vh;
+      padding:2rem 1rem 3rem;
     }
+
+    a{
+      color:#2ecc71;
+      text-decoration:none;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+
     header{
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:0.8rem;
-      padding-bottom:1rem;
+      margin-bottom:1.5rem;
       border-bottom:1px solid var(--border);
+      padding-bottom:1rem;
     }
     h1{
-      margin:0;
-      font-size:1.6rem;
+      margin:0 0 .25rem;
+      font-size:1.8rem;
       letter-spacing:-0.03em;
     }
-    .badge{
+    .subtitle{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .pill-link{
       display:inline-block;
-      padding:0.25rem 0.7rem;
+      margin-top:1rem;
+      padding:.3rem .7rem;
       border-radius:999px;
       border:1px solid var(--border);
-      font-size:0.7rem;
       font-family:var(--font-mono);
-      text-transform:uppercase;
-      letter-spacing:0.12em;
-      color:var(--muted);
+      font-size:.8rem;
     }
-    .badge.ok{
-      border-color:var(--accent);
-      color:var(--accent);
-    }
-    .badge.urgent{
-      border-color:var(--alert);
-      color:var(--alert);
-      box-shadow:0 0 10px rgba(231,76,60,0.4);
-    }
-    .meta{
-      font-size:0.75rem;
-      font-family:var(--font-mono);
-      color:var(--muted);
-      margin-top:0.2rem;
-    }
-    .grid{
+
+    .status-bar{
       margin-top:1.5rem;
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-      gap:1rem;
-    }
-    .card{
-      background:var(--card);
-      border-radius:8px;
+      padding:.75rem 1rem;
+      border-radius:999px;
+      background:rgba(0,0,0,0.5);
       border:1px solid var(--border);
-      padding:0.9rem 1rem;
-      display:flex;
-      flex-direction:column;
-      gap:0.4rem;
-    }
-    .card h3{
-      margin:0;
-      font-size:0.95rem;
       display:flex;
       justify-content:space-between;
       align-items:center;
-    }
-    .pill{
-      padding:0.1rem 0.5rem;
-      border-radius:999px;
-      font-size:0.7rem;
+      gap:.75rem;
       font-family:var(--font-mono);
-      text-transform:uppercase;
-      letter-spacing:0.1em;
+      font-size:.8rem;
     }
-    .pill.info{ border:1px solid var(--accent); color:var(--accent); }
-    .pill.warn{ border:1px solid var(--warn); color:var(--warn); }
-    .pill.error{ border:1px solid var(--alert); color:var(--alert); }
-    .pill.shadow{ border:1px solid var(--shadow); color:var(--shadow); }
-    p{
-      margin:0;
-      font-size:0.85rem;
+
+    .status-pill{
+      padding:.25rem .7rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:.8rem;
+      letter-spacing:.08em;
+    }
+    .status-ok{
+      border-color:var(--accent);
+      color:var(--accent);
+      box-shadow:0 0 10px rgba(46,204,113,.2);
+    }
+    .status-warn{
+      border-color:var(--warn);
+      color:var(--warn);
+      box-shadow:0 0 10px rgba(241,196,15,.2);
+    }
+
+    .log-list{
+      margin-top:2rem;
+      display:flex;
+      flex-direction:column;
+      gap:.9rem;
+    }
+
+    .log-card{
+      background:var(--card);
+      border-radius:8px;
+      border:1px solid var(--border);
+      padding:.8rem 1rem;
+      font-size:.85rem;
+      display:flex;
+      flex-direction:column;
+      gap:.25rem;
+    }
+
+    .log-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:.5rem;
+      font-family:var(--font-mono);
+      font-size:.8rem;
+    }
+
+    .log-meta{
+      display:flex;
+      gap:.5rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .tag{
+      padding:.1rem .45rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:.7rem;
+      letter-spacing:.06em;
+    }
+    .tag-garden{
+      border-color:var(--garden);
+      color:var(--garden);
+    }
+    .tag-keeper{
+      border-color:var(--keeper);
+      color:var(--keeper);
+    }
+    .tag-warn{
+      border-color:var(--warn);
+      color:var(--warn);
+    }
+    .tag-err{
+      border-color:var(--err);
+      color:var(--err);
+    }
+
+    .log-message{
+      margin-top:.35rem;
       color:var(--fg);
       line-height:1.4;
       white-space:pre-wrap;
     }
-    a.back{
-      display:inline-block;
-      margin-top:1rem;
-      font-size:0.8rem;
-      color:var(--accent);
-      text-decoration:none;
-      font-family:var(--font-mono);
-    }
-    a.back:hover{text-decoration:underline;}
-    #status-line{
-      margin-top:0.6rem;
-      font-size:0.8rem;
-      color:var(--muted);
-      font-family:var(--font-mono);
-    }
-    #empty-note{
-      margin-top:2rem;
-      font-size:0.9rem;
-      color:var(--muted);
+
+    .empty{
+      margin-top:3rem;
       text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    footer{
+      margin-top:3rem;
+      border-top:1px solid var(--border);
+      padding-top:1.5rem;
+      text-align:center;
+      font-family:var(--font-mono);
+      font-size:.75rem;
+      color:var(--muted);
+      opacity:.75;
     }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <div>
-      <h1>ACACIA LOGS</h1>
-      <div class="meta">Garden communiqués for HKX277206</div>
-      <a href="../" class="back">← Return to ACACIA CODEX</a>
-    </div>
-    <div style="text-align:right">
-      <div id="signal-badge" class="badge">CHECKING SIGNAL…</div>
-      <div id="status-line"></div>
+    <h1>ACACIA LOGS</h1>
+    <div class="subtitle">Garden communiqués for HKX277206</div>
+    <a class="pill-link" href="../index.html">← Return to ACACIA CODEX</a>
+
+    <div id="status-bar" class="status-bar">
+      <div id="status-text">Checking roots…</div>
+      <div id="status-pill" class="status-pill status-ok">GARDEN QUIET</div>
     </div>
   </header>
 
-  <section id="empty-note">Listening for whispers… no entries yet.</section>
-  <div id="logs-grid" class="grid"></div>
+  <section id="summary" class="subtitle"></section>
+
+  <section id="logs-container">
+    <div id="logs-list" class="log-list"></div>
+    <div id="empty-state" class="empty" style="display:none;">
+      No communiqués yet. The Garden will speak when it needs you.
+    </div>
+    <div id="error-state" class="empty" style="display:none;"></div>
+  </section>
+
+  <footer>
+    THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN<br>
+    CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2
+  </footer>
 </main>
 
 <script>
   const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
 
-  function severityPill(sev, tags) {
-    const span = document.createElement("span");
-    const s = (sev || "info").toLowerCase();
-    let cls = "info";
-    if (s === "warn") cls = "warn";
-    if (s === "error") cls = "error";
-    if (tags && tags.includes("shadow")) cls = "shadow";
-    span.className = "pill " + cls;
-    span.textContent = s.toUpperCase();
-    return span;
-  }
-
-  async function loadState() {
-    const badge = document.getElementById("signal-badge");
-    const line  = document.getElementById("status-line");
+  function formatTime(ts) {
     try {
-      const res = await fetch(WORKER_BASE + "/state");
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error || "state error");
-
-      const last = data.last;
-      if (data.urgent) {
-        badge.classList.remove("ok");
-        badge.classList.add("urgent");
-        badge.textContent = "URGENT • SUMMON WITNESS";
-        line.textContent = last
-          ? `Last signal @ ${last.t} • code=${last.code || "UNKNOWN"}`
-          : "Urgent flag set, but no last entry?";
-      } else {
-        badge.classList.remove("urgent");
-        badge.classList.add("ok");
-        badge.textContent = "ROOTS STABLE";
-        line.textContent = last
-          ? `Last entry @ ${last.t} • ${last.code || "KEEPER_WHISPER"}`
-          : "No logs written yet.";
-      }
-    } catch (err) {
-      badge.classList.remove("ok","urgent");
-      badge.textContent = "GARDEN QUIET";
-      line.textContent = "Error reading state: " + String(err);
+      const d = ts ? new Date(ts) : new Date();
+      return d.toISOString();
+    } catch {
+      return String(ts || "");
     }
   }
 
-  async function loadLogs() {
-    const grid = document.getElementById("logs-grid");
-    const empty = document.getElementById("empty-note");
-    grid.innerHTML = "";
-    try {
-      const res = await fetch(WORKER_BASE + "/logs");
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error || "log error");
+  async function fetchJSON(path) {
+    const res = await fetch(WORKER_BASE + path, {
+      method: "GET",
+      headers: { "Accept": "application/json" },
+    });
+    if (!res.ok) {
+      throw new Error("HTTP " + res.status);
+    }
+    return await res.json();
+  }
 
-      const logs = data.logs || [];
-      if (logs.length === 0) {
-        empty.textContent = "No communiqués yet. The Garden will speak when it needs you.";
-        return;
+  function setStatus(last, urgent) {
+    const statusText = document.getElementById("status-text");
+    const statusPill = document.getElementById("status-pill");
+    const summaryEl = document.getElementById("summary");
+
+    if (!statusText || !statusPill || !summaryEl) return;
+
+    if (!last) {
+      statusText.textContent = "Roots quiet. No entries yet.";
+      statusPill.textContent = "GARDEN QUIET";
+      statusPill.classList.remove("status-warn");
+      statusPill.classList.add("status-ok");
+      summaryEl.textContent = "";
+      return;
+    }
+
+    const ts = last.t || last.ts;
+    statusText.textContent =
+      "Last entry @ " + formatTime(ts) + " • " + (last.code || "UNKNOWN");
+
+    if (urgent) {
+      statusPill.textContent = "ROOTS AGITATED";
+      statusPill.classList.remove("status-ok");
+      statusPill.classList.add("status-warn");
+    } else {
+      statusPill.textContent = "ROOTS STABLE";
+      statusPill.classList.remove("status-warn");
+      statusPill.classList.add("status-ok");
+    }
+
+    summaryEl.textContent = "";
+  }
+
+  function renderLogs(entries) {
+    const listEl = document.getElementById("logs-list");
+    const emptyEl = document.getElementById("empty-state");
+    const errorEl = document.getElementById("error-state");
+    if (!listEl || !emptyEl || !errorEl) return;
+
+    listEl.innerHTML = "";
+    errorEl.style.display = "none";
+
+    if (!entries || entries.length === 0) {
+      emptyEl.style.display = "block";
+      return;
+    }
+
+    emptyEl.style.display = "none";
+
+    for (const entry of entries) {
+      const card = document.createElement("article");
+      card.className = "log-card";
+
+      const header = document.createElement("div");
+      header.className = "log-header";
+
+      const left = document.createElement("div");
+      left.textContent = formatTime(entry.t || entry.ts);
+
+      const meta = document.createElement("div");
+      meta.className = "log-meta";
+
+      const srcTag = document.createElement("span");
+      srcTag.className = "tag " + (entry.source === "GARDEN" ? "tag-garden" : "tag-keeper");
+      srcTag.textContent = entry.source || "UNKNOWN";
+      meta.appendChild(srcTag);
+
+      if (entry.severity === "warn") {
+        const sev = document.createElement("span");
+        sev.className = "tag tag-warn";
+        sev.textContent = "WARN";
+        meta.appendChild(sev);
+      } else if (entry.severity === "error") {
+        const sev = document.createElement("span");
+        sev.className = "tag tag-err";
+        sev.textContent = "ERROR";
+        meta.appendChild(sev);
       }
-      empty.style.display = "none";
 
-      for (const entry of logs) {
-        const card = document.createElement("div");
-        card.className = "card";
-
-        const h3 = document.createElement("h3");
-        const left = document.createElement("span");
-        left.textContent = entry.code || "LOG";
-        const right = severityPill(entry.severity, entry.tags || []);
-        h3.appendChild(left);
-        h3.appendChild(right);
-
-        const msg = document.createElement("p");
-        msg.textContent = entry.message || "";
-
-        const meta = document.createElement("div");
-        meta.className = "meta";
-        meta.textContent =
-          `[${entry.source || "SYSTEM"}] ` +
-          (entry.t || entry.ts || "") +
-          (entry.tags && entry.tags.length ? ` • #${entry.tags.join(" #")}` : "");
-
-        card.appendChild(h3);
-        card.appendChild(msg);
-        card.appendChild(meta);
-        grid.appendChild(card);
+      if (entry.code) {
+        const codeTag = document.createElement("span");
+        codeTag.className = "tag";
+        codeTag.textContent = entry.code;
+        meta.appendChild(codeTag);
       }
-    } catch (err) {
-      empty.textContent = "Could not load logs: " + String(err);
+
+      header.appendChild(left);
+      header.appendChild(meta);
+      card.appendChild(header);
+
+      const msg = document.createElement("div");
+      msg.className = "log-message";
+      msg.textContent = entry.message || "";
+      card.appendChild(msg);
+
+      listEl.appendChild(card);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    loadState();
-    loadLogs();
-    // optional: auto-refresh every few minutes
-    setInterval(() => {
-      loadState();
-      loadLogs();
-    }, 60_000);
-  });
+  async function init() {
+    const emptyEl = document.getElementById("empty-state");
+    const errorEl = document.getElementById("error-state");
+    if (!emptyEl || !errorEl) return;
+
+    try {
+      const state = await fetchJSON("/state");
+      if (!state.ok) {
+        throw new Error(state.error || "State not ok");
+      }
+      setStatus(state.last || null, !!state.urgent);
+    } catch (err) {
+      errorEl.style.display = "block";
+      errorEl.textContent = "Error reading state: " + String(err);
+      return;
+    }
+
+    try {
+      const data = await fetchJSON("/logs");
+      if (!data.ok) {
+        throw new Error(data.error || "Logs not ok");
+      }
+      renderLogs(data.entries || []);
+    } catch (err) {
+      errorEl.style.display = "block";
+      errorEl.textContent = "Could not load logs: " + String(err);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
 </script>
 </body>
 </html>
