@@ -16,6 +16,16 @@ import json
 from datetime import datetime
 from typing import Dict, Any, List, Tuple
 
+CANON_ECHO_ROOTS = (
+    "docs/Echoes/",
+    "EIDOLON/Echoes/",
+)
+
+CANON_LEAF_ROOTS = (
+    "EIDOLON/Leaves/",
+    "Leaves/",
+)
+
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SCAN_JSON = os.path.join(ROOT_DIR, "garden_scan_report.json")
 
