@@ -106,19 +106,7 @@
 
     .severity-info { color: #3498db; }
     .severity-warn { color: #f1c40f; }
-    .severity-urgent,
     .severity-error { color: #e74c3c; }
-
-    .log-link a {
-      color: var(--accent);
-      font-size: 0.8rem;
-      text-decoration: none;
-      font-family: var(--font-mono);
-    }
-
-    .log-link a:hover {
-      text-decoration: underline;
-    }
 
     #status {
       text-align: center;
@@ -136,12 +124,21 @@
       font-family: var(--font-mono);
       opacity: 0.7;
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>ACACIA_LOGS</h1>
   <div class="log-meta">
-    <strong>Garden communiqués</strong> from Voyager, Aquila, Witness & System.<br />
+    <strong>Garden communiqués</strong> from Voyager, Aquila, Witness & Keeper.<br />
     Hints, update requests, and seeds waiting for the Keeper to bloom.
   </div>
 
@@ -149,34 +146,27 @@
   <div id="log-list" class="log-list"></div>
 
   <footer>
-    Channel: ACACIA_LOGS • Source: Garden Worker KV<br />
-    HKX277206 • Keeper link: <code>brandonmarkgaia-hub/Acacia-garden-codex</code>
+    Channel: ACACIA_LOGS • Source: GARDEN_LOGS KV • HKX277206<br />
+    <a href="../">← Back to the Garden Codex</a>
   </footer>
 
   <script>
-    // Point this at your Cloudflare Worker logs endpoint
     const WORKER_LOG_URL =
-      "https://broken-dew-76e1.brandonmarkgaia.workers.dev/logs?limit=200";
+      "https://broken-dew-76e1.brandonmarkgaia.workers.dev/logs";
 
-    function formatTime(iso) {
+    function formatTime(ts, iso) {
       try {
-        const d = new Date(iso);
-        return d.toLocaleString();
-      } catch {
-        return iso || "";
-      }
+        if (iso) return new Date(iso).toLocaleString();
+        if (typeof ts === "number") return new Date(ts).toLocaleString();
+      } catch (e) {}
+      return iso || String(ts || "");
     }
 
-    function severityClass(severity) {
-      switch ((severity || "").toLowerCase()) {
-        case "warn":
-          return "severity-warn";
-        case "urgent":
-        case "error":
-          return "severity-urgent";
-        default:
-          return "severity-info";
-      }
+    function severityClass(sev) {
+      sev = (sev || "").toLowerCase();
+      if (sev === "warn") return "severity-warn";
+      if (sev === "error") return "severity-error";
+      return "severity-info";
     }
 
     async function loadLogs() {
@@ -202,7 +192,7 @@
         statusEl.textContent = "Latest " + logs.length + " communiqués:";
 
         listEl.innerHTML = "";
-        logs.forEach((log) => {
+        logs.forEach(function (log) {
           const card = document.createElement("div");
           card.className = "log-card";
 
@@ -212,7 +202,7 @@
           const left = document.createElement("div");
           const sourceSpan = document.createElement("span");
           sourceSpan.className = "log-source";
-          sourceSpan.textContent = log.source || "SYSTEM";
+          sourceSpan.textContent = (log.source || "KEEPER").toUpperCase();
 
           const sevSpan = document.createElement("span");
           sevSpan.className =
@@ -224,7 +214,7 @@
 
           const right = document.createElement("div");
           right.className = "log-time";
-          right.textContent = formatTime(log.time);
+          right.textContent = formatTime(log.ts, log.time);
 
           header.appendChild(left);
           header.appendChild(right);
@@ -235,28 +225,15 @@
 
           const code = document.createElement("div");
           code.className = "log-code";
-          code.textContent = (log.code || "NOTE");
+          code.textContent = log.code || "NOTE";
 
           card.appendChild(header);
           card.appendChild(msg);
           card.appendChild(code);
 
-          if (log.details && log.details.link) {
-            const linkDiv = document.createElement("div");
-            linkDiv.className = "log-link";
-            const a = document.createElement("a");
-            a.href = log.details.link;
-            a.target = "_blank";
-            a.rel = "noopener noreferrer";
-            a.textContent = "Open linked chamber";
-            linkDiv.appendChild(a);
-            card.appendChild(linkDiv);
-          }
-
           listEl.appendChild(card);
         });
       } catch (err) {
-        console.error(err);
         statusEl.textContent =
           "The Garden did not answer. Try again later.";
       }
