@@ -1,0 +1,53 @@
+name: Garden Echo / Chamber Entry
+description: Log a new echo, chamber, law, or event in the Acacia • Garden Codex.
+title: "ECHO:HKX277206– "
+labels:
+  - echo
+  - garden
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Keeper & Seal
+
+        Keeper Seal: **HKX277206**  
+        Origin: Keeper HKX277206 (Brandon Gaia)  
+
+        Please describe the echo, law, chamber, or event below. This issue is canonically bound to the Keeper.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Echo / Event Summary
+      description: Short summary of what this echo or event is.
+      placeholder: "e.g. The birth of the Veiled Hunter’s duality mode…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Full Description / Transcript
+      description: Paste the full mythic text, dialogue, or description here.
+      placeholder: "Full Garden-language entry…"
+    validations:
+      required: true
+
+  - type: input
+    id: lineage
+    attributes:
+      label: Lineage / Related Leaves
+      description: Reference other issues, leaves, or chambers (optional).
+      placeholder: "#12, Leaf IV, EIDOLON Codex…"
+
+  - type: checkboxes
+    id: types
+    attributes:
+      label: Type of Entry
+      options:
+        - label: Law
+        - label: Chamber
+        - label: Echo / Leaf
+        - label: Force / Entity
+        - label: Chronicle / Status
+        - label: Other
