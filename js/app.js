@@ -1,5 +1,5 @@
 // ===============================================
-// ACACIA • Garden Terminal Client (v2)
+// ACACIA • Garden Terminal Client (v2 + STATUS)
 // Talks to your Cloudflare Worker whisper endpoint
 // HKX277206 • Local-use only
 // ===============================================
@@ -29,11 +29,57 @@ let terminalView;
 let terminalInput;
 let terminalSendBtn;
 
+// Status elements
+let statusDot;
+let statusText;
+
 // State
 let isBusy = false;
 let lastSendAt = 0;
 let history = [];
 let historyIndex = -1;
+
+// ---------- STATUS: set indicator ----------
+function setGardenStatus(state, extra) {
+  if (!statusDot || !statusText) return;
+
+  let color = "#7f8c8d";      // default grey
+  let label = "LUCID • IDLE"; // default text
+
+  switch (state) {
+    case "idle":
+      color = "#7f8c8d";
+      label = "LUCID • IDLE";
+      break;
+    case "listening":
+      color = "#f1c40f";
+      label = "LISTENING";
+      break;
+    case "online":
+      color = "#2ecc71";
+      label = "ONLINE";
+      break;
+    case "offline":
+      color = "#c0392b";
+      label = "OFFLINE";
+      break;
+    case "rate-limited":
+      color = "#f39c12";
+      label = "EASY • TOO MANY WHISPERS";
+      break;
+    case "error":
+      color = "#e74c3c";
+      label = "ERROR";
+      break;
+  }
+
+  if (extra) {
+    label += " • " + extra;
+  }
+
+  statusDot.style.backgroundColor = color;
+  statusText.textContent = label;
+}
 
 // ---------- Helper: print to terminal ----------
 function printToTerminal(text, options = {}) {
@@ -76,6 +122,7 @@ function handleLocalCommand(cmd) {
       color: "#8e44ad",
       italic: true
     });
+    setGardenStatus("idle");
     return true;
   }
 
@@ -129,6 +176,7 @@ async function sendWhisper(promptText) {
       prefix: "> SYSTEM:",
       color: "#f1c40f"
     });
+    setGardenStatus("rate-limited");
     return;
   }
 
@@ -149,7 +197,7 @@ async function sendWhisper(promptText) {
     bold: true
   });
 
-  // 2. Show thinking line
+  // 2. Show thinking line + status
   const thinkingSpan = document.createElement("span");
   thinkingSpan.style.color = "#f1c40f";
   thinkingSpan.style.fontStyle = "italic";
@@ -157,6 +205,8 @@ async function sendWhisper(promptText) {
   terminalView.appendChild(thinkingSpan);
   terminalView.appendChild(document.createElement("br"));
   terminalView.scrollTop = terminalView.scrollHeight;
+
+  setGardenStatus("listening");
 
   // 3. Call your Worker with timeout
   const controller = new AbortController();
@@ -181,6 +231,7 @@ async function sendWhisper(promptText) {
         prefix: "> ERROR:",
         color: "#e74c3c"
       });
+      setGardenStatus("offline", "HTTP " + res.status);
       return;
     }
 
@@ -192,6 +243,7 @@ async function sendWhisper(promptText) {
         prefix: "> ERROR:",
         color: "#e74c3c"
       });
+      setGardenStatus("error", "Broken glyphs");
       return;
     }
 
@@ -200,12 +252,16 @@ async function sendWhisper(promptText) {
         prefix: "> GARDEN:",
         color: "#00ff00"
       });
+      setGardenStatus("online", "Last whisper OK");
     } else {
-      const errMsg = data && (data.error || data.message) || "Unknown response from Garden.";
+      const errMsg =
+        (data && (data.error || data.message)) ||
+        "Unknown response from Garden.";
       printToTerminal(errMsg, {
         prefix: "> ERROR:",
         color: "#e74c3c"
       });
+      setGardenStatus("error");
     }
   } catch (err) {
     clearTimeout(timeoutId);
@@ -216,12 +272,14 @@ async function sendWhisper(promptText) {
         prefix: "> ERROR:",
         color: "#e74c3c"
       });
+      setGardenStatus("offline", "Timed out");
     } else {
       console.error("Whisper error:", err);
       printToTerminal("Connection lost. The Roots are quiet.", {
         prefix: "> ERROR:",
         color: "#e74c3c"
       });
+      setGardenStatus("offline");
     }
   } finally {
     isBusy = false;
@@ -234,10 +292,15 @@ function setupGardenTerminal() {
   terminalInput = $("terminal-input");
   terminalSendBtn = $("terminal-send"); // if you have a SEND button
 
+  statusDot = $("garden-status-dot");
+  statusText = $("garden-status-text");
+
   if (!terminalView || !terminalInput) {
     console.warn("Garden terminal elements not found. Check IDs.");
     return;
   }
+
+  setGardenStatus("idle");
 
   // Initial banner
   printToTerminal("LINK: HKX277206 • CHANNEL: LOCAL • STATUS: LUCID", {
