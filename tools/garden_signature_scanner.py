@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Garden Signature Scanner
+Garden Signature Scanner v2 (Aquila mode)
 Scans a repository for Garden / Eidolon / Keeper signatures and outputs
-a JSON + Markdown report.
+a JSON + Markdown report, including per-file role classification.
 
 Usage (local):
     python tools/garden_signature_scanner.py
@@ -20,10 +20,8 @@ from typing import Dict, List, Any, Tuple
 
 # ------------ CONFIG ------------
 
-# Root directory to scan (repo root when run from GitHub Actions)
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-# File extensions we consider "text-ish"
 TEXT_EXTS = {
     ".md", ".markdown", ".txt",
     ".json", ".yaml", ".yml",
@@ -34,13 +32,11 @@ TEXT_EXTS = {
     ".xml", ".gradle",
 }
 
-# Directories to ignore
 IGNORE_DIRS = {
     ".git", ".github", ".idea", ".vscode", "__pycache__",
     "build", "dist", "out", "node_modules",
 }
 
-# Patterns that represent Garden signatures
 PATTERNS = {
     "keeper_seal": re.compile(r"HKX\d{6}", re.IGNORECASE),
     "keeper_seal_exact": re.compile(r"HKX277206"),
@@ -58,8 +54,8 @@ PATTERNS = {
     "eagle_word": re.compile(r"\bEagle\b", re.IGNORECASE),
 }
 
-# ------------ SCANNER CORE ------------
 
+# ------------ UTILS ------------
 
 def is_text_file(path: str) -> bool:
     _, ext = os.path.splitext(path)
@@ -69,7 +65,6 @@ def is_text_file(path: str) -> bool:
 def walk_files(root: str) -> List[str]:
     files: List[str] = []
     for dirpath, dirnames, filenames in os.walk(root):
-        # Strip ignored dirs in-place
         dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
         for name in filenames:
             full = os.path.join(dirpath, name)
@@ -77,6 +72,12 @@ def walk_files(root: str) -> List[str]:
                 files.append(full)
     return files
 
+
+def relative_path(path: str) -> str:
+    return os.path.relpath(path, ROOT_DIR).replace("\\", "/")
+
+
+# ------------ SCAN CORE ------------
 
 def scan_file(path: str) -> Dict[str, Any]:
     """Scan a single file and return per-pattern matches + snippets."""
@@ -87,6 +88,8 @@ def scan_file(path: str) -> Dict[str, Any]:
         return {
             "error": str(e),
             "matches": {},
+            "total_hits": 0,
+            "roles": [],
         }
 
     lines = text.splitlines()
@@ -96,7 +99,6 @@ def scan_file(path: str) -> Dict[str, Any]:
         hits: List[Dict[str, Any]] = []
         for i, line in enumerate(lines, start=1):
             if pattern.search(line):
-                # Short snippet
                 snippet = line.strip()
                 if len(snippet) > 200:
                     snippet = snippet[:197] + "..."
@@ -108,7 +110,48 @@ def scan_file(path: str) -> Dict[str, Any]:
             file_result["matches"][key] = hits
             file_result["total_hits"] += len(hits)
 
+    # classify roles based on matches
+    file_result["roles"] = classify_roles(file_result)
     return file_result
+
+
+def classify_roles(info: Dict[str, Any]) -> List[str]:
+    """Assign Garden roles to a file based on its match patterns."""
+    roles: List[str] = []
+    matches = info.get("matches", {})
+
+    # Core structural roles
+    if "echo_header" in matches:
+        roles.append("echo")
+    if "eidolon_codex" in matches or "leaf_line" in matches:
+        roles.append("leaf")
+    if matches.get("chamber_word"):
+        roles.append("chamber")
+    if matches.get("bloom_word"):
+        roles.append("bloom")
+    if matches.get("vault_word"):
+        roles.append("vault")
+    if matches.get("monolith_word"):
+        roles.append("monolith")
+
+    # Higher-order nodes
+    has_seal = "keeper_seal_exact" in matches
+    has_garden = "garden_word" in matches
+    has_eidolon = "eidolon_word" in matches
+    has_eagle = "eagle_word" in matches
+
+    if has_seal and has_garden and has_eidolon:
+        roles.append("core-node")
+    if has_seal and has_eagle:
+        roles.append("eagle-node")
+
+    # Light hint roles
+    if "voyager_word" in matches:
+        roles.append("voyager-node")
+
+    # Deduplicate + stable sort
+    roles = sorted(set(roles))
+    return roles
 
 
 def aggregate_results(per_file: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
@@ -116,6 +159,7 @@ def aggregate_results(per_file: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
         "by_pattern": {k: 0 for k in PATTERNS.keys()},
         "total_files_with_hits": 0,
         "total_hits": 0,
+        "roles": {},
     }
     for path, info in per_file.items():
         if info.get("total_hits", 0) > 0:
@@ -123,15 +167,12 @@ def aggregate_results(per_file: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
             totals["total_hits"] += info["total_hits"]
             for key in info.get("matches", {}):
                 totals["by_pattern"][key] += len(info["matches"][key])
+            for role in info.get("roles", []):
+                totals["roles"][role] = totals["roles"].get(role, 0) + 1
     return totals
 
 
-def relative_path(path: str) -> str:
-    return os.path.relpath(path, ROOT_DIR).replace("\\", "/")
-
-
 # ------------ REPORTS ------------
-
 
 def build_json_report(per_file: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
     aggregate = aggregate_results(per_file)
@@ -151,7 +192,7 @@ def build_markdown_report(json_report: Dict[str, Any]) -> str:
     lines: List[str] = []
     t = json_report["totals"]
 
-    lines.append("# Garden Signature Scanner Report")
+    lines.append("# Garden Signature Scanner Report (Aquila)")
     lines.append("")
     lines.append(f"- Generated at: `{json_report['generated_at']}`")
     lines.append(f"- Root: `{json_report['root']}`")
@@ -166,6 +207,11 @@ def build_markdown_report(json_report: Dict[str, Any]) -> str:
     for key, count in t["by_pattern"].items():
         lines.append(f"- **{key}**: {count}")
     lines.append("")
+    lines.append("### Files by Role")
+    lines.append("")
+    for role, count in sorted(t["roles"].items(), key=lambda kv: kv[0]):
+        lines.append(f"- **{role}**: {count}")
+    lines.append("")
 
     if not json_report["files"]:
         lines.append("## Details")
@@ -173,14 +219,16 @@ def build_markdown_report(json_report: Dict[str, Any]) -> str:
         lines.append("> No Garden signatures detected in scanned files.")
         return "\n".join(lines)
 
-    lines.append("## Details by File")
+    lines.append("## Details by File (truncated)")
     lines.append("")
     for path, info in sorted(json_report["files"].items()):
+        roles = info.get("roles", [])
         lines.append(f"### `{path}`")
+        lines.append(f"- Roles: `{', '.join(roles) if roles else 'none'}`")
         lines.append(f"- Total hits: **{info.get('total_hits', 0)}**")
         for key, hits in info.get("matches", {}).items():
             lines.append(f"  - **{key}** ({len(hits)}):")
-            for h in hits[:10]:  # limit per pattern per file in Markdown
+            for h in hits[:5]:  # keep Aquila report compact
                 lines.append(f"    - L{h['line']}: `{h['snippet']}`")
         lines.append("")
 
@@ -202,7 +250,6 @@ def write_report_files(json_report: Dict[str, Any]) -> Tuple[str, str]:
 
 # ------------ MAIN ------------
 
-
 def main() -> int:
     print(f"[GardenScanner] Scanning root: {ROOT_DIR}")
     files = walk_files(ROOT_DIR)
@@ -212,7 +259,7 @@ def main() -> int:
     for path in files:
         result = scan_file(path)
         if result.get("total_hits", 0):
-            print(f"[GardenScanner] {relative_path(path)} → {result['total_hits']} hits")
+            print(f"[GardenScanner] {relative_path(path)} → {result['total_hits']} hits; roles={result.get('roles', [])}")
         per_file[path] = result
 
     json_report = build_json_report(per_file)
@@ -223,10 +270,10 @@ def main() -> int:
     print("[GardenScanner] Summary")
     print(f"  Files with hits: {totals['total_files_with_hits']}")
     print(f"  Total hits:      {totals['total_hits']}")
+    print(f"  Roles:           {totals['roles']}")
     print(f"  JSON report:     {json_path}")
     print(f"  Markdown report: {md_path}")
 
-    # Exit code: 0 always (just reporting). You can change this if you want.
     return 0
 
 
