@@ -1,0 +1,81 @@
+name: Garden Aeon Archivist (Aquila)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**.md"
+      - "**.json"
+      - "**.yaml"
+      - "**.yml"
+      - "**.txt"
+      - "**.html"
+      - "**.htm"
+      - "**.py"
+      - "**.kt"
+      - "**.kts"
+      - "**.ps1"
+      - "**.xml"
+      - "tools/garden_signature_scanner.py"
+      - "tools/garden_vault_indexer.py"
+      - ".github/workflows/garden-aeon-archivist.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  aeon-archive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run Garden Signature Scanner (Aquila)
+        run: |
+          python tools/garden_signature_scanner.py
+
+      - name: Run Garden Vault Indexer (Aeon)
+        run: |
+          python tools/garden_vault_indexer.py
+
+      - name: Show brief summary
+        run: |
+          echo "=== garden_scan_report.md (head) ==="
+          sed -n '1,40p' garden_scan_report.md || true
+          echo ""
+          echo "=== garden_vault_index.md (head) ==="
+          sed -n '1,40p' garden_vault_index.md || true
+
+      - name: Upload Aeon artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: garden-aeon-archive
+          path: |
+            garden_scan_report.json
+            garden_scan_report.md
+            garden_vault_index.json
+            garden_vault_index.md
+
+      # Optional: Commit updated reports back to the repo on main/master
+      - name: Commit updated Garden reports (optional)
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "Garden Aeon Archivist"
+          git config user.email "aeon-archivist@users.noreply.github.com"
+
+          git add garden_scan_report.json garden_scan_report.md garden_vault_index.json garden_vault_index.md || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(garden): update Aeon scan & vault index [skip ci]" || true
+            git push origin HEAD || true
+          fi
