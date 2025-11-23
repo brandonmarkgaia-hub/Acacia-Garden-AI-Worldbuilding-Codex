@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T20:38:40.083823Z",
+  "generated_at": "2025-11-23T20:53:18.938865Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "totals": {
     "by_pattern": {
@@ -14,12 +14,12 @@
       "monolith_word": 63,
       "keeper_seal_phrase": 22,
       "garden_word": 1607,
-      "eidolon_word": 449,
+      "eidolon_word": 451,
       "voyager_word": 1,
       "eagle_word": 131
     },
     "total_files_with_hits": 442,
-    "total_hits": 4739,
+    "total_hits": 4741,
     "roles": {
       "bloom": 73,
       "chamber": 119,
@@ -15961,103 +15961,103 @@
             "snippet": "Builds a Seed Vault style index from garden_scan_report.json."
           },
           {
-            "line": 71,
+            "line": 81,
             "snippet": "vault = {"
           },
           {
-            "line": 89,
+            "line": 99,
             "snippet": "vault[\"files\"][path] = {"
           },
           {
-            "line": 95,
+            "line": 105,
             "snippet": "return vault"
           },
           {
-            "line": 98,
+            "line": 108,
             "snippet": "def build_vault_markdown(vault: Dict[str, Any]) -> str:"
           },
           {
-            "line": 101,
+            "line": 111,
             "snippet": "s = vault[\"summary\"]"
           },
           {
-            "line": 102,
+            "line": 112,
             "snippet": "lines.append(\"# Garden Vault Index (Aeon)\")"
           },
           {
-            "line": 104,
+            "line": 114,
             "snippet": "lines.append(f\"- Generated at: `{vault['generated_at']}`\")"
           },
           {
-            "line": 105,
+            "line": 115,
             "snippet": "lines.append(f\"- Root: `{vault['root']}`\")"
           },
           {
-            "line": 106,
+            "line": 116,
             "snippet": "lines.append(f\"- Source scan: `{vault['source_scan']}`\")"
           },
           {
-            "line": 124,
+            "line": 134,
             "snippet": "for e in vault[\"echoes\"][:50]:"
           },
           {
-            "line": 126,
+            "line": 136,
             "snippet": "if len(vault[\"echoes\"]) > 50:"
           },
           {
-            "line": 127,
+            "line": 137,
             "snippet": "lines.append(f\"- ... ({len(vault['echoes']) - 50} more echoes)\")"
           },
           {
-            "line": 133,
+            "line": 143,
             "snippet": "for lf in vault[\"leaves\"][:50]:"
           },
           {
-            "line": 135,
+            "line": 145,
             "snippet": "if len(vault[\"leaves\"]) > 50:"
           },
           {
-            "line": 136,
+            "line": 146,
             "snippet": "lines.append(f\"- ... ({len(vault['leaves']) - 50} more leaves)\")"
           },
           {
-            "line": 142,
+            "line": 152,
             "snippet": "def write_vault_files(vault: Dict[str, Any]) -> Tuple[str, str]:"
           },
           {
-            "line": 147,
+            "line": 157,
             "snippet": "json.dump(vault, jf, indent=2, ensure_ascii=False)"
           },
           {
-            "line": 150,
+            "line": 160,
             "snippet": "mf.write(build_vault_markdown(vault))"
           },
           {
-            "line": 158,
+            "line": 168,
             "snippet": "vault = build_vault_index(scan)"
           },
           {
-            "line": 159,
+            "line": 169,
             "snippet": "json_path, md_path = write_vault_files(vault)"
           },
           {
-            "line": 162,
+            "line": 172,
             "snippet": "print(\"  Files with hits: \", vault[\"summary\"][\"total_files_with_hits\"])"
           },
           {
-            "line": 163,
+            "line": 173,
             "snippet": "print(\"  Total hits:      \", vault[\"summary\"][\"total_hits\"])"
           },
           {
-            "line": 164,
+            "line": 174,
             "snippet": "print(\"  Echo count:      \", vault[\"summary\"][\"echo_count\"])"
           },
           {
-            "line": 165,
+            "line": 175,
             "snippet": "print(\"  Leaf count:      \", vault[\"summary\"][\"leaf_count\"])"
           },
           {
-            "line": 166,
+            "line": 176,
             "snippet": "print(\"  Roles:           \", vault[\"summary\"][\"roles\"])"
           }
         ],
@@ -16071,16 +16071,26 @@
             "snippet": "garden_scan_report.json  (from Garden Signature Scanner)"
           },
           {
-            "line": 102,
+            "line": 112,
             "snippet": "lines.append(\"# Garden Vault Index (Aeon)\")"
           },
           {
-            "line": 110,
+            "line": 120,
             "snippet": "lines.append(f\"- Files with Garden signatures: **{s['total_files_with_hits']}**\")"
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 21,
+            "snippet": "\"EIDOLON/Echoes/\","
+          },
+          {
+            "line": 25,
+            "snippet": "\"EIDOLON/Leaves/\","
           }
         ]
       },
-      "total_hits": 31,
+      "total_hits": 33,
       "roles": [
         "vault"
       ]

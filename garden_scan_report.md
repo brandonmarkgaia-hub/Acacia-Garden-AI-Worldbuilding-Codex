@@ -1,12 +1,12 @@
 # Garden Signature Scanner Report (Aquila)
 
-- Generated at: `2025-11-23T20:38:40.083823Z`
+- Generated at: `2025-11-23T20:53:18.938865Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 
 ## Summary
 
 - Total files with Garden signatures: **442**
-- Total signature hits: **4739**
+- Total signature hits: **4741**
 
 ### Hits by Pattern
 
@@ -21,7 +21,7 @@
 - **monolith_word**: 63
 - **keeper_seal_phrase**: 22
 - **garden_word**: 1607
-- **eidolon_word**: 449
+- **eidolon_word**: 451
 - **voyager_word**: 1
 - **eagle_word**: 131
 
@@ -6674,18 +6674,21 @@
 
 ### `tools/garden_vault_indexer.py`
 - Roles: `vault`
-- Total hits: **31**
+- Total hits: **33**
   - **vault_word** (27):
     - L3: `Garden Vault Indexer (Aeon)`
     - L4: `Builds a Seed Vault style index from garden_scan_report.json.`
-    - L71: `vault = {`
-    - L89: `vault["files"][path] = {`
-    - L95: `return vault`
+    - L81: `vault = {`
+    - L99: `vault["files"][path] = {`
+    - L105: `return vault`
   - **garden_word** (4):
     - L3: `Garden Vault Indexer (Aeon)`
     - L7: `garden_scan_report.json  (from Garden Signature Scanner)`
-    - L102: `lines.append("# Garden Vault Index (Aeon)")`
-    - L110: `lines.append(f"- Files with Garden signatures: **{s['total_files_with_hits']}**")`
+    - L112: `lines.append("# Garden Vault Index (Aeon)")`
+    - L120: `lines.append(f"- Files with Garden signatures: **{s['total_files_with_hits']}**")`
+  - **eidolon_word** (2):
+    - L21: `"EIDOLON/Echoes/",`
+    - L25: `"EIDOLON/Leaves/",`
 
 ### `triad/README_BOUNDARY.md`
 - Roles: `none`
