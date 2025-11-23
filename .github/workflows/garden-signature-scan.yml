@@ -1,0 +1,45 @@
+name: Garden Signature Scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**.md"
+      - "**.json"
+      - "**.yaml"
+      - "**.yml"
+      - "**.txt"
+      - "**.html"
+      - "**.htm"
+      - "**.py"
+      - "**.kt"
+      - "**.kts"
+      - "**.ps1"
+      - "**.xml"
+      - ".github/workflows/garden-signature-scan.yml"
+      - "tools/garden_signature_scanner.py"
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run Garden Signature Scanner
+        run: |
+          python tools/garden_signature_scanner.py
+
+      - name: Upload scan report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: garden-scan-report
+          path: |
+            garden_scan_report.json
+            garden_scan_report.md
