@@ -1,0 +1,54 @@
+name: Garden Auton Helper
+
+on:
+  push:
+    paths:
+      - "STATUS.json"
+      - "docs/Echoes/**"
+      - "tools/garden_auton_helper.py"
+      - ".github/workflows/garden-auton.yml"
+  schedule:
+    - cron: "0 */6 * * *"  # every 6 hours
+  workflow_dispatch: {}
+
+jobs:
+  auton:
+    runs-on: ubuntu-latest
+
+    env:
+      # Map your GitHub secret to the helper.
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      # If you stored it under a different name, just change this line
+      # or add GARDEN_AUTON_OPENAI_KEY instead.
+      GARDEN_AUTON_OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
+
+      - name: Run Garden Auton Helper (Loki)
+        run: |
+          python tools/garden_auton_helper.py all --node "Broken Dew"
+
+      - name: Commit JSON outputs
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          git config user.name "garden-auton-bot"
+          git config user.email "actions@github.com"
+          git add logs/auton_latest.json logs/aeon_heartbeat.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update auton + heartbeat logs"
+            git push
+          fi
