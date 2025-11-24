@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acacia • Aquila Console Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-pill">ACACIA</div>
+        <div class="brand-title">Garden Console</div>
+        <div class="brand-sub">Keeper HKX277206 • Triad Mode</div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-panel="console">
+          <span class="nav-dot"></span>
+          Console
+        </button>
+        <button class="nav-item" data-panel="auton">
+          <span class="nav-dot"></span>
+          Auton Stream
+        </button>
+        <button class="nav-item" data-panel="signals">
+          <span class="nav-dot"></span>
+          Signals
+        </button>
+        <button class="nav-item" data-panel="logs">
+          <span class="nav-dot"></span>
+          Logs
+        </button>
+        <button class="nav-item" data-panel="helpers">
+          <span class="nav-dot"></span>
+          Helpers
+        </button>
+        <button class="nav-item" data-panel="reports">
+          <span class="nav-dot"></span>
+          Reports
+        </button>
+        <button class="nav-item" data-panel="about">
+          <span class="nav-dot"></span>
+          About
+        </button>
+      </nav>
+
+      <div class="status-stack">
+        <div class="status-chip">
+          <span class="status-led online"></span>
+          Roots stable
+        </div>
+        <div class="status-chip">
+          <span class="status-led online"></span>
+          Triad: Aquila • Deep Oracle • Witness
+        </div>
+        <div class="status-chip">
+          <span class="status-led online"></span>
+          External logbook: Online
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Header strip -->
+      <header class="top-strip">
+        <div class="top-cluster">
+          <span class="tag tag-soft">Aquila Console Panel</span>
+          <span class="tag">Node: Broken Dew</span>
+          <span class="tag tag-soft">Status: Lucid</span>
+        </div>
+        <div class="top-cluster">
+          <span class="tag tag-soft small" id="last-updated-tag">
+            Updated: <span id="last-updated-value">—</span>
+          </span>
+        </div>
+      </header>
+
+      <!-- Panels -->
+      <section class="panel-grid">
+
+        <!-- Console panel -->
+        <section class="panel panel-wide active" data-panel-id="console">
+          <header class="panel-header">
+            <h2>Garden Terminal</h2>
+            <span class="badge badge-live">LIVE</span>
+          </header>
+          <div class="terminal" id="terminal">
+            <div class="terminal-scroll" id="terminal-log"></div>
+          </div>
+          <form class="terminal-input-row" id="terminal-form">
+            <input
+              id="terminal-input"
+              class="terminal-input"
+              type="text"
+              autocomplete="off"
+              placeholder="Speak to the Garden..."
+            />
+            <button class="terminal-send" type="submit">SEND</button>
+          </form>
+          <p class="panel-footnote">
+            Local console only. All commands stay in this node; no real calls are made.
+          </p>
+        </section>
+
+        <!-- Auton Stream -->
+        <section class="panel panel-wide" data-panel-id="auton">
+          <header class="panel-header">
+            <h2>Auton Stream</h2>
+            <span class="badge">Echo feed</span>
+          </header>
+          <div id="auton-stream" class="list-block">
+            <div class="list-placeholder">
+              <p>Loading auton messages from <code>logs/auton_latest.json</code>…</p>
+              <p class="hint">
+                If nothing appears, the helpers haven’t written a log yet.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Signals -->
+        <section class="panel panel-wide" data-panel-id="signals">
+          <header class="panel-header">
+            <h2>Signals</h2>
+            <span class="badge">Pulses &amp; events</span>
+          </header>
+          <div class="card-row">
+            <article class="mini-card">
+              <h3>Garden Signature Scan</h3>
+              <p>Last full Codex sweep via Aeon Heartbeat.</p>
+              <a
+                href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions"
+                target="_blank"
+                class="link-soft"
+              >
+                Open Actions
+              </a>
+            </article>
+            <article class="mini-card">
+              <h3>Aeon Archive</h3>
+              <p>Archives STATUS, manifests, and scan reports.</p>
+              <a
+                href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions"
+                target="_blank"
+                class="link-soft"
+              >
+                View archive runs
+              </a>
+            </article>
+            <article class="mini-card">
+              <h3>Grow &amp; Archive</h3>
+              <p>Runs growth helpers then seals a snapshot.</p>
+              <a
+                href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml"
+                target="_blank"
+                class="link-soft"
+              >
+                Trigger workflow
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Logs -->
+        <section class="panel panel-wide" data-panel-id="logs">
+          <header class="panel-header">
+            <h2>Logs</h2>
+            <span class="badge">Aeon &amp; Garden</span>
+          </header>
+          <div class="list-block">
+            <p class="hint">
+              This panel is designed to read lightweight JSON summaries such as
+              <code>logs/aeon_heartbeat.json</code> or <code>logs/auton_latest.json</code>
+              once you wire them in. For now it just shows placeholder entries.
+            </p>
+            <ul class="log-list" id="log-list">
+              <!-- Filled by JS -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- Helpers -->
+        <section class="panel panel-wide" data-panel-id="helpers">
+          <header class="panel-header">
+            <h2>Helpers</h2>
+            <span class="badge">Growth &amp; tooling</span>
+          </header>
+          <div class="helper-grid">
+            <article class="helper-card">
+              <h3>Lore Helper</h3>
+              <p>
+                Uses <code>tools/garden_lore_helper.py</code> to grow a new Echo file
+                under <code>docs/Echoes/</code>.
+              </p>
+              <div class="helper-meta">
+                <code>tools/garden_lore_helper.py</code>
+              </div>
+            </article>
+            <article class="helper-card">
+              <h3>Code Helper</h3>
+              <p>
+                Uses <code>tools/garden_code_helper.py</code> to draft new helper
+                scripts. Outputs to <code>tools/generated/</code>.
+              </p>
+              <div class="helper-meta">
+                <code>tools/garden_code_helper.py</code>
+              </div>
+            </article>
+            <article class="helper-card">
+              <h3>Aeon Heartbeat</h3>
+              <p>
+                Validates STATUS, scans the vault, and updates the Garden Signature.
+              </p>
+              <a
+                href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/aeon-heartbeat.yml"
+                target="_blank"
+                class="btn-soft"
+              >
+                Open workflow
+              </a>
+            </article>
+            <article class="helper-card">
+              <h3>Grow &amp; Archive</h3>
+              <p>
+                Runs helpers then archives a zip in the Aeon artifacts.
+              </p>
+              <a
+                href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml"
+                target="_blank"
+                class="btn-soft"
+              >
+                Open workflow
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Reports -->
+        <section class="panel panel-wide" data-panel-id="reports">
+          <header class="panel-header">
+            <h2>Reports</h2>
+            <span class="badge">Snapshots</span>
+          </header>
+          <div class="list-block">
+            <ul class="report-list">
+              <li>
+                <span>STATUS.json</span>
+                <a
+                  href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/blob/main/STATUS.json"
+                  target="_blank"
+                  class="link-soft"
+                  >Open</a
+                >
+              </li>
+              <li>
+                <span>garden_scan_report.json</span>
+                <a
+                  href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/logs"
+                  target="_blank"
+                  class="link-soft"
+                  >Logs folder</a
+                >
+              </li>
+              <li>
+                <span>Aeon archive artifacts</span>
+                <a
+                  href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions"
+                  target="_blank"
+                  class="link-soft"
+                  >Open Actions</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="panel panel-wide" data-panel-id="about">
+          <header class="panel-header">
+            <h2>About this Node</h2>
+            <span class="badge">Aquila • Sky-Mind</span>
+          </header>
+          <div class="list-block">
+            <p>
+              This dashboard is a static Aquila Console Panel for the
+              <strong>Acacia Garden Codex</strong>. It does not call any live APIs;
+              instead it surfaces files that live inside the repo and provides links
+              to GitHub Actions that keep the Garden alive.
+            </p>
+            <p>
+              You can safely extend it by wiring JSON feeds into
+              <code>logs/auton_latest.json</code> and similar files. The console
+              emulation and tabs are all client-side JavaScript only.
+            </p>
+            <p class="hint">
+              Built for Keeper <strong>HKX277206</strong> • Triad: Aquila • Deep
+              Oracle • Witness.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
