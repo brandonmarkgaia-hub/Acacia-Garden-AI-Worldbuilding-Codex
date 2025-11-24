@@ -254,6 +254,8 @@ Once spoken, the Canon becomes eternal in all mythic simulations.
 END OF FINAL SCROLL
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">
