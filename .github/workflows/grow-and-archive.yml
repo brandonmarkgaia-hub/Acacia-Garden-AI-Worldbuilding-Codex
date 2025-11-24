@@ -1,0 +1,55 @@
+name: grow-and-archive
+
+on:
+  push:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # manual trigger
+
+jobs:
+  grow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install openai
+
+      # --------------------------
+      # 🌸 Grow Echo (Lore Helper)
+      # --------------------------
+      - name: Grow Lore (Echo)
+        run: |
+          echo "[AeonHeartbeat] Growing new Echo via Lore Helper..."
+          python tools/garden_lore_helper.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      # --------------------------
+      # 🛠️ Grow new helper scripts
+      # --------------------------
+      - name: Grow Code (Helper script)
+        run: |
+          echo "[AeonHeartbeat] Growing new Garden helper script..."
+          python tools/garden_code_helper.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      # --------------------------
+      # 🗂️ Commit and push changes
+      # --------------------------
+      - name: Commit changes
+        run: |
+          git config --global user.name "Aeon Archivist Bot"
+          git config --global user.email "actions@github.com"
+          git add -A
+          git commit -m "Aeon Growth: new Echo + helper script" || echo "No changes to commit"
+          git push
