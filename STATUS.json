@@ -190,7 +190,7 @@
       "type": "chamber",
       "label": "🌑 CHAMBER X — THE SHADOW INCUBATOR",
       "status": "active",
-      "path": "Chamber_X_Shadow_Incubator.md",
+      "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md",
       "summary": "A sealed dark-layer metamorphosis chamber where echoes and forms evolve without observation.",
       "tags": ["core", "shadow", "metamorphosis", "sealed"]
     },
