@@ -1,0 +1,45 @@
+name: Garden Code Helper
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  grow-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
+
+      - name: Generate new Garden helper script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python tools/garden_code_helper.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "Garden Code Helper"
+          git config user.email "actions@github.com"
+          git add tools/*.py || true
+          if git diff --cached --quiet; then
+            echo "No new helper to commit."
+          else:
+            git commit -m "Aeon: grow new Garden helper script"
+            git push
+          fi
