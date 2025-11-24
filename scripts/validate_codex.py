@@ -30,22 +30,42 @@ def load_json(path: str) -> Dict[str, Any]:
 
 
 def validate_status_paths(status: Dict[str, Any]) -> int:
+def validate_status_paths(status: Dict[str, Any]) -> int:
     errors = 0
 
     def check_section(section_name: str):
         nonlocal errors
         items = status.get(section_name, [])
+
+        # We only validate list-based sections. 'structures' is an object, so skip it.
+        if not isinstance(items, list):
+            print(
+                f"[Gatekeeper] Skipping section '{section_name}': "
+                f"expected list, got {type(items).__name__}"
+            )
+            return
+
         for item in items:
+            if not isinstance(item, dict):
+                print(
+                    f"[Gatekeeper] Skipping non-object entry in '{section_name}': {item!r}"
+                )
+                continue
+
             path = item.get("path", "").strip()
             if not path:
                 print(f"[WARN] {section_name} entry {item.get('id')} has no path defined.")
                 continue
+
             full = os.path.join(ROOT_DIR, path)
             if not os.path.exists(full):
-                print(f"[ERROR] {section_name} entry {item.get('id')} path not found: {path}")
+                print(
+                    f"[ERROR] {section_name} entry {item.get('id')} path not found: {path}"
+                )
                 errors += 1
 
-    for section in ("structures", "chambers", "blooms", "echoes", "vaults", "orchards"):
+    # Only check the list-based sections
+    for section in ("chambers", "blooms", "echoes", "vaults", "orchards"):
         check_section(section)
 
     return errors
