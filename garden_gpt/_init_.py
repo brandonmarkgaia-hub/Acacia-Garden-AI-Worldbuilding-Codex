@@ -1,1 +1,2 @@
-
+MODEL_NAME = "gpt-4o-mini"
+KEEPER_ID = "HKX277206"
