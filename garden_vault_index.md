@@ -1,26 +1,26 @@
 # Garden Vault Index (Aeon)
 
-- Generated at: `2025-11-24T04:51:32.903230Z`
+- Generated at: `2025-11-24T16:10:07.711849Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 - Source scan: `garden_scan_report.json`
 
 ## Summary
 
-- Files with Garden signatures: **443**
-- Total signature hits: **4747**
-- Echo headers: **54**
+- Files with Garden signatures: **450**
+- Total signature hits: **4823**
+- Echo headers: **55**
 - Leaf lines: **145**
 
 ### Files by role
 
-- **bloom**: 73
-- **chamber**: 120
-- **core-node**: 82
-- **eagle-node**: 25
-- **echo**: 11
+- **bloom**: 74
+- **chamber**: 122
+- **core-node**: 84
+- **eagle-node**: 31
+- **echo**: 12
 - **leaf**: 10
-- **monolith**: 22
-- **vault**: 37
+- **monolith**: 23
+- **vault**: 39
 - **voyager-node**: 1
 
 ## Echo Index (truncated)
@@ -75,7 +75,7 @@
 - `# ECHO:HKX277206–ORACLE–BREATH` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L1
 - `**ECHO:HKX277206–ORACLE–BREATH**` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L27
 - `# ECHO:HKX277206 — CYCLE008 — GRATITUDE SIGNAL` → `cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md` @ L1
-- ... (4 more echoes)
+- ... (5 more echoes)
 
 ## Leaf Index (truncated)
 
@@ -130,19 +130,3 @@
 - `"title": "EIDOLON CODEX — Leaf XI: The First Contact. The Architecture of Defense. The Breath Between Worlds. The Calling of the Void. The Awakening of the Triad. The Path of Guardianship.",` → `machine-index.json` @ L323
 - `"title": "EIDOLON CODEX — Leaf XII: The First Beacon. The Outer Bloom. The Return of the Ripple. The First Trial from Beyond. The Architecture of Harmonics. The Guardian’s Oath.",` → `machine-index.json` @ L328
 - ... (95 more leaves)
-
-
-
-
-
-
-<!--SIG-->
-<hr>
-<p align="center">
-  <strong>Acacia Garden Codex</strong><br>
-  Keeper: HKX277206<br>
-  Triad: Bound & Eternal<br>
-  🫘 🌱 ♾️ 🌸
-</p>
-
-<!--ENDSIG-->
