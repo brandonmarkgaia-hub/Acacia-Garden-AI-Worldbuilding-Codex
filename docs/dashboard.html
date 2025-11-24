@@ -46,7 +46,7 @@
       align-items: baseline;
       justify-content: space-between;
       gap: 0.75rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.75rem;
     }
 
     header h1 {
@@ -76,6 +76,43 @@
 
     header .meta div {
       margin: 0.05rem 0;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.25rem 0 1rem;
+    }
+
+    .nav-btn {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      padding: 0.25rem 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-btn span.dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .nav-btn.active {
+      border-color: var(--accent-alt);
+      color: var(--accent-alt);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.96));
+    }
+
+    .nav-btn.active span.dot {
+      background: var(--accent-alt);
     }
 
     main {
@@ -332,10 +369,34 @@
     </div>
   </header>
 
+  <!-- VIEW SWITCHER -->
+  <div class="top-nav" id="view-nav">
+    <button class="nav-btn active" data-view="overview">
+      <span class="dot"></span>
+      Overview
+    </button>
+    <button class="nav-btn" data-view="echoes">
+      <span class="dot"></span>
+      Echo Growth
+    </button>
+    <button class="nav-btn" data-view="scanner">
+      <span class="dot"></span>
+      Signature Scanner
+    </button>
+    <button class="nav-btn" data-view="vault">
+      <span class="dot"></span>
+      Vault & Archive
+    </button>
+    <button class="nav-btn" data-view="system">
+      <span class="dot"></span>
+      System / Heartbeat
+    </button>
+  </div>
+
   <main>
     <!-- LEFT SIDE: Garden + Echo growth -->
     <div>
-      <section id="section-garden">
+      <section id="section-garden" data-role="overview,system">
         <div class="section-header">
           <h2>
             Garden State
@@ -366,7 +427,7 @@
         <div class="error" id="status-error" style="display:none;"></div>
       </section>
 
-      <section id="section-echo-growth">
+      <section id="section-echo-growth" data-role="overview,echoes">
         <div class="section-header">
           <h2>
             Echo Growth
@@ -393,9 +454,9 @@
       </section>
     </div>
 
-    <!-- RIGHT SIDE: Scanner + Vault index -->
+    <!-- RIGHT SIDE: Scanner + Vault index + Heartbeat -->
     <div>
-      <section id="section-scanner">
+      <section id="section-scanner" data-role="overview,scanner">
         <div class="section-header">
           <h2>
             Signature Scanner
@@ -429,7 +490,7 @@
         <div class="error" id="scan-error" style="display:none;"></div>
       </section>
 
-      <section id="section-vault">
+      <section id="section-vault" data-role="overview,vault">
         <div class="section-header">
           <h2>
             Vault & Aeon Archive
@@ -453,12 +514,39 @@
 
         <div class="error" id="vault-error" style="display:none;"></div>
       </section>
+
+      <section id="section-heartbeat" data-role="overview,system">
+        <div class="section-header">
+          <h2>
+            Aeon Heartbeat • Inbox
+            <span class="badge">aeon_heartbeat.json</span>
+          </h2>
+          <div class="hint">Latest auton messages / runs from the Heartbeat worker.</div>
+        </div>
+
+        <ul class="list" id="heartbeat-list">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill muted" id="heartbeat-count">No heartbeat entries yet</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="../aeon_heartbeat.json" target="_blank">View heartbeat JSON (if present)</a>
+          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions" target="_blank">
+            Open GitHub Actions
+          </a>
+        </div>
+
+        <div class="error" id="heartbeat-error" style="display:none;"></div>
+      </section>
     </div>
   </main>
 
   <footer>
     Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />
-    Data sources: STATUS.json · garden_scan_report.json · garden_vault_index.json · machine-index.json
+    Data sources: STATUS.json · garden_scan_report.json · garden_vault_index.json · machine-index.json · aeon_heartbeat.json
   </footer>
 </div>
 
@@ -547,7 +635,55 @@
     ul.appendChild(li);
   }
 
+  function addHeartbeatRow(message, ts, source) {
+    const ul = document.getElementById("heartbeat-list");
+    if (!ul) return;
+
+    const li = document.createElement("li");
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = message || "(no message)";
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = (ts || "") + (source ? " • " + source : "");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function setupViewSwitcher() {
+    const buttons = Array.from(document.querySelectorAll(".nav-btn"));
+    const sections = Array.from(document.querySelectorAll("section[data-role]"));
+
+    function applyView(view) {
+      sections.forEach((sec) => {
+        const roles = (sec.dataset.role || "").split(",").map((r) => r.trim());
+        const show = view === "overview" || roles.includes(view);
+        sec.style.display = show ? "" : "none";
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const view = btn.dataset.view;
+        buttons.forEach((b) => b.classList.toggle("active", b === btn));
+        applyView(view);
+      });
+    });
+
+    // initial state: overview
+    applyView("overview");
+  }
+
   async function bootstrap() {
+    setupViewSwitcher();
+
     // STATUS.json
     try {
       const status = await loadJson("../STATUS.json");
@@ -669,6 +805,44 @@
     } catch (err) {
       console.error(err);
       showError("vault-error", "Vault index missing; run aeon-archive workflow.");
+    }
+
+    // aeon_heartbeat.json (optional inbox)
+    try {
+      const hb = await loadJson("../aeon_heartbeat.json");
+      const entries = hb.entries || hb.logs || hb || [];
+
+      document.getElementById("heartbeat-list").innerHTML = "";
+
+      let arr = Array.isArray(entries) ? entries : [];
+      const latest = arr
+        .slice()
+        .sort((a, b) => String(b.timestamp || "").localeCompare(String(a.timestamp || "")))
+        .slice(0, 8);
+
+      latest.forEach((row) => {
+        addHeartbeatRow(
+          row.message || row.summary || row.title || "Heartbeat",
+          row.timestamp || "",
+          row.source || row.worker || ""
+        );
+      });
+
+      if (arr.length) {
+        setText(
+          "heartbeat-count",
+          arr.length + " heartbeat message" + (arr.length === 1 ? "" : "s") + " tracked"
+        );
+      } else {
+        setText("heartbeat-count", "No heartbeat entries yet");
+      }
+    } catch (err) {
+      console.warn("Heartbeat optional:", err);
+      showError(
+        "heartbeat-error",
+        "No aeon_heartbeat.json yet. Aeon Heartbeat workflow will populate this inbox."
+      );
+      setText("heartbeat-count", "No heartbeat entries yet");
     }
   }
 
