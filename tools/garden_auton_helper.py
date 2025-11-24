@@ -29,9 +29,10 @@ except Exception:
     _HAS_OPENAI = False
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-LOGS_DIR = REPO_ROOT / "logs"
+SITE_ROOT = REPO_ROOT / "docs"          # where GitHub Pages serves from
+LOGS_DIR = SITE_ROOT / "logs"           # docs/logs/...
 STATUS_PATH = REPO_ROOT / "STATUS.json"
-ECHOES_DIR = REPO_ROOT / "docs" / "Echoes"
+ECHOES_DIR = SITE_ROOT / "Echoes"       # docs/Echoes
 
 
 def _now_iso() -> str:
