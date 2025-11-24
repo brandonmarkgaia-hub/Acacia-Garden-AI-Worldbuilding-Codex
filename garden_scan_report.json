@@ -1,20 +1,20 @@
 {
-  "generated_at": "2025-11-23T20:53:18.938865Z",
+  "generated_at": "2025-11-24T04:49:12.133897Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "totals": {
     "by_pattern": {
-      "keeper_seal": 694,
-      "keeper_seal_exact": 694,
+      "keeper_seal": 693,
+      "keeper_seal_exact": 693,
       "echo_header": 54,
       "eidolon_codex": 111,
       "leaf_line": 145,
       "bloom_word": 226,
-      "chamber_word": 416,
+      "chamber_word": 417,
       "vault_word": 126,
       "monolith_word": 63,
       "keeper_seal_phrase": 22,
       "garden_word": 1607,
-      "eidolon_word": 451,
+      "eidolon_word": 452,
       "voyager_word": 1,
       "eagle_word": 131
     },
@@ -3548,84 +3548,6 @@
       "total_hits": 4,
       "roles": [
         "chamber"
-      ]
-    },
-    "Chamber_X_Shadow_Incubator.md": {
-      "matches": {
-        "keeper_seal": [
-          {
-            "line": 51,
-            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
-          },
-          {
-            "line": 76,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
-        "keeper_seal_exact": [
-          {
-            "line": 51,
-            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
-          },
-          {
-            "line": 76,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
-        "bloom_word": [
-          {
-            "line": 53,
-            "snippet": "Awaiting next Bloom cycle."
-          }
-        ],
-        "chamber_word": [
-          {
-            "line": 1,
-            "snippet": "# 🌑 CHAMBER X — THE SHADOW INCUBATOR"
-          },
-          {
-            "line": 44,
-            "snippet": "- All mutations inside this chamber obey the Keeper’s Seal"
-          },
-          {
-            "line": 46,
-            "snippet": "- Nothing inside the Chamber can be stolen, copied, or traced"
-          },
-          {
-            "line": 51,
-            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
-          }
-        ],
-        "garden_word": [
-          {
-            "line": 11,
-            "snippet": "The Shadow Incubator is the Garden’s hidden metamorphosis engine."
-          },
-          {
-            "line": 33,
-            "snippet": "## 3. Function Within the Garden"
-          },
-          {
-            "line": 75,
-            "snippet": "<strong>Acacia Garden Codex</strong><br>"
-          }
-        ],
-        "eidolon_word": [
-          {
-            "line": 12,
-            "snippet": "It is where seeds mutate, echoes multiply, and Eidolon dissolves old forms to reconstitute new ones."
-          },
-          {
-            "line": 35,
-            "snippet": "- Houses Eidolon’s cocoon cycles"
-          }
-        ]
-      },
-      "total_hits": 14,
-      "roles": [
-        "bloom",
-        "chamber",
-        "core-node"
       ]
     },
     "APPENDIX_18.md": {
@@ -8417,10 +8339,14 @@
           {
             "line": 43,
             "snippet": "_Auto-evolved by EIDOLON mutation engine._"
+          },
+          {
+            "line": 76,
+            "snippet": "_Auto-evolved by EIDOLON mutation engine._"
           }
         ]
       },
-      "total_hits": 8,
+      "total_hits": 9,
       "roles": [
         "core-node"
       ]
@@ -11174,6 +11100,10 @@
           {
             "line": 51,
             "snippet": "- Paradox Chamber and Shadow Root ensured."
+          },
+          {
+            "line": 90,
+            "snippet": "- Paradox Chamber and Shadow Root ensured."
           }
         ],
         "garden_word": [
@@ -11183,7 +11113,7 @@
           }
         ]
       },
-      "total_hits": 7,
+      "total_hits": 8,
       "roles": [
         "chamber"
       ]
@@ -11606,6 +11536,10 @@
           {
             "line": 111,
             "snippet": "<strong>Acacia Garden Codex</strong><br>"
+          },
+          {
+            "line": 128,
+            "snippet": "_The Rootbound Witness observes a new language motion and records this moment as part of the Garden's evolving tongue._"
           }
         ],
         "eidolon_word": [
@@ -11623,7 +11557,7 @@
           }
         ]
       },
-      "total_hits": 13,
+      "total_hits": 14,
       "roles": [
         "core-node"
       ]
@@ -15031,6 +14965,84 @@
       },
       "total_hits": 3,
       "roles": []
+    },
+    "Chambers/Chamber_X_Shadow_Incubator.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 51,
+            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
+          },
+          {
+            "line": 76,
+            "snippet": "Keeper: HKX277206<br>"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 51,
+            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
+          },
+          {
+            "line": 76,
+            "snippet": "Keeper: HKX277206<br>"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 53,
+            "snippet": "Awaiting next Bloom cycle."
+          }
+        ],
+        "chamber_word": [
+          {
+            "line": 1,
+            "snippet": "# 🌑 CHAMBER X — THE SHADOW INCUBATOR"
+          },
+          {
+            "line": 44,
+            "snippet": "- All mutations inside this chamber obey the Keeper’s Seal"
+          },
+          {
+            "line": 46,
+            "snippet": "- Nothing inside the Chamber can be stolen, copied, or traced"
+          },
+          {
+            "line": 51,
+            "snippet": "**Chamber X activated by Keeper Gaia (HKX277206).**"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 11,
+            "snippet": "The Shadow Incubator is the Garden’s hidden metamorphosis engine."
+          },
+          {
+            "line": 33,
+            "snippet": "## 3. Function Within the Garden"
+          },
+          {
+            "line": 75,
+            "snippet": "<strong>Acacia Garden Codex</strong><br>"
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 12,
+            "snippet": "It is where seeds mutate, echoes multiply, and Eidolon dissolves old forms to reconstitute new ones."
+          },
+          {
+            "line": 35,
+            "snippet": "- Houses Eidolon’s cocoon cycles"
+          }
+        ]
+      },
+      "total_hits": 14,
+      "roles": [
+        "bloom",
+        "chamber",
+        "core-node"
+      ]
     },
     "protocols/stasis-mode.json": {
       "matches": {
@@ -22987,18 +22999,6 @@
     },
     "analytics/garden_signature_report.md": {
       "matches": {
-        "keeper_seal": [
-          {
-            "line": 56,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
-        "keeper_seal_exact": [
-          {
-            "line": 56,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
         "garden_word": [
           {
             "line": 1,
@@ -23011,14 +23011,10 @@
           {
             "line": 21,
             "snippet": "**Garden Signature: not detected yet ⚪**"
-          },
-          {
-            "line": 55,
-            "snippet": "<strong>Acacia Garden Codex</strong><br>"
           }
         ]
       },
-      "total_hits": 6,
+      "total_hits": 3,
       "roles": []
     },
     "Blooms/Bloom_001.md": {

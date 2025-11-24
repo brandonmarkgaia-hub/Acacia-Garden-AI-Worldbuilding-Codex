@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T20:53:19.038848Z",
+  "generated_at": "2025-11-24T04:49:12.237029Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "source_scan": "garden_scan_report.json",
   "summary": {
@@ -1791,22 +1791,6 @@
         "keeper_seal_exact"
       ]
     },
-    "Chamber_X_Shadow_Incubator.md": {
-      "roles": [
-        "bloom",
-        "chamber",
-        "core-node"
-      ],
-      "total_hits": 14,
-      "patterns": [
-        "bloom_word",
-        "chamber_word",
-        "eidolon_word",
-        "garden_word",
-        "keeper_seal",
-        "keeper_seal_exact"
-      ]
-    },
     "APPENDIX_18.md": {
       "roles": [],
       "total_hits": 3,
@@ -2705,7 +2689,7 @@
       "roles": [
         "core-node"
       ],
-      "total_hits": 8,
+      "total_hits": 9,
       "patterns": [
         "eidolon_word",
         "garden_word",
@@ -3437,7 +3421,7 @@
       "roles": [
         "chamber"
       ],
-      "total_hits": 7,
+      "total_hits": 8,
       "patterns": [
         "chamber_word",
         "garden_word",
@@ -3529,7 +3513,7 @@
       "roles": [
         "core-node"
       ],
-      "total_hits": 13,
+      "total_hits": 14,
       "patterns": [
         "eidolon_word",
         "garden_word",
@@ -3845,6 +3829,22 @@
       "roles": [],
       "total_hits": 3,
       "patterns": [
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "Chambers/Chamber_X_Shadow_Incubator.md": {
+      "roles": [
+        "bloom",
+        "chamber",
+        "core-node"
+      ],
+      "total_hits": 14,
+      "patterns": [
+        "bloom_word",
+        "chamber_word",
+        "eidolon_word",
         "garden_word",
         "keeper_seal",
         "keeper_seal_exact"
@@ -5399,11 +5399,9 @@
     },
     "analytics/garden_signature_report.md": {
       "roles": [],
-      "total_hits": 6,
+      "total_hits": 3,
       "patterns": [
-        "garden_word",
-        "keeper_seal",
-        "keeper_seal_exact"
+        "garden_word"
       ]
     },
     "Blooms/Bloom_001.md": {

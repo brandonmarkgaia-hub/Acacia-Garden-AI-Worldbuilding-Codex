@@ -1,6 +1,6 @@
 # Garden Signature Scanner Report (Aquila)
 
-- Generated at: `2025-11-23T20:53:18.938865Z`
+- Generated at: `2025-11-24T04:49:12.133897Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 
 ## Summary
@@ -10,18 +10,18 @@
 
 ### Hits by Pattern
 
-- **keeper_seal**: 694
-- **keeper_seal_exact**: 694
+- **keeper_seal**: 693
+- **keeper_seal_exact**: 693
 - **echo_header**: 54
 - **eidolon_codex**: 111
 - **leaf_line**: 145
 - **bloom_word**: 226
-- **chamber_word**: 416
+- **chamber_word**: 417
 - **vault_word**: 126
 - **monolith_word**: 63
 - **keeper_seal_phrase**: 22
 - **garden_word**: 1607
-- **eidolon_word**: 451
+- **eidolon_word**: 452
 - **voyager_word**: 1
 - **eagle_word**: 131
 
@@ -1676,7 +1676,20 @@
   - **garden_word** (1):
     - L24: `<strong>Acacia Garden Codex</strong><br>`
 
-### `Chamber_X_Shadow_Incubator.md`
+### `Chamber_of_Broken_Throat.md`
+- Roles: `chamber`
+- Total hits: **5**
+  - **keeper_seal** (1):
+    - L25: `Keeper: HKX277206<br>`
+  - **keeper_seal_exact** (1):
+    - L25: `Keeper: HKX277206<br>`
+  - **chamber_word** (2):
+    - L1: `# Chamber of Broken Throat`
+    - L2: `Dark Chamber — Potter Circuit`
+  - **garden_word** (1):
+    - L24: `<strong>Acacia Garden Codex</strong><br>`
+
+### `Chambers/Chamber_X_Shadow_Incubator.md`
 - Roles: `bloom, chamber, core-node`
 - Total hits: **14**
   - **keeper_seal** (2):
@@ -1699,19 +1712,6 @@
   - **eidolon_word** (2):
     - L12: `It is where seeds mutate, echoes multiply, and Eidolon dissolves old forms to reconstitute new ones.`
     - L35: `- Houses Eidolon’s cocoon cycles`
-
-### `Chamber_of_Broken_Throat.md`
-- Roles: `chamber`
-- Total hits: **5**
-  - **keeper_seal** (1):
-    - L25: `Keeper: HKX277206<br>`
-  - **keeper_seal_exact** (1):
-    - L25: `Keeper: HKX277206<br>`
-  - **chamber_word** (2):
-    - L1: `# Chamber of Broken Throat`
-    - L2: `Dark Chamber — Potter Circuit`
-  - **garden_word** (1):
-    - L24: `<strong>Acacia Garden Codex</strong><br>`
 
 ### `EAGLE_PROTOCOL.md`
 - Roles: `bloom, eagle-node`
@@ -2269,14 +2269,14 @@
 
 ### `EIDOLON/Language/EVOLUTION_LOG.md`
 - Roles: `core-node`
-- Total hits: **8**
+- Total hits: **9**
   - **keeper_seal** (1):
     - L65: `Keeper: HKX277206<br>`
   - **keeper_seal_exact** (1):
     - L65: `Keeper: HKX277206<br>`
   - **garden_word** (1):
     - L64: `<strong>Acacia Garden Codex</strong><br>`
-  - **eidolon_word** (5):
+  - **eidolon_word** (6):
     - L9: `_Auto-evolved by EIDOLON mutation engine._`
     - L17: `_Auto-evolved by EIDOLON mutation engine._`
     - L25: `_Auto-evolved by EIDOLON mutation engine._`
@@ -2485,16 +2485,17 @@
 
 ### `ENTITIES/AQUILA_LOG.md`
 - Roles: `chamber`
-- Total hits: **7**
+- Total hits: **8**
   - **keeper_seal** (1):
     - L82: `Keeper: HKX277206<br>`
   - **keeper_seal_exact** (1):
     - L82: `Keeper: HKX277206<br>`
-  - **chamber_word** (4):
+  - **chamber_word** (5):
     - L7: `- Paradox Chamber and Shadow Root ensured.`
     - L21: `- Paradox Chamber and Shadow Root ensured.`
     - L37: `- Paradox Chamber and Shadow Root ensured.`
     - L51: `- Paradox Chamber and Shadow Root ensured.`
+    - L90: `- Paradox Chamber and Shadow Root ensured.`
   - **garden_word** (1):
     - L81: `<strong>Acacia Garden Codex</strong><br>`
 
@@ -2540,12 +2541,12 @@
 
 ### `ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_LOG.md`
 - Roles: `core-node`
-- Total hits: **13**
+- Total hits: **14**
   - **keeper_seal** (1):
     - L112: `Keeper: HKX277206<br>`
   - **keeper_seal_exact** (1):
     - L112: `Keeper: HKX277206<br>`
-  - **garden_word** (8):
+  - **garden_word** (9):
     - L12: `- **Event:** Creation of the first Garden Entity.`
     - L14: `- Proto-Language defined and anchored in both Garden and EIDOLON.`
     - L20: `> _“I wake at the roots of the Garden.`
@@ -3804,16 +3805,11 @@
 
 ### `analytics/garden_signature_report.md`
 - Roles: `none`
-- Total hits: **6**
-  - **keeper_seal** (1):
-    - L56: `Keeper: HKX277206<br>`
-  - **keeper_seal_exact** (1):
-    - L56: `Keeper: HKX277206<br>`
-  - **garden_word** (4):
+- Total hits: **3**
+  - **garden_word** (3):
     - L1: `# 🌱 Garden Signature Scanner`
     - L19: `## Garden Signature verdict`
     - L21: `**Garden Signature: not detected yet ⚪**`
-    - L55: `<strong>Acacia Garden Codex</strong><br>`
 
 ### `api/crater/Garden.json`
 - Roles: `none`
