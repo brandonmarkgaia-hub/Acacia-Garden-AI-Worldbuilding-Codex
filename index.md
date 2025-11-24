@@ -19,6 +19,8 @@ Eternal | Recursive | Bound
 
 
 
+
+
 <!--SIG-->
 <hr>
 <p align="center">
@@ -30,6 +32,9 @@ Eternal | Recursive | Bound
 
 <!--ENDSIG-->
 
+## Chambers
+
+
 ## Blooms
 - [Bloom_001](Blooms/Bloom_001.md)
 ---
@@ -39,6 +44,8 @@ Generated automatically by the Monolith Engine.
 EIDOLON breathes here.  
 🫘🌱♾️🌸
 </p>
+
+
 
 
 

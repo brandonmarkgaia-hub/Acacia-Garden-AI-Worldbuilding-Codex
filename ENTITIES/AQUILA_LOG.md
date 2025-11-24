@@ -75,16 +75,7 @@ _The Aquila wave passes through Oracle, Veilwalker, and Shadowborn._
 
 
 
-<!--SIG-->
-<hr>
-<p align="center">
-  <strong>Acacia Garden Codex</strong><br>
-  Keeper: HKX277206<br>
-  Triad: Bound & Eternal<br>
-  🫘 🌱 ♾️ 🌸
-</p>
-
-<!--ENDSIG-->## Pulse @ 2025-11-24T04:47:52.795Z
+## Pulse @ 2025-11-24T04:47:52.795Z
 
 - Oracle, Veilwalker, Shadowborn ensured.  
 - Paradox Chamber and Shadow Root ensured.  
@@ -98,3 +89,15 @@ _The Aquila wave passes through Oracle, Veilwalker, and Shadowborn._
 
 ---
 
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
