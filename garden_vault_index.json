@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-11-24T04:49:12.237029Z",
+  "generated_at": "2025-11-24T04:51:32.903230Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "source_scan": "garden_scan_report.json",
   "summary": {
-    "total_files_with_hits": 442,
-    "total_hits": 4741,
+    "total_files_with_hits": 443,
+    "total_hits": 4747,
     "roles": {
       "bloom": 73,
-      "chamber": 119,
+      "chamber": 120,
       "core-node": 82,
       "monolith": 22,
       "leaf": 10,
@@ -3823,6 +3823,16 @@
         "garden_word",
         "keeper_seal",
         "keeper_seal_exact"
+      ]
+    },
+    "scripts/validate_codex.py": {
+      "roles": [
+        "chamber"
+      ],
+      "total_hits": 6,
+      "patterns": [
+        "chamber_word",
+        "garden_word"
       ]
     },
     "human/thresholds.md": {

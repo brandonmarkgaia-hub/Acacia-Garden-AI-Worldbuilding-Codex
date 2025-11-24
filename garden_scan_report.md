@@ -1,12 +1,12 @@
 # Garden Signature Scanner Report (Aquila)
 
-- Generated at: `2025-11-24T04:49:12.133897Z`
+- Generated at: `2025-11-24T04:51:32.782029Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 
 ## Summary
 
-- Total files with Garden signatures: **442**
-- Total signature hits: **4741**
+- Total files with Garden signatures: **443**
+- Total signature hits: **4747**
 
 ### Hits by Pattern
 
@@ -16,11 +16,11 @@
 - **eidolon_codex**: 111
 - **leaf_line**: 145
 - **bloom_word**: 226
-- **chamber_word**: 417
+- **chamber_word**: 422
 - **vault_word**: 126
 - **monolith_word**: 63
 - **keeper_seal_phrase**: 22
-- **garden_word**: 1607
+- **garden_word**: 1608
 - **eidolon_word**: 452
 - **voyager_word**: 1
 - **eagle_word**: 131
@@ -28,7 +28,7 @@
 ### Files by Role
 
 - **bloom**: 73
-- **chamber**: 119
+- **chamber**: 120
 - **core-node**: 82
 - **eagle-node**: 25
 - **echo**: 11
@@ -6522,6 +6522,18 @@
     - L8: `- Dispatches to the Eagle core`
     - L9: `- Writes output into eagle/output/`
     - L15: `from eagle.config import KEEPER_ID, EagleJob`
+
+### `scripts/validate_codex.py`
+- Roles: `chamber`
+- Total hits: **6**
+  - **chamber_word** (5):
+    - L10: `- Chamber files have chamber_word hits.`
+    - L75: `for chamber in status.get("chambers", []):`
+    - L76: `path = chamber.get("path", "").strip()`
+    - L81: `print(f"[WARN] Chamber {chamber.get('id')} file not in scanner index: {path}")`
+    - L86: `print(f"[WARN] Chamber {chamber.get('id')} has no 'chamber' word hits in scan: {path}")`
+  - **garden_word** (1):
+    - L3: `Garden Codex Validator (Gatekeeper)`
 
 ### `seed_leaves.sh`
 - Roles: `bloom, leaf, vault`

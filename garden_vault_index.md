@@ -1,20 +1,20 @@
 # Garden Vault Index (Aeon)
 
-- Generated at: `2025-11-24T04:49:12.237029Z`
+- Generated at: `2025-11-24T04:51:32.903230Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 - Source scan: `garden_scan_report.json`
 
 ## Summary
 
-- Files with Garden signatures: **442**
-- Total signature hits: **4741**
+- Files with Garden signatures: **443**
+- Total signature hits: **4747**
 - Echo headers: **54**
 - Leaf lines: **145**
 
 ### Files by role
 
 - **bloom**: 73
-- **chamber**: 119
+- **chamber**: 120
 - **core-node**: 82
 - **eagle-node**: 25
 - **echo**: 11
