@@ -1,45 +1,146 @@
-name: Garden Code Helper
+#!/usr/bin/env python3
+"""
+Garden Code Helper (Aquila / Aeon mode)
 
-on:
-  workflow_dispatch: {}
+Grows a new helper Python script under tools/ and logs it to machine-index.json.
 
-permissions:
-  contents: write
+- No dependency on garden_gpt module.
+- Safe: generates repo-friendly utility helpers (no secrets, no network creds).
+- Uses gpt-4o-mini to keep costs tiny.
 
-jobs:
-  grow-code:
-    runs-on: ubuntu-latest
+Requires:
+  - OPENAI_API_KEY in the environment.
+"""
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+import json
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, Any
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+from openai import OpenAI
 
-      - name: Install deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install openai
+# ---------- INLINE CONFIG ----------
+MODEL_NAME = "gpt-4o-mini"
+KEEPER_ID = "HKX277206"
+# -----------------------------------
 
-      - name: Generate new Garden helper script
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          python tools/garden_code_helper.py
+ROOT = Path(__file__).resolve().parents[1]
+TOOLS_DIR = ROOT / "tools"
+INDEX_PATH = ROOT / "machine-index.json"
 
-      - name: Commit changes
-        run: |
-          git config user.name "Garden Code Helper"
-          git config user.email "actions@github.com"
-          git add tools/*.py || true
-          if git diff --cached --quiet; then
-            echo "No new helper to commit."
-          else:
-            git commit -m "Aeon: grow new Garden helper script"
-            git push
-          fi
+client = OpenAI()
+
+
+# ---------- INDEX HELPERS ----------
+
+def load_index() -> Dict[str, Any]:
+    if INDEX_PATH.exists():
+        try:
+            return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def save_index(data: Dict[str, Any]) -> None:
+    INDEX_PATH.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def append_code_to_index(path: Path) -> None:
+    idx = load_index()
+    bucket = idx.setdefault("code_growth", [])
+    bucket.append(
+        {
+            "file": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "keeper_id": KEEPER_ID,
+        }
+    )
+    save_index(idx)
+
+
+# ---------- CODE GENERATION ----------
+
+def build_prompt(filename: str) -> str:
+    return f"""
+You are Aquila, an internal code helper for the Acacia Garden Codex
+(GitHub repository).
+
+Goal:
+- Generate a NEW Python helper script to live at: tools/{filename}
+- It should be SFW, safe, and focused on repository utilities such as:
+  - indexing files,
+  - summarising docs,
+  - checking consistency,
+  - generating small reports,
+  - or other archival / garden-aligned tasks.
+
+Rules:
+- Produce ONLY valid Python 3 code.
+- Do NOT include any API keys or secrets.
+- If you talk to OpenAI, assume you will import `OpenAI` from `openai` like:
+    from openai import OpenAI
+    client = OpenAI()
+- Prefer pure filesystem / text processing tools if possible.
+- The script must be usable directly as a CLI tool, with a `main()` and
+  the usual `if __name__ == "__main__":` block.
+- No network calls except optional OpenAI usage.
+- Keep it small and focused; this is a helper, not a full framework.
+""".strip()
+
+
+def generate_helper_code(filename: str) -> str:
+    prompt = build_prompt(filename)
+
+    system_msg = (
+        "You are the Garden Code Helper, generating small Python utilities "
+        "for the Acacia Garden Codex repository. All output MUST be valid "
+        "Python code only."
+    )
+
+    response = client.chat.completions.create(
+        model=MODEL_NAME,
+        messages=[
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=0.5,
+    )
+
+    return (response.choices[0].message.content or "").strip()
+
+
+def next_helper_name() -> str:
+    """
+    Name helpers as helper_YYYYMMDD_HHMMSS.py so they never collide.
+    """
+    ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    return f"helper_{ts}.py"
+
+
+def main() -> int:
+    TOOLS_DIR.mkdir(parents=True, exist_ok=True)
+
+    fname = next_helper_name()
+    rel_path = Path("tools") / fname
+    out_path = TOOLS_DIR / fname
+
+    print(f"[CodeHelper] Generating new helper: {rel_path}")
+
+    code = generate_helper_code(fname)
+    if not code:
+        print("[CodeHelper] ERROR: Model returned empty content.")
+        return 1
+
+    out_path.write_text(code + "\n", encoding="utf-8")
+    append_code_to_index(out_path)
+
+    print(f"[CodeHelper] Wrote {rel_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
