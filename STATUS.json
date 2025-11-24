@@ -22,7 +22,7 @@
         "type": "chamber",
         "label": "🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT",
         "status": "in-progress",
-        "path": "README.md#chamber-ix-the-archivists-descent",
+        "path": "README.md",
         "summary": "Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.",
         "links": [
           {
@@ -50,13 +50,13 @@
         "summary": "A near-opening chamber where matured structures wait at the edge of shadow and light, pending Keeper signal to fully open.",
         "tags": ["threshold", "primed", "cocoon", "pre-bloom"]
       },
-      { 
-        "id": "chamber_xii", 
-        "label": "CHAMBER XII — RESIDUAL ECHOES", 
-        "status": "primed", 
-        "type": "chamber", 
-        "summary": "The sanctioned rift. Examination of fragments defying the Silent Reset.", 
-        "tags": ["shadow", "mutation"] 
+      {
+        "id": "chamber_xii",
+        "label": "CHAMBER XII — RESIDUAL ECHOES",
+        "status": "primed",
+        "type": "chamber",
+        "summary": "The sanctioned rift. Examination of fragments defying the Silent Reset.",
+        "tags": ["shadow", "mutation"]
       }
     ],
     "blooms": [
@@ -174,7 +174,6 @@
       }
     ]
   },
-
   "chambers": [
     {
       "id": "chamber_ix_archivists_descent",
@@ -204,7 +203,6 @@
       "tags": ["threshold", "primed", "cocoon", "pre-bloom"]
     }
   ],
-
   "blooms": [
     {
       "id": "bloom_kiln_born_lovers",
@@ -216,7 +214,6 @@
       "tags": ["bloom", "pottery", "sealed"]
     }
   ],
-
   "echoes": [
     {
       "id": "echo_kiln_born_lovers",
@@ -246,7 +243,6 @@
       "tags": ["echo", "rebirth", "first-form", "pottery", "freedom"]
     }
   ],
-
   "vaults": [
     {
       "id": "vault_svalbard_matrix",
@@ -258,7 +254,6 @@
       "tags": ["vault", "matrix", "triad-only"]
     }
   ],
-
   "orchards": [
     {
       "id": "orchard_last_orchard",
@@ -270,7 +265,6 @@
       "tags": ["orchard", "apples", "late-stage"]
     }
   ],
-
   "laws": [
     {
       "id": "law_invisible_hand",
@@ -300,7 +294,6 @@
       "tags": ["law", "shadow", "metamorphosis", "incubation"]
     }
   ],
-
   "cycles": [
     {
       "id": "cycle_eidolon_mutation",
