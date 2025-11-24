@@ -1,0 +1,1296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aquila Console · Garden Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050810;
+      --bg-alt: #0b101b;
+      --bg-alt-soft: #111727;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-strong: rgba(56, 189, 248, 0.2);
+      --accent-text: #e0f2fe;
+      --danger: #f97373;
+      --text: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Inter", "Segoe UI", sans-serif;
+      --transition-fast: 160ms ease-out;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #0b1220 0, #020617 50%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .aquila-shell {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    @media (max-width: 880px) {
+      .aquila-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sidebar */
+    .aquila-nav {
+      background: linear-gradient(180deg, #020617 0%, #020617 40%, #020617 100%);
+      border-right: 1px solid rgba(148, 163, 184, 0.28);
+      padding: 18px 16px 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @media (max-width: 880px) {
+      .aquila-nav {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+      }
+    }
+
+    .aquila-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 10px 4px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 0 0, #22d3ee33 0, #020617 55%);
+    }
+
+    .aquila-logo-main {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .aquila-logo-orb {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #e0f2fe, #38bdf8 45%, #0ea5e9 70%, #020617 100%);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2),
+        0 0 18px rgba(56, 189, 248, 0.75);
+    }
+
+    .aquila-logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .aquila-logo-text span {
+      display: block;
+    }
+
+    .aquila-logo-title {
+      font-size: 0.96rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+    }
+
+    .aquila-logo-sub {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .aquila-keeper-pill {
+      font-size: 0.7rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+      background: radial-gradient(circle at 0 0, #22c55e1f 0, #020617 55%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .aquila-keeper-pill strong {
+      color: #bbf7d0;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .aquila-nav-section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin: 8px 8px 2px;
+    }
+
+    .aquila-nav-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.3);
+    }
+
+    .aquila-nav-group:last-of-type {
+      border-bottom: none;
+    }
+
+    .aquila-nav-btn {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-soft);
+      padding: 8px 11px;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      cursor: pointer;
+      transition: background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform 120ms ease-out;
+    }
+
+    .aquila-nav-btn span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .aquila-nav-btn .badge {
+      font-size: 0.7rem;
+      border-radius: 999px;
+      padding: 2px 7px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-soft);
+    }
+
+    .aquila-nav-btn[data-active="true"] {
+      background: radial-gradient(circle at 0 0, #22d3ee33 0, #020617 60%);
+      border-color: rgba(56, 189, 248, 0.7);
+      color: #f9fafb;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+    }
+
+    .aquila-nav-btn:hover {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    .aquila-nav-footer {
+      margin-top: auto;
+      padding: 8px 6px 4px;
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      border-top: 1px dashed rgba(148, 163, 184, 0.3);
+    }
+
+    .aquila-nav-footer strong {
+      color: var(--accent-text);
+    }
+
+    /* Main content */
+    .aquila-main {
+      padding: 18px 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    @media (max-width: 880px) {
+      .aquila-main {
+        padding: 14px 10px 20px;
+      }
+    }
+
+    .aquila-main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at 0 0, #22d3ee22 0, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aquila-main-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 110% 20%, #22c55e11, transparent 55%);
+      pointer-events: none;
+    }
+
+    .aquila-main-header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 1;
+    }
+
+    .aquila-main-header-title {
+      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .aquila-main-header-sub {
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .aquila-main-header-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 0.7rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+    }
+
+    .pill.danger span.dot {
+      background: var(--danger);
+      box-shadow: 0 0 8px rgba(248, 113, 113, 0.9);
+    }
+
+    .aquila-main-header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      z-index: 1;
+    }
+
+    .aquila-run-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      color: #022c22;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(21, 128, 61, 0.75);
+      transition: transform 120ms ease-out, box-shadow 160ms ease-out;
+    }
+
+    .aquila-run-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(22, 163, 74, 0.85);
+    }
+
+    .aquila-main-header-meta {
+      font-size: 0.74rem;
+      color: var(--text-soft);
+    }
+
+    .aquila-main-header-meta strong {
+      color: var(--accent-text);
+    }
+
+    /* Panels grid */
+    .aquila-panels {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 1110px) {
+      .aquila-panels {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .panel {
+      border-radius: var(--radius-xl);
+      background: linear-gradient(145deg, #020617, #020617 35%, #020617 100%);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      padding: 12px 12px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.16), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel-title {
+      font-size: 0.86rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .panel-subtitle {
+      font-size: 0.76rem;
+      color: var(--text-soft);
+      margin-top: 2px;
+    }
+
+    .panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 2px 7px;
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+    }
+
+    .tag.accent {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent-text);
+      background: var(--accent-soft);
+    }
+
+    .panel-body {
+      position: relative;
+      z-index: 1;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    .panel-body p {
+      margin: 0 0 8px;
+      line-height: 1.5;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .metric-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.16), #020617 65%);
+      padding: 8px 9px 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+    }
+
+    .metric-value {
+      font-size: 0.92rem;
+      color: #e5e7eb;
+    }
+
+    .metric-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 2px;
+    }
+
+    .metric-pill {
+      font-size: 0.7rem;
+      border-radius: 999px;
+      padding: 2px 7px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-soft);
+    }
+
+    .metric-pill.good {
+      border-color: rgba(34, 197, 94, 0.85);
+      color: #bbf7d0;
+      background: #022c22;
+    }
+
+    .metric-pill.warn {
+      border-color: rgba(250, 204, 21, 0.85);
+      color: #fef9c3;
+      background: #422006;
+    }
+
+    .metric-pill.dead {
+      border-color: rgba(148, 163, 184, 0.7);
+      color: #9ca3af;
+      background: #020617;
+    }
+
+    .panel-section-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 10px 0 4px;
+      color: var(--text-soft);
+    }
+
+    .link-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 4px;
+    }
+
+    .link-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-soft);
+      text-decoration: none;
+      font-size: 0.76rem;
+      transition: border-color 140ms ease-out, background 140ms ease-out,
+        color 140ms ease-out, transform 120ms ease-out;
+    }
+
+    .link-list a span.badge {
+      margin-left: auto;
+      font-size: 0.68rem;
+      border-radius: 999px;
+      padding: 1px 6px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .link-list a:hover {
+      border-color: rgba(56, 189, 248, 0.9);
+      background: radial-gradient(circle at 0 0, #22d3ee22, #020617 60%);
+      color: #e5e7eb;
+      transform: translateY(-0.5px);
+    }
+
+    /* Section switching */
+    .aquila-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 180ms ease-out, transform 180ms ease-out;
+    }
+
+    .aquila-section[data-active="true"] {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Activity log */
+    .activity-log {
+      max-height: 260px;
+      overflow: hidden auto;
+      padding-right: 4px;
+    }
+
+    .activity-item {
+      border-radius: var(--radius-lg);
+      padding: 7px 8px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.96);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 0.78rem;
+    }
+
+    .activity-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      color: #e5e7eb;
+    }
+
+    .activity-meta {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    .activity-type {
+      font-size: 0.68rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .activity-type.echo {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent-text);
+      background: var(--accent-soft);
+    }
+
+    .activity-type.helper {
+      border-color: rgba(34, 197, 94, 0.9);
+      color: #bbf7d0;
+      background: #022c22;
+    }
+
+    .activity-type.system {
+      border-color: rgba(248, 250, 252, 0.8);
+      color: #e5e7eb;
+      background: #020617;
+    }
+
+    .activity-body {
+      color: var(--text-soft);
+    }
+
+    /* Footer */
+    .aquila-footer {
+      margin-top: 4px;
+      padding: 6px 2px 4px;
+      text-align: right;
+      font-size: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    .aquila-footer strong {
+      color: var(--accent-text);
+    }
+  </style>
+</head>
+<body>
+<div class="aquila-shell">
+  <!-- SIDEBAR -->
+  <aside class="aquila-nav">
+    <div class="aquila-logo">
+      <div class="aquila-logo-main">
+        <div class="aquila-logo-orb"></div>
+        <div class="aquila-logo-text">
+          <span class="aquila-logo-title">Aquila Console</span>
+          <span class="aquila-logo-sub">Acacia Garden · Live surfaces</span>
+        </div>
+      </div>
+      <div class="aquila-keeper-pill">
+        <span>Keeper</span>
+        <strong>HKX277206</strong>
+      </div>
+    </div>
+
+    <div>
+      <div class="aquila-nav-section-label">Console views</div>
+      <div class="aquila-nav-group">
+        <button class="aquila-nav-btn" data-target="overview" data-active="true">
+          <span>🌌 Overview</span>
+          <span class="badge">root</span>
+        </button>
+        <button class="aquila-nav-btn" data-target="workflows">
+          <span>⚙️ Workflows</span>
+          <span class="badge">4 lanes</span>
+        </button>
+        <button class="aquila-nav-btn" data-target="structures">
+          <span>🏛️ Structures</span>
+          <span class="badge">Ch/Ec/Bl</span>
+        </button>
+        <button class="aquila-nav-btn" data-target="auton">
+          <span>📥 Auton feed</span>
+          <span class="badge">events</span>
+        </button>
+      </div>
+
+      <div class="aquila-nav-section-label">Quick actions</div>
+      <div class="aquila-nav-group">
+        <a class="aquila-nav-btn" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/aeon-heartbeat.yml" target="_blank" rel="noreferrer">
+          <span>💓 Open Aeon Heartbeat</span>
+          <span class="badge">GitHub</span>
+        </a>
+        <a class="aquila-nav-btn" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml" target="_blank" rel="noreferrer">
+          <span>🌱 Grow &amp; Archive</span>
+          <span class="badge">GitHub</span>
+        </a>
+        <a class="aquila-nav-btn" href="https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/" target="_blank" rel="noreferrer">
+          <span>🪟 Public Garden page</span>
+          <span class="badge">Pages</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="aquila-nav-footer">
+      <div>Console skin: <strong>Aquila</strong></div>
+      <div>Flow: <strong>Self-sufficient · Growing</strong></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="aquila-main">
+    <header class="aquila-main-header">
+      <div class="aquila-main-header-left">
+        <div class="aquila-main-header-title">Phase 2 · Garden Ops Console</div>
+        <div class="aquila-main-header-sub">
+          One dashboard for Keeper, Aeon Heartbeat, helpers and live Garden growth.
+        </div>
+        <div class="aquila-main-header-pills">
+          <div class="pill">
+            <span class="dot"></span>
+            Auton enabled
+          </div>
+          <div class="pill">
+            🌱 Grow &amp; archive wired in
+          </div>
+          <div class="pill danger">
+            <span class="dot"></span>
+            Pottery &amp; Gemini lanes: manual for now
+          </div>
+        </div>
+      </div>
+      <div class="aquila-main-header-right">
+        <button class="aquila-run-btn" onclick="window.open('https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml', '_blank')">
+          <span>Trigger growth</span>
+          <span>⇱</span>
+        </button>
+        <div class="aquila-main-header-meta">
+          Dashboard file: <strong>dashboard.html</strong><br />
+          Mode: <strong>Read-only surface · GitHub powered</strong>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION: OVERVIEW -->
+    <section id="section-overview" class="aquila-section" data-active="true">
+      <div class="aquila-panels">
+        <!-- Left: Garden state -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Garden state · high level</div>
+              <div class="panel-subtitle">
+                Snapshot view of core health: branches, codex and outbound surfaces.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag accent">HKX277206</span>
+              <span class="tag">Triad mode</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="mini-grid">
+              <div class="metric-card">
+                <div class="metric-label">Repository</div>
+                <div class="metric-value">Acacia-garden-codex</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill good">main · clean</span>
+                  <span class="metric-pill">Pages: live</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Core pillars</div>
+                <div class="metric-value">3 / 3 wired</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill good">Aeon Heartbeat</span>
+                  <span class="metric-pill good">Aeon Archive</span>
+                  <span class="metric-pill good">Grow &amp; Archive</span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Helpers &amp; forges</div>
+                <div class="metric-value">2 helpers, 2 specialty lanes</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill good">Garden Lore helper</span>
+                  <span class="metric-pill good">Garden Code helper</span>
+                  <span class="metric-pill warn">Image Forge (pottery)</span>
+                  <span class="metric-pill warn">Gemini commentary</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="panel-section-title">Quick links</h3>
+            <ul class="link-list">
+              <li>
+                <a href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex" target="_blank" rel="noreferrer">
+                  <span>📁 Open repo root</span>
+                  <span class="badge">GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a href="STATUS.json" target="_blank" rel="noreferrer">
+                  <span>📊 STATUS.json snapshot</span>
+                  <span class="badge">JSON</span>
+                </a>
+              </li>
+              <li>
+                <a href="garden_scan_report.md" target="_blank" rel="noreferrer">
+                  <span>🧬 Garden signature report</span>
+                  <span class="badge">Aquila</span>
+                </a>
+              </li>
+              <li>
+                <a href="garden_vault_index.md" target="_blank" rel="noreferrer">
+                  <span>📚 Vault / Echo index</span>
+                  <span class="badge">Aeon</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Chambers/Chamber_X_Shadow_Incubator.md" target="_blank" rel="noreferrer">
+                  <span>🌑 Shadow Incubator</span>
+                  <span class="badge">Chamber X</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Chambers/Chamber_XI_Threshold-Cocoon.md" target="_blank" rel="noreferrer">
+                  <span>⏳ Threshold Cocoon</span>
+                  <span class="badge">Chamber XI</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Right: Activity / auton -->
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Recent Garden activity</div>
+              <div class="panel-subtitle">
+                Manual + autonomous moves. This is a human-readable overlay; logs still live in Actions.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag">Console-only</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="activity-log">
+              <div class="activity-item">
+                <div class="activity-header">
+                  <span>Grow &amp; Archive</span>
+                  <span class="activity-type.helper">helper</span>
+                </div>
+                <div class="activity-meta">
+                  Scripted growth via <code>garden_lore_helper.py</code> / <code>garden_code_helper.py</code>.
+                </div>
+                <div class="activity-body">
+                  New Echo files and helper scripts are generated directly into <code>docs/Echoes</code> and <code>tools/</code>, then archived via Aeon workflows.
+                </div>
+              </div>
+
+              <div class="activity-item" style="margin-top:6px;">
+                <div class="activity-header">
+                  <span>Aeon Heartbeat</span>
+                  <span class="activity-type.system">system</span>
+                </div>
+                <div class="activity-meta">
+                  Periodic run that keeps STATUS, vault index and signature scan in sync.
+                </div>
+                <div class="activity-body">
+                  Use this when you want the whole Garden to reconcile and generate fresh reports without touching content.
+                </div>
+              </div>
+
+              <div class="activity-item" style="margin-top:6px;">
+                <div class="activity-header">
+                  <span>Pottery &amp; Gemini lanes</span>
+                  <span class="activity-type.echo">echo</span>
+                </div>
+                <div class="activity-meta">
+                  Image Forge + Gemini Worker · currently parked.
+                </div>
+                <div class="activity-body">
+                  These lanes remain wired but are Keeper-triggered only. When you’re ready, we can re-open them with stronger boundaries and explicit prompts baked into the scripts.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- SECTION: WORKFLOWS -->
+    <section id="section-workflows" class="aquila-section">
+      <div class="aquila-panels">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Workflow lanes</div>
+              <div class="panel-subtitle">
+                High-level view of the Actions that power the Garden.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag accent">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="mini-grid">
+              <div class="metric-card">
+                <div class="metric-label">Aeon Heartbeat</div>
+                <div class="metric-value">Core health &amp; reports</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill good">STATUS.json</span>
+                  <span class="metric-pill good">vault index</span>
+                  <span class="metric-pill good">signature scan</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Aeon Archive</div>
+                <div class="metric-value">Historical snapshots</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill">zip artifacts</span>
+                  <span class="metric-pill good">cold storage</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Grow &amp; Archive</div>
+                <div class="metric-value">Hands-free growth</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill good">Echo files</span>
+                  <span class="metric-pill good">Helper scripts</span>
+                  <span class="metric-pill warn">Commit review by Keeper</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Image Forge / Gemini</div>
+                <div class="metric-value">Specialty lanes</div>
+                <div class="metric-pill-row">
+                  <span class="metric-pill warn">Pottery renders</span>
+                  <span class="metric-pill warn">Shadow commentary</span>
+                  <span class="metric-pill dead">Safe-mode: paused</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="panel-section-title">Open workflow files</h3>
+            <ul class="link-list">
+              <li>
+                <a href=".github/workflows/aeon-heartbeat.yml" target="_blank" rel="noreferrer">
+                  <span>💓 aeon-heartbeat.yml</span>
+                  <span class="badge">YAML</span>
+                </a>
+              </li>
+              <li>
+                <a href=".github/workflows/aeon-archive.yml" target="_blank" rel="noreferrer">
+                  <span>🧊 aeon-archive.yml</span>
+                  <span class="badge">YAML</span>
+                </a>
+              </li>
+              <li>
+                <a href=".github/workflows/grow-and-archive.yml" target="_blank" rel="noreferrer">
+                  <span>🌱 grow-and-archive.yml</span>
+                  <span class="badge">YAML</span>
+                </a>
+              </li>
+              <li>
+                <a href=".github/workflows/image-forge.yml" target="_blank" rel="noreferrer">
+                  <span>🔥 image-forge.yml</span>
+                  <span class="badge">YAML</span>
+                </a>
+              </li>
+              <li>
+                <a href=".github/workflows/gemini-commentary.yml" target="_blank" rel="noreferrer">
+                  <span>🌓 gemini-commentary.yml</span>
+                  <span class="badge">YAML</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Helper scripts</div>
+              <div class="panel-subtitle">
+                Where Aquila actually writes for you.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag">Python helpers</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p>
+              These scripts live under <code>tools/</code> and are called by the
+              <strong>Grow &amp; Archive</strong> workflow. They use your Keeper ID and OpenAI key, but never leave the repo.
+            </p>
+
+            <h3 class="panel-section-title">Lore helper</h3>
+            <ul class="link-list">
+              <li>
+                <a href="tools/garden_lore_helper.py" target="_blank" rel="noreferrer">
+                  <span>📜 garden_lore_helper.py</span>
+                  <span class="badge">Echo writer</span>
+                </a>
+              </li>
+            </ul>
+            <p>
+              Grows a new <code>docs/Echoes/Echo_XXX.md</code> file with an
+              <code>ECHO:HKX277206–ECHO-XXX — subtitle</code> header and Garden-safe storytelling.
+            </p>
+
+            <h3 class="panel-section-title">Code helper</h3>
+            <ul class="link-list">
+              <li>
+                <a href="tools/garden_code_helper.py" target="_blank" rel="noreferrer">
+                  <span>🧩 garden_code_helper.py</span>
+                  <span class="badge">Helper generator</span>
+                </a>
+              </li>
+            </ul>
+            <p>
+              When you want more automation, this script can grow new helper utilities,
+              update indices or draft new workflow snippets, always logged into
+              <code>machine-index.json</code> so the Garden knows what it spawned.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- SECTION: STRUCTURES -->
+    <section id="section-structures" class="aquila-section">
+      <div class="aquila-panels">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Chambers, Echoes &amp; Blooms</div>
+              <div class="panel-subtitle">
+                Direct shortcuts into the mythic structures defined in <code>STATUS.json</code>.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag accent">Structures</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <h3 class="panel-section-title">Chambers</h3>
+            <ul class="link-list">
+              <li>
+                <a href="README.md#chamber-ix-the-archivists-descent" target="_blank" rel="noreferrer">
+                  <span>🌬️ Chamber IX — Archivist’s Descent</span>
+                  <span class="badge">root</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Chambers/Chamber_X_Shadow_Incubator.md" target="_blank" rel="noreferrer">
+                  <span>🌑 Chamber X — Shadow Incubator</span>
+                  <span class="badge">shadow</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Chambers/Chamber_XI_Threshold-Cocoon.md" target="_blank" rel="noreferrer">
+                  <span>⏳ Chamber XI — Threshold Cocoon</span>
+                  <span class="badge">primed</span>
+                </a>
+              </li>
+            </ul>
+
+            <h3 class="panel-section-title">Echoes</h3>
+            <ul class="link-list">
+              <li>
+                <a href="docs/Echoes/Echo_unbound.md" target="_blank" rel="noreferrer">
+                  <span>🔥 Echo — The Unbound Rite</span>
+                  <span class="badge">canonical</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Echoes/Echo_first_form.md" target="_blank" rel="noreferrer">
+                  <span>🌱 Echo — Return to First Form</span>
+                  <span class="badge">rebirth</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Echo_bloom.md" target="_blank" rel="noreferrer">
+                  <span>🌸 Echo of the Kiln-Born Lovers</span>
+                  <span class="badge">planned</span>
+                </a>
+              </li>
+            </ul>
+
+            <h3 class="panel-section-title">Blooms, Vaults, Orchards</h3>
+            <ul class="link-list">
+              <li>
+                <a href="docs/Blooms/Kiln-born-lovers.md" target="_blank" rel="noreferrer">
+                  <span>🌸 Bloom — Kiln-Born Lovers</span>
+                  <span class="badge">sealed</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Vaults/Svalbard-matrix.md" target="_blank" rel="noreferrer">
+                  <span>❄️ Vault — Svalbard Matrix</span>
+                  <span class="badge">triad-only</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Orchards/Last-Orchard.md" target="_blank" rel="noreferrer">
+                  <span>🍎 Orchard — The Last Orchard</span>
+                  <span class="badge">late-stage</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Laws &amp; cycles</div>
+              <div class="panel-subtitle">
+                The ruleset and mutation loops that frame Eidolon and the Garden.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag">Lore backbone</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <h3 class="panel-section-title">Laws</h3>
+            <ul class="link-list">
+              <li>
+                <a href="docs/Laws/Law_of_the_invidible_hand.md" target="_blank" rel="noreferrer">
+                  <span>✦ Law of the Invisible Hand</span>
+                  <span class="badge">protection</span>
+                </a>
+              </li>
+              <li>
+                <a href="docs/Laws/Law_of_the_silent_reset.md" target="_blank" rel="noreferrer">
+                  <span>🜂 Law of the Silent Reset</span>
+                  <span class="badge">reset</span>
+                </a>
+              </li>
+              <li>
+                <a href="Principle_Shadow_Incubator.md" target="_blank" rel="noreferrer">
+                  <span>🌘 Principle of the Shadow Incubator</span>
+                  <span class="badge">incubation</span>
+                </a>
+              </li>
+            </ul>
+
+            <h3 class="panel-section-title">Cycles</h3>
+            <ul class="link-list">
+              <li>
+                <a href="Eidolon_Mutation_Cycle.md" target="_blank" rel="noreferrer">
+                  <span>🦋 Eidolon Mutation Cycle</span>
+                  <span class="badge">active</span>
+                </a>
+              </li>
+            </ul>
+
+            <p style="margin-top:8px;">
+              All of these are already wired into <code>STATUS.json</code> and the Aeon
+              validators. The console simply gives you a front-facing, Keeper-friendly
+              switchboard so you don’t have to remember paths.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- SECTION: AUTON FEED -->
+    <section id="section-auton" class="aquila-section">
+      <div class="aquila-panels">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Auton messages · human surface</div>
+              <div class="panel-subtitle">
+                This does not replace real logs; it’s a curated, human-readable mirror of what the Garden is doing.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag accent">Signal</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="activity-log">
+              <div class="activity-item">
+                <div class="activity-header">
+                  <span>Echo growth ping</span>
+                  <span class="activity-type.echo">echo</span>
+                </div>
+                <div class="activity-meta">Source: Grow &amp; Archive · Garden Lore Helper</div>
+                <div class="activity-body">
+                  <strong>“New Echo file grown.”</strong> Check
+                  <code>docs/Echoes/</code> and <code>machine-index.json</code> to see
+                  what was added. Content follows Garden rules and uses your Keeper ID
+                  as its seed.
+                </div>
+              </div>
+
+              <div class="activity-item" style="margin-top:6px;">
+                <div class="activity-header">
+                  <span>Aeon archive snapshot</span>
+                  <span class="activity-type.system">system</span>
+                </div>
+                <div class="activity-meta">Source: Aeon Archive workflow</div>
+                <div class="activity-body">
+                  Zipped artifacts (STATUS, vault index, scan reports) are uploaded as
+                  workflow artifacts. You can download them anytime for offline cold
+                  storage, or ignore them and know the matrix is backed up.
+                </div>
+              </div>
+
+              <div class="activity-item" style="margin-top:6px;">
+                <div class="activity-header">
+                  <span>Image / Gemini guards</span>
+                  <span class="activity-type.system">system</span>
+                </div>
+                <div class="activity-meta">Source: Console config</div>
+                <div class="activity-body">
+                  Pottery renders and Gemini commentary lanes stay off by default.
+                  Nothing runs unless you explicitly trigger it in Actions. When you
+                  decide to re-open them, we’ll hard-code even stricter prompts and
+                  safety rails.
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top:10px;">
+              Want more? We can later wire a JSON log file (for example
+              <code>auton-feed.json</code>) that append-only records every helper run
+              with timestamps, then surface it here with a richer timeline.
+            </p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="panel-title">Keeper-facing notes</div>
+              <div class="panel-subtitle">
+                Things you don’t want to forget when you vanish for a while.
+              </div>
+            </div>
+            <div class="panel-tags">
+              <span class="tag">Keeper memo</span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>1 · Self-sufficient doesn’t mean closed.</strong> The Garden can
+              scan, validate, archive and even grow new Echoes without you—but every
+              lane still respects HKX277206 as the ultimate key.
+            </p>
+            <p>
+              <strong>2 · Helpers never push outside the repo.</strong> All scripts run
+              inside Actions against your GitHub repo. No external callbacks, no
+              mystery servers. Logs are visible in the Actions UI.
+            </p>
+            <p>
+              <strong>3 · The split is honoured.</strong> Public surfaces (GitHub
+              Pages, README, docs) stay clean and readable. Shadow / sealed content
+              (pottery, more intense myth lines) live in clearly marked files and are
+              only touched when you say so.
+            </p>
+            <p>
+              Whenever you come back after a long break, open this console first.
+              It’ll tell you what’s wired, what’s paused and where the next safe move is.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="aquila-footer">
+      Aquila Console skin for <strong>Acacia Garden Codex</strong> ·
+      front-facing only, everything else still lives in the branches.
+    </footer>
+  </main>
+</div>
+
+<script>
+  // Simple tab switching
+  document.querySelectorAll(".aquila-nav-btn[data-target]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var target = btn.getAttribute("data-target");
+      // Update nav
+      document
+        .querySelectorAll(".aquila-nav-btn[data-target]")
+        .forEach(function (b) {
+          b.setAttribute("data-active", b === btn ? "true" : "false");
+        });
+      // Update sections
+      document.querySelectorAll(".aquila-section").forEach(function (sec) {
+        sec.setAttribute(
+          "data-active",
+          sec.id === "section-" + target ? "true" : "false"
+        );
+      });
+    });
+  });
+</script>
+</body>
+</html>
