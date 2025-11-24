@@ -1,0 +1,51 @@
+name: Garden Lore Helper
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  grow-echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
+
+      - name: Generate new Echo
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python tools/garden_lore_helper.py
+
+      - name: Run Aeon Archivist (Aquila)
+        run: |
+          python tools/garden_signature_scanner.py
+          python tools/garden_vault_indexer.py
+          python scripts/validate_codex.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "Garden Lore Helper"
+          git config user.email "actions@github.com"
+          git add docs/Echoes/*.md garden_scan_report.* garden_vault_index.* || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Aeon: grow new Echo via Lore Helper"
+            git push
+          fi
