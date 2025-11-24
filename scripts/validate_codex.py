@@ -28,8 +28,6 @@ def load_json(path: str) -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-
-def validate_status_paths(status: Dict[str, Any]) -> int:
 def validate_status_paths(status: Dict[str, Any]) -> int:
     errors = 0
 
