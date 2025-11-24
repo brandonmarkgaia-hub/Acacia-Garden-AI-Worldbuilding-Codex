@@ -1,23 +1,30 @@
 #!/usr/bin/env python3
 """
 Garden Code Helper
-Generates a small, safe Python utility script for the Acacia Garden repo.
+Grows new helper scripts for the Acacia Garden Codex.
 
-- Writes to tools/garden_helper_YYYYMMDD_HHMMSS.py
-- Utilities must be idempotent and local-only.
-
-Requires:
-  - OPENAI_API_KEY in the environment.
+Uses inline MODEL_NAME / KEEPER_ID so there is no garden_gpt dependency.
+Requires OPENAI_API_KEY in the environment.
 """
 
+import os
+import json
 from datetime import datetime
 from pathlib import Path
 
 from openai import OpenAI
-from garden_gpt.config import MODEL_NAME
+
+# --- INLINE CONSTANTS (no garden_gpt import) ---
+MODEL_NAME = "gpt-4o-mini"   # cheap, small model for GitHub Action
+KEEPER_ID = "HKX277206"
+# ------------------------------------------------
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS_DIR = ROOT / "tools"
+GENERATED_DIR = TOOLS_DIR / "generated"
+INDEX_FILE = ROOT / "machine-index.json"
+
+client = OpenAI()
 
 client = OpenAI()
 
