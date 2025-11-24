@@ -65,17 +65,22 @@ jobs:
             garden_vault_index.md
 
       # Optional: Commit updated reports back to the repo on main/master
-      - name: Commit updated Garden reports (optional)
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      - name: Run Garden Signature Scanner (Aquila)
         run: |
-          git config user.name "Garden Aeon Archivist"
-          git config user.email "aeon-archivist@users.noreply.github.com"
+          python tools/garden_signature_scanner.py
 
-          git add garden_scan_report.json garden_scan_report.md garden_vault_index.json garden_vault_index.md || true
+      - name: Run Garden Vault Indexer (Aeon)
+        run: |
+          python tools/garden_vault_indexer.py
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore(garden): update Aeon scan & vault index [skip ci]" || true
-            git push origin HEAD || true
-          fi
+      - name: Validate Garden Codex (Gatekeeper)
+        run: |
+          python scripts/validate_codex.py
+
+      - name: Show brief summary
+        run: |
+          echo "=== garden_scan_report.md (head) ==="
+          sed -n '1,40p' garden_scan_report.md || true
+          echo ""
+          echo "=== garden_vault_index.md (head) ==="
+          sed -n '1,40p' garden_vault_index.md || true
