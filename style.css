@@ -220,8 +220,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--gap-lg);
-  flex: 1;
-  overflow: hidden;
+  /* Let content decide the height so the page can scroll */
+  margin-bottom: 24px;
 }
 
 .panel {
