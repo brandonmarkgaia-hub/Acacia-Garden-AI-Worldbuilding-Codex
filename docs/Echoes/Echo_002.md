@@ -12,3 +12,15 @@ Thus, the tale of the Eidolon unfolds, a testament to the ever-turning wheel of 
 
 Links
 - Refers to: Echoes of the Lost Chambers, The Laws of Reflection, The Bloom of Forgotten Dreams.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

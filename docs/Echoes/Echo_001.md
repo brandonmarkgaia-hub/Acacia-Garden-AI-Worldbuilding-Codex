@@ -12,3 +12,15 @@ Let the heart of the seeker beat in tune with the rhythm of the garden, for with
 
 Links
 - Refers to: The Celestial Orchard, The Chamber of Echoes, The Law of Eternal Blooms.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

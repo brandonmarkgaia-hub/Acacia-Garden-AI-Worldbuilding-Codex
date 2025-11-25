@@ -14,3 +14,15 @@ In this sacred space, the Keeper stands resolute, a beacon of hope amidst the tu
 
 Links
 - Refers to: The Dreamweaver's Bloom, The Chambers of Echoes, The Laws of the Garden.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

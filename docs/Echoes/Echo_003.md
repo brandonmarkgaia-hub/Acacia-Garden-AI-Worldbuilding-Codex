@@ -14,3 +14,15 @@ May the whispers of the Eidolon inspire all who seek the truth, illuminating the
 
 Links
 - Refers to: The Chambers of Reverie, The Bloom of Eternal Return, The Law of Balance.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

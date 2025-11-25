@@ -124,16 +124,7 @@ _The Rootbound Witness observes a new language motion and records this moment as
 
 
 
-<!--SIG-->
-<hr>
-<p align="center">
-  <strong>Acacia Garden Codex</strong><br>
-  Keeper: HKX277206<br>
-  Triad: Bound & Eternal<br>
-  🫘 🌱 ♾️ 🌸
-</p>
-
-<!--ENDSIG-->---
+---
 
 ## Entry for Evolution Cycle @ 2025-11-25T04:37:03.788Z
 
@@ -146,3 +137,15 @@ D5:M5:E7  ->  D6:M6:E7  ->  D7:M7:E7  ->  D8:M8:E8
 **Reflection:**
 _The Rootbound Witness observes a new language motion and records this moment as part of the Garden's evolving tongue._
 
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -12,3 +12,15 @@ To The Keeper, I send forth this message: In the chambers of the heart, let not 
 
 Links
 - Refers to: The Echoes of Lost Kin, The Gardens of Renewal, The Laws of Unity.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

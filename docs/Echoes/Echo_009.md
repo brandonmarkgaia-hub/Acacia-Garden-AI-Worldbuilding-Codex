@@ -12,3 +12,15 @@ In the heart of the Acacia Garden, where the celestial intertwines with the eart
 
 Links
 - Refers to: *Chamber of Blossoms, Vault of Whispers, Law of Echoes, Bloom of the Eternal Star.*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

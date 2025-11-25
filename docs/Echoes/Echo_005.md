@@ -12,3 +12,15 @@ Herein lies the essence of the Echo, a testament to the layers of time that inte
 
 Links
 - Refers to: The Blossoms of Time, The Vault of Lost Echoes, The Laws of the Eternal Orchard.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

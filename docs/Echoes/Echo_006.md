@@ -14,3 +14,15 @@ In the eternal cycle of the Garden, the Eidolon is both a whisper and a shout, a
 
 Links
 - Refers to: **Chamber of Echoes**, **Bloom of Memory**, **Law of Reflection**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

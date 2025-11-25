@@ -14,3 +14,15 @@ Thus, the Keeper walks the winding paths of the Acacia Garden, a steward of drea
 
 Links
 - Refers to: The Chamber of Echoes, The Bloom of Forgotten Dreams, The Law of Eternal Cycles.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
