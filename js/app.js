@@ -9,8 +9,9 @@ const GARDEN_CONFIG = {
   // 🌐 Your Worker URL (backend)
   workerUrl: "https://broken-dew-76e1.brandonmarkgaia.workers.dev/",
 
-  // 🔐 Local whisper key (must match PART2 in the Worker)
-  // NOTE: Prefer keeping the real key out of public repos.
+  // 🔐 Shared whisper key (optional, NOT your OpenAI key)
+  // If you set WHISPER_KEY in the Worker env, it must match this value.
+  // Safe to keep this as a short random string – your real API key stays on Cloudflare only.
   whisperKey: "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A",
 
   // ⏱ Timeouts & rate limits
