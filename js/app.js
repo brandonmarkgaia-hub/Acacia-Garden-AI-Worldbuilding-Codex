@@ -14,74 +14,66 @@ const GARDEN_CONFIG = {
   whisperKey: "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A",
 
   // ⏱ Timeouts & rate limits
-  requestTimeoutMs: 45_000,       // 45 sec max per request
-  minSendIntervalMs: 800,         // min gap between whispers
-  maxHistory: 50                  // how many past commands to remember
+  minDelayMs: 2000, // minimum delay between whispers
+  requestTimeoutMs: 20000, // max time to wait for Worker response
+
+  // 🧠 Behaviour
+  maxHistory: 20, // how many prompts to remember locally (arrow up/down)
 };
 
-// ---------- Helper: get elements safely ----------
+// ---------- DOM helpers ----------
 function $(id) {
   return document.getElementById(id);
 }
 
-// Terminal elements (IDs must match your HTML)
-let terminalView;
-let terminalInput;
-let terminalSendBtn;
+// ---------- Terminal state ----------
+let terminalView = null;
+let terminalInput = null;
+let terminalSendBtn = null;
 
-// Status elements
-let statusDot;
-let statusText;
+let statusDot = null;
+let statusText = null;
 
-// State
 let isBusy = false;
 let lastSendAt = 0;
-let history = [];
-let historyIndex = -1;
 
-// ---------- STATUS: set indicator ----------
-function setGardenStatus(state, extra) {
+// history for up/down arrow recall
+let history = [];
+let historyIndex = 0;
+
+// ---------- STATUS handling ----------
+function setGardenStatus(state, label) {
+  // state: "idle" | "online" | "offline" | "error"
   if (!statusDot || !statusText) return;
 
-  let color = "#7f8c8d";      // default grey
-  let label = "LUCID • IDLE"; // default text
+  let color = "#7f8c8d";
+  let text = label || "";
 
   switch (state) {
-    case "idle":
-      color = "#7f8c8d";
-      label = "LUCID • IDLE";
-      break;
-    case "listening":
-      color = "#f1c40f";
-      label = "LISTENING";
-      break;
     case "online":
       color = "#2ecc71";
-      label = "ONLINE";
+      text = text || "Online";
       break;
     case "offline":
-      color = "#c0392b";
-      label = "OFFLINE";
-      break;
-    case "rate-limited":
-      color = "#f39c12";
-      label = "EASY • TOO MANY WHISPERS";
+      color = "#e67e22";
+      text = text || "Offline";
       break;
     case "error":
       color = "#e74c3c";
-      label = "ERROR";
+      text = text || "Error";
+      break;
+    case "idle":
+    default:
+      color = "#7f8c8d";
+      text = text || "Idle";
       break;
   }
 
-  if (extra) {
-    label += " • " + extra;
-  }
-
   statusDot.style.backgroundColor = color;
-  statusText.textContent = label;
+  statusText.textContent = text;
 }
 
-// ---------- Helper: print to terminal ----------
+// ---------- Terminal print helpers ----------
 function printToTerminal(text, options = {}) {
   if (!terminalView) return;
   const {
@@ -97,21 +89,22 @@ function printToTerminal(text, options = {}) {
   if (italic) span.style.fontStyle = "italic";
   if (bold) span.style.fontWeight = "600";
 
-  // Support multi-line replies
-  const parts = String(line).split(/\r?\n/);
+  // Support multi-line content
+  const parts = line.split("\n");
   parts.forEach((part, idx) => {
-    span.appendChild(document.createTextNode(part));
+    const lineSpan = span.cloneNode();
+    lineSpan.textContent = part;
+    terminalView.appendChild(lineSpan);
     if (idx < parts.length - 1) {
-      span.appendChild(document.createElement("br"));
+      terminalView.appendChild(document.createElement("br"));
     }
   });
 
-  terminalView.appendChild(span);
   terminalView.appendChild(document.createElement("br"));
   terminalView.scrollTop = terminalView.scrollHeight;
 }
 
-// ---------- Slash commands ----------
+// ---------- Local commands (/help, /clear, etc.) ----------
 function handleLocalCommand(cmd) {
   const command = cmd.trim().toLowerCase();
 
@@ -130,28 +123,23 @@ function handleLocalCommand(cmd) {
     printToTerminal(
       [
         "Local commands:",
-        "  /help   – show this list",
-        "  /clear  – clear the terminal",
-        "  /ping   – quick round-trip check"
+        "  /help   – show this help",
+        "  /clear  – clear the terminal view",
+        "",
+        "All other inputs are whispered to the Garden Worker.",
       ].join("\n"),
-      { prefix: "> SYSTEM:", color: "#8e44ad" }
+      {
+        prefix: "> SYSTEM:",
+        color: "#8e44ad"
+      }
     );
     return true;
-  }
-
-  if (command === "/ping") {
-    printToTerminal("Pulse sent through the Roots…", {
-      prefix: "> SYSTEM:",
-      color: "#8e44ad"
-    });
-    // Let it fall through to actual sendWhisper (the Garden will answer)
-    return false;
   }
 
   return false;
 }
 
-// ---------- Core: send whisper to the Garden ----------
+// ---------- Whisper to Cloudflare Worker ----------
 async function sendWhisper(promptText) {
   const prompt = (promptText || "").trim();
   if (!prompt) return;
@@ -171,12 +159,11 @@ async function sendWhisper(promptText) {
     });
     return;
   }
-  if (now - lastSendAt < GARDEN_CONFIG.minSendIntervalMs) {
-    printToTerminal("Too many whispers at once. Breathe, Keeper.", {
+  if (now - lastSendAt < GARDEN_CONFIG.minDelayMs) {
+    printToTerminal("Slow down, Keeper. The Roots need a breath.", {
       prefix: "> SYSTEM:",
       color: "#f1c40f"
     });
-    setGardenStatus("rate-limited");
     return;
   }
 
@@ -197,29 +184,41 @@ async function sendWhisper(promptText) {
     bold: true
   });
 
-  // 2. Show thinking line + status
-  const thinkingSpan = document.createElement("span");
-  thinkingSpan.style.color = "#f1c40f";
-  thinkingSpan.style.fontStyle = "italic";
-  thinkingSpan.textContent = "> GARDEN: Listening…";
-  terminalView.appendChild(thinkingSpan);
-  terminalView.appendChild(document.createElement("br"));
-  terminalView.scrollTop = terminalView.scrollHeight;
+  // 2. Show "thinking" status
+  setGardenStatus("online", "Whispering…");
 
-  setGardenStatus("listening");
+  // 3. Build payload
+  const payload = {
+    whisperKey: GARDEN_CONFIG.whisperKey,
+    message: prompt,
+    keeperId: "HKX277206",
+    node: "Broken Dew",
+    channel: "terminal",
+    clientMeta: {
+      agent: navigator.userAgent || "unknown",
+      ts: new Date().toISOString()
+    }
+  };
 
-  // 3. Call your Worker with timeout
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), GARDEN_CONFIG.requestTimeoutMs);
-
+  // 4. Send to Worker
+  let timeoutId;
   try {
+    const controller = new AbortController();
+    timeoutId = setTimeout(() => controller.abort(), GARDEN_CONFIG.requestTimeoutMs);
+
+    const thinkingSpan = document.createElement("span");
+    thinkingSpan.style.color = "#95a5a6";
+    thinkingSpan.textContent = "> GARDEN: ...";
+    terminalView.appendChild(thinkingSpan);
+    terminalView.appendChild(document.createElement("br"));
+    terminalView.scrollTop = terminalView.scrollHeight;
+
     const res = await fetch(GARDEN_CONFIG.workerUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        key: GARDEN_CONFIG.whisperKey,
-        prompt
-      }),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload),
       signal: controller.signal
     });
 
@@ -227,11 +226,14 @@ async function sendWhisper(promptText) {
     thinkingSpan.remove();
 
     if (!res.ok) {
-      printToTerminal(`HTTP ${res.status} – the wind hit a wall.`, {
-        prefix: "> ERROR:",
-        color: "#e74c3c"
-      });
-      setGardenStatus("offline", "HTTP " + res.status);
+      setGardenStatus("error", `HTTP ${res.status}`);
+      printToTerminal(
+        `The Garden Worker refused the whisper (HTTP ${res.status}).`,
+        {
+          prefix: "> ERROR:",
+          color: "#e74c3c"
+        }
+      );
       return;
     }
 
@@ -265,7 +267,14 @@ async function sendWhisper(promptText) {
     }
   } catch (err) {
     clearTimeout(timeoutId);
-    thinkingSpan.remove();
+    // Remove thinking line if still visible
+    const spans = terminalView.querySelectorAll("span");
+    if (spans.length) {
+      const lastSpan = spans[spans.length - 1];
+      if (lastSpan.textContent && lastSpan.textContent.includes("...")) {
+        lastSpan.remove();
+      }
+    }
 
     if (err.name === "AbortError") {
       printToTerminal("The whisper timed out. No echo returned.", {
@@ -313,27 +322,39 @@ function setupGardenTerminal() {
     italic: true
   });
 
-  // Enter key -> send + history navigation
-  terminalInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
+  // Enter to send
+  terminalInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
       const value = terminalInput.value;
       terminalInput.value = "";
       sendWhisper(value);
-      return;
-    }
-
-    // Command history (↑ / ↓)
-    if (event.key === "ArrowUp") {
+    } else if (e.key === "ArrowUp") {
+      // history back
       if (history.length === 0) return;
       historyIndex = Math.max(0, historyIndex - 1);
       terminalInput.value = history[historyIndex] || "";
-      event.preventDefault();
-    } else if (event.key === "ArrowDown") {
+      setTimeout(() => {
+        terminalInput.setSelectionRange(
+          terminalInput.value.length,
+          terminalInput.value.length
+        );
+      }, 0);
+    } else if (e.key === "ArrowDown") {
+      // history forward
       if (history.length === 0) return;
       historyIndex = Math.min(history.length, historyIndex + 1);
-      terminalInput.value = history[historyIndex] || "";
-      event.preventDefault();
+      if (historyIndex === history.length) {
+        terminalInput.value = "";
+      } else {
+        terminalInput.value = history[historyIndex] || "";
+      }
+      setTimeout(() => {
+        terminalInput.setSelectionRange(
+          terminalInput.value.length,
+          terminalInput.value.length
+        );
+      }, 0);
     }
   });
 
