@@ -60,13 +60,36 @@
     bootSequence(bootLines);
   }
 
-  if (form && input) {
+    if (form && input) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const value = input.value.trim();
       if (!value) return;
       appendLine("> " + value, "meta");
-      appendLine("[ECHO] Command received at local node only.", "system");
+
+      if (nodeContext) {
+        const nodeLabel = nodeContext.node || "Local node";
+        const status = nodeContext.status || "unknown";
+        const mode = nodeContext.mode || "solo";
+        appendLine(
+          `[${nodeLabel}] Echo stored at this node (status: ${status}, mode: ${mode}).`,
+          "system"
+        );
+
+        if (nodeContext.loki) {
+          const firstHintLine =
+            nodeContext.loki.split("\n").find((ln) => ln.trim()) || "";
+          if (firstHintLine) {
+            appendLine("[LOKI] " + firstHintLine, "system");
+          }
+        }
+      } else {
+        appendLine(
+          "[ECHO] Command stored in this node only. External channels are offline.",
+          "system"
+        );
+      }
+
       input.value = "";
     });
   }
