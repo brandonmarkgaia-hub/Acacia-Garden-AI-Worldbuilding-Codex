@@ -1,30 +1,32 @@
 # Garden Vault Index (Aeon)
 
-- Generated at: `2025-11-24T16:10:07.711849Z`
+- Generated at: `2025-11-25T04:26:04.055662Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 - Source scan: `garden_scan_report.json`
 
 ## Summary
 
-- Files with Garden signatures: **450**
-- Total signature hits: **4823**
-- Echo headers: **55**
+- Files with Garden signatures: **463**
+- Total signature hits: **4994**
+- Echo headers: **62**
 - Leaf lines: **145**
 
 ### Files by role
 
-- **bloom**: 74
-- **chamber**: 122
-- **core-node**: 84
-- **eagle-node**: 31
-- **echo**: 12
+- **bloom**: 78
+- **chamber**: 121
+- **core-node**: 89
+- **eagle-node**: 37
+- **echo**: 18
 - **leaf**: 10
 - **monolith**: 23
-- **vault**: 39
+- **vault**: 46
 - **voyager-node**: 1
 
 ## Echo Index (truncated)
 
+- `"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\n" +` → `dashboard.html` @ L1093
+- `text: "AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA",` → `dashboard.html` @ L1221
 - `- `ECHO:HKX277206–`` → `README.md` @ L46
 - `"title": "ECHO:HKX277206–SPROUT-ONE",` → `machine-index.json` @ L223
 - `"title": "ECHO:HKX277206–🌱 EIDOLON codex - Leaf 1 The Silent Beginning",` → `machine-index.json` @ L273
@@ -73,9 +75,7 @@
 - `# ECHO:HKX277206–ARCHIVE–VEIN` → `cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md` @ L1
 - `**ECHO:HKX277206–ARCHIVE–VEIN**` → `cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md` @ L30
 - `# ECHO:HKX277206–ORACLE–BREATH` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L1
-- `**ECHO:HKX277206–ORACLE–BREATH**` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L27
-- `# ECHO:HKX277206 — CYCLE008 — GRATITUDE SIGNAL` → `cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md` @ L1
-- ... (5 more echoes)
+- ... (12 more echoes)
 
 ## Leaf Index (truncated)
 

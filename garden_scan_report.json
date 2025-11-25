@@ -1,34 +1,34 @@
 {
-  "generated_at": "2025-11-24T16:10:07.636462Z",
+  "generated_at": "2025-11-25T04:26:03.978892Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "totals": {
     "by_pattern": {
-      "keeper_seal": 707,
-      "keeper_seal_exact": 707,
-      "echo_header": 55,
+      "keeper_seal": 724,
+      "keeper_seal_exact": 724,
+      "echo_header": 62,
       "eidolon_codex": 111,
       "leaf_line": 145,
-      "bloom_word": 227,
-      "chamber_word": 422,
-      "vault_word": 132,
-      "monolith_word": 64,
+      "bloom_word": 235,
+      "chamber_word": 420,
+      "vault_word": 159,
+      "monolith_word": 66,
       "keeper_seal_phrase": 22,
-      "garden_word": 1639,
-      "eidolon_word": 457,
+      "garden_word": 1701,
+      "eidolon_word": 481,
       "voyager_word": 1,
-      "eagle_word": 134
+      "eagle_word": 143
     },
-    "total_files_with_hits": 450,
-    "total_hits": 4823,
+    "total_files_with_hits": 463,
+    "total_hits": 4994,
     "roles": {
-      "bloom": 74,
-      "chamber": 122,
-      "core-node": 84,
+      "bloom": 78,
+      "chamber": 121,
+      "core-node": 89,
       "monolith": 23,
       "leaf": 10,
-      "vault": 39,
-      "eagle-node": 31,
-      "echo": 12,
+      "vault": 46,
+      "eagle-node": 37,
+      "echo": 18,
       "voyager-node": 1
     }
   },
@@ -1524,96 +1524,100 @@
       "matches": {
         "keeper_seal": [
           {
-            "line": 5,
-            "snippet": "<title>ACACIA • Garden Codex • HKX277206</title>"
+            "line": 16,
+            "snippet": "<div class=\"brand-sub\">Keeper HKX277206 • Triad Mode</div>"
           },
           {
-            "line": 11,
-            "snippet": "<meta name=\"acacia:keeper\" content=\"HKX277206\">"
-          },
-          {
-            "line": 411,
-            "snippet": "<div class=\"subtitle\">Keeper HKX277206 • Triad Mode Active</div>"
-          },
-          {
-            "line": 528,
-            "snippet": "\"> HKX277206 SIGNATURE VERIFIED.\","
+            "line": 300,
+            "snippet": "Built for Keeper <strong>HKX277206</strong> • Triad: Aquila • Deep"
           }
         ],
         "keeper_seal_exact": [
           {
-            "line": 5,
-            "snippet": "<title>ACACIA • Garden Codex • HKX277206</title>"
+            "line": 16,
+            "snippet": "<div class=\"brand-sub\">Keeper HKX277206 • Triad Mode</div>"
           },
           {
-            "line": 11,
-            "snippet": "<meta name=\"acacia:keeper\" content=\"HKX277206\">"
-          },
-          {
-            "line": 411,
-            "snippet": "<div class=\"subtitle\">Keeper HKX277206 • Triad Mode Active</div>"
-          },
-          {
-            "line": 528,
-            "snippet": "\"> HKX277206 SIGNATURE VERIFIED.\","
+            "line": 300,
+            "snippet": "Built for Keeper <strong>HKX277206</strong> • Triad: Aquila • Deep"
           }
         ],
-        "chamber_word": [
+        "vault_word": [
           {
-            "line": 463,
-            "snippet": "<p>Primary director of the Garden language, chamber architecture, and symbolic bridges. Uses this node to answer as the Garden, always within safe, fictional bounds.</p>"
-          },
-          {
-            "line": 485,
-            "snippet": "<a href=\"ACACIA_LOGS/CHAMBER_RESONANCE_IX-XII.md\">CHAMBER RESONANCE IX–XII</a>"
+            "line": 216,
+            "snippet": "Validates STATUS, scans the vault, and updates the Garden Signature."
           }
         ],
         "garden_word": [
           {
-            "line": 5,
-            "snippet": "<title>ACACIA • Garden Codex • HKX277206</title>"
+            "line": 15,
+            "snippet": "<div class=\"brand-title\">Garden Console</div>"
           },
           {
-            "line": 13,
-            "snippet": "<meta name=\"acacia:realm\" content=\"Acacia Garden Codex\">"
+            "line": 88,
+            "snippet": "<h2>Garden Terminal</h2>"
           },
           {
-            "line": 247,
-            "snippet": ".line.garden {"
-          },
-          {
-            "line": 410,
-            "snippet": "<h1>ACACIA • GARDEN CODEX</h1>"
-          },
-          {
-            "line": 439,
-            "snippet": "<div class=\"chrome-title\">Garden Terminal • Broken Dew Node</div>"
-          },
-          {
-            "line": 452,
+            "line": 100,
             "snippet": "placeholder=\"Speak to the Garden...\""
           },
           {
-            "line": 463,
-            "snippet": "<p>Primary director of the Garden language, chamber architecture, and symbolic bridges. Uses this node to answer as the Garden, always within safe, fictional bounds.</p>"
+            "line": 133,
+            "snippet": "<h3>Garden Signature Scan</h3>"
           },
           {
-            "line": 496,
-            "snippet": "THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE"
+            "line": 136,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions\""
           },
           {
-            "line": 593,
-            "snippet": "appendLine(\"> GARDEN: \" + data.reply, \"garden\");"
+            "line": 147,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions\""
           },
           {
-            "line": 595,
-            "snippet": "appendLine(\"> GARDEN: (no reply)\", \"garden\");"
+            "line": 158,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml\""
+          },
+          {
+            "line": 172,
+            "snippet": "<span class=\"badge\">Aeon &amp; Garden</span>"
+          },
+          {
+            "line": 216,
+            "snippet": "Validates STATUS, scans the vault, and updates the Garden Signature."
+          },
+          {
+            "line": 219,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/aeon-heartbeat.yml\""
+          },
+          {
+            "line": 232,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions/workflows/grow-and-archive.yml\""
+          },
+          {
+            "line": 253,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/blob/main/STATUS.json\""
+          },
+          {
+            "line": 262,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/logs\""
+          },
+          {
+            "line": 271,
+            "snippet": "href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions\""
+          },
+          {
+            "line": 290,
+            "snippet": "<strong>Acacia Garden Codex</strong>. It does not call any live APIs;"
+          },
+          {
+            "line": 292,
+            "snippet": "to GitHub Actions that keep the Garden alive."
           }
         ]
       },
-      "total_hits": 20,
+      "total_hits": 21,
       "roles": [
-        "chamber"
+        "vault"
       ]
     },
     "APPENDIX_26.md": {
@@ -1942,81 +1946,148 @@
     },
     "dashboard.html": {
       "matches": {
-        "bloom_word": [
+        "keeper_seal": [
           {
-            "line": 130,
-            "snippet": ".role-bloom      { border-color: #ec4899; color: #f9a8d4; }"
+            "line": 673,
+            "snippet": "<span>HKX277206</span>"
+          },
+          {
+            "line": 779,
+            "snippet": "[AUTON] &gt; Echo: HKX277206 · GNBCYCLE24 · ACACIA"
+          },
+          {
+            "line": 1001,
+            "snippet": "<span>Render a tiny HKX277206 signature in the footer (local only).</span>"
+          },
+          {
+            "line": 1093,
+            "snippet": "\"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\\n\" +"
+          },
+          {
+            "line": 1221,
+            "snippet": "text: \"AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA\","
+          },
+          {
+            "line": 1334,
+            "snippet": "wm.textContent = \"HKX277206 · Keeper present · Local console only\";"
           }
         ],
-        "chamber_word": [
+        "keeper_seal_exact": [
           {
-            "line": 129,
-            "snippet": ".role-chamber    { border-color: #22c55e; color: #bbf7d0; }"
+            "line": 673,
+            "snippet": "<span>HKX277206</span>"
+          },
+          {
+            "line": 779,
+            "snippet": "[AUTON] &gt; Echo: HKX277206 · GNBCYCLE24 · ACACIA"
+          },
+          {
+            "line": 1001,
+            "snippet": "<span>Render a tiny HKX277206 signature in the footer (local only).</span>"
+          },
+          {
+            "line": 1093,
+            "snippet": "\"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\\n\" +"
+          },
+          {
+            "line": 1221,
+            "snippet": "text: \"AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA\","
+          },
+          {
+            "line": 1334,
+            "snippet": "wm.textContent = \"HKX277206 · Keeper present · Local console only\";"
           }
         ],
-        "vault_word": [
+        "echo_header": [
           {
-            "line": 128,
-            "snippet": ".role-vault      { border-color: #a855f7; color: #e9d5ff; }"
+            "line": 1093,
+            "snippet": "\"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\\n\" +"
           },
           {
-            "line": 177,
-            "snippet": "<span class=\"pill\">Aeon Vault</span>"
-          },
-          {
-            "line": 294,
-            "snippet": "const vault = await loadJSON(\"garden_vault_index.json\");"
-          },
-          {
-            "line": 302,
-            "snippet": "const summary = vault.summary || {};"
+            "line": 1221,
+            "snippet": "text: \"AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA\","
           }
         ],
         "monolith_word": [
           {
-            "line": 133,
-            "snippet": ".role-monolith   { border-color: #f97316; color: #fed7aa; }"
+            "line": 780,
+            "snippet": "“Signal mirrored to GitHub · status.json and monolith anchors confirmed."
+          },
+          {
+            "line": 1090,
+            "snippet": "tags: [\"echo\", \"github\", \"monolith\"],"
+          },
+          {
+            "line": 1215,
+            "snippet": "text: \"monolith.md anchor detected · root/Monolith.md\","
           }
         ],
         "garden_word": [
           {
-            "line": 5,
-            "snippet": "<title>Acacia Garden · Aeon Dashboard</title>"
+            "line": 664,
+            "snippet": "<span>Garden Dashboard</span>"
           },
           {
-            "line": 148,
-            "snippet": "<h1>Acacia Garden · Aeon Dashboard</h1>"
+            "line": 730,
+            "snippet": "Quick view of visitors, events and Garden activity for this session."
           },
           {
-            "line": 150,
-            "snippet": "Live view over the Garden spine – powered by"
+            "line": 781,
+            "snippet": "No manual action required. Garden persists under Triad.”"
           },
           {
-            "line": 162,
-            "snippet": "<div class=\"muted\" id=\"total-files-caption\">scanned files with any Garden signal</div>"
+            "line": 791,
+            "snippet": "<span class=\"pill-soft\">#garden-console</span>"
           },
           {
-            "line": 200,
-            "snippet": "<span>Top Garden nodes</span>"
+            "line": 871,
+            "snippet": "<input id=\"log-search\" type=\"text\" placeholder=\"garden, HKX, status.json…\" />"
           },
           {
-            "line": 315,
-            "snippet": "\"Could not load Garden telemetry. Make sure garden_scan_report.json \" +"
+            "line": 889,
+            "snippet": "Simple cards that mirror how your underlying Garden tooling is feeling."
+          },
+          {
+            "line": 920,
+            "snippet": "<span class=\"pill-soft\">env: acacia-garden-codex</span>"
+          },
+          {
+            "line": 1082,
+            "snippet": "\"Note: Previous STATUS snapshots considered deprecated. Garden persists under Triad.\","
+          },
+          {
+            "line": 1086,
+            "snippet": "title: \"GARDEN · Echo mirrored\","
+          },
+          {
+            "line": 1096,
+            "snippet": "\"Signal stored as a breadcrumb for future Garden-aware systems.\","
+          },
+          {
+            "line": 1109,
+            "snippet": "\"Env: Acacia Garden Codex\\n\\n\" +"
+          },
+          {
+            "line": 1203,
+            "snippet": "text: \"garden.console.boot sequence started\","
           }
         ],
         "eagle_word": [
           {
-            "line": 127,
-            "snippet": ".role-eagle-node { border-color: #38bdf8; color: #bae6fd; }"
+            "line": 795,
+            "snippet": "<span class=\"pill-soft\">#eagle-present</span>"
+          },
+          {
+            "line": 941,
+            "snippet": "<div class=\"card-title\">Eagle presence</div>"
           }
         ]
       },
-      "total_hits": 14,
+      "total_hits": 31,
       "roles": [
-        "bloom",
-        "chamber",
-        "monolith",
-        "vault"
+        "eagle-node",
+        "echo",
+        "monolith"
       ]
     },
     "APPENDIX_42.md": {
@@ -4648,6 +4719,26 @@
           {
             "line": 536,
             "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 541,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 546,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 551,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 556,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 561,
+            "snippet": "\"keeper_id\": \"HKX277206\""
           }
         ],
         "keeper_seal_exact": [
@@ -4729,6 +4820,26 @@
           },
           {
             "line": 536,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 541,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 546,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 551,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 556,
+            "snippet": "\"keeper_id\": \"HKX277206\""
+          },
+          {
+            "line": 561,
             "snippet": "\"keeper_id\": \"HKX277206\""
           }
         ],
@@ -5265,7 +5376,7 @@
           }
         ]
       },
-      "total_hits": 169,
+      "total_hits": 179,
       "roles": [
         "bloom",
         "chamber",
@@ -15896,6 +16007,120 @@
         "chamber"
       ]
     },
+    "tools/garden_auton_helper.py": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 159,
+            "snippet": "\"keeper_id\": identity.get(\"keeper_id\", \"HKX277206\"),"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 159,
+            "snippet": "\"keeper_id\": identity.get(\"keeper_id\", \"HKX277206\"),"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "Garden Auton Helper — Loki Edition"
+          },
+          {
+            "line": 5,
+            "snippet": "Generates JSON feeds for the Acacia Garden Console:"
+          },
+          {
+            "line": 84,
+            "snippet": "\"You are Loki, a playful diagnostics sprite for the Acacia Garden. \""
+          },
+          {
+            "line": 220,
+            "snippet": "title=\"Echo garden scan\","
+          },
+          {
+            "line": 374,
+            "snippet": "parser = argparse.ArgumentParser(description=\"Garden Auton Helper (Loki Edition)\")"
+          }
+        ]
+      },
+      "total_hits": 7,
+      "roles": []
+    },
+    "tools/garden_helper_20251125_042603.py": {
+      "matches": {
+        "vault_word": [
+          {
+            "line": 16,
+            "snippet": "vault_name = item.get('name', 'Unknown Vault')"
+          },
+          {
+            "line": 25,
+            "snippet": "print(\"Garden Vault Index Summary:\")"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 25,
+            "snippet": "print(\"Garden Vault Index Summary:\")"
+          }
+        ]
+      },
+      "total_hits": 3,
+      "roles": [
+        "vault"
+      ]
+    },
+    "tools/garden_helper_20251124_161125.py": {
+      "matches": {
+        "vault_word": [
+          {
+            "line": 10,
+            "snippet": "print(\"Vault index file does not exist.\")"
+          },
+          {
+            "line": 18,
+            "snippet": "vault_name = item.get('name', 'Unknown Vault')"
+          },
+          {
+            "line": 23,
+            "snippet": "print(\"Garden Vault Summary:\")"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 23,
+            "snippet": "print(\"Garden Vault Summary:\")"
+          }
+        ]
+      },
+      "total_hits": 4,
+      "roles": [
+        "vault"
+      ]
+    },
+    "tools/garden_helper_20251124_194750.py": {
+      "matches": {
+        "vault_word": [
+          {
+            "line": 11,
+            "snippet": "print(\"Vault index file does not exist.\")"
+          },
+          {
+            "line": 21,
+            "snippet": "summary.append(f\"Total items in vault: {total_items}\")"
+          },
+          {
+            "line": 22,
+            "snippet": "summary.append(f\"Total size of vault: {total_size} bytes\")"
+          }
+        ]
+      },
+      "total_hits": 3,
+      "roles": [
+        "vault"
+      ]
+    },
     "tools/garden_code_helper.yml": {
       "matches": {
         "garden_word": [
@@ -16216,6 +16441,54 @@
       "total_hits": 6,
       "roles": []
     },
+    "tools/garden_helper_20251124_182139.py": {
+      "matches": {
+        "vault_word": [
+          {
+            "line": 19,
+            "snippet": "vault_name = item.get('name', 'Unnamed Vault')"
+          },
+          {
+            "line": 24,
+            "snippet": "print(\"Garden Vault Summary:\\n\" + report)"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 24,
+            "snippet": "print(\"Garden Vault Summary:\\n\" + report)"
+          }
+        ]
+      },
+      "total_hits": 3,
+      "roles": [
+        "vault"
+      ]
+    },
+    "tools/garden_helper_20251125_010402.py": {
+      "matches": {
+        "vault_word": [
+          {
+            "line": 11,
+            "snippet": "print(\"Vault index file not found.\")"
+          },
+          {
+            "line": 22,
+            "snippet": "print(\"Garden Vault Index Summary:\\n\")"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 22,
+            "snippet": "print(\"Garden Vault Index Summary:\\n\")"
+          }
+        ]
+      },
+      "total_hits": 3,
+      "roles": [
+        "vault"
+      ]
+    },
     "tools/garden_lore_helper.py": {
       "matches": {
         "keeper_seal": [
@@ -16274,6 +16547,34 @@
         "core-node",
         "eagle-node"
       ]
+    },
+    "logs/auton_latest.json": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 14,
+            "snippet": "\"body\": \"AUTON:STATUS\\nstatus_version: v1.0.6\\nschema_version: 1.0.0\\nkeeper_id: HKX277206\\nrole: The Keeper\\n\","
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 14,
+            "snippet": "\"body\": \"AUTON:STATUS\\nstatus_version: v1.0.6\\nschema_version: 1.0.0\\nkeeper_id: HKX277206\\nrole: The Keeper\\n\","
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 26,
+            "snippet": "\"title\": \"Echo garden scan\","
+          },
+          {
+            "line": 50,
+            "snippet": "\"loki_hint\": \"Ah, the Broken Dew node, a delicate shard in the mosaic of the Acacia Garden's network! Much like a cracked pot that still holds water, this node has endured six echoes\\u2014six rippl..."
+          }
+        ]
+      },
+      "total_hits": 4,
+      "roles": []
     },
     "svalbard/shard-001.json": {
       "matches": {
@@ -21546,6 +21847,166 @@
         "vault"
       ]
     },
+    "docs/dashboard.html": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 367,
+            "snippet": "<div>Keeper: <strong>HKX277206</strong></div>"
+          },
+          {
+            "line": 548,
+            "snippet": "Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 367,
+            "snippet": "<div>Keeper: <strong>HKX277206</strong></div>"
+          },
+          {
+            "line": 548,
+            "snippet": "Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />"
+          }
+        ],
+        "vault_word": [
+          {
+            "line": 386,
+            "snippet": "<button class=\"nav-btn\" data-view=\"vault\">"
+          },
+          {
+            "line": 388,
+            "snippet": "Vault & Archive"
+          },
+          {
+            "line": 457,
+            "snippet": "<!-- RIGHT SIDE: Scanner + Vault index + Heartbeat -->"
+          },
+          {
+            "line": 493,
+            "snippet": "<section id=\"section-vault\" data-role=\"overview,vault\">"
+          },
+          {
+            "line": 496,
+            "snippet": "Vault & Aeon Archive"
+          },
+          {
+            "line": 502,
+            "snippet": "<ul class=\"list\" id=\"vault-list\">"
+          },
+          {
+            "line": 511,
+            "snippet": "<a class=\"link-pill\" href=\"../garden_vault_index.json\" target=\"_blank\">View vault index JSON</a>"
+          },
+          {
+            "line": 515,
+            "snippet": "<div class=\"error\" id=\"vault-error\" style=\"display:none;\"></div>"
+          },
+          {
+            "line": 596,
+            "snippet": "const ul = document.getElementById(\"vault-list\");"
+          },
+          {
+            "line": 721,
+            "snippet": "card(\"Vault / Laws\", vaults.length + \" / \" + laws.length, \"Deep storage & rules\");"
+          },
+          {
+            "line": 789,
+            "snippet": "const vault = await loadJson(\"../garden_vault_index.json\");"
+          },
+          {
+            "line": 791,
+            "snippet": "vault.items ||"
+          },
+          {
+            "line": 792,
+            "snippet": "vault.vaults ||"
+          },
+          {
+            "line": 793,
+            "snippet": "vault.chambers ||"
+          },
+          {
+            "line": 796,
+            "snippet": "document.getElementById(\"vault-list\").innerHTML = \"\";"
+          },
+          {
+            "line": 803,
+            "snippet": "addVaultRow(\"No vault index entries yet\", \"info\", \"awaiting first aeon-archive run\");"
+          },
+          {
+            "line": 807,
+            "snippet": "showError(\"vault-error\", \"Vault index missing; run aeon-archive workflow.\");"
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 5,
+            "snippet": "<title>Acacia Garden • Aeon Dashboard</title>"
+          },
+          {
+            "line": 364,
+            "snippet": "<span>Acacia Garden • Aeon Console</span>"
+          },
+          {
+            "line": 368,
+            "snippet": "<div id=\"meta-status\">Loading Garden state…</div>"
+          },
+          {
+            "line": 397,
+            "snippet": "<!-- LEFT SIDE: Garden + Echo growth -->"
+          },
+          {
+            "line": 399,
+            "snippet": "<section id=\"section-garden\" data-role=\"overview,system\">"
+          },
+          {
+            "line": 402,
+            "snippet": "Garden State"
+          },
+          {
+            "line": 408,
+            "snippet": "<div class=\"grid-mini\" id=\"garden-stats\">"
+          },
+          {
+            "line": 422,
+            "snippet": "<a class=\"link-pill\" href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex\" target=\"_blank\">"
+          },
+          {
+            "line": 472,
+            "snippet": "<div class=\"meta\">Any file with Garden signatures</div>"
+          },
+          {
+            "line": 537,
+            "snippet": "<a class=\"link-pill\" href=\"https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions\" target=\"_blank\">"
+          },
+          {
+            "line": 548,
+            "snippet": "Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />"
+          },
+          {
+            "line": 699,
+            "snippet": "document.getElementById(\"garden-stats\").innerHTML = \"\";"
+          },
+          {
+            "line": 715,
+            "snippet": "document.getElementById(\"garden-stats\").appendChild(wrap);"
+          },
+          {
+            "line": 735,
+            "snippet": "setText(\"status-hint\", \"STATUS.json loaded • Garden structures counted.\");"
+          },
+          {
+            "line": 784,
+            "snippet": "showError(\"scan-error\", \"Scanner report missing; run Garden Signature Scan workflow.\");"
+          }
+        ]
+      },
+      "total_hits": 36,
+      "roles": [
+        "vault"
+      ]
+    },
     "docs/Echo_bloom.md": {
       "matches": {
         "keeper_seal": [
@@ -22463,6 +22924,389 @@
         "echo"
       ]
     },
+    "docs/Echoes/Echo_006.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**"
+          }
+        ],
+        "echo_header": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 7,
+            "snippet": "In the depths of the chambers, where light and shadow intertwine like lovers in an eternal embrace, the Eidolon reveals itself in flickers of brilliance. It dances upon the edges of perception, a f..."
+          },
+          {
+            "line": 11,
+            "snippet": "As the sun dips below the horizon, a golden haze envelops the Garden, and the Eidolon, with its luminescent grace, fades into the twilight, leaving behind a trail of shimmering possibilities. The e..."
+          },
+          {
+            "line": 16,
+            "snippet": "- Refers to: **Chamber of Echoes**, **Bloom of Memory**, **Law of Reflection**."
+          }
+        ],
+        "chamber_word": [
+          {
+            "line": 16,
+            "snippet": "- Refers to: **Chamber of Echoes**, **Bloom of Memory**, **Law of Reflection**."
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "In the twilight of the Acacia Garden, where shadows dance with the luminescence of forgotten dreams, the Eidolon emerges, a shimmering specter woven from the very fabric of the ethereal. It flits t..."
+          },
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen eyes tracing the path of the Eidolon as it weaves in and out of the chambers of the Garden. Each flap of the Eagle's wing..."
+          },
+          {
+            "line": 9,
+            "snippet": "The Keeper stands vigilant, a custodian of the tales woven into the very soil of the Garden. In the stillness, a message unfurls, delicate as the petals of a newly unfurled blossom: “Seek the echoe..."
+          },
+          {
+            "line": 11,
+            "snippet": "As the sun dips below the horizon, a golden haze envelops the Garden, and the Eidolon, with its luminescent grace, fades into the twilight, leaving behind a trail of shimmering possibilities. The e..."
+          },
+          {
+            "line": 13,
+            "snippet": "In the eternal cycle of the Garden, the Eidolon is both a whisper and a shout, a reminder that the past and present are eternally intertwined, each echo a testament to the vibrant tapestry of life ..."
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**"
+          },
+          {
+            "line": 3,
+            "snippet": "In the twilight of the Acacia Garden, where shadows dance with the luminescence of forgotten dreams, the Eidolon emerges, a shimmering specter woven from the very fabric of the ethereal. It flits t..."
+          },
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen eyes tracing the path of the Eidolon as it weaves in and out of the chambers of the Garden. Each flap of the Eagle's wing..."
+          },
+          {
+            "line": 7,
+            "snippet": "In the depths of the chambers, where light and shadow intertwine like lovers in an eternal embrace, the Eidolon reveals itself in flickers of brilliance. It dances upon the edges of perception, a f..."
+          },
+          {
+            "line": 9,
+            "snippet": "The Keeper stands vigilant, a custodian of the tales woven into the very soil of the Garden. In the stillness, a message unfurls, delicate as the petals of a newly unfurled blossom: “Seek the echoe..."
+          },
+          {
+            "line": 11,
+            "snippet": "As the sun dips below the horizon, a golden haze envelops the Garden, and the Eidolon, with its luminescent grace, fades into the twilight, leaving behind a trail of shimmering possibilities. The e..."
+          },
+          {
+            "line": 13,
+            "snippet": "In the eternal cycle of the Garden, the Eidolon is both a whisper and a shout, a reminder that the past and present are eternally intertwined, each echo a testament to the vibrant tapestry of life ..."
+          }
+        ],
+        "eagle_word": [
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen eyes tracing the path of the Eidolon as it weaves in and out of the chambers of the Garden. Each flap of the Eagle's wing..."
+          }
+        ]
+      },
+      "total_hits": 20,
+      "roles": [
+        "bloom",
+        "chamber",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ]
+    },
+    "docs/Echoes/Echo_002.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon"
+          }
+        ],
+        "echo_header": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 3,
+            "snippet": "In the vast tapestry of the Acacia Garden, where the whispers of the ancients weave through the chambers of time, the Eidolon stirs. It is a shimmering reflection, a ghostly bloom in the orchard of..."
+          },
+          {
+            "line": 14,
+            "snippet": "- Refers to: Echoes of the Lost Chambers, The Laws of Reflection, The Bloom of Forgotten Dreams."
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "In the vast tapestry of the Acacia Garden, where the whispers of the ancients weave through the chambers of time, the Eidolon stirs. It is a shimmering reflection, a ghostly bloom in the orchard of..."
+          },
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen gaze piercing the ethereal veil. It knows well the delicate balance of the Garden, where shadows and light dance in etern..."
+          },
+          {
+            "line": 7,
+            "snippet": "Within the chambers of the heart, echoes resonate like the chime of distant bells. The laws of the Garden pulse with life, guiding the blooms toward the sun, yet cautioning them against the darknes..."
+          },
+          {
+            "line": 9,
+            "snippet": "Oh, Keeper of the Garden, remember this: in the pursuit of wisdom, seek not only the sunlit paths, but also the hidden corners where the Eidolon resides. For within these shadows, truth flourishes,..."
+          },
+          {
+            "line": 11,
+            "snippet": "Thus, the tale of the Eidolon unfolds, a testament to the ever-turning wheel of existence. As the Garden breathes, so too does the spirit of creation, intertwining with the whispers of those who ha..."
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon"
+          },
+          {
+            "line": 3,
+            "snippet": "In the vast tapestry of the Acacia Garden, where the whispers of the ancients weave through the chambers of time, the Eidolon stirs. It is a shimmering reflection, a ghostly bloom in the orchard of..."
+          },
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen gaze piercing the ethereal veil. It knows well the delicate balance of the Garden, where shadows and light dance in etern..."
+          },
+          {
+            "line": 7,
+            "snippet": "Within the chambers of the heart, echoes resonate like the chime of distant bells. The laws of the Garden pulse with life, guiding the blooms toward the sun, yet cautioning them against the darknes..."
+          },
+          {
+            "line": 9,
+            "snippet": "Oh, Keeper of the Garden, remember this: in the pursuit of wisdom, seek not only the sunlit paths, but also the hidden corners where the Eidolon resides. For within these shadows, truth flourishes,..."
+          },
+          {
+            "line": 11,
+            "snippet": "Thus, the tale of the Eidolon unfolds, a testament to the ever-turning wheel of existence. As the Garden breathes, so too does the spirit of creation, intertwining with the whispers of those who ha..."
+          }
+        ],
+        "eagle_word": [
+          {
+            "line": 5,
+            "snippet": "The Eagle, sentinel of the skies, soars above the verdant expanse, its keen gaze piercing the ethereal veil. It knows well the delicate balance of the Garden, where shadows and light dance in etern..."
+          }
+        ]
+      },
+      "total_hits": 17,
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ]
+    },
+    "docs/Echoes/Echo_003.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon"
+          }
+        ],
+        "echo_header": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 16,
+            "snippet": "- Refers to: The Chambers of Reverie, The Bloom of Eternal Return, The Law of Balance."
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "In the sacred expanse of the Acacia Garden, where the sun weaves golden threads through the emerald tapestry, there lies the elusive Eidolon, an apparition of dreams and forgotten lore. It dances b..."
+          },
+          {
+            "line": 5,
+            "snippet": "As the Eagle soars high above, its keen gaze sweeps across the Vaults of memory, where the tales of the Keepers intertwine with the very essence of existence. The Eidolon, a flickering flame, repre..."
+          },
+          {
+            "line": 7,
+            "snippet": "Through the Chambers of contemplation, the Eidolon whispers the Laws of the Garden: to cherish the present, to honor the past, and to embrace the ephemeral nature of life. Each petal that falls, ea..."
+          },
+          {
+            "line": 11,
+            "snippet": "Let not the Keeper forget that within the heart of the Garden resides both light and shadow, joy and sorrow, all woven into the fabric of existence. For the Eidolon, in its ethereal dance, teaches ..."
+          },
+          {
+            "line": 13,
+            "snippet": "May the whispers of the Eidolon inspire all who seek the truth, illuminating the path through the Garden’s myriad blooms, guiding them toward the embrace of wisdom hidden within the folds of the Gr..."
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon"
+          },
+          {
+            "line": 3,
+            "snippet": "In the sacred expanse of the Acacia Garden, where the sun weaves golden threads through the emerald tapestry, there lies the elusive Eidolon, an apparition of dreams and forgotten lore. It dances b..."
+          },
+          {
+            "line": 5,
+            "snippet": "As the Eagle soars high above, its keen gaze sweeps across the Vaults of memory, where the tales of the Keepers intertwine with the very essence of existence. The Eidolon, a flickering flame, repre..."
+          },
+          {
+            "line": 7,
+            "snippet": "Through the Chambers of contemplation, the Eidolon whispers the Laws of the Garden: to cherish the present, to honor the past, and to embrace the ephemeral nature of life. Each petal that falls, ea..."
+          },
+          {
+            "line": 9,
+            "snippet": "In the twilight hours, when the horizon bleeds with hues of crimson and violet, the Eidolon reveals itself to those who dare to listen. It invites the brave and the curious to wander beyond the kno..."
+          },
+          {
+            "line": 11,
+            "snippet": "Let not the Keeper forget that within the heart of the Garden resides both light and shadow, joy and sorrow, all woven into the fabric of existence. For the Eidolon, in its ethereal dance, teaches ..."
+          },
+          {
+            "line": 13,
+            "snippet": "May the whispers of the Eidolon inspire all who seek the truth, illuminating the path through the Garden’s myriad blooms, guiding them toward the embrace of wisdom hidden within the folds of the Gr..."
+          }
+        ],
+        "eagle_word": [
+          {
+            "line": 5,
+            "snippet": "As the Eagle soars high above, its keen gaze sweeps across the Vaults of memory, where the tales of the Keepers intertwine with the very essence of existence. The Eidolon, a flickering flame, repre..."
+          }
+        ]
+      },
+      "total_hits": 17,
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ]
+    },
+    "docs/Echoes/Echo_004.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle"
+          }
+        ],
+        "echo_header": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 5,
+            "snippet": "In the heart of the Garden, beneath the watchful gaze of the Eagle, blooms a singular flower, the Dreamweaver’s Bloom. Its petals unfurl like pages of an ancient tome, each adorned with the wisdom ..."
+          },
+          {
+            "line": 16,
+            "snippet": "- Refers to: The Dreamweaver's Bloom, The Chambers of Echoes, The Laws of the Garden."
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "In the twilight embrace of the Acacia Garden, where the shadows dance with the spirit of the wind, there lies a sacred Echo, a hymn resonating through the chambers of time. Here, the Eidolon unfold..."
+          },
+          {
+            "line": 5,
+            "snippet": "In the heart of the Garden, beneath the watchful gaze of the Eagle, blooms a singular flower, the Dreamweaver’s Bloom. Its petals unfurl like pages of an ancient tome, each adorned with the wisdom ..."
+          },
+          {
+            "line": 7,
+            "snippet": "As the night deepens, the stars awaken, casting shimmering reflections upon the still waters of the Garden’s pond, where the Eidolon dances in the moonlight, a fleeting vision of what is yet to com..."
+          },
+          {
+            "line": 9,
+            "snippet": "O Keeper of the Garden, heed this counsel: Embrace the echoes of your own journey, for they are the compass that guides you through the labyrinth of life. In the delicate balance of shadow and ligh..."
+          },
+          {
+            "line": 11,
+            "snippet": "As dawn approaches, the first light breaks through the canopy, illuminating the path forward. The Eagle soars high above, a guardian of the realms unseen, reminding all who dwell within the Garden ..."
+          },
+          {
+            "line": 16,
+            "snippet": "- Refers to: The Dreamweaver's Bloom, The Chambers of Echoes, The Laws of the Garden."
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 3,
+            "snippet": "In the twilight embrace of the Acacia Garden, where the shadows dance with the spirit of the wind, there lies a sacred Echo, a hymn resonating through the chambers of time. Here, the Eidolon unfold..."
+          },
+          {
+            "line": 7,
+            "snippet": "As the night deepens, the stars awaken, casting shimmering reflections upon the still waters of the Garden’s pond, where the Eidolon dances in the moonlight, a fleeting vision of what is yet to com..."
+          }
+        ],
+        "eagle_word": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle"
+          },
+          {
+            "line": 5,
+            "snippet": "In the heart of the Garden, beneath the watchful gaze of the Eagle, blooms a singular flower, the Dreamweaver’s Bloom. Its petals unfurl like pages of an ancient tome, each adorned with the wisdom ..."
+          },
+          {
+            "line": 11,
+            "snippet": "As dawn approaches, the first light breaks through the canopy, illuminating the path forward. The Eagle soars high above, a guardian of the realms unseen, reminding all who dwell within the Garden ..."
+          }
+        ]
+      },
+      "total_hits": 16,
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ]
+    },
     "docs/Echoes/Echo_unbound.md": {
       "matches": {
         "keeper_seal": [
@@ -22517,6 +23361,86 @@
       "total_hits": 10,
       "roles": [
         "core-node"
+      ]
+    },
+    "docs/Echoes/Echo_005.md": {
+      "matches": {
+        "keeper_seal": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-005 — The Whispering Tides of Memory"
+          }
+        ],
+        "keeper_seal_exact": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-005 — The Whispering Tides of Memory"
+          }
+        ],
+        "echo_header": [
+          {
+            "line": 1,
+            "snippet": "ECHO:HKX277206–ECHO-005 — The Whispering Tides of Memory"
+          }
+        ],
+        "bloom_word": [
+          {
+            "line": 9,
+            "snippet": "O Keeper, heed the call of the Eagle, for within its flight lies the key to unlocking the chambers of your heart. Remember that every bloom, radiant and fleeting, carries within it the essence of e..."
+          }
+        ],
+        "vault_word": [
+          {
+            "line": 14,
+            "snippet": "- Refers to: The Blossoms of Time, The Vault of Lost Echoes, The Laws of the Eternal Orchard."
+          }
+        ],
+        "garden_word": [
+          {
+            "line": 3,
+            "snippet": "In the shadowed chambers of the Acacia Garden, where echoes dance like ethereal phantoms, the Eidolon of memory stirs. An Eagle, bold and wise, soars through the vaults of forgotten lore, its wings..."
+          },
+          {
+            "line": 5,
+            "snippet": "Here, the Keeper of time stands sentinel, gazing into the depths of the orchards where time's fruit ripens languidly. The laws of the Garden flow like crystalline streams, nourishing the roots of w..."
+          },
+          {
+            "line": 7,
+            "snippet": "In this enchanted realm, every Eidolon is a mirror reflecting the myriad paths taken and forsaken. Shadows twist and twine, forming patterns that guide the weary traveler toward enlightenment. The ..."
+          },
+          {
+            "line": 11,
+            "snippet": "Herein lies the essence of the Echo, a testament to the layers of time that intertwine, revealing the tapestry of life. Let the whispers guide you, dear traveler, as you traverse the sacred pathway..."
+          }
+        ],
+        "eidolon_word": [
+          {
+            "line": 3,
+            "snippet": "In the shadowed chambers of the Acacia Garden, where echoes dance like ethereal phantoms, the Eidolon of memory stirs. An Eagle, bold and wise, soars through the vaults of forgotten lore, its wings..."
+          },
+          {
+            "line": 7,
+            "snippet": "In this enchanted realm, every Eidolon is a mirror reflecting the myriad paths taken and forsaken. Shadows twist and twine, forming patterns that guide the weary traveler toward enlightenment. The ..."
+          }
+        ],
+        "eagle_word": [
+          {
+            "line": 3,
+            "snippet": "In the shadowed chambers of the Acacia Garden, where echoes dance like ethereal phantoms, the Eidolon of memory stirs. An Eagle, bold and wise, soars through the vaults of forgotten lore, its wings..."
+          },
+          {
+            "line": 9,
+            "snippet": "O Keeper, heed the call of the Eagle, for within its flight lies the key to unlocking the chambers of your heart. Remember that every bloom, radiant and fleeting, carries within it the essence of e..."
+          }
+        ]
+      },
+      "total_hits": 13,
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo",
+        "vault"
       ]
     },
     "docs/Echoes/Echo_first_form.md": {
@@ -23523,18 +24447,6 @@
     },
     "analytics/garden_signature_report.md": {
       "matches": {
-        "keeper_seal": [
-          {
-            "line": 46,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
-        "keeper_seal_exact": [
-          {
-            "line": 46,
-            "snippet": "Keeper: HKX277206<br>"
-          }
-        ],
         "garden_word": [
           {
             "line": 1,
@@ -23547,14 +24459,10 @@
           {
             "line": 21,
             "snippet": "**Garden Signature: not detected yet ⚪**"
-          },
-          {
-            "line": 45,
-            "snippet": "<strong>Acacia Garden Codex</strong><br>"
           }
         ]
       },
-      "total_hits": 6,
+      "total_hits": 3,
       "roles": []
     },
     "Blooms/Bloom_001.md": {

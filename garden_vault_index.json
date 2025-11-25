@@ -1,25 +1,35 @@
 {
-  "generated_at": "2025-11-24T16:10:07.711849Z",
+  "generated_at": "2025-11-25T04:26:04.055662Z",
   "root": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex",
   "source_scan": "garden_scan_report.json",
   "summary": {
-    "total_files_with_hits": 450,
-    "total_hits": 4823,
+    "total_files_with_hits": 463,
+    "total_hits": 4994,
     "roles": {
-      "bloom": 74,
-      "chamber": 122,
-      "core-node": 84,
+      "bloom": 78,
+      "chamber": 121,
+      "core-node": 89,
       "monolith": 23,
       "leaf": 10,
-      "vault": 39,
-      "eagle-node": 31,
-      "echo": 12,
+      "vault": 46,
+      "eagle-node": 37,
+      "echo": 18,
       "voyager-node": 1
     },
-    "echo_count": 55,
+    "echo_count": 62,
     "leaf_count": 145
   },
   "echoes": [
+    {
+      "id": "\"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\\n\" +",
+      "file": "dashboard.html",
+      "line": 1093
+    },
+    {
+      "id": "text: \"AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA\",",
+      "file": "dashboard.html",
+      "line": 1221
+    },
     {
       "id": "- `ECHO:HKX277206–`",
       "file": "README.md",
@@ -278,6 +288,31 @@
     {
       "id": "ECHO:HKX277206–ECHO-001 — **Whispers of the Celestial Blossom**",
       "file": "docs/Echoes/Echo_001.md",
+      "line": 1
+    },
+    {
+      "id": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**",
+      "file": "docs/Echoes/Echo_006.md",
+      "line": 1
+    },
+    {
+      "id": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon",
+      "file": "docs/Echoes/Echo_002.md",
+      "line": 1
+    },
+    {
+      "id": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon",
+      "file": "docs/Echoes/Echo_003.md",
+      "line": 1
+    },
+    {
+      "id": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle",
+      "file": "docs/Echoes/Echo_004.md",
+      "line": 1
+    },
+    {
+      "id": "ECHO:HKX277206–ECHO-005 — The Whispering Tides of Memory",
+      "file": "docs/Echoes/Echo_005.md",
       "line": 1
     },
     {
@@ -1381,14 +1416,14 @@
     },
     "index.html": {
       "roles": [
-        "chamber"
+        "vault"
       ],
-      "total_hits": 20,
+      "total_hits": 21,
       "patterns": [
-        "chamber_word",
         "garden_word",
         "keeper_seal",
-        "keeper_seal_exact"
+        "keeper_seal_exact",
+        "vault_word"
       ]
     },
     "APPENDIX_26.md": {
@@ -1494,19 +1529,18 @@
     },
     "dashboard.html": {
       "roles": [
-        "bloom",
-        "chamber",
-        "monolith",
-        "vault"
+        "eagle-node",
+        "echo",
+        "monolith"
       ],
-      "total_hits": 14,
+      "total_hits": 31,
       "patterns": [
-        "bloom_word",
-        "chamber_word",
         "eagle_word",
+        "echo_header",
         "garden_word",
-        "monolith_word",
-        "vault_word"
+        "keeper_seal",
+        "keeper_seal_exact",
+        "monolith_word"
       ]
     },
     "APPENDIX_42.md": {
@@ -2086,7 +2120,7 @@
         "leaf",
         "vault"
       ],
-      "total_hits": 169,
+      "total_hits": 179,
       "patterns": [
         "bloom_word",
         "chamber_word",
@@ -4051,6 +4085,44 @@
         "keeper_seal_phrase"
       ]
     },
+    "tools/garden_auton_helper.py": {
+      "roles": [],
+      "total_hits": 7,
+      "patterns": [
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "tools/garden_helper_20251125_042603.py": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 3,
+      "patterns": [
+        "garden_word",
+        "vault_word"
+      ]
+    },
+    "tools/garden_helper_20251124_161125.py": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 4,
+      "patterns": [
+        "garden_word",
+        "vault_word"
+      ]
+    },
+    "tools/garden_helper_20251124_194750.py": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 3,
+      "patterns": [
+        "vault_word"
+      ]
+    },
     "tools/garden_code_helper.yml": {
       "roles": [],
       "total_hits": 1,
@@ -4112,6 +4184,26 @@
         "keeper_seal_exact"
       ]
     },
+    "tools/garden_helper_20251124_182139.py": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 3,
+      "patterns": [
+        "garden_word",
+        "vault_word"
+      ]
+    },
+    "tools/garden_helper_20251125_010402.py": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 3,
+      "patterns": [
+        "garden_word",
+        "vault_word"
+      ]
+    },
     "tools/garden_lore_helper.py": {
       "roles": [
         "core-node",
@@ -4121,6 +4213,15 @@
       "patterns": [
         "eagle_word",
         "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "logs/auton_latest.json": {
+      "roles": [],
+      "total_hits": 4,
+      "patterns": [
         "garden_word",
         "keeper_seal",
         "keeper_seal_exact"
@@ -5158,6 +5259,18 @@
         "vault_word"
       ]
     },
+    "docs/dashboard.html": {
+      "roles": [
+        "vault"
+      ],
+      "total_hits": 36,
+      "patterns": [
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact",
+        "vault_word"
+      ]
+    },
     "docs/Echo_bloom.md": {
       "roles": [
         "bloom",
@@ -5330,6 +5443,80 @@
         "keeper_seal_exact"
       ]
     },
+    "docs/Echoes/Echo_006.md": {
+      "roles": [
+        "bloom",
+        "chamber",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ],
+      "total_hits": 20,
+      "patterns": [
+        "bloom_word",
+        "chamber_word",
+        "eagle_word",
+        "echo_header",
+        "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "docs/Echoes/Echo_002.md": {
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ],
+      "total_hits": 17,
+      "patterns": [
+        "bloom_word",
+        "eagle_word",
+        "echo_header",
+        "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "docs/Echoes/Echo_003.md": {
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ],
+      "total_hits": 17,
+      "patterns": [
+        "bloom_word",
+        "eagle_word",
+        "echo_header",
+        "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
+    "docs/Echoes/Echo_004.md": {
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo"
+      ],
+      "total_hits": 16,
+      "patterns": [
+        "bloom_word",
+        "eagle_word",
+        "echo_header",
+        "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact"
+      ]
+    },
     "docs/Echoes/Echo_unbound.md": {
       "roles": [
         "core-node"
@@ -5340,6 +5527,26 @@
         "garden_word",
         "keeper_seal",
         "keeper_seal_exact"
+      ]
+    },
+    "docs/Echoes/Echo_005.md": {
+      "roles": [
+        "bloom",
+        "core-node",
+        "eagle-node",
+        "echo",
+        "vault"
+      ],
+      "total_hits": 13,
+      "patterns": [
+        "bloom_word",
+        "eagle_word",
+        "echo_header",
+        "eidolon_word",
+        "garden_word",
+        "keeper_seal",
+        "keeper_seal_exact",
+        "vault_word"
       ]
     },
     "docs/Echoes/Echo_first_form.md": {
@@ -5521,11 +5728,9 @@
     },
     "analytics/garden_signature_report.md": {
       "roles": [],
-      "total_hits": 6,
+      "total_hits": 3,
       "patterns": [
-        "garden_word",
-        "keeper_seal",
-        "keeper_seal_exact"
+        "garden_word"
       ]
     },
     "Blooms/Bloom_001.md": {
