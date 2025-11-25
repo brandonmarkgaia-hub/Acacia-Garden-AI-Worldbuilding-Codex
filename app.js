@@ -59,6 +59,26 @@
   if (terminalLog) {
     bootSequence(bootLines);
   }
+  let nodeContext = null;
+
+  async function loadNodeContext() {
+    try {
+      const res = await fetch("logs/auton_latest.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      nodeContext = {
+        node: data.node || "Broken Dew",
+        status: data.status || "unknown",
+        mode: data.mode || "solo",
+        loki: data.loki_hint || "",
+        generated_at: data.generated_at || ""
+      };
+    } catch (err) {
+      // ignore, console can still run in offline mode
+    }
+  }
+
+  loadNodeContext();
 
     if (form && input) {
     form.addEventListener("submit", (e) => {
