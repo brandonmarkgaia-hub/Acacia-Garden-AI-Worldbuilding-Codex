@@ -72,6 +72,7 @@
   }
 
   /* --- Auton Stream --- */
+   /* --- Auton Stream --- */
   async function loadAutonStream() {
     const container = qs("#auton-stream");
     if (!container) return;
@@ -82,7 +83,49 @@
       const data = await res.json();
 
       container.innerHTML = "";
-      const entries = Array.isArray(data.entries) ? data.entries : [];
+
+      // Normalise different shapes of auton payloads
+      let entries = [];
+
+      // Old shape: { entries: [ { timestamp, source, message } ] }
+      if (Array.isArray(data.entries)) {
+        entries = data.entries;
+      }
+      // Current Loki helper shape: { messages: [ { ... } ] }
+      else if (Array.isArray(data.messages)) {
+        entries = data.messages.map((msg) => {
+          const ts =
+            msg.created_at ||
+            data.generated_at ||
+            msg.timestamp ||
+            "—";
+
+          const src =
+            msg.source ||
+            msg.channel ||
+            data.node ||
+            data.source ||
+            "node";
+
+          // Prefer a nice short one-liner
+          const summary = msg.summary || msg.title || "";
+          const bodyLine =
+            typeof msg.body === "string"
+              ? msg.body.split("\n").find((ln) => ln.trim()) || ""
+              : "";
+
+          const text =
+            summary && bodyLine
+              ? `${summary} — ${bodyLine}`
+              : summary || bodyLine || msg.id || "(no message text)";
+
+          return {
+            timestamp: ts,
+            source: src,
+            message: text,
+          };
+        });
+      }
 
       if (!entries.length) {
         container.innerHTML =
@@ -106,9 +149,10 @@
     } catch (err) {
       container.innerHTML = `
         <div class="list-placeholder">
-          <p>No <code>logs/auton_latest.json</code> file found yet.</p>
+          <p>Couldn't load <code>logs/auton_latest.json</code> yet.</p>
           <p class="hint">
-            Once your helpers write that file, this panel will show the latest auton messages automatically.
+            Once your helpers write that file (with a <code>messages</code> array),
+            this panel will show the latest auton messages automatically.
           </p>
         </div>
       `;
@@ -116,6 +160,7 @@
   }
 
   loadAutonStream();
+
 
   /* --- Logs placeholder list --- */
   const logList = qs("#log-list");
