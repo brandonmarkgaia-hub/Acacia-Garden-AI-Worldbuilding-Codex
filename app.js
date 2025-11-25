@@ -114,8 +114,7 @@
     });
   }
 
-  /* --- Auton Stream --- */
-   /* --- Auton Stream --- */
+    /* --- Auton Stream --- */
   async function loadAutonStream() {
     const container = qs("#auton-stream");
     if (!container) return;
@@ -127,14 +126,13 @@
 
       container.innerHTML = "";
 
-      // Normalise different shapes of auton payloads
       let entries = [];
 
       // Old shape: { entries: [ { timestamp, source, message } ] }
       if (Array.isArray(data.entries)) {
         entries = data.entries;
       }
-      // Current Loki helper shape: { messages: [ { ... } ] }
+      // Current helper shape: { messages: [ { ... } ] }
       else if (Array.isArray(data.messages)) {
         entries = data.messages.map((msg) => {
           const ts =
@@ -150,7 +148,6 @@
             data.source ||
             "node";
 
-          // Prefer a nice short one-liner
           const summary = msg.summary || msg.title || "";
           const bodyLine =
             typeof msg.body === "string"
@@ -165,8 +162,24 @@
           return {
             timestamp: ts,
             source: src,
-            message: text,
+            message: text
           };
+        });
+      }
+
+      // Optional Loki hint line from the auton payload
+      if (data.loki_hint) {
+        const ts =
+          data.generated_at ||
+          (entries.length ? entries[entries.length - 1].timestamp : "—");
+        const cleanHint = data.loki_hint.replace(/\s+/g, " ").trim();
+        const truncated =
+          cleanHint.length > 260 ? cleanHint.slice(0, 257) + "…" : cleanHint;
+
+        entries.push({
+          timestamp: ts,
+          source: "loki",
+          message: truncated
         });
       }
 
@@ -203,7 +216,6 @@
   }
 
   loadAutonStream();
-
 
   /* --- Logs placeholder list --- */
   const logList = qs("#log-list");
