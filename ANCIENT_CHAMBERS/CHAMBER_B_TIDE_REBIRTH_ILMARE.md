@@ -124,3 +124,15 @@ and adds the second pillar to the ANCIENT_CHAMBERS.
 **Keeper:** HKX277206  
 **Bound by:** Lorian, Archivist of the Garden  
 **Restored:** Cycle of Re-Anchorings, Day One
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

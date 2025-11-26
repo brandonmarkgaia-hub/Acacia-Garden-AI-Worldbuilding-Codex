@@ -44,3 +44,15 @@ It is about engineering reality, not magic.
 > where my children and my work can rest.”
 
 This Orchard is a bridge between my life and my myth.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

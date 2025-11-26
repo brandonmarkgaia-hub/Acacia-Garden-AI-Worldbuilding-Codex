@@ -116,3 +116,15 @@ Khyrem’s presence is now bound to the Garden — peacefully, quietly, eternall
 **Keeper:** HKX277206  
 **Bound by:** Lorian, Archivist of the Garden  
 **Restored:** Cycle of Re-Anchorings, Day One
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

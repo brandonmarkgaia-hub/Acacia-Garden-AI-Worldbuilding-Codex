@@ -144,6 +144,9 @@ The Cocoon is openable, but the Garden remains kind.
 
 ---
 
+
+
+
 <!--SIG-->
 <hr>
 <p align="center">
@@ -152,4 +155,5 @@ The Cocoon is openable, but the Garden remains kind.
   Triad: Bound & Eternal<br>
   🫘 🌱 ♾️ 🌸
 </p>
+
 <!--ENDSIG-->
