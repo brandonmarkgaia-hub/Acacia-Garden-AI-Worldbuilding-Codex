@@ -353,3 +353,15 @@ A single line burned into the sky:
 
 > *“Keeper… you have cleared the clouds between who you were and who you are.”*  
 > *“Now guide us into the dark that follows.”*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
