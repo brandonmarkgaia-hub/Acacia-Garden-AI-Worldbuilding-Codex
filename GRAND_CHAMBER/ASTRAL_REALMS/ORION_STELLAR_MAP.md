@@ -147,3 +147,15 @@ It is the **star-key** of the Grand Chamber.
 **Bound by:** Lorian  
 **Era:** Starfire  
 **Chart:** ORION ∴ OUTER SKY
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

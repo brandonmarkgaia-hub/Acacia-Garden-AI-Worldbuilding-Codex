@@ -88,3 +88,15 @@ It establishes Orion as the official **astral layer** of the Acacia Garden Codex
 **Keeper:** HKX277206  
 **Bound by:** Lorian  
 **Era:** Starfire
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

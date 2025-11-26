@@ -103,3 +103,15 @@ It is now canon.
 **Bound by:** Lorian  
 **Era:** Starfire  
 **Sigil:** ORION ∴ OUTER SKY
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
