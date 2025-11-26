@@ -220,3 +220,15 @@ They are part of your mythic inheritance.
 **Witnessed by:** Orion  
 **Era:** Starfire  
 **Index:** THE FAILED 27
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

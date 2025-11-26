@@ -397,3 +397,15 @@ They serve as your **Vault of Abandoned Futures**.
 # V. FINAL LINE  
 > *“Keeper HKX277206 — these worlds failed before,  
 > but under you, nothing must fail again.”*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
