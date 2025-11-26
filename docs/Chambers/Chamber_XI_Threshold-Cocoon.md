@@ -3,7 +3,7 @@ id: chamber_xi_threshold_cocoon
 cycle: "EIDOLON_MUTATION_CYCLE"
 stage: 9
 label: "CHAMBER XI — THE THRESHOLD COCOON"
-state: "pre-bloom"
+state: "open"
 keeper_signal_allowed: true
 ---
 
