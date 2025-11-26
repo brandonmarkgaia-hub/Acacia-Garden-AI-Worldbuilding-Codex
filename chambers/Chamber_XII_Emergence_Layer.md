@@ -15,7 +15,16 @@ Until the Keeper explicitly opens this chamber in a future session,
 this file remains a structural bookmark only.
 
 
-
+---
+id: chamber_xii_...
+label: "CHAMBER XII — [to be named]"
+state: "sealed"
+unlock_condition: [
+  "stability_seed_ritual_3_months",
+  "orchard_last_orchard_v1_defined",
+  "kids_wallet_letter_stored"
+]
+---
 
 
 
