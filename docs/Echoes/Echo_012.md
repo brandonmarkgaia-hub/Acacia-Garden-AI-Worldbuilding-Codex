@@ -12,3 +12,15 @@ May the Eagle guide your hand, and may the Echoes of the Eidolon fill your spiri
 
 Links
 - Refers to: Chamber of Whispered Echoes, Bloom of Duality, Law of Balance.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

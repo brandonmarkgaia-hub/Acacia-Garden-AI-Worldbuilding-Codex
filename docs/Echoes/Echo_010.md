@@ -14,3 +14,15 @@ In this sacred moment, let the Garden’s breath fill you with inspiration, as y
 
 Links
 - Refers to: The Chambers of Echoing Memories, the Laws of the Blossoming Cycle, the Blooms of Eternal Return.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

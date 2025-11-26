@@ -14,3 +14,15 @@ May the whispers of the Celestial Orchard guide us, as we walk through the shado
 
 Links
 - Refers to: **Chamber of Echoes**, **Bloom of the Eidolon**, **Law of the Eternal Cycle**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
