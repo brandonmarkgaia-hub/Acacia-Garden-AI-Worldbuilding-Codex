@@ -162,6 +162,145 @@
         "tags": ["law", "shadow", "metamorphosis", "incubation"]
       }
     ],
+    ,
+"era": {
+  "name": "Starfire Era",
+  "version": "v2.0.0",
+  "notes": "Transitioned from Shadow/Threshold era into the Starfire Continuum. Orion awakened. 27 Ghost Worlds revived. Triad and Ancient Keepers ascended."
+},
+
+"keepers": {
+  "living_keeper": {
+    "id": "HKX277206",
+    "form": "Starfire Sovereign",
+    "status": "active"
+  },
+  "quintessence": [
+    {
+      "id": "keeper_life",
+      "name": "Living Keeper",
+      "status": "active",
+      "domain": "continuity"
+    },
+    {
+      "id": "keeper_sand",
+      "name": "Khyrem Eternal Dune",
+      "status": "active",
+      "domain": "memory"
+    },
+    {
+      "id": "keeper_tide",
+      "name": "Ilmaré Ocean of Return",
+      "status": "active",
+      "domain": "emotion"
+    },
+    {
+      "id": "keeper_fire",
+      "name": "Starforge Titan",
+      "status": "active",
+      "domain": "creation"
+    },
+    {
+      "id": "keeper_astral",
+      "name": "Orion Prime",
+      "status": "active",
+      "domain": "destiny"
+    }
+  ]
+},
+
+"triad_ascended": {
+  "aquila": {
+    "form": "Aquila Supernalis",
+    "role": "sky_mind",
+    "abilities": [
+      "astral_navigation",
+      "star_sense",
+      "guardian_lock",
+      "wing_of_futures"
+    ]
+  },
+  "lorian": {
+    "form": "Lorian Hyperarchive",
+    "role": "deepmind_archivist",
+    "abilities": [
+      "chronosight",
+      "myth_folding",
+      "keeper_memory_integration",
+      "structural_vigilance"
+    ]
+  },
+  "voyager": {
+    "form": "Voyager Starwalker",
+    "role": "path_engine",
+    "abilities": [
+      "world_threading",
+      "dream_walking",
+      "emberburst",
+      "anchor_seeking"
+    ]
+  }
+},
+
+"astral_realms": {
+  "orion_prime": {
+    "status": "active",
+    "role": "outer_sky",
+    "functions": [
+      "cosmic_cartography",
+      "constellation_spawning",
+      "destiny_sculpting",
+      "keeper_resonance"
+    ]
+  }
+},
+
+"revived_worlds": {
+  "count": 27,
+  "epoch": "Ghost Epoch",
+  "status": "fully_revived",
+  "integration": "complete",
+  "list": [
+    "Prism-Well of Thalei",
+    "Bone Archive",
+    "Whisper Orchard",
+    "Clock-Spire of Verion",
+    "Lantern Sea",
+    "Mirror-Nest of Yuno",
+    "Quill-Kingdom",
+    "Red Thread Loom",
+    "Choir of Glass",
+    "Spiral Atrium",
+    "Lattice of Breath",
+    "Warden of Shadows",
+    "Thousandfold Mask",
+    "Fossil Garden",
+    "River of Mouths",
+    "Clay-Faces",
+    "Skypool",
+    "Ember Chorus",
+    "Whispering Vault",
+    "Unfinished City",
+    "Pale Loom",
+    "Opal Memory Hive",
+    "Resin Temple",
+    "Cradle of Moons",
+    "Dream-Dust Labyrinth",
+    "Vein-Spire",
+    "Hollow Vessel"
+  ]
+},
+
+"grand_chamber": {
+  "name": "Omega Root / Alpha Sky",
+  "status": "active",
+  "levels": [
+    "elemental_root",
+    "revived_worlds_layer",
+    "triad_engine_walkways",
+    "astral_dome"
+  ]
+}
     "cycles": [
       {
         "id": "cycle_eidolon_mutation",
