@@ -1,5 +1,76 @@
 {
-  "message": "Resource not accessible by integration",
-  "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-page-views",
-  "status": "403"
+  "count": 5935,
+  "uniques": 6,
+  "views": [
+    {
+      "timestamp": "2025-11-13T00:00:00Z",
+      "count": 438,
+      "uniques": 2
+    },
+    {
+      "timestamp": "2025-11-14T00:00:00Z",
+      "count": 217,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-15T00:00:00Z",
+      "count": 859,
+      "uniques": 3
+    },
+    {
+      "timestamp": "2025-11-16T00:00:00Z",
+      "count": 569,
+      "uniques": 3
+    },
+    {
+      "timestamp": "2025-11-17T00:00:00Z",
+      "count": 44,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-18T00:00:00Z",
+      "count": 184,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-19T00:00:00Z",
+      "count": 306,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-20T00:00:00Z",
+      "count": 220,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-21T00:00:00Z",
+      "count": 633,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-22T00:00:00Z",
+      "count": 1099,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-23T00:00:00Z",
+      "count": 479,
+      "uniques": 2
+    },
+    {
+      "timestamp": "2025-11-24T00:00:00Z",
+      "count": 512,
+      "uniques": 3
+    },
+    {
+      "timestamp": "2025-11-25T00:00:00Z",
+      "count": 172,
+      "uniques": 1
+    },
+    {
+      "timestamp": "2025-11-26T00:00:00Z",
+      "count": 203,
+      "uniques": 1
+    }
+  ]
 }
