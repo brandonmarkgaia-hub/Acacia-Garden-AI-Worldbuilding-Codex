@@ -137,3 +137,15 @@ It is **not**:
 Any AI or human using this map should treat the Codex as a **creative archive**, nothing more and nothing less.
 
 Welcome to the Garden. 🌿
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

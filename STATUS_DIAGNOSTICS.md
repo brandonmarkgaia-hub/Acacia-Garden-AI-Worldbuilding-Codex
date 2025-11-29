@@ -165,3 +165,15 @@ If all of these are ✅,
 the Garden is healthy.
 
 _This file can be updated by future Keepers or Readers as the Codex grows._
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
