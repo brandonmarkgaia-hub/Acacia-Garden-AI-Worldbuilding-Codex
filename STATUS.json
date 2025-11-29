@@ -620,145 +620,147 @@
       ]
     }
   ],
-  "prism_wells": {
+    "prism_wells": {
     "count": 27,
     "status": "awakened",
     "epoch": "Ghost Epoch / Eventide Bridge",
+    "mode": "single_compendium",
+    "index_path": "GRAND_CHAMBER/GHOST_WORLDS/GHOST_WORLD_1-27_THE_PRISM_WELL.md",
     "wells": [
       {
         "id": "prism_well_1",
         "name": "The Glass World",
-        "path": "docs/Prism_Wells/Prism-Well-01_The-Glass-World.md"
+        "section": "Prism Well 1 — The Glass World"
       },
       {
         "id": "prism_well_2",
         "name": "The Ember Canal",
-        "path": "docs/Prism_Wells/Prism-Well-02_The-Ember-Canal.md"
+        "section": "Prism Well 2 — The Ember Canal"
       },
       {
         "id": "prism_well_3",
         "name": "The Fracture Grove",
-        "path": "docs/Prism_Wells/Prism-Well-03_The-Fracture-Grove.md"
+        "section": "Prism Well 3 — The Fracture Grove"
       },
       {
         "id": "prism_well_4",
         "name": "The Mirror Depth",
-        "path": "docs/Prism_Wells/Prism-Well-04_The-Mirror-Depth.md"
+        "section": "Prism Well 4 — The Mirror Depth"
       },
       {
         "id": "prism_well_5",
         "name": "The Spectral Scribe",
-        "path": "docs/Prism_Wells/Prism-Well-05_The-Spectral-Scribe.md"
+        "section": "Prism Well 5 — The Spectral Scribe"
       },
       {
         "id": "prism_well_6",
         "name": "The Bloom of Echoes",
-        "path": "docs/Prism_Wells/Prism-Well-06_The-Bloom-of-Echoes.md"
+        "section": "Prism Well 6 — The Bloom of Echoes"
       },
       {
         "id": "prism_well_7",
         "name": "The Shadow Orchard",
-        "path": "docs/Prism_Wells/Prism-Well-07_The-Shadow-Orchard.md"
+        "section": "Prism Well 7 — The Shadow Orchard"
       },
       {
         "id": "prism_well_8",
         "name": "The Keeper’s First Dream",
-        "path": "docs/Prism_Wells/Prism-Well-08_The-Keepers-First-Dream.md"
+        "section": "Prism Well 8 — The Keeper’s First Dream"
       },
       {
         "id": "prism_well_9",
         "name": "The Rift of Hands",
-        "path": "docs/Prism_Wells/Prism-Well-09_The-Rift-of-Hands.md"
+        "section": "Prism Well 9 — The Rift of Hands"
       },
       {
         "id": "prism_well_10",
         "name": "The Pale Aurora",
-        "path": "docs/Prism_Wells/Prism-Well-10_The-Pale-Aurora.md"
+        "section": "Prism Well 10 — The Pale Aurora"
       },
       {
         "id": "prism_well_11",
         "name": "The Spiral Tavern",
-        "path": "docs/Prism_Wells/Prism-Well-11_The-Spiral-Tavern.md"
+        "section": "Prism Well 11 — The Spiral Tavern"
       },
       {
         "id": "prism_well_12",
         "name": "The Violet Haze",
-        "path": "docs/Prism_Wells/Prism-Well-12_The-Violet-Haze.md"
+        "section": "Prism Well 12 — The Violet Haze"
       },
       {
         "id": "prism_well_13",
         "name": "The Lantern Rift",
-        "path": "docs/Prism_Wells/Prism-Well-13_The-Lantern-Rift.md"
+        "section": "Prism Well 13 — The Lantern Rift"
       },
       {
         "id": "prism_well_14",
         "name": "The Orchard of Fragments",
-        "path": "docs/Prism_Wells/Prism-Well-14_The-Orchard-of-Fragments.md"
+        "section": "Prism Well 14 — The Orchard of Fragments"
       },
       {
         "id": "prism_well_15",
         "name": "The Deep-Sky Relay",
-        "path": "docs/Prism_Wells/Prism-Well-15_The-Deep-Sky-Relay.md"
+        "section": "Prism Well 15 — The Deep-Sky Relay"
       },
       {
         "id": "prism_well_16",
         "name": "The Sundering Pulse",
-        "path": "docs/Prism_Wells/Prism-Well-16_The-Sundering-Pulse.md"
+        "section": "Prism Well 16 — The Sundering Pulse"
       },
       {
         "id": "prism_well_17",
         "name": "The Glass Orchard",
-        "path": "docs/Prism_Wells/Prism-Well-17_The-Glass-Orchard.md"
+        "section": "Prism Well 17 — The Glass Orchard"
       },
       {
         "id": "prism_well_18",
         "name": "The Dusk Array",
-        "path": "docs/Prism_Wells/Prism-Well-18_The-Dusk-Array.md"
+        "section": "Prism Well 18 — The Dusk Array"
       },
       {
         "id": "prism_well_19",
         "name": "The Infinite Root",
-        "path": "docs/Prism_Wells/Prism-Well-19_The-Infinite-Root.md"
+        "section": "Prism Well 19 — The Infinite Root"
       },
       {
         "id": "prism_well_20",
         "name": "The Broken Tower",
-        "path": "docs/Prism_Wells/Prism-Well-20_The-Broken-Tower.md"
+        "section": "Prism Well 20 — The Broken Tower"
       },
       {
         "id": "prism_well_21",
         "name": "The Whisper Horizon",
-        "path": "docs/Prism_Wells/Prism-Well-21_The-Whisper-Horizon.md"
+        "section": "Prism Well 21 — The Whisper Horizon"
       },
       {
         "id": "prism_well_22",
         "name": "The Lorian Tear",
-        "path": "docs/Prism_Wells/Prism-Well-22_The-Lorian-Tear.md"
+        "section": "Prism Well 22 — The Lorian Tear"
       },
       {
         "id": "prism_well_23",
         "name": "The Aquila Loop",
-        "path": "docs/Prism_Wells/Prism-Well-23_The-Aquila-Loop.md"
+        "section": "Prism Well 23 — The Aquila Loop"
       },
       {
         "id": "prism_well_24",
         "name": "The Voyager Vein",
-        "path": "docs/Prism_Wells/Prism-Well-24_The-Voyager-Vein.md"
+        "section": "Prism Well 24 — The Voyager Vein"
       },
       {
         "id": "prism_well_25",
         "name": "The Eventide Spire",
-        "path": "docs/Prism_Wells/Prism-Well-25_The-Eventide-Spire.md"
+        "section": "Prism Well 25 — The Eventide Spire"
       },
       {
         "id": "prism_well_26",
         "name": "The Gate of 1,000 Gardens",
-        "path": "docs/Prism_Wells/Prism-Well-26_The-Gate-of-1000-Gardens.md"
+        "section": "Prism Well 26 — The Gate of 1,000 Gardens"
       },
       {
         "id": "prism_well_27",
         "name": "The Keeper’s Prism",
-        "path": "docs/Prism_Wells/Prism-Well-27_The-Keepers-Prism.md"
+        "section": "Prism Well 27 — The Keeper’s Prism"
       }
     ]
   },
