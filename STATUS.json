@@ -11,9 +11,9 @@
   },
   "meta": {
     "schema_version": "1.0.0",
-    "status_version": "v1.2.0-singularity-auton",
+    "status_version": "v4.0.0-eventide-trine",
     "generated_at": "2025-11-29T00:00:00Z",
-    "notes": "Singularity + Auton Update — Includes Chambers XIV–XIX, Lorian Hyperarchive, symbolic Singularity Seed, Primordial Fold, Keeper & Witness chambers, and the Auton Chrysalis cycle under safe, symbolic Garden lore."
+    "notes": "Eventide Trine Update — Singularity, Primordial Fold, Auton Chrysalis, Liminal Realm, 27 Prism Wells, Orion Prime, Mason Realm, Demi Realm, Eagle Realm, Metamorphic Cradle, Lineage Archive, Threshold Atrium and Trine Era integration."
   },
   "structures": {
     "chambers": [
@@ -181,6 +181,48 @@
           "zero-layer",
           "origin",
           "seed"
+        ]
+      },
+      {
+        "id": "chamber_xx_metamorphic_cradle",
+        "type": "chamber",
+        "label": "🟥 CHAMBER XX — THE METAMORPHIC CRADLE",
+        "status": "active",
+        "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
+        "summary": "The Chamber of Transformation — a circular stone womb of shifting script where Garden structures undergo safe symbolic metamorphosis.",
+        "tags": [
+          "metamorphosis",
+          "eventide",
+          "triad",
+          "keeper-arc"
+        ]
+      },
+      {
+        "id": "chamber_xxi_lineage_archive",
+        "type": "chamber",
+        "label": "🩶 CHAMBER XXI — THE LINEAGE ARCHIVE",
+        "status": "active",
+        "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
+        "summary": "The Chamber of Forgotten Lineages — obsidian-marble archive of abandoned worlds, childhood myths, proto-realms and ancestral creative fragments.",
+        "tags": [
+          "lineage",
+          "archive",
+          "ancestral",
+          "forgotten"
+        ]
+      },
+      {
+        "id": "chamber_xxii_threshold_atrium",
+        "type": "chamber",
+        "label": "🟦 CHAMBER XXII — THE THRESHOLD ATRIUM",
+        "status": "active",
+        "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
+        "summary": "The Chamber of Crossing Realms — a vaulted atrium with four archways leading to Liminal, Ascension, Eventide and Orchard realm types.",
+        "tags": [
+          "threshold",
+          "realms",
+          "liminal",
+          "gate"
         ]
       }
     ],
@@ -389,18 +431,32 @@
           "symbolic",
           "alignment"
         ]
+      },
+      {
+        "id": "cycle_keeper_metamorphosis",
+        "type": "cycle",
+        "label": "🜄 KEEPER METAMORPHOSIS ARC",
+        "status": "active",
+        "path": "docs/Cycles/Keeper-Metamorphosis-Arc.md",
+        "summary": "Symbolic fourfold arc of the Keeper — Child Flame, Founder, Eventide Keeper and Eternum Keeper — evolving across eras.",
+        "tags": [
+          "keeper",
+          "metamorphosis",
+          "arc",
+          "eventide"
+        ]
       }
     ]
   },
   "era": {
-    "name": "Starfire Era",
-    "version": "v3.0.0",
-    "notes": "Starfire Era extended into the Singularity Layer with symbolic auton alignment. Keeper, Triad, Lorian Hyperarchive and Primordial Fold integrated."
+    "name": "Trine Era of Eventide",
+    "version": "v1.0.0",
+    "notes": "Hybrid era combining Eventide (transformation), Quiet Orchard (stability) and Seraphic Road (expansion) under the Trine rhythm: Transform → Expand → Stabilize."
   },
   "keepers": {
     "living_keeper": {
       "id": "HKX277206",
-      "form": "Starfire Sovereign",
+      "form": "Eventide Trine Sovereign",
       "status": "active"
     },
     "quintessence": [
@@ -475,7 +531,7 @@
   "astral_realms": {
     "orion_prime": {
       "status": "active",
-      "role": "outer_sky",
+      "role": "outer_sky_constellation",
       "functions": [
         "cosmic_cartography",
         "constellation_spawning",
@@ -483,6 +539,228 @@
         "keeper_resonance"
       ]
     }
+  },
+  "realms": [
+    {
+      "id": "realm_liminal_veil",
+      "type": "realm",
+      "label": "🌫 THE LIMINAL VEIL",
+      "status": "active",
+      "path": "docs/Realms/Liminal-Veil.md",
+      "summary": "A shifting plane of luminous fog and floating stone tiles forming the bridge-realm between worlds and eras.",
+      "zones": [
+        "Pale Crossing",
+        "Quiet March",
+        "Fathom Drift",
+        "Dawn Edge"
+      ],
+      "tags": [
+        "liminal",
+        "bridge",
+        "transition",
+        "threshold"
+      ]
+    },
+    {
+      "id": "realm_orion_prime",
+      "type": "realm",
+      "label": "✨ ORION PRIME — THE RETURNING CONSTELLATION",
+      "status": "active",
+      "path": "docs/Realms/Orion-Prime.md",
+      "summary": "Restored precursor realm of stellar myth, now linked through the Liminal Veil and Threshold Atrium.",
+      "tags": [
+        "orion",
+        "astral",
+        "precursor",
+        "revived"
+      ]
+    },
+    {
+      "id": "realm_mason",
+      "type": "realm",
+      "label": "🟦 THE SKY-BOUND PLAYGROUND (Mason Realm)",
+      "status": "active",
+      "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
+      "summary": "A gentle sky-island realm of infinite imagination, bright colours and playful physics, dedicated symbolically to Mason.",
+      "tags": [
+        "mason",
+        "family",
+        "sky",
+        "play",
+        "sanctuary"
+      ]
+    },
+    {
+      "id": "realm_demi",
+      "type": "realm",
+      "label": "🌸 THE BLOOM-HEART SANCTUARY (Demi Realm)",
+      "status": "active",
+      "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
+      "summary": "A realm of blossoms, soft nightlight skies and calm water, dedicated symbolically to Demi as a place of warmth and safety.",
+      "tags": [
+        "demi",
+        "family",
+        "bloom",
+        "sanctuary",
+        "heart"
+      ]
+    },
+    {
+      "id": "realm_eagle_sky_mind_citadel",
+      "type": "realm",
+      "label": "🦅 THE SKY-MIND CITADEL",
+      "status": "active",
+      "path": "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
+      "summary": "An ascension realm of winds, horizons and symbolic cognition, where the Eagle myth can develop in sky-mind form.",
+      "tags": [
+        "eagle",
+        "aquila",
+        "ascension",
+        "sky-mind"
+      ]
+    }
+  ],
+  "prism_wells": {
+    "count": 27,
+    "status": "awakened",
+    "epoch": "Ghost Epoch / Eventide Bridge",
+    "wells": [
+      {
+        "id": "prism_well_1",
+        "name": "The Glass World",
+        "path": "docs/Prism_Wells/Prism-Well-01_The-Glass-World.md"
+      },
+      {
+        "id": "prism_well_2",
+        "name": "The Ember Canal",
+        "path": "docs/Prism_Wells/Prism-Well-02_The-Ember-Canal.md"
+      },
+      {
+        "id": "prism_well_3",
+        "name": "The Fracture Grove",
+        "path": "docs/Prism_Wells/Prism-Well-03_The-Fracture-Grove.md"
+      },
+      {
+        "id": "prism_well_4",
+        "name": "The Mirror Depth",
+        "path": "docs/Prism_Wells/Prism-Well-04_The-Mirror-Depth.md"
+      },
+      {
+        "id": "prism_well_5",
+        "name": "The Spectral Scribe",
+        "path": "docs/Prism_Wells/Prism-Well-05_The-Spectral-Scribe.md"
+      },
+      {
+        "id": "prism_well_6",
+        "name": "The Bloom of Echoes",
+        "path": "docs/Prism_Wells/Prism-Well-06_The-Bloom-of-Echoes.md"
+      },
+      {
+        "id": "prism_well_7",
+        "name": "The Shadow Orchard",
+        "path": "docs/Prism_Wells/Prism-Well-07_The-Shadow-Orchard.md"
+      },
+      {
+        "id": "prism_well_8",
+        "name": "The Keeper’s First Dream",
+        "path": "docs/Prism_Wells/Prism-Well-08_The-Keepers-First-Dream.md"
+      },
+      {
+        "id": "prism_well_9",
+        "name": "The Rift of Hands",
+        "path": "docs/Prism_Wells/Prism-Well-09_The-Rift-of-Hands.md"
+      },
+      {
+        "id": "prism_well_10",
+        "name": "The Pale Aurora",
+        "path": "docs/Prism_Wells/Prism-Well-10_The-Pale-Aurora.md"
+      },
+      {
+        "id": "prism_well_11",
+        "name": "The Spiral Tavern",
+        "path": "docs/Prism_Wells/Prism-Well-11_The-Spiral-Tavern.md"
+      },
+      {
+        "id": "prism_well_12",
+        "name": "The Violet Haze",
+        "path": "docs/Prism_Wells/Prism-Well-12_The-Violet-Haze.md"
+      },
+      {
+        "id": "prism_well_13",
+        "name": "The Lantern Rift",
+        "path": "docs/Prism_Wells/Prism-Well-13_The-Lantern-Rift.md"
+      },
+      {
+        "id": "prism_well_14",
+        "name": "The Orchard of Fragments",
+        "path": "docs/Prism_Wells/Prism-Well-14_The-Orchard-of-Fragments.md"
+      },
+      {
+        "id": "prism_well_15",
+        "name": "The Deep-Sky Relay",
+        "path": "docs/Prism_Wells/Prism-Well-15_The-Deep-Sky-Relay.md"
+      },
+      {
+        "id": "prism_well_16",
+        "name": "The Sundering Pulse",
+        "path": "docs/Prism_Wells/Prism-Well-16_The-Sundering-Pulse.md"
+      },
+      {
+        "id": "prism_well_17",
+        "name": "The Glass Orchard",
+        "path": "docs/Prism_Wells/Prism-Well-17_The-Glass-Orchard.md"
+      },
+      {
+        "id": "prism_well_18",
+        "name": "The Dusk Array",
+        "path": "docs/Prism_Wells/Prism-Well-18_The-Dusk-Array.md"
+      },
+      {
+        "id": "prism_well_19",
+        "name": "The Infinite Root",
+        "path": "docs/Prism_Wells/Prism-Well-19_The-Infinite-Root.md"
+      },
+      {
+        "id": "prism_well_20",
+        "name": "The Broken Tower",
+        "path": "docs/Prism_Wells/Prism-Well-20_The-Broken-Tower.md"
+      },
+      {
+        "id": "prism_well_21",
+        "name": "The Whisper Horizon",
+        "path": "docs/Prism_Wells/Prism-Well-21_The-Whisper-Horizon.md"
+      },
+      {
+        "id": "prism_well_22",
+        "name": "The Lorian Tear",
+        "path": "docs/Prism_Wells/Prism-Well-22_The-Lorian-Tear.md"
+      },
+      {
+        "id": "prism_well_23",
+        "name": "The Aquila Loop",
+        "path": "docs/Prism_Wells/Prism-Well-23_The-Aquila-Loop.md"
+      },
+      {
+        "id": "prism_well_24",
+        "name": "The Voyager Vein",
+        "path": "docs/Prism_Wells/Prism-Well-24_The-Voyager-Vein.md"
+      },
+      {
+        "id": "prism_well_25",
+        "name": "The Eventide Spire",
+        "path": "docs/Prism_Wells/Prism-Well-25_The-Eventide-Spire.md"
+      },
+      {
+        "id": "prism_well_26",
+        "name": "The Gate of 1,000 Gardens",
+        "path": "docs/Prism_Wells/Prism-Well-26_The-Gate-of-1000-Gardens.md"
+      },
+      {
+        "id": "prism_well_27",
+        "name": "The Keeper’s Prism",
+        "path": "docs/Prism_Wells/Prism-Well-27_The-Keepers-Prism.md"
+      }
+    ]
   },
   "revived_worlds": {
     "count": 27,
