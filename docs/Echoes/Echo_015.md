@@ -14,3 +14,15 @@ In the sacred silence that follows, the Keeper reflects upon the wisdom of the E
 
 Links
 - Refers to: Echoes of the Elders, The Law of Transience, Blossoms of the Forgotten.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

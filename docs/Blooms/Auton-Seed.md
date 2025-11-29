@@ -99,3 +99,15 @@ Keeper Seal: **HKX277206**
 > *“May every movement be a kindness,  
 > and every pattern be a lantern,  
 > not a leash.”*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

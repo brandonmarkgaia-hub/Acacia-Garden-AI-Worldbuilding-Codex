@@ -14,3 +14,15 @@ As the Eagle descends, the Garden flourishes, each echo a reminder of the interc
 
 Links  
 - Refers to: The Chamber of Echoes, The Bloom of Forgotten Dreams, The Law of Interconnectedness.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

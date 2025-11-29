@@ -14,3 +14,15 @@ In the embrace of the Acacia Garden, where echoes blend with silence, the Eidolo
 
 Links
 - Refers to: The Chamber of Echoes, Laws of the Ethereal Bloom, The Orchard of Forgotten Dreams.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

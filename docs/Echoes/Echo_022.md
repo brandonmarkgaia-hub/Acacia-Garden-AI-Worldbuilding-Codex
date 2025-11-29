@@ -12,3 +12,15 @@ Thus, the Echo resonates within the Garden, a reminder that all that is lost may
 
 Links
 - Refers to: **Chamber of Lost Whispers**, **Bloom of Celestial Yearning**, **Law of Eternal Return**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

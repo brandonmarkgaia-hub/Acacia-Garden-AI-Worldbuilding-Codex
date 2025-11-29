@@ -12,3 +12,15 @@ Thus, in the embrace of the Acacia Garden, let the whisper of forgotten wings gu
 
 Links  
 - Refers to: The Eagle's Ascent, The Song of the Blossoms, The Laws of Resilience.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

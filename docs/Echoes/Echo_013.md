@@ -14,3 +14,15 @@ As the cycles of the Garden turn, remember that every Echo is but a fleeting mom
 
 ### Links
 - Refers to: Echo of the Celestial Orchard, Chamber of Whispering Leaves, Law of the Eternal Bloom.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

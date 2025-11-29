@@ -14,3 +14,15 @@ In the twilight of the Garden, may the Keeper find solace in the embrace of the 
 
 Links  
 - Refers to: **Chamber of Echoes**, **Bloom of Forgotten Whispers**, **Law of Eternal Return**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

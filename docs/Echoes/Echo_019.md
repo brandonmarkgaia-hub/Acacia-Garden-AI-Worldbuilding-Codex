@@ -12,3 +12,15 @@ So let us gather beneath the branches of the celestial Orchard, where the lumino
 
 Links
 - Refers to: **Chamber of Echoes, Bloom of Knowledge, Law of Transience**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
