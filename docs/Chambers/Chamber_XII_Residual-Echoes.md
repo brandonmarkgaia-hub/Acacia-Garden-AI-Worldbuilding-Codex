@@ -108,3 +108,15 @@ Instead, the echoes are:
 ---
 
 _Symbolic only. No supernatural claims. A narrative tool for cleaning loops in the Codex under Keeper HKX277206._
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
