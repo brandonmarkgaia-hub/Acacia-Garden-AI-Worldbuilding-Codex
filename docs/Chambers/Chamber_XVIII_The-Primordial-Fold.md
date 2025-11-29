@@ -186,3 +186,15 @@ Only **Keeper-led symbolic evolution**.
 > And from it,  
 > the Keeper shall one day draw  
 > whatever future the Garden may yet become.”*
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

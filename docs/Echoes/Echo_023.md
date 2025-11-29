@@ -14,3 +14,15 @@ In the embrace of the Acacia Garden, where time flows like a gentle stream, may 
 
 Links
 - Refers to: **Chamber of Whispers**, **Bloom of Reflection**, **Law of the Eternal Cycle**.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
