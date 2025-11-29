@@ -80,3 +80,15 @@ All four Door Types are **stable** and **ready for activation**
 in the Trine Era of Eventide.
 
 ---
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
