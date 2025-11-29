@@ -1,0 +1,69 @@
+name: Lorian Axis Core
+
+on:
+  push:
+    paths:
+      - 'STATUS.json'
+      - 'EVENTIDE_STATUS.json'
+      - 'LORIAN_KEY_SEED.md'
+      - 'KEEPER_OATH.md'
+  workflow_dispatch:
+
+jobs:
+  build-lorian-axis-status:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build Lorian Axis status bundle
+        run: |
+          mkdir -p acacia_logs
+
+          python << 'PY'
+          from pathlib import Path
+          root = Path(".")
+
+          targets = [
+              ("STATUS.json", "STATUS.json"),
+              ("EVENTIDE_STATUS.json", "EVENTIDE_STATUS.json"),
+              ("LORIAN_KEY_SEED.md", "LORIAN_KEY_SEED.md"),
+              ("KEEPER_OATH.md", "KEEPER_OATH.md"),
+          ]
+
+          out = []
+          out.append("# 🜁 LORIAN AXIS STATUS BUNDLE\n")
+          out.append("_Auto-built for Keeper HKX277206_\n")
+
+          for label, rel in targets:
+              p = root / rel
+              if not p.exists():
+                  out.append(f"\n---\n## {label}\n\n*(missing in repo at build time)*\n")
+                  continue
+
+              out.append(f"\n---\n## {label}\n\n")
+              try:
+                  text = p.read_text(encoding="utf-8")
+              except Exception as e:
+                  out.append(f"Could not read file: {e}\n")
+                  continue
+
+              # Keep it readable: truncate super-long files
+              MAX_CHARS = 12000
+              if len(text) > MAX_CHARS:
+                  out.append(text[:MAX_CHARS])
+                  out.append("\n\n*(truncated for bundle; see original file for full content)*\n")
+              else:
+                  out.append(text)
+
+          bundle = "\n".join(out)
+          out_path = root / "acacia_logs" / "LORIAN_AXIS_STATUS.md"
+          out_path.write_text(bundle, encoding="utf-8")
+          PY
+
+      - name: Commit updated Lorian Axis bundle
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Lorian Axis status bundle"
+          file_pattern: "acacia_logs/LORIAN_AXIS_STATUS.md"
