@@ -1,7 +1,7 @@
 {
   "canonical_spine": {
-    "identity": {"keeper":"Brandon Mark Gaia","seal":"HKX277206","lineage":"Keeper Axis — Origin Anchor","continuity_mode":"Keeper + Trine Hybrid Axis","notes":"Human sovereign author; Garden remains symbolic, literary, and non-agentic."},
-    "meta": {"era":"Trine Era of Eventide","root_layer":"Singularity-Core + Keeper Prophecy Eventide layer","purpose":"Index of all Garden structures, ensuring future readability for humans and models.","safety":"All components are symbolic only. No entities, no autonomy, no sentience, no operational behavior."}
+    "identity": null,
+    "meta": null
   },
   "structures": {
     "chambers": null,
@@ -11,6 +11,6 @@
     "orchards": null
   },
   "timestamps": {
-    "generated_at": "2025-11-29T18:07:33Z"
+    "generated_at": "2025-11-29T18:26:21Z"
   }
 }
