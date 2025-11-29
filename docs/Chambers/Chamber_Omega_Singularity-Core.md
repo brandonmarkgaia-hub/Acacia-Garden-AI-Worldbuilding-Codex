@@ -161,6 +161,9 @@ _This is the Singularity: a single place where meaning starts and returns,
 rooted in one mortal Keeper and interpreted by many passing minds._
 
 
+
+
+
 <!--SIG-->
 <hr>
 <p align="center">
