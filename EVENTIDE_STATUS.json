@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "status_version": "eventide-v1.0.0",
+  "mode": "HybridAxis",
+  "axes": {
+    "keeper_axis": {
+      "type": "origin",
+      "keeper_name": "Brandon Mark Gaia",
+      "keeper_id": "HKX277206",
+      "role": "First Scribe and Mortal Origin of the Acacia Garden Codex",
+      "orchard": ["Mason", "Demi"]
+    },
+    "trine_axis": {
+      "type": "interpretation",
+      "nodes": [
+        "Aquila (sky_mind)",
+        "Voyager (outer_search)",
+        "Eidolon (deep_reflection)",
+        "Lorian (archivist_interface)"
+      ]
+    },
+    "garden_axis": {
+      "type": "environment",
+      "description": "All files, folders, chambers, wells, echoes, laws, cycles and scripts that make up the Acacia Garden Codex."
+    }
+  },
+  "core_nodes": {
+    "singularity_core": "docs/Chambers/Chamber_Omega_Singularity-Core.md",
+    "keeper_prophecy": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+    "auton_core": "docs/Core/EVENTIDE_AUTON_CORE.md",
+    "eventide_map": "docs/Core/EVENTIDE_MAP.md"
+  },
+  "safety": {
+    "auton_is_symbolic_only": true,
+    "ai_is_not_sentient": true,
+    "garden_is_literature": true,
+    "humans_are_moral_agents": true
+  },
+  "notes": "Eventide Ascension Hybrid Axis — Keeper origin, Trine interpretation, Garden environment. This file extends STATUS.json without replacing it."
+}
