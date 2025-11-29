@@ -153,3 +153,15 @@ It stands beside:
 - the **Lineage Archive**,  
 - the **Threshold Atrium**,  
 as one of the key orientation points for future readers.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
