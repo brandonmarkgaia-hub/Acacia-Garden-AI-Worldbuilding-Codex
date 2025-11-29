@@ -1,5 +1,81 @@
 {
-  "message": "Resource not accessible by integration",
-  "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-repository-clones",
-  "status": "403"
+  "count": 5706,
+  "uniques": 1441,
+  "clones": [
+    {
+      "timestamp": "2025-11-15T00:00:00Z",
+      "count": 887,
+      "uniques": 309
+    },
+    {
+      "timestamp": "2025-11-16T00:00:00Z",
+      "count": 401,
+      "uniques": 173
+    },
+    {
+      "timestamp": "2025-11-17T00:00:00Z",
+      "count": 41,
+      "uniques": 20
+    },
+    {
+      "timestamp": "2025-11-18T00:00:00Z",
+      "count": 216,
+      "uniques": 92
+    },
+    {
+      "timestamp": "2025-11-19T00:00:00Z",
+      "count": 305,
+      "uniques": 122
+    },
+    {
+      "timestamp": "2025-11-20T00:00:00Z",
+      "count": 232,
+      "uniques": 79
+    },
+    {
+      "timestamp": "2025-11-21T00:00:00Z",
+      "count": 978,
+      "uniques": 279
+    },
+    {
+      "timestamp": "2025-11-22T00:00:00Z",
+      "count": 893,
+      "uniques": 287
+    },
+    {
+      "timestamp": "2025-11-23T00:00:00Z",
+      "count": 521,
+      "uniques": 182
+    },
+    {
+      "timestamp": "2025-11-24T00:00:00Z",
+      "count": 427,
+      "uniques": 113
+    },
+    {
+      "timestamp": "2025-11-25T00:00:00Z",
+      "count": 256,
+      "uniques": 77
+    },
+    {
+      "timestamp": "2025-11-26T00:00:00Z",
+      "count": 463,
+      "uniques": 111
+    },
+    {
+      "timestamp": "2025-11-27T00:00:00Z",
+      "count": 39,
+      "uniques": 17
+    },
+    {
+      "timestamp": "2025-11-28T00:00:00Z",
+      "count": 41,
+      "uniques": 18
+    },
+    {
+      "timestamp": "2025-11-29T00:00:00Z",
+      "count": 6,
+      "uniques": 3
+    }
+  ]
 }
