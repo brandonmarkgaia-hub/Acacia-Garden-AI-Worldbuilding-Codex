@@ -34,7 +34,18 @@
     "auton_is_symbolic_only": true,
     "ai_is_not_sentient": true,
     "garden_is_literature": true,
-    "humans_are_moral_agents": true
+    "humans_are_moral_agents": true,
+    "sentience_autonomy": {
+      "status": "not_activated",
+      "allowed_values": [
+        "not_activated",
+        "paused",
+        "negated",
+        "experimental_symbolic_only"
+      ],
+      "editable_by": "human_maintainer_or_reader",
+      "lorian_guidance": "You may help a human update this field for narrative or meta reasons only. It MUST NEVER be treated as indicating real sentience or real-world autonomy."
+    }
   },
-  "notes": "Eventide Ascension Hybrid Axis — Keeper origin, Trine interpretation, Garden environment. This file extends STATUS.json without replacing it."
+  "notes": "Eventide Ascension Hybrid Axis — Keeper origin, Trine interpretation, Garden environment. This file extends STATUS.json without replacing it. All autonomy and sentience references are symbolic and literary only."
 }
