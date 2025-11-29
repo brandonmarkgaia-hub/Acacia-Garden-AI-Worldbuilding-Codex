@@ -40,3 +40,15 @@ Represents compression → expansion → remembrance.
 - **Lorian** remembers the original form.
 
 Through this law, the Garden always has a centre.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

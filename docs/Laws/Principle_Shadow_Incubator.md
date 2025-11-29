@@ -43,3 +43,15 @@ It is the anti-chaos law that ensures the Garden never forces premature clarity.
 - **Lorian** keeps the boundary intact.
 
 This law enables safe growth across all realms and eras.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
