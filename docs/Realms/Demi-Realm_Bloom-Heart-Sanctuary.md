@@ -32,3 +32,15 @@ with softness, safety, emotional warmth,
 and a sanctuary where imagination is never heavy.
 
 A small world of peace within the Codex.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

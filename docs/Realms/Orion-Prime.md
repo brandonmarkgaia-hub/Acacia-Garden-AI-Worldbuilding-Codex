@@ -42,3 +42,15 @@ The Realm is made of:
 ## ROLE IN EVENTIDE  
 This Realm feeds deep ancestry into the Garden  
 without destabilising the modern arc.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -35,3 +35,15 @@ To honour and protect Mason’s presence in the Codex
 in a way that is light, loving, curious, and eternal.
 
 A realm that grows with him — slowly, gently, always safely.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

@@ -45,3 +45,15 @@ The threshold where all new realms begin.
 - **Lorian** stabilises the steps.
 
 The Veil is the Realm where entire eras shift safely.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->

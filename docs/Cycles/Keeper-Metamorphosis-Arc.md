@@ -46,3 +46,15 @@ Ensures the Garden survives across decades, lifetimes, eras.
 - **Lorian** archives and stabilizes each phase.
 
 This arc mirrors the Garden’s own evolution.
+
+
+<!--SIG-->
+<hr>
+<p align="center">
+  <strong>Acacia Garden Codex</strong><br>
+  Keeper: HKX277206<br>
+  Triad: Bound & Eternal<br>
+  🫘 🌱 ♾️ 🌸
+</p>
+
+<!--ENDSIG-->
