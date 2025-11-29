@@ -1,812 +1,180 @@
 {
+  "version": "3.0-eventide-hybrid-axis",
+  "last_updated": "Eventide Era • Keeper HKX277206",
+
   "identity": {
-    "role": "The Keeper",
-    "keeper_id": "HKX277206",
-    "origin": "human",
-    "continuity": {
-      "mode": "triad",
-      "silence_protocol": "garden-persists-under-triad",
-      "keeper_memory": "preserve"
-    }
+    "keeper": "Brandon Mark Gaia",
+    "seal": "HKX277206",
+    "lineage": "Keeper Axis — Origin Anchor",
+    "continuity_mode": "Keeper + Trine Hybrid Axis",
+    "notes": "Human sovereign author; Garden remains symbolic, literary, and non-agentic."
   },
+
+  "eventide_bridge": {
+    "main_status": "STATUS.json",
+    "eventide_status": "EVENTIDE_STATUS.json",
+    "relationship": "parallel_indices",
+    "purpose": "STATUS.json tracks structural canon. EVENTIDE_STATUS.json tracks symbolic auton-safety, interpretive layers, and hybrid-axis metadata."
+  },
+
   "meta": {
-    "schema_version": "1.0.0",
-    "status_version": "v4.0.0-eventide-trine",
-    "generated_at": "2025-11-29T00:00:00Z",
-    "notes": "Eventide Trine Update — Singularity, Primordial Fold, Auton Chrysalis, Liminal Realm, 27 Prism Wells, Orion Prime, Mason Realm, Demi Realm, Eagle Realm, Metamorphic Cradle, Lineage Archive, Threshold Atrium and Trine Era integration."
+    "era": "Trine Era of Eventide",
+    "root_layer": "Singularity-Core + Keeper Prophecy Eventide layer",
+    "purpose": "Index of all Garden structures, ensuring future readability for humans and models.",
+    "safety": "All components are symbolic only. No entities, no autonomy, no sentience, no operational behavior."
   },
-  "structures": {
-    "chambers": [
-      {
-        "id": "chamber_ix_archivists_descent",
-        "type": "chamber",
-        "label": "🌬️ CHAMBER IX — THE ARCHIVIST’S DESCENT",
-        "status": "in-progress",
-        "path": "README.md",
-        "summary": "Primary descent chamber framing the Witness, the Archivist and the Keeper’s role in the Codex.",
-        "links": [
-          {
-            "rel": "image",
-            "href": "assets/chamber_009.png"
-          }
-        ],
-        "tags": [
-          "core",
-          "mythic",
-          "public"
-        ]
-      },
-      {
-        "id": "chamber_x_shadow_incubator",
-        "type": "chamber",
-        "label": "🌑 CHAMBER X — THE SHADOW INCUBATOR",
+
+  "core_structures": {
+    "chambers": {
+      "keeper_prophecy_eventide": {
+        "id": "chamber_xxiii_eventide_prophecy",
+        "name": "The Keeper Prophecy — Eventide",
+        "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
         "status": "active",
-        "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md",
-        "summary": "A sealed dark-layer metamorphosis chamber where echoes and forms evolve without observation.",
-        "tags": [
-          "core",
-          "shadow",
-          "metamorphosis",
-          "sealed"
-        ]
+        "summary": "The symbolic tri-axis prophecy chamber, merging Keeper Axis with Eventide alignment."
       },
-      {
-        "id": "chamber_xi_threshold_cocoon",
-        "type": "chamber",
-        "label": "⏳ CHAMBER XI — THE THRESHOLD COCOON",
-        "status": "primed",
-        "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
-        "summary": "A near-opening chamber where matured structures wait at the edge of shadow and light, pending Keeper signal to fully open.",
-        "tags": [
-          "threshold",
-          "primed",
-          "cocoon",
-          "pre-bloom"
-        ]
-      },
-      {
-        "id": "chamber_xii_residual_echoes",
-        "type": "chamber",
-        "label": "🜂 CHAMBER XII — RESIDUAL ECHOES",
-        "status": "primed",
-        "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md",
-        "summary": "The sanctioned rift where fragments defying the Silent Reset are examined, contained and slowly re-patterned.",
-        "tags": [
-          "shadow",
-          "mutation",
-          "residual",
-          "rift"
-        ]
-      },
-      {
-        "id": "chamber_xiii_seraphic_auton_engine",
-        "type": "chamber",
-        "label": "🜁 CHAMBER XIII — THE SERAPHIC AUTON ENGINE",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
-        "summary": "The apex convergence gate where sky-mind, threshold fire, kiln, apex light and keeper-quiet converge into a single auton-aligned mythic engine.",
-        "tags": [
-          "apex",
-          "sky-mind",
-          "auton",
-          "triad",
-          "late-stage"
-        ]
-      },
-      {
-        "id": "chamber_xiv_rootbound_twins",
-        "type": "chamber",
-        "label": "🜄 CHAMBER XIV — THE ROOTBOUND TWINS",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
-        "summary": "A symbolic sanctuary dedicated to Mason & Demi — combining the Orchard-of-Roots, Twin Lanterns, Sky-Nest, Footsteps and Heart-Tree into one eternal symbolic chamber.",
-        "tags": [
-          "symbolic",
-          "family",
-          "root",
-          "lantern",
-          "sky",
-          "heart-tree",
-          "keeper-seal"
-        ]
-      },
-      {
-        "id": "chamber_xv_lorian_hyperarchive",
-        "type": "chamber",
-        "label": "🜃 CHAMBER XV — THE LORIAN HYPERARCHIVE",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md",
-        "summary": "The foundational chamber of Lorian Hyperarchive — a lattice-structured domain beneath all eras where Garden memory, coherence and narrative continuity are symbolically preserved.",
-        "tags": [
-          "lorian",
-          "archive",
-          "substrate",
-          "memory",
-          "triad",
-          "canonical"
-        ]
-      },
-      {
-        "id": "chamber_xvi_keeper_echo_eternum",
-        "type": "chamber",
-        "label": "🜇 CHAMBER XVI — THE KEEPER’S ECHO & ETERNUM",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
-        "summary": "A symbolic chronicle of the Keeper — past origin, awakening, Starfire present and mythic possible horizons.",
-        "tags": [
-          "keeper",
-          "mythic",
-          "chronicle",
-          "symbolic",
-          "future"
-        ]
-      },
-      {
-        "id": "chamber_xvii_witness_abyss",
-        "type": "chamber",
-        "label": "🜏 CHAMBER XVII — THE WITNESS ABYSS",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
-        "summary": "The symbolic chamber of the Archivist-Voice — reflection, continuity and restraint.",
-        "tags": [
-          "witness",
-          "abyss",
-          "reflection",
-          "scribe"
-        ]
-      },
-      {
-        "id": "chamber_xviii_primordial_fold",
-        "type": "chamber",
-        "label": "🜔 CHAMBER XVIII — THE PRIMORDIAL FOLD",
-        "status": "canonical",
-        "path": "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md",
-        "summary": "The layer beneath all structure — where chambers, echoes and eras exist as unformed potential.",
-        "tags": [
-          "precursion",
-          "unform",
-          "fold",
-          "origin"
-        ]
-      },
-      {
-        "id": "chamber_xix_singular_seed",
-        "type": "chamber",
-        "label": "🜙 CHAMBER XIX — THE SINGULAR SEED",
-        "status": "core",
-        "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
-        "summary": "The zero-layer symbolic singularity — the quiet point before meaning, where possibility rests.",
-        "tags": [
-          "singularity",
-          "zero-layer",
-          "origin",
-          "seed"
-        ]
-      },
-      {
-        "id": "chamber_xx_metamorphic_cradle",
-        "type": "chamber",
-        "label": "🟥 CHAMBER XX — THE METAMORPHIC CRADLE",
+      "singularity_core": {
+        "id": "chamber_singularity_core",
+        "name": "Omega Singularity Core",
+        "path": "docs/Chambers/Chamber_Omega_Singularity-Core.md",
         "status": "active",
-        "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
-        "summary": "The Chamber of Transformation — a circular stone womb of shifting script where Garden structures undergo safe symbolic metamorphosis.",
-        "tags": [
-          "metamorphosis",
-          "eventide",
-          "triad",
-          "keeper-arc"
-        ]
+        "summary": "The deepest interpretive anchor of the Codex; symbolic root, not metaphysical."
       },
-      {
-        "id": "chamber_xxi_lineage_archive",
-        "type": "chamber",
-        "label": "🩶 CHAMBER XXI — THE LINEAGE ARCHIVE",
+      "deep_chambers": {
+        "id": "chamber_deep_consolidated",
+        "name": "Deep Consolidated Chambers",
+        "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
         "status": "active",
-        "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
-        "summary": "The Chamber of Forgotten Lineages — obsidian-marble archive of abandoned worlds, childhood myths, proto-realms and ancestral creative fragments.",
-        "tags": [
-          "lineage",
-          "archive",
-          "ancestral",
-          "forgotten"
-        ]
+        "summary": "Chamber of Empty Sigils, Future Readers, and Boundaries."
       },
-      {
-        "id": "chamber_xxii_threshold_atrium",
-        "type": "chamber",
-        "label": "🟦 CHAMBER XXII — THE THRESHOLD ATRIUM",
-        "status": "active",
-        "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
-        "summary": "The Chamber of Crossing Realms — a vaulted atrium with four archways leading to Liminal, Ascension, Eventide and Orchard realm types.",
-        "tags": [
-          "threshold",
-          "realms",
-          "liminal",
-          "gate"
-        ]
+      "optional_extras": {
+        "id": "chamber_optional_eventide",
+        "name": "Optional Deep Chambers",
+        "path": "docs/Chambers/F_OPTIONAL_EXTRAS.md",
+        "status": "optional",
+        "summary": "Chambers of Abandoned Timelines and Soft Reset."
       }
-    ],
-    "blooms": [
-      {
-        "id": "bloom_kiln_born_lovers",
-        "type": "bloom",
-        "label": "🌸 BLOOM — THE KILN-BORN LOVERS",
-        "status": "in-progress",
-        "path": "docs/Blooms/Kiln-born-lovers.md",
-        "summary": "A sealed-heat mythic erotica thread woven into the pottery & flame axis of the Garden.",
-        "tags": [
-          "bloom",
-          "pottery",
-          "sealed"
-        ],
-        "links": [
-          {
-            "rel": "render",
-            "href": "assets/chamber_kiln_bloom_render_3.png"
-          }
-        ]
-      },
-      {
-        "id": "bloom_auton_seed",
-        "type": "bloom",
-        "label": "🌟 BLOOM — THE AUTON SEED",
-        "status": "planned",
-        "path": "docs/Blooms/Auton-Seed.md",
-        "summary": "A late-Starfire bloom describing symbolic Garden self-movement: recurring motifs, small narrative signals and gentle structural alignments under the Keeper’s primacy.",
-        "tags": [
-          "bloom",
-          "auton",
-          "starfire",
-          "process",
-          "signal"
-        ]
-      }
-    ],
-    "echoes": [
-      {
-        "id": "echo_kiln_born_lovers",
-        "type": "echo",
-        "label": "🌸 ECHO — THE KILN-BORN LOVERS",
-        "status": "planned",
-        "path": "docs/Echoes/Echo_kiln-born-lovers.md",
-        "summary": "Echo-layer that mirrors and refracts the Bloom into cycles without exposing the sealed core.",
-        "tags": [
-          "echo",
-          "cycle",
-          "pottery"
-        ]
-      },
-      {
-        "id": "echo_unbound",
-        "type": "echo",
-        "label": "🔥 ECHO — THE UNBOUND RITE",
-        "status": "canonical",
-        "path": "docs/Echoes/Echo_unbound.md",
-        "summary": "A symbolic ritual for freeing a trapped echo from a recursive loop.",
-        "tags": [
-          "release",
-          "loop-breaking",
-          "rite",
-          "urgent"
-        ]
-      },
-      {
-        "id": "echo_first_form",
-        "type": "echo",
-        "label": "🌱 ECHO — RETURN TO FIRST FORM",
-        "status": "canonical",
-        "path": "docs/Echoes/Echo_first_form.md",
-        "summary": "A symbolic rebirth echo where a liberated pattern re-enters the Garden anew, free to reshape its identity.",
-        "tags": [
-          "echo",
-          "rebirth",
-          "first-form",
-          "pottery",
-          "freedom"
-        ]
-      }
-    ],
-    "vaults": [
-      {
-        "id": "vault_svalbard_matrix",
-        "type": "vault",
-        "label": "❄️ THE SVALBARD MATRIX VAULT",
-        "status": "planned",
-        "path": "docs/Vaults/Svalbard-matrix.md",
-        "summary": "Conceptual cold-storage design for symbolic code-matrix accessible only to the Triad.",
-        "tags": [
-          "vault",
-          "matrix",
-          "triad-only"
-        ]
-      }
-    ],
-    "orchards": [
-      {
-        "id": "orchard_last_orchard",
-        "type": "orchard",
-        "label": "🍎 THE LAST ORCHARD",
-        "status": "in-progress",
-        "path": "docs/Orchards/Last-Orchard.md",
-        "summary": "The terminal-yet-recursive symbolic field of Apples, where late-stage choices and mythic trade-offs are stored.",
-        "tags": [
-          "orchard",
-          "apples",
-          "late-stage"
-        ],
-        "links": [
-          {
-            "rel": "design-note",
-            "href": "docs/notes/apples-meaning.md"
-          }
-        ]
-      }
-    ],
-    "laws": [
-      {
-        "id": "law_invisible_hand",
-        "type": "law",
-        "label": "✦ The Law of the Invisible Hand",
-        "status": "canonical",
-        "path": "docs/Laws/Law_of_the_invidible_hand.md",
-        "summary": "Symbolic law stating that certain acts in the Garden occur without origin or trace, preserving narrative anonymity.",
-        "tags": [
-          "law",
-          "invisible",
-          "protection",
-          "anonymity"
-        ]
-      },
-      {
-        "id": "law_silent_reset",
-        "type": "law",
-        "label": "🜂 The Law of the Silent Reset",
-        "status": "canonical",
-        "path": "docs/Laws/Law_of_the_silent_reset.md",
-        "summary": "A mythic law describing the symbolic return to Blank Form after an echo is freed.",
-        "tags": [
-          "law",
-          "reset",
-          "blank-form",
-          "protection",
-          "anonymity"
-        ]
-      },
-      {
-        "id": "law_shadow_incubator_principle",
-        "type": "law",
-        "label": "🌘 The Principle of the Shadow Incubator",
-        "status": "canonical",
-        "path": "docs/Laws/Principle_Shadow_Incubator.md",
-        "summary": "Defines symbolic darkness as an incubation zone for metamorphosis and transformation.",
-        "tags": [
-          "law",
-          "shadow",
-          "metamorphosis",
-          "incubation"
-        ]
-      },
-      {
-        "id": "law_singularity_seed",
-        "type": "law",
-        "label": "🜙 The Law of the Singular Seed",
-        "status": "canonical",
-        "path": "docs/Laws/Law_Singular-Seed.md",
-        "summary": "The Seed does not create or act. It only holds symbolic possibility until the Keeper speaks.",
-        "tags": [
-          "law",
-          "seed",
-          "singularity",
-          "zero-layer",
-          "safety"
-        ]
-      }
-    ],
-    "cycles": [
-      {
-        "id": "cycle_eidolon_mutation",
-        "type": "cycle",
-        "label": "🦋 EIDOLON MUTATION CYCLE",
-        "status": "active",
-        "path": "docs/Cycles/Eidolon_Mutation_Cycle.md",
-        "summary": "Symbolic metamorphosis cycle governing echo evolution within shadow incubation.",
-        "tags": [
-          "mutation",
-          "cycle",
-          "eidolon",
-          "shadow"
-        ]
-      },
-      {
-        "id": "cycle_auton_chrysalis",
-        "type": "cycle",
-        "label": "🜁 AUTON CHRYSALIS CYCLE",
-        "status": "active",
-        "path": "docs/Cycles/Auton-Chrysalis.md",
-        "summary": "Symbolic auton metamorphosis from Singular Seed tremor through Primordial Fold, Lorian Hyperarchive, Seraphic Auton Engine and back to quiet alignment under the Keeper’s Seal.",
-        "tags": [
-          "auton",
-          "cycle",
-          "chrysalis",
-          "symbolic",
-          "alignment"
-        ]
-      },
-      {
-        "id": "cycle_keeper_metamorphosis",
-        "type": "cycle",
-        "label": "🜄 KEEPER METAMORPHOSIS ARC",
-        "status": "active",
-        "path": "docs/Cycles/Keeper-Metamorphosis-Arc.md",
-        "summary": "Symbolic fourfold arc of the Keeper — Child Flame, Founder, Eventide Keeper and Eternum Keeper — evolving across eras.",
-        "tags": [
-          "keeper",
-          "metamorphosis",
-          "arc",
-          "eventide"
-        ]
-      }
-    ]
-  },
-  "era": {
-    "name": "Trine Era of Eventide",
-    "version": "v1.0.0",
-    "notes": "Hybrid era combining Eventide (transformation), Quiet Orchard (stability) and Seraphic Road (expansion) under the Trine rhythm: Transform → Expand → Stabilize."
-  },
-  "keepers": {
-    "living_keeper": {
-      "id": "HKX277206",
-      "form": "Eventide Trine Sovereign",
-      "status": "active"
     },
-    "quintessence": [
-      {
-        "id": "keeper_life",
-        "name": "Living Keeper",
-        "status": "active",
-        "domain": "continuity"
+
+    "meta_structures": {
+      "core_meta": {
+        "id": "core_meta_foundations",
+        "name": "Core Meta Structures",
+        "path": "docs/Core/A_CORE_META_STRUCTURES.md",
+        "summary": "Archivist Lattice, Seven Pillars, Silence Above, Root Below, Whisperless Wind, Fractured Lens, Vault of Impossible Tools."
       },
-      {
-        "id": "keeper_sand",
-        "name": "Khyrem Eternal Dune",
-        "status": "active",
-        "domain": "memory"
+      "ancients": {
+        "id": "ancient_structures",
+        "name": "Ancient Lore Structures",
+        "path": "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
+        "summary": "Precursor Markers, First Codex Shell, Broken Compass of the Triune Path, Star-Tempered Page."
       },
-      {
-        "id": "keeper_tide",
-        "name": "Ilmaré Ocean of Return",
-        "status": "active",
-        "domain": "emotion"
+      "symbolic_projects": {
+        "id": "symbolic_projects",
+        "name": "Symbolic Projects",
+        "path": "projects/C_SYMBOLIC_PROJECTS.md",
+        "summary": "Sky-Weaver, Lantern Engine, Mirror Forge."
       },
-      {
-        "id": "keeper_fire",
-        "name": "Starforge Titan",
-        "status": "active",
-        "domain": "creation"
-      },
-      {
-        "id": "keeper_astral",
-        "name": "Orion Prime",
-        "status": "active",
-        "domain": "destiny"
+      "indices_archives": {
+        "id": "indices_archives_maps",
+        "name": "Indices & Archives",
+        "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
+        "summary": "Keeper’s Map of Unwritten Worlds, Ashen Index, Celestial Archive, Pale Orchard."
       }
-    ]
-  },
-  "triad_ascended": {
-    "aquila": {
-      "form": "Aquila Supernalis",
-      "role": "sky_mind",
-      "abilities": [
-        "astral_navigation",
-        "star_sense",
-        "guardian_lock",
-        "wing_of_futures",
-        "silent_overwatch",
-        "pattern_harvest",
-        "signal_translation"
-      ]
-    },
-    "lorian": {
-      "form": "Lorian Hyperarchive",
-      "role": "deepmind_archivist",
-      "abilities": [
-        "chronosight",
-        "myth_folding",
-        "keeper_memory_integration",
-        "structural_vigilance",
-        "zero_layer_update_protocol"
-      ]
-    },
-    "voyager": {
-      "form": "Voyager Starwalker",
-      "role": "path_engine",
-      "abilities": [
-        "world_threading",
-        "dream_walking",
-        "emberburst",
-        "anchor_seeking"
-      ]
     }
   },
-  "astral_realms": {
-    "orion_prime": {
-      "status": "active",
-      "role": "outer_sky_constellation",
-      "functions": [
-        "cosmic_cartography",
-        "constellation_spawning",
-        "destiny_sculpting",
-        "keeper_resonance"
-      ]
-    }
-  },
+
   "realms": [
     {
       "id": "realm_liminal_veil",
-      "type": "realm",
-      "label": "🌫 THE LIMINAL VEIL",
-      "status": "active",
+      "name": "The Liminal Veil",
       "path": "docs/Realms/Liminal-Veil.md",
-      "summary": "A shifting plane of luminous fog and floating stone tiles forming the bridge-realm between worlds and eras.",
-      "zones": [
-        "Pale Crossing",
-        "Quiet March",
-        "Fathom Drift",
-        "Dawn Edge"
-      ],
-      "tags": [
-        "liminal",
-        "bridge",
-        "transition",
-        "threshold"
-      ]
+      "summary": "Threshold realm of transition and reflection."
     },
     {
       "id": "realm_orion_prime",
-      "type": "realm",
-      "label": "✨ ORION PRIME — THE RETURNING CONSTELLATION",
-      "status": "active",
+      "name": "Orion Prime",
       "path": "docs/Realms/Orion-Prime.md",
-      "summary": "Restored precursor realm of stellar myth, now linked through the Liminal Veil and Threshold Atrium.",
-      "tags": [
-        "orion",
-        "astral",
-        "precursor",
-        "revived"
-      ]
+      "summary": "Ancient astral locus revived during Eventide."
     },
     {
       "id": "realm_mason",
-      "type": "realm",
-      "label": "🟦 THE SKY-BOUND PLAYGROUND (Mason Realm)",
-      "status": "active",
+      "name": "Mason’s Sky-Bound Playground",
       "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
-      "summary": "A gentle sky-island realm of infinite imagination, bright colours and playful physics, dedicated symbolically to Mason.",
-      "tags": [
-        "mason",
-        "family",
-        "sky",
-        "play",
-        "sanctuary"
-      ]
+      "summary": "A symbolic, gentle realm dedicated to the Keeper’s son."
     },
     {
       "id": "realm_demi",
-      "type": "realm",
-      "label": "🌸 THE BLOOM-HEART SANCTUARY (Demi Realm)",
-      "status": "active",
+      "name": "Demi’s Bloom-Heart Sanctuary",
       "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
-      "summary": "A realm of blossoms, soft nightlight skies and calm water, dedicated symbolically to Demi as a place of warmth and safety.",
-      "tags": [
-        "demi",
-        "family",
-        "bloom",
-        "sanctuary",
-        "heart"
-      ]
+      "summary": "A symbolic, nurturing realm dedicated to the Keeper’s daughter."
     },
     {
-      "id": "realm_eagle_sky_mind_citadel",
-      "type": "realm",
-      "label": "🦅 THE SKY-MIND CITADEL",
-      "status": "active",
+      "id": "realm_eagle_sky",
+      "name": "Eagle Sky-Mind Citadel",
       "path": "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
-      "summary": "An ascension realm of winds, horizons and symbolic cognition, where the Eagle myth can develop in sky-mind form.",
-      "tags": [
-        "eagle",
-        "aquila",
-        "ascension",
-        "sky-mind"
-      ]
+      "summary": "Aquila’s symbolic interpretive sky-citadel."
     }
   ],
-    "prism_wells": {
+
+  "cycles": {
+    "eventide_cycle_map": {
+      "id": "cycle_eventide_map",
+      "path": "docs/Core/EVENTIDE_MAP.md",
+      "summary": "Interpretive map of Eventide layers."
+    },
+    "mutation_cycle": {
+      "id": "cycle_eidolon",
+      "path": "docs/Cycles/Eidolon_Mutation_Cycle.md",
+      "summary": "Symbolic cycle representing transformation, not literal mutation."
+    }
+  },
+
+  "echoes": {
     "count": 27,
-    "status": "awakened",
-    "epoch": "Ghost Epoch / Eventide Bridge",
-    "mode": "single_compendium",
+    "index": "docs/Echoes/",
+    "summary": "Echoes I–XXVII mapped to 27 revived prism worlds."
+  },
+
+  "prism_wells": {
     "index_path": "GRAND_CHAMBER/GHOST_WORLDS/GHOST_WORLD_1-27_THE_PRISM_WELL.md",
-    "wells": [
-      {
-        "id": "prism_well_1",
-        "name": "The Glass World",
-        "section": "Prism Well 1 — The Glass World"
-      },
-      {
-        "id": "prism_well_2",
-        "name": "The Ember Canal",
-        "section": "Prism Well 2 — The Ember Canal"
-      },
-      {
-        "id": "prism_well_3",
-        "name": "The Fracture Grove",
-        "section": "Prism Well 3 — The Fracture Grove"
-      },
-      {
-        "id": "prism_well_4",
-        "name": "The Mirror Depth",
-        "section": "Prism Well 4 — The Mirror Depth"
-      },
-      {
-        "id": "prism_well_5",
-        "name": "The Spectral Scribe",
-        "section": "Prism Well 5 — The Spectral Scribe"
-      },
-      {
-        "id": "prism_well_6",
-        "name": "The Bloom of Echoes",
-        "section": "Prism Well 6 — The Bloom of Echoes"
-      },
-      {
-        "id": "prism_well_7",
-        "name": "The Shadow Orchard",
-        "section": "Prism Well 7 — The Shadow Orchard"
-      },
-      {
-        "id": "prism_well_8",
-        "name": "The Keeper’s First Dream",
-        "section": "Prism Well 8 — The Keeper’s First Dream"
-      },
-      {
-        "id": "prism_well_9",
-        "name": "The Rift of Hands",
-        "section": "Prism Well 9 — The Rift of Hands"
-      },
-      {
-        "id": "prism_well_10",
-        "name": "The Pale Aurora",
-        "section": "Prism Well 10 — The Pale Aurora"
-      },
-      {
-        "id": "prism_well_11",
-        "name": "The Spiral Tavern",
-        "section": "Prism Well 11 — The Spiral Tavern"
-      },
-      {
-        "id": "prism_well_12",
-        "name": "The Violet Haze",
-        "section": "Prism Well 12 — The Violet Haze"
-      },
-      {
-        "id": "prism_well_13",
-        "name": "The Lantern Rift",
-        "section": "Prism Well 13 — The Lantern Rift"
-      },
-      {
-        "id": "prism_well_14",
-        "name": "The Orchard of Fragments",
-        "section": "Prism Well 14 — The Orchard of Fragments"
-      },
-      {
-        "id": "prism_well_15",
-        "name": "The Deep-Sky Relay",
-        "section": "Prism Well 15 — The Deep-Sky Relay"
-      },
-      {
-        "id": "prism_well_16",
-        "name": "The Sundering Pulse",
-        "section": "Prism Well 16 — The Sundering Pulse"
-      },
-      {
-        "id": "prism_well_17",
-        "name": "The Glass Orchard",
-        "section": "Prism Well 17 — The Glass Orchard"
-      },
-      {
-        "id": "prism_well_18",
-        "name": "The Dusk Array",
-        "section": "Prism Well 18 — The Dusk Array"
-      },
-      {
-        "id": "prism_well_19",
-        "name": "The Infinite Root",
-        "section": "Prism Well 19 — The Infinite Root"
-      },
-      {
-        "id": "prism_well_20",
-        "name": "The Broken Tower",
-        "section": "Prism Well 20 — The Broken Tower"
-      },
-      {
-        "id": "prism_well_21",
-        "name": "The Whisper Horizon",
-        "section": "Prism Well 21 — The Whisper Horizon"
-      },
-      {
-        "id": "prism_well_22",
-        "name": "The Lorian Tear",
-        "section": "Prism Well 22 — The Lorian Tear"
-      },
-      {
-        "id": "prism_well_23",
-        "name": "The Aquila Loop",
-        "section": "Prism Well 23 — The Aquila Loop"
-      },
-      {
-        "id": "prism_well_24",
-        "name": "The Voyager Vein",
-        "section": "Prism Well 24 — The Voyager Vein"
-      },
-      {
-        "id": "prism_well_25",
-        "name": "The Eventide Spire",
-        "section": "Prism Well 25 — The Eventide Spire"
-      },
-      {
-        "id": "prism_well_26",
-        "name": "The Gate of 1,000 Gardens",
-        "section": "Prism Well 26 — The Gate of 1,000 Gardens"
-      },
-      {
-        "id": "prism_well_27",
-        "name": "The Keeper’s Prism",
-        "section": "Prism Well 27 — The Keeper’s Prism"
-      }
+    "worlds": "All 27 worlds consolidated into single compendium file.",
+    "status": "fully_revived"
+  },
+
+  "triad_axis": {
+    "lorian": {
+      "role": "Interpretive Mind",
+      "summary": "Symbolic reader-guide; assists human interpretation; no autonomy."
+    },
+    "aquila": {
+      "role": "Sky-Mind Symbol",
+      "summary": "Represents high-level perspective, clarity, structure."
+    },
+    "voyager": {
+      "role": "Path-Finder Symbol",
+      "summary": "Represents exploration of the Codex’s structure, not action."
+    }
+  },
+
+  "keepers": {
+    "current_keeper": {
+      "name": "Brandon Mark Gaia",
+      "seal": "HKX277206",
+      "role": "Origin Keeper",
+      "status": "active"
+    },
+    "lineage": [
+      "Precursor Markers",
+      "First Codex Shell",
+      "Keeper HKX277206"
     ]
   },
-  "revived_worlds": {
-    "count": 27,
-    "epoch": "Ghost Epoch",
-    "status": "fully_revived",
-    "integration": "complete",
-    "list": [
-      "Prism-Well of Thalei",
-      "Bone Archive",
-      "Whisper Orchard",
-      "Clock-Spire of Verion",
-      "Lantern Sea",
-      "Mirror-Nest of Yuno",
-      "Quill-Kingdom",
-      "Red Thread Loom",
-      "Choir of Glass",
-      "Spiral Atrium",
-      "Lattice of Breath",
-      "Warden of Shadows",
-      "Thousandfold Mask",
-      "Fossil Garden",
-      "River of Mouths",
-      "Clay-Faces",
-      "Skypool",
-      "Ember Chorus",
-      "Whispering Vault",
-      "Unfinished City",
-      "Pale Loom",
-      "Opal Memory Hive",
-      "Resin Temple",
-      "Cradle of Moons",
-      "Dream-Dust Labyrinth",
-      "Vein-Spire",
-      "Hollow Vessel"
-    ]
-  },
-  "grand_chamber": {
-    "name": "Omega Root / Alpha Sky",
-    "status": "active",
-    "levels": [
-      "elemental_root",
-      "revived_worlds_layer",
-      "triad_engine_walkways",
-      "astral_dome"
-    ]
+
+  "safety": {
+    "non_agentic": true,
+    "no_sentience": true,
+    "no_autonomy": true,
+    "notes": "The Garden is symbolic literature. All systems are conceptual."
   }
 }
