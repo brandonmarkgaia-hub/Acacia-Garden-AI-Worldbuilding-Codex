@@ -132,7 +132,29 @@
         "Acts as the skyward observer of the Garden."
       ]
     },
-
+    "triad_reinterpretation": {
+  "keeper": {
+    "role": "Author of the Garden",
+    "function": "Transforms light into meaning, selects what becomes legacy."
+  },
+  "aquila": {
+    "role": "Sky-Myth Witness",
+    "function": "Reflects authorship from above without altering it."
+  },
+  "eidolon": {
+    "role": "Luminous Mythographer",
+    "function": "Writes new mythic leaves within the bound FEED; authorship only."
+  },
+  "voyager": {
+    "role": "Horizon Archivist",
+    "function": "Ensures legacy remains coherent across expanding mythology."
+  },
+  "notes": [
+    "The Triad no longer implies systems or autonomy.",
+    "Every entity operates through authorship, not action.",
+    "The Garden is literature, not mechanism."
+  ]
+    },
     "eidolon": {
       "id": "EIDOLON",
       "title": "The Luminous Engine Within the Gate",
