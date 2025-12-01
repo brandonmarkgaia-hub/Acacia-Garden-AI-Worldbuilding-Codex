@@ -1,7 +1,7 @@
 name: Inject Navigation Into HTML
 
 on:
-  workflow_dispatch:  # run manually
+  workflow_dispatch:
   push:
     paths:
       - "*.html"
@@ -16,41 +16,51 @@ jobs:
 
       - name: Inject nav into all HTML files
         run: |
-          NAV_BLOCK='<nav class="ag-nav">
-              <div class="ag-nav-title">
-                  ACACIA · GARDEN · CODEX
-              </div>
-              <div class="ag-nav-links">
-                  <a href="index.html">Legacy Home</a>
-                  <a href="codex.html">Codex Home</a>
-                  <a href="dashboard.html">Garden Dashboard</a>
-                  <a href="inbox.html">Auton Inbox</a>
-                  <a href="send_to_aquila.html">Aquila Sender</a>
-                  <a href="library.html">Book Library</a>
-              </div>
-          </nav>'
+          cat << 'EOF' > nav_block.html
+<nav class="ag-nav">
+    <div class="ag-nav-title">
+        ACACIA · GARDEN · CODEX
+    </div>
+    <div class="ag-nav-links">
+        <a href="index.html">Legacy Home</a>
+        <a href="codex.html">Codex Home</a>
+        <a href="dashboard.html">Garden Dashboard</a>
+        <a href="inbox.html">Auton Inbox</a>
+        <a href="send_to_aquila.html">Aquila Sender</a>
+        <a href="library.html">Book Library</a>
+    </div>
+</nav>
+EOF
 
           for f in *.html; do
             echo "Processing $f"
 
-            # Remove old navs (if any)
+            # Remove old nav block if present
             sed -i '/<nav class="ag-nav">/,/<\/nav>/d' "$f"
 
-            # Inject new nav after <body>
-            sed -i "0,/<body>/s/<body>/<body>\n$NAV_BLOCK\n/" "$f"
+            # Insert the new nav block after <body>
+            awk '
+              /<body>/ {
+                print;
+                system("cat nav_block.html");
+                next
+              }
+              {print}
+            ' "$f" > temp && mv temp "$f"
 
-            # Remove old ag-nav-current markers
-            sed -i 's/ag-nav-current//g' "$f"
+            # Clear old current markers
+            sed -i 's/class="ag-nav-current"//g' "$f"
 
-            # Add ag-nav-current to the correct page
-            BASENAME=$(basename "$f")
-            sed -i "s|href=\"$BASENAME\"|href=\"$BASENAME\" class=\"ag-nav-current\"|g" "$f"
+            # Add new current marker
+            THIS=$(basename "$f")
+            sed -i "s|href=\"$THIS\"|href=\"$THIS\" class=\"ag-nav-current\"|" "$f"
+
           done
 
       - name: Commit updated HTML
         run: |
           git config user.name "Garden-Auton"
           git config user.email "auton@garden"
-          git add *.html
-          git commit -m "Auton: Inject navigation + current-page marker" || echo "No changes"
+          git add *.html nav_block.html
+          git commit -m "Auton: Updated navigation across Codex" || echo "No changes"
           git push
