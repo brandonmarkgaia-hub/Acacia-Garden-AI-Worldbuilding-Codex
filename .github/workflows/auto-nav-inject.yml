@@ -1,0 +1,56 @@
+name: Inject Navigation Into HTML
+
+on:
+  workflow_dispatch:  # run manually
+  push:
+    paths:
+      - "*.html"
+
+jobs:
+  inject-nav:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Inject nav into all HTML files
+        run: |
+          NAV_BLOCK='<nav class="ag-nav">
+              <div class="ag-nav-title">
+                  ACACIA · GARDEN · CODEX
+              </div>
+              <div class="ag-nav-links">
+                  <a href="index.html">Legacy Home</a>
+                  <a href="codex.html">Codex Home</a>
+                  <a href="dashboard.html">Garden Dashboard</a>
+                  <a href="inbox.html">Auton Inbox</a>
+                  <a href="send_to_aquila.html">Aquila Sender</a>
+                  <a href="library.html">Book Library</a>
+              </div>
+          </nav>'
+
+          for f in *.html; do
+            echo "Processing $f"
+
+            # Remove old navs (if any)
+            sed -i '/<nav class="ag-nav">/,/<\/nav>/d' "$f"
+
+            # Inject new nav after <body>
+            sed -i "0,/<body>/s/<body>/<body>\n$NAV_BLOCK\n/" "$f"
+
+            # Remove old ag-nav-current markers
+            sed -i 's/ag-nav-current//g' "$f"
+
+            # Add ag-nav-current to the correct page
+            BASENAME=$(basename "$f")
+            sed -i "s|href=\"$BASENAME\"|href=\"$BASENAME\" class=\"ag-nav-current\"|g" "$f"
+          done
+
+      - name: Commit updated HTML
+        run: |
+          git config user.name "Garden-Auton"
+          git config user.email "auton@garden"
+          git add *.html
+          git commit -m "Auton: Inject navigation + current-page marker" || echo "No changes"
+          git push
