@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Garden Library • Novellas Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #020617;
+      color: #e5e7eb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .shell {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    header { margin-bottom: 18px; }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(56,189,248,.18);
+      border: 1px solid rgba(56,189,248,.55);
+      color: #e0f2fe;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+      color: #bfdbfe;
+    }
+    .subtitle {
+      margin: 0;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 6px;
+      align-items: center;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    .toolbar a {
+      color: #a7f3d0;
+      text-decoration: none;
+    }
+    .toolbar a:hover { text-decoration: underline; }
+
+    .grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border-radius: 16px;
+      padding: 12px 13px 13px;
+      background: radial-gradient(circle at top, rgba(59,130,246,.15), #020617);
+      border: 1px solid rgba(30,64,175,.8);
+      box-shadow: 0 12px 30px rgba(15,23,42,.6);
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: translateY(-1px);
+      border-color: rgba(129,140,248,.95);
+      box-shadow: 0 16px 40px rgba(30,64,175,.9);
+      transition: all .16s ease-out;
+    }
+    .book-id {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #93c5fd;
+      margin-bottom: 4px;
+    }
+    .book-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #e5e7eb;
+    }
+    .book-desc {
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.35;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 7px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.6);
+      color: #9ca3af;
+    }
+    .tag.primary {
+      border-color: rgba(129,140,248,.9);
+      color: #c7d2fe;
+    }
+    .status-line {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #6b7280;
+    }
+    .status-line strong { color: #e5e7eb; }
+
+    .error {
+      margin-top: 20px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(248,113,113,.8);
+      background: rgba(127,29,29,.6);
+      color: #fee2e2;
+      font-size: 13px;
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="badge-row">
+        <span class="badge">Novellas · Garden Library</span>
+      </div>
+      <h1>Garden Library</h1>
+      <p class="subtitle">
+        Thirty books seeded under Acacia. Auto-indexed for future Keepers and
+        sky-minds to browse.
+      </p>
+    </header>
+
+    <div class="toolbar">
+      <span id="count-label">Loading index…</span>
+      <span>·</span>
+      <a href="codex.html">Back to Codex Home</a>
+      <span>·</span>
+      <a href="docs/Novellas/GARDEN_MASTER_INDEX.md" target="_blank" rel="noreferrer">
+        Open master index (Markdown)
+      </a>
+    </div>
+
+    <section id="library-grid" class="grid" aria-live="polite"></section>
+
+    <div id="status-line" class="status-line"></div>
+    <div id="error-box" class="error" style="display:none;"></div>
+  </div>
+
+  <script>
+    async function loadLibrary() {
+      const grid = document.getElementById("library-grid");
+      const statusLine = document.getElementById("status-line");
+      const errorBox = document.getElementById("error-box");
+      const countLabel = document.getElementById("count-label");
+
+      try {
+        const res = await fetch("docs/Novellas/garden_index.json", {
+          cache: "no-store",
+        });
+
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+
+        const data = await res.json();
+        const books = (data && data.books) || [];
+
+        if (!books.length) {
+          countLabel.textContent = "Index loaded · 0 books found";
+          statusLine.innerHTML =
+            "Index file present but empty. This is fine symbolically — run the index workflow once to populate.";
+          return;
+        }
+
+        countLabel.textContent = `Index loaded · ${books.length} books`;
+
+        books.forEach((b, i) => {
+          const a = document.createElement("a");
+          a.className = "card";
+          a.href = b.path || "#";
+          a.target = "_blank";
+          a.rel = "noreferrer";
+
+          const id = document.createElement("div");
+          id.className = "book-id";
+          id.textContent = b.id || `BOOK_${i + 1}`;
+          a.appendChild(id);
+
+          const title = document.createElement("div");
+          title.className = "book-title";
+          title.textContent = b.title || "Untitled Garden Leaf";
+          a.appendChild(title);
+
+          const desc = document.createElement("div");
+          desc.className = "book-desc";
+          desc.textContent =
+            b.summary ||
+            "Seeded under Acacia · details live in the markdown file.";
+          a.appendChild(desc);
+
+          const tagRow = document.createElement("div");
+          tagRow.className = "tag-row";
+
+          const tPrimary = document.createElement("span");
+          tPrimary.className = "tag primary";
+          tPrimary.textContent = "codex";
+          tagRow.appendChild(tPrimary);
+
+          if (b.cycle) {
+            const tCycle = document.createElement("span");
+            tCycle.className = "tag";
+            tCycle.textContent = `cycle ${b.cycle}`;
+            tagRow.appendChild(tCycle);
+          }
+
+          const tPath = document.createElement("span");
+          tPath.className = "tag";
+          tPath.textContent = b.path
+            ? b.path.replace("docs/Novellas/", "")
+            : "local";
+          tagRow.appendChild(tPath);
+
+          a.appendChild(tagRow);
+          grid.appendChild(a);
+        });
+
+        statusLine.innerHTML =
+          "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
+          "auto-maintained by GitHub Actions.";
+      } catch (err) {
+        console.error(err);
+        countLabel.textContent = "Index unavailable";
+        errorBox.style.display = "block";
+        errorBox.innerHTML =
+          "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
+          "This just means the index hasn’t been generated yet. " +
+          "Once you add the GitHub Action, it will appear here.";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadLibrary);
+  </script>
+</body>
+</html>
