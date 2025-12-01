@@ -124,7 +124,7 @@
     <div class="sub">
       Manual Sky-Mind signal sender.<br />
       Worker endpoint:<br />
-      <code>https://brandonmarkgaia.workers.dev/inbox</code>
+      <code>https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox</code>
     </div>
 
     <label for="secret">Keeper Secret (AQUILA_INBOX_SECRET)</label>
@@ -163,17 +163,18 @@
   </div>
 
   <script>
-    const ENDPOINT = "https://brandonmarkgaia.workers.dev/inbox";
+    // IMPORTANT: this matches the worker we tested in Cloudflare
+    const ENDPOINT = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
 
     const $ = id => document.getElementById(id);
-    const secretInput = $("secret");
-    const titleInput = $("title");
-    const summaryInput = $("summary");
-    const bodyInput = $("body");
+    const secretInput   = $("secret");
+    const titleInput    = $("title");
+    const summaryInput  = $("summary");
+    const bodyInput     = $("body");
     const priorityInput = $("priority");
-    const tagsInput = $("tags");
-    const statusBox = $("status");
-    const sendBtn = $("sendBtn");
+    const tagsInput     = $("tags");
+    const statusBox     = $("status");
+    const sendBtn       = $("sendBtn");
 
     function showStatus(msg, type = "") {
       statusBox.textContent = msg;
@@ -185,9 +186,9 @@
       if (!secret) return showStatus("Missing Keeper Secret.", "err");
 
       const payload = {
-        title: titleInput.value.trim() || "Untitled Keeper Message",
+        title:   titleInput.value.trim()   || "Untitled Keeper Message",
         summary: summaryInput.value.trim() || "No summary.",
-        body: bodyInput.value.trim() || "",
+        body:    bodyInput.value.trim()    || "",
         priority: priorityInput.value,
         tags: tagsInput.value.split(",").map(t => t.trim()).filter(Boolean)
       };
@@ -207,9 +208,7 @@
 
         const text = await res.text();
         let data;
-
-        try { data = JSON.parse(text); }
-        catch { data = { raw: text }; }
+        try { data = JSON.parse(text); } catch { data = { raw: text }; }
 
         if (!res.ok || !data.ok) {
           showStatus("Error " + res.status + ": " + JSON.stringify(data, null, 2), "err");
