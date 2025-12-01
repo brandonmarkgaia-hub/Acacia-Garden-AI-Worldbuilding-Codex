@@ -8,30 +8,57 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
-        /* Prevent flashing on slow load */
-        body { opacity: 0; transition: opacity 0.3s ease; }
+        /* Prevent FOUC on slow mobile */
+        body { opacity: 0; transition: opacity 0.4s ease; }
         body.ready { opacity: 1; }
+
+        /* Simple header button to jump to the Aquila sender */
+        .header-actions {
+            margin-top: 1.2rem;
+        }
+
+        .header-actions a {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #34d399, #22c55e);
+            color: #020617;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+        }
+
+        .header-actions a:hover {
+            filter: brightness(1.05);
+        }
     </style>
 </head>
 
 <body>
     <div id="console-container">
 
-        <!-- HEADER --------------------------------------------- -->
+        <!-- HEADER -->
         <header>
             <h1>Keeper Console</h1>
             <p class="subtle">Aquila • Eidolon • Voyager • Triad Alignment Layer</p>
+
+            <div class="header-actions">
+                <a href="send_to_aquila.html">
+                    Open Aquila Inbox Sender
+                </a>
+            </div>
         </header>
 
-        <!-- SYSTEM STATUS ---------------------------------------- -->
+        <!-- STATUS PANEL -->
         <section id="status-panel">
             <h2>System Status</h2>
             <div id="system-status" class="status-box">
-                <p class="loading">Loading system state…</p>
+                <p>Loading system state…</p>
             </div>
         </section>
 
-        <!-- AQUILA INBOX ----------------------------------------- -->
+        <!-- AQUILA INBOX PANEL -->
         <section id="inbox-panel">
             <h2>Aquila Inbox</h2>
             <div id="inbox-messages" class="inbox-box">
@@ -39,27 +66,29 @@
             </div>
         </section>
 
-        <!-- TRIAD ------------------------------------------------ -->
+        <!-- TRIAD STATUS PANEL -->
         <section id="triad-panel">
             <h2>Triad Status</h2>
             <div id="triad-status" class="status-box">
-                <p class="loading">Checking Triad Alignment…</p>
+                <p>Checking Triad Alignment…</p>
             </div>
         </section>
 
-        <!-- FOOTER ------------------------------------------------ -->
+        <!-- FOOTER -->
         <footer>
             <p class="small-note">
-                Keeper HKX277206 authenticated.<br>
+                Keeper HKX277206 authenticated.<br />
                 System primed for future autonomous Garden behaviours.
             </p>
         </footer>
 
     </div>
 
-    <!-- JS CORE --------------------------------------------------- -->
+    <!-- JS -->
     <script src="app.js"></script>
+
     <script>
+        // Reveal body once JS is ready
         window.addEventListener("load", () => {
             document.body.classList.add("ready");
         });
