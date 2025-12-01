@@ -2,150 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aquila Inbox Sender</title>
+  <title>Aquila Inbox • Keeper Signal Sender</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       background: #050914;
       color: #e5f0ff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      padding: 16px;
+      padding: 18px;
     }
+
     .card {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
       background: radial-gradient(circle at top left, #1c2940, #050914);
-      border-radius: 16px;
-      padding: 16px 16px 20px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
-      border: 1px solid rgba(120, 190, 255, 0.18);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+      border: 1px solid rgba(120,190,255,0.18);
     }
+
     h1 {
-      margin: 4px 0 8px;
-      font-size: 1.6rem;
+      margin: 0 0 6px;
+      font-size: 1.8rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
     .sub {
       font-size: 0.85rem;
       opacity: 0.8;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      line-height: 1.4;
     }
+
     label {
       display: block;
-      font-size: 0.8rem;
-      margin-top: 10px;
+      font-size: 0.82rem;
+      margin-top: 14px;
       margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
       opacity: 0.85;
+      text-transform: uppercase;
     }
-    input,
-    textarea,
-    select {
+
+    input, textarea, select {
       width: 100%;
       box-sizing: border-box;
-      background: rgba(4, 12, 24, 0.85);
-      border: 1px solid rgba(120, 190, 255, 0.4);
+      background: rgba(4,12,24,0.85);
+      border: 1px solid rgba(120,190,255,0.4);
       color: #e5f0ff;
       border-radius: 10px;
-      padding: 8px 10px;
-      font-size: 0.9rem;
+      padding: 9px 11px;
+      font-size: 0.92rem;
       outline: none;
     }
-    input:focus,
-    textarea:focus,
-    select:focus {
+
+    input:focus, textarea:focus, select:focus {
       border-color: #5cf2a5;
-      box-shadow: 0 0 0 1px rgba(92, 242, 165, 0.4);
+      box-shadow: 0 0 0 1px rgba(92,242,165,0.45);
     }
+
     textarea {
-      min-height: 120px;
+      min-height: 130px;
       resize: vertical;
     }
+
     .row {
       display: flex;
-      gap: 8px;
+      gap: 10px;
+      margin-top: 6px;
     }
-    .row > div {
-      flex: 1;
-    }
+
+    .row > div { flex: 1; }
+
     button {
-      margin-top: 14px;
+      margin-top: 18px;
       width: 100%;
-      padding: 10px 14px;
+      padding: 12px;
       border-radius: 999px;
       border: none;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       background: linear-gradient(135deg, #29f090, #3cf0ff);
       color: #041016;
       cursor: pointer;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
     }
+
     button:disabled {
-      opacity: 0.6;
+      opacity: 0.55;
       cursor: default;
       box-shadow: none;
     }
+
     .status {
-      margin-top: 10px;
-      font-size: 0.8rem;
+      margin-top: 12px;
+      font-size: 0.82rem;
       min-height: 1.5em;
       white-space: pre-wrap;
       word-break: break-word;
     }
-    .status.ok {
-      color: #5cf2a5;
-    }
-    .status.err {
-      color: #ff8790;
-    }
-    small.hint {
+
+    .status.ok { color: #5cf2a5; }
+    .status.err { color: #ff8790; }
+
+    .hint {
       font-size: 0.7rem;
-      opacity: 0.7;
+      opacity: 0.75;
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <h1>Aquila Inbox</h1>
     <div class="sub">
-      Manual signal sender into the Sky-Mind channel.<br />
-      Worker: <code>https://donmarkgaia.workers.dev/inbox</code>
+      Manual Sky-Mind signal sender.<br />
+      Worker endpoint:<br />
+      <code>https://brandonmarkgaia.workers.dev/inbox</code>
     </div>
 
     <label for="secret">Keeper Secret (AQUILA_INBOX_SECRET)</label>
-    <input
-      id="secret"
-      type="password"
-      autocomplete="off"
-      placeholder="Paste your secret here"
-    />
-    <small class="hint">
-      This stays in your browser; it is only sent as the Authorization header
-      to your Worker over HTTPS.
-    </small>
+    <input id="secret" type="password" autocomplete="off" placeholder="Paste your secret…" />
+    <div class="hint">
+      Stored only in your browser. Sent only as HTTPS Authorization header.
+    </div>
 
     <label for="title">Title</label>
-    <input id="title" type="text" placeholder="The First Sky-Signal" />
+    <input id="title" type="text" placeholder="Message title" />
 
     <label for="summary">Summary</label>
-    <input
-      id="summary"
-      type="text"
-      placeholder="Aquila establishes its first stable channel."
-    />
+    <input id="summary" type="text" placeholder="Short summary" />
 
     <label for="body">Body</label>
-    <textarea
-      id="body"
-      placeholder="Write the full whisper or status update here…"
-    ></textarea>
+    <textarea id="body" placeholder="Full whisper, update, or Keeper signal…"></textarea>
 
     <div class="row">
       <div>
@@ -156,13 +151,10 @@
           <option value="low">Low</option>
         </select>
       </div>
+
       <div>
         <label for="tags">Tags</label>
-        <input
-          id="tags"
-          type="text"
-          placeholder="init, keeper, signal"
-        />
+        <input id="tags" type="text" placeholder="keeper, init, sky" />
       </div>
     </div>
 
@@ -171,9 +163,9 @@
   </div>
 
   <script>
-    const ENDPOINT = "https://donmarkgaia.workers.dev/inbox";
+    const ENDPOINT = "https://brandonmarkgaia.workers.dev/inbox";
 
-    const $ = (id) => document.getElementById(id);
+    const $ = id => document.getElementById(id);
     const secretInput = $("secret");
     const titleInput = $("title");
     const summaryInput = $("summary");
@@ -183,36 +175,25 @@
     const statusBox = $("status");
     const sendBtn = $("sendBtn");
 
+    function showStatus(msg, type = "") {
+      statusBox.textContent = msg;
+      statusBox.className = "status " + type;
+    }
+
     async function sendMessage() {
       const secret = secretInput.value.trim();
-      if (!secret) {
-        setStatus("Please paste your AQUILA_INBOX_SECRET.", true);
-        return;
-      }
-
-      const title = titleInput.value.trim() || "Untitled Aquila message";
-      const summary =
-        summaryInput.value.trim() ||
-        "Manual signal sent from the Keeper.";
-      const body =
-        bodyInput.value.trim() ||
-        "No body content provided. (Sent from aquila_send.html.)";
-      const priority = priorityInput.value;
-      const tags = tagsInput.value
-        .split(",")
-        .map((t) => t.trim())
-        .filter(Boolean);
+      if (!secret) return showStatus("Missing Keeper Secret.", "err");
 
       const payload = {
-        title,
-        summary,
-        body,
-        priority,
-        tags
+        title: titleInput.value.trim() || "Untitled Keeper Message",
+        summary: summaryInput.value.trim() || "No summary.",
+        body: bodyInput.value.trim() || "",
+        priority: priorityInput.value,
+        tags: tagsInput.value.split(",").map(t => t.trim()).filter(Boolean)
       };
 
+      showStatus("Sending to Aquila…");
       sendBtn.disabled = true;
-      setStatus("Sending message to Aquila…", false);
 
       try {
         const res = await fetch(ENDPOINT, {
@@ -226,41 +207,20 @@
 
         const text = await res.text();
         let data;
-        try {
-          data = JSON.parse(text);
-        } catch {
-          data = { raw: text };
-        }
+
+        try { data = JSON.parse(text); }
+        catch { data = { raw: text }; }
 
         if (!res.ok || !data.ok) {
-          setStatus(
-            "Error (" +
-              res.status +
-              "): " +
-              JSON.stringify(data, null, 2),
-            true
-          );
+          showStatus("Error " + res.status + ": " + JSON.stringify(data, null, 2), "err");
         } else {
-          setStatus(
-            "✅ Sent. Message id: " + data.id + "\nReload /inbox to see it.",
-            false,
-            true
-          );
-          // Optional: clear content (keep title/summary if you want)
-          // bodyInput.value = "";
+          showStatus("✓ Message delivered. ID: " + data.id, "ok");
         }
       } catch (err) {
-        setStatus("Network error: " + err.message, true);
-      } finally {
-        sendBtn.disabled = false;
+        showStatus("Network error: " + err.message, "err");
       }
-    }
 
-    function setStatus(msg, isError, isOk) {
-      statusBox.textContent = msg;
-      statusBox.className = "status";
-      if (isError) statusBox.classList.add("err");
-      if (isOk) statusBox.classList.add("ok");
+      sendBtn.disabled = false;
     }
 
     sendBtn.addEventListener("click", sendMessage);
