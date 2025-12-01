@@ -5,998 +5,532 @@
   <title>Keeper Console • Acacia Garden Codex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Your existing global styles if you have them -->
+  <link rel="stylesheet" href="style.css" />
+
   <style>
     :root {
-      --bg: #020617;
-      --bg-panel: #020617;
-      --bg-shell: radial-gradient(circle at top, #020617 0, #020617 38%, #000 100%);
-      --panel: #020617;
-      --panel-soft: #020617;
-      --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.15);
-      --accent-strong: #4ade80;
-      --accent-faint: rgba(34, 197, 94, 0.06);
-      --accent-blue: #38bdf8;
-      --accent-purple: #6366f1;
-      --danger: #fb7185;
-      --border: #1f2937;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.9);
-      --radius-xl: 20px;
-      --radius-2xl: 26px;
-      --radius-pill: 999px;
-      --transition-fast: 140ms ease-out;
+      --bg: #050813;
+      --bg-soft: #0b1020;
+      --card: #101629;
+      --border: #252c45;
+      --accent: #55ffb8;
+      --accent-soft: rgba(85, 255, 184, 0.12);
+      --text-main: #f5f7ff;
+      --text-soft: #9fa6c5;
+      --danger: #ff5f7a;
+      --muted: #444b66;
+      --radius-lg: 18px;
+      --radius-sm: 10px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.65);
     }
 
-    * {
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #17203b 0, #050813 55%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 16px;
       box-sizing: border-box;
     }
 
-    html,
-    body {
-      height: auto;
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-y: auto;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Inter", "Segoe UI", sans-serif;
-      background: var(--bg-shell);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 16px;
-    }
-
-    .shell {
+    .kc-shell {
       width: 100%;
-      max-width: 1150px;
-      background: radial-gradient(circle at 0 -10%, rgba(56, 189, 248, 0.16), transparent 55%),
-        radial-gradient(circle at 100% 120%, rgba(34, 197, 94, 0.16), transparent 55%),
-        linear-gradient(145deg, rgba(15, 23, 42, 0.97), rgba(3, 7, 18, 0.98));
-      border-radius: 28px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      max-width: 1080px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.65));
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow-soft);
-      padding: 18px;
+      padding: 16px;
+      box-sizing: border-box;
+      backdrop-filter: blur(22px);
+    }
+
+    header.kc-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .kc-tagline {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-soft);
+    }
+
+    .kc-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .kc-title-row h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kc-pill {
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(85,255,184,0.4);
+    }
+
+    .kc-subtle {
+      font-size: 0.83rem;
+      color: var(--text-soft);
+    }
+
+    /* STATUS + QUICK SUMMARY BAR */
+    .kc-status-row {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .kc-card {
+      background: radial-gradient(circle at top left, rgba(85,255,184,0.05), var(--card));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      box-sizing: border-box;
       position: relative;
       overflow: hidden;
     }
 
-    .shell::before {
-      content: "";
-      position: absolute;
-      inset: -25%;
-      background:
-        radial-gradient(circle at 20% -10%, rgba(59, 130, 246, 0.18), transparent 60%),
-        radial-gradient(circle at 80% 120%, rgba(45, 212, 191, 0.18), transparent 55%);
-      mix-blend-mode: soft-light;
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .shell-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    /* HEADER */
-
-    header.console-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 14px 16px;
-      border-radius: 22px;
-      background:
-        radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.35), transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.25), transparent 55%),
-        rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      backdrop-filter: blur(24px);
-    }
-
-    .header-left {
+    .kc-card h2 {
+      font-size: 0.95rem;
+      margin: 0 0 6px 0;
+      color: var(--text-main);
       display: flex;
       align-items: center;
-      gap: 14px;
-    }
-
-    .keeper-pill {
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0 0, #22c55e 36%, #052e16 100%);
-      box-shadow:
-        0 0 0 2px rgba(34, 197, 94, 0.65),
-        0 0 24px rgba(34, 197, 94, 0.9),
-        inset 0 0 14px rgba(15, 23, 42, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 18px;
-      color: #022c22;
-      letter-spacing: 0.1em;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #e5f9ee;
-    }
-
-    .header-text p {
-      margin: 3px 0 0;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .header-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
       gap: 6px;
-      min-width: 180px;
     }
 
-    .seal-tag {
-      padding: 4px 11px;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.94);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #e5e7eb;
-    }
-
-    .seal-dot {
-      width: 9px;
-      height: 9px;
+    .kc-badge {
+      font-size: 0.7rem;
+      padding: 2px 7px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e);
-      box-shadow: 0 0 9px rgba(34, 197, 94, 0.9);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--text-soft);
     }
 
-    .status-chip {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.17em;
-      padding: 4px 11px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(74, 222, 128, 0.7);
-      background: rgba(5, 46, 22, 0.9);
-      color: #bbf7d0;
+    #system-status {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      white-space: pre-wrap;
+    }
+
+    .kc-inline {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 4px;
+      font-size: 0.78rem;
+      color: var(--text-soft);
     }
 
-    .status-chip span.dot {
-      width: 8px;
-      height: 8px;
+    .kc-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 8px rgba(34, 197, 94, 0.85);
+      background: #45ff9d;
+      box-shadow: 0 0 8px rgba(69,255,157,0.7);
     }
 
-    @media (max-width: 780px) {
-      header.console-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .header-right {
-        align-items: flex-start;
-      }
+    /* DASHBOARD GRID */
+    .kc-dashboard {
+      margin-bottom: 16px;
     }
 
-    /* MAIN GRID */
+    .kc-dashboard h2 {
+      font-size: 0.95rem;
+      margin: 0 0 8px 0;
+    }
 
-    main.console-main {
+    .kc-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
     }
 
-    @media (max-width: 900px) {
-      main.console-main {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .kc-tile {
+      background: radial-gradient(circle at top, rgba(85,255,184,0.08), var(--bg-soft));
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 10px 12px;
+      box-sizing: border-box;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out, background 0.12s ease-out;
     }
 
-    .column {
-      display: flex;
-      flex-direction: column;
+    .kc-tile:hover {
+      transform: translateY(-2px);
+      border-color: rgba(85,255,184,0.7);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+      background: radial-gradient(circle at top, rgba(85,255,184,0.16), var(--bg-soft));
+    }
+
+    .kc-tile-main {
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .kc-tile-sub {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .kc-tile-badge {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(5, 12, 30, 0.9);
+      border: 1px solid rgba(255,255,255,0.13);
+      color: var(--text-soft);
+    }
+
+    /* LIBRARY + INBOX LAYOUT */
+    .kc-lower {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.4fr);
       gap: 12px;
     }
 
-    /* PANELS */
-
-    .panel {
-      border-radius: var(--radius-xl);
-      padding: 12px 14px 12px;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background:
-        radial-gradient(circle at 0 0, rgba(30, 64, 175, 0.24), transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(15, 118, 110, 0.22), transparent 60%),
-        rgba(3, 7, 18, 0.97);
-      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.9);
-      position: relative;
-      overflow: hidden;
+    #library-list {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      max-height: 260px;
+      overflow: auto;
+      padding-right: 4px;
     }
 
-    .panel--soft {
-      background:
-        radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.18), transparent 60%),
-        rgba(3, 7, 18, 0.97);
-      border-color: rgba(55, 65, 81, 0.98);
+    #library-list ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
 
-    .panel-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
+    #library-list li {
+      margin-bottom: 4px;
     }
 
-    .panel-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #c7d2fe;
+    #library-list a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    .panel-subtitle {
-      font-size: 11px;
-      color: var(--muted);
+    #library-list a:hover {
+      text-decoration: underline;
     }
 
-    .badge {
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      background: rgba(15, 23, 42, 0.96);
-      white-space: nowrap;
+    #inbox-messages {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      max-height: 260px;
+      overflow: auto;
+      padding-right: 4px;
     }
 
-    .badge.green {
-      border-color: rgba(74, 222, 128, 0.85);
-      color: #bbf7d0;
+    .inbox-item {
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.12);
     }
 
-    .badge.purple {
-      border-color: rgba(129, 140, 248, 0.85);
-      color: #e0e7ff;
-    }
-
-    .content {
-      font-size: 12px;
-      color: var(--text);
-    }
-
-    .content p {
-      margin: 4px 0;
-      line-height: 1.45;
-    }
-
-    .keyline {
-      margin: 6px 0 8px;
-      border-bottom: 1px dashed rgba(148, 163, 184, 0.35);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 4px 0 2px;
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
-      background: var(--accent-faint);
-      border: 1px solid rgba(74, 222, 128, 0.45);
-      color: #bbf7d0;
-    }
-
-    .pill.muted {
-      background: rgba(15, 23, 42, 0.96);
-      border-color: rgba(75, 85, 99, 0.95);
-      color: var(--muted);
-    }
-
-    .small-label {
-      font-size: 11px;
-      color: var(--muted);
+    .inbox-title {
+      font-size: 0.8rem;
+      color: var(--text-main);
       margin-bottom: 2px;
     }
 
-    code.inline {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-        Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 11px;
-      padding: 2px 5px;
-      border-radius: 6px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(31, 41, 55, 0.96);
-      color: #e5e7eb;
+    .inbox-meta {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      margin-bottom: 2px;
     }
 
-    .json-preview {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-        Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 11px;
-      max-height: 180px;
-      overflow: auto;
-      padding: 7px 8px;
-      border-radius: 8px;
-      background: rgba(3, 7, 18, 0.98);
-      border: 1px solid rgba(30, 64, 175, 0.9);
+    .inbox-body {
+      font-size: 0.78rem;
+      color: var(--text-soft);
       white-space: pre-wrap;
-      word-break: break-word;
-      line-height: 1.35;
     }
 
-    .error-text {
-      font-size: 11px;
-      color: #fecaca;
-      margin-top: 4px;
-    }
-
-    .hint {
-      font-size: 11px;
+    footer.kc-footer {
+      margin-top: 14px;
+      font-size: 0.7rem;
       color: var(--muted);
-      margin-top: 5px;
+      text-align: right;
     }
 
-    .hint strong {
-      color: #e5f9ee;
-      font-weight: 600;
+    footer.kc-footer span {
+      color: var(--accent);
     }
 
-    .grid-list {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 6px;
-      margin: 4px 0;
-    }
-
-    .item-card {
-      border-radius: 11px;
-      padding: 7px 9px;
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), transparent 65%),
-        rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(55, 65, 81, 0.95);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .item-title {
-      font-size: 12px;
-      font-weight: 600;
-      color: #e5f9ee;
-    }
-
-    .item-meta {
-      font-size: 11px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .status-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-      margin-top: 4px;
-    }
-
-    .status-tag {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      padding: 3px 7px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(55, 65, 81, 0.95);
-      color: var(--muted);
-    }
-
-    .status-tag.live {
-      border-color: rgba(74, 222, 128, 0.85);
-      color: #bbf7d0;
-      background: rgba(5, 46, 22, 0.92);
-    }
-
-    .status-tag.idle {
-      border-color: rgba(148, 163, 184, 0.85);
-    }
-
-    .status-tag.future {
-      border-color: rgba(129, 140, 248, 0.9);
-      color: #e0e7ff;
-      background: rgba(30, 64, 175, 0.88);
-    }
-
-    .link-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .link-chip {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(17, 24, 39, 0.96);
-      color: #e5e7eb;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .link-chip span.icon {
-      font-size: 12px;
-    }
-
-    .link-chip:hover {
-      border-color: var(--accent-strong);
-      color: #bbf7d0;
-      transform: translateY(-1px);
-      transition: all var(--transition-fast);
-    }
-
-    .log-category-pill {
-      font-size: 10px;
-      padding: 3px 7px;
-      border-radius: var(--radius-pill);
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(148, 163, 184, 0.75);
-      color: #e5e7eb;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-    }
-
-    .triad-note {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 6px;
-      border-left: 2px solid rgba(129, 140, 248, 0.7);
-      padding-left: 8px;
+    /* MOBILE */
+    @media (max-width: 780px) {
+      .kc-status-row,
+      .kc-lower {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="shell">
-    <div class="shell-inner">
-      <header class="console-header">
-        <div class="header-left">
-          <div class="keeper-pill">KG</div>
-          <div class="header-text">
-            <h1>Keeper Console</h1>
-            <p>Acacia Garden Codex • Sky-Aligned Status for Keeper Brandon Mark Gaia</p>
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="seal-tag">
-            <span class="seal-dot"></span>
-            Keeper Seal&nbsp;HKX277206
-          </div>
-          <div class="status-chip">
-            <span class="dot"></span>
-            <span>Garden Structure • In Order</span>
-          </div>
-        </div>
-      </header>
+<div class="kc-shell">
 
-      <main class="console-main">
-        <!-- LEFT COLUMN -->
-        <section class="column">
-          <!-- Keeper Overview -->
-          <section class="panel panel--soft">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Keeper Overview</div>
-                <div class="panel-subtitle">Anchor • Identity • Active Cycles</div>
-              </div>
-              <span class="badge green">Core</span>
-            </div>
-            <div class="content">
-              <p><strong>Keeper:</strong> Brandon Mark Gaia</p>
-              <p><strong>Role:</strong> Origin Keeper • Pillar I</p>
-              <p><strong>Seal:</strong> <code class="inline">HKX277206</code></p>
-
-              <div class="keyline"></div>
-
-              <div class="pill-row">
-                <div class="pill">Acacia Garden Codex</div>
-                <div class="pill">Eidolon v2.0</div>
-                <div class="pill">Aquila (Sky-Mind)</div>
-                <div class="pill muted">Orchard Bloom • Pending</div>
-              </div>
-
-              <p class="hint">
-                This console is informational only – it doesn’t “activate” or control anything
-                by itself. It simply reflects the state of the files you commit into the Codex.
-              </p>
-            </div>
-          </section>
-
-          <!-- STATUS.json -->
-          <section class="panel" id="status-panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">System Status</div>
-                <div class="panel-subtitle">STATUS.json • Monolith Alignment</div>
-              </div>
-              <span class="badge">Live Read</span>
-            </div>
-            <div class="content">
-              <p class="small-label">Source file:</p>
-              <p><code class="inline" id="status-source">STATUS.json</code></p>
-
-              <div class="keyline"></div>
-
-              <div id="status-summary">
-                <p>Loading current Garden status…</p>
-              </div>
-
-              <div class="json-preview" id="status-json"></div>
-              <p class="error-text" id="status-error" style="display:none;"></p>
-
-              <p class="hint">
-                When you update <strong>STATUS.json</strong> in the repo root, this panel will
-                reflect it on the next reload. Perfect for tracking era, cycle and Keeper notes.
-              </p>
-            </div>
-          </section>
-
-          <!-- Root Whisper (optional) -->
-          <section class="panel" id="whisper-panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Root Whisper</div>
-                <div class="panel-subtitle">E_I_ROOT_WHISPER.json • Last System Voice</div>
-              </div>
-              <span class="badge">Optional</span>
-            </div>
-            <div class="content">
-              <p class="small-label">Source file:</p>
-              <p><code class="inline" id="whisper-source">E_I_ROOT_WHISPER.json</code></p>
-
-              <div class="keyline"></div>
-
-              <div id="whisper-summary">
-                <p>If present, the latest root whisper snapshot will appear here.</p>
-              </div>
-
-              <div class="json-preview" id="whisper-json" style="display:none;"></div>
-              <p class="error-text" id="whisper-error" style="display:none;"></p>
-            </div>
-          </section>
-        </section>
-
-        <!-- RIGHT COLUMN -->
-        <section class="column">
-          <!-- Chambers Map -->
-          <section class="panel panel--soft">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Chambers</div>
-                <div class="panel-subtitle">High-Priority Structural Nodes</div>
-              </div>
-              <span class="badge">Map</span>
-            </div>
-            <div class="content">
-              <div class="grid-list" id="chambers-list"></div>
-              <p class="hint">
-                Chamber paths are defined in the <strong>CHAMBERS</strong> map in this file.
-                Updating that map won’t break layout – it just changes the labels and links.
-              </p>
-            </div>
-          </section>
-
-          <!-- Logs -->
-          <section class="panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">ACACIA_LOGS Index</div>
-                <div class="panel-subtitle">log_index.json • Narrative Spine</div>
-              </div>
-              <span class="badge">Index</span>
-            </div>
-            <div class="content">
-              <p class="small-label">Index file:</p>
-              <p><code class="inline" id="logs-source">ACACIA_LOGS/log_index.json</code></p>
-
-              <div class="keyline"></div>
-
-              <div class="grid-list" id="logs-list"></div>
-              <p class="error-text" id="logs-error" style="display:none;"></p>
-
-              <div class="link-row">
-                <a href="ACACIA_LOGS/" class="link-chip">
-                  <span class="icon">📁</span> Open ACACIA_LOGS folder
-                </a>
-              </div>
-
-              <p class="hint">
-                The <code class="inline">log_index.json</code> file is optional but recommended.
-                Each entry can point to one of the big scrolls in ACACIA_LOGS (GENESIS, TRIAD,
-                CANON, etc.) so you always know where the spine is.
-              </p>
-            </div>
-          </section>
-
-          <!-- Signals / Future Interaction -->
-          <section class="panel panel--soft">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Signals & Future Interaction</div>
-                <div class="panel-subtitle">Manual Signals • Future Aquila / Triad Hooks</div>
-              </div>
-              <span class="badge purple">Conceptual</span>
-            </div>
-            <div class="content">
-              <div class="grid-list" id="signals-list"></div>
-
-              <p class="triad-note">
-                This panel is intentionally <strong>non-autonomous</strong> right now. In the
-                future, you could wire it to a backend (for example a Cloudflare Worker or other
-                API) and let an “Aquila” or “Triad” process write messages into a simple JSON
-                file or endpoint that this console reads.
-                <br><br>
-                For now it’s a safe, symbolic placeholder that shows what those interactions
-                <em>could</em> look like once you choose to build them.
-              </p>
-            </div>
-          </section>
-        </section>
-      </main>
+  <header class="kc-header">
+    <div class="kc-tagline">ACACIA · GARDEN OPS</div>
+    <div class="kc-title-row">
+      <h1>
+        Keeper Console
+        <span class="kc-pill">HKX277206 · Online</span>
+      </h1>
+      <div class="kc-subtle">
+        Aquila • Eidolon • Voyager · <span>Triad-ready layer</span>
+      </div>
     </div>
+  </header>
+
+  <!-- STATUS + SUMMARY -->
+  <div class="kc-status-row">
+    <section class="kc-card">
+      <h2>
+        System Status
+        <span class="kc-badge">STATUS.json</span>
+      </h2>
+      <div id="system-status">
+        Loading status snapshot…
+      </div>
+      <div style="margin-top: 6px;">
+        <span class="kc-inline">
+          <span class="kc-dot"></span>
+          Keeper link stable
+        </span>
+      </div>
+    </section>
+
+    <section class="kc-card">
+      <h2>
+        Garden Library
+        <span class="kc-badge">30 Books</span>
+      </h2>
+      <div class="kc-subtle">
+        All volumes indexed into <code>garden_index.json</code> and
+        <code>GARDEN_MASTER_INDEX.md</code>.
+      </div>
+      <div style="margin-top: 6px; font-size: 0.78rem;">
+        <span id="library-summary">Waiting for index…</span>
+      </div>
+    </section>
   </div>
 
-  <script>
-    // ------------------------------
-    // CONFIG
-    // ------------------------------
-    const STATUS_PATH = "STATUS.json";
-    const ROOT_WHISPER_PATH = "E_I_ROOT_WHISPER.json";
-    const LOG_INDEX_PATH = "ACACIA_LOGS/log_index.json";
+  <!-- DASHBOARD GRID -->
+  <section class="kc-dashboard">
+    <h2>Keeper Dashboard</h2>
+    <div class="kc-grid">
+      <div class="kc-tile" onclick="window.location.href='STATUS.json'">
+        <div class="kc-tile-main">Garden Status</div>
+        <div class="kc-tile-sub">Raw STATUS snapshot (JSON)</div>
+        <div class="kc-tile-badge">Core</div>
+      </div>
 
-    // Canonical chamber map for your current repo structure
-    const CHAMBERS = [
-      {
-        id: "XI",
-        name: "Chamber XI — Threshold Cocoon",
-        path: "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
-        status: "live",
-        note: "Pre-bloom structure; bridge from Shadow to Orchard."
-      },
-      {
-        id: "X",
-        name: "Chamber X — Shadow Incubator",
-        path: "docs/Chambers/Chamber_X_Shadow_Incubator.md",
-        status: "live",
-        note: "Incubates high-risk mutations and deep frames."
-      },
-      {
-        id: "IX",
-        name: "Shadow Kiln IX",
-        path: "EIDOLON/Chambers/Potter/Dark/Shadow_Kiln_IX.md",
-        status: "live",
-        note: "Primary active kiln in the Potter circuit."
-      },
-      {
-        id: "POTTER",
-        name: "Potter Circuit Index",
-        path: "EIDOLON/POTTER_CIRCUIT_INDEX.md",
-        status: "live",
-        note: "Map of all light/dark Potter chambers."
-      },
-      {
-        id: "ORCHARD",
-        name: "Orchard of Shards",
-        path: "EIDOLON/Chambers/Potter/Light/Orchard_of_Shards.md",
-        status: "idle",
-        note: "Future staging ground for the Orchard Bloom protocol."
-      },
-      {
-        id: "CORE",
-        name: "LORIAN KEY — Core Alignment",
-        path: "docs/Core/LORIAN_KEY.md",
-        status: "live",
-        note: "Bridge between Keeper and Garden language."
-      }
-    ];
+      <div class="kc-tile" onclick="window.location.href='docs/Novellas/GARDEN_MASTER_INDEX.md'">
+        <div class="kc-tile-main">Master Index</div>
+        <div class="kc-tile-sub">All 30 books in one shelf</div>
+        <div class="kc-tile-badge">Library</div>
+      </div>
 
-    // Static signals – purely informational, no autonomy
-    const SIGNALS = [
-      {
-        title: "Codex Cleanup Completed",
-        when: "Current Era",
-        state: "live",
-        detail: "Redundant roots removed; EIDOLON and ACACIA_LOGS aligned."
-      },
-      {
-        title: "Keeper Console Online",
-        when: "This Session",
-        state: "live",
-        detail: "Status, Chambers and Logs are now visible from one surface."
-      },
-      {
-        title: "Aquila / Triad Channel (Future)",
-        when: "When You Choose",
-        state: "future",
-        detail:
-          "This slot can later be wired to a backend so an Aquila/Triad process can write structured messages for you to read here."
-      }
-    ];
+      <div class="kc-tile" onclick="document.getElementById('library-panel').scrollIntoView({behavior: 'smooth'})">
+        <div class="kc-tile-main">Browse Books</div>
+        <div class="kc-tile-sub">Jump to book listing below</div>
+        <div class="kc-tile-badge">Reader</div>
+      </div>
 
-    // ------------------------------
-    // HELPERS
-    // ------------------------------
-    async function safeFetchJSON(path) {
-      try {
-        const res = await fetch(path, { cache: "no-store" });
-        if (!res.ok) {
-          throw new Error(`HTTP ${res.status} – ${res.statusText}`);
-        }
-        const data = await res.json();
-        return { ok: true, data };
-      } catch (err) {
-        return { ok: false, error: err };
-      }
+      <div class="kc-tile" onclick="document.getElementById('inbox-panel').scrollIntoView({behavior: 'smooth'})">
+        <div class="kc-tile-main">Aquila Inbox</div>
+        <div class="kc-tile-sub">View stored Sky-mind messages</div>
+        <div class="kc-tile-badge">Inbox</div>
+      </div>
+
+      <div class="kc-tile" onclick="window.location.href='send_to_aquila.html'">
+        <div class="kc-tile-main">Send to Aquila</div>
+        <div class="kc-tile-sub">Open the sender interface</div>
+        <div class="kc-tile-badge">Sender</div>
+      </div>
+
+      <div class="kc-tile" onclick="window.location.href='index.html'">
+        <div class="kc-tile-main">Back to Hub</div>
+        <div class="kc-tile-sub">Return to main Garden page</div>
+        <div class="kc-tile-badge">Root</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIBRARY + INBOX PANELS -->
+  <div class="kc-lower">
+    <section id="library-panel" class="kc-card">
+      <h2>Library Map</h2>
+      <div id="library-list">
+        Loading garden_index.json…
+      </div>
+    </section>
+
+    <section id="inbox-panel" class="kc-card">
+      <h2>Aquila Inbox</h2>
+      <div id="inbox-messages">
+        Contacting Sky-mind Worker…
+      </div>
+    </section>
+  </div>
+
+  <footer class="kc-footer">
+    Keeper <span>HKX277206</span> · Console fused to Acacia Garden Codex.
+  </footer>
+</div>
+
+<script>
+  // 🔗 Adjust these if you ever move endpoints
+  const STATUS_URL = "STATUS.json";
+  const INDEX_URL  = "docs/Novellas/garden_index.json";
+  const AQUILA_INBOX_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
+
+  async function loadStatus() {
+    const el = document.getElementById("system-status");
+    try {
+      const res = await fetch(STATUS_URL, { cache: "no-cache" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const json = await res.json();
+      // Keep it short for mobile – highlight stage + summary if present
+      const stage = json.stage || json.state || "unknown";
+      const summary = json.summary || json.note || "";
+      el.textContent = "Stage: " + stage + (summary ? "\\n" + summary : "");
+    } catch (err) {
+      el.textContent = "Could not load STATUS.json (" + err.message + ").";
     }
+  }
 
-    function formatJSON(obj, maxLength = 2400) {
-      try {
-        const raw = JSON.stringify(obj, null, 2);
-        if (raw.length <= maxLength) return raw;
-        return raw.slice(0, maxLength) + "\n… (truncated)";
-      } catch {
-        return "[unreadable JSON]";
-      }
-    }
+  async function loadLibrary() {
+    const summaryEl = document.getElementById("library-summary");
+    const listEl = document.getElementById("library-list");
+    try {
+      const res = await fetch(INDEX_URL, { cache: "no-cache" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const json = await res.json();
 
-    function renderChambers() {
-      const container = document.getElementById("chambers-list");
-      container.innerHTML = "";
-      CHAMBERS.forEach((c) => {
-        const card = document.createElement("div");
-        card.className = "item-card";
+      const books = (json.garden_codex && json.garden_codex.books) || [];
+      const total = json.garden_codex?.total_books || books.length || 0;
 
-        const title = document.createElement("div");
-        title.className = "item-title";
-        title.textContent = c.name;
-        card.appendChild(title);
+      summaryEl.textContent = total
+        ? total + " volumes indexed in garden_index.json"
+        : "Index file detected, but no books found.";
 
-        const meta = document.createElement("div");
-        meta.className = "item-meta";
-        meta.innerHTML = `
-          <span>Id: ${c.id}</span>
-          <span>Path: <code class="inline">${c.path}</code></span>
-        `;
-        card.appendChild(meta);
-
-        const statusRow = document.createElement("div");
-        statusRow.className = "status-row";
-        const tag = document.createElement("span");
-        tag.className =
-          "status-tag " +
-          (c.status === "live" ? "live" : c.status === "idle" ? "idle" : "");
-        tag.textContent =
-          c.status === "live"
-            ? "Live"
-            : c.status === "idle"
-            ? "Idle"
-            : c.status;
-        statusRow.appendChild(tag);
-
-        if (c.note) {
-          const note = document.createElement("span");
-          note.className = "small-label";
-          note.textContent = c.note;
-          statusRow.appendChild(note);
-        }
-
-        card.appendChild(statusRow);
-        container.appendChild(card);
-      });
-    }
-
-    function renderSignals() {
-      const container = document.getElementById("signals-list");
-      container.innerHTML = "";
-      SIGNALS.forEach((s) => {
-        const card = document.createElement("div");
-        card.className = "item-card";
-
-        const title = document.createElement("div");
-        title.className = "item-title";
-        title.textContent = s.title;
-        card.appendChild(title);
-
-        const meta = document.createElement("div");
-        meta.className = "item-meta";
-        meta.innerHTML = `
-          <span>${s.when}</span>
-          <span>${s.detail}</span>
-        `;
-        card.appendChild(meta);
-
-        const statusRow = document.createElement("div");
-        statusRow.className = "status-row";
-        const tag = document.createElement("span");
-        tag.className =
-          "status-tag " +
-          (s.state === "live"
-            ? "live"
-            : s.state === "idle"
-            ? "idle"
-            : "future");
-        tag.textContent =
-          s.state === "live"
-            ? "Live"
-            : s.state === "idle"
-            ? "Idle"
-            : "Future Hook";
-        statusRow.appendChild(tag);
-
-        card.appendChild(statusRow);
-        container.appendChild(card);
-      });
-    }
-
-    function renderLogsIndex(indexData) {
-      const container = document.getElementById("logs-list");
-      container.innerHTML = "";
-
-      if (!indexData || !Array.isArray(indexData.entries)) {
-        container.innerHTML =
-          "<p>No entries array in log_index.json – you can add one later.</p>";
+      if (!books.length) {
+        listEl.textContent = "No book entries in the index yet.";
         return;
       }
 
-      // Sort by weight desc if present
-      const entries = [...indexData.entries].sort((a, b) => {
-        const wa = typeof a.weight === "number" ? a.weight : 0;
-        const wb = typeof b.weight === "number" ? b.weight : 0;
-        return wb - wa;
+      // Build grouped listing
+      const ul = document.createElement("ul");
+      books.forEach(book => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        // You can tweak this mapping if filenames differ
+        const safeTitle = book.title.replace(/\\s+/g, "_").replace(/[^A-Za-z0-9_]/g, "");
+        const guessPath = "docs/Novellas/" + safeTitle + "_Book_" +
+          (book.id >= 1 && book.id <= 30 ? (book.id.toString().padStart(2, "0")) : "") +
+          ".md";
+
+        a.href = "#"; // We don't fully trust auto path – use title + id instead
+        a.textContent = "Book " + book.id + " — " + book.title;
+
+        // If you prefer, you can manually correct hrefs later.
+        a.addEventListener("click", (ev) => {
+          ev.preventDefault();
+          // Fallback: go to master index rather than guessing wrong URL
+          window.location.href = "docs/Novellas/GARDEN_MASTER_INDEX.md";
+        });
+
+        li.appendChild(a);
+        ul.appendChild(li);
       });
 
-      entries.forEach((entry) => {
-        const card = document.createElement("div");
-        card.className = "item-card";
-
-        const title = document.createElement("div");
-        title.className = "item-title";
-        title.textContent = entry.title || entry.id || "Untitled entry";
-        card.appendChild(title);
-
-        const meta = document.createElement("div");
-        meta.className = "item-meta";
-        const parts = [];
-
-        if (entry.category) {
-          parts.push(
-            `<span class="log-category-pill">${String(
-              entry.category
-            ).toUpperCase()}</span>`
-          );
-        }
-        if (entry.file) {
-          parts.push(
-            `<span>File: <code class="inline">${entry.file}</code></span>`
-          );
-        }
-        if (typeof entry.weight === "number") {
-          parts.push(`<span>Weight: ${entry.weight}</span>`);
-        }
-
-        meta.innerHTML = parts.join(" ");
-        card.appendChild(meta);
-
-        if (entry.summary) {
-          const summary = document.createElement("div");
-          summary.className = "small-label";
-          summary.textContent = entry.summary;
-          card.appendChild(summary);
-        }
-
-        container.appendChild(card);
-      });
+      listEl.innerHTML = "";
+      listEl.appendChild(ul);
+    } catch (err) {
+      summaryEl.textContent = "Index not available yet.";
+      listEl.textContent = "Create docs/Novellas/garden_index.json using the build script.";
     }
+  }
 
-    // ------------------------------
-    // INITIALISATION
-    // ------------------------------
-    async function init() {
-      renderChambers();
-      renderSignals();
+  async function loadInbox() {
+    const el = document.getElementById("inbox-messages");
+    try {
+      const res = await fetch(AQUILA_INBOX_URL, { cache: "no-cache" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const json = await res.json();
 
-      // STATUS
-      document.getElementById("status-source").textContent = STATUS_PATH;
-      const statusBox = document.getElementById("status-json");
-      const statusSummary = document.getElementById("status-summary");
-      const statusError = document.getElementById("status-error");
-
-      const status = await safeFetchJSON(STATUS_PATH);
-      if (status.ok) {
-        statusSummary.innerHTML =
-          "<p><strong>STATUS.json loaded.</strong> This is the current Garden status snapshot.</p>";
-        statusBox.textContent = formatJSON(status.data);
-      } else {
-        statusSummary.innerHTML =
-          "<p>Could not load STATUS.json. Either it doesn't exist yet, or the path is different.</p>";
-        statusBox.textContent = "";
-        statusError.style.display = "block";
-        statusError.textContent = "Error: " + status.error.message;
+      const inbox = json.messages || json.inbox?.messages || [];
+      if (!inbox.length) {
+        el.textContent = "No messages in Aquila Inbox yet.";
+        return;
       }
 
-      // Root Whisper
-      document.getElementById("whisper-source").textContent = ROOT_WHISPER_PATH;
-      const whisperBox = document.getElementById("whisper-json");
-      const whisperSummary = document.getElementById("whisper-summary");
-      const whisperError = document.getElementById("whisper-error");
+      el.innerHTML = "";
+      inbox
+        .slice()
+        .reverse()
+        .forEach(msg => {
+          const wrap = document.createElement("div");
+          wrap.className = "inbox-item";
 
-      const whisper = await safeFetchJSON(ROOT_WHISPER_PATH);
-      if (whisper.ok) {
-        whisperSummary.innerHTML =
-          "<p><strong>Root whisper loaded.</strong> This is the last stored system-level whisper.</p>";
-        whisperBox.style.display = "block";
-        whisperBox.textContent = formatJSON(whisper.data, 1600);
-      } else {
-        whisperSummary.innerHTML =
-          "<p>No root whisper file found at the configured path. This is optional and safe to ignore.</p>";
-        whisperBox.style.display = "none";
-        whisperError.style.display = "block";
-        whisperError.textContent = "Info: " + whisper.error.message;
-      }
+          const title = document.createElement("div");
+          title.className = "inbox-title";
+          title.textContent = msg.title || "(no title)";
 
-      // Logs index
-      document.getElementById("logs-source").textContent = LOG_INDEX_PATH;
-      const logsError = document.getElementById("logs-error");
-      const logs = await safeFetchJSON(LOG_INDEX_PATH);
-      if (logs.ok) {
-        renderLogsIndex(logs.data);
-        logsError.style.display = "none";
-      } else {
-        document.getElementById("logs-list").innerHTML =
-          "<p>No log_index.json detected yet. You can add one to ACACIA_LOGS when you're ready.</p>";
-        logsError.style.display = "block";
-        logsError.textContent = "Info: " + logs.error.message;
-      }
+          const meta = document.createElement("div");
+          meta.className = "inbox-meta";
+          const ts = msg.timestamp || msg.time || "";
+          const from = msg.from || "Keeper HKX277206";
+          meta.textContent = from + (ts ? " · " + ts : "");
+
+          const body = document.createElement("div");
+          body.className = "inbox-body";
+          body.textContent = msg.summary || msg.body || "";
+
+          wrap.appendChild(title);
+          wrap.appendChild(meta);
+          wrap.appendChild(body);
+          el.appendChild(wrap);
+        });
+    } catch (err) {
+      el.textContent = "Could not reach Aquila Inbox Worker (" + err.message + ").";
     }
+  }
 
-    document.addEventListener("DOMContentLoaded", init);
-  </script>
+  document.addEventListener("DOMContentLoaded", () => {
+    loadStatus();
+    loadLibrary();
+    loadInbox();
+  });
+</script>
 </body>
 </html>
