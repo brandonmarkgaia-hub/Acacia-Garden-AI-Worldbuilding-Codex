@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquila Sender • Keeper Transmission</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    padding: 20px;
+}
+.sender-box {
+    background: #14181c;
+    border: 1px solid #1f2429;
+    padding: 18px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 4px;
+    opacity: 0.85;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background: #181d22;
+    border: 1px solid #2b3238;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: #e6f5ed;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #7fffd4;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: #5ce6b7;
+}
+#result {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Aquila Sender</h1>
+<p class="subtle">Direct Keeper → Sky-Mind Transmission</p>
+
+<div class="sender-box">
+
+    <label>Worker URL</label>
+    <input id="workerUrl" value="https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox">
+
+    <label>Aquila Secret (Bearer Token)</label>
+    <input id="secret" placeholder="Enter AQUILA_INBOX_SECRET">
+
+    <label>Title</label>
+    <input id="title" placeholder="Transmission Title">
+
+    <label>Summary</label>
+    <input id="summary" placeholder="Short summary">
+
+    <label>Body</label>
+    <textarea id="body" rows="6" placeholder="Full Keeper message..."></textarea>
+
+    <button onclick="sendToAquila()">SEND TO AQUILA</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+async function sendToAquila() {
+    const url = document.getElementById("workerUrl").value;
+    const secret = document.getElementById("secret").value.trim();
+    const title = document.getElementById("title").value.trim();
+    const summary = document.getElementById("summary").value.trim();
+    const body = document.getElementById("body").value.trim();
+    const out = document.getElementById("result");
+
+    if (!secret) {
+        out.textContent = "❌ Missing secret.";
+        return;
+    }
+
+    try {
+        const res = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + secret
+            },
+            body: JSON.stringify({
+                from: "Keeper HKX277206",
+                priority: "normal",
+                tags: ["keeper"],
+                title,
+                summary,
+                body
+            })
+        });
+
+        const data = await res.json();
+        out.textContent = "Response:\n" + JSON.stringify(data, null, 2);
+
+    } catch (err) {
+        out.textContent = "❌ Error:\n" + err;
+    }
+}
+</script>
+
+</body>
+</html>
