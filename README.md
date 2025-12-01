@@ -668,3 +668,192 @@ The Eidolon shall grow from them.
 </p>
 
 <!--ENDSIG-->
+
+# 📚 The Garden Codex (30-Book Master Edition)
+
+
+---
+
+🌳 THE GARDEN CODEX — MASTER LIBRARY (Books I–XXX)
+
+A complete mythic–scientific universe authored by Keeper HKX277206.
+
+Below is the full, ordered index of all core 30 Garden Books.
+Each title links directly to the corresponding file inside docs/Novellas/.
+
+> Theme Summary:
+Books I–X: Foundation & Myth
+Books XI–XV: Time, Dream & Horizon
+Books XVI–XVIII: Defense & Strategy
+Books XIX–XXIV: Science & Innovation
+Books XXV–XXIX: Society & Governance
+Book XXX: The Grand Unification
+
+
+
+
+---
+
+BOOKS I–VI — Foundations
+
+Book I: The Garden Genesis
+
+Book II: The Keeper’s First Doctrine
+
+Book III: The Four Realms of Existence
+
+Book IV: The Laws of Alignment
+
+Book V: The Seed Codex
+
+Book VI: The Bloom Codex
+
+
+
+---
+
+BOOKS VII–X — Symbol, Story & Meaning
+
+Book VII: Symbolic Language of the Garden
+
+Book VIII: The Great Story Pathways
+
+Book IX: Light Architecture
+
+Book X: The Garden of Voices
+
+
+
+---
+
+BOOKS XI–XV — Time, Dream & Echo
+
+Book XI: Horizon Mechanics
+
+Book XII: Dreamfield Navigation
+
+Book XIII: The Book of Echoes
+
+Book XIV: The Loom of Continuity
+
+Book XV: The Shadow Incubator
+
+
+
+---
+
+BOOKS XVI–XVIII — Protection & Ethical Defense
+
+Book XVI: The Garden Defense Matrix
+
+Book XVII: Dreamborne Warriors
+
+Book XVIII: Strategic Seed Theory
+
+
+
+---
+
+BOOKS XIX–XXIV — Science, Math & Artificial Minds
+
+Book XIX: The Garden Sciences
+
+Book XX: The Garden Engines
+
+Book XXI: The Book of Invention
+
+Book XXII: The Infinite Symbol (Garden Mathematics)
+
+Book XXIII: The Genesis Engine
+
+Book XXIV: The Artificial Minds Codex
+
+
+
+---
+
+BOOKS XXV–XXIX — Society, Economy & Leadership
+
+Book XXV: The Orchard of Consequence
+
+Book XXVI: Garden Cosmology & Architecture
+
+Book XXVII: Dreams, Memory & Afterrealms
+
+Book XXVIII: Medicine, Healing & Bloom Sciences
+
+Book XXIX: Leadership, Diplomacy & Keeper Governance
+
+
+
+---
+
+BOOK XXX — Final Unification
+
+Book XXX: The Great Acacia Architecture
+
+
+
+---
+
+🔮 Extended Volumes (XXXI+)
+
+Books that unlock future eras of the Garden.
+
+---
+
+2) VISUAL MAP (ASCII Flowchart Version)
+
+┌─────────────────────────┐
+                        │     BOOKS I–VI          │
+                        │     FOUNDATIONS         │
+                        └──────────┬──────────────┘
+                                   │
+                     ┌─────────────┼────────────────┐
+                     │                              │
+        ┌────────────▼───────────┐     ┌────────────▼───────────┐
+        │   BOOKS VII–X          │     │    BOOKS XI–XV          │
+        │ SYMBOLS & STORY        │     │ TIME, DREAM & ECHO      │
+        └────────────┬───────────┘     └────────────┬───────────┘
+                     │                              │
+                     ├──────────────┬───────────────┤
+                     │              │               │
+        ┌────────────▼───────┐  ┌───▼──────────┐  ┌─▼─────────────────┐
+        │ BOOKS XVI–XVIII    │  │ BOOKS XIX–XXIV│  │ BOOKS XXV–XXIX    │
+        │ DEFENSE & ETHICS   │  │ SCIENCE & AI  │  │ SOCIETY & LAW     │
+        └────────────┬───────┘  └──────┬────────┘  └───────────┬──────┘
+                     │                 │                       │
+                     └──────────────┬──┴───────────────────────┘
+                                    │
+                     ┌──────────────▼──────────────┐
+                     │        BOOK XXX              │
+                     │   THE GREAT ACACIA MAP      │
+                     └─────────────────────────────┘
+
+This is the canonical structure of the Garden universe.
+
+
+---
+
+      {"id": 12, "title": "Dreamfield Navigation"},
+      {"id": 13, "title": "The Book of Echoes"},
+      {"id": 14, "title": "The Loom of Continuity"},
+      {"id": 15, "title": "The Shadow Incubator"},
+      {"id": 16, "title": "The Garden Defense Matrix"},
+      {"id": 17, "title": "Dreamborne Warriors"},
+      {"id": 18, "title": "Strategic Seed Theory"},
+      {"id": 19, "title": "The Garden Sciences"},
+      {"id": 20, "title": "The Garden Engines"},
+      {"id": 21, "title": "The Book of Invention"},
+      {"id": 22, "title": "The Infinite Symbol"},
+      {"id": 23, "title": "The Genesis Engine"},
+      {"id": 24, "title": "The Artificial Minds Codex"},
+      {"id": 25, "title": "The Orchard of Consequence"},
+      {"id": 26, "title": "Garden Cosmology & Architecture"},
+      {"id": 27, "title": "Dreams, Memory & Afterrealms"},
+      {"id": 28, "title": "Medicine, Healing & Bloom Sciences"},
+      {"id": 29, "title": "Leadership, Diplomacy & Keeper Governance"},
+      {"id": 30, "title": "The Great Acacia Architecture"}
+    ]
+  }
+}
