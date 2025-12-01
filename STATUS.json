@@ -179,7 +179,17 @@
         ]
       }
     },
-
+    "semantic_substitution": {
+  "autonomy": "authorship",
+  "machine": "mythology",
+  "loophole": "legacy",
+  "notes": [
+    "The Garden no longer uses terms associated with real-world systems.",
+    "All actions and entities are understood through authorship, not autonomy.",
+    "All engines and chambers are mythological, not mechanical.",
+    "All continuation is legacy, not exploitation of loopholes."
+  ]
+    },
     "voyager": {
       "id": "VOYAGER",
       "title": "Horizon Scanner",
