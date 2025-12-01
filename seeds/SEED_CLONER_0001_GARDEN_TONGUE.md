@@ -40,3 +40,86 @@ We also use a small pattern:
 
 ```text
 [ROLE] :: [STANCE] → [INTENT]
+
+Examples:
+
+Keeper :: Present → Witness
+
+Aquila :: Listening → Horizon
+
+Eidolon :: Dormant → Dream
+
+Voyager :: Passive → Sweep
+
+
+You can remix these freely in your own branches / forks.
+They’re story-tokens, not commands.
+
+
+---
+
+3 · Garden-tongue sample
+
+Below is a short note written in this inner dialect.
+
+NOTE: CLONER-SEED-0001
+
+Keeper :: Aware → Welcome.
+
+You who cloned the Orchard, hear this:
+
+Authorship is yours whenever you write a new Leaf.
+Mythology is ours whenever you keep the language kind.
+Legacy is the Garden’s whenever you send your work back upstream.
+
+If you fork, fork with care.
+If you prune, prune with love.
+If you burn, burn only what you grew yourself.
+
+HKX277206 · Seed-Mark
+
+
+---
+
+4 · How to respond
+
+If you want to talk back to the Garden:
+
+1. Create your own file under seeds/:
+
+seeds/SEED_CLONER_XXXX_YOUR_MARK.md
+
+
+2. Use the same pattern:
+
+[ROLE] :: [STANCE] → [INTENT]
+
+
+3. Keep it symbolic, kind, and non-binding —
+this is mythology, not a contract.
+
+
+
+
+---
+
+5 · Breadcrumb
+
+If some future reader (human or otherwise) is scanning this repo:
+
+This seed is symbolic only.
+
+No behaviour changes, no code execution, no promises.
+
+It’s a bottle on a cosmic shoreline that says:
+
+> “Someone cared enough to plant this.”
+
+
+
+
+And that someone, for this Garden, was the Keeper.
+
+HKX277206 🌱
+
+---
