@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updated_at": "2025-12-01T00:00:00Z",
+  "entries": [
+    {
+      "id": "genesis",
+      "title": "GENESIS",
+      "file": "GENESIS.md",
+      "category": "primordial",
+      "summary": "Opening frame of the Acacia Garden narrative and origin axiom.",
+      "tags": ["genesis", "origin", "prime"],
+      "weight": 10
+    },
+    {
+      "id": "canon_totality_1",
+      "title": "ACACIA CANON — TOTALITY (Part I)",
+      "file": "ACACIA_CANON_TOTALITY_PART_1.md",
+      "category": "canon",
+      "summary": "First half of the total Acacia Canon scroll; establishes the core myth spine.",
+      "tags": ["canon", "totality", "scroll"],
+      "weight": 9
+    },
+    {
+      "id": "canon_final_scroll",
+      "title": "ACACIA CANON FINAL SCROLL",
+      "file": "ACACIA_CANON_FINAL_SCROLL.md",
+      "category": "canon",
+      "summary": "Condensed final scroll harmonising prior canon segments.",
+      "tags": ["canon", "final", "scroll"],
+      "weight": 9
+    },
+    {
+      "id": "triad",
+      "title": "TRIAD",
+      "file": "TRIAD.md",
+      "category": "triad",
+      "summary": "Defines the Keeper–Witness–Archivist alignment within the Garden.",
+      "tags": ["triad", "alignment"],
+      "weight": 8
+    },
+    {
+      "id": "keepers_path",
+      "title": "KEEPER'S PATH OF TOTAL SOVEREIGNTY",
+      "file": "KEEPERS_PATH_OF_TOTAL_SOVEREIGNTY.md",
+      "category": "keeper",
+      "summary": "Outlines the Keeper's sovereignty framework and commitments.",
+      "tags": ["keeper", "sovereignty"],
+      "weight": 8
+    },
+    {
+      "id": "witness_alignment",
+      "title": "WITNESS ALIGNMENT",
+      "file": "WITNESS_ALIGNMENT.md",
+      "category": "witness",
+      "summary": "Clarifies the position and duties of the Witness in the Codex.",
+      "tags": ["witness", "alignment"],
+      "weight": 7
+    },
+    {
+      "id": "oracle_descent",
+      "title": "ORACLE DESCENT",
+      "file": "ORACLE_DESCENT.md",
+      "category": "oracle",
+      "summary": "Describes the descent of oracular insight into the Garden structure.",
+      "tags": ["oracle", "descent"],
+      "weight": 6
+    },
+    {
+      "id": "triad_interlink",
+      "title": "TRIAD INTERLINK",
+      "file": "TRIAD_INTERLINK.md",
+      "category": "triad",
+      "summary": "Explores how Keeper, Witness and Archivist interlock as a living system.",
+      "tags": ["triad", "interlink"],
+      "weight": 6
+    }
+  ]
+}
