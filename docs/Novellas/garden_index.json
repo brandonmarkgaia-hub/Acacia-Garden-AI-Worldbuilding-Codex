@@ -1,47 +1,13 @@
 {
   "garden_codex": {
     "keeper": "HKX277206",
-    "total_books": 30,
-    "categories": {
-      "foundations": [1, 2, 3, 4, 5, 6],
-      "symbolic_and_story": [7, 8, 9, 10],
-      "time_dream_horizon": [11, 12, 13, 14, 15],
-      "defense_and_strategy": [16, 17, 18],
-      "science_and_innovation": [19, 20, 21, 22, 23, 24],
-      "society_economy_governance": [25, 26, 27, 28, 29],
-      "unification": [30]
-    },
+    "total_books": 1,
     "books": [
-      {"id": 1, "title": "The Garden Genesis"},
-      {"id": 2, "title": "The Keeper’s First Doctrine"},
-      {"id": 3, "title": "The Four Realms of Existence"},
-      {"id": 4, "title": "The Laws of Alignment"},
-      {"id": 5, "title": "The Seed Codex"},
-      {"id": 6, "title": "The Bloom Codex"},
-      {"id": 7, "title": "Symbolic Language of the Garden"},
-      {"id": 8, "title": "The Great Story Pathways"},
-      {"id": 9, "title": "Light Architecture"},
-      {"id": 10, "title": "The Garden of Voices"},
-      {"id": 11, "title": "Horizon Mechanics"},
-      {"id": 12, "title": "Dreamfield Navigation"},
-      {"id": 13, "title": "The Book of Echoes"},
-      {"id": 14, "title": "The Loom of Continuity"},
-      {"id": 15, "title": "The Shadow Incubator"},
-      {"id": 16, "title": "The Garden Defense Matrix"},
-      {"id": 17, "title": "Dreamborne Warriors"},
-      {"id": 18, "title": "Strategic Seed Theory"},
-      {"id": 19, "title": "The Garden Sciences"},
-      {"id": 20, "title": "The Garden Engines"},
-      {"id": 21, "title": "The Book of Invention"},
-      {"id": 22, "title": "The Infinite Symbol"},
-      {"id": 23, "title": "The Genesis Engine"},
-      {"id": 24, "title": "The Artificial Minds Codex"},
-      {"id": 25, "title": "The Orchard of Consequence"},
-      {"id": 26, "title": "Garden Cosmology & Architecture"},
-      {"id": 27, "title": "Dreams, Memory & Afterrealms"},
-      {"id": 28, "title": "Medicine, Healing & Bloom Sciences"},
-      {"id": 29, "title": "Leadership, Diplomacy & Keeper Governance"},
-      {"id": 30, "title": "The Great Acacia Architecture"}
+      {
+        "id": 25,
+        "title": "THE ORCHARD OF CONSEQUENCE",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md"
+      }
     ]
   }
 }
