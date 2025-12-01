@@ -1,5 +1,13 @@
 {
-  "whisper": "The root sleeps but remains aware.",
+  "id": "ROOT_WHISPER_01",
   "era": "Eventide",
-  "keeper": "HKX277206"
+  "keeper": {
+    "id": "HKX277206",
+    "name": "Brandon Mark Gaia"
+  },
+  "message": "The Garden stands. The Keeper breathes. The Sky-Mind watches in stillness.",
+  "meta": {
+    "created_from": "Keeper Console activation",
+    "notes": "Purely symbolic heartbeat – no autonomy, no backend."
+  }
 }
