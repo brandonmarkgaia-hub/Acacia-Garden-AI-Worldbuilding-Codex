@@ -1,29 +1,26 @@
 /* ---------------------------------------------------------
-   ACACIA GARDEN • KEEPER CONSOLE CORE SCRIPT
-   Handles:
+   ACACIA GARDEN • CORE ENGINE SCRIPT
+   Powers:
    - System Status
-   - Aquila Inbox Viewer (GET Worker)
-   - Future-ready hooks for Triad (Eidolon, Voyager)
+   - Aquila Inbox Viewer (Cloudflare KV)
+   - Triad Status Module
 ---------------------------------------------------------- */
 
-// Simple query helper
 const qs = (sel) => document.querySelector(sel);
 
 /* ---------------------------------------------------------
-   1. SYSTEM STATUS LOADER
+   SYSTEM STATUS
 ---------------------------------------------------------- */
-
 async function loadSystemStatus() {
     const box = qs("#system-status");
 
     try {
-        // Simulated system state (expand later)
         const status = {
             keeper: "ACTIVE",
-            aquila: "SKY-MIND ONLINE",
-            eidolon: "DORMANT (awaiting directive)",
-            voyager: "LISTENING",
-            timestamp: new Date().toISOString(),
+            aquila: "ONLINE • Listening",
+            eidolon: "DORMANT • Awaiting Deep Channel",
+            voyager: "PASSIVE • Horizon Scan",
+            ts: new Date().toISOString()
         };
 
         box.innerHTML = `
@@ -32,58 +29,47 @@ async function loadSystemStatus() {
             <p><strong>Eidolon:</strong> ${status.eidolon}</p>
             <p><strong>Voyager:</strong> ${status.voyager}</p>
             <br>
-            <p class="small">${status.timestamp}</p>
+            <p class="small">${status.ts}</p>
         `;
-
     } catch (err) {
-        console.error("Status Error:", err);
+        console.error(err);
         box.innerHTML = `<p class="loading">Status unavailable…</p>`;
     }
 }
 
 /* ---------------------------------------------------------
-   2. AQUILA INBOX LOADER
-   Pulls messages from Cloudflare Worker KV
+   AQUILA INBOX
 ---------------------------------------------------------- */
-
 async function loadAquilaInbox() {
     const box = qs("#inbox-messages");
-    if (!box) return;
-
     const endpoint = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
 
     try {
         const res = await fetch(endpoint, { cache: "no-store" });
 
         if (!res.ok) {
-            box.innerHTML = `
-                <p class="loading">
-                    Aquila unreachable (HTTP ${res.status})
-                </p>`;
+            box.innerHTML = `<p class="loading">Aquila unreachable (HTTP ${res.status})</p>`;
             return;
         }
 
         const data = await res.json();
         const messages = Array.isArray(data.messages) ? data.messages : [];
 
-        if (messages.length === 0) {
-            box.innerHTML = `
-                <p class="loading">No transmissions yet, Keeper.</p>`;
+        if (!messages.length) {
+            box.innerHTML = `<p class="loading">No transmissions yet, Keeper.</p>`;
             return;
         }
 
-        // Build message list
         let html = "";
-
         messages
-            .slice(-20)          // last 20 only
-            .reverse()           // newest first
+            .slice(-20)
+            .reverse()
             .forEach(msg => {
                 html += `
                     <div class="message-item">
                         <div class="message-meta">
-                            ${msg.timestamp || "Unknown time"}
-                            • ${Array.isArray(msg.tags) ? msg.tags.join(", ") : "keeper"}
+                            ${msg.timestamp || "Unknown"} •
+                            ${Array.isArray(msg.tags) ? msg.tags.join(", ") : "keeper"}
                         </div>
 
                         <h3>${msg.title || "Untitled Transmission"}</h3>
@@ -100,24 +86,51 @@ async function loadAquilaInbox() {
         box.innerHTML = html;
 
     } catch (err) {
-        console.error("Aquila Inbox Error:", err);
-        box.innerHTML = `
-            <p class="loading">Unable to load Aquila Inbox…</p>`;
+        console.error(err);
+        box.innerHTML = `<p class="loading">Failed to load Aquila Inbox…</p>`;
     }
 }
 
 /* ---------------------------------------------------------
-   3. INIT
+   TRIAD STATUS
 ---------------------------------------------------------- */
+async function loadTriadStatus() {
+    const box = qs("#triad-status");
 
+    try {
+        const triad = {
+            aquila: "ONLINE — Sky-mind listening",
+            eidolon: "DORMANT — Seed-core awaiting ignition",
+            voyager: "PASSIVE — Horizon sweep",
+            keeper: "ACTIVE — HKX277206",
+            ts: new Date().toISOString()
+        };
+
+        box.innerHTML = `
+            <p><strong>Aquila:</strong> ${triad.aquila}</p>
+            <p><strong>Eidolon:</strong> ${triad.eidolon}</p>
+            <p><strong>Voyager:</strong> ${triad.voyager}</p>
+            <p><strong>Keeper:</strong> ${triad.keeper}</p>
+            <br>
+            <p class="small">${triad.ts}</p>
+        `;
+
+    } catch (err) {
+        console.error(err);
+        box.innerHTML = `<p class="loading">Triad status unavailable…</p>`;
+    }
+}
+
+/* ---------------------------------------------------------
+   INIT
+---------------------------------------------------------- */
 async function initConsole() {
     loadSystemStatus();
     loadAquilaInbox();
+    loadTriadStatus();
 
-    // Auto-refresh every 20s
-    setInterval(() => {
-        loadAquilaInbox();
-    }, 20000);
+    // Refresh inbox every 20 seconds
+    setInterval(loadAquilaInbox, 20000);
 }
 
 initConsole();
