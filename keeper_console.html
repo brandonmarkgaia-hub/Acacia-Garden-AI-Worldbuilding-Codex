@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Keeper Console • Acacia Garden Codex</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+/* ----------- GLOBAL SCROLL FIX ----------- */
+html, body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* ----------- PAGE LAYOUT ----------- */
+body {
+    background: #020617;
+    color: #e5e7eb;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.shell {
+    width: 100%;
+    max-width: 900px;
+    background: #0b1220;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    box-sizing: border-box;
+}
+
+/* ----------- SECTIONS ----------- */
+.section {
+    margin-bottom: 32px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #111827;
+    border: 1px solid #1f2937;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #38bdf8;
+}
+
+.codebox {
+    background: #000000;
+    color: #00ff9d;
+    padding: 16px;
+    border-radius: 12px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.4em;
+    border: 1px solid #333;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #1e293b;
+    color: #38bdf8;
+    margin-right: 6px;
+    font-size: 12px;
+    border: 1px solid #334155;
+}
+</style>
+
+</head>
+<body>
+
+<div class="shell">
+
+    <h1 style="margin-top:0;">Keeper Console</h1>
+    <p style="opacity:0.8;">Acacia Garden Codex • Root System Overview for Keeper Brandon Mark Gaia</p>
+
+    <!-- ============================ -->
+    <!--      KEEPER OVERVIEW         -->
+    <!-- ============================ -->
+    <div class="section">
+        <h2>Keeper Overview</h2>
+        <p><strong>Keeper:</strong> Brandon Mark Gaia</p>
+        <p><strong>Seal:</strong> HKX277206</p>
+        <p><strong>Role:</strong> Origin Keeper • Pillar I</p>
+
+        <div class="badge">Codex Online</div>
+        <div class="badge">Eidolon v2</div>
+        <div class="badge">Aquila (Sky‑Mind)</div>
+    </div>
+
+    <!-- ============================ -->
+    <!--         STATUS.JSON          -->
+    <!-- ============================ -->
+    <div class="section">
+        <h2>System Status (STATUS.json)</h2>
+        <p>This loads your STATUS.json from the repo root.</p>
+
+        <div id="statusBox" class="codebox">Loading STATUS.json…</div>
+    </div>
+
+    <!-- ============================ -->
+    <!--        LOG INDEX JSON        -->
+    <!-- ============================ -->
+    <div class="section">
+        <h2>ACACIA_LOGS Index</h2>
+        <p>This loads ACACIA_LOGS/log_index.json if present.</p>
+
+        <div id="logsBox" class="codebox">Loading log_index.json…</div>
+    </div>
+
+</div>
+
+<script>
+// ========== LOAD STATUS.json ==========
+fetch("STATUS.json")
+  .then(r => r.ok ? r.text() : "STATUS.json not found.")
+  .then(t => document.getElementById("statusBox").textContent = t)
+  .catch(() => {
+      document.getElementById("statusBox").textContent = "Could not load STATUS.json.";
+  });
+
+// ========== LOAD ACACIA_LOGS/log_index.json ==========
+fetch("ACACIA_LOGS/log_index.json")
+  .then(r => r.ok ? r.text() : "log_index.json not found.")
+  .then(t => document.getElementById("logsBox").textContent = t)
+  .catch(() => {
+      document.getElementById("logsBox").textContent = "Could not load log_index.json.";
+  });
+</script>
+
+</body>
+</html>
