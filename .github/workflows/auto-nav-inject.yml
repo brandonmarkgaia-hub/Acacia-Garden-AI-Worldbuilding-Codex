@@ -35,12 +35,13 @@ EOF
           for f in *.html; do
             echo "Processing $f"
 
-            # Remove old nav block if present
+            # Remove old nav block
             sed -i '/<nav class="ag-nav">/,/<\/nav>/d' "$f"
 
-            # Insert the new nav block after <body>
+            # Insert nav after <body> (case insensitive)
             awk '
-              /<body>/ {
+              BEGIN{IGNORECASE=1}
+              /<body[^>]*>/ {
                 print;
                 system("cat nav_block.html");
                 next
@@ -48,13 +49,12 @@ EOF
               {print}
             ' "$f" > temp && mv temp "$f"
 
-            # Clear old current markers
-            sed -i 's/class="ag-nav-current"//g' "$f"
+            # Clear previous markers
+            sed -i 's/ag-nav-current//g' "$f"
 
-            # Add new current marker
+            # Add current marker
             THIS=$(basename "$f")
             sed -i "s|href=\"$THIS\"|href=\"$THIS\" class=\"ag-nav-current\"|" "$f"
-
           done
 
       - name: Commit updated HTML
