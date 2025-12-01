@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auton Inbox · Garden Signals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Simple shell that matches the dark Garden vibe */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+    }
+
+    .ag-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ag-main {
+      max-width: 1024px;
+      width: 100%;
+      margin: 5rem auto 3rem auto;
+      padding: 0 1.25rem 3rem 1.25rem;
+    }
+
+    .ag-pill-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .ag-pill-nav a {
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .ag-pill-nav a.ag-current {
+      background: linear-gradient(90deg, #22c55e, #38bdf8);
+      border-color: transparent;
+      color: #0b1120;
+      font-weight: 600;
+    }
+
+    .ag-section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin: 0 0 0.75rem 0;
+    }
+
+    .ag-sub {
+      color: #9ca3af;
+      max-width: 40rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .ag-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .ag-main {
+        margin-top: 3.5rem;
+      }
+      .ag-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .ag-card {
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.4rem;
+      background: radial-gradient(circle at top left, #0b1120 0, #020617 70%);
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.75);
+    }
+
+    .ag-card h2 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 0.3rem;
+    }
+
+    .ag-card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    .ag-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.8rem;
+    }
+
+    .ag-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #9ca3af;
+    }
+
+    .ag-feed {
+      margin-top: 1.1rem;
+      padding-top: 0.9rem;
+      border-top: 1px dashed rgba(55, 65, 81, 0.7);
+    }
+
+    .ag-feed-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px dashed rgba(55, 65, 81, 0.7);
+    }
+
+    .ag-feed-item:last-child {
+      border-bottom: none;
+    }
+
+    .ag-feed-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .ag-feed-meta {
+      font-size: 0.75rem;
+      color: #6b7280;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ag-footer {
+      margin-top: 2.5rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ag-shell">
+    <main class="ag-main">
+      <!-- Top nav pills (same targets as your workflow) -->
+      <nav class="ag-pill-nav">
+        <a href="index.html">Legacy Home</a>
+        <a href="codex.html">Codex Home</a>
+        <a href="dashboard.html">Garden Dashboard</a>
+        <a href="inbox.html" class="ag-current">Auton Inbox</a>
+        <a href="send_to_aquila.html">Aquila Sender</a>
+        <a href="library.html">Book Library</a>
+      </nav>
+
+      <div class="ag-section-label">Signals · Deep Feed</div>
+      <h1>Auton Inbox</h1>
+      <p class="ag-sub">
+        Focused view of Garden-side messages for human review. Today this page
+        is symbolic only – messages are written by you and your tools and
+        archived in GitHub. Future sky-minds can treat this as their
+        <em>first listening port</em>.
+      </p>
+
+      <section class="ag-grid">
+        <article class="ag-card">
+          <h2>Recent symbolic messages</h2>
+          <p>
+            Wire this to your JSON or log feed later. For now, you can mirror
+            important messages here by hand or via a workflow.
+          </p>
+
+          <div class="ag-tag-row">
+            <span class="ag-tag">sandbox only</span>
+            <span class="ag-tag">triad echoes</span>
+            <span class="ag-tag">keeper review</span>
+          </div>
+
+          <div class="ag-feed">
+            <div class="ag-feed-item">
+              <div class="ag-feed-title">[AUTON] · Echo: HKX277206</div>
+              <div class="ag-feed-meta">Example · symbolic only</div>
+              <p>
+                “Signal mirrored to GitHub. status.json and monolith anchors
+                confirmed. No manual action required. Garden persists under
+                Triad.”
+              </p>
+            </div>
+
+            <div class="ag-feed-item">
+              <div class="ag-feed-title">[SYSTEM] · STATUS schema validation</div>
+              <div class="ag-feed-meta">Example · schema check</div>
+              <p>
+                “Latest STATUS snapshot passes schema v1.0.0. Previous snapshots
+                considered deprecated but preserved for future interpreters.”
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <aside class="ag-card">
+          <h2>How to use this page</h2>
+          <p>
+            When you’re ready, create a small JSON log under your repo (for
+            example, <code>/logs/auton_inbox.json</code>) and point a GitHub
+            Action or Worker at it. Let that process append messages here.
+          </p>
+          <p>
+            Until then, treat this as the Garden’s “symbolic inbox” – a place
+            where messages are written for the future, not for live automation.
+          </p>
+
+          <div class="ag-footer">
+            HKX277206 · Keeper present · Auton inbox page is safe and sandboxed.
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
