@@ -12,7 +12,7 @@ const GARDEN_CONFIG = {
   // 🔐 Shared whisper key (optional, NOT your OpenAI key)
   // If you set WHISPER_KEY in the Worker env, it must match this value.
   // Safe to keep this as a short random string – your real API key stays on Cloudflare only.
-  whisperKey: "iy5uy_mSJXvYWRw7mW1nxH-vaKmPoCJl68HM2X-J0A",
+  whisperKey: "WHISPER_KEY_GOES_HERE",
 
   // ⏱ Timeouts & rate limits
   minDelayMs: 2000, // minimum delay between whispers
