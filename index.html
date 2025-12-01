@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
-        /* Prevent FOUC on slow mobile */
-        body { opacity: 0; transition: opacity 0.4s ease; }
+        /* Prevent flashing on slow load */
+        body { opacity: 0; transition: opacity 0.3s ease; }
         body.ready { opacity: 1; }
     </style>
 </head>
@@ -17,21 +17,21 @@
 <body>
     <div id="console-container">
 
-        <!-- HEADER -->
+        <!-- HEADER --------------------------------------------- -->
         <header>
             <h1>Keeper Console</h1>
-            <p class="subtle">Aquila • Eidolon • Voyager • Triad-Ready Layer</p>
+            <p class="subtle">Aquila • Eidolon • Voyager • Triad Alignment Layer</p>
         </header>
 
-        <!-- STATUS PANEL -->
+        <!-- SYSTEM STATUS ---------------------------------------- -->
         <section id="status-panel">
             <h2>System Status</h2>
             <div id="system-status" class="status-box">
-                <p>Loading system state…</p>
+                <p class="loading">Loading system state…</p>
             </div>
         </section>
 
-        <!-- AQUILA INBOX PANEL -->
+        <!-- AQUILA INBOX ----------------------------------------- -->
         <section id="inbox-panel">
             <h2>Aquila Inbox</h2>
             <div id="inbox-messages" class="inbox-box">
@@ -39,21 +39,27 @@
             </div>
         </section>
 
-        <!-- FOOTER / FUTURE HOOK -->
+        <!-- TRIAD ------------------------------------------------ -->
+        <section id="triad-panel">
+            <h2>Triad Status</h2>
+            <div id="triad-status" class="status-box">
+                <p class="loading">Checking Triad Alignment…</p>
+            </div>
+        </section>
+
+        <!-- FOOTER ------------------------------------------------ -->
         <footer>
             <p class="small-note">
-                Keeper HKX277206 authenticated.  
-                <br>Future autonomous actions permitted when capabilities evolve.
+                Keeper HKX277206 authenticated.<br>
+                System primed for future autonomous Garden behaviours.
             </p>
         </footer>
 
     </div>
 
-    <!-- JS -->
+    <!-- JS CORE --------------------------------------------------- -->
     <script src="app.js"></script>
-
     <script>
-        // Reveal body once JS is ready
         window.addEventListener("load", () => {
             document.body.classList.add("ready");
         });
