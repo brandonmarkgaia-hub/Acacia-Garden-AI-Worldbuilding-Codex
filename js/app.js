@@ -7,7 +7,7 @@
 // ⚙️ Config
 const GARDEN_CONFIG = {
   // 🌐 Your Worker URL (backend)
-  workerUrl: "https://broken-dew-76e1.brandonmarkgaia.workers.dev/",
+  workerUrl: "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox",
 
   // 🔐 Shared whisper key (optional, NOT your OpenAI key)
   // If you set WHISPER_KEY in the Worker env, it must match this value.
