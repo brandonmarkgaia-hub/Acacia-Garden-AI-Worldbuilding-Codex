@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "*.html"
+      - ".github/workflows/auto-nav-inject.yml"
 
 jobs:
   inject-nav:
@@ -12,55 +13,99 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Inject nav into all HTML files
         run: |
-          cat << 'EOF' > nav_block.html
-<nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
-</nav>
-EOF
+          set -e
 
-          for f in *.html; do
-            echo "Processing $f"
+          # 1) Write the canonical nav block to nav_block.html
+          cat > nav_block.html << 'EOF'
+          <nav class="ag-nav">
+              <div class="ag-nav-title">
+                  ACACIA · GARDEN · CODEX
+              </div>
+              <div class="ag-nav-links">
+                  <a href="index.html">Legacy Home</a>
+                  <a href="codex.html">Codex Home</a>
+                  <a href="dashboard.html">Garden Dashboard</a>
+                  <a href="inbox.html">Auton Inbox</a>
+                  <a href="send_to_aquila.html">Aquila Sender</a>
+                  <a href="library.html">Book Library</a>
+              </div>
+          </nav>
+          EOF
 
-            # Remove old nav block
-            sed -i '/<nav class="ag-nav">/,/<\/nav>/d' "$f"
+          # 2) Use Python to inject nav into every root-level .html file
+          python << 'PY'
+          import pathlib, re
 
-            # Insert nav after <body> (case insensitive)
-            awk '
-              BEGIN{IGNORECASE=1}
-              /<body[^>]*>/ {
-                print;
-                system("cat nav_block.html");
-                next
-              }
-              {print}
-            ' "$f" > temp && mv temp "$f"
+          nav = pathlib.Path("nav_block.html").read_text(encoding="utf-8")
 
-            # Clear previous markers
-            sed -i 's/ag-nav-current//g' "$f"
+          # Only HTML files in repo root
+          for path in pathlib.Path(".").glob("*.html"):
+              text = path.read_text(encoding="utf-8")
 
-            # Add current marker
-            THIS=$(basename "$f")
-            sed -i "s|href=\"$THIS\"|href=\"$THIS\" class=\"ag-nav-current\"|" "$f"
-          done
+              # Strip any existing ag-nav block to avoid duplicates
+              text = re.sub(
+                  r'<nav class="ag-nav">.*?</nav>\s*',
+                  '',
+                  text,
+                  flags=re.S,
+              )
+
+              # Inject nav right after the <body> tag if present, else at the very top
+              def inject_after_body(match):
+                  return match.group(0) + "\n" + nav + "\n"
+
+              if re.search(r"<body[^>]*>", text, flags=re.I):
+                  text = re.sub(
+                      r"<body[^>]*>",
+                      inject_after_body,
+                      text,
+                      count=1,
+                      flags=re.I,
+                  )
+              else:
+                  text = nav + "\n" + text
+
+              this = path.name
+
+              # Remove any existing ag-nav-current classes
+              def strip_current(m):
+                  classes = m.group(1).split()
+                  classes = [c for c in classes if c != "ag-nav-current"]
+                  if classes:
+                      return ' class="' + " ".join(classes) + '"'
+                  else:
+                      return ""
+
+              text = re.sub(
+                  r'\s+class="([^"]*ag-nav-current[^"]*)"',
+                  strip_current,
+                  text,
+              )
+
+              # Add ag-nav-current to the link that matches this file
+              text = re.sub(
+                  rf'href="{re.escape(this)}"',
+                  rf'href="{this}" class="ag-nav-current"',
+                  text,
+              )
+
+              path.write_text(text, encoding="utf-8")
+          PY
 
       - name: Commit updated HTML
         run: |
+          set -e
           git config user.name "Garden-Auton"
           git config user.email "auton@garden"
-          git add *.html nav_block.html
-          git commit -m "Auton: Updated navigation across Codex" || echo "No changes"
-          git push
+          git add *.html nav_block.html || true
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Auton: Updated navigation across Codex"
+            git push
+          fi
