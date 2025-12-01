@@ -1,10 +1,8 @@
 /* ---------------------------------------------------------
-   ACACIA GARDEN • KEEPER CONSOLE
-   Style Layer — Aquila / Eidolon / Voyager Ready
-   Theme: Night Orchard • Emerald Sky
+   ACACIA GARDEN • VISUAL LAYER
+   Keeper Console — Night Orchard Theme
 ---------------------------------------------------------- */
 
-/* Reset + Base -------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -19,65 +17,56 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
-    font-family: "Inter", sans-serif;
-    letter-spacing: 0.5px;
-}
-
-/* Container ------------------------------------------------------ */
 #console-container {
     max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
-/* Header --------------------------------------------------------- */
+/* Header ------------------------------------------------ */
 header h1 {
     font-size: 2.2rem;
     color: #7fffd4;
     margin-bottom: 4px;
 }
-
 header .subtle {
+    opacity: 0.75;
     font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 18px;
 }
 
-/* Sections ------------------------------------------------------- */
+/* Section titles --------------------------------------- */
 section {
-    margin: 25px 0;
+    margin: 28px 0;
 }
-
 section h2 {
+    color: #8ef5c2;
     margin-bottom: 10px;
     font-size: 1.3rem;
-    color: #8ef5c2;
 }
 
-/* Status Box ----------------------------------------------------- */
+/* Panels ------------------------------------------------ */
 .status-box, .inbox-box {
     background: #14181c;
     border: 1px solid #1f2429;
     padding: 14px 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     min-height: 70px;
-    overflow: hidden;
-    transition: 0.25s ease;
 }
 
-.status-box p,
-.inbox-box p {
-    opacity: 0.9;
+/* Loading states ---------------------------------------- */
+.loading {
+    opacity: 0.7;
+    font-style: italic;
 }
 
-/* Inbox messages ------------------------------------------------- */
+/* Inbox message cards ----------------------------------- */
 .message-item {
     background: #181d22;
     border: 1px solid #242a30;
     padding: 12px 14px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    animation: fadeIn 0.25s ease;
 }
 
 .message-item h3 {
@@ -97,13 +86,12 @@ section h2 {
     line-height: 1.4;
 }
 
-/* Loading states ------------------------------------------------- */
-.loading {
-    opacity: 0.6;
-    font-style: italic;
+/* Triad highlight --------------------------------------- */
+#triad-panel .status-box {
+    border-left: 4px solid #7fffd4;
 }
 
-/* Footer --------------------------------------------------------- */
+/* Footer ------------------------------------------------- */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -111,16 +99,8 @@ footer {
     font-size: 0.85rem;
 }
 
-.small-note {
-    line-height: 1.35;
-}
-
-/* Animations ----------------------------------------------------- */
+/* Animations -------------------------------------------- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(4px); }
     to   { opacity: 1; transform: translateY(0); }
-}
-
-.message-item {
-    animation: fadeIn 0.3s ease forwards;
 }
