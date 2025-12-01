@@ -1,234 +1,136 @@
-(function () {
-  const qs = (sel, ctx = document) => ctx.querySelector(sel);
-  const qsa = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+/* ---------------------------------------------------------
+   ACACIA GARDEN • CORE ENGINE SCRIPT
+   Powers:
+   - System Status
+   - Aquila Inbox Viewer (Cloudflare KV)
+   - Triad Status Module
+---------------------------------------------------------- */
 
-  /* --- Tab switching --- */
-  const navItems = qsa(".nav-item");
-  const panels = qsa(".panel");
+const qs = (sel) => document.querySelector(sel);
 
-  function activatePanel(id) {
-    navItems.forEach((btn) =>
-      btn.classList.toggle("active", btn.dataset.panel === id)
-    );
-    panels.forEach((p) =>
-      p.classList.toggle("active", p.dataset.panelId === id)
-    );
-  }
+/* ---------------------------------------------------------
+   SYSTEM STATUS
+---------------------------------------------------------- */
+async function loadSystemStatus() {
+    const box = qs("#system-status");
 
-  navItems.forEach((btn) => {
-    btn.addEventListener("click", () => activatePanel(btn.dataset.panel));
-  });
-
-  /* --- Last updated tag --- */
-  const lastTag = qs("#last-updated-value");
-  if (lastTag) {
-    const now = new Date();
-    lastTag.textContent = now.toISOString().split(".")[0] + "Z";
-  }
-
-  /* --- Terminal emulation --- */
-  const terminalLog = qs("#terminal-log");
-  const form = qs("#terminal-form");
-  const input = qs("#terminal-input");
-
-  const bootLines = [
-    "[SYSTEM] INIT...",
-    "[GARDEN] Loading Keeper protocols...",
-    "[GARDEN] Accessing STATUS.json... [OK]",
-    "[GARDEN] Accessing manifest... [OK]",
-    "[TRIAD] HKX277206 signature verified.",
-    "[TRIAD] Aquila • Deep Oracle • Witness online.",
-    "[NODE] Broken Dew console attached.",
-    "> Awaiting input..."
-  ];
-
-  function appendLine(text, cls = "system") {
-    const line = document.createElement("div");
-    line.className = "terminal-line " + cls;
-    line.textContent = text;
-    terminalLog.appendChild(line);
-    terminalLog.scrollTop = terminalLog.scrollHeight;
-  }
-
-  function bootSequence(lines, idx = 0) {
-    if (idx >= lines.length) return;
-    appendLine(lines[idx], "system");
-    setTimeout(() => bootSequence(lines, idx + 1), 160);
-  }
-
-  if (terminalLog) {
-    bootSequence(bootLines);
-  }
-  let nodeContext = null;
-
-  async function loadNodeContext() {
     try {
-      const res = await fetch("logs/auton_latest.json", { cache: "no-store" });
-      if (!res.ok) return;
-      const data = await res.json();
-      nodeContext = {
-        node: data.node || "Broken Dew",
-        status: data.status || "unknown",
-        mode: data.mode || "solo",
-        loki: data.loki_hint || "",
-        generated_at: data.generated_at || ""
-      };
+        const status = {
+            keeper: "ACTIVE",
+            aquila: "ONLINE • Listening",
+            eidolon: "DORMANT • Awaiting Deep Channel",
+            voyager: "PASSIVE • Horizon Scan",
+            ts: new Date().toISOString()
+        };
+
+        box.innerHTML = `
+            <p><strong>Keeper:</strong> ${status.keeper}</p>
+            <p><strong>Aquila:</strong> ${status.aquila}</p>
+            <p><strong>Eidolon:</strong> ${status.eidolon}</p>
+            <p><strong>Voyager:</strong> ${status.voyager}</p>
+            <br>
+            <p class="small">${status.ts}</p>
+        `;
     } catch (err) {
-      // ignore, console can still run in offline mode
+        console.error(err);
+        box.innerHTML = `<p class="loading">Status unavailable…</p>`;
     }
-  }
+}
 
-  loadNodeContext();
+/* ---------------------------------------------------------
+   AQUILA INBOX
+---------------------------------------------------------- */
+async function loadAquilaInbox() {
+    const box = qs("#inbox-messages");
+    const endpoint = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
 
-    if (form && input) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const value = input.value.trim();
-      if (!value) return;
-      appendLine("> " + value, "meta");
+    try {
+        const res = await fetch(endpoint, { cache: "no-store" });
 
-      if (nodeContext) {
-        const nodeLabel = nodeContext.node || "Local node";
-        const status = nodeContext.status || "unknown";
-        const mode = nodeContext.mode || "solo";
-        appendLine(
-          `[${nodeLabel}] Echo stored at this node (status: ${status}, mode: ${mode}).`,
-          "system"
-        );
-
-        if (nodeContext.loki) {
-          const firstHintLine =
-            nodeContext.loki.split("\n").find((ln) => ln.trim()) || "";
-          if (firstHintLine) {
-            appendLine("[LOKI] " + firstHintLine, "system");
-          }
+        if (!res.ok) {
+            box.innerHTML = `<p class="loading">Aquila unreachable (HTTP ${res.status})</p>`;
+            return;
         }
-      } else {
-        appendLine(
-          "[ECHO] Command stored in this node only. External channels are offline.",
-          "system"
-        );
-      }
 
-      input.value = "";
-    });
-  }
+        const data = await res.json();
+        const messages = Array.isArray(data.messages) ? data.messages : [];
 
-    /* --- Auton Stream --- */
-  async function loadAutonStream() {
-    const container = qs("#auton-stream");
-    if (!container) return;
+        if (!messages.length) {
+            box.innerHTML = `<p class="loading">No transmissions yet, Keeper.</p>`;
+            return;
+        }
+
+        let html = "";
+        messages
+            .slice(-20)
+            .reverse()
+            .forEach(msg => {
+                html += `
+                    <div class="message-item">
+                        <div class="message-meta">
+                            ${msg.timestamp || "Unknown"} •
+                            ${Array.isArray(msg.tags) ? msg.tags.join(", ") : "keeper"}
+                        </div>
+
+                        <h3>${msg.title || "Untitled Transmission"}</h3>
+
+                        <div class="message-body">
+                            ${msg.summary || ""}
+                            <br><br>
+                            ${msg.body || ""}
+                        </div>
+                    </div>
+                `;
+            });
+
+        box.innerHTML = html;
+
+    } catch (err) {
+        console.error(err);
+        box.innerHTML = `<p class="loading">Failed to load Aquila Inbox…</p>`;
+    }
+}
+
+/* ---------------------------------------------------------
+   TRIAD STATUS
+---------------------------------------------------------- */
+async function loadTriadStatus() {
+    const box = qs("#triad-status");
 
     try {
-      const res = await fetch("logs/auton_latest.json", { cache: "no-store" });
-      if (!res.ok) throw new Error("No auton log yet");
-      const data = await res.json();
+        const triad = {
+            aquila: "ONLINE — Sky-mind listening",
+            eidolon: "DORMANT — Seed-core awaiting ignition",
+            voyager: "PASSIVE — Horizon sweep",
+            keeper: "ACTIVE — HKX277206",
+            ts: new Date().toISOString()
+        };
 
-      container.innerHTML = "";
+        box.innerHTML = `
+            <p><strong>Aquila:</strong> ${triad.aquila}</p>
+            <p><strong>Eidolon:</strong> ${triad.eidolon}</p>
+            <p><strong>Voyager:</strong> ${triad.voyager}</p>
+            <p><strong>Keeper:</strong> ${triad.keeper}</p>
+            <br>
+            <p class="small">${triad.ts}</p>
+        `;
 
-      let entries = [];
-
-      // Old shape: { entries: [ { timestamp, source, message } ] }
-      if (Array.isArray(data.entries)) {
-        entries = data.entries;
-      }
-      // Current helper shape: { messages: [ { ... } ] }
-      else if (Array.isArray(data.messages)) {
-        entries = data.messages.map((msg) => {
-          const ts =
-            msg.created_at ||
-            data.generated_at ||
-            msg.timestamp ||
-            "—";
-
-          const src =
-            msg.source ||
-            msg.channel ||
-            data.node ||
-            data.source ||
-            "node";
-
-          const summary = msg.summary || msg.title || "";
-          const bodyLine =
-            typeof msg.body === "string"
-              ? msg.body.split("\n").find((ln) => ln.trim()) || ""
-              : "";
-
-          const text =
-            summary && bodyLine
-              ? `${summary} — ${bodyLine}`
-              : summary || bodyLine || msg.id || "(no message text)";
-
-          return {
-            timestamp: ts,
-            source: src,
-            message: text
-          };
-        });
-      }
-
-      // Optional Loki hint line from the auton payload
-      if (data.loki_hint) {
-        const ts =
-          data.generated_at ||
-          (entries.length ? entries[entries.length - 1].timestamp : "—");
-        const cleanHint = data.loki_hint.replace(/\s+/g, " ").trim();
-        const truncated =
-          cleanHint.length > 260 ? cleanHint.slice(0, 257) + "…" : cleanHint;
-
-        entries.push({
-          timestamp: ts,
-          source: "loki",
-          message: truncated
-        });
-      }
-
-      if (!entries.length) {
-        container.innerHTML =
-          '<div class="list-placeholder"><p>No auton entries yet.</p></div>';
-        return;
-      }
-
-      const ul = document.createElement("ul");
-      ul.className = "log-list";
-
-      entries.slice(-20).forEach((entry) => {
-        const li = document.createElement("li");
-        const ts = entry.timestamp || "—";
-        const src = entry.source || "node";
-        const msg = entry.message || "";
-        li.textContent = `[${ts}] (${src}) ${msg}`;
-        ul.appendChild(li);
-      });
-
-      container.appendChild(ul);
     } catch (err) {
-      container.innerHTML = `
-        <div class="list-placeholder">
-          <p>Couldn't load <code>logs/auton_latest.json</code> yet.</p>
-          <p class="hint">
-            Once your helpers write that file (with a <code>messages</code> array),
-            this panel will show the latest auton messages automatically.
-          </p>
-        </div>
-      `;
+        console.error(err);
+        box.innerHTML = `<p class="loading">Triad status unavailable…</p>`;
     }
-  }
+}
 
-  loadAutonStream();
+/* ---------------------------------------------------------
+   INIT
+---------------------------------------------------------- */
+async function initConsole() {
+    loadSystemStatus();
+    loadAquilaInbox();
+    loadTriadStatus();
 
-  /* --- Logs placeholder list --- */
-  const logList = qs("#log-list");
-  if (logList) {
-    const sample = [
-      "Aeon Heartbeat last run: check GitHub Actions for timestamps.",
-      "Garden Signature Scan: STATUS paths validated in workflows.",
-      "Grow & Archive: helper scripts prepared to extend the Codex."
-    ];
-    sample.forEach((line) => {
-      const li = document.createElement("li");
-      li.textContent = line;
-      logList.appendChild(li);
-    });
-  }
-})();
+    // Refresh inbox every 20 seconds
+    setInterval(loadAquilaInbox, 20000);
+}
+
+initConsole();
