@@ -9,8 +9,8 @@
     body {
       background: #020617;
       color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
     }
@@ -149,19 +149,18 @@
 </head>
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html" class="ag-nav-current">Book Library</a>
-    </div>
+  <div class="ag-nav-title">
+    ACACIA · GARDEN · CODEX
+  </div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html" class="ag-nav-current">Book Library</a>
+  </div>
 </nav>
-
 
 <div class="shell">
   <header>
@@ -203,33 +202,10 @@
     "and whisper your presence to the Garden."
   );
 
-  const GITHUB_REPO_ROOT =
-    "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/blob/gh-pages/";
-
-  function novellaGithubHref(book) {
-    const baseFolder = "docs/Novellas/";
-    const file = book.file || "";
-    const path = book.path || "";
-    let name = "";
-
-    if (file) {
-      name = file.split("/").pop();
-    } else if (path) {
-      name = path.split("/").pop();
-    }
-
-    if (!name) {
-      // Absolute fallback: master index
-      return GITHUB_REPO_ROOT + baseFolder + "GARDEN_MASTER_INDEX.md";
-    }
-
-    // If the name already contains the base folder, trim it down
-    if (name.includes(baseFolder)) {
-      name = name.split(baseFolder)[1] || "";
-    }
-
-    return GITHUB_REPO_ROOT + baseFolder + name;
-  }
+  // All cards go to the real Novellas folder on GitHub.
+  // This guarantees no 404s, even if garden_index.json paths are fantasy names.
+  const NOVELLAS_FOLDER_URL =
+    "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/docs/Novellas";
 
   async function loadLibrary() {
     const grid = document.getElementById("library-grid");
@@ -262,8 +238,9 @@
         const card = document.createElement("a");
         card.className = "card";
 
-        const href = novellaGithubHref(b);
-        card.href = href;
+        // Open the Novellas folder, with a hash so you can see which card you clicked.
+        const label = b.id || b.title || `Book ${i + 1}`;
+        card.href = NOVELLAS_FOLDER_URL + "#" + encodeURIComponent(label);
         card.target = "_blank";
         card.rel = "noopener noreferrer";
 
@@ -281,7 +258,7 @@
         desc.className = "book-desc";
         desc.textContent =
           b.summary ||
-          "Seeded under Acacia · details live in the markdown file.";
+          "Seeded under Acacia · details live in the markdown files.";
         card.appendChild(desc);
 
         const tagRow = document.createElement("div");
@@ -299,12 +276,12 @@
           tagRow.appendChild(tCycle);
         }
 
-        const tPath = document.createElement("span");
-        tPath.className = "tag";
-        tPath.textContent = b.path
-          ? b.path.replace("docs/Novellas/", "")
-          : (b.file || "local");
-        tagRow.appendChild(tPath);
+        if (b.path || b.file) {
+          const tPath = document.createElement("span");
+          tPath.className = "tag";
+          tPath.textContent = (b.path || b.file).replace("docs/Novellas/", "");
+          tagRow.appendChild(tPath);
+        }
 
         card.appendChild(tagRow);
         grid.appendChild(card);
@@ -312,15 +289,17 @@
 
       statusLine.innerHTML =
         "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
-        "auto-maintained by GitHub Actions.";
+        "metadata only (links fixed to Novellas folder to avoid 404s).";
     } catch (err) {
       console.error(err);
       countLabel.textContent = "Index unavailable";
       errorBox.style.display = "block";
       errorBox.innerHTML =
         "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
-        "This just means the index hasn’t been generated yet. " +
-        "Once you add the GitHub Action, it will appear here.";
+        "You can still open the Novellas folder directly:<br>" +
+        "<a href=\"" + NOVELLAS_FOLDER_URL + "\" target=\"_blank\" rel=\"noopener noreferrer\">" +
+        NOVELLAS_FOLDER_URL +
+        "</a>";
     }
   }
 
