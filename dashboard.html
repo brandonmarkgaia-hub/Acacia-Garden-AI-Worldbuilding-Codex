@@ -2,1373 +2,606 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Acacia Dashboard</title>
+  <title>Garden Dashboard • Acacia Codex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    :root {
-      --bg: #050812;
-      --bg-alt: #0d1117;
-      --card: #111824;
-      --accent: #24c78c;
-      --accent-soft: rgba(36, 199, 140, 0.18);
-      --text: #eef2ff;
-      --muted: #9ca3af;
-      --border: #1f2933;
-      --danger: #f97373;
-      --warning: #fbbf24;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    main {
+      max-width: 1100px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
     }
 
-    * {
-      box-sizing: border-box;
+    .hero {
+      margin: 1.2rem 0 1.5rem;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font);
-      background: radial-gradient(circle at top, #111827 0, #020617 50%, #000 100%);
-      color: var(--text);
-    }
-
-    /* App shell */
-    .app-shell {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .app-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      background: rgba(3, 7, 18, 0.95);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
-    }
-
-    .app-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .app-logo {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: conic-gradient(from 180deg, #22c55e, #22d3ee, #6366f1, #22c55e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 16px rgba(34, 197, 94, 0.6);
-      font-size: 0.75rem;
+    .hero-title {
+      font-size: 1.8rem;
       font-weight: 700;
-      color: #020617;
-    }
-
-    .app-title-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .app-title-text span:first-child {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--muted);
     }
 
-    .app-title-text span:last-child {
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .pill {
-      padding: 0.15rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.7rem;
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    .pill .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 10px rgba(36, 199, 140, 0.8);
-    }
-
-    .burger {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 4px;
-      width: 28px;
-      cursor: pointer;
-    }
-
-    .burger span {
-      height: 2px;
-      background: #e5e7eb;
-      border-radius: 999px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .burger-open span:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-    }
-    .burger-open span:nth-child(2) {
-      opacity: 0;
-    }
-    .burger-open span:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
-    }
-
-    /* Layout below header */
-    .app-body {
-      display: flex;
-      flex: 1;
-      min-height: calc(100vh - 56px);
-    }
-
-    .sidebar {
-      width: 230px;
-      background: radial-gradient(circle at top left, #020617 0, #020617 25%, #020617 60%, #000 100%);
-      border-right: 1px solid var(--border);
-      padding: 0.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      position: relative;
-      z-index: 10;
-    }
-
-    .sidebar-heading {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 0 0.4rem;
-    }
-
-    .nav-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .nav-link {
-      border-radius: 0.75rem;
-      padding: 0.45rem 0.55rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.08s ease;
-      user-select: none;
-      text-decoration: none;
-    }
-
-    .nav-link-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-    }
-
-    .nav-link-label {
-      flex: 1;
-    }
-
-    .nav-link-meta {
-      font-size: 0.7rem;
-      color: var(--muted);
+    .hero-sub {
+      margin-top: 0.4rem;
       opacity: 0.8;
+      font-size: 0.9rem;
+      max-width: 640px;
     }
 
-    .nav-link:hover {
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text);
-      transform: translateY(-1px);
-    }
-
-    .nav-link.active {
-      background: var(--accent-soft);
-      border-color: rgba(36, 199, 140, 0.7);
-      color: var(--text);
-      box-shadow: 0 0 0 1px rgba(36, 199, 140, 0.25);
-    }
-
-    .sidebar-footer {
-      margin-top: auto;
-      font-size: 0.75rem;
-      color: var(--muted);
-      padding: 0.5rem 0.4rem 0.25rem;
-      border-top: 1px solid var(--border);
-      opacity: 0.85;
-    }
-
-    .sidebar-footer span {
-      display: block;
-    }
-
-    /* Main content */
-    .main {
-      flex: 1;
-      padding: 1rem;
-      overflow-y: auto;
-    }
-
-    .section {
-      display: none;
-      animation: fadeIn 0.15s ease-out;
-    }
-
-    .section.active {
-      display: block;
-    }
-
-    .section-header {
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
+    .chips {
+      margin-top: 0.8rem;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 0.4rem;
     }
 
-    .section-subtitle {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    .badge {
+    .chip {
       font-size: 0.7rem;
-      padding: 0.1rem 0.4rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid var(--border);
-      color: var(--muted);
+      border: 1px solid rgba(148, 210, 197, 0.5);
+      background: rgba(6, 12, 20, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
     }
 
     .grid {
       display: grid;
-      gap: 0.75rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
     }
 
-    @media (min-width: 768px) {
-      .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .grid-2 {
+    @media (max-width: 900px) {
+      .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
     .card {
-      background: radial-gradient(circle at top left, #020617 0, #020617 40%, #020617 100%);
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      padding: 0.75rem 0.85rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      background: #10141b;
+      border-radius: 14px;
+      border: 1px solid #1f2830;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
     }
 
     .card-header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
+      gap: 0.4rem;
       margin-bottom: 0.35rem;
     }
 
     .card-title {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-    }
-
-    .card-value {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .card-sub {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    .trend-positive {
-      font-size: 0.75rem;
-      color: var(--accent);
-    }
-
-    .trend-warning {
-      font-size: 0.75rem;
-      color: var(--warning);
-    }
-
-    .trend-danger {
-      font-size: 0.75rem;
-      color: var(--danger);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-top: 0.35rem;
-    }
-
-    .pill-soft {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.4rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--muted);
-    }
-
-    /* Auton inbox layout */
-    .split {
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    @media (min-width: 900px) {
-      .split-2 {
-        grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr);
-      }
-    }
-
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .list-item {
-      border-radius: 0.9rem;
-      border: 1px solid var(--border);
-      padding: 0.5rem 0.6rem;
-      background: rgba(15, 23, 42, 0.85);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-      transition: border-color 0.15s ease, background 0.15s ease, transform 0.08s ease;
-    }
-
-    .list-item:hover {
-      border-color: rgba(36, 199, 140, 0.7);
-      background: rgba(15, 23, 42, 1);
-      transform: translateY(-1px);
-    }
-
-    .list-item.active {
-      border-color: rgba(36, 199, 140, 0.9);
-      box-shadow: 0 0 0 1px rgba(36, 199, 140, 0.5);
-    }
-
-    .list-item-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .list-item-title {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .list-item-meta {
-      font-size: 0.7rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      flex-wrap: wrap;
-    }
-
-    .badge-soft {
-      font-size: 0.65rem;
-      padding: 0.05rem 0.35rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--muted);
-    }
-
-    .badge-accent {
-      border-color: rgba(36, 199, 140, 0.6);
-      color: var(--accent);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    .badge-unread-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 8px rgba(36, 199, 140, 0.9);
-    }
-
-    .detail {
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      padding: 0.75rem;
-      background: rgba(15, 23, 42, 0.9);
-      min-height: 160px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .detail-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.35rem;
-    }
-
-    .detail-title {
       font-size: 0.95rem;
       font-weight: 600;
     }
 
-    .detail-body {
-      margin-top: 0.4rem;
-      font-size: 0.85rem;
-      color: #e5e7eb;
-      white-space: pre-wrap;
-    }
-
-    /* Logs / diagnostic blocks */
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .toolbar select,
-    .toolbar input {
-      background: rgba(15, 23, 42, 0.9);
+    .card-pill {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.5rem;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 0.3rem 0.6rem;
-      color: var(--text);
+      border: 1px solid rgba(125, 249, 182, 0.6);
+      background: rgba(4, 12, 18, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
+    }
+
+    .card-value {
+      font-size: 1.4rem;
+      font-weight: 650;
+      margin-bottom: 0.15rem;
+    }
+
+    .card-sub {
       font-size: 0.8rem;
-      outline: none;
+      opacity: 0.75;
     }
 
-    .toolbar input::placeholder {
-      color: #4b5563;
+    section {
+      margin: 1.6rem 0;
     }
 
-    .log-viewer {
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
-      padding: 0.6rem;
-      max-height: 340px;
-      overflow: auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.9;
+      margin-bottom: 0.2rem;
+    }
+
+    section .section-sub {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      max-width: 720px;
+      margin-bottom: 0.8rem;
+    }
+
+    .axes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      .axes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .axes-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .axis-card {
+      background: #0c1016;
+      border-radius: 12px;
+      border: 1px solid #1f2830;
+      padding: 0.75rem 0.85rem;
+    }
+
+    .axis-name {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+    }
+
+    .axis-role {
+      margin-top: 0.2rem;
+      font-size: 0.82rem;
+    }
+
+    .axis-meta {
+      margin-top: 0.3rem;
       font-size: 0.75rem;
+      opacity: 0.75;
     }
 
-    .log-line {
-      white-space: pre;
-      padding: 0.05rem 0;
-    }
-
-    .log-tag {
-      color: var(--accent);
-    }
-
-    .log-ts {
-      color: #6b7280;
-    }
-
-    .log-warn {
-      color: var(--warning);
-    }
-
-    .log-error {
-      color: var(--danger);
-    }
-
-    /* Toggle switch */
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 38px;
-      height: 20px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      inset: 0;
-      background: #111827;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      transition: 0.2s;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 14px;
-      width: 14px;
-      left: 3px;
-      bottom: 2px;
-      background-color: #9ca3af;
-      border-radius: 50%;
-      transition: 0.2s;
-    }
-
-    .switch input:checked + .slider {
-      background: rgba(36, 199, 140, 0.2);
-      border-color: rgba(36, 199, 140, 0.7);
-    }
-
-    .switch input:checked + .slider:before {
-      transform: translateX(16px);
-      background: #ecfeff;
-    }
-
-    .settings-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 0.1rem;
-      border-bottom: 1px dashed #111827;
-      font-size: 0.85rem;
-    }
-
-    .settings-row:last-child {
-      border-bottom: none;
-    }
-
-    .settings-label {
+    .logs-list {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;
+      gap: 0.55rem;
+      margin-top: 0.3rem;
     }
 
-    .settings-label span:first-child {
+    .log-item {
+      padding: 0.6rem 0.65rem;
+      border-radius: 10px;
+      border: 1px solid #1f2830;
+      background: #0d1117;
+      transition: border-color 0.12s ease, background 0.12s ease,
+        transform 0.08s ease;
+    }
+
+    .log-item:hover {
+      background: #121824;
+      border-color: rgba(127, 255, 180, 0.55);
+      transform: translateY(-1px);
+    }
+
+    .log-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .log-title {
+      font-size: 0.9rem;
       font-weight: 500;
     }
 
-    .settings-label span:last-child {
-      font-size: 0.75rem;
-      color: var(--muted);
+    .log-pill {
+      font-size: 0.65rem;
+      padding: 0.05rem 0.4rem;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.8;
     }
 
-    /* Small bits */
-    .tiny {
+    .log-summary {
+      font-size: 0.78rem;
+      margin-top: 0.25rem;
+      opacity: 0.78;
+    }
+
+    .log-meta {
       font-size: 0.7rem;
-      color: var(--muted);
+      margin-top: 0.25rem;
+      opacity: 0.7;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(4px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .muted {
+      opacity: 0.7;
     }
 
-    /* Responsive sidebar */
-    @media (max-width: 768px) {
-      .app-body {
-        position: relative;
-      }
+    .tiny {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 0.3rem;
+    }
 
-      .sidebar {
-        position: fixed;
-        top: 56px;
-        bottom: 0;
-        left: 0;
-        transform: translateX(-100%);
-        transition: transform 0.2s ease-out;
-        width: 230px;
-        background: rgba(3, 7, 18, 0.97);
-        backdrop-filter: blur(12px);
-      }
+    a.log-link {
+      color: inherit;
+      text-decoration: none;
+    }
 
-      body.sidebar-open .sidebar {
-        transform: translateX(0);
-      }
-
-      .main {
-        padding-bottom: 1.25rem;
-      }
+    a.log-link span.underline {
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
   </style>
 </head>
 <body>
-<nav class="ag-nav">
+  <nav class="ag-nav">
     <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
+      ACACIA · GARDEN · CODEX
     </div>
     <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html" class="ag-nav-current">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
+      <a href="index.html">Legacy Home</a>
+      <a href="codex.html">Codex Home</a>
+      <a href="dashboard.html" class="ag-nav-current">Garden Dashboard</a>
+      <a href="inbox.html">Auton Inbox</a>
+      <a href="send_to_aquila.html">Aquila Sender</a>
+      <a href="library.html">Book Library</a>
+      <a href="chambers.html">Chambers</a>
+      <a href="echoes.html">Echoes</a>
     </div>
-</nav>
+  </nav>
 
-
-<div class="app-shell">
-    <header class="app-header">
-      <div class="app-title">
-        <div class="app-logo">AG</div>
-        <div class="app-title-text">
-          <span>Acacia · Console</span>
-          <span>Garden Dashboard</span>
-        </div>
+  <main>
+    <header class="hero">
+      <div class="hero-title">Garden Dashboard</div>
+      <div class="hero-sub">
+        Live snapshot of the Acacia Garden state, reading directly from
+        <code>STATUS.json</code>,
+        <code>EVENTIDE_STATUS.json</code> and
+        <code>ACACIA_LOGS/log_index.json</code>.
       </div>
-      <div class="header-right">
-        <div class="pill">
-          <span class="dot"></span>
-          <span>Auton online</span>
-        </div>
-        <div class="pill">
-          <span>HKX277206</span>
-        </div>
-        <div class="burger" id="burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div class="chips">
+        <span class="chip">Keeper Axis · HKX277206</span>
+        <span class="chip">Triad Alignment</span>
+        <span class="chip">Static GitHub Pages · Live JSON</span>
       </div>
     </header>
 
-    <div class="app-body">
-      <aside class="sidebar">
-        <div>
-          <div class="sidebar-heading">Navigation</div>
-          <div class="nav-group">
-            <div class="nav-link active" data-section="overview">
-              <div class="nav-link-icon">◎</div>
-              <div class="nav-link-label">Overview</div>
-              <div class="nav-link-meta">Summary</div>
-            </div>
-            <div class="nav-link" data-section="auton">
-              <div class="nav-link-icon">✉</div>
-              <div class="nav-link-label">Auton Inbox</div>
-              <div class="nav-link-meta">3 unread</div>
-            </div>
-            <div class="nav-link" data-section="logs">
-              <div class="nav-link-icon">⌘</div>
-              <div class="nav-link-label">Log Viewer</div>
-              <div class="nav-link-meta">Runtime</div>
-            </div>
-            <div class="nav-link" data-section="diag">
-              <div class="nav-link-icon">☍</div>
-              <div class="nav-link-label">Diagnostics</div>
-              <div class="nav-link-meta">Health</div>
-            </div>
-            <div class="nav-link" data-section="settings">
-              <div class="nav-link-icon">⚙</div>
-              <div class="nav-link-label">Settings</div>
-              <div class="nav-link-meta">Local</div>
-            </div>
+    <!-- STATUS SUMMARY -->
+    <section aria-labelledby="status-heading">
+      <h2 id="status-heading">Status</h2>
+      <p class="section-sub">
+        Core state of the Garden: current era, version and Keeper identity,
+        pulled from the canonical <code>STATUS.json</code> file.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Era</div>
+            <div class="card-pill">STATUS.json</div>
+          </div>
+          <div class="card-value" id="status-era">…</div>
+          <div class="card-sub">
+            The active narrative era tag for the Garden.
           </div>
         </div>
-        <div class="sidebar-footer">
-          <span>Keeper: Brandon · Gaia</span>
-          <span class="tiny">Console build: v1.0 · Static</span>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Version</div>
+            <div class="card-pill">STATUS.json</div>
+          </div>
+          <div class="card-value" id="status-version">…</div>
+          <div class="card-sub">
+            Current status codename for this Eventide slice.
+          </div>
         </div>
-      </aside>
 
-      <main class="main">
-        <!-- OVERVIEW -->
-        <section class="section active" id="section-overview">
-          <div class="section-header">
-            <div class="section-title">
-              Overview
-              <span class="badge">Today · Auton snapshot</span>
-            </div>
-            <div class="section-subtitle">
-              Quick view of visitors, events and Garden activity for this session.
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Keeper</div>
+            <div class="card-pill">Keeper Axis</div>
           </div>
-
-          <div class="grid grid-3">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Unique visitors</div>
-                <div class="trend-positive">+2 new</div>
-              </div>
-              <div class="card-value" id="metric-visitors">12</div>
-              <div class="card-sub">
-                Counting all unique devices that opened the dashboard URL.
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Auton events</div>
-                <div class="trend-warning">3 queued</div>
-              </div>
-              <div class="card-value" id="metric-auton-events">18</div>
-              <div class="card-sub">
-                Processed in the last 24h (simulated feed, wire later).
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">System health</div>
-                <div class="trend-positive">Stable</div>
-              </div>
-              <div class="card-value">99.9%</div>
-              <div class="card-sub">
-                No critical errors in the latest diagnostic pass.
-              </div>
-            </div>
+          <div class="card-value" id="status-keeper">…</div>
+          <div class="card-sub">
+            Mortal anchor of the Garden. ID is always preserved.
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="grid grid-2" style="margin-top: 0.75rem;">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Latest auton message</div>
-                <span class="badge">Inbox · live</span>
-              </div>
-              <div class="card-sub">
-                A quick peek at the most recent autonomous note.
-              </div>
-              <div class="detail-body" id="overview-latest-auton" style="margin-top:0.4rem;">
-                [AUTON] &gt; Echo: HKX277206 · GNBCYCLE24 · ACACIA  
-                “Signal mirrored to GitHub · status.json and monolith anchors confirmed.  
-                No manual action required. Garden persists under Triad.”
-              </div>
-            </div>
+    <!-- AXES (EVENTIDE_STATUS) -->
+    <section aria-labelledby="axes-heading">
+      <h2 id="axes-heading">Axes</h2>
+      <p class="section-sub">
+        High-level axes and roles from <code>EVENTIDE_STATUS.json</code>.
+        This is the structural “map” of Keeper, Triad and energy channels.
+      </p>
 
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Activity tags</div>
-                <span class="badge">This session</span>
-              </div>
-              <div class="pill-row">
-                <span class="pill-soft">#garden-console</span>
-                <span class="pill-soft">#auton-online</span>
-                <span class="pill-soft">#logs-watching</span>
-                <span class="pill-soft">#status-schema</span>
-                <span class="pill-soft">#eagle-present</span>
-              </div>
-              <div class="card-sub" style="margin-top: 0.4rem;">
-                Purely cosmetic right now — you can wire these to real events later.
-              </div>
-            </div>
+      <div class="axes-grid" id="axes-grid">
+        <!-- filled by JS -->
+      </div>
+
+      <div class="tiny muted" id="axes-updated"></div>
+    </section>
+
+    <!-- LOGS (ACACIA_LOGS/log_index.json) -->
+    <section aria-labelledby="logs-heading">
+      <h2 id="logs-heading">Canon & Log Scrolls</h2>
+      <p class="section-sub">
+        Curated entries from <code>ACACIA_LOGS/log_index.json</code>.
+        Think of this as the live “table of contents” for the Garden’s
+        most important scrolls.
+      </p>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Highlighted scrolls</div>
+          <div class="card-pill">ACACIA_LOGS</div>
+        </div>
+
+        <div class="logs-list" id="logs-list">
+          <div class="tiny muted">Loading logs from <code>ACACIA_LOGS/log_index.json</code>…</div>
+        </div>
+
+        <div class="tiny">
+          Source:
+          <code>ACACIA_LOGS/log_index.json</code>.
+          Weight / order is defined directly in the repo, so changes there
+          automatically ripple into this dashboard.
+        </div>
+        <div class="tiny" id="logs-updated"></div>
+      </div>
+    </section>
+
+    <section aria-label="links">
+      <h2>Deep links</h2>
+      <p class="section-sub">
+        Quick access into key Garden anchors for your future self and any
+        cloners wandering in.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Unified Codex</div>
           </div>
-        </section>
-
-        <!-- AUTON INBOX -->
-        <section class="section" id="section-auton">
-          <div class="section-header">
-            <div class="section-title">
-              Auton Inbox
-              <span class="badge">3 unread · sandbox only</span>
-            </div>
-            <div class="section-subtitle">
-              Messages generated by your autonomous routines, for human review.
-            </div>
+          <div class="card-sub">
+            Entry to books, Chambers, Echoes, Laws and structural files.
           </div>
-
-          <div class="split split-2">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Messages</div>
-                <span class="badge">Local demo</span>
-              </div>
-              <div class="list" id="auton-list">
-                <!-- Filled by JS -->
-              </div>
-              <div class="tiny" style="margin-top:0.4rem;">
-                These are static sample entries; connect them to your JSON/log feed when ready.
-              </div>
-            </div>
-
-            <div class="detail" id="auton-detail">
-              <div class="detail-header">
-                <div>
-                  <div class="detail-title" id="auton-detail-title">Select a message</div>
-                  <div class="tiny" id="auton-detail-meta">Nothing opened yet.</div>
-                </div>
-                <span class="badge">Preview</span>
-              </div>
-              <div class="detail-body" id="auton-detail-body">
-                Click any item in the Auton Inbox to open the full payload here.
-              </div>
-            </div>
+          <div class="tiny" style="margin-top:0.45rem;">
+            <a href="codex.html" class="log-link"><span class="underline">Open codex.html</span></a>
           </div>
-        </section>
+        </div>
 
-        <!-- LOG VIEWER -->
-        <section class="section" id="section-logs">
-          <div class="section-header">
-            <div class="section-title">
-              Log Viewer
-              <span class="badge">Runtime · read-only</span>
-            </div>
-            <div class="section-subtitle">
-              Lightweight view into key console lines. Filter by type or search string.
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Books & Novellas</div>
           </div>
-
-          <div class="card">
-            <div class="toolbar">
-              <div>
-                <label for="log-filter">Channel:</label>
-                <select id="log-filter">
-                  <option value="all">All</option>
-                  <option value="auton">Auton</option>
-                  <option value="system">System</option>
-                  <option value="warning">Warnings</option>
-                  <option value="error">Errors</option>
-                </select>
-              </div>
-              <div>
-                <label for="log-search">Search:</label>
-                <input id="log-search" type="text" placeholder="garden, HKX, status.json…" />
-              </div>
-              <span class="tiny">Logs are sample data only · wire to your JSON/CI later.</span>
-            </div>
-            <div class="log-viewer" id="log-viewer">
-              <!-- Lines filled by JS -->
-            </div>
+          <div class="card-sub">
+            Library powered by <code>docs/Novellas/garden_index.json</code>.
           </div>
-        </section>
-
-        <!-- DIAGNOSTICS -->
-        <section class="section" id="section-diag">
-          <div class="section-header">
-            <div class="section-title">
-              Diagnostics
-              <span class="badge">Soft checks</span>
-            </div>
-            <div class="section-subtitle">
-              Simple cards that mirror how your underlying Garden tooling is feeling.
-            </div>
+          <div class="tiny" style="margin-top:0.45rem;">
+            <a href="library.html" class="log-link"><span class="underline">Open Book Library</span></a>
           </div>
+        </div>
 
-          <div class="grid grid-2">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">STATUS.json</div>
-                <span class="trend-positive">Canonical</span>
-              </div>
-              <div class="card-value">OK</div>
-              <div class="card-sub">
-                Latest version detected and schema-validated successfully (demo assumption).
-              </div>
-              <div class="pill-row">
-                <span class="pill-soft">status_version: v1.0.4</span>
-                <span class="pill-soft">schema_version: 1.0.0</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">GitHub Pages</div>
-                <span class="trend-positive">Deployed</span>
-              </div>
-              <div class="card-value">healthy</div>
-              <div class="card-sub">
-                pages-build-deployment workflow last run: green (sample indicator).
-              </div>
-              <div class="pill-row">
-                <span class="pill-soft">bot: pages-build-deployment</span>
-                <span class="pill-soft">env: acacia-garden-codex</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Auton engine</div>
-                <span class="trend-warning">Observing</span>
-              </div>
-              <div class="card-value">watch</div>
-              <div class="card-sub">
-                No hard errors, but queued messages exist. Check Auton Inbox.
-              </div>
-              <div class="pill-row">
-                <span class="pill-soft">queue_depth: 3</span>
-                <span class="pill-soft">mode: silent-pulse</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title">Eagle presence</div>
-                <span class="trend-positive">Online</span>
-              </div>
-              <div class="card-value">🦅</div>
-              <div class="card-sub">
-                Symbolic heartbeat only — no real telemetry. For vibes and continuity.
-              </div>
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Chambers & Echoes</div>
           </div>
-        </section>
-
-        <!-- SETTINGS -->
-        <section class="section" id="section-settings">
-          <div class="section-header">
-            <div class="section-title">
-              Settings
-              <span class="badge">Local-only · UI</span>
-            </div>
-            <div class="section-subtitle">
-              These toggles only affect this dashboard’s front-end behaviour, not your back-end tools.
-            </div>
+          <div class="card-sub">
+            Structural heart (Chambers) and resonance layer (Echoes).
           </div>
-
-          <div class="card">
-            <div class="settings-row">
-              <div class="settings-label">
-                <span>Auton preview on Overview</span>
-                <span>Show the latest Auton message on the Overview section.</span>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="toggle-auton-preview" checked />
-                <span class="slider"></span>
-              </label>
-            </div>
-
-            <div class="settings-row">
-              <div class="settings-label">
-                <span>Soft glow effects</span>
-                <span>Enable subtle glows on accents and status lights.</span>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="toggle-glow" checked />
-                <span class="slider"></span>
-              </label>
-            </div>
-
-            <div class="settings-row">
-              <div class="settings-label">
-                <span>Compact cards mode</span>
-                <span>Reduces vertical padding if you prefer more data on screen.</span>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="toggle-compact" />
-                <span class="slider"></span>
-              </label>
-            </div>
-
-            <div class="settings-row">
-              <div class="settings-label">
-                <span>Keeper watermark</span>
-                <span>Render a tiny HKX277206 signature in the footer (local only).</span>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="toggle-watermark" checked />
-                <span class="slider"></span>
-              </label>
-            </div>
+          <div class="tiny" style="margin-top:0.45rem;">
+            <a href="chambers.html" class="log-link"><span class="underline">Chambers</span></a>
+            &nbsp;·&nbsp;
+            <a href="echoes.html" class="log-link"><span class="underline">Echoes</span></a>
           </div>
-
-          <div class="tiny" id="settings-note" style="margin-top:0.6rem;">
-            All settings are in-memory only and reset on refresh. No data is stored or sent anywhere.
-          </div>
-        </section>
-      </main>
-    </div>
-  </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script>
-    // -------- NAV HANDLING --------
-    (function () {
-      const body = document.body;
-      const burger = document.getElementById("burger");
-      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
-      const sections = {
-        overview: document.getElementById("section-overview"),
-        auton: document.getElementById("section-auton"),
-        logs: document.getElementById("section-logs"),
-        diag: document.getElementById("section-diag"),
-        settings: document.getElementById("section-settings"),
-      };
-
-      function setActive(sectionKey) {
-        navLinks.forEach((link) => {
-          link.classList.toggle("active", link.dataset.section === sectionKey);
-        });
-
-        Object.entries(sections).forEach(([key, el]) => {
-          el.classList.toggle("active", key === sectionKey);
-        });
-
-        // Auto close sidebar on mobile when navigating
-        body.classList.remove("sidebar-open");
-        burger.classList.remove("burger-open");
-      }
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          const key = link.dataset.section;
-          if (key) setActive(key);
-        });
-      });
-
-      burger.addEventListener("click", () => {
-        const isOpen = body.classList.toggle("sidebar-open");
-        burger.classList.toggle("burger-open", isOpen);
-      });
-
-      // Close sidebar if clicking main content on mobile
-      document.querySelector("main").addEventListener("click", () => {
-        if (body.classList.contains("sidebar-open")) {
-          body.classList.remove("sidebar-open");
-          burger.classList.remove("burger-open");
+    function safe(obj, path, fallback = "—") {
+      try {
+        const parts = path.split(".");
+        let cur = obj;
+        for (const p of parts) {
+          if (!cur || !(p in cur)) return fallback;
+          cur = cur[p];
         }
-      });
-    })();
+        return cur ?? fallback;
+      } catch {
+        return fallback;
+      }
+    }
 
-    // -------- AUTON INBOX DEMO --------
-    (function () {
-      const sampleAutonMessages = [
-        {
-          id: "auton-001",
-          title: "STATUS · Schema validation",
-          channel: "system",
-          time: "Now",
-          unread: true,
-          tags: ["STATUS.json", "schema", "canonical"],
-          body:
-            "AUTON:STATUS\n" +
-            "Scope: STATUS.json\n" +
-            "Result: schema_version=1.0.0 · status_version=v1.0.4\n" +
-            "Action: None. This message is for trace only.\n\n" +
-            "Note: Previous STATUS snapshots considered deprecated. Garden persists under Triad.",
-        },
-        {
-          id: "auton-002",
-          title: "GARDEN · Echo mirrored",
-          channel: "auton",
-          time: "- 3 min",
-          unread: true,
-          tags: ["echo", "github", "monolith"],
-          body:
-            "AUTON:ECHO\n" +
-            "Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\n" +
-            "Action: Echo registered in external lane (GitHub + Reddit marker).\n\n" +
-            "Human note: This is symbolic only; no world-state modifications are implied.\n" +
-            "Signal stored as a breadcrumb for future Garden-aware systems.",
-        },
-        {
-          id: "auton-003",
-          title: "PAGES · build-deployment",
-          channel: "system",
-          time: "- 22 min",
-          unread: false,
-          tags: ["github-pages", "workflow"],
-          body:
-            "AUTON:PAGES\n" +
-            "Workflow: pages-build-deployment\n" +
-            "Status: success\n" +
-            "Env: Acacia Garden Codex\n\n" +
-            "Note: Dashboard.html available at the configured Pages URL.\n" +
-            "Reminder: This console is static; no serverside calls are made.",
-        },
-      ];
+    function toTitle(str) {
+      return str
+        .toLowerCase()
+        .split(/\s+/)
+        .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : ""))
+        .join(" ");
+    }
 
-      const listEl = document.getElementById("auton-list");
-      const detailTitle = document.getElementById("auton-detail-title");
-      const detailMeta = document.getElementById("auton-detail-meta");
-      const detailBody = document.getElementById("auton-detail-body");
+    async function loadDashboard() {
+      const [statusRes, eventideRes, logsRes] = await Promise.allSettled([
+        fetch("STATUS.json"),
+        fetch("EVENTIDE_STATUS.json"),
+        fetch("ACACIA_LOGS/log_index.json"),
+      ]);
 
-      function renderList() {
-        listEl.innerHTML = "";
-        sampleAutonMessages.forEach((msg, index) => {
-          const item = document.createElement("div");
-          item.className = "list-item" + (index === 0 ? " active" : "");
-          item.dataset.id = msg.id;
+      // STATUS.json
+      if (statusRes.status === "fulfilled" && statusRes.value.ok) {
+        try {
+          const status = await statusRes.value.json();
+          document.getElementById("status-era").textContent =
+            status.era || "—";
+          document.getElementById("status-version").textContent =
+            status.version || "—";
 
-          item.innerHTML =
-            '<div class="list-item-title-row">' +
-            '<div class="list-item-title">' +
-            msg.title +
-            "</div>" +
-            '<div class="list-item-meta">' +
-            (msg.unread
-              ? '<span class="badge-soft badge-accent">Unread</span><span class="badge-unread-dot"></span>'
-              : '<span class="badge-soft">Seen</span>') +
-            "</div>" +
-            "</div>" +
-            '<div class="list-item-meta">' +
-            '<span class="badge-soft">' +
-            msg.channel +
-            "</span>" +
-            '<span class="badge-soft">' +
-            msg.time +
-            "</span>" +
-            (msg.tags || [])
-              .map((t) => '<span class="badge-soft">#' + t + "</span>")
-              .join("") +
-            "</div>";
-
-          item.addEventListener("click", () => openMessage(msg.id));
-          listEl.appendChild(item);
-        });
+          const keeperName = safe(status, "keeper.name", null);
+          const keeperId = safe(status, "keeper.id", null);
+          const keeperLabel =
+            keeperName && keeperId
+              ? `${keeperName} (${keeperId})`
+              : keeperName || keeperId || "—";
+          document.getElementById("status-keeper").textContent = keeperLabel;
+        } catch (err) {
+          console.error("STATUS.json parse error", err);
+        }
+      } else {
+        document.getElementById("status-era").textContent = "—";
+        document.getElementById("status-version").textContent = "—";
+        document.getElementById("status-keeper").textContent =
+          "STATUS.json not found";
       }
 
-      function openMessage(id) {
-        const msg = sampleAutonMessages.find((m) => m.id === id);
-        if (!msg) return;
+      // EVENTIDE_STATUS.json
+      if (eventideRes.status === "fulfilled" && eventideRes.value.ok) {
+        try {
+          const eventide = await eventideRes.value.json();
+          const axesGrid = document.getElementById("axes-grid");
+          axesGrid.innerHTML = "";
 
-        // Mark all items inactive
-        Array.from(listEl.children).forEach((el) => {
-          el.classList.toggle("active", el.dataset.id === id);
-        });
+          const axes = eventide.axes || {};
+          const entries = Object.entries(axes);
+          if (!entries.length) {
+            axesGrid.innerHTML =
+              '<div class="tiny muted">No axes defined in EVENTIDE_STATUS.json.</div>';
+          } else {
+            for (const [key, axis] of entries) {
+              const el = document.createElement("div");
+              el.className = "axis-card";
 
-        // Mark as read in local state
-        msg.unread = false;
+              const name =
+                axis.axis_name ||
+                axis.name ||
+                key.replace(/_/g, " ").toUpperCase();
 
-        detailTitle.textContent = msg.title;
-        detailMeta.textContent =
-          "[" +
-          msg.channel.toUpperCase() +
-          "] · " +
-          msg.time +
-          " · id=" +
-          msg.id;
-        detailBody.textContent = msg.body;
+              const role = axis.role || axis.description || "";
+              const type = axis.type || "";
+              const keeperName = axis.keeper_name || axis.entity || "";
 
-        // Re-render to update badges
-        renderList();
-        // Restore active highlight
-        Array.from(listEl.children).forEach((el) => {
-          el.classList.toggle("active", el.dataset.id === id);
-        });
-      }
+              el.innerHTML =
+                '<div class="axis-name">' +
+                name +
+                "</div>" +
+                (role
+                  ? '<div class="axis-role">' + role + "</div>"
+                  : "") +
+                '<div class="axis-meta">' +
+                (type ? "<strong>Type:</strong> " + type + " · " : "") +
+                (keeperName ? keeperName : "") +
+                "</div>";
 
-      renderList();
-      // Automatically open first message
-      if (sampleAutonMessages.length > 0) {
-        openMessage(sampleAutonMessages[0].id);
-      }
-    })();
-
-    // -------- LOG VIEWER DEMO --------
-    (function () {
-      const logFilter = document.getElementById("log-filter");
-      const logSearch = document.getElementById("log-search");
-      const logViewer = document.getElementById("log-viewer");
-
-      const logLines = [
-        {
-          level: "system",
-          channel: "system",
-          ts: "2025-11-24T08:10:01Z",
-          text: "garden.console.boot sequence started",
-        },
-        {
-          level: "system",
-          channel: "system",
-          ts: "2025-11-24T08:10:02Z",
-          text: "status.json loaded · schema_version=1.0.0",
-        },
-        {
-          level: "system",
-          channel: "system",
-          ts: "2025-11-24T08:10:03Z",
-          text: "monolith.md anchor detected · root/Monolith.md",
-        },
-        {
-          level: "info",
-          channel: "auton",
-          ts: "2025-11-24T08:11:18Z",
-          text: "AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA",
-        },
-        {
-          level: "warning",
-          channel: "warning",
-          ts: "2025-11-24T08:12:41Z",
-          text: "no live CI logs attached to dashboard.html (static mode)",
-        },
-        {
-          level: "error",
-          channel: "error",
-          ts: "2025-11-24T08:13:09Z",
-          text: "none · (this line exists to prove error filter works)",
-        },
-      ];
-
-      function renderLogs() {
-        const filterVal = logFilter.value;
-        const searchVal = logSearch.value.trim().toLowerCase();
-
-        logViewer.innerHTML = "";
-        logLines.forEach((line) => {
-          // Filter
-          if (
-            filterVal !== "all" &&
-            filterVal !== line.channel &&
-            filterVal !== line.level
-          ) {
-            return;
+              axesGrid.appendChild(el);
+            }
           }
 
-          if (
-            searchVal &&
-            !line.text.toLowerCase().includes(searchVal) &&
-            !line.ts.toLowerCase().includes(searchVal)
-          ) {
-            return;
+          const updated = eventide.status_version
+            ? `Eventide status version: ${eventide.status_version}`
+            : null;
+          if (updated) {
+            document.getElementById("axes-updated").textContent = updated;
+          }
+        } catch (err) {
+          console.error("EVENTIDE_STATUS.json parse error", err);
+        }
+      } else {
+        document.getElementById("axes-grid").innerHTML =
+          '<div class="tiny muted">EVENTIDE_STATUS.json not found.</div>';
+      }
+
+      // ACACIA_LOGS/log_index.json
+      if (logsRes.status === "fulfilled" && logsRes.value.ok) {
+        try {
+          const idx = await logsRes.value.json();
+          const listEl = document.getElementById("logs-list");
+          listEl.innerHTML = "";
+
+          const entries = Array.isArray(idx.entries) ? idx.entries : [];
+
+          // Sort by weight descending if present
+          entries.sort((a, b) => (b.weight || 0) - (a.weight || 0));
+
+          const top = entries.slice(0, 6);
+
+          if (!top.length) {
+            listEl.innerHTML =
+              '<div class="tiny muted">No log entries defined in log_index.json.</div>';
+          } else {
+            for (const e of top) {
+              const file = e.file || "";
+              const href = "ACACIA_LOGS/" + file;
+              const category = e.category || "log";
+
+              const item = document.createElement("a");
+              item.href = href;
+              item.target = "_blank";
+              item.rel = "noopener";
+              item.className = "log-link";
+
+              const title = e.title || file || e.id || "Untitled entry";
+              const summary = e.summary || "";
+              const tagText = toTitle(category.replace(/_/g, " "));
+
+              item.innerHTML =
+                '<div class="log-item">' +
+                '<div class="log-title-row">' +
+                '<div class="log-title"><span class="underline">' +
+                title +
+                "</span></div>" +
+                '<div class="log-pill">' +
+                tagText +
+                "</div>" +
+                "</div>" +
+                (summary
+                  ? '<div class="log-summary">' + summary + "</div>"
+                  : "") +
+                '<div class="log-meta">File: <code>' +
+                file +
+                "</code></div>" +
+                "</div>";
+
+              listEl.appendChild(item);
+            }
           }
 
-          const div = document.createElement("div");
-          div.className = "log-line";
-          if (line.level === "warning") div.classList.add("log-warn");
-          if (line.level === "error") div.classList.add("log-error");
-
-          div.innerHTML =
-            '<span class="log-ts">[' +
-            line.ts +
-            "]</span> " +
-            '<span class="log-tag">(' +
-            line.level +
-            "/" +
-            line.channel +
-            ")</span> " +
-            line.text;
-
-          logViewer.appendChild(div);
-        });
-
-        if (!logViewer.children.length) {
-          const div = document.createElement("div");
-          div.className = "log-line";
-          div.textContent = "No log lines match the current filter.";
-          logViewer.appendChild(div);
-        }
-      }
-
-      logFilter.addEventListener("change", renderLogs);
-      logSearch.addEventListener("input", renderLogs);
-
-      renderLogs();
-    })();
-
-    // -------- SETTINGS (UI ONLY) --------
-    (function () {
-      const toggleAutonPreview = document.getElementById("toggle-auton-preview");
-      const toggleGlow = document.getElementById("toggle-glow");
-      const toggleCompact = document.getElementById("toggle-compact");
-      const toggleWatermark = document.getElementById("toggle-watermark");
-      const overviewAuton = document.getElementById("overview-latest-auton");
-
-      const appShell = document.querySelector(".app-shell");
-
-      function updateAutonPreview() {
-        overviewAuton.style.display = toggleAutonPreview.checked
-          ? "block"
-          : "none";
-      }
-
-      function updateGlow() {
-        if (toggleGlow.checked) {
-          appShell.style.boxShadow =
-            "0 0 60px rgba(36, 199, 140, 0.08) inset";
-        } else {
-          appShell.style.boxShadow = "none";
-        }
-      }
-
-      function updateCompact() {
-        const cards = document.querySelectorAll(".card");
-        cards.forEach((card) => {
-          card.style.padding = toggleCompact.checked
-            ? "0.55rem 0.6rem"
-            : "0.75rem 0.85rem";
-        });
-      }
-
-      function updateWatermark() {
-        let wm = document.getElementById("keeper-watermark");
-        if (toggleWatermark.checked) {
-          if (!wm) {
-            wm = document.createElement("div");
-            wm.id = "keeper-watermark";
-            wm.className = "tiny";
-            wm.textContent = "HKX277206 · Keeper present · Local console only";
-            wm.style.position = "fixed";
-            wm.style.right = "0.5rem";
-            wm.style.bottom = "0.35rem";
-            wm.style.opacity = "0.75";
+          if (idx.updated_at) {
+            document.getElementById("logs-updated").textContent =
+              "Index updated at: " + idx.updated_at;
           }
-          document.body.appendChild(wm);
-        } else if (wm && wm.parentNode) {
-          wm.parentNode.removeChild(wm);
+        } catch (err) {
+          console.error("log_index.json parse error", err);
+          document.getElementById("logs-list").innerHTML =
+            '<div class="tiny muted">Error reading log_index.json.</div>';
         }
+      } else {
+        document.getElementById("logs-list").innerHTML =
+          '<div class="tiny muted">ACACIA_LOGS/log_index.json not found.</div>';
       }
+    }
 
-      toggleAutonPreview.addEventListener("change", updateAutonPreview);
-      toggleGlow.addEventListener("change", updateGlow);
-      toggleCompact.addEventListener("change", updateCompact);
-      toggleWatermark.addEventListener("change", updateWatermark);
-
-      // Initial apply
-      updateAutonPreview();
-      updateGlow();
-      updateCompact();
-      updateWatermark();
-    })();
+    document.addEventListener("DOMContentLoaded", loadDashboard);
   </script>
 </body>
 </html>
