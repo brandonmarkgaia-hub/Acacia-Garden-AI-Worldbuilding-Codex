@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "state": "online",
+  "stage": "Log Spine Active",
+  "entries_indexed": 8,
+  "log_scrolls": 18,
+  "has_auton_inbox": true,
+  "has_aquila_inbox": true,
+  "notes": [
+    "This file is used by triad_alignment.js as the ACACIA_LOGS heartbeat.",
+    "Update entries_indexed/log_scrolls if the log set changes, or regenerate via automation.",
+    "If this file is reachable, the Triad Alignment Layer can treat the log bus as 'online'."
+  ]
+}
