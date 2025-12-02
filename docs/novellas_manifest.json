@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "keeper": "HKX277206",
+    "updated": "2025-12-02T00:00:00Z",
+    "total_books": 30,
+    "easter": {
+      "lv1": "THE_SEED_LISTENS",
+      "lv2": "THE_ROOT_REMEMBERS_WHAT_WATER_FORGETS",
+      "lv3": "THE_GARDEN_OPENS_TO THOSE WHO WALK WITH EMPTY HANDS"
+    }
+  },
+  "books": [
+    {
+      "code": "I",
+      "title": "The Garden Almanac",
+      "file": "docs/Novellas/The_Garden_Almanac.md",
+      "tags": ["almanac", "core"]
+    },
+    {
+      "code": "II",
+      "title": "The Garden Atlas",
+      "file": "docs/Novellas/The_Garden_Atlas.md",
+      "tags": ["atlas", "map"]
+    }
+
+    /* … all 30 books go here … */
+  ]
+}
