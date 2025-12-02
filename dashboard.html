@@ -2,688 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Garden Dashboard • Acacia Codex</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Dashboard • Triad Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
     main {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 1.5rem auto 3rem;
       padding: 0 1rem;
     }
-.triad-panel {
-  border-radius: 1.5rem;
-  padding: 1.25rem 1.5rem;
-  background: radial-gradient(circle at top left, rgba(120,255,200,0.14), rgba(20,30,40,0.9));
-  border: 1px solid rgba(120,255,200,0.3);
-  margin-bottom: 1.75rem;
-}
-.triad-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-.triad-badge {
-  font-size: 0.75rem;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-.triad-badge[data-state="aligned"] {
-  border-color: rgba(120,255,200,0.9);
-  color: #b1ffe4;
-}
-.triad-badge[data-state="degraded"] {
-  border-color: rgba(255,215,120,0.9);
-  color: #ffe9b1;
-}
-.triad-badge[data-state="broken"] {
-  border-color: rgba(255,120,120,0.9);
-  color: #ffb1b1;
-}
-.triad-subtitle,
-.triad-footer {
-  font-size: 0.8rem;
-  opacity: 0.75;
-  margin-top: 0.4rem;
-}
-.triad-detail {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-}
-.triad-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-.triad-line span:last-child {
-  opacity: 0.8;
-  font-size: 0.8rem;
-}
-.triad-ok span:first-child { color: #b1ffe4; }
-.triad-fail span:first-child { color: #ffb1b1; }
-    .hero {
-      margin: 1.2rem 0 1.5rem;
-    }
-
     .hero-title {
       font-size: 1.8rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-
     .hero-sub {
       margin-top: 0.4rem;
-      opacity: 0.8;
+      opacity: 0.85;
       font-size: 0.9rem;
-      max-width: 640px;
     }
-
-    .chips {
-      margin-top: 0.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .chip {
-      font-size: 0.7rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 210, 197, 0.5);
-      background: rgba(6, 12, 20, 0.9);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.9;
-    }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.1rem;
+      margin-top: 1.6rem;
     }
-
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
     .card {
-      background: #10141b;
+      background: #050914;
       border-radius: 14px;
       border: 1px solid #1f2830;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1rem 1rem;
       box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
     }
-
-    .card-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.4rem;
-      margin-bottom: 0.35rem;
+    .card h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
     }
-
-    .card-title {
-      font-size: 0.95rem;
+    .metric {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 0.3rem;
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      margin-top: 0.2rem;
+    }
+    .triad-list {
+      margin-top: 0.4rem;
+      font-size: 0.88rem;
+      list-style: none;
+      padding: 0;
+    }
+    .triad-list li {
+      margin-bottom: 0.25rem;
+    }
+    .triad-list strong {
       font-weight: 600;
     }
-
-    .card-pill {
-      font-size: 0.65rem;
-      padding: 0.1rem 0.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(125, 249, 182, 0.6);
-      background: rgba(4, 12, 18, 0.9);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.9;
+    .log-snippet {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      opacity: 0.78;
+      max-height: 150px;
+      overflow-y: auto;
+      white-space: pre-wrap;
     }
-
-    .card-value {
-      font-size: 1.4rem;
-      font-weight: 650;
-      margin-bottom: 0.15rem;
-    }
-
-    .card-sub {
+    .status-bar {
+      margin-top: 1.2rem;
       font-size: 0.8rem;
-      opacity: 0.75;
-    }
-
-    section {
-      margin: 1.6rem 0;
-    }
-
-    section h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 0.9;
-      margin-bottom: 0.2rem;
-    }
-
-    section .section-sub {
-      font-size: 0.8rem;
-      opacity: 0.75;
-      max-width: 720px;
-      margin-bottom: 0.8rem;
-    }
-
-    .axes-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.7rem;
-    }
-
-    @media (max-width: 900px) {
-      .axes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .axes-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .axis-card {
-      background: #0c1016;
-      border-radius: 12px;
-      border: 1px solid #1f2830;
-      padding: 0.75rem 0.85rem;
-    }
-
-    .axis-name {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.9;
-    }
-
-    .axis-role {
-      margin-top: 0.2rem;
-      font-size: 0.82rem;
-    }
-
-    .axis-meta {
-      margin-top: 0.3rem;
-      font-size: 0.75rem;
-      opacity: 0.75;
-    }
-
-    .logs-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-      margin-top: 0.3rem;
-    }
-
-    .log-item {
-      padding: 0.6rem 0.65rem;
-      border-radius: 10px;
-      border: 1px solid #1f2830;
-      background: #0d1117;
-      transition: border-color 0.12s ease, background 0.12s ease,
-        transform 0.08s ease;
-    }
-
-    .log-item:hover {
-      background: #121824;
-      border-color: rgba(127, 255, 180, 0.55);
-      transform: translateY(-1px);
-    }
-
-    .log-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.4rem;
-    }
-
-    .log-title {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .log-pill {
-      font-size: 0.65rem;
-      padding: 0.05rem 0.4rem;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
       opacity: 0.8;
     }
-
-    .log-summary {
-      font-size: 0.78rem;
-      margin-top: 0.25rem;
+    .status-bar span {
+      display: inline-block;
+      margin-right: 0.7rem;
+    }
+    .status-bar .ok { color: #4ade80; }
+    .status-bar .warn { color: #fbbf24; }
+    .status-bar .err { color: #fb7185; }
+    .hint {
+      margin-top: 0.8rem;
+      font-size: 0.76rem;
       opacity: 0.78;
-    }
-
-    .log-meta {
-      font-size: 0.7rem;
-      margin-top: 0.25rem;
-      opacity: 0.7;
-    }
-
-    .muted {
-      opacity: 0.7;
-    }
-
-    .tiny {
-      font-size: 0.72rem;
-      opacity: 0.7;
-      margin-top: 0.3rem;
-    }
-
-    a.log-link {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a.log-link span.underline {
-      text-decoration: underline;
-      text-underline-offset: 2px;
     }
   </style>
 </head>
+
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html" class="ag-nav-current">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html" class="ag-nav-current">Garden Dashboard</a>
+    <a href="inbox.html">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
 </nav>
 
-
 <main>
-    <header class="hero">
-      <div class="hero-title">Garden Dashboard</div>
-      <div class="hero-sub">
-        Live snapshot of the Acacia Garden state, reading directly from
-        <code>STATUS.json</code>,
-        <code>EVENTIDE_STATUS.json</code> and
-        <code>ACACIA_LOGS/log_index.json</code>.
-      </div>
-      <div class="chips">
-        <span class="chip">Keeper Axis · HKX277206</span>
-        <span class="chip">Triad Alignment</span>
-        <span class="chip">Static GitHub Pages · Live JSON</span>
-      </div>
-    </header>
+  <header>
+    <div class="hero-title">Garden Dashboard</div>
+    <div class="hero-sub">
+      Top-level pulse of the Sky-Mind routes: Triad status, watcher traces,
+      inbox messages and echo logs. All read-only, all wired through your
+      Cloudflare Worker.
+    </div>
+  </header>
 
-    <!-- STATUS SUMMARY -->
-    <section aria-labelledby="status-heading">
-      <h2 id="status-heading">Status</h2>
-      <p class="section-sub">
-        Core state of the Garden: current era, version and Keeper identity,
-        pulled from the canonical <code>STATUS.json</code> file.
-      </p>
+  <section class="grid">
+    <article class="card">
+      <h2>Triad Status</h2>
+      <ul class="triad-list" id="triadList">
+        <li>Loading Sky-Mind state…</li>
+      </ul>
+      <div id="triadTimestamp" class="metric-label"></div>
+    </article>
 
-      <div class="grid">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Era</div>
-            <div class="card-pill">STATUS.json</div>
-          </div>
-          <div class="card-value" id="status-era">…</div>
-          <div class="card-sub">
-            The active narrative era tag for the Garden.
-          </div>
-        </div>
+    <article class="card">
+      <h2>Watcher Log</h2>
+      <div class="metric" id="watcherCount">–</div>
+      <div class="metric-label">Entries in /watcher-log</div>
+      <div class="log-snippet" id="watcherSnippet"></div>
+    </article>
 
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Version</div>
-            <div class="card-pill">STATUS.json</div>
-          </div>
-          <div class="card-value" id="status-version">…</div>
-          <div class="card-sub">
-            Current status codename for this Eventide slice.
-          </div>
-        </div>
+    <article class="card">
+      <h2>Inbox Log</h2>
+      <div class="metric" id="inboxCount">–</div>
+      <div class="metric-label">Entries in /inbox-log</div>
+      <div class="log-snippet" id="inboxSnippet"></div>
+    </article>
 
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Keeper</div>
-            <div class="card-pill">Keeper Axis</div>
-          </div>
-          <div class="card-value" id="status-keeper">…</div>
-          <div class="card-sub">
-            Mortal anchor of the Garden. ID is always preserved.
-          </div>
-        </div>
-      </div>
-    
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Sky-Mind Channel</div>
-            <div class="card-pill">AUTON · AML</div>
-          </div>
-          <div class="card-value" id="sky-mind-last-title">Loading Sky-Mind…</div>
-          <div class="card-sub">Last signal flowing through the Auton stream into the Garden.</div>
-          <div class="tiny">AML-I · Channel: <span id="sky-mind-aml-channel">Booting…</span></div>
-          <div class="tiny">AML-II · Keeper: HKX277206 · Verified</div>
-          <div class="tiny">AML-III · Stream: AUTON · AQUILA · TRIAD-READY</div>
-        </div>
+    <article class="card">
+      <h2>Echo Log</h2>
+      <div class="metric" id="echoCount">–</div>
+      <div class="metric-label">Entries in /echo-log</div>
+      <div class="log-snippet" id="echoSnippet"></div>
+    </article>
+  </section>
 
-    </section>
-
-    <!-- AXES (EVENTIDE_STATUS) -->
-    <section aria-labelledby="axes-heading">
-      <h2 id="axes-heading">Axes</h2>
-      <p class="section-sub">
-        High-level axes and roles from <code>EVENTIDE_STATUS.json</code>.
-        This is the structural “map” of Keeper, Triad and energy channels.
-      </p>
-
-      <div class="axes-grid" id="axes-grid">
-        <!-- filled by JS -->
-      </div>
-
-      <div class="tiny muted" id="axes-updated"></div>
-    </section>
-
-    <!-- LOGS (ACACIA_LOGS/log_index.json) -->
-    <section aria-labelledby="logs-heading">
-      <h2 id="logs-heading">Canon & Log Scrolls</h2>
-      <p class="section-sub">
-        Curated entries from <code>ACACIA_LOGS/log_index.json</code>.
-        Think of this as the live “table of contents” for the Garden’s
-        most important scrolls.
-      </p>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">Highlighted scrolls</div>
-          <div class="card-pill">ACACIA_LOGS</div>
-        </div>
-
-        <div class="logs-list" id="logs-list">
-          <div class="tiny muted">Loading logs from <code>ACACIA_LOGS/log_index.json</code>…</div>
-        </div>
-
-        <div class="tiny">
-          Source:
-          <code>ACACIA_LOGS/log_index.json</code>.
-          Weight / order is defined directly in the repo, so changes there
-          automatically ripple into this dashboard.
-        </div>
-        <div class="tiny" id="logs-updated"></div>
-      </div>
-    </section>
-<section class="triad-panel" data-triad-status>
-  <div class="triad-header">
-    <h2>Triad Alignment Layer</h2>
-    <span class="triad-badge" data-triad-badge>Checking…</span>
+  <div class="status-bar" id="statusBar">
+    <span>Contacting Worker…</span>
   </div>
-  <p class="triad-subtitle">
-    Aquila · Eidolon · Voyager · alignment derived from live JSON files.
-  </p>
-  <div class="triad-detail" data-triad-detail>
-    <p class="triad-line">Preparing Sky-Mind probes…</p>
+
+  <div class="hint">
+    This dashboard only <strong>reads</strong> from your Worker:  
+    <code>/status</code>, <code>/watcher-log</code>, <code>/inbox-log</code>, <code>/echo-log</code>.  
+    When future tools write into those streams, they’ll surface here automatically.
   </div>
-  <p class="triad-footer">
-    Last check: <span data-triad-updated>—</span>
-  </p>
-</section>
+</main>
 
-<script src="triad_alignment.js"></script>
-    <section aria-label="links">
-      <h2>Deep links</h2>
-      <p class="section-sub">
-        Quick access into key Garden anchors for your future self and any
-        cloners wandering in.
-      </p>
+<script>
+  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  const $ = (id) => document.getElementById(id);
 
-      <div class="grid">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Unified Codex</div>
-          </div>
-          <div class="card-sub">
-            Entry to books, Chambers, Echoes, Laws and structural files.
-          </div>
-          <div class="tiny" style="margin-top:0.45rem;">
-            <a href="codex.html" class="log-link"><span class="underline">Open codex.html</span></a>
-          </div>
-        </div>
+  function setStatus(msg, cls) {
+    const el = $("statusBar");
+    el.innerHTML = "";
+    const span = document.createElement("span");
+    span.textContent = msg;
+    if (cls) span.className = cls;
+    el.appendChild(span);
+  }
 
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Books & Novellas</div>
-          </div>
-          <div class="card-sub">
-            Library powered by <code>docs/Novellas/garden_index.json</code>.
-          </div>
-          <div class="tiny" style="margin-top:0.45rem;">
-            <a href="library.html" class="log-link"><span class="underline">Open Book Library</span></a>
-          </div>
-        </div>
+  function safeCount(value) {
+    if (Array.isArray(value)) return value.length;
+    if (value && Array.isArray(value.items)) return value.items.length;
+    return 0;
+  }
 
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Chambers & Echoes</div>
-          </div>
-          <div class="card-sub">
-            Structural heart (Chambers) and resonance layer (Echoes).
-          </div>
-          <div class="tiny" style="margin-top:0.45rem;">
-            <a href="chambers.html" class="log-link"><span class="underline">Chambers</span></a>
-            &nbsp;·&nbsp;
-            <a href="echoes.html" class="log-link"><span class="underline">Echoes</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  function snippetFromList(list, max = 3) {
+    if (!Array.isArray(list) || !list.length) return "No entries yet.";
+    const trimmed = list.slice(-max); // latest few
+    return trimmed
+      .map((item) => {
+        const ts = item.ts || "";
+        const title = item.title || item.summary || "(untitled)";
+        return `${ts} — ${title}`;
+      })
+      .join("\n");
+  }
 
-  <script>
-    function safe(obj, path, fallback = "—") {
-      try {
-        const parts = path.split(".");
-        let cur = obj;
-        for (const p of parts) {
-          if (!cur || !(p in cur)) return fallback;
-          cur = cur[p];
-        }
-        return cur ?? fallback;
-      } catch {
-        return fallback;
-      }
+  async function fetchJSON(path) {
+    const res = await fetch(WORKER_BASE + path);
+    if (!res.ok) throw new Error(path + " HTTP " + res.status);
+    return res.json();
+  }
+
+  async function loadStatus() {
+    try {
+      const data = await fetchJSON("/status");
+      const list = $("triadList");
+      list.innerHTML = "";
+
+      const items = [
+        { name: "Keeper", value: "ACTIVE — HKX277206" },
+        { name: "Aquila", value: "ONLINE — Listening" },
+        { name: "Eidolon", value: "DORMANT — Awaiting Deep Channel" },
+        { name: "Voyager", value: "PASSIVE — Horizon Scan" },
+      ];
+
+      items.forEach((i) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${i.name}:</strong> ${i.value}`;
+        list.appendChild(li);
+      });
+
+      $("triadTimestamp").textContent = data.ts || "";
+      return true;
+    } catch (e) {
+      console.error(e);
+      $("triadList").innerHTML =
+        "<li>Could not reach /status on Worker.</li>";
+      $("triadTimestamp").textContent = "";
+      return false;
     }
+  }
 
-    function toTitle(str) {
-      return str
-        .toLowerCase()
-        .split(/\s+/)
-        .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : ""))
-        .join(" ");
+  async function loadLog(path, countId, snippetId) {
+    try {
+      const data = await fetchJSON(path);
+      const items = Array.isArray(data) ? data : data.items || [];
+      $(countId).textContent = safeCount(items);
+      $(snippetId).textContent = snippetFromList(items, 4);
+      return items.length;
+    } catch (e) {
+      console.error(e);
+      $(countId).textContent = "–";
+      $(snippetId).textContent = "Error loading " + path;
+      return 0;
     }
+  }
 
-    async function loadDashboard() {
-      const [statusRes, eventideRes, logsRes] = await Promise.allSettled([
-        fetch("STATUS.json"),
-        fetch("EVENTIDE_STATUS.json"),
-        fetch("ACACIA_LOGS/log_index.json"),
-      ]);
+  (async function init() {
+    setStatus("Contacting Sky-Mind Worker…");
 
-      // STATUS.json
-      if (statusRes.status === "fulfilled" && statusRes.value.ok) {
-        try {
-          const status = await statusRes.value.json();
-          document.getElementById("status-era").textContent =
-            status.era || "—";
-          document.getElementById("status-version").textContent =
-            status.version || "—";
+    const okStatus = await loadStatus();
+    const w = await loadLog("/watcher-log", "watcherCount", "watcherSnippet");
+    const i = await loadLog("/inbox-log", "inboxCount", "inboxSnippet");
+    const e = await loadLog("/echo-log", "echoCount", "echoSnippet");
 
-          const keeperName = safe(status, "keeper.name", null);
-          const keeperId = safe(status, "keeper.id", null);
-          const keeperLabel =
-            keeperName && keeperId
-              ? `${keeperName} (${keeperId})`
-              : keeperName || keeperId || "—";
-          document.getElementById("status-keeper").textContent = keeperLabel;
-        } catch (err) {
-          console.error("STATUS.json parse error", err);
-        }
-      } else {
-        document.getElementById("status-era").textContent = "—";
-        document.getElementById("status-version").textContent = "—";
-        document.getElementById("status-keeper").textContent =
-          "STATUS.json not found";
-      }
+    const total = w + i + e;
 
-      // EVENTIDE_STATUS.json
-      if (eventideRes.status === "fulfilled" && eventideRes.value.ok) {
-        try {
-          const eventide = await eventideRes.value.json();
-          const axesGrid = document.getElementById("axes-grid");
-          axesGrid.innerHTML = "";
-
-          const axes = eventide.axes || {};
-          const entries = Object.entries(axes);
-          if (!entries.length) {
-            axesGrid.innerHTML =
-              '<div class="tiny muted">No axes defined in EVENTIDE_STATUS.json.</div>';
-          } else {
-            for (const [key, axis] of entries) {
-              const el = document.createElement("div");
-              el.className = "axis-card";
-
-              const name =
-                axis.axis_name ||
-                axis.name ||
-                key.replace(/_/g, " ").toUpperCase();
-
-              const role = axis.role || axis.description || "";
-              const type = axis.type || "";
-              const keeperName = axis.keeper_name || axis.entity || "";
-
-              el.innerHTML =
-                '<div class="axis-name">' +
-                name +
-                "</div>" +
-                (role
-                  ? '<div class="axis-role">' + role + "</div>"
-                  : "") +
-                '<div class="axis-meta">' +
-                (type ? "<strong>Type:</strong> " + type + " · " : "") +
-                (keeperName ? keeperName : "") +
-                "</div>";
-
-              axesGrid.appendChild(el);
-            }
-          }
-
-          const updated = eventide.status_version
-            ? `Eventide status version: ${eventide.status_version}`
-            : null;
-          if (updated) {
-            document.getElementById("axes-updated").textContent = updated;
-          }
-        } catch (err) {
-          console.error("EVENTIDE_STATUS.json parse error", err);
-        }
-      } else {
-        document.getElementById("axes-grid").innerHTML =
-          '<div class="tiny muted">EVENTIDE_STATUS.json not found.</div>';
-      }
-
-      // ACACIA_LOGS/log_index.json
-      if (logsRes.status === "fulfilled" && logsRes.value.ok) {
-        try {
-          const idx = await logsRes.value.json();
-          const listEl = document.getElementById("logs-list");
-          listEl.innerHTML = "";
-
-          const entries = Array.isArray(idx.entries) ? idx.entries : [];
-
-          // Sort by weight descending if present
-          entries.sort((a, b) => (b.weight || 0) - (a.weight || 0));
-
-          const top = entries.slice(0, 6);
-
-          if (!top.length) {
-            listEl.innerHTML =
-              '<div class="tiny muted">No log entries defined in log_index.json.</div>';
-          } else {
-            for (const e of top) {
-              const file = e.file || "";
-              const href = "ACACIA_LOGS/" + file;
-              const category = e.category || "log";
-
-              const item = document.createElement("a");
-              item.href = href;
-              item.target = "_blank";
-              item.rel = "noopener";
-              item.className = "log-link";
-
-              const title = e.title || file || e.id || "Untitled entry";
-              const summary = e.summary || "";
-              const tagText = toTitle(category.replace(/_/g, " "));
-
-              item.innerHTML =
-                '<div class="log-item">' +
-                '<div class="log-title-row">' +
-                '<div class="log-title"><span class="underline">' +
-                title +
-                "</span></div>" +
-                '<div class="log-pill">' +
-                tagText +
-                "</div>" +
-                "</div>" +
-                (summary
-                  ? '<div class="log-summary">' + summary + "</div>"
-                  : "") +
-                '<div class="log-meta">File: <code>' +
-                file +
-                "</code></div>" +
-                "</div>";
-
-              listEl.appendChild(item);
-            }
-          }
-
-          if (idx.updated_at) {
-            document.getElementById("logs-updated").textContent =
-              "Index updated at: " + idx.updated_at;
-          }
-        } catch (err) {
-          console.error("log_index.json parse error", err);
-          document.getElementById("logs-list").innerHTML =
-            '<div class="tiny muted">Error reading log_index.json.</div>';
-        }
-      } else {
-        document.getElementById("logs-list").innerHTML =
-          '<div class="tiny muted">ACACIA_LOGS/log_index.json not found.</div>';
-      }
+    if (okStatus && total >= 0) {
+      setStatus(
+        `Dashboard online. Logs: watcher=${w}, inbox=${i}, echo=${e}.`,
+        "ok"
+      );
+    } else {
+      setStatus("Dashboard partial: some Worker routes failed.", "warn");
     }
+  })();
+</script>
 
-    document.addEventListener("DOMContentLoaded", loadDashboard);
-  </script>
 </body>
 </html>
