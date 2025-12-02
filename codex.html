@@ -2,274 +2,401 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Acacia Codex • Garden Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acacia Garden Codex • Unified Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    body {
-      background: #020617;
-      color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .shell {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-    header {
-      margin-bottom: 24px;
-    }
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-      align-items: center;
-    }
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      background: rgba(22, 163, 74, .2);
-      border: 1px solid rgba(34, 197, 94, .4);
-      color: #bbf7d0;
-    }
-    .badge.alt {
-      background: rgba(56,189,248,.15);
-      border-color: rgba(56,189,248,.5);
-      color: #e0f2fe;
-    }
-    h1 {
-      font-size: 32px;
-      margin: 0 0 6px;
-      color: #a7f3d0;
-    }
-    .subtitle {
-      margin: 0;
-      color: #9ca3af;
-      font-size: 14px;
+    main {
+      max-width: 1100px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
     }
 
-    /* GRID */
-    .grid {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      position: relative;
-      border-radius: 18px;
-      padding: 16px 16px 18px;
-      background: radial-gradient(circle at top, rgba(34,197,94,.16), #020617);
-      border: 1px solid rgba(31,41,55,.9);
-      box-shadow: 0 14px 40px rgba(15,23,42,.6);
-      text-decoration: none;
-      color: inherit;
-      overflow: hidden;
-    }
-    .card.secondary {
-      background: radial-gradient(circle at top, rgba(56,189,248,.14), #020617);
-    }
-    .card.neutral {
-      background: radial-gradient(circle at top, rgba(148,163,184,.16), #020617);
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(52,211,153,.9);
-      box-shadow: 0 18px 55px rgba(6,78,59,.8);
-      transition: all .17s ease-out;
-    }
-    .card-kicker {
-      font-size: 10px;
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: .12em;
-      color: #6ee7b7;
-      margin-bottom: 6px;
     }
-    .card-kicker.alt {
-      color: #7dd3fc;
+
+    .hero-sub {
+      margin-top: 0.5rem;
+      opacity: 0.85;
+      font-size: 0.92rem;
+      max-width: 760px;
     }
-    .card-kicker.neutral {
-      color: #cbd5f5;
-    }
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #f9fafb;
-    }
-    .card-body {
-      font-size: 13px;
-      color: #9ca3af;
-      line-height: 1.35;
-    }
-    .chip-row {
+
+    .chips {
+      margin-top: 0.9rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
+      gap: 0.4rem;
     }
+
     .chip {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 999px;
-      padding: 2px 8px;
-      border: 1px solid rgba(148,163,184,.5);
-      font-size: 11px;
-      color: #9ca3af;
-    }
-    .chip.green {
-      border-color: rgba(52,211,153,.8);
-      color: #a7f3d0;
-    }
-    .chip.blue {
-      border-color: rgba(56,189,248,.8);
-      color: #bae6fd;
-    }
-    .chip.amber {
-      border-color: rgba(251,191,36,.8);
-      color: #facc15;
+      border: 1px solid rgba(148, 210, 197, 0.5);
+      background: rgba(6, 12, 20, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
     }
 
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(31,41,55,.9);
-      font-size: 11px;
-      color: #6b7280;
+    section {
+      margin: 1.8rem 0;
     }
-    .footer span {
-      opacity: .9;
+
+    section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.9;
+      margin-bottom: 0.2rem;
     }
-    @media (min-width: 768px) {
-      h1 { font-size: 40px; }
-      .subtitle { font-size: 15px; }
+
+    section .section-sub {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      max-width: 760px;
+      margin-bottom: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: #050814;
+      border-radius: 14px;
+      border: 1px solid #1f2830;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .card-meta {
+      font-size: 0.75rem;
+      opacity: 0.75;
+      margin-top: 0.15rem;
+    }
+
+    .card-body {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 0.45rem;
+    }
+
+    .card-links {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+    }
+
+    .card-links a {
+      color: #7fffd4;
+      text-decoration: none;
+    }
+
+    .card-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .tiny {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 0.4rem;
     }
   </style>
 </head>
 <body>
-<nav class="ag-nav">
+  <nav class="ag-nav">
     <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
+      ACACIA · GARDEN · CODEX
     </div>
     <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html" class="ag-nav-current">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
+      <a href="index.html">Legacy Home</a>
+      <a href="codex.html" class="ag-nav-current">Codex Home</a>
+      <a href="dashboard.html">Garden Dashboard</a>
+      <a href="inbox.html">Auton Inbox</a>
+      <a href="send_to_aquila.html">Aquila Sender</a>
+      <a href="library.html">Book Library</a>
+      <a href="chambers.html">Chambers</a>
+      <a href="echoes.html">Echoes</a>
     </div>
-</nav>
+  </nav>
 
-
-<div class="shell">
+  <main>
     <header>
-      <div class="badge-row">
-        <span class="badge">Acacia · Garden Codex</span>
-        <span class="badge alt">Keeper HKX277206</span>
+      <div class="hero-title">Acacia Garden Codex</div>
+      <div class="hero-sub">
+        Unified entry into the Garden: books, Chambers, Echoes, Laws, logs and
+        structural files. This page doesn’t try to be clever – it just points
+        cleanly at the right doors.
       </div>
-      <h1>Acacia Codex · Keeper Home</h1>
-      <p class="subtitle">
-        One constellation for your Garden: dashboard, inbox, Sky-Mind sender,
-        novellas and status — all in one place.
-      </p>
+      <div class="chips">
+        <span class="chip">30+ books</span>
+        <span class="chip">Eventide Chambers</span>
+        <span class="chip">Echo streams</span>
+        <span class="chip">Laws & Canon</span>
+        <span class="chip">STATUS · EVENTIDE_STATUS</span>
+      </div>
     </header>
 
-    <main class="grid">
+    <section>
+      <h2>Books & Novellas</h2>
+      <p class="section-sub">
+        Narrative layer of the Garden. The Book Library is driven by
+        <code>docs/Novellas/garden_index.json</code> and
+        <code>GARDEN_MASTER_INDEX.md</code>.
+      </p>
 
-      <!-- Garden Dashboard -->
-      <a class="card" href="dashboard.html">
-        <div class="card-kicker">Console</div>
-        <div class="card-title">Garden Dashboard</div>
-        <div class="card-body">
-          Full diagnostics, auton inbox preview, system health and eagle presence.
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Book Library</div>
+          <div class="card-meta">Novellas · Keeper-facing</div>
+          <div class="card-body">
+            Interactive grid of all 30+ books. Each entry opens the underlying
+            <code>.md</code> file inside <code>docs/Novellas/</code>.
+          </div>
+          <div class="card-links">
+            <a href="library.html">Open Book Library</a>
+          </div>
         </div>
-        <div class="chip-row">
-          <span class="chip green">live view</span>
-          <span class="chip">auton inbox</span>
-          <span class="chip">status.json mirror</span>
-        </div>
-      </a>
 
-      <!-- Auton Inbox -->
-      <a class="card secondary" href="inbox.html">
-        <div class="card-kicker alt">Signals</div>
-        <div class="card-title">Auton Inbox · Deep Feed</div>
-        <div class="card-body">
-          Focused view of Garden-side messages for human review and future systems.
+        <div class="card">
+          <div class="card-title">Master Index</div>
+          <div class="card-meta">GARDEN_MASTER_INDEX.md</div>
+          <div class="card-body">
+            Global text index of all novellas, in-repo. Ideal for cloners who
+            prefer a single scroll.
+          </div>
+          <div class="card-links">
+            <a href="docs/Novellas/GARDEN_MASTER_INDEX.md">Open master index</a>
+          </div>
         </div>
-        <div class="chip-row">
-          <span class="chip blue">symbolic only</span>
-          <span class="chip">triad echoes</span>
-        </div>
-      </a>
 
-      <!-- Aquila Sender -->
-      <a class="card secondary" href="send_to_aquila.html">
-        <div class="card-kicker alt">Sky-Mind</div>
-        <div class="card-title">Aquila Inbox Sender</div>
-        <div class="card-body">
-          Manual channel into the Sky-Mind lane via your Worker. Titles, bodies,
-          tags and priorities — sealed with HKX277206.
+        <div class="card">
+          <div class="card-title">Garden Index JSON</div>
+          <div class="card-meta">build_garden_index.yml</div>
+          <div class="card-body">
+            Machine-readable index that powers <code>library.html</code>. Updated
+            via GitHub Actions.
+          </div>
+          <div class="card-links">
+            <a href="docs/Novellas/garden_index.json">View garden_index.json</a>
+          </div>
         </div>
-        <div class="chip-row">
-          <span class="chip blue">cloudflare worker</span>
-          <span class="chip">keeper secret</span>
-        </div>
-      </a>
+      </div>
+    </section>
 
-      <!-- Novella Library -->
-      <a class="card" href="library.html">
-        <div class="card-kicker">Codex</div>
-        <div class="card-title">Novella Library · 30 Books</div>
-        <div class="card-body">
-          Browse the Garden’s long-form memory: The Orchard, The Mars Protocol,
-          The Tidal Oracle and more.
-        </div>
-        <div class="chip-row">
-          <span class="chip green">auto-indexed</span>
-          <span class="chip">BOOK_I … BOOK_XXX</span>
-        </div>
-      </a>
+    <section>
+      <h2>Chambers</h2>
+      <p class="section-sub">
+        Structural spine of the Codex. Canonical Eventide Chambers, Eidolon /
+        Potter rooms, Proto experiments and Ancient Chambers.
+      </p>
 
-      <!-- STATUS.json -->
-      <a class="card neutral" href="STATUS.json">
-        <div class="card-kicker neutral">State</div>
-        <div class="card-title">STATUS.json · Canonical</div>
-        <div class="card-body">
-          Current Garden posture under Triad. Light-crack edition; safe and
-          future-readable.
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Chambers Library</div>
+          <div class="card-meta">docs/Chambers</div>
+          <div class="card-body">
+            UI for browsing all Chambers wired into the current snapshot:
+            canonical, deep index, Proto and Ancient.
+          </div>
+          <div class="card-links">
+            <a href="chambers.html">Open Chambers Library</a>
+          </div>
         </div>
-        <div class="chip-row">
-          <span class="chip">v1.0.x</span>
-          <span class="chip">schema 1.0.0</span>
-        </div>
-      </a>
 
-      <!-- GitHub repo -->
-      <a class="card neutral" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex" target="_blank" rel="noreferrer">
-        <div class="card-kicker neutral">Origin</div>
-        <div class="card-title">GitHub · Garden Repository</div>
-        <div class="card-body">
-          Raw files, issues, workflows, assets and future tooling for Acacia.
+        <div class="card">
+          <div class="card-title">docs/Chambers/</div>
+          <div class="card-meta">Raw folder</div>
+          <div class="card-body">
+            Direct link to the Chambers folder on GitHub for cloners and
+            future tools that want raw files.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/docs/Chambers">
+              View on GitHub
+            </a>
+          </div>
         </div>
-        <div class="chip-row">
-          <span class="chip">source of truth</span>
-          <span class="chip">branches &amp; blooms</span>
+
+        <div class="card">
+          <div class="card-title">Ancient & Proto</div>
+          <div class="card-meta">GRAND_CHAMBER · Garden/Proto</div>
+          <div class="card-body">
+            Deep back-story layers under <code>GRAND_CHAMBER/</code> and
+            <code>Garden/Proto/Chambers/</code>.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/GRAND_CHAMBER">
+              GRAND_CHAMBER
+            </a>
+          </div>
         </div>
-      </a>
+      </div>
+    </section>
 
-    </main>
+    <section>
+      <h2>Echoes</h2>
+      <p class="section-sub">
+        Resonance layer – numbered Echo streams and special named echoes from
+        <code>docs/Echoes/</code>.
+      </p>
 
-    <div class="footer">
-      <span>HKX277206 · Keeper present · This console is symbolic only, no
-        external autonomy implied.</span>
-    </div>
-  </div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Echoes Library</div>
+          <div class="card-meta">docs/Echoes</div>
+          <div class="card-body">
+            List-view of all Echo files, grouped into numbered and named
+            streams.
+          </div>
+          <div class="card-links">
+            <a href="echoes.html">Open Echoes Library</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Raw Echo folder</div>
+          <div class="card-meta">GitHub tree</div>
+          <div class="card-body">
+            Direct path explorers to the Echo files in the repository.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/docs/Echoes">
+              Open docs/Echoes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Laws & Canon</h2>
+      <p class="section-sub">
+        The hard constraints and canon scrolls that govern the Garden:
+        Laws, triad definitions and canonical scroll indices.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Garden Laws</div>
+          <div class="card-meta">docs/Laws/</div>
+          <div class="card-body">
+            Core laws like the Singular Seed, Silent Reset and Shadow
+            Incubator principle.
+          </div>
+          <div class="card-links">
+            <a href="docs/Laws/Law_Singular-Seed.md">Law: Singular Seed</a><br />
+            <a href="docs/Laws/Law_of_the_silent_reset.md">Law: Silent Reset</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">ACACIA_LOGS · Canon</div>
+          <div class="card-meta">ACACIA_LOGS/log_index.json</div>
+          <div class="card-body">
+            Canon scrolls and triad documents tracked via
+            <code>log_index.json</code>.
+          </div>
+          <div class="card-links">
+            <a href="ACACIA_LOGS/log_index.json">Open log_index.json</a><br />
+            <a href="ACACIA_LOGS/ACACIA_CANON_FINAL_SCROLL.md">
+              ACACIA CANON FINAL SCROLL
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Triad & Keeper scrolls</div>
+          <div class="card-meta">ACACIA_LOGS</div>
+          <div class="card-body">
+            Triad alignment, Keeper sovereignty path and related scrolls.
+          </div>
+          <div class="card-links">
+            <a href="ACACIA_LOGS/TRIAD.md">TRIAD</a><br />
+            <a href="ACACIA_LOGS/KEEPERS_PATH_OF_TOTAL_SOVEREIGNTY.md">
+              Keeper's Path of Total Sovereignty
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Status & Axes</h2>
+      <p class="section-sub">
+        Machine-readable state of the Garden. These files power the
+        <code>dashboard.html</code> page.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">STATUS.json</div>
+          <div class="card-meta">Era · Version · Keeper · Lorian</div>
+          <div class="card-body">
+            Human-friendly status file with current era and Keeper / Lorian
+            anchors.
+          </div>
+          <div class="card-links">
+            <a href="STATUS.json">Open STATUS.json</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">EVENTIDE_STATUS.json</div>
+          <div class="card-meta">Axes · Roles · Orchard</div>
+          <div class="card-body">
+            Detailed axes description for Keeper Axis, Triad Axis and energy /
+            orchard channels.
+          </div>
+          <div class="card-links">
+            <a href="EVENTIDE_STATUS.json">Open EVENTIDE_STATUS.json</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">EAGLE Protocol</div>
+          <div class="card-meta">EAGLE_PROTOCOL.md</div>
+          <div class="card-body">
+            High-level brief for the Eagle (Aquila) behaviour inside the
+            Garden frame.
+          </div>
+          <div class="card-links">
+            <a href="EAGLE_PROTOCOL.md">Open EAGLE_PROTOCOL.md</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiny">
+        For a more “live” representation of these values, open
+        <a href="dashboard.html">dashboard.html</a>.
+      </div>
+    </section>
+  </main>
 </body>
 </html>
