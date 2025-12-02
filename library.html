@@ -215,9 +215,37 @@
         books.forEach((b, i) => {
           const a = document.createElement("a");
           a.className = "card";
-          a.href = b.path || "#";
+
+          // Normalise href so it always points into docs/Novellas on GitHub Pages
+          const file = b.file || "";
+          let href;
+
+          if (b.url) {
+            // Explicit URL wins
+            href = b.url;
+          } else if (file.includes("docs/Novellas/")) {
+            // Already a repo-relative path, just strip any leading slashes
+            href = file.replace(/^\/+/, "");
+          } else if (file) {
+            // Just a filename – point it at the Novellas folder
+            href = `docs/Novellas/${file}`;
+          } else {
+            // Fallback to b.path if file is missing
+            const p = b.path || "";
+            if (p.includes("docs/Novellas/")) {
+              // Trim runner paths like /home/runner/.../docs/Novellas/Book.md
+              const tail = p.split("docs/Novellas/")[1] || "";
+              href = `docs/Novellas/${tail.split("/").pop()}`;
+            } else if (p) {
+              href = `docs/Novellas/${p.split("/").pop()}`;
+            } else {
+              href = "#";
+            }
+          }
+
+          a.href = href;
           a.target = "_blank";
-          a.rel = "noreferrer";
+          a.rel = "noopener noreferrer";
 
           const id = document.createElement("div");
           id.className = "book-id";
