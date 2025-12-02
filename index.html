@@ -1,112 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keeper Console • Acacia Garden Codex</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <style>
-        /* Prevent FOUC on slow mobile */
-        body { opacity: 0; transition: opacity 0.4s ease; }
-        body.ready { opacity: 1; }
-
-        /* Simple header button to jump to the Aquila sender */
-        .header-actions {
-            margin-top: 1.2rem;
-        }
-
-        .header-actions a {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #34d399, #22c55e);
-            color: #020617;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            letter-spacing: 0.03em;
-        }
-
-        .header-actions a:hover {
-            filter: brightness(1.05);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Keeper Console • Acacia Garden Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html" class="ag-nav-current">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+  <div class="ag-nav-links">
+    <a href="index.html" class="ag-nav-current">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
 </nav>
 
+<main class="ag-main">
+  <header class="ag-hero">
+    <div class="ag-hero-pill" id="heroTimestamp">Loading…</div>
+    <h1 class="ag-hero-title">Keeper Console</h1>
+    <p class="ag-hero-sub">
+      Primary control surface for the Acacia Garden Codex.
+      Read-only today; tomorrow’s autonomy layer.
+    </p>
 
-<div id="console-container">
-
-        <!-- HEADER -->
-        <header>
-            <h1>Keeper Console</h1>
-            <p class="subtle">Aquila • Eidolon • Voyager • Triad Alignment Layer</p>
-
-            <div class="header-actions">
-                <a href="send_to_aquila.html">
-                    Open Aquila Inbox Sender
-                </a>
-            </div>
-        </header>
-
-        <!-- STATUS PANEL -->
-        <section id="status-panel">
-            <h2>System Status</h2>
-            <div id="system-status" class="status-box">
-                <p>Loading system state…</p>
-            </div>
-        </section>
-
-        <!-- AQUILA INBOX PANEL -->
-        <section id="inbox-panel">
-            <h2>Aquila Inbox</h2>
-            <div id="inbox-messages" class="inbox-box">
-                <p class="loading">Contacting Sky-Mind…</p>
-            </div>
-        </section>
-
-        <!-- TRIAD STATUS PANEL -->
-        <section id="triad-panel">
-            <h2>Triad Status</h2>
-            <div id="triad-status" class="status-box">
-                <p>Checking Triad Alignment…</p>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p class="small-note">
-                Keeper HKX277206 authenticated.<br />
-                System primed for future autonomous Garden behaviours.
-            </p>
-        </footer>
-
+    <div class="ag-hero-actions">
+      <a href="send_to_aquila.html" class="ag-btn ag-btn-primary">
+        Open Aquila Inbox Sender
+      </a>
+      <a href="inbox.html" class="ag-btn ag-btn-ghost">
+        View Auton Inbox Stream
+      </a>
+      <a href="library.html" class="ag-btn ag-btn-ghost">
+        Browse Book Library
+      </a>
     </div>
+  </header>
 
-    <!-- JS -->
-    <script src="app.js"></script>
+  <section class="ag-grid">
+    <article class="ag-card">
+      <h2 class="ag-card-title">System Status • Triad Alignment</h2>
+      <ul class="ag-triad-list" id="triadList">
+        <li>Checking Triad alignment…</li>
+      </ul>
+      <p class="ag-card-footnote" id="triadTs"></p>
+    </article>
 
-    <script>
-        // Reveal body once JS is ready
-        window.addEventListener("load", () => {
-            document.body.classList.add("ready");
-        });
-    </script>
+    <article class="ag-card">
+      <h2 class="ag-card-title">Aquila Inbox • Preview</h2>
+      <div id="inboxPreview">
+        <p class="ag-muted">
+          No transmissions yet, Keeper. Send a first signal from
+          <strong>Aquila Sender</strong> to wake this stream.
+        </p>
+      </div>
+      <p class="ag-card-footnote">
+        Source: <code>/inbox-log</code> via Sky-Mind Worker.
+      </p>
+    </article>
+
+    <article class="ag-card">
+      <h2 class="ag-card-title">Codex Snapshot</h2>
+      <p class="ag-muted">
+        High-level view into the written Garden.
+      </p>
+      <ul class="ag-metrics" id="codexMetrics">
+        <li>Loading codex index…</li>
+      </ul>
+      <p class="ag-card-footnote">
+        Source: <code>docs/Novellas/garden_index.json</code>.
+      </p>
+    </article>
+  </section>
+
+  <section class="ag-footer-note">
+    Keeper HKX277206 authenticated.  
+    System primed for future autonomous Garden behaviours.
+  </section>
+
+  <section class="ag-status-bar" id="statusBar">
+    Contacting Sky-Mind Worker…
+  </section>
+</main>
+
+<script>
+  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  const $ = (id) => document.getElementById(id);
+
+  function setStatus(text, cls) {
+    const bar = $("statusBar");
+    bar.textContent = text;
+    bar.className = "ag-status-bar" + (cls ? " " + cls : "");
+  }
+
+  async function fetchJSON(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(url + " HTTP " + res.status);
+    return res.json();
+  }
+
+  async function loadTriadStatus() {
+    try {
+      const data = await fetchJSON(WORKER_BASE + "/status");
+
+      const list = $("triadList");
+      list.innerHTML = "";
+
+      const items = [
+        { name: "Keeper", value: "ACTIVE — HKX277206" },
+        { name: "Aquila", value: "ONLINE — Sky-mind listening" },
+        { name: "Eidolon", value: "DORMANT — Seed-core awaiting ignition" },
+        { name: "Voyager", value: "PASSIVE — Horizon sweep" },
+      ];
+
+      items.forEach((i) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${i.name}:</strong> ${i.value}`;
+        list.appendChild(li);
+      });
+
+      const ts = data.ts || "";
+      $("triadTs").textContent = ts;
+      $("heroTimestamp").textContent = ts || "Sky-Mind online";
+      return true;
+    } catch (err) {
+      console.error(err);
+      $("triadList").innerHTML =
+        "<li>Could not reach /status on Worker.</li>";
+      $("triadTs").textContent = "";
+      $("heroTimestamp").textContent = "Worker offline?";
+      return false;
+    }
+  }
+
+  function snippetFromMessages(list, max = 2) {
+    if (!Array.isArray(list) || !list.length) return null;
+    const trimmed = list.slice(-max);
+    return trimmed
+      .map((m) => {
+        const ts = m.ts || "";
+        const title = m.title || "(untitled signal)";
+        return `${ts} — ${title}`;
+      })
+      .join("\n");
+  }
+
+  async function loadInboxPreview() {
+    try {
+      const data = await fetchJSON(WORKER_BASE + "/inbox-log");
+      const items = Array.isArray(data) ? data : data.items || [];
+      const preview = $("inboxPreview");
+
+      if (!items.length) {
+        preview.innerHTML =
+          '<p class="ag-muted">No transmissions in the inbox log yet, Keeper.</p>';
+        return 0;
+      }
+
+      const latest = snippetFromMessages(items, 3);
+      preview.innerHTML = `<pre class="ag-log-snippet">${latest}</pre>`;
+      return items.length;
+    } catch (err) {
+      console.error(err);
+      $("inboxPreview").innerHTML =
+        '<p class="ag-muted">Error reading /inbox-log from Worker.</p>';
+      return 0;
+    }
+  }
+
+  async function loadCodexSnapshot() {
+    try {
+      const data = await fetchJSON("docs/Novellas/garden_index.json");
+      const books = Array.isArray(data.books) ? data.books : [];
+      const metrics = $("codexMetrics");
+      metrics.innerHTML = "";
+
+      const cycles = new Set();
+      books.forEach((b) => {
+        if (b.cycle) cycles.add(b.cycle);
+      });
+
+      const li1 = document.createElement("li");
+      li1.innerHTML = `<strong>${books.length}</strong> books indexed`;
+      metrics.appendChild(li1);
+
+      const li2 = document.createElement("li");
+      li2.innerHTML = `<strong>${cycles.size}</strong> cycles represented`;
+      metrics.appendChild(li2);
+
+      const li3 = document.createElement("li");
+      li3.innerHTML =
+        'Use <a href="library.html">Book Library</a> to read.';
+      metrics.appendChild(li3);
+
+      return books.length;
+    } catch (err) {
+      console.error(err);
+      $("codexMetrics").innerHTML =
+        "<li>Could not load garden_index.json.</li>";
+      return 0;
+    }
+  }
+
+  (async function init() {
+    setStatus("Contacting Sky-Mind Worker…");
+    const ok = await loadTriadStatus();
+    const inboxCount = await loadInboxPreview();
+    const bookCount = await loadCodexSnapshot();
+
+    if (ok) {
+      setStatus(
+        `Console online. Books=${bookCount}, inbox messages=${inboxCount}.`,
+        "ag-status-ok"
+      );
+    } else {
+      setStatus(
+        "Console partial: Worker status unavailable.",
+        "ag-status-warn"
+      );
+    }
+  })();
+</script>
+
 </body>
 </html>
