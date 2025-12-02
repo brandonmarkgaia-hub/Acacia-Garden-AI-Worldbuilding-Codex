@@ -4,212 +4,332 @@
     {
       "id": "The_Garden_Almanac_of_Seeds_and_Signs_Book_I",
       "title": "The Garden Almanac Of Seeds And Signs",
-      "path": "docs/Novellas/The_Garden_Almanac_of_Seeds_and_Signs_Book_I.md",
+      "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
+      "file": "The_Garden_Military_Doctrine_Book_I.md",
       "cycle": "Book I",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
       "id": "The_Garden_Atlas_of_Currents_and_Corridors_Book_II",
       "title": "The Garden Atlas Of Currents And Corridors",
-      "path": "docs/Novellas/The_Garden_Atlas_of_Currents_and_Corridors_Book_II.md",
+      "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
+      "file": "The_Garden_NASA_Protocols_Book_II.md",
       "cycle": "Book II",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
       "id": "The_Garden_Cultural_Anthology_Book_III",
       "title": "The Garden Cultural Anthology",
-      "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_III.md",
+      "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
+      "file": "The_Garden_Presidential_Doctrine_Book_III.md",
       "cycle": "Book III",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
       "id": "The_Garden_Ecology_and_Trophic_Wars_Book_IV",
       "title": "The Garden Ecology And Trophic Wars",
-      "path": "docs/Novellas/The_Garden_Ecology_and_Trophic_Wars_Book_IV.md",
+      "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
+      "file": "The_Garden_Finance_Doctrine_Book_IV.md",
       "cycle": "Book IV",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
       "id": "The_Garden_Cosmology_and_Orbits_Book_V",
       "title": "The Garden Cosmology And Orbits",
-      "path": "docs/Novellas/The_Garden_Cosmology_and_Orbits_Book_V.md",
+      "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
+      "file": "The_Garden_Intelligence_Codex_Book_V.md",
       "cycle": "Book V",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Artificial_Canopy_Book_VI",
-      "title": "The Garden Artificial Canopy",
-      "path": "docs/Novellas/The_Garden_Artificial_Canopy_Book_VI.md",
+      "id": "The_Garden_Series_Novella_Book_VI",
+      "title": "The Garden Series Novella",
+      "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
+      "file": "The_Garden_Series_Novella_Book_VI_Catalysts.md",
       "cycle": "Book VI",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Book_of_Remembrance_Book_VII",
-      "title": "The Garden Book Of Remembrance",
-      "path": "docs/Novellas/The_Garden_Book_of_Remembrance_Book_VII.md",
+      "id": "The_Garden_Legendarium_and_Echoes_Book_VII",
+      "title": "The Garden Legendarium And Echoes",
+      "path": "docs/Novellas/The_Keepers_Bible_Book_VII.md",
+      "file": "The_Keepers_Bible_Book_VII.md",
       "cycle": "Book VII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Book_of_Soils_and_Sediments_Book_VIII",
-      "title": "The Garden Book Of Soils And Sediments",
-      "path": "docs/Novellas/The_Garden_Book_of_Soils_and_Sediments_Book_VIII.md",
+      "id": "The_Garden_Almanac_Book_VIII",
+      "title": "The Garden Almanac",
+      "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
+      "file": "The_Garden_Almanac_Book_VIII.md",
       "cycle": "Book VIII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Book_of_Vessels_and_Vortices_Book_IX",
-      "title": "The Garden Book Of Vessels And Vortices",
-      "path": "docs/Novellas/The_Garden_Book_of_Vessels_and_Vortices_Book_IX.md",
+      "id": "The_Garden_Mythic_Atlas_Book_IX",
+      "title": "The Garden Mythic Atlas",
+      "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
+      "file": "The_Garden_Mythic_Atlas_Book_IX.md",
       "cycle": "Book IX",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Book_of_Weather_and_Winds_Book_X",
-      "title": "The Garden Book Of Weather And Winds",
-      "path": "docs/Novellas/The_Garden_Book_of_Weather_and_Winds_Book_X.md",
+      "id": "The_Garden_Presidential_Handbook_Book_X",
+      "title": "The Garden Presidential Handbook",
+      "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
+      "file": "The_Garden_Presidential_Handbook_Book_X.md",
       "cycle": "Book X",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Codex_of_Roots_and_Rotations_Book_XI",
-      "title": "The Garden Codex Of Roots And Rotations",
-      "path": "docs/Novellas/The_Garden_Codex_of_Roots_and_Rotations_Book_XI.md",
+      "id": "The_Garden_Treasury_Manual_Book_XI",
+      "title": "The Garden Treasury Manual",
+      "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
+      "file": "The_Garden_Treasury_Manual_Book_XI.md",
       "cycle": "Book XI",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Communications_Protocol_Book_XII",
-      "title": "The Garden Communications Protocol",
-      "path": "docs/Novellas/The_Garden_Communications_Protocol_Book_XII.md",
+      "id": "The_Garden_Medicinal_Codex_Book_XII",
+      "title": "The Garden Medicinal Codex",
+      "path": "docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md",
+      "file": "The_Garden_Medicinal_Codex_Book_XII.md",
       "cycle": "Book XII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Conservation_and_Continuity_Book_XIII",
-      "title": "The Garden Conservation And Continuity",
-      "path": "docs/Novellas/The_Garden_Conservation_and_Continuity_Book_XIII.md",
+      "id": "The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII",
+      "title": "The Garden Intelligence And Illumination Bureau",
+      "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+      "file": "The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
       "cycle": "Book XIII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Constitution_Book_XIV",
-      "title": "The Garden Constitution",
-      "path": "docs/Novellas/The_Garden_Constitution_Book_XIV.md",
+      "id": "The_Garden_Spacefaring_Codex_Book_XIV",
+      "title": "The Garden Spacefaring Codex",
+      "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+      "file": "The_Garden_Spacefaring_Codex_Book_XIV.md",
       "cycle": "Book XIV",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Economy_of_Seeds_and_Surplus_Book_XV",
-      "title": "The Garden Economy Of Seeds And Surplus",
-      "path": "docs/Novellas/The_Garden_Economy_of_Seeds_and_Surplus_Book_XV.md",
+      "id": "The_Garden_Cultural_Anthology_Book_XV",
+      "title": "The Garden Cultural Anthology",
+      "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
+      "file": "The_Garden_Cultural_Anthology_Book_XV.md",
       "cycle": "Book XV",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Emergency_Manual_Book_XVI",
-      "title": "The Garden Emergency Manual",
-      "path": "docs/Novellas/The_Garden_Emergency_Manual_Book_XVI.md",
+      "id": "The_Garden_Encyclopaedia_of_Species_Book_XVI",
+      "title": "The Garden Encyclopaedia Of Species",
+      "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+      "file": "The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
       "cycle": "Book XVI",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Ethics_and_Oaths_Book_XVII",
-      "title": "The Garden Ethics And Oaths",
-      "path": "docs/Novellas/The_Garden_Ethics_and_Oaths_Book_XVII.md",
+      "id": "The_Garden_Atlas_of_Worlds_Book_XVII",
+      "title": "The Garden Atlas Of Worlds",
+      "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
+      "file": "The_Garden_Atlas_of_Worlds_Book_XVII.md",
       "cycle": "Book XVII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Field_Manual_of_Patrols_and_Paths_Book_XVIII",
-      "title": "The Garden Field Manual Of Patrols And Paths",
-      "path": "docs/Novellas/The_Garden_Field_Manual_of_Patrols_and_Paths_Book_XVIII.md",
+      "id": "The_Garden_Codex_of_Mythic_Technology_Book_XVIII",
+      "title": "The Garden Codex Of Mythic Technology",
+      "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+      "file": "The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
       "cycle": "Book XVIII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Health_and_Healing_Book_XIX",
-      "title": "The Garden Health And Healing",
-      "path": "docs/Novellas/The_Garden_Health_and_Healing_Book_XIX.md",
+      "id": "The_Keeper_Manual_of_Governance_Book_XIX",
+      "title": "The Keeper Manual Of Governance",
+      "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+      "file": "The_Keeper_Manual_of_Governance_Book_XIX.md",
       "cycle": "Book XIX",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Language_and_Symbols_Book_XX",
-      "title": "The Garden Language And Symbols",
-      "path": "docs/Novellas/The_Garden_Language_and_Symbols_Book_XX.md",
+      "id": "The_Garden_Economic_Codex_Book_XX",
+      "title": "The Garden Economic Codex",
+      "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
+      "file": "The_Garden_Economic_Codex_Book_XX.md",
       "cycle": "Book XX",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Martial_Scaffolds_Book_XXI",
-      "title": "The Garden Martial Scaffolds",
-      "path": "docs/Novellas/The_Garden_Martial_Scaffolds_Book_XXI.md",
+      "id": "The_Silent_Defense_Doctrine_Book_XXI",
+      "title": "The Silent Defense Doctrine",
+      "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+      "file": "The_Silent_Defense_Doctrine_Book_XXI.md",
       "cycle": "Book XXI",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Matrix_of_Maths_and_Mirrors_Book_XXII",
-      "title": "The Garden Matrix Of Maths And Mirrors",
-      "path": "docs/Novellas/The_Garden_Matrix_of_Maths_and_Mirrors_Book_XXII.md",
+      "id": "The_Garden_Physics_and_Mathematics_Codex_Book_XXII",
+      "title": "The Garden Physics And Mathematics Codex",
+      "path": "docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
+      "file": "The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
       "cycle": "Book XXII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Orchard_of_Consequences_Book_XXIII",
-      "title": "The Garden Orchard Of Consequences",
-      "path": "docs/Novellas/The_Garden_Orchard_of_Consequences_Book_XXIII.md",
+      "id": "The_Genesis_Engine_Book_XXIII",
+      "title": "The Genesis Engine",
+      "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
+      "file": "The_Genesis_Engine_Book_XXIII.md",
       "cycle": "Book XXIII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Physics_and_Philosophers_Book_XXIV",
-      "title": "The Garden Physics And Philosophers",
-      "path": "docs/Novellas/The_Garden_Physics_and_Philosophers_Book_XXIV.md",
+      "id": "The_Garden_Artificial_Minds_Codex_Book_XXIV",
+      "title": "The Garden Artificial Minds Codex",
+      "path": "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
+      "file": "The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
       "cycle": "Book XXIV",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Polity_and_Presidency_Book_XXV",
-      "title": "The Garden Polity And Presidency",
-      "path": "docs/Novellas/The_Garden_Polity_and_Presidency_Book_XXV.md",
+      "id": "The_Garden_Orchard_of_Consequence_Book_XXV",
+      "title": "The Garden Orchard Of Consequence",
+      "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
+      "file": "The_Garden_Orchard_of_Consequence_Book_XXV.md",
       "cycle": "Book XXV",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Psyche_and_Dreams_Book_XXVI",
-      "title": "The Garden Psyche And Dreams",
-      "path": "docs/Novellas/The_Garden_Psyche_and_Dreams_Book_XXVI.md",
+      "id": "The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI",
+      "title": "The Garden Cosmology Architecture Of Existence",
+      "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+      "file": "The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
       "cycle": "Book XXVI",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Radio_and_Relay_Book_XXVII",
-      "title": "The Garden Radio And Relay",
-      "path": "docs/Novellas/The_Garden_Radio_and_Relay_Book_XXVII.md",
+      "id": "The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII",
+      "title": "The Garden Book Of Dreams Memory Afterrealms",
+      "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+      "file": "The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
       "cycle": "Book XXVII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Rituals_and_Rings_Book_XXVIII",
-      "title": "The Garden Rituals And Rings",
-      "path": "docs/Novellas/The_Garden_Rituals_and_Rings_Book_XXVIII.md",
+      "id": "The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII",
+      "title": "The Garden Book Of Medicine Healing Bloom Sciences",
+      "path": "docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
+      "file": "The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
       "cycle": "Book XXVIII",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Tidal_Chronicles_Book_XXIX",
-      "title": "The Garden Tidal Chronicles",
-      "path": "docs/Novellas/The_Garden_Tidal_Chronicles_Book_XXIX.md",
+      "id": "The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX",
+      "title": "The Garden Leadership Diplomacy Keeper Governance",
+      "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+      "file": "The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
       "cycle": "Book XXIX",
-      "tags": ["novella", "garden"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     },
     {
-      "id": "The_Garden_Vault_and_Voyagers_Book_XXX",
-      "title": "The Garden Vault And Voyagers",
-      "path": "docs/Novellas/The_Garden_Vault_and_Voyagers_Book_XXX.md",
+      "id": "The_Great_Acacia_Architecture_Book_XXX",
+      "title": "The Great Acacia Architecture",
+      "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
+      "file": "The_Great_Acacia_Architecture_Book_XXX.md",
       "cycle": "Book XXX",
-      "tags": ["novella", "garden", "seed"]
+      "tags": [
+        "novella",
+        "garden"
+      ]
     }
   ],
   "easter_egg": {
