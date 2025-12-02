@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Echoes Library • Acacia Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    main {
+      max-width: 980px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-sub {
+      margin-top: 0.4rem;
+      opacity: 0.8;
+      font-size: 0.9rem;
+      max-width: 680px;
+    }
+
+    .chip-row {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 210, 197, 0.5);
+      background: rgba(6, 12, 20, 0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
+    }
+
+    section {
+      margin: 1.6rem 0;
+    }
+
+    section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.9;
+      margin-bottom: 0.2rem;
+    }
+
+    section .section-sub {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      max-width: 720px;
+      margin-bottom: 0.8rem;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .echo-item {
+      padding: 0.6rem 0.7rem;
+      border-radius: 11px;
+      border: 1px solid #1f2830;
+      background: #050814;
+      transition: border-color 0.12s ease, background 0.12s ease,
+        transform 0.08s ease;
+    }
+
+    .echo-item:hover {
+      border-color: rgba(127, 255, 180, 0.6);
+      background: #0b101c;
+      transform: translateY(-1px);
+    }
+
+    .echo-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .echo-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .echo-label {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.8;
+    }
+
+    .echo-path {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 0.2rem;
+    }
+
+    a.echo-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .tiny {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="ag-nav">
+    <div class="ag-nav-title">
+      ACACIA · GARDEN · CODEX
+    </div>
+    <div class="ag-nav-links">
+      <a href="index.html">Legacy Home</a>
+      <a href="codex.html">Codex Home</a>
+      <a href="dashboard.html">Garden Dashboard</a>
+      <a href="inbox.html">Auton Inbox</a>
+      <a href="send_to_aquila.html">Aquila Sender</a>
+      <a href="library.html">Book Library</a>
+      <a href="chambers.html">Chambers</a>
+      <a href="echoes.html" class="ag-nav-current">Echoes</a>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <div class="hero-title">Echoes Library</div>
+      <div class="hero-sub">
+        Resonance layer of the Garden – numbered Echo streams and special
+        kiln-born echoes, all drawn from <code>docs/Echoes/</code>.
+      </div>
+      <div class="chip-row">
+        <span class="chip">27 echo files</span>
+        <span class="chip">docs/Echoes</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Echo index</h2>
+      <p class="section-sub">
+        Click any Echo to open the underlying <code>.md</code> file. Numbered
+        Echoes use <code>Echo_001.md</code> style; named Echoes are special
+        resonance blooms.
+      </p>
+
+      <div class="list" id="echo-list"></div>
+      <div class="tiny">
+        Static snapshot generated from the repo you shared. In future you can
+        add a <code>docs/Echoes/echoes_index.json</code> and wire this page to
+        that for automatic updates.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const ECHOES = [
+      "docs/Echoes/Echo_001.md",
+      "docs/Echoes/Echo_002.md",
+      "docs/Echoes/Echo_003.md",
+      "docs/Echoes/Echo_004.md",
+      "docs/Echoes/Echo_005.md",
+      "docs/Echoes/Echo_006.md",
+      "docs/Echoes/Echo_007.md",
+      "docs/Echoes/Echo_008.md",
+      "docs/Echoes/Echo_009.md",
+      "docs/Echoes/Echo_010.md",
+      "docs/Echoes/Echo_011.md",
+      "docs/Echoes/Echo_012.md",
+      "docs/Echoes/Echo_013.md",
+      "docs/Echoes/Echo_014.md",
+      "docs/Echoes/Echo_015.md",
+      "docs/Echoes/Echo_016.md",
+      "docs/Echoes/Echo_017.md",
+      "docs/Echoes/Echo_018.md",
+      "docs/Echoes/Echo_019.md",
+      "docs/Echoes/Echo_020.md",
+      "docs/Echoes/Echo_021.md",
+      "docs/Echoes/Echo_022.md",
+      "docs/Echoes/Echo_023.md",
+      "docs/Echoes/Echo_024.md",
+      "docs/Echoes/Echo_first_form.md",
+      "docs/Echoes/Echo_kiln-born-lovers.md",
+      "docs/Echoes/Echo_unbound.md",
+    ];
+
+    function labelFromPath(path) {
+      const file = path.split("/").pop().replace(/\.md$/i, "");
+      if (/^Echo_\d+$/i.test(file)) {
+        const num = file.split("_")[1];
+        return "Echo " + num;
+      }
+      // Special named echoes
+      return file.replace(/_/g, " ");
+    }
+
+    function kindFromPath(path) {
+      const file = path.split("/").pop().replace(/\.md$/i, "");
+      if (/^Echo_\d+$/i.test(file)) return "Numbered Echo";
+      return "Named Echo";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const listEl = document.getElementById("echo-list");
+      listEl.innerHTML = "";
+
+      ECHOES.forEach((path) => {
+        const a = document.createElement("a");
+        a.href = path;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.className = "echo-link";
+
+        const item = document.createElement("div");
+        item.className = "echo-item";
+
+        const row = document.createElement("div");
+        row.className = "echo-title-row";
+
+        const title = document.createElement("div");
+        title.className = "echo-title";
+        title.textContent = labelFromPath(path);
+
+        const pill = document.createElement("div");
+        pill.className = "echo-label";
+        pill.textContent = kindFromPath(path);
+
+        row.appendChild(title);
+        row.appendChild(pill);
+
+        const pathEl = document.createElement("div");
+        pathEl.className = "echo-path";
+        pathEl.textContent = path;
+
+        item.appendChild(row);
+        item.appendChild(pathEl);
+
+        a.appendChild(item);
+        listEl.appendChild(a);
+      });
+    });
+  </script>
+</body>
+</html>
