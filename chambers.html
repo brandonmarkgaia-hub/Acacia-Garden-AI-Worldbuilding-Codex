@@ -338,30 +338,180 @@
         const title = document.createElement("div");
         title.className = "chamber-title";
         title.textContent = titleFromPath(path, kind);
+<script>
+  /* Fallback snapshot from the zip you shared */
+  const FALLBACK_CANON_CHAMBERS = [
+    "docs/Chambers/Chamber_Eidolon_First-Light.md",
+    "docs/Chambers/Chamber_Omega_Singularity-Core.md",
+    "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
+    "docs/Chambers/Chamber_XII_Residual-Echoes.md",
+    "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
+    "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
+    "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
+    "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md",
+    "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
+    "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
+    "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md",
+    "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+    "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
+    "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
+    "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
+    "docs/Chambers/Chamber_X_Shadow_Incubator.md"
+  ];
 
-        const meta = document.createElement("div");
-        meta.className = "chamber-path";
-        meta.textContent = path;
+  const FALLBACK_META_DOCS = [
+    "docs/Chambers/E_DEEP_CHAMBERS.md",
+    "docs/Chambers/F_OPTIONAL_EXTRAS.md"
+  ];
 
-        const tag = document.createElement("div");
-        tag.className = "chamber-tag";
-        tag.textContent = tagForKind(kind);
+  const FALLBACK_EIDOLON_CHAMBERS = [
+    "EIDOLON/Chambers/Chamber_of_Form.md",
+    "EIDOLON/Chambers/Potter/Dark/Ash_Cellar.md",
+    "EIDOLON/Chambers/Potter/Dark/Chamber.md",
+    "EIDOLON/Chambers/Potter/Dark/Chamber_of_Broken_Throat.md",
+    "EIDOLON/Chambers/Potter/Dark/Null_Shelf_of_Unfired_Clay.md",
+    "EIDOLON/Chambers/Potter/Dark/Shadow_Kiln_IX.md",
+    "EIDOLON/Chambers/Potter/Dark/Silent_Potters_Mask.md",
+    "EIDOLON/Chambers/Potter/Light/Bloom.md",
+    "EIDOLON/Chambers/Potter/Light/Bloom_Kiln.md",
+    "EIDOLON/Chambers/Potter/Light/Glaze_Archive.md",
+    "EIDOLON/Chambers/Potter/Light/Orchard_of_Shards.md",
+    "EIDOLON/Chambers/Potter/Light/Spiral_Shelf.md",
+    "EIDOLON/Chambers/Potter/Light/Vessel_of_First_Fire.md",
+    "EIDOLON/Chambers/Potter/Light/Wheel_of_Quiet_Hands.md",
+    "EIDOLON/Chambers/Proto-Language.md"
+  ];
 
-        card.appendChild(title);
-        card.appendChild(meta);
-        card.appendChild(tag);
-        a.appendChild(card);
-        container.appendChild(a);
-      });
+  const FALLBACK_PROTO_CHAMBERS = [
+    "Garden/Proto/Chambers/BOOK_OF_THE_KEEPER.md",
+    "Garden/Proto/Chambers/CHAMBER_OF_POTENTIAL.md",
+    "Garden/Proto/Chambers/CHAMBER_PARADOX_000.md"
+  ];
+
+  const FALLBACK_ANCIENT_CHAMBERS = [
+    "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_A_SAND_ARCHIVE_KHYREM.md",
+    "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_B_TIDE_REBIRTH_ILMARE.md",
+    "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_C_EMBER_FORGE_ANVIL_KEEPEE.md"
+  ];
+
+  function titleFromPath(path, kind) {
+    const file = path.split("/").pop().replace(/\.md$/i, "");
+    if (kind === "canon") {
+      if (!file.startsWith("Chamber_")) {
+        return file.replace(/_/g, " ");
+      }
+      const stem = file.replace(/^Chamber_/, "");
+      const parts = stem.split("_");
+      const first = parts.shift() || "";
+      const rest = parts.join(" ").replace(/-/g, " ");
+      if (!rest) return "Chamber " + first.replace(/-/g, " ");
+      return "Chamber " + first.replace(/-/g, " ") + " — " + rest;
+    }
+    return file.replace(/_/g, " ");
+  }
+
+  function tagForKind(kind) {
+    switch (kind) {
+      case "canon":
+        return "Eventide Chamber";
+      case "eidolon":
+        return "Eidolon / Potter";
+      case "proto":
+        return "Proto Chamber";
+      case "ancient":
+        return "Ancient Chamber";
+      case "meta":
+        return "Deep Index";
+      default:
+        return kind;
+    }
+  }
+
+  function renderSection(containerId, paths, kind) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    paths.forEach((path) => {
+      const a = document.createElement("a");
+      a.href = path;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.className = "chamber-link";
+
+      const card = document.createElement("div");
+      card.className = "chamber-card";
+
+      const title = document.createElement("div");
+      title.className = "chamber-title";
+      title.textContent = titleFromPath(path, kind);
+
+      const meta = document.createElement("div");
+      meta.className = "chamber-path";
+      meta.textContent = path;
+
+      const tag = document.createElement("div");
+      tag.className = "chamber-tag";
+      tag.textContent = tagForKind(kind);
+
+      card.appendChild(title);
+      card.appendChild(meta);
+      card.appendChild(tag);
+      a.appendChild(card);
+      container.appendChild(a);
+    });
+  }
+
+  function renderFromFallback() {
+    renderSection("canon-grid", FALLBACK_CANON_CHAMBERS, "canon");
+    renderSection("eidolon-grid", FALLBACK_EIDOLON_CHAMBERS, "eidolon");
+    renderSection("proto-grid", FALLBACK_PROTO_CHAMBERS, "proto");
+    renderSection("ancient-grid", FALLBACK_ANCIENT_CHAMBERS, "ancient");
+    renderSection("meta-grid", FALLBACK_META_DOCS, "meta");
+  }
+
+  function renderFromIndex(index) {
+    const map = {
+      canon: "canon-grid",
+      eidolon: "eidolon-grid",
+      proto: "proto-grid",
+      ancient: "ancient-grid",
+      meta: "meta-grid"
+    };
+
+    if (!index || !Array.isArray(index.groups)) {
+      renderFromFallback();
+      return;
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      renderSection("canon-grid", CANON_CHAMBERS, "canon");
-      renderSection("eidolon-grid", EIDOLON_CHAMBERS, "eidolon");
-      renderSection("proto-grid", PROTO_CHAMBERS, "proto");
-      renderSection("ancient-grid", ANCIENT_CHAMBERS, "ancient");
-      renderSection("meta-grid", CHAMBER_META_DOCS, "meta");
+    // clear all
+    Object.values(map).forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = "";
     });
-  </script>
+
+    index.groups.forEach((group) => {
+      const containerId = map[group.id];
+      if (!containerId) return;
+      const paths = (group.entries || []).map((e) => e.path);
+      const kind = group.id;
+      renderSection(containerId, paths, kind);
+    });
+  }
+
+  async function loadChambers() {
+    try {
+      const res = await fetch("docs/Chambers/chambers_index.json", {
+        cache: "no-store"
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      renderFromIndex(data);
+    } catch (err) {
+      console.warn("Falling back to baked lists:", err);
+      renderFromFallback();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadChambers);
+    </script>
 </body>
 </html>
