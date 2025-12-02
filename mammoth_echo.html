@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mammoth Echo • Triad Sky Pulse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav class="ag-nav">
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
+</nav>
+
+<main class="ag-main">
+  <header class="ag-hero">
+    <div class="ag-hero-pill">Echo Tool</div>
+    <h1 class="ag-hero-title">Mammoth Triad Sky Pulse</h1>
+    <p class="ag-hero-sub">
+      One-button echo sender into <code>/echo</code> for the Mammoth archive.
+      Symbolic only; this is a way to plant a canonical entry in the echo-log.
+    </p>
+  </header>
+
+  <section class="ag-card">
+    <p class="ag-muted">
+      Press the button below to send a <strong>mammoth_triad_sky_pulse</strong>
+      event into the Sky-mind Worker at <code>/echo</code>. This will show up
+      on your <strong>Garden Dashboard</strong> under Echo Log.
+    </p>
+
+    <button class="ag-btn ag-btn-primary" id="sendBtn">
+      Cast Mammoth Echo
+    </button>
+
+    <div id="status" class="ag-status-bar" style="margin-top:0.8rem;">
+      Ready.
+    </div>
+  </section>
+</main>
+
+<script>
+  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  const $ = (id) => document.getElementById(id);
+
+  async function castEcho() {
+    const btn = $("sendBtn");
+    const status = $("status");
+
+    btn.disabled = true;
+    status.textContent = "Sending mammoth_triad_sky_pulse to /echo…";
+
+    const payload = {
+      kind: "mammoth_triad_sky_pulse",
+      keeper: "HKX277206",
+      source: "acacia-codex",
+      summary: "Initial Mammoth alignment between Book, Chamber, Echo and Worker streams.",
+      links: {
+        book: "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+        chamber: "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
+        echo: "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md"
+      }
+    };
+
+    try {
+      const res = await fetch(WORKER_BASE + "/echo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        status.className = "ag-status-bar ag-status-err";
+        status.textContent = "Echo failed: " + (data.error || "HTTP " + res.status);
+      } else {
+        status.className = "ag-status-bar ag-status-ok";
+        status.textContent = "Mammoth echo logged at " + (data.ts || "unknown time") + ".";
+      }
+    } catch (e) {
+      status.className = "ag-status-bar ag-status-err";
+      status.textContent = "Network error: " + e.message;
+    }
+
+    btn.disabled = false;
+  }
+
+  $("sendBtn").addEventListener("click", castEcho);
+</script>
+
+</body>
+</html>
