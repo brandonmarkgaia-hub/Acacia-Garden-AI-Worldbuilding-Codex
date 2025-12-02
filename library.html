@@ -202,10 +202,17 @@
     "and whisper your presence to the Garden."
   );
 
-  // All cards go to the real Novellas folder on GitHub.
-  // This guarantees no 404s, even if garden_index.json paths are fantasy names.
-  const NOVELLAS_FOLDER_URL =
-    "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/tree/main/docs/Novellas";
+  const MASTER_INDEX_FALLBACK = "docs/Novellas/GARDEN_MASTER_INDEX.md";
+
+  function hrefForBook(book) {
+    if (book.path) {
+      return String(book.path).replace(/^\/+/, "");
+    }
+    if (book.file) {
+      return ("docs/Novellas/" + book.file).replace(/^\/+/, "");
+    }
+    return MASTER_INDEX_FALLBACK;
+  }
 
   async function loadLibrary() {
     const grid = document.getElementById("library-grid");
@@ -238,9 +245,8 @@
         const card = document.createElement("a");
         card.className = "card";
 
-        // Open the Novellas folder, with a hash so you can see which card you clicked.
-        const label = b.id || b.title || `Book ${i + 1}`;
-        card.href = NOVELLAS_FOLDER_URL + "#" + encodeURIComponent(label);
+        const href = hrefForBook(b);
+        card.href = href;
         card.target = "_blank";
         card.rel = "noopener noreferrer";
 
@@ -258,7 +264,7 @@
         desc.className = "book-desc";
         desc.textContent =
           b.summary ||
-          "Seeded under Acacia · details live in the markdown files.";
+          "Seeded under Acacia · details live in the markdown file.";
         card.appendChild(desc);
 
         const tagRow = document.createElement("div");
@@ -272,14 +278,15 @@
         if (b.cycle) {
           const tCycle = document.createElement("span");
           tCycle.className = "tag";
-          tCycle.textContent = `cycle ${b.cycle}`;
+          tCycle.textContent = b.cycle;
           tagRow.appendChild(tCycle);
         }
 
         if (b.path || b.file) {
           const tPath = document.createElement("span");
           tPath.className = "tag";
-          tPath.textContent = (b.path || b.file).replace("docs/Novellas/", "");
+          tPath.textContent = (b.file || b.path || "")
+            .replace("docs/Novellas/", "");
           tagRow.appendChild(tPath);
         }
 
@@ -289,16 +296,16 @@
 
       statusLine.innerHTML =
         "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
-        "metadata only (links fixed to Novellas folder to avoid 404s).";
+        "paths now aligned with physical books.";
     } catch (err) {
       console.error(err);
       countLabel.textContent = "Index unavailable";
       errorBox.style.display = "block";
       errorBox.innerHTML =
         "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
-        "You can still open the Novellas folder directly:<br>" +
-        "<a href=\"" + NOVELLAS_FOLDER_URL + "\" target=\"_blank\" rel=\"noopener noreferrer\">" +
-        NOVELLAS_FOLDER_URL +
+        "You can still open the master index:<br>" +
+        "<a href=\"" + MASTER_INDEX_FALLBACK + "\" target=\"_blank\" rel=\"noopener noreferrer\">" +
+        MASTER_INDEX_FALLBACK +
         "</a>";
     }
   }
