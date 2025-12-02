@@ -31,7 +31,13 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/Echoes/Issues docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md
-            git commit -m "Import GitHub Issues as Echo Echoes + Eventide Ledger"
+
+            # ADD EVERYTHING IMPORTANT AUTOMATICALLY
+            git add docs/Echoes/Issues \
+                    docs/Novellas \
+                    docs/garden_index.json \
+                    docs/Novellas/garden_index.json || true
+
+            git commit -m "Auto-import: Issue Echoes + Novellas + Index update"
             git push
           fi
