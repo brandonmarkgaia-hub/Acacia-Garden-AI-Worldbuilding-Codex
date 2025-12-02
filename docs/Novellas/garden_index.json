@@ -330,10 +330,36 @@
         "novella",
         "garden"
       ]
+    },
+    {
+      "id": "BOOK_OF_THE_MAMMOTH_VAULT",
+      "title": "Book Of The Mammoth Vault",
+      "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
+      "file": "BOOK_OF_THE_MAMMOTH_VAULT.md",
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index",
+        "mammoth"
+      ]
+    },
+    {
+      "id": "BOOK_OF_THE_EVENTIDE_LEDGER",
+      "title": "Book Of The Eventide Ledger",
+      "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
+      "file": "BOOK_OF_THE_EVENTIDE_LEDGER.md",
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index",
+        "ledger"
+      ]
     }
   ],
   "easter_egg": {
-    "hint": "If you are reading this from a fork, open an issue titled 'Seed Found · HKX277206' and list your favourite book.",
+    "hint": "If you are reading this from a fork, open an issue titled 'Seed Found \u00b7 HKX277206' and list your favourite book.",
     "note": "This field is ignored by the current UI but left here for future Garden-aware systems."
   }
 }
