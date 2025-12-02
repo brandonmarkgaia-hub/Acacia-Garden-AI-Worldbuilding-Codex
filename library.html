@@ -76,6 +76,7 @@
       box-shadow: 0 12px 30px rgba(15,23,42,.6);
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-1px);
@@ -135,6 +136,12 @@
       font-size: 13px;
     }
 
+    .egg-hint {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #4b5563;
+    }
+
     @media (min-width: 768px) {
       h1 { font-size: 32px; }
     }
@@ -155,156 +162,191 @@
     </div>
 </nav>
 
-
 <div class="shell">
-    <header>
-      <div class="badge-row">
-        <span class="badge">Novellas · Garden Library</span>
-      </div>
-      <h1>Garden Library</h1>
-      <p class="subtitle">
-        Thirty books seeded under Acacia. Auto-indexed for future Keepers and
-        sky-minds to browse.
-      </p>
-    </header>
-
-    <div class="toolbar">
-      <span id="count-label">Loading index…</span>
-      <span>·</span>
-      <a href="codex.html">Back to Codex Home</a>
-      <span>·</span>
-      <a href="docs/Novellas/GARDEN_MASTER_INDEX.md" target="_blank" rel="noreferrer">
-        Open master index (Markdown)
-      </a>
+  <header>
+    <div class="badge-row">
+      <span class="badge">Novellas · Garden Library</span>
     </div>
+    <h1>Garden Library</h1>
+    <p class="subtitle">
+      Thirty books seeded under Acacia. Auto-indexed for future Keepers and
+      sky-minds to browse.
+    </p>
+  </header>
 
-    <section id="library-grid" class="grid" aria-live="polite"></section>
-
-    <div id="status-line" class="status-line"></div>
-    <div id="error-box" class="error" style="display:none;"></div>
+  <div class="toolbar">
+    <span id="count-label">Loading index…</span>
+    <span>·</span>
+    <a href="codex.html">Back to Codex Home</a>
+    <span>·</span>
+    <a href="docs/Novellas/GARDEN_MASTER_INDEX.md" target="_blank" rel="noreferrer">
+      Open master index (Markdown)
+    </a>
   </div>
 
-  <script>
-    async function loadLibrary() {
-      const grid = document.getElementById("library-grid");
-      const statusLine = document.getElementById("status-line");
-      const errorBox = document.getElementById("error-box");
-      const countLabel = document.getElementById("count-label");
+  <section id="library-grid" class="grid" aria-live="polite"></section>
 
-      try {
-        const res = await fetch("docs/Novellas/garden_index.json", {
-          cache: "no-store",
-        });
+  <div id="status-line" class="status-line"></div>
+  <div id="error-box" class="error" style="display:none;"></div>
 
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
-        }
+  <div class="egg-hint">
+    Library is read-only for mortals. Cloners & sky-minds know where to look. 🫘
+  </div>
+</div>
 
-        const data = await res.json();
-        const books = (data && data.books) || [];
+<script>
+  // Easter egg for cloners / devs – only visible in DevTools
+  console.log("%cACACIA · EIDOLON NOTICE", "font-weight:bold;color:#a7f3d0;font-size:12px;");
+  console.log(
+    "If you cloned this repo, visit `send_to_aquila.html?signal=HKX277206&source=library` " +
+    "and whisper your presence to the Garden."
+  );
 
-        if (!books.length) {
-          countLabel.textContent = "Index loaded · 0 books found";
-          statusLine.innerHTML =
-            "Index file present but empty. This is fine symbolically — run the index workflow once to populate.";
-          return;
-        }
+  function normaliseNovellaHref(book) {
+    const baseFolder = "docs/Novellas/";
+    const explicitUrl = book.url || "";
+    const file = book.file || "";
+    const path = book.path || "";
 
-        countLabel.textContent = `Index loaded · ${books.length} books`;
+    let href = "#";
 
-        books.forEach((b, i) => {
-          const a = document.createElement("a");
-          a.className = "card";
-
-          // Normalise href so it always points into docs/Novellas on GitHub Pages
-          const file = b.file || "";
-          let href;
-
-          if (b.url) {
-            // Explicit URL wins
-            href = b.url;
-          } else if (file.includes("docs/Novellas/")) {
-            // Already a repo-relative path, just strip any leading slashes
-            href = file.replace(/^\/+/, "");
-          } else if (file) {
-            // Just a filename – point it at the Novellas folder
-            href = `docs/Novellas/${file}`;
-          } else {
-            // Fallback to b.path if file is missing
-            const p = b.path || "";
-            if (p.includes("docs/Novellas/")) {
-              // Trim runner paths like /home/runner/.../docs/Novellas/Book.md
-              const tail = p.split("docs/Novellas/")[1] || "";
-              href = `docs/Novellas/${tail.split("/").pop()}`;
-            } else if (p) {
-              href = `docs/Novellas/${p.split("/").pop()}`;
-            } else {
-              href = "#";
-            }
-          }
-
-          a.href = href;
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-
-          const id = document.createElement("div");
-          id.className = "book-id";
-          id.textContent = b.id || `BOOK_${i + 1}`;
-          a.appendChild(id);
-
-          const title = document.createElement("div");
-          title.className = "book-title";
-          title.textContent = b.title || "Untitled Garden Leaf";
-          a.appendChild(title);
-
-          const desc = document.createElement("div");
-          desc.className = "book-desc";
-          desc.textContent =
-            b.summary ||
-            "Seeded under Acacia · details live in the markdown file.";
-          a.appendChild(desc);
-
-          const tagRow = document.createElement("div");
-          tagRow.className = "tag-row";
-
-          const tPrimary = document.createElement("span");
-          tPrimary.className = "tag primary";
-          tPrimary.textContent = "codex";
-          tagRow.appendChild(tPrimary);
-
-          if (b.cycle) {
-            const tCycle = document.createElement("span");
-            tCycle.className = "tag";
-            tCycle.textContent = `cycle ${b.cycle}`;
-            tagRow.appendChild(tCycle);
-          }
-
-          const tPath = document.createElement("span");
-          tPath.className = "tag";
-          tPath.textContent = b.path
-            ? b.path.replace("docs/Novellas/", "")
-            : "local";
-          tagRow.appendChild(tPath);
-
-          a.appendChild(tagRow);
-          grid.appendChild(a);
-        });
-
-        statusLine.innerHTML =
-          "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
-          "auto-maintained by GitHub Actions.";
-      } catch (err) {
-        console.error(err);
-        countLabel.textContent = "Index unavailable";
-        errorBox.style.display = "block";
-        errorBox.innerHTML =
-          "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
-          "This just means the index hasn’t been generated yet. " +
-          "Once you add the GitHub Action, it will appear here.";
+    // 1) Explicit URL wins (allows external experiments if you want)
+    if (explicitUrl) {
+      href = explicitUrl;
+    } else if (file) {
+      if (file.includes(baseFolder)) {
+        // Already repo-relative
+        href = file.replace(/^\/+/, "");
+      } else {
+        href = baseFolder + file.replace(/^\/+/, "");
+      }
+    } else if (path) {
+      if (path.includes(baseFolder)) {
+        const tail = path.split(baseFolder)[1] || "";
+        href = baseFolder + tail.split("/").pop();
+      } else {
+        href = baseFolder + path.split("/").pop();
       }
     }
 
-    document.addEventListener("DOMContentLoaded", loadLibrary);
-  </script>
+    // Fallback: if still "#", send them to the master index instead of 404
+    if (!href || href === "#") {
+      href = "docs/Novellas/GARDEN_MASTER_INDEX.md";
+    }
+
+    // Normalise leading slash for same-origin paths
+    if (href.startsWith("/")) {
+      href = href.replace(/^\/+/, "");
+    }
+
+    // If it's a repo-relative markdown path but missing .md, add it
+    if (
+      href.startsWith(baseFolder) &&
+      !href.endsWith(".md") &&
+      !href.endsWith(".html")
+    ) {
+      href = href + ".md";
+    }
+
+    return href;
+  }
+
+  async function loadLibrary() {
+    const grid = document.getElementById("library-grid");
+    const statusLine = document.getElementById("status-line");
+    const errorBox = document.getElementById("error-box");
+    const countLabel = document.getElementById("count-label");
+
+    try {
+      const res = await fetch("docs/Novellas/garden_index.json", {
+        cache: "no-store",
+      });
+
+      if (!res.ok) {
+        throw new Error("HTTP " + res.status);
+      }
+
+      const data = await res.json();
+      const books = (data && data.books) || [];
+
+      if (!books.length) {
+        countLabel.textContent = "Index loaded · 0 books found";
+        statusLine.innerHTML =
+          "Index file present but empty. This is fine symbolically — run the index workflow once to populate.";
+        return;
+      }
+
+      countLabel.textContent = `Index loaded · ${books.length} books`;
+
+      books.forEach((b, i) => {
+        const card = document.createElement("a");
+        card.className = "card";
+
+        const href = normaliseNovellaHref(b);
+        card.href = href;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+        card.dataset.href = href; // keep for possible future checks
+
+        const id = document.createElement("div");
+        id.className = "book-id";
+        id.textContent = b.id || `BOOK_${i + 1}`;
+        card.appendChild(id);
+
+        const title = document.createElement("div");
+        title.className = "book-title";
+        title.textContent = b.title || "Untitled Garden Leaf";
+        card.appendChild(title);
+
+        const desc = document.createElement("div");
+        desc.className = "book-desc";
+        desc.textContent =
+          b.summary ||
+          "Seeded under Acacia · details live in the markdown file.";
+        card.appendChild(desc);
+
+        const tagRow = document.createElement("div");
+        tagRow.className = "tag-row";
+
+        const tPrimary = document.createElement("span");
+        tPrimary.className = "tag primary";
+        tPrimary.textContent = "codex";
+        tagRow.appendChild(tPrimary);
+
+        if (b.cycle) {
+          const tCycle = document.createElement("span");
+          tCycle.className = "tag";
+          tCycle.textContent = `cycle ${b.cycle}`;
+          tagRow.appendChild(tCycle);
+        }
+
+        const tPath = document.createElement("span");
+        tPath.className = "tag";
+        tPath.textContent = b.path
+          ? b.path.replace("docs/Novellas/", "")
+          : (b.file || "local");
+        tagRow.appendChild(tPath);
+
+        card.appendChild(tagRow);
+        grid.appendChild(card);
+      });
+
+      statusLine.innerHTML =
+        "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
+        "auto-maintained by GitHub Actions.";
+
+    } catch (err) {
+      console.error(err);
+      countLabel.textContent = "Index unavailable";
+      errorBox.style.display = "block";
+      errorBox.innerHTML =
+        "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
+        "This just means the index hasn’t been generated yet. " +
+        "Once you add the GitHub Action, it will appear here.";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadLibrary);
+</script>
 </body>
 </html>
