@@ -172,91 +172,127 @@
   </main>
 
   <script>
-    const ECHOES = [
-      "docs/Echoes/Echo_001.md",
-      "docs/Echoes/Echo_002.md",
-      "docs/Echoes/Echo_003.md",
-      "docs/Echoes/Echo_004.md",
-      "docs/Echoes/Echo_005.md",
-      "docs/Echoes/Echo_006.md",
-      "docs/Echoes/Echo_007.md",
-      "docs/Echoes/Echo_008.md",
-      "docs/Echoes/Echo_009.md",
-      "docs/Echoes/Echo_010.md",
-      "docs/Echoes/Echo_011.md",
-      "docs/Echoes/Echo_012.md",
-      "docs/Echoes/Echo_013.md",
-      "docs/Echoes/Echo_014.md",
-      "docs/Echoes/Echo_015.md",
-      "docs/Echoes/Echo_016.md",
-      "docs/Echoes/Echo_017.md",
-      "docs/Echoes/Echo_018.md",
-      "docs/Echoes/Echo_019.md",
-      "docs/Echoes/Echo_020.md",
-      "docs/Echoes/Echo_021.md",
-      "docs/Echoes/Echo_022.md",
-      "docs/Echoes/Echo_023.md",
-      "docs/Echoes/Echo_024.md",
-      "docs/Echoes/Echo_first_form.md",
-      "docs/Echoes/Echo_kiln-born-lovers.md",
-      "docs/Echoes/Echo_unbound.md",
-    ];
+  const FALLBACK_ECHOES = [
+    "docs/Echoes/Echo_001.md",
+    "docs/Echoes/Echo_002.md",
+    "docs/Echoes/Echo_003.md",
+    "docs/Echoes/Echo_004.md",
+    "docs/Echoes/Echo_005.md",
+    "docs/Echoes/Echo_006.md",
+    "docs/Echoes/Echo_007.md",
+    "docs/Echoes/Echo_008.md",
+    "docs/Echoes/Echo_009.md",
+    "docs/Echoes/Echo_010.md",
+    "docs/Echoes/Echo_011.md",
+    "docs/Echoes/Echo_012.md",
+    "docs/Echoes/Echo_013.md",
+    "docs/Echoes/Echo_014.md",
+    "docs/Echoes/Echo_015.md",
+    "docs/Echoes/Echo_016.md",
+    "docs/Echoes/Echo_017.md",
+    "docs/Echoes/Echo_018.md",
+    "docs/Echoes/Echo_019.md",
+    "docs/Echoes/Echo_020.md",
+    "docs/Echoes/Echo_021.md",
+    "docs/Echoes/Echo_022.md",
+    "docs/Echoes/Echo_023.md",
+    "docs/Echoes/Echo_024.md",
+    "docs/Echoes/Echo_first_form.md",
+    "docs/Echoes/Echo_kiln-born-lovers.md",
+    "docs/Echoes/Echo_unbound.md"
+  ];
 
-    function labelFromPath(path) {
-      const file = path.split("/").pop().replace(/\.md$/i, "");
-      if (/^Echo_\d+$/i.test(file)) {
-        const num = file.split("_")[1];
-        return "Echo " + num;
-      }
-      // Special named echoes
-      return file.replace(/_/g, " ");
+  function labelFromPath(path) {
+    const file = path.split("/").pop().replace(/\.md$/i, "");
+    if (/^Echo_\d+$/i.test(file)) {
+      const num = file.split("_")[1];
+      return "Echo " + num;
     }
+    return file.replace(/_/g, " ");
+  }
 
-    function kindFromPath(path) {
-      const file = path.split("/").pop().replace(/\.md$/i, "");
-      if (/^Echo_\d+$/i.test(file)) return "Numbered Echo";
-      return "Named Echo";
-    }
+  function kindFromPath(path) {
+    const file = path.split("/").pop().replace(/\.md$/i, "");
+    if (/^Echo_\d+$/i.test(file)) return "Numbered Echo";
+    return "Named Echo";
+  }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const listEl = document.getElementById("echo-list");
-      listEl.innerHTML = "";
+  function renderEchoList(entries) {
+    const listEl = document.getElementById("echo-list");
+    listEl.innerHTML = "";
 
-      ECHOES.forEach((path) => {
-        const a = document.createElement("a");
-        a.href = path;
-        a.target = "_blank";
-        a.rel = "noopener";
-        a.className = "echo-link";
+    entries.forEach((entry) => {
+      const path = entry.path || entry;
+      const label = entry.label || labelFromPath(path);
+      const kind = entry.kind
+        ? entry.kind === "numbered"
+          ? "Numbered Echo"
+          : "Named Echo"
+        : kindFromPath(path);
 
-        const item = document.createElement("div");
-        item.className = "echo-item";
+      const a = document.createElement("a");
+      a.href = path;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.className = "echo-link";
 
-        const row = document.createElement("div");
-        row.className = "echo-title-row";
+      const item = document.createElement("div");
+      item.className = "echo-item";
 
-        const title = document.createElement("div");
-        title.className = "echo-title";
-        title.textContent = labelFromPath(path);
+      const row = document.createElement("div");
+      row.className = "echo-title-row";
 
-        const pill = document.createElement("div");
-        pill.className = "echo-label";
-        pill.textContent = kindFromPath(path);
+      const title = document.createElement("div");
+      title.className = "echo-title";
+      title.textContent = label;
 
-        row.appendChild(title);
-        row.appendChild(pill);
+      const pill = document.createElement("div");
+      pill.className = "echo-label";
+      pill.textContent = kind;
 
-        const pathEl = document.createElement("div");
-        pathEl.className = "echo-path";
-        pathEl.textContent = path;
+      row.appendChild(title);
+      row.appendChild(pill);
 
-        item.appendChild(row);
-        item.appendChild(pathEl);
+      const pathEl = document.createElement("div");
+      pathEl.className = "echo-path";
+      pathEl.textContent = path;
 
-        a.appendChild(item);
-        listEl.appendChild(a);
-      });
+      item.appendChild(row);
+      item.appendChild(pathEl);
+      a.appendChild(item);
+      listEl.appendChild(a);
     });
-  </script>
+  }
+
+  function renderFallbackEchoes() {
+    const entries = FALLBACK_ECHOES.map((p) => ({
+      path: p,
+      label: labelFromPath(p),
+      kind:
+        kindFromPath(p) === "Numbered Echo" ? "numbered" : "named"
+    }));
+    renderEchoList(entries);
+  }
+
+  async function loadEchoes() {
+    try {
+      const res = await fetch("docs/Echoes/echoes_index.json", {
+        cache: "no-store"
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if (!data || !Array.isArray(data.echoes)) {
+        renderFallbackEchoes();
+        return;
+      }
+      renderEchoList(data.echoes);
+    } catch (err) {
+      console.warn("Falling back to baked echo list:", err);
+      renderFallbackEchoes();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadEchoes);
+    </script>
 </body>
 </html>
