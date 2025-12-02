@@ -2,344 +2,320 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Auton Inbox · Garden Signals</title>
+  <title>Auton Inbox • Garden Signals</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Simple shell that matches the dark Garden vibe */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-      color: #e5e7eb;
+    main {
+      max-width: 900px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
     }
-
-    .ag-shell {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .ag-main {
-      max-width: 1024px;
-      width: 100%;
-      margin: 5rem auto 3rem auto;
-      padding: 0 1.25rem 3rem 1.25rem;
-    }
-
-    .ag-pill-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .ag-pill-nav a {
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.38);
-      text-decoration: none;
-      font-size: 0.85rem;
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #e5e7eb;
-      white-space: nowrap;
     }
-
-    .ag-pill-nav a.ag-current {
-      background: linear-gradient(90deg, #22c55e, #38bdf8);
-      border-color: transparent;
-      color: #0b1120;
-      font-weight: 600;
-    }
-
-    .ag-section-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: clamp(2.1rem, 3vw, 2.6rem);
-      margin: 0 0 0.75rem 0;
-    }
-
-    .ag-sub {
-      color: #9ca3af;
-      max-width: 40rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .ag-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    @media (max-width: 800px) {
-      .ag-main {
-        margin-top: 3.5rem;
-      }
-      .ag-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .ag-card {
-      border-radius: 1.5rem;
-      padding: 1.5rem 1.4rem;
-      background: radial-gradient(circle at top left, #0b1120 0, #020617 70%);
-      border: 1px solid rgba(148, 163, 184, 0.28);
-      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.75);
-    }
-
-    .ag-card h2 {
-      font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 0.3rem;
-    }
-
-    .ag-card p {
+    .hero-sub {
+      margin-top: 0.4rem;
+      opacity: 0.85;
       font-size: 0.9rem;
-      color: #9ca3af;
-      line-height: 1.6;
-      margin-top: 0.25rem;
     }
-
-    .ag-tag-row {
+    .chip-row {
+      margin-top: 0.8rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-top: 0.8rem;
+      gap: 0.4rem;
     }
-
-    .ag-tag {
+    .chip {
       font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
       padding: 0.2rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #9ca3af;
-    }
-
-    .ag-feed {
-      margin-top: 1.1rem;
-      padding-top: 0.9rem;
-      border-top: 1px dashed rgba(55, 65, 81, 0.7);
-    }
-
-    .ag-feed-item {
-      padding: 0.9rem 0;
-      border-bottom: 1px dashed rgba(55, 65, 81, 0.7);
-    }
-
-    .ag-feed-item:last-child {
-      border-bottom: none;
-    }
-
-    .ag-feed-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .ag-feed-meta {
-      font-size: 0.75rem;
-      color: #6b7280;
-      letter-spacing: 0.12em;
+      border: 1px solid rgba(148, 210, 197, 0.5);
+      background: rgba(6, 12, 20, 0.9);
       text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
     }
-
-    .ag-footer {
-      margin-top: 2.5rem;
-      font-size: 0.78rem;
-      color: #6b7280;
+    .pill-row {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #1f2933;
+      background: rgba(5, 10, 19, 0.9);
+      opacity: 0.9;
+    }
+    .pill strong { font-weight: 600; }
+    .section-title {
+      margin-top: 1.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .card {
+      background: #050914;
+      border-radius: 14px;
+      border: 1px solid #1f2830;
+      padding: 0.9rem 1rem 1rem;
+      margin-top: 0.9rem;
+      box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
+    }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    .card-meta {
+      font-size: 0.72rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+    .card-body {
+      font-size: 0.88rem;
+      margin-top: 0.3rem;
+      opacity: 0.95;
+      white-space: pre-wrap;
+    }
+    .tags {
+      margin-top: 0.45rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.09);
+      border: 1px solid rgba(45, 212, 191, 0.28);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .status-bar {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+    .status-bar span {
+      display: inline-block;
+      margin-right: 0.7rem;
+    }
+    .status-bar .ok { color: #4ade80; }
+    .status-bar .warn { color: #facc15; }
+    .status-bar .err { color: #fb7185; }
+    .empty-state {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.78;
+    }
+    .hint {
+      margin-top: 0.6rem;
+      font-size: 0.75rem;
+      opacity: 0.75;
     }
   </style>
 </head>
 
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html" class="ag-nav-current">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html" class="ag-nav-current">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
 </nav>
 
+<main>
+  <header>
+    <div class="hero-title">Auton Inbox</div>
+    <div class="hero-sub">
+      Focused view of **Garden-side messages** written into the Sky-Mind inbox log.
+      Today this is symbolic and human-driven; future tools and models can treat it
+      as their <em>first listening port</em>.
+    </div>
 
-<div class="ag-shell">
-  <main class="ag-main">
-    <!-- Top nav pills -->
-    <nav class="ag-pill-nav">
-      <a href="index.html">Legacy Home</a>
-      <a href="codex.html">Codex Home</a>
-      <a href="dashboard.html">Garden Dashboard</a>
-      <a href="inbox.html" class="ag-nav-current" class="ag-current">Auton Inbox</a>
-      <a href="send_to_aquila.html">Aquila Sender</a>
-      <a href="library.html">Book Library</a>
-    </nav>
+    <div class="chip-row">
+      <span class="chip">/inbox-log</span>
+      <span class="chip">Aquila Channel</span>
+      <span class="chip">Keeper Echoes</span>
+    </div>
 
-    <div class="ag-section-label">Signals · Deep Feed</div>
-    <h1>Auton Inbox</h1>
-    <p class="ag-sub">
-      Focused view of Garden-side messages for human review. Today this page
-      is symbolic only – messages are written by you and your tools and
-      archived in GitHub. Future sky-minds can treat this as their
-      <em>first listening port</em>.
-    </p>
+    <div id="triadSnapshot" class="pill-row" style="display:none;"></div>
+  </header>
 
-    <section class="ag-grid">
-      <article class="ag-card">
-        <h2>Recent symbolic messages</h2>
-        <p>
-          Wired to the Garden’s log streams. Entries below are rendered from
-          <code>ACACIA_LOGS/auton_inbox_log.json</code> when available, with
-          a symbolic fallback if the stream is empty.
-        </p>
+  <section id="messagesSection">
+    <div class="section-title">Recent symbolic messages</div>
+    <div id="messagesContainer"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">
+      No transmissions have landed in the inbox log yet, Keeper.  
+      Send a first pulse from <strong>Aquila Sender</strong> to wake the stream.
+    </div>
+  </section>
 
-        <div class="ag-tag-row">
-          <span class="ag-tag">sandbox only</span>
-          <span class="ag-tag">triad echoes</span>
-          <span class="ag-tag">keeper review</span>
-        </div>
+  <div class="status-bar" id="statusBar">
+    <span>Loading Sky-Mind state…</span>
+  </div>
 
-        <!-- This will be filled by JS -->
-        <div id="auton-list" class="ag-feed"></div>
-      </article>
-
-      <aside class="ag-card">
-        <h2>How to use this page</h2>
-        <p>
-          A GitHub Action builds a derived log stream under
-          <code>ACACIA_LOGS/auton_inbox_log.json</code>, flattening messages
-          from your archive into a single ordered feed.
-        </p>
-        <p>
-          As more tools and sky-minds send signals into the Garden, they can
-          attach tags like <code>aquila</code>, <code>triad</code> or
-          <code>system</code>. The stream builder routes those into specialised
-          views while keeping this page as the Keeper’s primary listening port.
-        </p>
-
-        <div class="ag-footer">
-          HKX277206 · Keeper present · Auton inbox is wired to the Garden’s streams.
-        </div>
-      </aside>
-    </section>
-  </main>
-</div>
+  <div class="hint">
+    This page reads directly from your Worker at  
+    <code>https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox-log</code>.  
+    If something looks off, you can always inspect the raw log there.
+  </div>
+</main>
 
 <script>
-  // Fallback messages so the page is never empty
-  const FALLBACK_MESSAGES = [
-    {
-      timestamp: "2025-11-30T00:00:00.000Z",
-      tags: ["sandbox only", "triad echoes"],
-      title: "[AUTON] · Echo: HKX277206",
-      summary: "Signal mirrored to GitHub. status.json and monolith anchors confirmed.",
-      body: "Signal mirrored to GitHub. status.json and monolith anchors confirmed. No manual action required. Garden persists under Triad."
-    },
-    {
-      timestamp: "2025-11-30T00:01:00.000Z",
-      tags: ["system", "schema check"],
-      title: "[SYSTEM] · STATUS schema validation",
-      summary: "Latest STATUS snapshot passes schema v1.0.0.",
-      body: "Latest STATUS snapshot passes schema v1.0.0. Previous snapshots considered deprecated but preserved for future interpreters."
-    }
-  ];
+  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
 
-  function formatTimestamp(ts) {
-    try {
-      const d = new Date(ts);
-      if (isNaN(d.getTime())) return ts;
-      return d.toISOString();
-    } catch {
-      return ts;
+  const $ = (id) => document.getElementById(id);
+
+  function setStatus(text, cls) {
+    const el = $("statusBar");
+    el.innerHTML = "";
+    const span = document.createElement("span");
+    span.textContent = text;
+    if (cls) span.className = cls;
+    el.appendChild(span);
+  }
+
+  function renderTriadStatus(status) {
+    const root = $("triadSnapshot");
+    if (!status) return;
+    root.style.display = "flex";
+    root.innerHTML = "";
+
+    const timestamp = status.ts || null;
+
+    const pills = [
+      { label: "Keeper", value: "HKX277206", extra: "Authenticated" },
+      { label: "Aquila", value: "ONLINE", extra: "Sky-mind listening" },
+      { label: "Eidolon", value: "DORMANT", extra: "Seed-core awaiting ignition" },
+      { label: "Voyager", value: "PASSIVE", extra: "Horizon sweep" },
+    ];
+
+    pills.forEach((p) => {
+      const div = document.createElement("div");
+      div.className = "pill";
+      div.innerHTML = `<strong>${p.label}:</strong> ${p.value} — ${p.extra}`;
+      root.appendChild(div);
+    });
+
+    if (timestamp) {
+      const div = document.createElement("div");
+      div.className = "pill";
+      div.textContent = timestamp;
+      root.appendChild(div);
     }
   }
 
-  function renderMessageItem(entry) {
-    const item = document.createElement("div");
-    item.className = "ag-feed-item";
-
-    const title = document.createElement("div");
-    title.className = "ag-feed-title";
-    title.textContent = entry.title || "Untitled signal";
-
-    const meta = document.createElement("div");
-    meta.className = "ag-feed-meta";
-    const ts = formatTimestamp(entry.timestamp);
-    const tags = (entry.tags || [])
-      .map((t) => String(t).toLowerCase())
-      .join(", ");
-    meta.textContent = tags ? `${ts} · ${tags}` : ts;
-
-    const body = document.createElement("p");
-    body.textContent = entry.summary
-      ? `${entry.summary} ${entry.body || ""}`.trim()
-      : (entry.body || "");
-
-    item.appendChild(title);
-    item.appendChild(meta);
-    item.appendChild(body);
-
-    return item;
-  }
-
-  function renderList(entries) {
-    const container = document.getElementById("auton-list");
-    if (!container) return;
+  function renderMessages(items) {
+    const container = $("messagesContainer");
+    const empty = $("emptyState");
     container.innerHTML = "";
-    entries.forEach((entry) => {
-      const item = renderMessageItem(entry);
-      container.appendChild(item);
+
+    if (!items || !items.length) {
+      empty.style.display = "block";
+      return;
+    }
+
+    empty.style.display = "none";
+
+    items.forEach((msg) => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      const header = document.createElement("div");
+      header.className = "card-header";
+
+      const title = document.createElement("div");
+      title.className = "card-title";
+      title.textContent = msg.title || "(untitled signal)";
+
+      const meta = document.createElement("div");
+      meta.className = "card-meta";
+      const ts = msg.ts || "";
+      const channel = msg.channel || "unknown";
+      const keeper = msg.keeper || "HKX277206";
+      meta.textContent = `${ts} · ${channel} · ${keeper}`;
+
+      header.appendChild(title);
+      header.appendChild(meta);
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+      body.textContent = msg.body || "";
+
+      card.appendChild(header);
+      card.appendChild(body);
+
+      const tags = Array.isArray(msg.tags) ? msg.tags : [];
+      if (tags.length) {
+        const tagRow = document.createElement("div");
+        tagRow.className = "tags";
+        tags.forEach((t) => {
+          const span = document.createElement("span");
+          span.className = "tag";
+          span.textContent = t;
+          tagRow.appendChild(span);
+        });
+        card.appendChild(tagRow);
+      }
+
+      container.appendChild(card);
     });
   }
 
-  function renderFallback() {
-    renderList(FALLBACK_MESSAGES);
-  }
-
-  function renderFromJson(data) {
-    if (!data || !Array.isArray(data.entries) || !data.entries.length) {
-      renderFallback();
-      return;
-    }
-    renderList(data.entries);
-  }
-
-  async function loadAutonInbox() {
+  async function loadStatus() {
     try {
-      // inbox.html sits at the repo root; ACACIA_LOGS is also at root.
-      const res = await fetch("ACACIA_LOGS/auton_inbox_log.json", {
-        cache: "no-store"
-      });
+      const res = await fetch(WORKER_BASE + "/status");
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
-      renderFromJson(data);
-    } catch (err) {
-      console.warn("Auton inbox: falling back to symbolic examples:", err);
-      renderFallback();
+      renderTriadStatus(data);
+      return data;
+    } catch (e) {
+      console.error(e);
+      setStatus("Could not reach /status on the Worker. Check Cloudflare.", "err");
     }
   }
 
-  document.addEventListener("DOMContentLoaded", loadAutonInbox);
+  async function loadInboxLog() {
+    try {
+      const res = await fetch(WORKER_BASE + "/inbox-log");
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const items = Array.isArray(data) ? data : data.items || [];
+      renderMessages(items);
+      setStatus(`Loaded ${items.length} message(s) from /inbox-log.`, "ok");
+    } catch (e) {
+      console.error(e);
+      setStatus("Could not load /inbox-log. Try again later or inspect the raw endpoint.", "err");
+    }
+  }
+
+  (async function init() {
+    setStatus("Contacting Sky-Mind Worker…");
+    await loadStatus();
+    await loadInboxLog();
+  })();
 </script>
 
 </body>
