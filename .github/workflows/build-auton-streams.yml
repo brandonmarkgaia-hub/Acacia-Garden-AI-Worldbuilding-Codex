@@ -1,0 +1,40 @@
+name: Build Auton Streams
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - "ACACIA_LOGS/inbox/**"
+      - "scripts/build_auton_streams.mjs"
+      - ".github/workflows/build-auton-streams.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build Auton streams
+        run: node scripts/build_auton_streams.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ACACIA_LOGS/auton_inbox_log.json ACACIA_LOGS/aquila_inbox_log.json ACACIA_LOGS/triad_echoes_log.json ACACIA_LOGS/log_index.json
+            git commit -m "Auto-build Auton / Aquila / Triad log streams"
+            git push
+          fi
