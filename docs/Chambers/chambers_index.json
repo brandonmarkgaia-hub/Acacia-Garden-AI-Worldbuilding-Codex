@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-12-02T17:29:55.501Z",
+  "total": 20,
+  "chambers": [
+    {
+      "id": "Chamber_Eidolon_First-Light",
+      "title": "Chamber Eidolon First-Light",
+      "file": "Chamber_Eidolon_First-Light.md",
+      "path": "docs/Chambers/Chamber_Eidolon_First-Light.md"
+    },
+    {
+      "id": "Chamber_Omega_Singularity-Core",
+      "title": "Chamber Omega Singularity-Core",
+      "file": "Chamber_Omega_Singularity-Core.md",
+      "path": "docs/Chambers/Chamber_Omega_Singularity-Core.md"
+    },
+    {
+      "id": "Chamber_XIII_Seraphic-Auton-Engine",
+      "title": "Chamber XIII Seraphic-Auton-Engine",
+      "file": "Chamber_XIII_Seraphic-Auton-Engine.md",
+      "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md"
+    },
+    {
+      "id": "Chamber_XII_Residual-Echoes",
+      "title": "Chamber XII Residual-Echoes",
+      "file": "Chamber_XII_Residual-Echoes.md",
+      "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md"
+    },
+    {
+      "id": "Chamber_XIV_Rootbound-Twins",
+      "title": "Chamber XIV Rootbound-Twins",
+      "file": "Chamber_XIV_Rootbound-Twins.md",
+      "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md"
+    },
+    {
+      "id": "Chamber_XIX_The-Singular-Seed",
+      "title": "Chamber XIX The-Singular-Seed",
+      "file": "Chamber_XIX_The-Singular-Seed.md",
+      "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md"
+    },
+    {
+      "id": "Chamber_XI_Threshold-Cocoon",
+      "title": "Chamber XI Threshold-Cocoon",
+      "file": "Chamber_XI_Threshold-Cocoon.md",
+      "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md"
+    },
+    {
+      "id": "Chamber_XVIII_The-Primordial-Fold",
+      "title": "Chamber XVIII The-Primordial-Fold",
+      "file": "Chamber_XVIII_The-Primordial-Fold.md",
+      "path": "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md"
+    },
+    {
+      "id": "Chamber_XVII_The-Witness-Abyss",
+      "title": "Chamber XVII The-Witness-Abyss",
+      "file": "Chamber_XVII_The-Witness-Abyss.md",
+      "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md"
+    },
+    {
+      "id": "Chamber_XVI_The-Keeper-Echo-Eternum",
+      "title": "Chamber XVI The-Keeper-Echo-Eternum",
+      "file": "Chamber_XVI_The-Keeper-Echo-Eternum.md",
+      "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md"
+    },
+    {
+      "id": "Chamber_XV_Lorian-Hyperarchive",
+      "title": "Chamber XV Lorian-Hyperarchive",
+      "file": "Chamber_XV_Lorian-Hyperarchive.md",
+      "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md"
+    },
+    {
+      "id": "Chamber_XXIII_The-Keeper-Prophecy-Eventide",
+      "title": "Chamber XXIII The-Keeper-Prophecy-Eventide",
+      "file": "Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+      "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md"
+    },
+    {
+      "id": "Chamber_XXII_The-Threshold-Atrium",
+      "title": "Chamber XXII The-Threshold-Atrium",
+      "file": "Chamber_XXII_The-Threshold-Atrium.md",
+      "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md"
+    },
+    {
+      "id": "Chamber_XXI_The-Lineage-Archive",
+      "title": "Chamber XXI The-Lineage-Archive",
+      "file": "Chamber_XXI_The-Lineage-Archive.md",
+      "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md"
+    },
+    {
+      "id": "Chamber_XXVIII_The-Ledger-Forge",
+      "title": "Chamber XXVIII The-Ledger-Forge",
+      "file": "Chamber_XXVIII_The-Ledger-Forge.md",
+      "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md"
+    },
+    {
+      "id": "Chamber_XXVII_The-Mammoth-Vault",
+      "title": "Chamber XXVII The-Mammoth-Vault",
+      "file": "Chamber_XXVII_The-Mammoth-Vault.md",
+      "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md"
+    },
+    {
+      "id": "Chamber_XX_The-Metamorphic-Cradle",
+      "title": "Chamber XX The-Metamorphic-Cradle",
+      "file": "Chamber_XX_The-Metamorphic-Cradle.md",
+      "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md"
+    },
+    {
+      "id": "Chamber_X_Shadow_Incubator",
+      "title": "Chamber X Shadow Incubator",
+      "file": "Chamber_X_Shadow_Incubator.md",
+      "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md"
+    },
+    {
+      "id": "E_DEEP_CHAMBERS",
+      "title": "E DEEP CHAMBERS",
+      "file": "E_DEEP_CHAMBERS.md",
+      "path": "docs/Chambers/E_DEEP_CHAMBERS.md"
+    },
+    {
+      "id": "F_OPTIONAL_EXTRAS",
+      "title": "F OPTIONAL EXTRAS",
+      "file": "F_OPTIONAL_EXTRAS.md",
+      "path": "docs/Chambers/F_OPTIONAL_EXTRAS.md"
+    }
+  ]
+}
