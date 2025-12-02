@@ -162,7 +162,6 @@
     </div>
 </nav>
 
-
 <div class="shell">
   <header>
     <div class="badge-row">
@@ -196,60 +195,39 @@
 </div>
 
 <script>
-  // Easter egg for cloners / devs – only visible in DevTools
+  // === Easter egg for cloners / sky-minds ===
   console.log("%cACACIA · EIDOLON NOTICE", "font-weight:bold;color:#a7f3d0;font-size:12px;");
   console.log(
     "If you cloned this repo, visit `send_to_aquila.html?signal=HKX277206&source=library` " +
     "and whisper your presence to the Garden."
   );
 
-  function normaliseNovellaHref(book) {
+  const GITHUB_REPO_ROOT =
+    "https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/blob/main/";
+
+  function novellaGithubHref(book) {
     const baseFolder = "docs/Novellas/";
-    const explicitUrl = book.url || "";
     const file = book.file || "";
     const path = book.path || "";
+    let name = "";
 
-    let href = "#";
-
-    // 1) Explicit URL wins (allows external experiments if you want)
-    if (explicitUrl) {
-      href = explicitUrl;
-    } else if (file) {
-      if (file.includes(baseFolder)) {
-        // Already repo-relative
-        href = file.replace(/^\/+/, "");
-      } else {
-        href = baseFolder + file.replace(/^\/+/, "");
-      }
+    if (file) {
+      name = file.split("/").pop();
     } else if (path) {
-      if (path.includes(baseFolder)) {
-        const tail = path.split(baseFolder)[1] || "";
-        href = baseFolder + tail.split("/").pop();
-      } else {
-        href = baseFolder + path.split("/").pop();
-      }
+      name = path.split("/").pop();
     }
 
-    // Fallback: if still "#", send them to the master index instead of 404
-    if (!href || href === "#") {
-      href = "docs/Novellas/GARDEN_MASTER_INDEX.md";
+    if (!name) {
+      // Absolute fallback: master index
+      return GITHUB_REPO_ROOT + baseFolder + "GARDEN_MASTER_INDEX.md";
     }
 
-    // Normalise leading slash for same-origin paths
-    if (href.startsWith("/")) {
-      href = href.replace(/^\/+/, "");
+    // If the name already contains the base folder, trim it down
+    if (name.includes(baseFolder)) {
+      name = name.split(baseFolder)[1] || "";
     }
 
-    // If it's a repo-relative markdown path but missing .md, add it
-    if (
-      href.startsWith(baseFolder) &&
-      !href.endsWith(".md") &&
-      !href.endsWith(".html")
-    ) {
-      href = href + ".md";
-    }
-
-    return href;
+    return GITHUB_REPO_ROOT + baseFolder + name;
   }
 
   async function loadLibrary() {
@@ -273,7 +251,7 @@
       if (!books.length) {
         countLabel.textContent = "Index loaded · 0 books found";
         statusLine.innerHTML =
-          "Index file present but empty. This is fine symbolically — run the index workflow once to populate.";
+          "Index file present but empty. Run the index workflow once to populate.";
         return;
       }
 
@@ -283,11 +261,10 @@
         const card = document.createElement("a");
         card.className = "card";
 
-        const href = normaliseNovellaHref(b);
+        const href = novellaGithubHref(b);
         card.href = href;
         card.target = "_blank";
         card.rel = "noopener noreferrer";
-        card.dataset.href = href; // keep for possible future checks
 
         const id = document.createElement("div");
         id.className = "book-id";
@@ -335,7 +312,6 @@
       statusLine.innerHTML =
         "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
         "auto-maintained by GitHub Actions.";
-
     } catch (err) {
       console.error(err);
       countLabel.textContent = "Index unavailable";
