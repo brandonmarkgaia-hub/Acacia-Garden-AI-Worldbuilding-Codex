@@ -1,0 +1,56 @@
+name: Garden Codex Auto-Brain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-garden-brain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Import Issue Echoes + Ledger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/import_issue_echoes.mjs
+
+      - name: Rebuild Book Index
+        run: |
+          node scripts/build_book_index.mjs
+
+      - name: Rebuild Chamber Index
+        run: |
+          node scripts/build_chambers_index.mjs
+
+      - name: Rebuild Echo Index
+        run: |
+          node scripts/build_echoes_index.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            git add docs/Echoes \
+                    docs/Chambers \
+                    docs/Novellas \
+                    docs/Echoes/echoes_index.json \
+                    docs/Chambers/chambers_index.json \
+                    docs/Novellas/garden_index.json
+
+            git commit -m "Garden Brain: Issues→Echoes · Indexes Rebuilt · Eventide Sync"
+            git push
+          fi
