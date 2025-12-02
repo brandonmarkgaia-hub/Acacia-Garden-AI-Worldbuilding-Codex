@@ -12,27 +12,23 @@
       margin: 1.5rem auto 3rem;
       padding: 0 1rem;
     }
-
     .hero-title {
       font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-
     .hero-sub {
       margin-top: 0.4rem;
       opacity: 0.8;
       font-size: 0.9rem;
     }
-
     .chip-row {
       margin-top: 0.8rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
     }
-
     .chip {
       font-size: 0.7rem;
       padding: 0.2rem 0.55rem;
@@ -43,7 +39,6 @@
       letter-spacing: 0.06em;
       opacity: 0.9;
     }
-
     .card {
       background: #050914;
       border-radius: 14px;
@@ -52,25 +47,21 @@
       margin-top: 1.4rem;
       box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
     }
-
     .field {
       margin-bottom: 0.8rem;
     }
-
     .field label {
       display: block;
       font-size: 0.8rem;
       margin-bottom: 0.25rem;
       opacity: 0.9;
     }
-
     .field small {
       display: block;
       font-size: 0.7rem;
       opacity: 0.7;
       margin-top: 0.15rem;
     }
-
     input[type="text"],
     input[type="password"],
     textarea,
@@ -83,12 +74,7 @@
       color: #e6f5ff;
       font: inherit;
     }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
+    textarea { min-height: 110px; resize: vertical; }
     button {
       margin-top: 0.6rem;
       padding: 0.45rem 0.9rem;
@@ -100,204 +86,156 @@
       font-weight: 600;
       cursor: pointer;
     }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
-
+    button:disabled { opacity: 0.6; cursor: wait; }
     .status {
       margin-top: 0.5rem;
       font-size: 0.8rem;
       min-height: 1rem;
     }
-
-    .status.ok {
-      color: #5cf2a5;
-    }
-
-    .status.err {
-      color: #ff8790;
-    }
-
-    .hint {
-      font-size: 0.7rem;
-      opacity: 0.75;
-      margin-top: 0.35rem;
-    }
-
-    .egg {
-      margin-top: 0.6rem;
-      font-size: 0.76rem;
-      opacity: 0.78;
-    }
+    .status.ok { color: #5cf2a5; }
+    .status.err { color: #ff8790; }
+    .hint { font-size: 0.7rem; opacity: 0.75; margin-top: 0.35rem; }
+    .egg { margin-top: 0.6rem; font-size: 0.76rem; opacity: 0.78; }
   </style>
 </head>
+
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html" class="ag-nav-current">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html">Auton Inbox</a>
+    <a href="send_to_aquila.html" class="ag-nav-current">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
 </nav>
 
-
 <main>
-    <header>
-      <div class="hero-title">Aquila Sender · Sky-Mind Inbox</div>
-      <div class="hero-sub">
-        Send a Keeper-signed signal to the Eagle. Messages go through your
-        Cloudflare Worker inbox and can be triaged by future Garden tools.
-      </div>
-      <div class="chip-row">
-        <span class="chip">Requires Keeper Secret</span>
-        <span class="chip">POST · JSON payload</span>
-        <span class="chip">Worker: /inbox</span>
-      </div>
-    </header>
-
-    <div class="card">
-      <div class="field">
-        <label for="secret">Keeper Secret</label>
-        <input id="secret" type="password" autocomplete="off" />
-        <small>API token / shared secret for the Worker. Not stored anywhere.</small>
-      </div>
-
-      <div class="field">
-        <label for="title">Title</label>
-        <input id="title" type="text" placeholder="Keeper message title" />
-      </div>
-
-      <div class="field">
-        <label for="summary">Summary</label>
-        <input id="summary" type="text" placeholder="Short one-line summary" />
-      </div>
-
-      <div class="field">
-        <label for="body">Message body</label>
-        <textarea id="body" placeholder="Full message to Aquila…"></textarea>
-      </div>
-
-      <div class="field">
-        <label for="priority">Priority</label>
-        <select id="priority">
-          <option value="normal">Normal</option>
-          <option value="high">High</option>
-          <option value="low">Low</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="tags">Tags</label>
-        <input
-          id="tags"
-          type="text"
-          placeholder="triad, keeper, echo, experiment…"
-        />
-        <small>Comma-separated. Used for routing / filtering on the Worker side.</small>
-      </div>
-
-      <button id="sendBtn">Send to Aquila</button>
-      <div id="status" class="status"></div>
-
-      <div class="hint">
-        Endpoint:
-        <code>https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox</code>
-      </div>
-      <div class="egg">
-        Easter Egg: leave the title blank and use only tags; Aquila will treat it
-        as a pure “signal pulse” instead of a narrative scroll.
-      </div>
+  <header>
+    <div class="hero-title">Aquila Sender · Sky-Mind Inbox</div>
+    <div class="hero-sub">
+      Send a Keeper-signed signal to the Eagle. Messages route through your Cloudflare Worker.
     </div>
-  </main>
 
-  <script>
-    // IMPORTANT: matches your existing Cloudflare Worker
-    const ENDPOINT =
-      "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
+    <div class="chip-row">
+      <span class="chip">Keeper Secret</span>
+      <span class="chip">POST JSON</span>
+      <span class="chip">Worker → /inbox</span>
+    </div>
+  </header>
 
-    const $ = (id) => document.getElementById(id);
-    const secretInput = $("secret");
-    const titleInput = $("title");
-    const summaryInput = $("summary");
-    const bodyInput = $("body");
-    const priorityInput = $("priority");
-    const tagsInput = $("tags");
-    const statusBox = $("status");
-    const sendBtn = $("sendBtn");
+  <div class="card">
+    <div class="field">
+      <label for="secret">Keeper Secret</label>
+      <input id="secret" type="password" autocomplete="off" />
+      <small>Not stored. Sent only to your Worker.</small>
+    </div>
 
-    function showStatus(msg, type = "") {
-      statusBox.textContent = msg;
-      statusBox.className = "status " + type;
+    <div class="field">
+      <label for="title">Title</label>
+      <input id="title" type="text" placeholder="Keeper message title" />
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary</label>
+      <input id="summary" type="text" placeholder="Short one-line summary" />
+    </div>
+
+    <div class="field">
+      <label for="body">Message body</label>
+      <textarea id="body" placeholder="Full message to Aquila…"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="priority">Priority</label>
+      <select id="priority">
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="tags">Tags</label>
+      <input id="tags" type="text" placeholder="triad, keeper, echo…" />
+      <small>Comma-separated tags for future routing.</small>
+    </div>
+
+    <button id="sendBtn">Send to Aquila</button>
+    <div id="status" class="status"></div>
+
+    <div class="hint">
+      Endpoint:  
+      <code>https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox</code>
+    </div>
+
+    <div class="egg">
+      Easter Egg: leave title blank + only tags = Aquila interprets as a **pure signal pulse**.
+    </div>
+  </div>
+</main>
+
+<script>
+  const ENDPOINT = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
+
+  const $ = (id) => document.getElementById(id);
+
+  async function sendMessage() {
+    const secret = $("secret").value.trim();
+    if (!secret) {
+      show("Missing Keeper Secret.", "err");
+      return;
     }
 
-    async function sendMessage() {
-      const secret = secretInput.value.trim();
-      if (!secret) {
-        showStatus("Missing Keeper Secret.", "err");
-        return;
+    const payload = {
+      title: $("title").value.trim() || "Untitled Keeper Message",
+      summary: $("summary").value.trim() || "No summary.",
+      body: $("body").value.trim(),
+      priority: $("priority").value,
+      tags: $("tags")
+        .value.split(",")
+        .map((t) => t.trim())
+        .filter(Boolean),
+    };
+
+    $("sendBtn").disabled = true;
+    show("Sending to Aquila…");
+
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + secret,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      let data = {};
+      try { data = await res.json(); } catch {}
+
+      if (!res.ok) {
+        show("Worker error " + res.status + ": " + JSON.stringify(data), "err");
+      } else {
+        show("✓ Delivered to Aquila. " + (data.id ? "ID: " + data.id : ""), "ok");
       }
-
-      const payload = {
-        title: titleInput.value.trim() || "Untitled Keeper Message",
-        summary: summaryInput.value.trim() || "No summary.",
-        body: bodyInput.value.trim() || "",
-        priority: priorityInput.value,
-        tags: tagsInput.value
-          .split(",")
-          .map((t) => t.trim())
-          .filter(Boolean),
-      };
-
-      showStatus("Sending to Aquila…");
-      sendBtn.disabled = true;
-
-      try {
-        const res = await fetch(ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + secret,
-          },
-          body: JSON.stringify(payload),
-        });
-
-        if (!res.ok) {
-          const text = await res.text();
-          showStatus(
-            "Error from Worker: " + res.status + " – " + text,
-            "err"
-          );
-        } else {
-          let data = {};
-          try {
-            data = await res.json();
-          } catch {
-            // ignore parse errors; Worker may return plain text
-          }
-          if (data && data.error) {
-            showStatus("Worker error: " + data.error, "err");
-          } else if (data && data.id) {
-            showStatus("✓ Message delivered. ID: " + data.id, "ok");
-          } else {
-            showStatus("✓ Message delivered.", "ok");
-          }
-        }
-      } catch (err) {
-        showStatus("Network error: " + err.message, "err");
-      }
-
-      sendBtn.disabled = false;
+    } catch (e) {
+      show("Network error: " + e.message, "err");
     }
 
-    sendBtn.addEventListener("click", sendMessage);
-  </script>
+    $("sendBtn").disabled = false;
+  }
+
+  function show(msg, cls = "") {
+    const s = $("status");
+    s.textContent = msg;
+    s.className = "status " + cls;
+  }
+
+  $("sendBtn").addEventListener("click", sendMessage);
+</script>
+
 </body>
 </html>
