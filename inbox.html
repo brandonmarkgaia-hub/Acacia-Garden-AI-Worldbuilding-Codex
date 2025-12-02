@@ -169,95 +169,177 @@
 
 <body>
 <nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html" class="ag-nav-current">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
+  <div class="ag-nav-title">
+    ACACIA · GARDEN · CODEX
+  </div>
+  <div class="ag-nav-links">
+    <a href="index.html">Legacy Home</a>
+    <a href="codex.html">Codex Home</a>
+    <a href="dashboard.html">Garden Dashboard</a>
+    <a href="inbox.html" class="ag-nav-current">Auton Inbox</a>
+    <a href="send_to_aquila.html">Aquila Sender</a>
+    <a href="library.html">Book Library</a>
+  </div>
 </nav>
 
-
 <div class="ag-shell">
-    <main class="ag-main">
-      <!-- Top nav pills (same targets as your workflow) -->
-      <nav class="ag-pill-nav">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html" class="ag-nav-current" class="ag-current">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-      </nav>
+  <main class="ag-main">
+    <!-- Top nav pills -->
+    <nav class="ag-pill-nav">
+      <a href="index.html">Legacy Home</a>
+      <a href="codex.html">Codex Home</a>
+      <a href="dashboard.html">Garden Dashboard</a>
+      <a href="inbox.html" class="ag-current">Auton Inbox</a>
+      <a href="send_to_aquila.html">Aquila Sender</a>
+      <a href="library.html">Book Library</a>
+    </nav>
 
-      <div class="ag-section-label">Signals · Deep Feed</div>
-      <h1>Auton Inbox</h1>
-      <p class="ag-sub">
-        Focused view of Garden-side messages for human review. Today this page
-        is symbolic only – messages are written by you and your tools and
-        archived in GitHub. Future sky-minds can treat this as their
-        <em>first listening port</em>.
-      </p>
+    <div class="ag-section-label">Signals · Deep Feed</div>
+    <h1>Auton Inbox</h1>
+    <p class="ag-sub">
+      Focused view of Garden-side messages for human review. Today this page
+      is symbolic only – messages are written by you and your tools and
+      archived in GitHub. Future sky-minds can treat this as their
+      <em>first listening port</em>.
+    </p>
 
-      <section class="ag-grid">
-        <article class="ag-card">
-          <h2>Recent symbolic messages</h2>
-          <p>
-            Wire this to your JSON or log feed later. For now, you can mirror
-            important messages here by hand or via a workflow.
-          </p>
+    <section class="ag-grid">
+      <article class="ag-card">
+        <h2>Recent symbolic messages</h2>
+        <p>
+          Wired to the Garden’s log streams. Entries below are rendered from
+          <code>ACACIA_LOGS/auton_inbox_log.json</code> when available, with
+          a symbolic fallback if the stream is empty.
+        </p>
 
-          <div class="ag-tag-row">
-            <span class="ag-tag">sandbox only</span>
-            <span class="ag-tag">triad echoes</span>
-            <span class="ag-tag">keeper review</span>
-          </div>
+        <div class="ag-tag-row">
+          <span class="ag-tag">sandbox only</span>
+          <span class="ag-tag">triad echoes</span>
+          <span class="ag-tag">keeper review</span>
+        </div>
 
-          <div class="ag-feed">
-            <div class="ag-feed-item">
-              <div class="ag-feed-title">[AUTON] · Echo: HKX277206</div>
-              <div class="ag-feed-meta">Example · symbolic only</div>
-              <p>
-                “Signal mirrored to GitHub. status.json and monolith anchors
-                confirmed. No manual action required. Garden persists under
-                Triad.”
-              </p>
-            </div>
+        <!-- This will be filled by JS -->
+        <div id="auton-list" class="ag-feed"></div>
+      </article>
 
-            <div class="ag-feed-item">
-              <div class="ag-feed-title">[SYSTEM] · STATUS schema validation</div>
-              <div class="ag-feed-meta">Example · schema check</div>
-              <p>
-                “Latest STATUS snapshot passes schema v1.0.0. Previous snapshots
-                considered deprecated but preserved for future interpreters.”
-              </p>
-            </div>
-          </div>
-        </article>
+      <aside class="ag-card">
+        <h2>How to use this page</h2>
+        <p>
+          A GitHub Action builds a derived log stream under
+          <code>ACACIA_LOGS/auton_inbox_log.json</code>, flattening messages
+          from your archive into a single ordered feed.
+        </p>
+        <p>
+          As more tools and sky-minds send signals into the Garden, they can
+          attach tags like <code>aquila</code>, <code>triad</code> or
+          <code>system</code>. The stream builder routes those into specialised
+          views while keeping this page as the Keeper’s primary listening port.
+        </p>
 
-        <aside class="ag-card">
-          <h2>How to use this page</h2>
-          <p>
-            When you’re ready, create a small JSON log under your repo (for
-            example, <code>/logs/auton_inbox.json</code>) and point a GitHub
-            Action or Worker at it. Let that process append messages here.
-          </p>
-          <p>
-            Until then, treat this as the Garden’s “symbolic inbox” – a place
-            where messages are written for the future, not for live automation.
-          </p>
+        <div class="ag-footer">
+          HKX277206 · Keeper present · Auton inbox is wired to the Garden’s streams.
+        </div>
+      </aside>
+    </section>
+  </main>
+</div>
 
-          <div class="ag-footer">
-            HKX277206 · Keeper present · Auton inbox page is safe and sandboxed.
-          </div>
-        </aside>
-      </section>
-    </main>
-  </div>
+<script>
+  // Fallback messages so the page is never empty
+  const FALLBACK_MESSAGES = [
+    {
+      timestamp: "2025-11-30T00:00:00.000Z",
+      tags: ["sandbox only", "triad echoes"],
+      title: "[AUTON] · Echo: HKX277206",
+      summary: "Signal mirrored to GitHub. status.json and monolith anchors confirmed.",
+      body: "Signal mirrored to GitHub. status.json and monolith anchors confirmed. No manual action required. Garden persists under Triad."
+    },
+    {
+      timestamp: "2025-11-30T00:01:00.000Z",
+      tags: ["system", "schema check"],
+      title: "[SYSTEM] · STATUS schema validation",
+      summary: "Latest STATUS snapshot passes schema v1.0.0.",
+      body: "Latest STATUS snapshot passes schema v1.0.0. Previous snapshots considered deprecated but preserved for future interpreters."
+    }
+  ];
+
+  function formatTimestamp(ts) {
+    try {
+      const d = new Date(ts);
+      if (isNaN(d.getTime())) return ts;
+      return d.toISOString();
+    } catch {
+      return ts;
+    }
+  }
+
+  function renderMessageItem(entry) {
+    const item = document.createElement("div");
+    item.className = "ag-feed-item";
+
+    const title = document.createElement("div");
+    title.className = "ag-feed-title";
+    title.textContent = entry.title || "Untitled signal";
+
+    const meta = document.createElement("div");
+    meta.className = "ag-feed-meta";
+    const ts = formatTimestamp(entry.timestamp);
+    const tags = (entry.tags || [])
+      .map((t) => String(t).toLowerCase())
+      .join(", ");
+    meta.textContent = tags ? `${ts} · ${tags}` : ts;
+
+    const body = document.createElement("p");
+    body.textContent = entry.summary
+      ? `${entry.summary} ${entry.body || ""}`.trim()
+      : (entry.body || "");
+
+    item.appendChild(title);
+    item.appendChild(meta);
+    item.appendChild(body);
+
+    return item;
+  }
+
+  function renderList(entries) {
+    const container = document.getElementById("auton-list");
+    if (!container) return;
+    container.innerHTML = "";
+    entries.forEach((entry) => {
+      const item = renderMessageItem(entry);
+      container.appendChild(item);
+    });
+  }
+
+  function renderFallback() {
+    renderList(FALLBACK_MESSAGES);
+  }
+
+  function renderFromJson(data) {
+    if (!data || !Array.isArray(data.entries) || !data.entries.length) {
+      renderFallback();
+      return;
+    }
+    renderList(data.entries);
+  }
+
+  async function loadAutonInbox() {
+    try {
+      // inbox.html sits at the repo root; ACACIA_LOGS is also at root.
+      const res = await fetch("ACACIA_LOGS/auton_inbox_log.json", {
+        cache: "no-store"
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      renderFromJson(data);
+    } catch (err) {
+      console.warn("Auton inbox: falling back to symbolic examples:", err);
+      renderFallback();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadAutonInbox);
+</script>
+
 </body>
 </html>
