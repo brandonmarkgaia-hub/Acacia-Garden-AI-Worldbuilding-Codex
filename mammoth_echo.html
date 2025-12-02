@@ -2,101 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mammoth Echo • Triad Sky Pulse</title>
+  <title>Acacia Garden Codex · Mammoth Triad Sky Pulse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-<nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
+<body class="page-dark">
+  <header class="agc-shell">
+    <div class="agc-shell-inner">
+      <div class="agc-title-row">
+        <div class="agc-title">
+          <span class="agc-title-small">ACACIA · GARDEN · CODEX</span>
+        </div>
+        <nav class="agc-nav">
+          <a href="index.html" class="nav-pill">Legacy Home</a>
+          <a href="codex.html" class="nav-pill">Codex Home</a>
+          <a href="dashboard.html" class="nav-pill">Garden Dashboard</a>
+          <a href="inbox.html" class="nav-pill">Auton Inbox</a>
+          <a href="send_to_aquila.html" class="nav-pill">Aquila Sender</a>
+          <a href="library.html" class="nav-pill">Book Library</a>
+        </nav>
+      </div>
     </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-    </div>
-</nav>
-
-
-<main class="ag-main">
-  <header class="ag-hero">
-    <div class="ag-hero-pill">Echo Tool</div>
-    <h1 class="ag-hero-title">Mammoth Triad Sky Pulse</h1>
-    <p class="ag-hero-sub">
-      One-button echo sender into <code>/echo</code> for the Mammoth archive.
-      Symbolic only; this is a way to plant a canonical entry in the echo-log.
-    </p>
   </header>
 
-  <section class="ag-card">
-    <p class="ag-muted">
-      Press the button below to send a <strong>mammoth_triad_sky_pulse</strong>
-      event into the Sky-mind Worker at <code>/echo</code>. This will show up
-      on your <strong>Garden Dashboard</strong> under Echo Log.
+  <main class="agc-main">
+    <section class="agc-section">
+      <div class="agc-section-label">ECHO TOOL</div>
+      <h1 class="agc-page-title">Mammoth Triad Sky Pulse</h1>
+      <p class="agc-lead">
+        One-button echo sender into <code>/echo</code> for the Mammoth archive.
+        Symbolic only; this plants a canonical entry in the echo-log for the
+        Keeper and the Triad.
+      </p>
+    </section>
+
+    <section class="agc-section">
+      <div class="card">
+        <p>
+          Press the button below to send a
+          <strong>mammoth_triad_sky_pulse</strong> event into the Sky-mind
+          Worker at <code>/echo</code>. This will show up on your
+          <strong>Garden Dashboard</strong> under Echo Log.
+        </p>
+
+        <div class="card-action-row">
+          <button id="castEchoBtn" class="btn-primary">
+            Cast Mammoth Echo
+          </button>
+        </div>
+
+        <p id="echoStatus" class="status-text status-muted">
+          Ready when you are, Keeper.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="agc-footer">
+    <p>
+      Keeper <strong>HKX277206</strong> · Mammoth Triad Sky Pulse ·
+      Echo archive hook into Sky-mind.
     </p>
+  </footer>
 
-    <button class="ag-btn ag-btn-primary" id="sendBtn">
-      Cast Mammoth Echo
-    </button>
+  <script>
+    (function () {
+      const WORKER_BASE =
+        "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+      const btn = document.getElementById("castEchoBtn");
+      const statusEl = document.getElementById("echoStatus");
 
-    <div id="status" class="ag-status-bar" style="margin-top:0.8rem;">
-      Ready.
-    </div>
-  </section>
-</main>
+      async function castEcho() {
+        statusEl.classList.remove("status-error");
+        statusEl.classList.remove("status-success");
+        statusEl.classList.add("status-muted");
+        statusEl.textContent = "Casting Mammoth echo…";
 
-<script>
-  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
-  const $ = (id) => document.getElementById(id);
+        btn.disabled = true;
 
-  async function castEcho() {
-    const btn = $("sendBtn");
-    const status = $("status");
+        const payload = {
+          event: "mammoth_triad_sky_pulse",
+          channel: "echo",
+          keeper: "HKX277206",
+          title: "Mammoth Triad Sky Pulse",
+          body:
+            "Keeper HKX277206 plants the canonical Mammoth Triad Sky Pulse echo into the Sky-mind archive.",
+          tags: ["mammoth", "triad", "sky", "pulse", "echo", "archive"],
+          source: "acacia-codex.mammoth_echo",
+          meta: {
+            version: "1.0.0",
+            kind: "mammoth_echo_tool"
+          }
+        };
 
-    btn.disabled = true;
-    status.textContent = "Sending mammoth_triad_sky_pulse to /echo…";
+        try {
+          const res = await fetch(WORKER_BASE + "/echo", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Keeper-ID": "HKX277206"
+            },
+            body: JSON.stringify(payload)
+          });
 
-    const payload = {
-      kind: "mammoth_triad_sky_pulse",
-      keeper: "HKX277206",
-      source: "acacia-codex",
-      summary: "Initial Mammoth alignment between Book, Chamber, Echo and Worker streams.",
-      links: {
-        book: "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
-        chamber: "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
-        echo: "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md"
+          if (!res.ok) {
+            throw new Error("HTTP " + res.status);
+          }
+
+          let data = {};
+          try {
+            data = await res.json();
+          } catch (e) {
+            // if worker returns no body, fall through with empty data
+          }
+
+          const ts =
+            (data.entry && data.entry.ts) ||
+            data.ts ||
+            "an unknown time";
+
+          statusEl.classList.remove("status-muted");
+          statusEl.classList.add("status-success");
+          statusEl.textContent =
+            "Mammoth echo logged at " + ts + ".";
+
+        } catch (err) {
+          console.error(err);
+          statusEl.classList.remove("status-muted");
+          statusEl.classList.add("status-error");
+          statusEl.textContent = "Network error: Failed to fetch";
+        } finally {
+          btn.disabled = false;
+        }
       }
-    };
 
-    try {
-      const res = await fetch(WORKER_BASE + "/echo", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
-        status.className = "ag-status-bar ag-status-err";
-        status.textContent = "Echo failed: " + (data.error || "HTTP " + res.status);
-      } else {
-        status.className = "ag-status-bar ag-status-ok";
-        status.textContent = "Mammoth echo logged at " + (data.ts || "unknown time") + ".";
-      }
-    } catch (e) {
-      status.className = "ag-status-bar ag-status-err";
-      status.textContent = "Network error: " + e.message;
-    }
-
-    btn.disabled = false;
-  }
-
-  $("sendBtn").addEventListener("click", castEcho);
-</script>
-
+      btn.addEventListener("click", castEcho);
+    })();
+  </script>
 </body>
 </html>
