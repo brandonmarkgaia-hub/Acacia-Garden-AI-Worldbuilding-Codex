@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-02T19:37:08.702Z",
+  "generated_at": "2025-12-02T19:37:39.788Z",
   "root": "docs/Echoes",
-  "total": 127,
+  "total": 128,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -627,6 +627,11 @@
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
       "label": "Echo kiln-born-lovers",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+      "label": "ECHO MAMMOTH TRIAD SKY PULSE",
       "kind": "named"
     },
     {
