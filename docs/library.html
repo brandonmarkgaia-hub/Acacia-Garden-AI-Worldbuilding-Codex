@@ -1,1 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Garden Library · Acacia Codex</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --ag-bg: #050910;
+      --ag-bg-soft: #0b111c;
+      --ag-panel: #0f1724;
+      --ag-panel-soft: #131b2a;
+      --ag-border-soft: #1f2937;
+      --ag-border-strong: #22c55e33;
+      --ag-text-main: #e5f2ff;
+      --ag-text-soft: #9ca3af;
+      --ag-accent: #22c55e;
+      --ag-accent-soft: #4ade80;
+      --ag-pill-bg: #020617;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #022c22 0, #020617 42%, #020617 100%);
+      color: var(--ag-text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ag-shell {
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .ag-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .ag-nav-title {
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ag-text-soft);
+      margin-right: 8px;
+    }
+
+    .ag-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .ag-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #1e293b;
+      background: radial-gradient(circle at top, #020617, #020617 55%, #020617);
+      color: #e5f2ff;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .ag-pill:hover {
+      border-color: #22c55e55;
+    }
+
+    .ag-pill-current {
+      border-color: transparent;
+      background: linear-gradient(135deg, #22c55e, #2dd4bf);
+      color: #020617;
+      font-weight: 600;
+    }
+
+    main {
+      margin-top: 18px;
+    }
+
+    .ag-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0 0 6px;
+    }
+
+    .ag-subtitle {
+      font-size: 14px;
+      color: var(--ag-text-soft);
+      max-width: 560px;
+    }
+
+    .ag-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0 24px;
+      font-size: 12px;
+      color: var(--ag-text-soft);
+    }
+
+    .ag-chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .ag-library-panel {
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, #022c22 0, #020617 45%, #020617 100%);
+      border: 1px solid #1f2937;
+      padding: 18px 16px 18px;
+    }
+
+    .ag-library-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: baseline;
+    }
+
+    .ag-library-header h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .ag-library-status {
+      font-size: 12px;
+      color: var(--ag-text-soft);
+    }
+
+    .ag-book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .ag-book-card {
+      padding: 12px 11px;
+      border-radius: 14px;
+      background: radial-gradient(circle at top, #020617, #020617 65%, #020617);
+      border: 1px solid #1f2937;
+    }
+
+    .ag-book-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .ag-book-meta {
+      font-size: 12px;
+      color: var(--ag-text-soft);
+      margin-bottom: 8px;
+    }
+
+    .ag-book-link {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--ag-accent-soft);
+    }
+
+    .ag-book-link span {
+      opacity: 0.8;
+    }
+
+    .ag-footnote {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--ag-text-soft);
+    }
+
+    @media (min-width: 768px) {
+      .ag-shell {
+        padding: 28px 24px 48px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .ag-library-panel {
+        padding: 18px 18px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ag-shell">
+    <nav class="ag-nav">
+      <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+      <div class="ag-nav-links">
+        <a class="ag-pill" href="index.html">Legacy Home</a>
+        <a class="ag-pill" href="codex.html">Codex Home</a>
+        <a class="ag-pill" href="dashboard.html">Garden Dashboard</a>
+        <a class="ag-pill" href="inbox.html">Auton Inbox</a>
+        <a class="ag-pill" href="send_to_aquila.html">Aquila Sender</a>
+        <a class="ag-pill ag-pill-current" href="library.html">Book Library</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="ag-kicker">Novellas · Garden Library</div>
+      <h1>Garden Library</h1>
+      <p class="ag-subtitle">
+        Thirty books seeded under Acacia. This page auto-indexes all novellas under
+        <code>docs/Novellas/</code> for future Keepers and sky-minds to browse.
+      </p>
+
+      <div class="ag-meta-row">
+        <div class="ag-chip" id="ag-count-chip">Index loading…</div>
+        <div class="ag-chip">Scope: <code>docs/Novellas/*.md</code></div>
+      </div>
+
+      <section class="ag-library-panel">
+        <div class="ag-library-header">
+          <h2>Books under Acacia</h2>
+          <div class="ag-library-status" id="ag-status-label">
+            Fetching book list from GitHub…
+          </div>
+        </div>
+
+        <div id="ag-book-list" class="ag-book-list"></div>
+      </section>
+
+      <p class="ag-footnote">
+        Index is generated on the fly by reading the <code>docs/Novellas</code> folder
+        via the public GitHub API. Any new <code>.md</code> book dropped there will
+        appear here automatically. Links point to the GitHub Pages copies at
+        <code>/Novellas/&lt;filename&gt;</code>.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    async function loadGardenBooks() {
+      const listEl = document.getElementById("ag-book-list");
+      const statusEl = document.getElementById("ag-status-label");
+      const countEl = document.getElementById("ag-count-chip");
+
+      const repoOwner = "brandonmarkgaia-hub";
+      const repoName = "Acacia-garden-codex";
+      const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/docs/Novellas`;
+
+      try {
+        const res = await fetch(apiUrl);
+        if (!res.ok) {
+          throw new Error("GitHub API error: " + res.status);
+        }
+        const files = await res.json();
+
+        const books = files.filter(f =>
+          f.type === "file" &&
+          f.name.toLowerCase().endsWith(".md") &&
+          !f.name.toLowerCase().startsWith("garden_master_index")
+        );
+
+        if (!books.length) {
+          statusEl.textContent = "Index loaded · no books found (check Novellas folder).";
+          countEl.textContent = "0 books indexed";
+          return;
+        }
+
+        countEl.textContent = `${books.length} books indexed`;
+        statusEl.textContent = "Index loaded from docs/Novellas.";
+
+        books.sort((a, b) => a.name.localeCompare(b.name, "en"));
+
+        for (const file of books) {
+          const card = document.createElement("article");
+          card.className = "ag-book-card";
+
+          const title = document.createElement("div");
+          title.className = "ag-book-title";
+          title.textContent = humanizeName(file.name);
+
+          const meta = document.createElement("div");
+          meta.className = "ag-book-meta";
+          meta.textContent = file.name;
+
+          const link = document.createElement("a");
+          link.className = "ag-book-link";
+          link.href = `Novellas/${file.name}`;
+          link.innerHTML = `<span>Open book →</span>`;
+
+          card.appendChild(title);
+          card.appendChild(meta);
+          card.appendChild(link);
+          listEl.appendChild(card);
+        }
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = "Index error · could not load books (GitHub API).";
+        countEl.textContent = "Index offline";
+        const fallback = document.createElement("div");
+        fallback.className = "ag-book-meta";
+        fallback.textContent =
+          "If you are viewing this offline or behind a strict firewall, the GitHub API call may be blocked. " +
+          "Your books are still safe in docs/Novellas/.";
+        listEl.appendChild(fallback);
+      }
+    }
+
+    function humanizeName(filename) {
+      // Strip extension
+      let name = filename.replace(/\.md$/i, "");
+      // Replace underscores with spaces
+      name = name.replace(/_/g, " ");
+      // Optional: trim leading "The Garden"
+      name = name.replace(/^The Garden /i, "The Garden · ");
+      return name;
+    }
+
+    loadGardenBooks();
+  </script>
+</body>
+</html>
