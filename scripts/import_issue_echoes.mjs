@@ -1,5 +1,7 @@
 // scripts/import_issue_echoes.mjs
-// Turn GitHub issues into Echo files + a Ledger Book for the Garden Codex.
+// 1) Turn GitHub issues into Echo files under docs/Echoes/Issues
+// 2) Generate BOOK_OF_THE_EVENTIDE_LEDGER.md
+// 3) Auto-update docs/Novellas/garden_index.json with any missing .md books
 
 import { promises as fs } from "fs";
 import path from "path";
@@ -7,8 +9,11 @@ import path from "path";
 const OWNER = "brandonmarkgaia-hub";
 const REPO = "Acacia-garden-codex";
 const ROOT = process.cwd();
+
 const ECHO_ROOT = path.join(ROOT, "docs/Echoes/Issues");
 const BOOK_PATH = path.join(ROOT, "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md");
+const NOVELLAS_DIR = path.join(ROOT, "docs/Novellas");
+const GARDEN_INDEX_PATH = path.join(NOVELLAS_DIR, "garden_index.json");
 
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 
@@ -40,8 +45,7 @@ async function fetchAllIssues() {
     const batch = await fetchJson(url);
     if (!batch.length) break;
     for (const issue of batch) {
-      // filter out PRs
-      if (issue.pull_request) continue;
+      if (issue.pull_request) continue; // skip PRs
       all.push(issue);
     }
     if (batch.length < 100) break;
@@ -72,7 +76,7 @@ function renderIssueEcho(issue, comments) {
   const updated = issue.updated_at;
   const url = issue.html_url;
   const labels = (issue.labels || [])
-    .map((l) => typeof l === "string" ? l : l.name)
+    .map((l) => (typeof l === "string" ? l : l.name))
     .filter(Boolean);
 
   const body = safe(issue.body || "_(no original body)_");
@@ -166,7 +170,6 @@ function renderLedgerBook(issues) {
   lines.push("## Index of Issue Echoes");
   lines.push("");
 
-  // newest first
   const sorted = [...issues].sort((a, b) => b.number - a.number);
 
   for (const issue of sorted) {
@@ -174,9 +177,7 @@ function renderLedgerBook(issues) {
     const title = safe(issue.title);
     const filename = issueEchoFilename(issue);
     const relPath = `../Echoes/Issues/${filename}`;
-    lines.push(
-      `- [Echo Issue #${num} — ${title}](${relPath})`
-    );
+    lines.push(`- [Echo Issue #${num} — ${title}](${relPath})`);
   }
 
   lines.push("");
@@ -203,6 +204,74 @@ function renderLedgerBook(issues) {
   return lines.join("\n");
 }
 
+// ---------- garden_index.json auto-update ----------
+
+function autoTitleFromFilename(filename) {
+  const base = filename.replace(/\.md$/i, "");
+  return base
+    .split("_")
+    .map((part) => (part ? part[0].toUpperCase() + part.slice(1).toLowerCase() : ""))
+    .join(" ")
+    .trim();
+}
+
+async function updateGardenIndex() {
+  let index;
+  try {
+    const raw = await fs.readFile(GARDEN_INDEX_PATH, "utf8");
+    index = JSON.parse(raw);
+  } catch (err) {
+    console.warn("No existing garden_index.json, creating a new one.");
+    index = { version: "1.0.0", books: [] };
+  }
+
+  if (!Array.isArray(index.books)) index.books = [];
+
+  // Preserve any easter_egg or extra fields
+  const existingBooks = index.books;
+  const existingByPath = new Map();
+
+  for (const b of existingBooks) {
+    const pathKey =
+      b.path || (b.file ? `docs/Novellas/${b.file}` : null);
+    if (pathKey) existingByPath.set(pathKey, b);
+  }
+
+  const files = await fs.readdir(NOVELLAS_DIR);
+  for (const f of files) {
+    if (!f.toLowerCase().endsWith(".md")) continue;
+    if (f === "GARDEN_MASTER_INDEX.md") continue; // keep this internal if you like
+
+    const relPath = `docs/Novellas/${f}`;
+    if (existingByPath.has(relPath)) continue;
+
+    const id = f.replace(/\.md$/i, "");
+    const title = autoTitleFromFilename(f);
+
+    const newBook = {
+      id,
+      title,
+      path: relPath,
+      file: f,
+      cycle: "Supplemental",
+      tags: ["novella", "garden", "auto-index"]
+    };
+
+    index.books.push(newBook);
+    console.log("Added to garden_index.json:", id);
+  }
+
+  // Write pretty JSON
+  await fs.writeFile(
+    GARDEN_INDEX_PATH,
+    JSON.stringify(index, null, 2) + "\n",
+    "utf8"
+  );
+  console.log("Updated", path.relative(ROOT, GARDEN_INDEX_PATH));
+}
+
+// ---------- main ----------
+
 async function main() {
   console.log("Fetching issues from GitHub…");
   const issues = await fetchAllIssues();
@@ -217,6 +286,9 @@ async function main() {
   await fs.mkdir(path.dirname(BOOK_PATH), { recursive: true });
   await fs.writeFile(BOOK_PATH, book, "utf8");
   console.log("Wrote", path.relative(ROOT, BOOK_PATH));
+
+  // After Ledger book exists, auto-update the garden index
+  await updateGardenIndex();
 }
 
 main().catch((err) => {
