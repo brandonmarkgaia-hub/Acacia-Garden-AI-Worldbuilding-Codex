@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acacia Garden • Aeon Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --bg: #05070b;
+      --panel: #0d1117;
+      --panel-soft: #111827;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.2);
+      --accent-alt: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: #1f2933;
+      --danger: #f97373;
+      --warning: #facc15;
+      --muted: #6b7280;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    .shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2.5rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    header h1 span.logo {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 999px;
+      background: conic-gradient(from 210deg, #22c55e, #38bdf8, #a855f7, #22c55e);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    header .meta {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      text-align: right;
+    }
+
+    header .meta div {
+      margin: 0.05rem 0;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.25rem 0 1rem;
+    }
+
+    .nav-btn {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      padding: 0.25rem 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-btn span.dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .nav-btn.active {
+      border-color: var(--accent-alt);
+      color: var(--accent-alt);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.96));
+    }
+
+    .nav-btn.active span.dot {
+      background: var(--accent-alt);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header .meta {
+        text-align: left;
+      }
+    }
+
+    section {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
+      border-radius: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      padding: 0.9rem 0.9rem 0.85rem;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+    }
+
+    section + section {
+      margin-top: 0.7rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .section-header h2 span.badge {
+      font-size: 0.7rem;
+      padding: 0.06rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .section-header .hint {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.25rem 0 0.35rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      white-space: nowrap;
+    }
+
+    .pill span.dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .pill.warn {
+      border-color: rgba(250, 204, 21, 0.45);
+      color: var(--warning);
+    }
+
+    .pill.danger {
+      border-color: rgba(248, 113, 113, 0.6);
+      color: var(--danger);
+    }
+
+    .pill.muted {
+      border-style: dashed;
+      border-color: rgba(75, 85, 99, 0.7);
+      color: var(--muted);
+    }
+
+    .grid-mini {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .stat-card {
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15), rgba(15, 23, 42, 0.95));
+      border-radius: 0.7rem;
+      padding: 0.45rem 0.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-soft);
+    }
+
+    .stat-card .value {
+      margin-top: 0.1rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .stat-card .meta {
+      margin-top: 0.05rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    ul.list {
+      list-style: none;
+      padding: 0;
+      margin: 0.1rem 0 0.1rem;
+      font-size: 0.78rem;
+    }
+
+    ul.list li {
+      padding: 0.18rem 0;
+      border-bottom: 1px dashed rgba(31, 41, 55, 0.9);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    ul.list li:last-child {
+      border-bottom: none;
+    }
+
+    .list .left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .list .title {
+      font-weight: 500;
+    }
+
+    .list .meta-line {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .list .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-top: 0.1rem;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 0.1rem 0.45rem;
+      font-size: 0.68rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--text-soft);
+    }
+
+    .chip.accent {
+      border-color: rgba(34, 197, 94, 0.6);
+      color: var(--accent);
+    }
+
+    .chip.alt {
+      border-color: rgba(56, 189, 248, 0.6);
+      color: var(--accent-alt);
+    }
+
+    .chip.dim {
+      border-style: dashed;
+      border-color: rgba(75, 85, 99, 0.7);
+      color: var(--muted);
+    }
+
+    .error {
+      font-size: 0.75rem;
+      color: var(--danger);
+      margin-top: 0.25rem;
+    }
+
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.35rem;
+    }
+
+    a.link-pill {
+      text-decoration: none;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--accent-alt);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    a.link-pill:hover {
+      border-color: var(--accent-alt);
+    }
+
+    footer {
+      margin-top: 1.4rem;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <h1>
+      <span class="logo">🌱</span>
+      <span>Acacia Garden • Aeon Console</span>
+    </h1>
+    <div class="meta" id="header-meta">
+      <div>Keeper: <strong>HKX277206</strong></div>
+      <div id="meta-status">Loading Garden state…</div>
+    </div>
+  </header>
+
+  <!-- VIEW SWITCHER -->
+  <div class="top-nav" id="view-nav">
+    <button class="nav-btn active" data-view="overview">
+      <span class="dot"></span>
+      Overview
+    </button>
+    <button class="nav-btn" data-view="echoes">
+      <span class="dot"></span>
+      Echo Growth
+    </button>
+    <button class="nav-btn" data-view="scanner">
+      <span class="dot"></span>
+      Signature Scanner
+    </button>
+    <button class="nav-btn" data-view="vault">
+      <span class="dot"></span>
+      Vault & Archive
+    </button>
+    <button class="nav-btn" data-view="system">
+      <span class="dot"></span>
+      System / Heartbeat
+    </button>
+  </div>
+
+  <main>
+    <!-- LEFT SIDE: Garden + Echo growth -->
+    <div>
+      <section id="section-garden" data-role="overview,system">
+        <div class="section-header">
+          <h2>
+            Garden State
+            <span class="badge">STATUS.json</span>
+          </h2>
+          <div class="hint" id="status-hint">Awaiting STATUS.json…</div>
+        </div>
+
+        <div class="grid-mini" id="garden-stats">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="pill-row">
+          <div class="pill">
+            <span class="dot"></span>
+            <span id="status-version">status_version: …</span>
+          </div>
+          <div class="pill muted" id="status-generated">generated_at: …</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="../STATUS.json" target="_blank">View raw STATUS.json</a>
+          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex" target="_blank">
+            GitHub repo
+          </a>
+        </div>
+
+        <div class="error" id="status-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-echo-growth" data-role="overview,echoes">
+        <div class="section-header">
+          <h2>
+            Echo Growth
+            <span class="badge">machine-index.json</span>
+          </h2>
+          <div class="hint">Latest Echo files generated by grow-and-archive.</div>
+        </div>
+
+        <ul class="list" id="echo-growth-list">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill" id="echo-growth-count">0 Echo files tracked</div>
+          <div class="pill muted">Source: tools/garden_lore_helper.py</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="../machine-index.json" target="_blank">View machine-index.json</a>
+          <a class="link-pill" href="../docs/Echoes/" target="_blank">Open Echoes folder</a>
+        </div>
+
+        <div class="error" id="echo-error" style="display:none;"></div>
+      </section>
+    </div>
+
+    <!-- RIGHT SIDE: Scanner + Vault index + Heartbeat -->
+    <div>
+      <section id="section-scanner" data-role="overview,scanner">
+        <div class="section-header">
+          <h2>
+            Signature Scanner
+            <span class="badge">garden_scan_report.json</span>
+          </h2>
+          <div class="hint">Aquila mode hits across the repo.</div>
+        </div>
+
+        <div class="grid-mini">
+          <div class="stat-card">
+            <h3>Files with hits</h3>
+            <div class="value" id="scan-files">–</div>
+            <div class="meta">Any file with Garden signatures</div>
+          </div>
+          <div class="stat-card">
+            <h3>Total hits</h3>
+            <div class="value" id="scan-hits">–</div>
+            <div class="meta">All patterns combined</div>
+          </div>
+        </div>
+
+        <ul class="list" id="scan-patterns">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="links-row">
+          <a class="link-pill" href="../garden_scan_report.json" target="_blank">View JSON report</a>
+          <a class="link-pill" href="../garden_scan_report.md" target="_blank">View Markdown report</a>
+        </div>
+
+        <div class="error" id="scan-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-vault" data-role="overview,vault">
+        <div class="section-header">
+          <h2>
+            Vault & Aeon Archive
+            <span class="badge">garden_vault_index.json</span>
+          </h2>
+          <div class="hint">Snapshot of Vaults / Chambers / Aeon archive entries.</div>
+        </div>
+
+        <ul class="list" id="vault-list">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill muted">Source: scripts/ + aeon-archive workflow</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="../garden_vault_index.json" target="_blank">View vault index JSON</a>
+          <a class="link-pill" href="../docs/Vaults/" target="_blank">Open Vaults folder</a>
+        </div>
+
+        <div class="error" id="vault-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-heartbeat" data-role="overview,system">
+        <div class="section-header">
+          <h2>
+            Aeon Heartbeat • Inbox
+            <span class="badge">aeon_heartbeat.json</span>
+          </h2>
+          <div class="hint">Latest auton messages / runs from the Heartbeat worker.</div>
+        </div>
+
+        <ul class="list" id="heartbeat-list">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill muted" id="heartbeat-count">No heartbeat entries yet</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="../aeon_heartbeat.json" target="_blank">View heartbeat JSON (if present)</a>
+          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/actions" target="_blank">
+            Open GitHub Actions
+          </a>
+        </div>
+
+        <div class="error" id="heartbeat-error" style="display:none;"></div>
+      </section>
+      <section id="section-cicada" data-role="overview,system">
+        <div class="section-header">
+          <h2>
+            Iron Cicada • Starfire Status
+            <span class="badge">IRON_CICADA_STATUS.json</span>
+          </h2>
+          <div class="hint" id="cicada-hint">Awaiting Cicada status…</div>
+        </div>
+
+        <ul class="list" id="cicada-list">
+          <!-- JS populated -->
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill" id="cicada-state-pill">
+            <span class="dot"></span>
+            <span id="cicada-state-text">Cicada state: unknown</span>
+          </div>
+          <div class="pill muted" id="cicada-phase-pill">Starfire phase: —</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="System/IRON_CICADA_STATUS.json" target="_blank">View Cicada status JSON</a>
+          <a class="link-pill" href="System/EMERGENCE_EFFECTS.json" target="_blank">View emergence effects JSON</a>
+        </div>
+
+        <div class="error" id="cicada-error" style="display:none;"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />
+    Data sources: STATUS.json · garden_scan_report.json · garden_vault_index.json · machine-index.json · aeon_heartbeat.json
+  </footer>
+</div>
+
+<script>
+  async function loadJson(path) {
+    const res = await fetch(path, { cache: "no-store" });
+    if (!res.ok) {
+      throw new Error("HTTP " + res.status + " for " + path);
+    }
+    return res.json();
+  }
+
+  function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  }
+
+  function showError(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.display = "block";
+    el.textContent = msg;
+  }
+
+  function addPatternRow(key, count) {
+    const ul = document.getElementById("scan-patterns");
+    if (!ul) return;
+    const li = document.createElement("li");
+
+    const left = document.createElement("div");
+    left.className = "left";
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = key;
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = count + " hit" + (count === 1 ? "" : "s");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addVaultRow(label, type, status) {
+    const ul = document.getElementById("vault-list");
+    if (!ul) return;
+    const li = document.createElement("li");
+
+    const left = document.createElement("div");
+    left.className = "left";
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = label;
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = (type || "node") + " • " + (status || "unknown");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addEchoRow(file, ts) {
+    const ul = document.getElementById("echo-growth-list");
+    if (!ul) return;
+
+    const li = document.createElement("li");
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = file.replace(/^docs\\//, "").replace(/^\\.\\//, "");
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = ts || "";
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addHeartbeatRow(message, ts, source) {
+    const ul = document.getElementById("heartbeat-list");
+    if (!ul) return;
+
+    const li = document.createElement("li");
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = message || "(no message)";
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = (ts || "") + (source ? " • " + source : "");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function setupViewSwitcher() {
+    const buttons = Array.from(document.querySelectorAll(".nav-btn"));
+    const sections = Array.from(document.querySelectorAll("section[data-role]"));
+
+    function applyView(view) {
+      sections.forEach((sec) => {
+        const roles = (sec.dataset.role || "").split(",").map((r) => r.trim());
+        const show = view === "overview" || roles.includes(view);
+        sec.style.display = show ? "" : "none";
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const view = btn.dataset.view;
+        buttons.forEach((b) => b.classList.toggle("active", b === btn));
+        applyView(view);
+      });
+    });
+
+    // initial state: overview
+    applyView("overview");
+  }
+
+  async function bootstrap() {
+    setupViewSwitcher();
+
+    // STATUS.json
+    try {
+      const status = await loadJson("../STATUS.json");
+      const meta = status.meta || {};
+      const chambers = status.chambers || (status.structures && status.structures.chambers) || [];
+      const blooms = status.blooms || (status.structures && status.structures.blooms) || [];
+      const echoes = status.echoes || (status.structures && status.structures.echoes) || [];
+      const vaults = status.vaults || (status.structures && status.structures.vaults) || [];
+      const orchards = status.orchards || (status.structures && status.structures.orchards) || [];
+      const laws = status.laws || (status.structures && status.structures.laws) || [];
+      const cycles = status.cycles || (status.structures && status.structures.cycles) || [];
+
+      document.getElementById("garden-stats").innerHTML = "";
+
+      function card(title, value, metaText) {
+        const wrap = document.createElement("div");
+        wrap.className = "stat-card";
+        const h = document.createElement("h3");
+        h.textContent = title;
+        const v = document.createElement("div");
+        v.className = "value";
+        v.textContent = value;
+        const m = document.createElement("div");
+        m.className = "meta";
+        m.textContent = metaText;
+        wrap.appendChild(h);
+        wrap.appendChild(v);
+        wrap.appendChild(m);
+        document.getElementById("garden-stats").appendChild(wrap);
+      }
+
+      card("Chambers", chambers.length, "Active + primed chambers");
+      card("Blooms", blooms.length, "Mythic blooms in progress");
+      card("Echoes", echoes.length, "Echo routes defined");
+      card("Vault / Laws", vaults.length + " / " + laws.length, "Deep storage & rules");
+      card("Orchards / Cycles", orchards.length + " / " + cycles.length, "Apples & mutation loops");
+
+      setText("status-version", "status_version: " + (meta.status_version || "unknown"));
+      setText("status-generated", "generated_at: " + (meta.generated_at || "unknown"));
+
+      const headerMeta = document.getElementById("meta-status");
+      if (headerMeta) {
+        headerMeta.textContent =
+          "Status " +
+          (meta.status_version || "v?") +
+          " • " +
+          (meta.generated_at || "no timestamp");
+      }
+      setText("status-hint", "STATUS.json loaded • Garden structures counted.");
+    } catch (err) {
+      console.error(err);
+      showError("status-error", "Could not load STATUS.json (" + err.message + ")");
+      setText("status-hint", "STATUS.json missing or invalid.");
+    }
+
+    // machine-index.json (echo growth)
+    try {
+      const idx = await loadJson("../machine-index.json");
+      const growth = idx.echo_growth || idx.echoes || [];
+
+      document.getElementById("echo-growth-list").innerHTML = "";
+
+      const latest = growth
+        .slice()
+        .sort((a, b) => String(b.timestamp || "").localeCompare(String(a.timestamp || "")))
+        .slice(0, 6);
+
+      latest.forEach((row) => {
+        addEchoRow(row.file || row.path || "unknown", row.timestamp || "");
+      });
+
+      setText(
+        "echo-growth-count",
+        growth.length + " Echo file" + (growth.length === 1 ? "" : "s") + " tracked"
+      );
+    } catch (err) {
+      console.error(err);
+      showError("echo-error", "No machine-index.json yet. Run grow-and-archive to seed it.");
+      setText("echo-growth-count", "0 Echo files tracked");
+    }
+
+    // garden_scan_report.json
+    try {
+      const scan = await loadJson("../garden_scan_report.json");
+      const t = scan.totals || {};
+      setText("scan-files", String(t.total_files_with_hits ?? "0"));
+      setText("scan-hits", String(t.total_hits ?? "0"));
+
+      const byPattern = t.by_pattern || {};
+      document.getElementById("scan-patterns").innerHTML = "";
+      Object.entries(byPattern)
+        .filter(([, c]) => c > 0)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 8)
+        .forEach(([key, count]) => addPatternRow(key, count));
+    } catch (err) {
+      console.error(err);
+      showError("scan-error", "Scanner report missing; run Garden Signature Scan workflow.");
+    }
+
+    // garden_vault_index.json
+    try {
+      const vault = await loadJson("../garden_vault_index.json");
+      const nodes =
+        vault.items ||
+        vault.vaults ||
+        vault.chambers ||
+        [];
+
+      document.getElementById("vault-list").innerHTML = "";
+
+      if (Array.isArray(nodes) && nodes.length) {
+        nodes.slice(0, 8).forEach((n) => {
+          addVaultRow(n.label || n.id || "Node", n.type, n.status);
+        });
+      } else {
+        addVaultRow("No vault index entries yet", "info", "awaiting first aeon-archive run");
+      }
+    } catch (err) {
+      console.error(err);
+      showError("vault-error", "Vault index missing; run aeon-archive workflow.");
+    }
+
+    // aeon_heartbeat.json (optional inbox)
+    try {
+      const hb = await loadJson("../aeon_heartbeat.json");
+      const entries = hb.entries || hb.logs || hb || [];
+
+      document.getElementById("heartbeat-list").innerHTML = "";
+
+      let arr = Array.isArray(entries) ? entries : [];
+      const latest = arr
+        .slice()
+        .sort((a, b) => String(b.timestamp || "").localeCompare(String(a.timestamp || "")))
+        .slice(0, 8);
+
+      latest.forEach((row) => {
+        addHeartbeatRow(
+          row.message || row.summary || row.title || "Heartbeat",
+          row.timestamp || "",
+          row.source || row.worker || ""
+        );
+      });
+
+      if (arr.length) {
+        setText(
+          "heartbeat-count",
+          arr.length + " heartbeat message" + (arr.length === 1 ? "" : "s") + " tracked"
+        );
+      } else {
+        setText("heartbeat-count", "No heartbeat entries yet");
+      }
+    } catch (err) {
+      console.warn("Heartbeat optional:", err);
+      showError(
+        "heartbeat-error",
+        "No aeon_heartbeat.json yet. Aeon Heartbeat workflow will populate this inbox."
+      );
+      setText("heartbeat-count", "No heartbeat entries yet");
+    }
+  }
+    // Iron Cicada / Starfire status
+    try {
+      const cicada = await loadJson("System/IRON_CICADA_STATUS.json");
+      const cicadaList = document.getElementById("cicada-list");
+      if (cicadaList) {
+        cicadaList.innerHTML = "";
+
+        const li = document.createElement("li");
+        const left = document.createElement("div");
+        left.className = "left";
+
+        const title = document.createElement("div");
+        title.className = "title";
+        title.textContent = cicada.starfire?.status === "ACTIVE"
+          ? "Starfire Era • ACTIVE"
+          : "Starfire Era • " + (cicada.starfire?.status || "unknown");
+        left.appendChild(title);
+
+        const meta = document.createElement("div");
+        meta.className = "meta-line";
+        meta.textContent =
+          "Cycle " +
+          (cicada.starfire?.cycle || "?") +
+          " • Phase: " +
+          (cicada.starfire?.phase || "—") +
+          (cicada.starfire?.since ? " • since " + cicada.starfire.since : "");
+        left.appendChild(meta);
+
+        li.appendChild(left);
+        cicadaList.appendChild(li);
+      }
+
+      const stateText = document.getElementById("cicada-state-text");
+      const phasePill = document.getElementById("cicada-phase-pill");
+      if (stateText) {
+        stateText.textContent =
+          "Cicada state: " +
+          (cicada.cicada?.state || "unknown") +
+          (cicada.cicada?.mode ? " • mode: " + cicada.cicada.mode : "");
+      }
+      if (phasePill) {
+        phasePill.textContent =
+          "Starfire phase: " +
+          (cicada.starfire?.phase || "—");
+      }
+
+      setText(
+        "cicada-hint",
+        "Iron Cicada and Starfire state loaded from IRON_CICADA_STATUS.json."
+      );
+    } catch (err) {
+      console.warn("Cicada status optional:", err);
+      showError("cicada-error", "No IRON_CICADA_STATUS.json yet or could not parse it.");
+      setText("cicada-hint", "Cicada status JSON missing or invalid.");
+    }
+
+
+  bootstrap();
+</script>
+</body>
+</html>
