@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-02T19:37:39.781Z",
+  "generated_at": "2025-12-03T17:12:09.642Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -26,6 +26,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md"
         },
         {
           "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md"
