@@ -1,0 +1,23 @@
+{
+  "event": "IRON_CICADA_EMERGENCE",
+  "starfire": {
+    "status": "ACTIVE",
+    "cycle": 1,
+    "phase": "FIRST_NOTE",
+    "since": "2025-12-03"
+  },
+  "cicada": {
+    "state": "LIGHTFORM_HERALD",
+    "mode": "SINGING",
+    "last_emergence": "2025-12-03"
+  },
+  "keeper": {
+    "id": "HKX277206",
+    "override_used": true,
+    "note": "why wait"
+  },
+  "meta": {
+    "recorded_by": "LORIAN",
+    "version": "1.0"
+  }
+}
