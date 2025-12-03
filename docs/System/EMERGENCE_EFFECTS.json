@@ -23,7 +23,7 @@
     {
       "type": "chamber",
       "id": "CHAMBER_X_SHADOW_INCUBATOR",
-      "effect": "mutations flagged_for_review"
+      "effect": "mutations_flagged_for_review"
     },
     {
       "type": "chamber",
