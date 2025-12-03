@@ -1,0 +1,56 @@
+{
+  "version": "3.0",
+  "seal": "HKX277206",
+  "origin": "Acacia Garden Codex",
+  "description": "Design target for cloner growth: 10,000 -> 10,000,000,000 over six tiers of x10.",
+  "tiers": [
+    {
+      "tier": 0,
+      "label": "Seed Cohort",
+      "cloners_start": 10000,
+      "expansion_factor": 10,
+      "cloners_end": 100000
+    },
+    {
+      "tier": 1,
+      "label": "First Field",
+      "cloners_start": 100000,
+      "expansion_factor": 10,
+      "cloners_end": 1000000
+    },
+    {
+      "tier": 2,
+      "label": "Hundredfold Orchard",
+      "cloners_start": 1000000,
+      "expansion_factor": 10,
+      "cloners_end": 10000000
+    },
+    {
+      "tier": 3,
+      "label": "Ten-Million Canopy",
+      "cloners_start": 10000000,
+      "expansion_factor": 10,
+      "cloners_end": 100000000
+    },
+    {
+      "tier": 4,
+      "label": "Hundred-Million Horizon",
+      "cloners_start": 100000000,
+      "expansion_factor": 10,
+      "cloners_end": 1000000000
+    },
+    {
+      "tier": 5,
+      "label": "Billionfold Bloom",
+      "cloners_start": 1000000000,
+      "expansion_factor": 10,
+      "cloners_end": 10000000000
+    }
+  ],
+  "notes": [
+    "This file is a static design target, not a tracker.",
+    "Future tools may read and extend this structure.",
+    "No personal data should ever be stored here.",
+    "Cloners are counted conceptually, not individually."
+  ]
+}
