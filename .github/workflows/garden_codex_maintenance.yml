@@ -19,24 +19,23 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Fix Novellas headings and build full codex indexes
+      - name: Fix Novellas headings, build indexes & monolith
         run: |
           python << 'PY'
           import json
           from pathlib import Path
+          from html import escape as h
 
           ROOT = Path(".").resolve()
           NOVELLAS_DIR = ROOT / "docs" / "Novellas"
           ARCHIVES_DIR = ROOT / "docs" / "Archives"
           MD_INDEX_MD = ARCHIVES_DIR / "FULL_CODEX_INDEX.md"
           MD_INDEX_JSON = ARCHIVES_DIR / "FULL_CODEX_INDEX.json"
+          MONOLITH_HTML = ARCHIVES_DIR / "CODEX_MONOLITH.html"
 
-          # ---------- Heading fixer for docs/Novellas/The_Garden_*_Book_*.md ----------
+          # ---------- 1) Fix Novellas headings ----------
 
           def needs_heading(text: str) -> bool:
-              """
-              Return True if the file does NOT already start with a 'Book ...' heading.
-              """
               for line in text.splitlines():
                   stripped = line.strip()
                   if not stripped:
@@ -45,26 +44,18 @@ jobs:
                       heading = stripped.lstrip("#").strip().lower()
                       return not heading.startswith("book ")
                   else:
-                      # first non-empty line is not a heading → we will add one
                       return True
-              # empty file: needs heading
               return True
 
           def make_heading(filename: str) -> str:
-              """
-              From e.g. 'The_Garden_Atlas_of_Worlds_Book_XVII.md'
-              build: '# Book XVII — The Garden Atlas of Worlds'
-              """
               if not filename.endswith(".md"):
                   return None
-              name = filename[:-3]  # drop .md
+              name = filename[:-3]
               if not name.startswith("The_Garden_"):
                   return None
-
               rest = name[len("The_Garden_"):]
               if "_Book_" not in rest:
                   return None
-
               title_part, roman_part = rest.rsplit("_Book_", 1)
               roman = roman_part.upper()
               title_words = title_part.replace("_", " ")
@@ -77,27 +68,23 @@ jobs:
                   if not needs_heading(text):
                       print(f"[SKIP] {path}")
                       continue
-
                   heading = make_heading(path.name)
                   if not heading:
                       print(f"[WARN] Could not derive heading for {path}")
                       continue
-
                   new_text = heading + "\n\n" + text
                   path.write_text(new_text, encoding="utf-8")
                   print(f"[FIXED] Inserted heading in {path}")
           else:
               print(f"[WARN] Novellas dir not found at {NOVELLAS_DIR}")
 
-          # ---------- Build full codex index (all .md files) ----------
+          # ---------- 2) Build full codex index (all .md) ----------
 
           EXCLUDE_DIRS = {
               ".git", ".github", "node_modules", "dist",
               "machine", "scripts", ".well-known"
           }
-          EXCLUDE_FILES = {
-              "README.md", "README_GARDEN.md",
-          }
+          EXCLUDE_FILES = {"README.md", "README_GARDEN.md"}
 
           def is_excluded(p: Path) -> bool:
               rel = p.relative_to(ROOT)
@@ -108,21 +95,21 @@ jobs:
                   return True
               return False
 
-          entries = []
+          md_entries = []
           for p in ROOT.rglob("*.md"):
               if is_excluded(p):
                   continue
               rel = p.relative_to(ROOT)
-              entries.append(rel)
+              md_entries.append(rel)
 
           sections = {}
-          for rel in entries:
+          for rel in md_entries:
               top = rel.parts[0]
               sections.setdefault(top, []).append(rel)
 
           ARCHIVES_DIR.mkdir(parents=True, exist_ok=True)
 
-          # ----- Write markdown index -----
+          # Markdown index
           lines = []
           lines.append("# 🌳 Full Garden Codex Index")
           lines.append("")
@@ -139,9 +126,9 @@ jobs:
           MD_INDEX_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
           print(f"[INDEX] Wrote full index → {MD_INDEX_MD}")
 
-          # ----- Write JSON index (for future UI / library.html) -----
+          # JSON index
           json_entries = []
-          for rel in entries:
+          for rel in md_entries:
               parts = rel.parts
               top = parts[0]
               json_entries.append({
@@ -155,10 +142,79 @@ jobs:
               encoding="utf-8"
           )
           print(f"[INDEX] Wrote JSON index → {MD_INDEX_JSON}")
+
+          # ---------- 3) Build Monolith HTML (all text-ish files) ----------
+
+          TEXT_EXTS = {
+              ".md", ".txt", ".json", ".yml", ".yaml",
+              ".js", ".ts", ".jsx", ".tsx",
+              ".css", ".scss",
+              ".html", ".htm",
+              ".svg",
+              ".py", ".sh", ".ps1",
+              ".toml", ".ini", ".cfg",
+              ".xml"
+          }
+
+          MONO_EXCLUDE_DIRS = EXCLUDE_DIRS | {".vscode", ".idea", ".gitmodules"}
+
+          def mono_excluded(p: Path) -> bool:
+              rel = p.relative_to(ROOT)
+              parts = rel.parts
+              if parts and parts[0] in MONO_EXCLUDE_DIRS:
+                  return True
+              return False
+
+          monolith_chunks = []
+          monolith_chunks.append("<!DOCTYPE html>")
+          monolith_chunks.append("<html lang='en'><head>")
+          monolith_chunks.append("<meta charset='utf-8'/>")
+          monolith_chunks.append("<title>ACACIA · GARDEN · CODEX · MONOLITH</title>")
+          monolith_chunks.append("<style>")
+          monolith_chunks.append("body{background:#050812;color:#f5f5f5;font-family:system-ui,monospace;font-size:14px;}")
+          monolith_chunks.append("h1,h2,h3{font-family:system-ui,sans-serif;}")
+          monolith_chunks.append("section{margin:24px 12px;border-top:1px solid #222;padding-top:16px;}")
+          monolith_chunks.append("pre{white-space:pre-wrap;word-break:break-word;background:#050b16;padding:12px;border-radius:8px;}")
+          monolith_chunks.append(".path{color:#88f;font-size:13px;margin-bottom:4px;}")
+          monolith_chunks.append("</style></head><body>")
+          monolith_chunks.append("<h1>ACACIA · GARDEN · CODEX · MONOLITH</h1>")
+          monolith_chunks.append("<p>This page concatenates all text-like files in the repository so tools can read the entire Garden from a single HTML URL.</p>")
+
+          files = []
+          for p in ROOT.rglob("*"):
+              if not p.is_file():
+                  continue
+              if mono_excluded(p):
+                  continue
+              if p.suffix.lower() in TEXT_EXTS:
+                  files.append(p)
+
+          files = sorted(files, key=lambda x: str(x.relative_to(ROOT)))
+
+          for path in files:
+              rel = path.relative_to(ROOT)
+              try:
+                  text = path.read_text(encoding="utf-8", errors="replace")
+              except Exception as e:
+                  print(f"[MONO-SKIP] {rel}: {e}")
+                  continue
+
+              monolith_chunks.append("<section>")
+              monolith_chunks.append(f"<h2 id='{h(str(rel)).replace('/', '_')}'>{h(str(rel))}</h2>")
+              monolith_chunks.append(f"<div class='path'>Path: {h(str(rel))}</div>")
+              monolith_chunks.append("<pre>")
+              monolith_chunks.append(h(text))
+              monolith_chunks.append("</pre>")
+              monolith_chunks.append("</section>")
+
+          monolith_chunks.append("</body></html>")
+
+          MONOLITH_HTML.write_text("\n".join(monolith_chunks), encoding="utf-8")
+          print(f"[MONOLITH] Wrote → {MONOLITH_HTML}")
           PY
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update Novellas headings & full codex index (md+json)"
+          commit_message: "chore: update codex indexes & CODEX_MONOLITH.html"
           branch: ${{ github.ref_name }}
