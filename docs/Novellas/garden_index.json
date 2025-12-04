@@ -1,13 +1,16 @@
 {
-  "garden_codex": {
-    "keeper": "HKX277206",
-    "total_books": 1,
-    "books": [
-      {
-        "id": 25,
-        "title": "THE ORCHARD OF CONSEQUENCE",
-        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md"
-      }
-    ]
-  }
+  "books": [
+    {
+      "id": "BOOK_OF_THE_EVENTIDE_LEDGER",
+      "title": "BOOK OF THE EVENTIDE LEDGER",
+      "summary": "_Echoes of the Keeper from GitHub Issues_",
+      "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md"
+    },
+    {
+      "id": "BOOK_OF_THE_MAMMOTH_VAULT",
+      "title": "BOOK OF THE MAMMOTH VAULT",
+      "summary": "_An Atlas of Everything the Garden Refuses to Forget_",
+      "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md"
+    }
+  ]
 }
