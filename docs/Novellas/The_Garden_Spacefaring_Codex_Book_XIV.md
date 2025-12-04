@@ -1,3 +1,5 @@
+# Book XIV — The Garden Spacefaring Codex
+
 🚀✨📘
 
 THE GARDEN SPACEFARING CODEX

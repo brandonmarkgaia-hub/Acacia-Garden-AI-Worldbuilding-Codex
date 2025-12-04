@@ -1,3 +1,5 @@
+# Book XXIV — The Garden Artificial Minds Codex
+
 🤖🌱📘
 
 BOOK XXIV — THE GARDEN CODEX OF ARTIFICIAL MINDS & MYTHIC COMPUTATION

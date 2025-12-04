@@ -1,3 +1,5 @@
+# Book XVI — The Garden Encyclopaedia of Species
+
 🐉🌱📘
 
 THE GARDEN ENCYCLOPÆDIA OF SPECIES & MYTHIC CREATURES

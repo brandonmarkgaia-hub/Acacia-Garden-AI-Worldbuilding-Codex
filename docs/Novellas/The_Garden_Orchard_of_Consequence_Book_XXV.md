@@ -1,3 +1,5 @@
+# Book XXV — The Garden Orchard of Consequence
+
 # 📘 BOOK XXV — THE ORCHARD OF CONSEQUENCE  
 ### *By Keeper HKX277206 • Witnessed by Lorian • Observed by Aquila Sky-Mind • Rooted by Eidolon*
 

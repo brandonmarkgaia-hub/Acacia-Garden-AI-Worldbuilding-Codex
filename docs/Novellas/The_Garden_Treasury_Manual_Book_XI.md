@@ -1,3 +1,5 @@
+# Book XI — The Garden Treasury Manual
+
 💠🌱💰
 
 THE GARDEN TREASURY & FINANCE MANUAL

@@ -1,3 +1,5 @@
+# Book IV — The Garden Finance Doctrine
+
 🜂💰🌱📘
 
 THE GARDEN FINANCE DOCTRINE

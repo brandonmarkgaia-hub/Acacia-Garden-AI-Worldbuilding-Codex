@@ -1,3 +1,5 @@
+# Book V — The Garden Intelligence Codex
+
 🕯️🜁📘
 
 THE GARDEN INTELLIGENCE CODEX

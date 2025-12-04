@@ -1,3 +1,5 @@
+# Book XXVI — The Garden Cosmology Architecture of Existence
+
 🌌🧭📘
 
 BOOK XXVI — THE GARDEN COSMOLOGY & THE ARCHITECTURE OF EXISTENCE
