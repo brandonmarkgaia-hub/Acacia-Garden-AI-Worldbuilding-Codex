@@ -19,14 +19,17 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Fix Novellas headings and build full codex index
+      - name: Fix Novellas headings and build full codex indexes
         run: |
           python << 'PY'
-          import re
+          import json
           from pathlib import Path
 
           ROOT = Path(".").resolve()
           NOVELLAS_DIR = ROOT / "docs" / "Novellas"
+          ARCHIVES_DIR = ROOT / "docs" / "Archives"
+          MD_INDEX_MD = ARCHIVES_DIR / "FULL_CODEX_INDEX.md"
+          MD_INDEX_JSON = ARCHIVES_DIR / "FULL_CODEX_INDEX.json"
 
           # ---------- Heading fixer for docs/Novellas/The_Garden_*_Book_*.md ----------
 
@@ -86,9 +89,7 @@ jobs:
           else:
               print(f"[WARN] Novellas dir not found at {NOVELLAS_DIR}")
 
-          # ---------- Build full codex index for all .md files ----------
-
-          OUTPUT = ROOT / "docs" / "Archives" / "FULL_CODEX_INDEX.md"
+          # ---------- Build full codex index (all .md files) ----------
 
           EXCLUDE_DIRS = {
               ".git", ".github", "node_modules", "dist",
@@ -98,11 +99,12 @@ jobs:
               "README.md", "README_GARDEN.md",
           }
 
-          def is_excluded(path: Path) -> bool:
-              parts = path.relative_to(ROOT).parts
-              if parts[0] in EXCLUDE_DIRS:
+          def is_excluded(p: Path) -> bool:
+              rel = p.relative_to(ROOT)
+              parts = rel.parts
+              if parts and parts[0] in EXCLUDE_DIRS:
                   return True
-              if path.name in EXCLUDE_FILES:
+              if rel.name in EXCLUDE_FILES:
                   return True
               return False
 
@@ -110,13 +112,17 @@ jobs:
           for p in ROOT.rglob("*.md"):
               if is_excluded(p):
                   continue
-              entries.append(p.relative_to(ROOT))
+              rel = p.relative_to(ROOT)
+              entries.append(rel)
 
           sections = {}
           for rel in entries:
               top = rel.parts[0]
               sections.setdefault(top, []).append(rel)
 
+          ARCHIVES_DIR.mkdir(parents=True, exist_ok=True)
+
+          # ----- Write markdown index -----
           lines = []
           lines.append("# 🌳 Full Garden Codex Index")
           lines.append("")
@@ -130,13 +136,29 @@ jobs:
                   lines.append(f"- `{rel}`")
               lines.append("")
 
-          OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-          OUTPUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-          print(f"[INDEX] Wrote full index → {OUTPUT}")
+          MD_INDEX_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+          print(f"[INDEX] Wrote full index → {MD_INDEX_MD}")
+
+          # ----- Write JSON index (for future UI / library.html) -----
+          json_entries = []
+          for rel in entries:
+              parts = rel.parts
+              top = parts[0]
+              json_entries.append({
+                  "path": str(rel),
+                  "top": top,
+                  "name": rel.name,
+              })
+
+          MD_INDEX_JSON.write_text(
+              json.dumps(json_entries, indent=2, ensure_ascii=False),
+              encoding="utf-8"
+          )
+          print(f"[INDEX] Wrote JSON index → {MD_INDEX_JSON}")
           PY
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update Novellas headings & full codex index"
+          commit_message: "chore: update Novellas headings & full codex index (md+json)"
           branch: ${{ github.ref_name }}
