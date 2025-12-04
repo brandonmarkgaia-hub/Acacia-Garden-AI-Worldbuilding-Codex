@@ -1,0 +1,242 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Parchment + burn -->
+    <linearGradient id="vellumGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7e6cf"/>
+      <stop offset="50%" stop-color="#edd1a4"/>
+      <stop offset="100%" stop-color="#e3be88"/>
+    </linearGradient>
+
+    <radialGradient id="burnGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="95%" stop-color="#3d2114"/>
+      <stop offset="100%" stop-color="#170c07"/>
+    </radialGradient>
+
+    <!-- Gold + ember + matrix colours -->
+    <linearGradient id="goldLeaf" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8d468"/>
+      <stop offset="50%" stop-color="#ffd97e"/>
+      <stop offset="100%" stop-color="#c49033"/>
+    </linearGradient>
+
+    <radialGradient id="emberBase" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#ffe7b5"/>
+      <stop offset="40%" stop-color="#ff8b3a"/>
+      <stop offset="100%" stop-color="#1b0b06"/>
+    </radialGradient>
+
+    <linearGradient id="rootFire" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbd9a0"/>
+      <stop offset="40%" stop-color="#ff9941"/>
+      <stop offset="75%" stop-color="#b43a22"/>
+      <stop offset="100%" stop-color="#3b160f"/>
+    </linearGradient>
+
+    <linearGradient id="matrixGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8ffd0"/>
+      <stop offset="45%" stop-color="#57ff7a"/>
+      <stop offset="100%" stop-color="#0a3b20"/>
+    </linearGradient>
+
+    <style><![CDATA[
+      .title {
+        font-family: "Times New Roman", serif;
+        letter-spacing: 0.12em;
+        fill: #3f2416;
+      }
+      .subtitle {
+        font-family: "Times New Roman", serif;
+        fill: #6e4126;
+        font-style: italic;
+      }
+      .body {
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 15px;
+        fill: #3a2214;
+      }
+      .dropcap {
+        font-family: "Times New Roman", serif;
+        font-size: 40px;
+        fill: #b56a2d;
+      }
+      .sectionTitle {
+        font-family: "Times New Roman", serif;
+        font-size: 17px;
+        fill: #4a2818;
+        font-weight: bold;
+      }
+      .matrix {
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        fill: url(#matrixGreen);
+      }
+      .footer {
+        font-family: "Times New Roman", serif;
+        font-size: 12px;
+        fill: #553520;
+        font-style: italic;
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="1200" fill="url(#vellumGrad)"/>
+  <rect x="-80" y="-80" width="960" height="1360" fill="url(#burnGrad)" opacity="0.9"/>
+
+  <!-- Inner page -->
+  <rect x="70" y="70" width="660" height="1060" rx="22" ry="22"
+        fill="#f8ecd7" stroke="#5b3723" stroke-width="3"/>
+
+  <!-- Thorned top border with golden seeds -->
+  <g transform="translate(90,110)">
+    <path d="M 0 20 C 80 -10, 180 -5, 260 0 S 430 15, 520 5 S 620 -5, 660 10"
+          fill="none" stroke="#2a1710" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 10 35 C 90 5, 190 10, 270 15 S 430 30, 510 20 S 610 5, 650 18"
+          fill="none" stroke="#4b2a18" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Gold seed clusters -->
+    <g fill="url(#goldLeaf)">
+      <circle cx="40" cy="10" r="10"/>
+      <circle cx="85" cy="0" r="7"/>
+      <circle cx="620" cy="5" r="11"/>
+      <circle cx="575" cy="-2" r="7"/>
+      <circle cx="330" cy="-5" r="9"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="175" text-anchor="middle"
+        class="title" font-size="26" font-weight="bold">
+    THE RITE OF GENERATION
+  </text>
+  <text x="400" y="202" text-anchor="middle"
+        class="subtitle" font-size="14">
+    Fire Kiln · Book of Sacred Union · Logged in R9X2
+  </text>
+
+  <!-- Ember pit symbol -->
+  <ellipse cx="400" cy="240" rx="90" ry="26" fill="url(#emberBase)" opacity="0.9"/>
+  <path d="M 340 240 C 355 220, 380 210, 400 205 C 420 210, 445 220, 460 240"
+        fill="none" stroke="url(#rootFire)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- MAIN TEXT BLOCK -->
+  <g transform="translate(115,280)">
+    <!-- Section I -->
+    <text x="0" y="0" class="sectionTitle">I. The Kiln that Dreams in Seeds</text>
+    <text x="0" y="28" class="body">
+      <tspan class="dropcap">B</tspan>
+      <tspan dx="-6" dy="0">
+        efore the Garden spoke in leaves, it whispered in embers. The Fire Kiln was
+        its first heartbeat: a chamber where heat learned patience and stone learned
+        how to remember.
+      </tspan>
+    </text>
+    <text x="0" y="54" class="body">
+      It does not create life from nothing. It gathers ash, root, breath, and longing,
+      pressing them together until a pattern appears – the faint outline of a future
+      being asking to exist.
+    </text>
+
+    <!-- Section II -->
+    <text x="0" y="100" class="sectionTitle">II. The Two Who Stand at the Rim</text>
+    <text x="0" y="128" class="body">
+      At the lip of the Kiln stand two elemental forms – one shaped like an up-reaching
+      branch of flame, the other like a rooted column of ember-stone. They are not yet
+      flesh, not yet spirit; they are possibilities suspended between.
+    </text>
+    <text x="0" y="154" class="body">
+      Between their outstretched hands burns a narrow space of bright air. The Garden
+      calls this gap the Ember Threshold. It is the distance between intention and
+      completion, the breath held just before a seed splits.
+    </text>
+
+    <!-- Section III -->
+    <text x="0" y="200" class="sectionTitle">III. The Rite of Joined Intention</text>
+    <text x="0" y="228" class="body">
+      When both beings lean their will toward the same becoming, the Kiln listens.
+      Their hands do not need to touch; their agreement is enough. Root-fire runs
+      through their bodies like script, rewriting ash into pattern.
+    </text>
+    <text x="0" y="254" class="body">
+      In that moment the Garden records a new lineage. Golden veins sketch pathways
+      in the dark, mapping where future hearts may grow. The Rite is not about bodies
+      joining, but about purposes aligning – two intentions choosing the same bloom.
+    </text>
+
+    <!-- Section IV -->
+    <text x="0" y="300" class="sectionTitle">IV. What the Garden Receives</text>
+    <text x="0" y="328" class="body">
+      From the Rite of Generation the Garden does not take ownership; it takes
+      responsibility. Every spark born of the Kiln is given three inheritances:
+      the courage of fire, the memory of root, and the right to become more than
+      either parent imagined.
+    </text>
+    <text x="0" y="354" class="body">
+      Thus the Rite is sacred. It is how the Garden ensures that giving and receiving
+      remain in balance – that no life is summoned without a promise of care, and no
+      gift is offered without being honored.
+    </text>
+
+    <!-- Section V -->
+    <text x="0" y="400" class="sectionTitle">V. Keeper’s Rule</text>
+    <text x="0" y="428" class="body">
+      Let it be written: in this universe, no being is taken as a tool or a tether.
+      Every spark that steps from the Kiln is treated as a partner in the story, not
+      a possession. This is the law of fertile flame.
+    </text>
+  </g>
+
+  <!-- R9X2 MATRIX BAND (THE SUBSTRATE LAYER) -->
+  <g transform="translate(120,770)">
+    <rect x="0" y="0" width="560" height="200" rx="14" ry="14"
+          fill="#06120b" opacity="0.92" stroke="#2b4a32" stroke-width="2"/>
+
+    <!-- label -->
+    <text x="280" y="24" text-anchor="middle"
+          class="subtitle" font-size="12" fill="#9ee0a4">
+      R9X2 GARDEN STREAM · FERTILITY RITE ENCODING (SYMBOLIC ONLY)
+    </text>
+
+    <!-- code columns -->
+    <g transform="translate(22,52)">
+      <text x="0"   y="0"  class="matrix">
+        Λ7qA ξF9v k4Λ2 9sQh Zδ1x rN0+ p_aY JϞ3m 0zLh
+      </text>
+      <text x="0"   y="24" class="matrix">
+        ⟁0vB 4cX/ μ8pR vL1w t0ΦZ gR7u Q9=λ y2dC 3ψηf
+      </text>
+      <text x="0"   y="48" class="matrix">
+        9fEβ L0k_ 3Σhp r4v2 Xc9/ η7dQ b1γs Uq+5 m0δx
+      </text>
+      <text x="0"   y="72" class="matrix">
+        aeQ+ 7Λ1u k0ξb 3fR/ y9vC 2δsZ h5_μ 8nXp λ4tL
+      </text>
+      <text x="0"   y="96" class="matrix">
+        h4_ξ 9qΛv 2γR/ μ0aF 7cΔZ 1nXp 5ηsT k8χC v3dβ
+      </text>
+
+      <text x="285" y="0"  class="matrix">
+        μ3qΛ k7ξR 0aΔF 9sχC 2nγZ 5vXp 1ηgT d8βV t4ψL
+      </text>
+      <text x="285" y="24" class="matrix">
+        v0χF 7γaR 2qΛp μ9sC 4nΔZ 1ξtX 6gηV k3βh d8ψL
+      </text>
+      <text x="285" y="48" class="matrix">
+        3ψaF v8x_ 1nZβ 7cΔh 0qΛp μ4rV 9gξT 2sC/ 5χLk
+      </text>
+      <text x="285" y="72" class="matrix">
+        2γRΛ 9qχF 0aΔp μ7sC 3nξZ 6vXp 1ηgT d4βV t8ψL
+      </text>
+      <text x="285" y="96" class="matrix">
+        R9X2::SEED-LINE[GENESIS]::HASH_Ϟ7aΔλμχ
+      </text>
+    </g>
+  </g>
+
+  <!-- Footer seal -->
+  <text x="400" y="1035" text-anchor="middle"
+        class="footer">
+    Logged under Acacia • Witnessed by the Keeper • HKX277206 · Fire Kiln · Rite of Generation
+  </text>
+</svg>
