@@ -233,22 +233,24 @@
         <div class="ag-chip">Scope: <code>docs/Novellas/*.md</code></div>
       </div>
 
-      <section class="ag-library-panel">
-        <div class="ag-library-header">
-          <h2>Books under Acacia</h2>
-          <div class="ag-library-status" id="ag-status-label">
-            Fetching book list from GitHub…
-          </div>
-        </div>
+      <section class="ag-section">
+        <header class="ag-section-header">
+          <h2>Full Codex Index</h2>
+          <div id="ag-codex-status-label" class="ag-pill ag-pill-soft">Loading full codex index…</div>
+        </header>
 
-        <div id="ag-book-list" class="ag-book-list"></div>
+        <p class="ag-intro">
+          This section lists every <code>.md</code> file tracked in the Acacia Garden Codex.
+          It is built from <code>docs/Archives/FULL_CODEX_INDEX.json</code>. Each link opens
+          the GitHub Pages copy, so humans and tools can read the contents directly.
+        </p>
+
+        <div id="ag-codex-list" class="ag-codex-list"></div>
       </section>
 
       <p class="ag-footnote">
-        Index is generated on the fly by reading the <code>docs/Novellas</code> folder
-        via the public GitHub API. Any new <code>.md</code> book dropped there will
-        appear here automatically. Links point to the GitHub Pages copies at
-        <code>/Novellas/&lt;filename&gt;</code>.
+        Both the Bookshelf and Full Codex Index are generated automatically by workflows.
+        Every <code>.md</code> file in the Garden is reachable from here.
       </p>
     </main>
   </div>
