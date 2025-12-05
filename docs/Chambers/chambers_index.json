@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T16:27:19.411Z",
+  "generated_at": "2025-12-05T18:47:42.199Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -47,6 +47,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md"
