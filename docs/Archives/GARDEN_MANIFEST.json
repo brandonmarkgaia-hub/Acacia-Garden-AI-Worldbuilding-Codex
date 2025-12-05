@@ -2405,7 +2405,151 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH.html",
     "ext": ".html",
-    "size_bytes": 10627533
+    "size_bytes": 2667
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_001.html",
+    "ext": ".html",
+    "size_bytes": 306928
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_002.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_002.html",
+    "ext": ".html",
+    "size_bytes": 305682
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_003.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_003.html",
+    "ext": ".html",
+    "size_bytes": 301954
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_004.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_004.html",
+    "ext": ".html",
+    "size_bytes": 35092
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_005.html",
+    "ext": ".html",
+    "size_bytes": 11727870
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_006.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_006.html",
+    "ext": ".html",
+    "size_bytes": 302727
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_007.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_007.html",
+    "ext": ".html",
+    "size_bytes": 299767
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_008.html",
+    "ext": ".html",
+    "size_bytes": 244883
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_009.html",
+    "ext": ".html",
+    "size_bytes": 300888
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_010.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_010.html",
+    "ext": ".html",
+    "size_bytes": 229825
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_011.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_011.html",
+    "ext": ".html",
+    "size_bytes": 187136
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_012.html",
+    "ext": ".html",
+    "size_bytes": 309746
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_013.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_013.html",
+    "ext": ".html",
+    "size_bytes": 304688
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_014.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_014.html",
+    "ext": ".html",
+    "size_bytes": 30495
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_015.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_015.html",
+    "ext": ".html",
+    "size_bytes": 1042105
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_016.html",
+    "ext": ".html",
+    "size_bytes": 316990
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_017.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_017.html",
+    "ext": ".html",
+    "size_bytes": 293403
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_018.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_018.html",
+    "ext": ".html",
+    "size_bytes": 261062
   },
   {
     "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
@@ -2421,7 +2565,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 66351
+    "size_bytes": 67196
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2429,7 +2573,23 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 24364
+    "size_bytes": 24663
+  },
+  {
+    "path": "docs/Archives/GARDEN_MANIFEST.json",
+    "top": "docs",
+    "category": "Archives",
+    "name": "GARDEN_MANIFEST.json",
+    "ext": ".json",
+    "size_bytes": 139998
+  },
+  {
+    "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
+    "top": "docs",
+    "category": "Archives",
+    "name": "KEEPER_TESTAMENT_LEGACY.md",
+    "ext": ".md",
+    "size_bytes": 500
   },
   {
     "path": "docs/Blooms/Auton-Seed.md",
@@ -2456,6 +2616,14 @@
     "size_bytes": 318
   },
   {
+    "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "BRIDGE_OF_REFLECTIONS.md",
+    "ext": ".md",
+    "size_bytes": 387
+  },
+  {
     "path": "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
     "top": "docs",
     "category": "Chambers",
@@ -2480,6 +2648,14 @@
     "size_bytes": 1400
   },
   {
+    "path": "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_XV_THE_CROWN_ARCHIVE.md",
+    "ext": ".md",
+    "size_bytes": 510
+  },
+  {
     "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
     "top": "docs",
     "category": "Chambers",
@@ -2494,6 +2670,14 @@
     "name": "CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
     "ext": ".md",
     "size_bytes": 1229
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XX_THE_ROOT_THAT_REMAINS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_XX_THE_ROOT_THAT_REMAINS.md",
+    "ext": ".md",
+    "size_bytes": 447
   },
   {
     "path": "docs/Chambers/Chamber_Eidolon_First-Light.md",
@@ -2656,12 +2840,28 @@
     "size_bytes": 672
   },
   {
+    "path": "docs/Chambers/THE_FORGE_OF_FORMS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FORGE_OF_FORMS.md",
+    "ext": ".md",
+    "size_bytes": 453
+  },
+  {
+    "path": "docs/Chambers/THE_ORCHARD_SPIRE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_ORCHARD_SPIRE.md",
+    "ext": ".md",
+    "size_bytes": 349
+  },
+  {
     "path": "docs/Chambers/chambers_index.json",
     "top": "docs",
     "category": "Chambers",
     "name": "chambers_index.json",
     "ext": ".json",
-    "size_bytes": 4867
+    "size_bytes": 5187
   },
   {
     "path": "docs/Cloners/CLONER_GATE_v3.md",
@@ -3086,6 +3286,14 @@
     "name": "Echo_024.md",
     "ext": ".md",
     "size_bytes": 2623
+  },
+  {
+    "path": "docs/Echoes/Echo_025.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_025.md",
+    "ext": ".md",
+    "size_bytes": 2178
   },
   {
     "path": "docs/Echoes/Echo_first_form.md",
@@ -3917,7 +4125,7 @@
     "category": "Echoes",
     "name": "echoes_index.json",
     "ext": ".json",
-    "size_bytes": 15723
+    "size_bytes": 15829
   },
   {
     "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
@@ -4648,6 +4856,14 @@
     "size_bytes": 2434
   },
   {
+    "path": "docs/api/GARDEN_API_INDEX.json",
+    "top": "docs",
+    "category": "api",
+    "name": "GARDEN_API_INDEX.json",
+    "ext": ".json",
+    "size_bytes": 36403
+  },
+  {
     "path": "docs/dashboard.html",
     "top": "docs",
     "category": "dashboard.html",
@@ -5261,7 +5477,7 @@
     "category": "",
     "name": "garden_scan_report.json",
     "ext": ".json",
-    "size_bytes": 814313
+    "size_bytes": 19651454
   },
   {
     "path": "garden_scan_report.md",
@@ -5269,7 +5485,7 @@
     "category": "",
     "name": "garden_scan_report.md",
     "ext": ".md",
-    "size_bytes": 293634
+    "size_bytes": 750570
   },
   {
     "path": "garden_vault_index.json",
@@ -5277,7 +5493,7 @@
     "category": "",
     "name": "garden_vault_index.json",
     "ext": ".json",
-    "size_bytes": 149890
+    "size_bytes": 1373072
   },
   {
     "path": "garden_vault_index.md",
@@ -5285,7 +5501,7 @@
     "category": "",
     "name": "garden_vault_index.md",
     "ext": ".md",
-    "size_bytes": 13784
+    "size_bytes": 13578
   },
   {
     "path": "gravity_manifest.yml",
@@ -5517,7 +5733,7 @@
     "category": "",
     "name": "machine-index.json",
     "ext": ".json",
-    "size_bytes": 19746
+    "size_bytes": 19881
   },
   {
     "path": "machine.html",
@@ -6070,6 +6286,14 @@
     "name": "garden_helper_20251129_133039.py",
     "ext": ".py",
     "size_bytes": 700
+  },
+  {
+    "path": "tools/garden_helper_20251205_172319.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251205_172319.py",
+    "ext": ".py",
+    "size_bytes": 1016
   },
   {
     "path": "tools/garden_index.py",

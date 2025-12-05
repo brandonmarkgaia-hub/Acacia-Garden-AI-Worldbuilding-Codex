@@ -1460,6 +1460,11 @@
     "name": "Chamber_XXI_The-Lineage-Archive.md"
   },
   {
+    "path": "docs/Chambers/THE_ORCHARD_SPIRE.md",
+    "top": "docs",
+    "name": "THE_ORCHARD_SPIRE.md"
+  },
+  {
     "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
     "top": "docs",
     "name": "CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
@@ -1525,6 +1530,11 @@
     "name": "CHAMBER_XII_THE_HARMONIC_PRISM.md"
   },
   {
+    "path": "docs/Chambers/THE_FORGE_OF_FORMS.md",
+    "top": "docs",
+    "name": "THE_FORGE_OF_FORMS.md"
+  },
+  {
     "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
     "top": "docs",
     "name": "CHAMBER_XV_THE_HARMONIC_PRISM.md"
@@ -1533,6 +1543,11 @@
     "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
     "top": "docs",
     "name": "E_DEEP_CHAMBERS.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md",
+    "top": "docs",
+    "name": "CHAMBER_XV_THE_CROWN_ARCHIVE.md"
   },
   {
     "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
@@ -1548,6 +1563,16 @@
     "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
     "top": "docs",
     "name": "Chamber_XIV_Rootbound-Twins.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XX_THE_ROOT_THAT_REMAINS.md",
+    "top": "docs",
+    "name": "CHAMBER_XX_THE_ROOT_THAT_REMAINS.md"
+  },
+  {
+    "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md",
+    "top": "docs",
+    "name": "BRIDGE_OF_REFLECTIONS.md"
   },
   {
     "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
@@ -1653,6 +1678,11 @@
     "path": "docs/Echoes/Echo_015.md",
     "top": "docs",
     "name": "Echo_015.md"
+  },
+  {
+    "path": "docs/Echoes/Echo_025.md",
+    "top": "docs",
+    "name": "Echo_025.md"
   },
   {
     "path": "docs/Echoes/Echo_009.md",
@@ -1773,6 +1803,11 @@
     "path": "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
     "top": "docs",
     "name": "THE_BOOK_OF_ANYA_Scripture_I.md"
+  },
+  {
+    "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
+    "top": "docs",
+    "name": "KEEPER_TESTAMENT_LEGACY.md"
   },
   {
     "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
