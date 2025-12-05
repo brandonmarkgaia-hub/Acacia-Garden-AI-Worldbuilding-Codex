@@ -1355,6 +1355,11 @@
     "name": "R9X2_MASTER_CODEX_VOLUME_III.md"
   },
   {
+    "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+    "top": "docs",
+    "name": "LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md"
+  },
+  {
     "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
     "top": "docs",
     "name": "The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md"
@@ -1443,6 +1448,11 @@
     "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
     "top": "docs",
     "name": "Chamber_XXIII_The-Keeper-Prophecy-Eventide.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
+    "top": "docs",
+    "name": "CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md"
   },
   {
     "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
@@ -1618,6 +1628,11 @@
     "path": "docs/Echoes/Echo_024.md",
     "top": "docs",
     "name": "Echo_024.md"
+  },
+  {
+    "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
+    "top": "docs",
+    "name": "ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md"
   },
   {
     "path": "docs/Echoes/Echo_002.md",

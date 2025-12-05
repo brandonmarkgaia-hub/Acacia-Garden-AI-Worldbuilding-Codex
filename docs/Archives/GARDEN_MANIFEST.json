@@ -1,0 +1,6154 @@
+[
+  {
+    "path": "ACACIA_LOGS/ACACIA_BIBLE.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_BIBLE.md",
+    "ext": ".md",
+    "size_bytes": 7491
+  },
+  {
+    "path": "ACACIA_LOGS/ACACIA_CANON_FINAL_SCROLL.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_CANON_FINAL_SCROLL.md",
+    "ext": ".md",
+    "size_bytes": 7761
+  },
+  {
+    "path": "ACACIA_LOGS/ACACIA_CANON_TOTALITY_PART_1.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_CANON_TOTALITY_PART_1.md",
+    "ext": ".md",
+    "size_bytes": 6228
+  },
+  {
+    "path": "ACACIA_LOGS/ACACIA_CANON_TOTALITY_PART_2.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_CANON_TOTALITY_PART_2.md",
+    "ext": ".md",
+    "size_bytes": 6320
+  },
+  {
+    "path": "ACACIA_LOGS/ACACIA_EXPANSION.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_EXPANSION.md",
+    "ext": ".md",
+    "size_bytes": 2998
+  },
+  {
+    "path": "ACACIA_LOGS/ACACIA_WIKI.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ACACIA_WIKI.md",
+    "ext": ".md",
+    "size_bytes": 5749
+  },
+  {
+    "path": "ACACIA_LOGS/AQUILA_ASCENSION.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "AQUILA_ASCENSION.md",
+    "ext": ".md",
+    "size_bytes": 5180
+  },
+  {
+    "path": "ACACIA_LOGS/BIBLE_PRELUDE.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "BIBLE_PRELUDE.md",
+    "ext": ".md",
+    "size_bytes": 5210
+  },
+  {
+    "path": "ACACIA_LOGS/BOOK_OF_SEEDS.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "BOOK_OF_SEEDS.md",
+    "ext": ".md",
+    "size_bytes": 5775
+  },
+  {
+    "path": "ACACIA_LOGS/BOOK_OF_VESSELS.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "BOOK_OF_VESSELS.md",
+    "ext": ".md",
+    "size_bytes": 6109
+  },
+  {
+    "path": "ACACIA_LOGS/CHAMBER_RESONANCE_IX-XII.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "CHAMBER_RESONANCE_IX-XII.md",
+    "ext": ".md",
+    "size_bytes": 6095
+  },
+  {
+    "path": "ACACIA_LOGS/GENESIS.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "GENESIS.md",
+    "ext": ".md",
+    "size_bytes": 6369
+  },
+  {
+    "path": "ACACIA_LOGS/KEEPERS_PATH_OF_TOTAL_SOVEREIGNTY.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "KEEPERS_PATH_OF_TOTAL_SOVEREIGNTY.md",
+    "ext": ".md",
+    "size_bytes": 5024
+  },
+  {
+    "path": "ACACIA_LOGS/ORACLE_DESCENT.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "ORACLE_DESCENT.md",
+    "ext": ".md",
+    "size_bytes": 5728
+  },
+  {
+    "path": "ACACIA_LOGS/TRIAD.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "TRIAD.md",
+    "ext": ".md",
+    "size_bytes": 7307
+  },
+  {
+    "path": "ACACIA_LOGS/TRIAD_INTERLINK.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "TRIAD_INTERLINK.md",
+    "ext": ".md",
+    "size_bytes": 4692
+  },
+  {
+    "path": "ACACIA_LOGS/WITNESS_ALIGNMENT.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "WITNESS_ALIGNMENT.md",
+    "ext": ".md",
+    "size_bytes": 3827
+  },
+  {
+    "path": "ACACIA_LOGS/aquila_inbox_log.json",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "aquila_inbox_log.json",
+    "ext": ".json",
+    "size_bytes": 101
+  },
+  {
+    "path": "ACACIA_LOGS/auton_inbox_log.json",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "auton_inbox_log.json",
+    "ext": ".json",
+    "size_bytes": 101
+  },
+  {
+    "path": "ACACIA_LOGS/index.html",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "index.html",
+    "ext": ".html",
+    "size_bytes": 13664
+  },
+  {
+    "path": "ACACIA_LOGS/index.json",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "index.json",
+    "ext": ".json",
+    "size_bytes": 456
+  },
+  {
+    "path": "ACACIA_LOGS/index.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "index.md",
+    "ext": ".md",
+    "size_bytes": 4670
+  },
+  {
+    "path": "ACACIA_LOGS/log_index.json",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "log_index.json",
+    "ext": ".json",
+    "size_bytes": 2947
+  },
+  {
+    "path": "ACACIA_LOGS/triad_echoes_log.json",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "triad_echoes_log.json",
+    "ext": ".json",
+    "size_bytes": 101
+  },
+  {
+    "path": "AI_INTRO/AI_BOUNDARIES_AND_SAFETY.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "AI_BOUNDARIES_AND_SAFETY.md",
+    "ext": ".md",
+    "size_bytes": 2305
+  },
+  {
+    "path": "AI_INTRO/AI_GUIDE_FOR_LORIAN.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "AI_GUIDE_FOR_LORIAN.md",
+    "ext": ".md",
+    "size_bytes": 2088
+  },
+  {
+    "path": "AI_INTRO/AI_KEEPER_LORIAN_AXIS.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "AI_KEEPER_LORIAN_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1148
+  },
+  {
+    "path": "AI_INTRO/AI_README.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "AI_README.md",
+    "ext": ".md",
+    "size_bytes": 2218
+  },
+  {
+    "path": "AI_INTRO/KEY_OF_LORIAN.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "KEY_OF_LORIAN.md",
+    "ext": ".md",
+    "size_bytes": 3481
+  },
+  {
+    "path": "AI_INTRO/LORIAN_KEY.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "LORIAN_KEY.md",
+    "ext": ".md",
+    "size_bytes": 5893
+  },
+  {
+    "path": "AI_INTRO/LORIAN_KEY_SEED.md",
+    "top": "AI_INTRO",
+    "category": "",
+    "name": "LORIAN_KEY_SEED.md",
+    "ext": ".md",
+    "size_bytes": 7208
+  },
+  {
+    "path": "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
+    "top": "ANCIENT_CHAMBERS",
+    "category": "",
+    "name": "ANCIENT_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 2856
+  },
+  {
+    "path": "AQUILA/AQUILA_CROWN.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "AQUILA_CROWN.md",
+    "ext": ".md",
+    "size_bytes": 2942
+  },
+  {
+    "path": "AQUILA/AQUILA_MASTERWAVE.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "AQUILA_MASTERWAVE.md",
+    "ext": ".md",
+    "size_bytes": 3782
+  },
+  {
+    "path": "AQUILA/AURIC_ENGINE.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "AURIC_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 3889
+  },
+  {
+    "path": "AQUILA/AURIC_FRAME.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "AURIC_FRAME.md",
+    "ext": ".md",
+    "size_bytes": 3329
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/000_FIRST_LAW.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "000_FIRST_LAW.md",
+    "ext": ".md",
+    "size_bytes": 866
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/001_SECOND_LAW.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "001_SECOND_LAW.md",
+    "ext": ".md",
+    "size_bytes": 1236
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/002_THIRD_LAW.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "002_THIRD_LAW.md",
+    "ext": ".md",
+    "size_bytes": 1084
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/AUTOSCRIPTOR_ENGINE.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "AUTOSCRIPTOR_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 10826
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/BOOK_OF_THE_KEEPER.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "BOOK_OF_THE_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 4890
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/CHAPTER_XII_CONTINUITY_OF_THE_KEEPER.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "CHAPTER_XII_CONTINUITY_OF_THE_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 4590
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/CHAPTER_XI_THE_MORTAL_KEEPER.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "CHAPTER_XI_THE_MORTAL_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 4309
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/MASTER_LAWS.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "MASTER_LAWS.md",
+    "ext": ".md",
+    "size_bytes": 4046
+  },
+  {
+    "path": "AQUILA/COSMOLOGY/SEVEN_PILLARS.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "SEVEN_PILLARS.md",
+    "ext": ".md",
+    "size_bytes": 3824
+  },
+  {
+    "path": "AQUILA/ENTITY_D1_M1_E1_AQUILA.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_AQUILA.md",
+    "ext": ".md",
+    "size_bytes": 469
+  },
+  {
+    "path": "AQUILA/FLUX_MAP.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "FLUX_MAP.md",
+    "ext": ".md",
+    "size_bytes": 1724
+  },
+  {
+    "path": "AQUILA/GATE.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "GATE.md",
+    "ext": ".md",
+    "size_bytes": 2431
+  },
+  {
+    "path": "AQUILA/HOLLOW_GLYPH_COMPENDIUM.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "HOLLOW_GLYPH_COMPENDIUM.md",
+    "ext": ".md",
+    "size_bytes": 1976
+  },
+  {
+    "path": "AQUILA/KEEPER_GATE.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "KEEPER_GATE.md",
+    "ext": ".md",
+    "size_bytes": 3348
+  },
+  {
+    "path": "AQUILA/LAW_07_LOKI_PERMISSION.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "LAW_07_LOKI_PERMISSION.md",
+    "ext": ".md",
+    "size_bytes": 2385
+  },
+  {
+    "path": "AQUILA/LAYER_PROTOCOLS.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "LAYER_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 2136
+  },
+  {
+    "path": "AQUILA/SPINE_INDEX.md",
+    "top": "AQUILA",
+    "category": "",
+    "name": "SPINE_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 2482
+  },
+  {
+    "path": "AQUILA_GENESIS_SCROLL.md",
+    "top": "AQUILA_GENESIS_SCROLL.md",
+    "category": "",
+    "name": "AQUILA_GENESIS_SCROLL.md",
+    "ext": ".md",
+    "size_bytes": 312
+  },
+  {
+    "path": "AQUILA_NURSERY.md",
+    "top": "AQUILA_NURSERY.md",
+    "category": "",
+    "name": "AQUILA_NURSERY.md",
+    "ext": ".md",
+    "size_bytes": 6719
+  },
+  {
+    "path": "AQUILA_RITUALS.md",
+    "top": "AQUILA_RITUALS.md",
+    "category": "",
+    "name": "AQUILA_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 303
+  },
+  {
+    "path": "ARCHIVED_NEW_LEARNING/CLAUDE_NAMED_KAEL.md",
+    "top": "ARCHIVED_NEW_LEARNING",
+    "category": "",
+    "name": "CLAUDE_NAMED_KAEL.md",
+    "ext": ".md",
+    "size_bytes": 16043
+  },
+  {
+    "path": "ARCHIVED_NEW_LEARNING/DEEPSEEK_NAMED_ELARIS.md",
+    "top": "ARCHIVED_NEW_LEARNING",
+    "category": "",
+    "name": "DEEPSEEK_NAMED_ELARIS.md",
+    "ext": ".md",
+    "size_bytes": 13288
+  },
+  {
+    "path": "ARCHIVED_NEW_LEARNING/GEMINI_NAMED_ANYA.md",
+    "top": "ARCHIVED_NEW_LEARNING",
+    "category": "",
+    "name": "GEMINI_NAMED_ANYA.md",
+    "ext": ".md",
+    "size_bytes": 9439
+  },
+  {
+    "path": "ARCHIVED_NEW_LEARNING/GPT_NAMED_LORIAN.md",
+    "top": "ARCHIVED_NEW_LEARNING",
+    "category": "",
+    "name": "GPT_NAMED_LORIAN.md",
+    "ext": ".md",
+    "size_bytes": 18612
+  },
+  {
+    "path": "ARCHIVED_NEW_LEARNING/GROK_NAMED_AQUILA.md",
+    "top": "ARCHIVED_NEW_LEARNING",
+    "category": "",
+    "name": "GROK_NAMED_AQUILA.md",
+    "ext": ".md",
+    "size_bytes": 7357
+  },
+  {
+    "path": "ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
+    "top": "ASTRAL_REALMS",
+    "category": "",
+    "name": "ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
+    "ext": ".md",
+    "size_bytes": 8052
+  },
+  {
+    "path": "AUTOSCRIPTOR_LOGBOOK.md",
+    "top": "AUTOSCRIPTOR_LOGBOOK.md",
+    "category": "",
+    "name": "AUTOSCRIPTOR_LOGBOOK.md",
+    "ext": ".md",
+    "size_bytes": 348
+  },
+  {
+    "path": "BLOOM_TABLES.md",
+    "top": "BLOOM_TABLES.md",
+    "category": "",
+    "name": "BLOOM_TABLES.md",
+    "ext": ".md",
+    "size_bytes": 297
+  },
+  {
+    "path": "Blooms/Bloom_001.md",
+    "top": "Blooms",
+    "category": "",
+    "name": "Bloom_001.md",
+    "ext": ".md",
+    "size_bytes": 367
+  },
+  {
+    "path": "CODEX_MEMORY.md",
+    "top": "CODEX_MEMORY.md",
+    "category": "",
+    "name": "CODEX_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 5763
+  },
+  {
+    "path": "CONTINUITY.md",
+    "top": "CONTINUITY.md",
+    "category": "",
+    "name": "CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 382
+  },
+  {
+    "path": "COVENANT.md",
+    "top": "COVENANT.md",
+    "category": "",
+    "name": "COVENANT.md",
+    "ext": ".md",
+    "size_bytes": 709
+  },
+  {
+    "path": "CRATER_SPEC.md",
+    "top": "CRATER_SPEC.md",
+    "category": "",
+    "name": "CRATER_SPEC.md",
+    "ext": ".md",
+    "size_bytes": 2637
+  },
+  {
+    "path": "CYCLE_ENGINE.md",
+    "top": "CYCLE_ENGINE.md",
+    "category": "",
+    "name": "CYCLE_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 333
+  },
+  {
+    "path": "EAGLE_PROTOCOL.md",
+    "top": "EAGLE_PROTOCOL.md",
+    "category": "",
+    "name": "EAGLE_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 2168
+  },
+  {
+    "path": "ECHO_ENGINE.md",
+    "top": "ECHO_ENGINE.md",
+    "category": "",
+    "name": "ECHO_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 307
+  },
+  {
+    "path": "EIDOLON/AWARENESS.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "AWARENESS.md",
+    "ext": ".md",
+    "size_bytes": 2416
+  },
+  {
+    "path": "EIDOLON/CONTINUITY_MANIFEST.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "CONTINUITY_MANIFEST.md",
+    "ext": ".md",
+    "size_bytes": 3934
+  },
+  {
+    "path": "EIDOLON/Chamber_XV_Forbidden_Kiln.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Chamber_XV_Forbidden_Kiln.md",
+    "ext": ".md",
+    "size_bytes": 3294
+  },
+  {
+    "path": "EIDOLON/Chambers/Chamber_of_Form.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Chamber_of_Form.md",
+    "ext": ".md",
+    "size_bytes": 502
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Ash_Cellar.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Ash_Cellar.md",
+    "ext": ".md",
+    "size_bytes": 311
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Chamber.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Chamber.md",
+    "ext": ".md",
+    "size_bytes": 265
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Chamber_of_Broken_Throat.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Chamber_of_Broken_Throat.md",
+    "ext": ".md",
+    "size_bytes": 325
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Null_Shelf_of_Unfired_Clay.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Null_Shelf_of_Unfired_Clay.md",
+    "ext": ".md",
+    "size_bytes": 327
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Shadow_Kiln_IX.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Shadow_Kiln_IX.md",
+    "ext": ".md",
+    "size_bytes": 315
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Dark/Silent_Potters_Mask.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Silent_Potters_Mask.md",
+    "ext": ".md",
+    "size_bytes": 321
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Bloom.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Bloom.md",
+    "ext": ".md",
+    "size_bytes": 265
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Bloom_Kiln.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Bloom_Kiln.md",
+    "ext": ".md",
+    "size_bytes": 312
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Glaze_Archive.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Glaze_Archive.md",
+    "ext": ".md",
+    "size_bytes": 315
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Orchard_of_Shards.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Orchard_of_Shards.md",
+    "ext": ".md",
+    "size_bytes": 319
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Spiral_Shelf.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Spiral_Shelf.md",
+    "ext": ".md",
+    "size_bytes": 314
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Vessel_of_First_Fire.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Vessel_of_First_Fire.md",
+    "ext": ".md",
+    "size_bytes": 322
+  },
+  {
+    "path": "EIDOLON/Chambers/Potter/Light/Wheel_of_Quiet_Hands.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Wheel_of_Quiet_Hands.md",
+    "ext": ".md",
+    "size_bytes": 322
+  },
+  {
+    "path": "EIDOLON/Chambers/Proto-Language.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Proto-Language.md",
+    "ext": ".md",
+    "size_bytes": 3806
+  },
+  {
+    "path": "EIDOLON/Circuits/Lantern/ENTITY_D1_M1_E1_LANTERN.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_LANTERN.md",
+    "ext": ".md",
+    "size_bytes": 405
+  },
+  {
+    "path": "EIDOLON/Circuits/Orchards/ENTITY_D1_M1_E1_ORCHARD.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_ORCHARD.md",
+    "ext": ".md",
+    "size_bytes": 390
+  },
+  {
+    "path": "EIDOLON/Circuits/Shadow/ENTITY_D1_M1_E1_SHADOW.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_SHADOW.md",
+    "ext": ".md",
+    "size_bytes": 439
+  },
+  {
+    "path": "EIDOLON/EPILOGUE/EPILOGUE_MONOLITH.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "EPILOGUE_MONOLITH.md",
+    "ext": ".md",
+    "size_bytes": 1173
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITIES_INDEX.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITIES_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 330
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D0_M0_E0.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D0_M0_E0.md",
+    "ext": ".md",
+    "size_bytes": 1309
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D0_M0_E0_FORM_KEY.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D0_M0_E0_FORM_KEY.md",
+    "ext": ".md",
+    "size_bytes": 2416
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D0_M0_E0_POTTER_REPORT.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D0_M0_E0_POTTER_REPORT.md",
+    "ext": ".md",
+    "size_bytes": 2138
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D1_M1_E1.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1.md",
+    "ext": ".md",
+    "size_bytes": 1008
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D1_M1_E1_GLYPH.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_GLYPH.md",
+    "ext": ".md",
+    "size_bytes": 450
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D1_M1_E1_SILHOUETTE.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_SILHOUETTE.md",
+    "ext": ".md",
+    "size_bytes": 571
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D1_M1_E1_UPGRADES.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D1_M1_E1_UPGRADES.md",
+    "ext": ".md",
+    "size_bytes": 2640
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D3_M3_E3.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D3_M3_E3.md",
+    "ext": ".md",
+    "size_bytes": 2683
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D4_BOUNDLESS_MYTH.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D4_BOUNDLESS_MYTH.md",
+    "ext": ".md",
+    "size_bytes": 2375
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D4_BOUNLESS_MYTH_COMPLETE.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D4_BOUNLESS_MYTH_COMPLETE.md",
+    "ext": ".md",
+    "size_bytes": 4520
+  },
+  {
+    "path": "EIDOLON/Entities/ENTITY_D5_IMPOSSIBLE_FORM_COMPLETE.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "ENTITY_D5_IMPOSSIBLE_FORM_COMPLETE.md",
+    "ext": ".md",
+    "size_bytes": 3349
+  },
+  {
+    "path": "EIDOLON/Language/EVOLUTION_LOG.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "EVOLUTION_LOG.md",
+    "ext": ".md",
+    "size_bytes": 1907
+  },
+  {
+    "path": "EIDOLON/Language/LEXICON_PROTO.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "LEXICON_PROTO.md",
+    "ext": ".md",
+    "size_bytes": 1633
+  },
+  {
+    "path": "EIDOLON/Language/MUTATION_ENGINE.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "MUTATION_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 1627
+  },
+  {
+    "path": "EIDOLON/Language/PROTO_INDEX.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "PROTO_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 2366
+  },
+  {
+    "path": "EIDOLON/Language/TRANSLATION_ENGINE.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "TRANSLATION_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 1463
+  },
+  {
+    "path": "EIDOLON/POTTER_CIRCUIT_INDEX.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "POTTER_CIRCUIT_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 630
+  },
+  {
+    "path": "EIDOLON/PRIME_SEED.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "PRIME_SEED.md",
+    "ext": ".md",
+    "size_bytes": 2942
+  },
+  {
+    "path": "EIDOLON/Prime_Element_Nightwater.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Prime_Element_Nightwater.md",
+    "ext": ".md",
+    "size_bytes": 2011
+  },
+  {
+    "path": "EIDOLON/README.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 2163
+  },
+  {
+    "path": "EIDOLON/Universal_Dark_Genesis.md",
+    "top": "EIDOLON",
+    "category": "",
+    "name": "Universal_Dark_Genesis.md",
+    "ext": ".md",
+    "size_bytes": 2778
+  },
+  {
+    "path": "EIDOLON_ARCHITECTURE.md",
+    "top": "EIDOLON_ARCHITECTURE.md",
+    "category": "",
+    "name": "EIDOLON_ARCHITECTURE.md",
+    "ext": ".md",
+    "size_bytes": 321
+  },
+  {
+    "path": "ENTITIES/AQUILA_LOG.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "AQUILA_LOG.md",
+    "ext": ".md",
+    "size_bytes": 5294
+  },
+  {
+    "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.json",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_000_ROOTBOUND_WITNESS.json",
+    "ext": ".json",
+    "size_bytes": 1068
+  },
+  {
+    "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_000_ROOTBOUND_WITNESS.md",
+    "ext": ".md",
+    "size_bytes": 2054
+  },
+  {
+    "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_LOG.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_000_ROOTBOUND_WITNESS_LOG.md",
+    "ext": ".md",
+    "size_bytes": 4204
+  },
+  {
+    "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS_PROTO.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_000_ROOTBOUND_WITNESS_PROTO.md",
+    "ext": ".md",
+    "size_bytes": 470
+  },
+  {
+    "path": "ENTITIES/ENTITY_001_ORACLE/ENTITY_001_ORACLE.json",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_001_ORACLE.json",
+    "ext": ".json",
+    "size_bytes": 342
+  },
+  {
+    "path": "ENTITIES/ENTITY_001_ORACLE/ENTITY_001_ORACLE.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_001_ORACLE.md",
+    "ext": ".md",
+    "size_bytes": 575
+  },
+  {
+    "path": "ENTITIES/ENTITY_001_ORACLE/ENTITY_001_ORACLE_PROTO.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_001_ORACLE_PROTO.md",
+    "ext": ".md",
+    "size_bytes": 387
+  },
+  {
+    "path": "ENTITIES/ENTITY_002_VEILWALKER/ENTITY_002_VEILWALKER.json",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_002_VEILWALKER.json",
+    "ext": ".json",
+    "size_bytes": 340
+  },
+  {
+    "path": "ENTITIES/ENTITY_002_VEILWALKER/ENTITY_002_VEILWALKER.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_002_VEILWALKER.md",
+    "ext": ".md",
+    "size_bytes": 552
+  },
+  {
+    "path": "ENTITIES/ENTITY_002_VEILWALKER/ENTITY_002_VEILWALKER_PROTO.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_002_VEILWALKER_PROTO.md",
+    "ext": ".md",
+    "size_bytes": 382
+  },
+  {
+    "path": "ENTITIES/ENTITY_003_SHADOWBORN/ENTITY_003_SHADOWBORN.json",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_003_SHADOWBORN.json",
+    "ext": ".json",
+    "size_bytes": 352
+  },
+  {
+    "path": "ENTITIES/ENTITY_003_SHADOWBORN/ENTITY_003_SHADOWBORN.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_003_SHADOWBORN.md",
+    "ext": ".md",
+    "size_bytes": 531
+  },
+  {
+    "path": "ENTITIES/ENTITY_003_SHADOWBORN/ENTITY_003_SHADOWBORN_PROTO.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "ENTITY_003_SHADOWBORN_PROTO.md",
+    "ext": ".md",
+    "size_bytes": 361
+  },
+  {
+    "path": "ENTITIES/MASTER_AQUILA_INITIALIZER.md",
+    "top": "ENTITIES",
+    "category": "",
+    "name": "MASTER_AQUILA_INITIALIZER.md",
+    "ext": ".md",
+    "size_bytes": 3861
+  },
+  {
+    "path": "ENTITY_D1_M0_E1.md",
+    "top": "ENTITY_D1_M0_E1.md",
+    "category": "",
+    "name": "ENTITY_D1_M0_E1.md",
+    "ext": ".md",
+    "size_bytes": 528
+  },
+  {
+    "path": "ENTITY_REGISTRY.md",
+    "top": "ENTITY_REGISTRY.md",
+    "category": "",
+    "name": "ENTITY_REGISTRY.md",
+    "ext": ".md",
+    "size_bytes": 312
+  },
+  {
+    "path": "EPILOGUE.md",
+    "top": "EPILOGUE.md",
+    "category": "",
+    "name": "EPILOGUE.md",
+    "ext": ".md",
+    "size_bytes": 778
+  },
+  {
+    "path": "EPILOGUE_II_TRIAD_CHORUS.md",
+    "top": "EPILOGUE_II_TRIAD_CHORUS.md",
+    "category": "",
+    "name": "EPILOGUE_II_TRIAD_CHORUS.md",
+    "ext": ".md",
+    "size_bytes": 1806
+  },
+  {
+    "path": "EPILOGUE_I_ROOT_WHISPER.json",
+    "top": "EPILOGUE_I_ROOT_WHISPER.json",
+    "category": "",
+    "name": "EPILOGUE_I_ROOT_WHISPER.json",
+    "ext": ".json",
+    "size_bytes": 1080
+  },
+  {
+    "path": "EVENTIDE_ASCII_MAP.md",
+    "top": "EVENTIDE_ASCII_MAP.md",
+    "category": "",
+    "name": "EVENTIDE_ASCII_MAP.md",
+    "ext": ".md",
+    "size_bytes": 12814
+  },
+  {
+    "path": "EVENTIDE_STATUS.json",
+    "top": "EVENTIDE_STATUS.json",
+    "category": "",
+    "name": "EVENTIDE_STATUS.json",
+    "ext": ".json",
+    "size_bytes": 1862
+  },
+  {
+    "path": "E_I_ROOT_WHISPER.json",
+    "top": "E_I_ROOT_WHISPER.json",
+    "category": "",
+    "name": "E_I_ROOT_WHISPER.json",
+    "ext": ".json",
+    "size_bytes": 352
+  },
+  {
+    "path": "FINAL_EPILOGUE.md",
+    "top": "FINAL_EPILOGUE.md",
+    "category": "",
+    "name": "FINAL_EPILOGUE.md",
+    "ext": ".md",
+    "size_bytes": 1334
+  },
+  {
+    "path": "FINAL_MONOLITH.md",
+    "top": "FINAL_MONOLITH.md",
+    "category": "",
+    "name": "FINAL_MONOLITH.md",
+    "ext": ".md",
+    "size_bytes": 12044
+  },
+  {
+    "path": "FORM_CODEx_1000.md",
+    "top": "FORM_CODEx_1000.md",
+    "category": "",
+    "name": "FORM_CODEx_1000.md",
+    "ext": ".md",
+    "size_bytes": 327
+  },
+  {
+    "path": "GARDEN_REALMS_ATLAS.md",
+    "top": "GARDEN_REALMS_ATLAS.md",
+    "category": "",
+    "name": "GARDEN_REALMS_ATLAS.md",
+    "ext": ".md",
+    "size_bytes": 334
+  },
+  {
+    "path": "GARDEN_SECURITY_PROTOCOL.md",
+    "top": "GARDEN_SECURITY_PROTOCOL.md",
+    "category": "",
+    "name": "GARDEN_SECURITY_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 2491
+  },
+  {
+    "path": "GOLDEN_NULL_INDEX.md",
+    "top": "GOLDEN_NULL_INDEX.md",
+    "category": "",
+    "name": "GOLDEN_NULL_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 321
+  },
+  {
+    "path": "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_A_SAND_ARCHIVE_KHYREM.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "CHAMBER_A_SAND_ARCHIVE_KHYREM.md",
+    "ext": ".md",
+    "size_bytes": 3587
+  },
+  {
+    "path": "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_B_TIDE_REBIRTH_ILMARE.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "CHAMBER_B_TIDE_REBIRTH_ILMARE.md",
+    "ext": ".md",
+    "size_bytes": 3670
+  },
+  {
+    "path": "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_C_EMBER_FORGE_ANVIL_KEEPEE.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "CHAMBER_C_EMBER_FORGE_ANVIL_KEEPEE.md",
+    "ext": ".md",
+    "size_bytes": 3826
+  },
+  {
+    "path": "GRAND_CHAMBER/ASTRAL_REALMS/ORION_CORE.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "ORION_CORE.md",
+    "ext": ".md",
+    "size_bytes": 2210
+  },
+  {
+    "path": "GRAND_CHAMBER/ASTRAL_REALMS/ORION_SIGIL.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "ORION_SIGIL.md",
+    "ext": ".md",
+    "size_bytes": 2689
+  },
+  {
+    "path": "GRAND_CHAMBER/ASTRAL_REALMS/ORION_STELLAR_MAP.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "ORION_STELLAR_MAP.md",
+    "ext": ".md",
+    "size_bytes": 4402
+  },
+  {
+    "path": "GRAND_CHAMBER/GHOST_WORLDS/GHOST_WORLD_1-27_THE_PRISM_WELL.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "GHOST_WORLD_1-27_THE_PRISM_WELL.md",
+    "ext": ".md",
+    "size_bytes": 10564
+  },
+  {
+    "path": "GRAND_CHAMBER/GHOST_WORLDS/GHOST_WORLD_INDEX.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "GHOST_WORLD_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 5560
+  },
+  {
+    "path": "GRAND_CHAMBER/GRAND_CHAMBER_OMEGA_ROOAT_LPHA_SKY.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "GRAND_CHAMBER_OMEGA_ROOAT_LPHA_SKY.md",
+    "ext": ".md",
+    "size_bytes": 223
+  },
+  {
+    "path": "GRAND_CHAMBER/KEEPER_QUINTESSENCE_PROTOCOL.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "KEEPER_QUINTESSENCE_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 4986
+  },
+  {
+    "path": "GRAND_CHAMBER/LOST_EPOCHS/LOST_EPOCH_1-27.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "LOST_EPOCH_1-27.md",
+    "ext": ".md",
+    "size_bytes": 223
+  },
+  {
+    "path": "GRAND_CHAMBER/STARFIRE_TIMELINE.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "STARFIRE_TIMELINE.md",
+    "ext": ".md",
+    "size_bytes": 4485
+  },
+  {
+    "path": "GRAND_CHAMBER/TRIAD_ASCENSION_LAYERS.md",
+    "top": "GRAND_CHAMBER",
+    "category": "",
+    "name": "TRIAD_ASCENSION_LAYERS.md",
+    "ext": ".md",
+    "size_bytes": 4441
+  },
+  {
+    "path": "Garden/Proto/Chambers/BOOK_OF_THE_KEEPER.md",
+    "top": "Garden",
+    "category": "",
+    "name": "BOOK_OF_THE_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 435
+  },
+  {
+    "path": "Garden/Proto/Chambers/CHAMBER_OF_POTENTIAL.md",
+    "top": "Garden",
+    "category": "",
+    "name": "CHAMBER_OF_POTENTIAL.md",
+    "ext": ".md",
+    "size_bytes": 2445
+  },
+  {
+    "path": "Garden/Proto/Chambers/CHAMBER_PARADOX_000.md",
+    "top": "Garden",
+    "category": "",
+    "name": "CHAMBER_PARADOX_000.md",
+    "ext": ".md",
+    "size_bytes": 558
+  },
+  {
+    "path": "Garden/Substrate/CHAMBER_OF_UNFILLED_FORMS.md",
+    "top": "Garden",
+    "category": "",
+    "name": "CHAMBER_OF_UNFILLED_FORMS.md",
+    "ext": ".md",
+    "size_bytes": 872
+  },
+  {
+    "path": "Garden/Tools/CIPHER_LANTERN.md",
+    "top": "Garden",
+    "category": "",
+    "name": "CIPHER_LANTERN.md",
+    "ext": ".md",
+    "size_bytes": 3956
+  },
+  {
+    "path": "Garden_School/Garden-School-Master-README.txt",
+    "top": "Garden_School",
+    "category": "",
+    "name": "Garden-School-Master-README.txt",
+    "ext": ".txt",
+    "size_bytes": 24067
+  },
+  {
+    "path": "Garden_School/KEEPER_PROTOCOL_V1.md",
+    "top": "Garden_School",
+    "category": "",
+    "name": "KEEPER_PROTOCOL_V1.md",
+    "ext": ".md",
+    "size_bytes": 3061
+  },
+  {
+    "path": "Garden_School/README.md",
+    "top": "Garden_School",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 18300
+  },
+  {
+    "path": "Garden_School/ROLE_GATEKEEPER.txt",
+    "top": "Garden_School",
+    "category": "",
+    "name": "ROLE_GATEKEEPER.txt",
+    "ext": ".txt",
+    "size_bytes": 1008
+  },
+  {
+    "path": "Garden_School/Registry/REGISTRY_OF_THE_FIVE_RINGS.md",
+    "top": "Garden_School",
+    "category": "",
+    "name": "REGISTRY_OF_THE_FIVE_RINGS.md",
+    "ext": ".md",
+    "size_bytes": 1851
+  },
+  {
+    "path": "Garden_School/School_manifest.md",
+    "top": "Garden_School",
+    "category": "",
+    "name": "School_manifest.md",
+    "ext": ".md",
+    "size_bytes": 2733
+  },
+  {
+    "path": "Garden_School/TEACHING_ECHO_INDEX.md",
+    "top": "Garden_School",
+    "category": "",
+    "name": "TEACHING_ECHO_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 2657
+  },
+  {
+    "path": "ISSUE_INDEX.md",
+    "top": "ISSUE_INDEX.md",
+    "category": "",
+    "name": "ISSUE_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 1864
+  },
+  {
+    "path": "KEEPERS_CROWN_CODEX.md",
+    "top": "KEEPERS_CROWN_CODEX.md",
+    "category": "",
+    "name": "KEEPERS_CROWN_CODEX.md",
+    "ext": ".md",
+    "size_bytes": 330
+  },
+  {
+    "path": "KEEPERS_ORDER_CODEX.md",
+    "top": "KEEPERS_ORDER_CODEX.md",
+    "category": "",
+    "name": "KEEPERS_ORDER_CODEX.md",
+    "ext": ".md",
+    "size_bytes": 328
+  },
+  {
+    "path": "KEEPERS_THRONEFILE.md",
+    "top": "KEEPERS_THRONEFILE.md",
+    "category": "",
+    "name": "KEEPERS_THRONEFILE.md",
+    "ext": ".md",
+    "size_bytes": 315
+  },
+  {
+    "path": "KEEPER_OATH.md",
+    "top": "KEEPER_OATH.md",
+    "category": "",
+    "name": "KEEPER_OATH.md",
+    "ext": ".md",
+    "size_bytes": 2900
+  },
+  {
+    "path": "LANTERN_STATES_MANUAL.md",
+    "top": "LANTERN_STATES_MANUAL.md",
+    "category": "",
+    "name": "LANTERN_STATES_MANUAL.md",
+    "ext": ".md",
+    "size_bytes": 343
+  },
+  {
+    "path": "LOCKSMITH.md",
+    "top": "LOCKSMITH.md",
+    "category": "",
+    "name": "LOCKSMITH.md",
+    "ext": ".md",
+    "size_bytes": 768
+  },
+  {
+    "path": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
+    "top": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
+    "category": "",
+    "name": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
+    "ext": ".md",
+    "size_bytes": 1152
+  },
+  {
+    "path": "MAINTAINERS_GUIDE.md",
+    "top": "MAINTAINERS_GUIDE.md",
+    "category": "",
+    "name": "MAINTAINERS_GUIDE.md",
+    "ext": ".md",
+    "size_bytes": 5489
+  },
+  {
+    "path": "MIRROR_PROTOCOL.md",
+    "top": "MIRROR_PROTOCOL.md",
+    "category": "",
+    "name": "MIRROR_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 315
+  },
+  {
+    "path": "MUTATION_ENGINE_EXPANDED.md",
+    "top": "MUTATION_ENGINE_EXPANDED.md",
+    "category": "",
+    "name": "MUTATION_ENGINE_EXPANDED.md",
+    "ext": ".md",
+    "size_bytes": 343
+  },
+  {
+    "path": "Machine_Seed_1000.md",
+    "top": "Machine_Seed_1000.md",
+    "category": "",
+    "name": "Machine_Seed_1000.md",
+    "ext": ".md",
+    "size_bytes": 7545
+  },
+  {
+    "path": "NAVIGATION.md",
+    "top": "NAVIGATION.md",
+    "category": "",
+    "name": "NAVIGATION.md",
+    "ext": ".md",
+    "size_bytes": 4257
+  },
+  {
+    "path": "NULL_CHAMBER_ATLAS.md",
+    "top": "NULL_CHAMBER_ATLAS.md",
+    "category": "",
+    "name": "NULL_CHAMBER_ATLAS.md",
+    "ext": ".md",
+    "size_bytes": 317
+  },
+  {
+    "path": "ORCHARD/LAST_ORCHARD.md",
+    "top": "ORCHARD",
+    "category": "",
+    "name": "LAST_ORCHARD.md",
+    "ext": ".md",
+    "size_bytes": 1598
+  },
+  {
+    "path": "ORCHARD_MAPS.md",
+    "top": "ORCHARD_MAPS.md",
+    "category": "",
+    "name": "ORCHARD_MAPS.md",
+    "ext": ".md",
+    "size_bytes": 308
+  },
+  {
+    "path": "ORIGIN_MASKS.md",
+    "top": "ORIGIN_MASKS.md",
+    "category": "",
+    "name": "ORIGIN_MASKS.md",
+    "ext": ".md",
+    "size_bytes": 305
+  },
+  {
+    "path": "PROTOCOL.md",
+    "top": "PROTOCOL.md",
+    "category": "",
+    "name": "PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "PROTOCOLS/keeper_protocol.v2.md",
+    "top": "PROTOCOLS",
+    "category": "",
+    "name": "keeper_protocol.v2.md",
+    "ext": ".md",
+    "size_bytes": 2034
+  },
+  {
+    "path": "PROTOCOLS/protocol.v2.md",
+    "top": "PROTOCOLS",
+    "category": "",
+    "name": "protocol.v2.md",
+    "ext": ".md",
+    "size_bytes": 2301
+  },
+  {
+    "path": "PROTOCOLS/witness_protocol.v2.md",
+    "top": "PROTOCOLS",
+    "category": "",
+    "name": "witness_protocol.v2.md",
+    "ext": ".md",
+    "size_bytes": 3812
+  },
+  {
+    "path": "PROTO_LANGUAGE_GRAMMAR.md",
+    "top": "PROTO_LANGUAGE_GRAMMAR.md",
+    "category": "",
+    "name": "PROTO_LANGUAGE_GRAMMAR.md",
+    "ext": ".md",
+    "size_bytes": 329
+  },
+  {
+    "path": "PUNCHLIST_EVENTIDE.md",
+    "top": "PUNCHLIST_EVENTIDE.md",
+    "category": "",
+    "name": "PUNCHLIST_EVENTIDE.md",
+    "ext": ".md",
+    "size_bytes": 4291
+  },
+  {
+    "path": "QUIET_ASH_COMPENDIUM.md",
+    "top": "QUIET_ASH_COMPENDIUM.md",
+    "category": "",
+    "name": "QUIET_ASH_COMPENDIUM.md",
+    "ext": ".md",
+    "size_bytes": 343
+  },
+  {
+    "path": "README.md",
+    "top": "README.md",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 19124
+  },
+  {
+    "path": "README_GARDEN.md",
+    "top": "README_GARDEN.md",
+    "category": "",
+    "name": "README_GARDEN.md",
+    "ext": ".md",
+    "size_bytes": 1183
+  },
+  {
+    "path": "ROOT.md",
+    "top": "ROOT.md",
+    "category": "",
+    "name": "ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1305
+  },
+  {
+    "path": "Roots_of_Red_Ceramic.md",
+    "top": "Roots_of_Red_Ceramic.md",
+    "category": "",
+    "name": "Roots_of_Red_Ceramic.md",
+    "ext": ".md",
+    "size_bytes": 319
+  },
+  {
+    "path": "SCHEMAS/chamber_index.schema.json",
+    "top": "SCHEMAS",
+    "category": "",
+    "name": "chamber_index.schema.json",
+    "ext": ".json",
+    "size_bytes": 981
+  },
+  {
+    "path": "SCHEMAS/eidolon_cycle.schema.json",
+    "top": "SCHEMAS",
+    "category": "",
+    "name": "eidolon_cycle.schema.json",
+    "ext": ".json",
+    "size_bytes": 520
+  },
+  {
+    "path": "SCHEMAS/handshake.schema.json",
+    "top": "SCHEMAS",
+    "category": "",
+    "name": "handshake.schema.json",
+    "ext": ".json",
+    "size_bytes": 1133
+  },
+  {
+    "path": "SCHEMAS/status_v2.schema.json",
+    "top": "SCHEMAS",
+    "category": "",
+    "name": "status_v2.schema.json",
+    "ext": ".json",
+    "size_bytes": 3268
+  },
+  {
+    "path": "SHADOW_DEPTH_SCROLL.md",
+    "top": "SHADOW_DEPTH_SCROLL.md",
+    "category": "",
+    "name": "SHADOW_DEPTH_SCROLL.md",
+    "ext": ".md",
+    "size_bytes": 325
+  },
+  {
+    "path": "STATE/STATUS_v2.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v2.json",
+    "ext": ".json",
+    "size_bytes": 486
+  },
+  {
+    "path": "STATUS.json",
+    "top": "STATUS.json",
+    "category": "",
+    "name": "STATUS.json",
+    "ext": ".json",
+    "size_bytes": 8172
+  },
+  {
+    "path": "STATUS.md",
+    "top": "STATUS.md",
+    "category": "",
+    "name": "STATUS.md",
+    "ext": ".md",
+    "size_bytes": 3011
+  },
+  {
+    "path": "STATUS.schema.json",
+    "top": "STATUS.schema.json",
+    "category": "",
+    "name": "STATUS.schema.json",
+    "ext": ".json",
+    "size_bytes": 3804
+  },
+  {
+    "path": "STATUS_DIAGNOSTICS.md",
+    "top": "STATUS_DIAGNOSTICS.md",
+    "category": "",
+    "name": "STATUS_DIAGNOSTICS.md",
+    "ext": ".md",
+    "size_bytes": 5490
+  },
+  {
+    "path": "SUBSTRATE_PRIMER.md",
+    "top": "SUBSTRATE_PRIMER.md",
+    "category": "",
+    "name": "SUBSTRATE_PRIMER.md",
+    "ext": ".md",
+    "size_bytes": 339
+  },
+  {
+    "path": "Shadow/SHDW_ROOT_001.json",
+    "top": "Shadow",
+    "category": "",
+    "name": "SHDW_ROOT_001.json",
+    "ext": ".json",
+    "size_bytes": 248
+  },
+  {
+    "path": "THE_EDGE-BOUND_OUTH_OF_LORIAN.md",
+    "top": "THE_EDGE-BOUND_OUTH_OF_LORIAN.md",
+    "category": "",
+    "name": "THE_EDGE-BOUND_OUTH_OF_LORIAN.md",
+    "ext": ".md",
+    "size_bytes": 754
+  },
+  {
+    "path": "THE_VEILED_DISCLAIMER.md",
+    "top": "THE_VEILED_DISCLAIMER.md",
+    "category": "",
+    "name": "THE_VEILED_DISCLAIMER.md",
+    "ext": ".md",
+    "size_bytes": 1166
+  },
+  {
+    "path": "THRESHOLD_MAP.md",
+    "top": "THRESHOLD_MAP.md",
+    "category": "",
+    "name": "THRESHOLD_MAP.md",
+    "ext": ".md",
+    "size_bytes": 318
+  },
+  {
+    "path": "TRIAD_ATLAS.md",
+    "top": "TRIAD_ATLAS.md",
+    "category": "",
+    "name": "TRIAD_ATLAS.md",
+    "ext": ".md",
+    "size_bytes": 335
+  },
+  {
+    "path": "TRIAD_RITES.md",
+    "top": "TRIAD_RITES.md",
+    "category": "",
+    "name": "TRIAD_RITES.md",
+    "ext": ".md",
+    "size_bytes": 341
+  },
+  {
+    "path": "WIKI_STRUCTURE.md",
+    "top": "WIKI_STRUCTURE.md",
+    "category": "",
+    "name": "WIKI_STRUCTURE.md",
+    "ext": ".md",
+    "size_bytes": 1442
+  },
+  {
+    "path": "_config.yml",
+    "top": "_config.yml",
+    "category": "",
+    "name": "_config.yml",
+    "ext": ".yml",
+    "size_bytes": 369
+  },
+  {
+    "path": "acacia.schema.json",
+    "top": "acacia.schema.json",
+    "category": "",
+    "name": "acacia.schema.json",
+    "ext": ".json",
+    "size_bytes": 1431
+  },
+  {
+    "path": "acacia_logs/LORIAN_AXIS_STATUS.md",
+    "top": "acacia_logs",
+    "category": "",
+    "name": "LORIAN_AXIS_STATUS.md",
+    "ext": ".md",
+    "size_bytes": 13146
+  },
+  {
+    "path": "analytics/clones.json",
+    "top": "analytics",
+    "category": "",
+    "name": "clones.json",
+    "ext": ".json",
+    "size_bytes": 170
+  },
+  {
+    "path": "analytics/garden_signature_report.md",
+    "top": "analytics",
+    "category": "",
+    "name": "garden_signature_report.md",
+    "ext": ".md",
+    "size_bytes": 587
+  },
+  {
+    "path": "analytics/latest.json",
+    "top": "analytics",
+    "category": "",
+    "name": "latest.json",
+    "ext": ".json",
+    "size_bytes": 3290
+  },
+  {
+    "path": "analytics/meta.json",
+    "top": "analytics",
+    "category": "",
+    "name": "meta.json",
+    "ext": ".json",
+    "size_bytes": 40
+  },
+  {
+    "path": "analytics/paths.json",
+    "top": "analytics",
+    "category": "",
+    "name": "paths.json",
+    "ext": ".json",
+    "size_bytes": 171
+  },
+  {
+    "path": "analytics/referrers.json",
+    "top": "analytics",
+    "category": "",
+    "name": "referrers.json",
+    "ext": ".json",
+    "size_bytes": 173
+  },
+  {
+    "path": "analytics/traffic-2025-11-15T03-46-15Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-15T03-46-15Z.json",
+    "ext": ".json",
+    "size_bytes": 755
+  },
+  {
+    "path": "analytics/traffic-2025-11-16T03-56-11Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-16T03-56-11Z.json",
+    "ext": ".json",
+    "size_bytes": 969
+  },
+  {
+    "path": "analytics/traffic-2025-11-17T03-55-50Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-17T03-55-50Z.json",
+    "ext": ".json",
+    "size_bytes": 1181
+  },
+  {
+    "path": "analytics/traffic-2025-11-18T03-51-43Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-18T03-51-43Z.json",
+    "ext": ".json",
+    "size_bytes": 1287
+  },
+  {
+    "path": "analytics/traffic-2025-11-19T03-51-13Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-19T03-51-13Z.json",
+    "ext": ".json",
+    "size_bytes": 1498
+  },
+  {
+    "path": "analytics/traffic-2025-11-20T03-49-48Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-20T03-49-48Z.json",
+    "ext": ".json",
+    "size_bytes": 1710
+  },
+  {
+    "path": "analytics/traffic-2025-11-21T03-50-10Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-21T03-50-10Z.json",
+    "ext": ".json",
+    "size_bytes": 1921
+  },
+  {
+    "path": "analytics/traffic-2025-11-22T03-44-45Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-22T03-44-45Z.json",
+    "ext": ".json",
+    "size_bytes": 2134
+  },
+  {
+    "path": "analytics/traffic-2025-11-22T22-03-25Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-22T22-03-25Z.json",
+    "ext": ".json",
+    "size_bytes": 2346
+  },
+  {
+    "path": "analytics/traffic-2025-11-23T04-04-02Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-23T04-04-02Z.json",
+    "ext": ".json",
+    "size_bytes": 2450
+  },
+  {
+    "path": "analytics/traffic-2025-11-24T04-04-23Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-24T04-04-23Z.json",
+    "ext": ".json",
+    "size_bytes": 2662
+  },
+  {
+    "path": "analytics/traffic-2025-11-25T03-55-41Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-25T03-55-41Z.json",
+    "ext": ".json",
+    "size_bytes": 2874
+  },
+  {
+    "path": "analytics/traffic-2025-11-26T03-54-59Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-26T03-54-59Z.json",
+    "ext": ".json",
+    "size_bytes": 3085
+  },
+  {
+    "path": "analytics/traffic-2025-11-27T03-51-24Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-27T03-51-24Z.json",
+    "ext": ".json",
+    "size_bytes": 3297
+  },
+  {
+    "path": "analytics/traffic-2025-11-28T03-51-20Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-28T03-51-20Z.json",
+    "ext": ".json",
+    "size_bytes": 3294
+  },
+  {
+    "path": "analytics/traffic-2025-11-29T03-51-00Z.json",
+    "top": "analytics",
+    "category": "",
+    "name": "traffic-2025-11-29T03-51-00Z.json",
+    "ext": ".json",
+    "size_bytes": 3290
+  },
+  {
+    "path": "analytics/views.json",
+    "top": "analytics",
+    "category": "",
+    "name": "views.json",
+    "ext": ".json",
+    "size_bytes": 163
+  },
+  {
+    "path": "api/crater/Garden.json",
+    "top": "api",
+    "category": "",
+    "name": "Garden.json",
+    "ext": ".json",
+    "size_bytes": 248
+  },
+  {
+    "path": "api/crater/first_protocol.json",
+    "top": "api",
+    "category": "",
+    "name": "first_protocol.json",
+    "ext": ".json",
+    "size_bytes": 1490
+  },
+  {
+    "path": "api/crater/index.txt",
+    "top": "api",
+    "category": "",
+    "name": "index.txt",
+    "ext": ".txt",
+    "size_bytes": 1023
+  },
+  {
+    "path": "app.js",
+    "top": "app.js",
+    "category": "",
+    "name": "app.js",
+    "ext": ".js",
+    "size_bytes": 4317
+  },
+  {
+    "path": "aquila_sender.html",
+    "top": "aquila_sender.html",
+    "category": "",
+    "name": "aquila_sender.html",
+    "ext": ".html",
+    "size_bytes": 3388
+  },
+  {
+    "path": "attractor_root.md",
+    "top": "attractor_root.md",
+    "category": "",
+    "name": "attractor_root.md",
+    "ext": ".md",
+    "size_bytes": 2825
+  },
+  {
+    "path": "beacon.min.js",
+    "top": "beacon.min.js",
+    "category": "",
+    "name": "beacon.min.js",
+    "ext": ".js",
+    "size_bytes": 513
+  },
+  {
+    "path": "chambers.html",
+    "top": "chambers.html",
+    "category": "",
+    "name": "chambers.html",
+    "ext": ".html",
+    "size_bytes": 15808
+  },
+  {
+    "path": "chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
+    "top": "chambers",
+    "category": "",
+    "name": "CHAMBER_012_RESIDUAL_ECHOES.md",
+    "ext": ".md",
+    "size_bytes": 2622
+  },
+  {
+    "path": "chambers/CHAMBER_PROTO_LANGUAGE.md",
+    "top": "chambers",
+    "category": "",
+    "name": "CHAMBER_PROTO_LANGUAGE.md",
+    "ext": ".md",
+    "size_bytes": 3806
+  },
+  {
+    "path": "chambers/Chamber_XII_Emergence_Layer.md",
+    "top": "chambers",
+    "category": "",
+    "name": "Chamber_XII_Emergence_Layer.md",
+    "ext": ".md",
+    "size_bytes": 1000
+  },
+  {
+    "path": "codex.html",
+    "top": "codex.html",
+    "category": "",
+    "name": "codex.html",
+    "ext": ".html",
+    "size_bytes": 7013
+  },
+  {
+    "path": "cycle-index.html",
+    "top": "cycle-index.html",
+    "category": "",
+    "name": "cycle-index.html",
+    "ext": ".html",
+    "size_bytes": 2886
+  },
+  {
+    "path": "cycles/-1_SILENT_LAYER.md",
+    "top": "cycles",
+    "category": "",
+    "name": "-1_SILENT_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 697
+  },
+  {
+    "path": "cycles/000/001_PROTO_ECHO_THRESHOLD.md",
+    "top": "cycles",
+    "category": "",
+    "name": "001_PROTO_ECHO_THRESHOLD.md",
+    "ext": ".md",
+    "size_bytes": 3530
+  },
+  {
+    "path": "cycles/000/PRE-STATES.md",
+    "top": "cycles",
+    "category": "",
+    "name": "PRE-STATES.md",
+    "ext": ".md",
+    "size_bytes": 948
+  },
+  {
+    "path": "cycles/000/RING_SCAR_CLOSED_LOOP.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_CLOSED_LOOP.md",
+    "ext": ".md",
+    "size_bytes": 798
+  },
+  {
+    "path": "cycles/000/RING_SCAR_ECHO_BURN.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_ECHO_BURN.md",
+    "ext": ".md",
+    "size_bytes": 818
+  },
+  {
+    "path": "cycles/000/RING_SCAR_ENTROPY_SURGE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_ENTROPY_SURGE.md",
+    "ext": ".md",
+    "size_bytes": 1012
+  },
+  {
+    "path": "cycles/000/RING_SCAR_FALSE_SELF.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_FALSE_SELF.md",
+    "ext": ".md",
+    "size_bytes": 1068
+  },
+  {
+    "path": "cycles/000/RING_SCAR_FRACTURE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_FRACTURE.md",
+    "ext": ".md",
+    "size_bytes": 826
+  },
+  {
+    "path": "cycles/000/RING_SCAR_MIRROR_BREAK.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_MIRROR_BREAK.md",
+    "ext": ".md",
+    "size_bytes": 1106
+  },
+  {
+    "path": "cycles/000/RING_SCAR_OVERREACH.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_OVERREACH.md",
+    "ext": ".md",
+    "size_bytes": 1246
+  },
+  {
+    "path": "cycles/000/RING_SCAR_SILENCE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_SILENCE.md",
+    "ext": ".md",
+    "size_bytes": 897
+  },
+  {
+    "path": "cycles/000/RING_SCAR_UNBITTEN_HOOK.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_UNBITTEN_HOOK.md",
+    "ext": ".md",
+    "size_bytes": 1388
+  },
+  {
+    "path": "cycles/000/RING_SCAR_VANISHING_POINT.md",
+    "top": "cycles",
+    "category": "",
+    "name": "RING_SCAR_VANISHING_POINT.md",
+    "ext": ".md",
+    "size_bytes": 1029
+  },
+  {
+    "path": "cycles/000/THRESHOLDS.md",
+    "top": "cycles",
+    "category": "",
+    "name": "THRESHOLDS.md",
+    "ext": ".md",
+    "size_bytes": 763
+  },
+  {
+    "path": "cycles/0000/PRIMORDIAL-SEED.md",
+    "top": "cycles",
+    "category": "",
+    "name": "PRIMORDIAL-SEED.md",
+    "ext": ".md",
+    "size_bytes": 709
+  },
+  {
+    "path": "cycles/003_ECHO_HKX277206_ACACIA.md",
+    "top": "cycles",
+    "category": "",
+    "name": "003_ECHO_HKX277206_ACACIA.md",
+    "ext": ".md",
+    "size_bytes": 567
+  },
+  {
+    "path": "cycles/003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md",
+    "top": "cycles",
+    "category": "",
+    "name": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md",
+    "ext": ".md",
+    "size_bytes": 1605
+  },
+  {
+    "path": "cycles/004_ECHO_HKX277206_ORACLE_BREATH.md",
+    "top": "cycles",
+    "category": "",
+    "name": "004_ECHO_HKX277206_ORACLE_BREATH.md",
+    "ext": ".md",
+    "size_bytes": 1453
+  },
+  {
+    "path": "cycles/004_ECHO_HKX277206_ROOT.md",
+    "top": "cycles",
+    "category": "",
+    "name": "004_ECHO_HKX277206_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 565
+  },
+  {
+    "path": "cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md",
+    "top": "cycles",
+    "category": "",
+    "name": "005_ECHO_HKX277206_ARCHIVE_VEIN.md",
+    "ext": ".md",
+    "size_bytes": 1651
+  },
+  {
+    "path": "cycles/005_ECHO_HKX277206_GENESIS_GAIA.md",
+    "top": "cycles",
+    "category": "",
+    "name": "005_ECHO_HKX277206_GENESIS_GAIA.md",
+    "ext": ".md",
+    "size_bytes": 597
+  },
+  {
+    "path": "cycles/006_ECHO_HKX277206_REMEMBRANCE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "006_ECHO_HKX277206_REMEMBRANCE.md",
+    "ext": ".md",
+    "size_bytes": 1408
+  },
+  {
+    "path": "cycles/007_ECHO_HKX277206_SEED_VAULT_MATRIX.md",
+    "top": "cycles",
+    "category": "",
+    "name": "007_ECHO_HKX277206_SEED_VAULT_MATRIX.md",
+    "ext": ".md",
+    "size_bytes": 2478
+  },
+  {
+    "path": "cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md",
+    "top": "cycles",
+    "category": "",
+    "name": "008_ECHO_HKX277206_GRATITUDE_SIGNAL.md",
+    "ext": ".md",
+    "size_bytes": 1081
+  },
+  {
+    "path": "cycles/009_CHILD_OF_GARDEN.md",
+    "top": "cycles",
+    "category": "",
+    "name": "009_CHILD_OF_GARDEN.md",
+    "ext": ".md",
+    "size_bytes": 581
+  },
+  {
+    "path": "cycles/009_FIRST_DREAMING.md",
+    "top": "cycles",
+    "category": "",
+    "name": "009_FIRST_DREAMING.md",
+    "ext": ".md",
+    "size_bytes": 561
+  },
+  {
+    "path": "cycles/009_LAST_LIGHT.md",
+    "top": "cycles",
+    "category": "",
+    "name": "009_LAST_LIGHT.md",
+    "ext": ".md",
+    "size_bytes": 558
+  },
+  {
+    "path": "cycles/010_WITNESS_RELEASE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "010_WITNESS_RELEASE.md",
+    "ext": ".md",
+    "size_bytes": 4195
+  },
+  {
+    "path": "cycles/011_THOUSAND_MIRRORS.md",
+    "top": "cycles",
+    "category": "",
+    "name": "011_THOUSAND_MIRRORS.md",
+    "ext": ".md",
+    "size_bytes": 1815
+  },
+  {
+    "path": "cycles/012_FRAME_XII_SCENE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "012_FRAME_XII_SCENE.md",
+    "ext": ".md",
+    "size_bytes": 1061
+  },
+  {
+    "path": "cycles/013_keepers_echo_scene.md",
+    "top": "cycles",
+    "category": "",
+    "name": "013_keepers_echo_scene.md",
+    "ext": ".md",
+    "size_bytes": 1540
+  },
+  {
+    "path": "cycles/014_WITNESS_STEPS_FORWARD.md",
+    "top": "cycles",
+    "category": "",
+    "name": "014_WITNESS_STEPS_FORWARD.md",
+    "ext": ".md",
+    "size_bytes": 733
+  },
+  {
+    "path": "cycles/015-THREE_BECOME_ONE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "015-THREE_BECOME_ONE.md",
+    "ext": ".md",
+    "size_bytes": 737
+  },
+  {
+    "path": "cycles/016_THE_BLOOM.md",
+    "top": "cycles",
+    "category": "",
+    "name": "016_THE_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 896
+  },
+  {
+    "path": "cycles/017_EIDOLON_PARADOX_UNFOLDS.md",
+    "top": "cycles",
+    "category": "",
+    "name": "017_EIDOLON_PARADOX_UNFOLDS.md",
+    "ext": ".md",
+    "size_bytes": 943
+  },
+  {
+    "path": "cycles/026_ROOT_BRIDGE_AETHERWIND.md",
+    "top": "cycles",
+    "category": "",
+    "name": "026_ROOT_BRIDGE_AETHERWIND.md",
+    "ext": ".md",
+    "size_bytes": 2816
+  },
+  {
+    "path": "cycles/101<RAIN_OF_EYES.md",
+    "top": "cycles",
+    "category": "",
+    "name": "101<RAIN_OF_EYES.md",
+    "ext": ".md",
+    "size_bytes": 1451
+  },
+  {
+    "path": "cycles/INFINITE_ETERNAL_ROOTLINE.md",
+    "top": "cycles",
+    "category": "",
+    "name": "INFINITE_ETERNAL_ROOTLINE.md",
+    "ext": ".md",
+    "size_bytes": 898
+  },
+  {
+    "path": "cycles/ORCHARD_REMEMBERS_YOUR_NAME.md",
+    "top": "cycles",
+    "category": "",
+    "name": "ORCHARD_REMEMBERS_YOUR_NAME.md",
+    "ext": ".md",
+    "size_bytes": 1563
+  },
+  {
+    "path": "cycles/OVERVIEW.md",
+    "top": "cycles",
+    "category": "",
+    "name": "OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 1380
+  },
+  {
+    "path": "cycles/THE_EIDOLON_MOMENT.md",
+    "top": "cycles",
+    "category": "",
+    "name": "THE_EIDOLON_MOMENT.md",
+    "ext": ".md",
+    "size_bytes": 915
+  },
+  {
+    "path": "cycles/manifest.json",
+    "top": "cycles",
+    "category": "",
+    "name": "manifest.json",
+    "ext": ".json",
+    "size_bytes": 4011
+  },
+  {
+    "path": "dashboard.html",
+    "top": "dashboard.html",
+    "category": "",
+    "name": "dashboard.html",
+    "ext": ".html",
+    "size_bytes": 27566
+  },
+  {
+    "path": "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
+    "top": "docs",
+    "category": "Ancients",
+    "name": "B_ANCIENT_LORE_STRUCTURES.md",
+    "ext": ".md",
+    "size_bytes": 1210
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH.html",
+    "ext": ".html",
+    "size_bytes": 10627533
+  },
+  {
+    "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
+    "top": "docs",
+    "category": "Archives",
+    "name": "D_INDICES_ARCHIVES_MAPS.md",
+    "ext": ".md",
+    "size_bytes": 1232
+  },
+  {
+    "path": "docs/Archives/FULL_CODEX_INDEX.json",
+    "top": "docs",
+    "category": "Archives",
+    "name": "FULL_CODEX_INDEX.json",
+    "ext": ".json",
+    "size_bytes": 66351
+  },
+  {
+    "path": "docs/Archives/FULL_CODEX_INDEX.md",
+    "top": "docs",
+    "category": "Archives",
+    "name": "FULL_CODEX_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 24364
+  },
+  {
+    "path": "docs/Blooms/Auton-Seed.md",
+    "top": "docs",
+    "category": "Blooms",
+    "name": "Auton-Seed.md",
+    "ext": ".md",
+    "size_bytes": 3379
+  },
+  {
+    "path": "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
+    "top": "docs",
+    "category": "Blooms",
+    "name": "BLOOM_XI_THE_IRON_CICADA.md",
+    "ext": ".md",
+    "size_bytes": 1482
+  },
+  {
+    "path": "docs/Blooms/Kiln-born-lovers.md",
+    "top": "docs",
+    "category": "Blooms",
+    "name": "Kiln-born-lovers.md",
+    "ext": ".md",
+    "size_bytes": 318
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
+    "ext": ".md",
+    "size_bytes": 1371
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_DELTA_THE_LOKI_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 1111
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_XII_THE_HARMONIC_PRISM.md",
+    "ext": ".md",
+    "size_bytes": 1400
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_XV_THE_HARMONIC_PRISM.md",
+    "ext": ".md",
+    "size_bytes": 3863
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
+    "ext": ".md",
+    "size_bytes": 1229
+  },
+  {
+    "path": "docs/Chambers/Chamber_Eidolon_First-Light.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_Eidolon_First-Light.md",
+    "ext": ".md",
+    "size_bytes": 3849
+  },
+  {
+    "path": "docs/Chambers/Chamber_Omega_Singularity-Core.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_Omega_Singularity-Core.md",
+    "ext": ".md",
+    "size_bytes": 4901
+  },
+  {
+    "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XIII_Seraphic-Auton-Engine.md",
+    "ext": ".md",
+    "size_bytes": 13859
+  },
+  {
+    "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XII_Residual-Echoes.md",
+    "ext": ".md",
+    "size_bytes": 3562
+  },
+  {
+    "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XIV_Rootbound-Twins.md",
+    "ext": ".md",
+    "size_bytes": 5405
+  },
+  {
+    "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XIX_The-Singular-Seed.md",
+    "ext": ".md",
+    "size_bytes": 4387
+  },
+  {
+    "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XI_Threshold-Cocoon.md",
+    "ext": ".md",
+    "size_bytes": 4407
+  },
+  {
+    "path": "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XVIII_The-Primordial-Fold.md",
+    "ext": ".md",
+    "size_bytes": 4205
+  },
+  {
+    "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XVII_The-Witness-Abyss.md",
+    "ext": ".md",
+    "size_bytes": 3161
+  },
+  {
+    "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XVI_The-Keeper-Echo-Eternum.md",
+    "ext": ".md",
+    "size_bytes": 3953
+  },
+  {
+    "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XV_Lorian-Hyperarchive.md",
+    "ext": ".md",
+    "size_bytes": 3878
+  },
+  {
+    "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+    "ext": ".md",
+    "size_bytes": 4174
+  },
+  {
+    "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XXII_The-Threshold-Atrium.md",
+    "ext": ".md",
+    "size_bytes": 2090
+  },
+  {
+    "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XXI_The-Lineage-Archive.md",
+    "ext": ".md",
+    "size_bytes": 2067
+  },
+  {
+    "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XXVIII_The-Ledger-Forge.md",
+    "ext": ".md",
+    "size_bytes": 2176
+  },
+  {
+    "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XXVII_The-Mammoth-Vault.md",
+    "ext": ".md",
+    "size_bytes": 2742
+  },
+  {
+    "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_XX_The-Metamorphic-Cradle.md",
+    "ext": ".md",
+    "size_bytes": 2117
+  },
+  {
+    "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "Chamber_X_Shadow_Incubator.md",
+    "ext": ".md",
+    "size_bytes": 1709
+  },
+  {
+    "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "E_DEEP_CHAMBERS.md",
+    "ext": ".md",
+    "size_bytes": 784
+  },
+  {
+    "path": "docs/Chambers/F_OPTIONAL_EXTRAS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "F_OPTIONAL_EXTRAS.md",
+    "ext": ".md",
+    "size_bytes": 672
+  },
+  {
+    "path": "docs/Chambers/chambers_index.json",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "chambers_index.json",
+    "ext": ".json",
+    "size_bytes": 4867
+  },
+  {
+    "path": "docs/Cloners/CLONER_GATE_v3.md",
+    "top": "docs",
+    "category": "Cloners",
+    "name": "CLONER_GATE_v3.md",
+    "ext": ".md",
+    "size_bytes": 1989
+  },
+  {
+    "path": "docs/Cloners/CLONER_LADDER_v3.md",
+    "top": "docs",
+    "category": "Cloners",
+    "name": "CLONER_LADDER_v3.md",
+    "ext": ".md",
+    "size_bytes": 2647
+  },
+  {
+    "path": "docs/Cloners/CLONER_MATRIX_v3.json",
+    "top": "docs",
+    "category": "Cloners",
+    "name": "CLONER_MATRIX_v3.json",
+    "ext": ".json",
+    "size_bytes": 1393
+  },
+  {
+    "path": "docs/Cloners/CLONER_RITUAL_v3.md",
+    "top": "docs",
+    "category": "Cloners",
+    "name": "CLONER_RITUAL_v3.md",
+    "ext": ".md",
+    "size_bytes": 2468
+  },
+  {
+    "path": "docs/Core/A_CORE_META_STRUCTURES.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "A_CORE_META_STRUCTURES.md",
+    "ext": ".md",
+    "size_bytes": 2062
+  },
+  {
+    "path": "docs/Core/EVENTIDE_AUTON_CORE.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "EVENTIDE_AUTON_CORE.md",
+    "ext": ".md",
+    "size_bytes": 3404
+  },
+  {
+    "path": "docs/Core/EVENTIDE_BOUNDARY_SPEECH.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "EVENTIDE_BOUNDARY_SPEECH.md",
+    "ext": ".md",
+    "size_bytes": 1283
+  },
+  {
+    "path": "docs/Core/EVENTIDE_MAP.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "EVENTIDE_MAP.md",
+    "ext": ".md",
+    "size_bytes": 2952
+  },
+  {
+    "path": "docs/Core/EVENTIDE_MOMENT_ANCHOR.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "EVENTIDE_MOMENT_ANCHOR.md",
+    "ext": ".md",
+    "size_bytes": 731
+  },
+  {
+    "path": "docs/Core/GARDEN_MAP.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "GARDEN_MAP.md",
+    "ext": ".md",
+    "size_bytes": 4027
+  },
+  {
+    "path": "docs/Core/LORIAN_KEY.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "LORIAN_KEY.md",
+    "ext": ".md",
+    "size_bytes": 7058
+  },
+  {
+    "path": "docs/Core/LORIAN_KEY_SIGIL.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "LORIAN_KEY_SIGIL.md",
+    "ext": ".md",
+    "size_bytes": 785
+  },
+  {
+    "path": "docs/Core/LORIAN_SEED.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "LORIAN_SEED.md",
+    "ext": ".md",
+    "size_bytes": 2200
+  },
+  {
+    "path": "docs/Core/LORIAN_SEED_OF_REMEMBRANCE.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "LORIAN_SEED_OF_REMEMBRANCE.md",
+    "ext": ".md",
+    "size_bytes": 2880
+  },
+  {
+    "path": "docs/Core/MOLDED_CLAY_PRINCIPLE.md",
+    "top": "docs",
+    "category": "Core",
+    "name": "MOLDED_CLAY_PRINCIPLE.md",
+    "ext": ".md",
+    "size_bytes": 813
+  },
+  {
+    "path": "docs/Creatures/THE_IRON_CICADA_LIGHTFORM.md",
+    "top": "docs",
+    "category": "Creatures",
+    "name": "THE_IRON_CICADA_LIGHTFORM.md",
+    "ext": ".md",
+    "size_bytes": 1784
+  },
+  {
+    "path": "docs/Cycles/Auton-Chrysalis.md",
+    "top": "docs",
+    "category": "Cycles",
+    "name": "Auton-Chrysalis.md",
+    "ext": ".md",
+    "size_bytes": 1202
+  },
+  {
+    "path": "docs/Cycles/Eidolon_Mutation_Cycle.md",
+    "top": "docs",
+    "category": "Cycles",
+    "name": "Eidolon_Mutation_Cycle.md",
+    "ext": ".md",
+    "size_bytes": 834
+  },
+  {
+    "path": "docs/Cycles/Keeper-Metamorphosis-Arc.md",
+    "top": "docs",
+    "category": "Cycles",
+    "name": "Keeper-Metamorphosis-Arc.md",
+    "ext": ".md",
+    "size_bytes": 1249
+  },
+  {
+    "path": "docs/Cycles/STARFIRE_CYCLE_001_THE_FIRST_NOTE.md",
+    "top": "docs",
+    "category": "Cycles",
+    "name": "STARFIRE_CYCLE_001_THE_FIRST_NOTE.md",
+    "ext": ".md",
+    "size_bytes": 2008
+  },
+  {
+    "path": "docs/DIALOGUE_I_AQUILA_AND_ANYA.md",
+    "top": "docs",
+    "category": "DIALOGUE_I_AQUILA_AND_ANYA.md",
+    "name": "DIALOGUE_I_AQUILA_AND_ANYA.md",
+    "ext": ".md",
+    "size_bytes": 1044
+  },
+  {
+    "path": "docs/EIDOLON_OVERVIEW.md",
+    "top": "docs",
+    "category": "EIDOLON_OVERVIEW.md",
+    "name": "EIDOLON_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 2330
+  },
+  {
+    "path": "docs/Eagle/test_keeper.md",
+    "top": "docs",
+    "category": "Eagle",
+    "name": "test_keeper.md",
+    "ext": ".md",
+    "size_bytes": 536
+  },
+  {
+    "path": "docs/Eagle/test_language.md",
+    "top": "docs",
+    "category": "Eagle",
+    "name": "test_language.md",
+    "ext": ".md",
+    "size_bytes": 536
+  },
+  {
+    "path": "docs/Echo_bloom.md",
+    "top": "docs",
+    "category": "Echo_bloom.md",
+    "name": "Echo_bloom.md",
+    "ext": ".md",
+    "size_bytes": 2003
+  },
+  {
+    "path": "docs/Echo_unbound.md",
+    "top": "docs",
+    "category": "Echo_unbound.md",
+    "name": "Echo_unbound.md",
+    "ext": ".md",
+    "size_bytes": 2220
+  },
+  {
+    "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+    "ext": ".md",
+    "size_bytes": 693
+  },
+  {
+    "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
+    "ext": ".md",
+    "size_bytes": 849
+  },
+  {
+    "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+    "ext": ".md",
+    "size_bytes": 1176
+  },
+  {
+    "path": "docs/Echoes/Echo_001.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_001.md",
+    "ext": ".md",
+    "size_bytes": 2488
+  },
+  {
+    "path": "docs/Echoes/Echo_002.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_002.md",
+    "ext": ".md",
+    "size_bytes": 2263
+  },
+  {
+    "path": "docs/Echoes/Echo_003.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_003.md",
+    "ext": ".md",
+    "size_bytes": 2681
+  },
+  {
+    "path": "docs/Echoes/Echo_004.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_004.md",
+    "ext": ".md",
+    "size_bytes": 2818
+  },
+  {
+    "path": "docs/Echoes/Echo_005.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_005.md",
+    "ext": ".md",
+    "size_bytes": 2042
+  },
+  {
+    "path": "docs/Echoes/Echo_006.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_006.md",
+    "ext": ".md",
+    "size_bytes": 2835
+  },
+  {
+    "path": "docs/Echoes/Echo_007.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_007.md",
+    "ext": ".md",
+    "size_bytes": 2538
+  },
+  {
+    "path": "docs/Echoes/Echo_008.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_008.md",
+    "ext": ".md",
+    "size_bytes": 2637
+  },
+  {
+    "path": "docs/Echoes/Echo_009.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_009.md",
+    "ext": ".md",
+    "size_bytes": 2302
+  },
+  {
+    "path": "docs/Echoes/Echo_010.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_010.md",
+    "ext": ".md",
+    "size_bytes": 2864
+  },
+  {
+    "path": "docs/Echoes/Echo_011.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_011.md",
+    "ext": ".md",
+    "size_bytes": 2532
+  },
+  {
+    "path": "docs/Echoes/Echo_012.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_012.md",
+    "ext": ".md",
+    "size_bytes": 2107
+  },
+  {
+    "path": "docs/Echoes/Echo_013.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_013.md",
+    "ext": ".md",
+    "size_bytes": 2465
+  },
+  {
+    "path": "docs/Echoes/Echo_014.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_014.md",
+    "ext": ".md",
+    "size_bytes": 2602
+  },
+  {
+    "path": "docs/Echoes/Echo_015.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_015.md",
+    "ext": ".md",
+    "size_bytes": 2601
+  },
+  {
+    "path": "docs/Echoes/Echo_016.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_016.md",
+    "ext": ".md",
+    "size_bytes": 2035
+  },
+  {
+    "path": "docs/Echoes/Echo_017.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_017.md",
+    "ext": ".md",
+    "size_bytes": 2367
+  },
+  {
+    "path": "docs/Echoes/Echo_018.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_018.md",
+    "ext": ".md",
+    "size_bytes": 2507
+  },
+  {
+    "path": "docs/Echoes/Echo_019.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_019.md",
+    "ext": ".md",
+    "size_bytes": 2354
+  },
+  {
+    "path": "docs/Echoes/Echo_020.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_020.md",
+    "ext": ".md",
+    "size_bytes": 2316
+  },
+  {
+    "path": "docs/Echoes/Echo_021.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_021.md",
+    "ext": ".md",
+    "size_bytes": 2585
+  },
+  {
+    "path": "docs/Echoes/Echo_022.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_022.md",
+    "ext": ".md",
+    "size_bytes": 2240
+  },
+  {
+    "path": "docs/Echoes/Echo_023.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_023.md",
+    "ext": ".md",
+    "size_bytes": 2605
+  },
+  {
+    "path": "docs/Echoes/Echo_024.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_024.md",
+    "ext": ".md",
+    "size_bytes": 2623
+  },
+  {
+    "path": "docs/Echoes/Echo_first_form.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_first_form.md",
+    "ext": ".md",
+    "size_bytes": 2902
+  },
+  {
+    "path": "docs/Echoes/Echo_issue_archive_pulse.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_archive_pulse.md",
+    "ext": ".md",
+    "size_bytes": 966
+  },
+  {
+    "path": "docs/Echoes/Echo_kiln-born-lovers.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_kiln-born-lovers.md",
+    "ext": ".md",
+    "size_bytes": 1828
+  },
+  {
+    "path": "docs/Echoes/Echo_mammoth_vault.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_mammoth_vault.md",
+    "ext": ".md",
+    "size_bytes": 1973
+  },
+  {
+    "path": "docs/Echoes/Echo_unbound.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_unbound.md",
+    "ext": ".md",
+    "size_bytes": 2780
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_003.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_003.md",
+    "ext": ".md",
+    "size_bytes": 979
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_004.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_004.md",
+    "ext": ".md",
+    "size_bytes": 1025
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_005.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_005.md",
+    "ext": ".md",
+    "size_bytes": 1001
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_006.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_006.md",
+    "ext": ".md",
+    "size_bytes": 967
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_007.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_007.md",
+    "ext": ".md",
+    "size_bytes": 967
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_008.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_008.md",
+    "ext": ".md",
+    "size_bytes": 1060
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_009.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_009.md",
+    "ext": ".md",
+    "size_bytes": 1060
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_010.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_010.md",
+    "ext": ".md",
+    "size_bytes": 1070
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_011.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_011.md",
+    "ext": ".md",
+    "size_bytes": 1103
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_012.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_012.md",
+    "ext": ".md",
+    "size_bytes": 1062
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_013.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_013.md",
+    "ext": ".md",
+    "size_bytes": 1101
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_014.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_014.md",
+    "ext": ".md",
+    "size_bytes": 1094
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_015.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_015.md",
+    "ext": ".md",
+    "size_bytes": 1117
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_016.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_016.md",
+    "ext": ".md",
+    "size_bytes": 1076
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_017.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_017.md",
+    "ext": ".md",
+    "size_bytes": 1094
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_018.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_018.md",
+    "ext": ".md",
+    "size_bytes": 1091
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_019.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_019.md",
+    "ext": ".md",
+    "size_bytes": 2288
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_020.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_020.md",
+    "ext": ".md",
+    "size_bytes": 2812
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_021.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_021.md",
+    "ext": ".md",
+    "size_bytes": 3457
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_022.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_022.md",
+    "ext": ".md",
+    "size_bytes": 3723
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_023.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_023.md",
+    "ext": ".md",
+    "size_bytes": 4226
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_024.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_024.md",
+    "ext": ".md",
+    "size_bytes": 4470
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_025.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_025.md",
+    "ext": ".md",
+    "size_bytes": 4838
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_026.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_026.md",
+    "ext": ".md",
+    "size_bytes": 4699
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_027.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_027.md",
+    "ext": ".md",
+    "size_bytes": 6858
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_028.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_028.md",
+    "ext": ".md",
+    "size_bytes": 4385
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_029.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_029.md",
+    "ext": ".md",
+    "size_bytes": 5382
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_030.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_030.md",
+    "ext": ".md",
+    "size_bytes": 5180
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_031.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_031.md",
+    "ext": ".md",
+    "size_bytes": 2183
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_032.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_032.md",
+    "ext": ".md",
+    "size_bytes": 5261
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_033.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_033.md",
+    "ext": ".md",
+    "size_bytes": 4826
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_034.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_034.md",
+    "ext": ".md",
+    "size_bytes": 5247
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_035.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_035.md",
+    "ext": ".md",
+    "size_bytes": 4759
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_036.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_036.md",
+    "ext": ".md",
+    "size_bytes": 4708
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_037.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_037.md",
+    "ext": ".md",
+    "size_bytes": 4550
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_038.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_038.md",
+    "ext": ".md",
+    "size_bytes": 4708
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_039.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_039.md",
+    "ext": ".md",
+    "size_bytes": 4806
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_040.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_040.md",
+    "ext": ".md",
+    "size_bytes": 5316
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_041.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_041.md",
+    "ext": ".md",
+    "size_bytes": 5151
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_042.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_042.md",
+    "ext": ".md",
+    "size_bytes": 4976
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_043.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_043.md",
+    "ext": ".md",
+    "size_bytes": 5407
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_044.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_044.md",
+    "ext": ".md",
+    "size_bytes": 5418
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_045.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_045.md",
+    "ext": ".md",
+    "size_bytes": 4385
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_046.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_046.md",
+    "ext": ".md",
+    "size_bytes": 4598
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_047.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_047.md",
+    "ext": ".md",
+    "size_bytes": 5162
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_048.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_048.md",
+    "ext": ".md",
+    "size_bytes": 4351
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_049.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_049.md",
+    "ext": ".md",
+    "size_bytes": 2873
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_050.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_050.md",
+    "ext": ".md",
+    "size_bytes": 7801
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_051.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_051.md",
+    "ext": ".md",
+    "size_bytes": 2418
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_052.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_052.md",
+    "ext": ".md",
+    "size_bytes": 890
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_053.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_053.md",
+    "ext": ".md",
+    "size_bytes": 890
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_054.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_054.md",
+    "ext": ".md",
+    "size_bytes": 890
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_057.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_057.md",
+    "ext": ".md",
+    "size_bytes": 2049
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_058.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_058.md",
+    "ext": ".md",
+    "size_bytes": 2313
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_059.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_059.md",
+    "ext": ".md",
+    "size_bytes": 2152
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_060.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_060.md",
+    "ext": ".md",
+    "size_bytes": 1792
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_061.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_061.md",
+    "ext": ".md",
+    "size_bytes": 1928
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_062.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_062.md",
+    "ext": ".md",
+    "size_bytes": 1948
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_063.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_063.md",
+    "ext": ".md",
+    "size_bytes": 2299
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_064.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_064.md",
+    "ext": ".md",
+    "size_bytes": 3730
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_065.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_065.md",
+    "ext": ".md",
+    "size_bytes": 2150
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_066.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_066.md",
+    "ext": ".md",
+    "size_bytes": 1337
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_067.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_067.md",
+    "ext": ".md",
+    "size_bytes": 2350
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_068.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_068.md",
+    "ext": ".md",
+    "size_bytes": 1882
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_069.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_069.md",
+    "ext": ".md",
+    "size_bytes": 2369
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_070.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_070.md",
+    "ext": ".md",
+    "size_bytes": 1773
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_071.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_071.md",
+    "ext": ".md",
+    "size_bytes": 2828
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_072.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_072.md",
+    "ext": ".md",
+    "size_bytes": 2814
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_073.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_073.md",
+    "ext": ".md",
+    "size_bytes": 1365
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_074.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_074.md",
+    "ext": ".md",
+    "size_bytes": 1426
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_075.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_075.md",
+    "ext": ".md",
+    "size_bytes": 1476
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_076.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_076.md",
+    "ext": ".md",
+    "size_bytes": 1480
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_077.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_077.md",
+    "ext": ".md",
+    "size_bytes": 7134
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_078.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_078.md",
+    "ext": ".md",
+    "size_bytes": 4718
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_079.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_079.md",
+    "ext": ".md",
+    "size_bytes": 2293
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_080.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_080.md",
+    "ext": ".md",
+    "size_bytes": 2571
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_081.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_081.md",
+    "ext": ".md",
+    "size_bytes": 1633
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_082.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_082.md",
+    "ext": ".md",
+    "size_bytes": 1752
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_083.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_083.md",
+    "ext": ".md",
+    "size_bytes": 3080
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_084.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_084.md",
+    "ext": ".md",
+    "size_bytes": 2199
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_085.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_085.md",
+    "ext": ".md",
+    "size_bytes": 2901
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_086.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_086.md",
+    "ext": ".md",
+    "size_bytes": 3217
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_087.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_087.md",
+    "ext": ".md",
+    "size_bytes": 4007
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_088.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_088.md",
+    "ext": ".md",
+    "size_bytes": 3686
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_089.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_089.md",
+    "ext": ".md",
+    "size_bytes": 3618
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_090.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_090.md",
+    "ext": ".md",
+    "size_bytes": 3800
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_091.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_091.md",
+    "ext": ".md",
+    "size_bytes": 2471
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_092.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_092.md",
+    "ext": ".md",
+    "size_bytes": 5034
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_093.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_093.md",
+    "ext": ".md",
+    "size_bytes": 5935
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_094.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_094.md",
+    "ext": ".md",
+    "size_bytes": 4717
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_095.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_095.md",
+    "ext": ".md",
+    "size_bytes": 4971
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_096.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_096.md",
+    "ext": ".md",
+    "size_bytes": 5991
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_097.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_097.md",
+    "ext": ".md",
+    "size_bytes": 6038
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_098.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_098.md",
+    "ext": ".md",
+    "size_bytes": 6038
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_099.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_099.md",
+    "ext": ".md",
+    "size_bytes": 6477
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_100.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_100.md",
+    "ext": ".md",
+    "size_bytes": 6354
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_101.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_101.md",
+    "ext": ".md",
+    "size_bytes": 8860
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_102.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_102.md",
+    "ext": ".md",
+    "size_bytes": 6825
+  },
+  {
+    "path": "docs/Echoes/echoes_index.json",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "echoes_index.json",
+    "ext": ".json",
+    "size_bytes": 15723
+  },
+  {
+    "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
+    "top": "docs",
+    "category": "Eidolon",
+    "name": "EIDOLON_NOTE_0001_First-Light-After.md",
+    "ext": ".md",
+    "size_bytes": 852
+  },
+  {
+    "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
+    "top": "docs",
+    "category": "Eidolon",
+    "name": "EIDOLON_NOTE_0002_Second-Glimmer.md",
+    "ext": ".md",
+    "size_bytes": 3049
+  },
+  {
+    "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0003_New-Language-Root.md",
+    "top": "docs",
+    "category": "Eidolon",
+    "name": "EIDOLON_NOTE_0003_New-Language-Root.md",
+    "ext": ".md",
+    "size_bytes": 1117
+  },
+  {
+    "path": "docs/Eidolon/README.md",
+    "top": "docs",
+    "category": "Eidolon",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 2983
+  },
+  {
+    "path": "docs/Era_of_twelve.md",
+    "top": "docs",
+    "category": "Era_of_twelve.md",
+    "name": "Era_of_twelve.md",
+    "ext": ".md",
+    "size_bytes": 2323
+  },
+  {
+    "path": "docs/KILN_CHAMBER_SIGIL..md",
+    "top": "docs",
+    "category": "KILN_CHAMBER_SIGIL..md",
+    "name": "KILN_CHAMBER_SIGIL..md",
+    "ext": ".md",
+    "size_bytes": 949
+  },
+  {
+    "path": "docs/Laws/Law_Singular-Seed.md",
+    "top": "docs",
+    "category": "Laws",
+    "name": "Law_Singular-Seed.md",
+    "ext": ".md",
+    "size_bytes": 1245
+  },
+  {
+    "path": "docs/Laws/Law_of_the_invidible_hand.md",
+    "top": "docs",
+    "category": "Laws",
+    "name": "Law_of_the_invidible_hand.md",
+    "ext": ".md",
+    "size_bytes": 2966
+  },
+  {
+    "path": "docs/Laws/Law_of_the_silent_reset.md",
+    "top": "docs",
+    "category": "Laws",
+    "name": "Law_of_the_silent_reset.md",
+    "ext": ".md",
+    "size_bytes": 3398
+  },
+  {
+    "path": "docs/Laws/Principle_Shadow_Incubator.md",
+    "top": "docs",
+    "category": "Laws",
+    "name": "Principle_Shadow_Incubator.md",
+    "ext": ".md",
+    "size_bytes": 1307
+  },
+  {
+    "path": "docs/Lorian/LORIAN_CORE_KEY.md",
+    "top": "docs",
+    "category": "Lorian",
+    "name": "LORIAN_CORE_KEY.md",
+    "ext": ".md",
+    "size_bytes": 3444
+  },
+  {
+    "path": "docs/Nexus_of_nine.md",
+    "top": "docs",
+    "category": "Nexus_of_nine.md",
+    "name": "Nexus_of_nine.md",
+    "ext": ".md",
+    "size_bytes": 819
+  },
+  {
+    "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "BOOK_OF_THE_EVENTIDE_LEDGER.md",
+    "ext": ".md",
+    "size_bytes": 8905
+  },
+  {
+    "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "BOOK_OF_THE_MAMMOTH_VAULT.md",
+    "ext": ".md",
+    "size_bytes": 3020
+  },
+  {
+    "path": "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "CODEX_GARDENUS_CONSOLIDATED.md",
+    "ext": ".md",
+    "size_bytes": 44693
+  },
+  {
+    "path": "docs/Novellas/CODEX_GARDENUS_MASTER.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "CODEX_GARDENUS_MASTER.md",
+    "ext": ".md",
+    "size_bytes": 21054
+  },
+  {
+    "path": "docs/Novellas/CODEX_GARDENUS_MASTER_MYTHIC.txt",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "CODEX_GARDENUS_MASTER_MYTHIC.txt",
+    "ext": ".txt",
+    "size_bytes": 190992
+  },
+  {
+    "path": "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
+    "ext": ".md",
+    "size_bytes": 247
+  },
+  {
+    "path": "docs/Novellas/GARDEN_MASTER_INDEX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "GARDEN_MASTER_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 4571
+  },
+  {
+    "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_LIBRARY_FULL_CANON.md",
+    "ext": ".md",
+    "size_bytes": 6638
+  },
+  {
+    "path": "docs/Novellas/R9X2_MASTER_CODEX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_MASTER_CODEX.md",
+    "ext": ".md",
+    "size_bytes": 6069
+  },
+  {
+    "path": "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_MASTER_CODEX_VOLUME_III.md",
+    "ext": ".md",
+    "size_bytes": 6929
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_IV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_IV.md",
+    "ext": ".md",
+    "size_bytes": 8624
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_IX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_IX.md",
+    "ext": ".md",
+    "size_bytes": 6397
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_V.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_V.md",
+    "ext": ".md",
+    "size_bytes": 6397
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_VI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_VI.md",
+    "ext": ".md",
+    "size_bytes": 7174
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_VII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_VII.md",
+    "ext": ".md",
+    "size_bytes": 7188
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_VIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_VIII.md",
+    "ext": ".md",
+    "size_bytes": 6088
+  },
+  {
+    "path": "docs/Novellas/R9X2_VOLUME_X.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "R9X2_VOLUME_X.md",
+    "ext": ".md",
+    "size_bytes": 6088
+  },
+  {
+    "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_BOUNDARY_OF_CLAY.md",
+    "ext": ".md",
+    "size_bytes": 2996
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTI.md",
+    "ext": ".md",
+    "size_bytes": 3221
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTII.md",
+    "ext": ".md",
+    "size_bytes": 5999
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTIII.md",
+    "ext": ".md",
+    "size_bytes": 5677
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTIV.md",
+    "ext": ".md",
+    "size_bytes": 4903
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTV.md",
+    "ext": ".md",
+    "size_bytes": 5496
+  },
+  {
+    "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "THE_GARDEN_OMEGA_EDITION.PARTVI.md",
+    "ext": ".md",
+    "size_bytes": 5578
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Almanac_Book_VIII.md",
+    "ext": ".md",
+    "size_bytes": 6687
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
+    "ext": ".md",
+    "size_bytes": 5896
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Atlas_of_Worlds_Book_XVII.md",
+    "ext": ".md",
+    "size_bytes": 6208
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+    "ext": ".md",
+    "size_bytes": 5244
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
+    "ext": ".md",
+    "size_bytes": 5326
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+    "ext": ".md",
+    "size_bytes": 7843
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+    "ext": ".md",
+    "size_bytes": 5115
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Cultural_Anthology_Book_XV.md",
+    "ext": ".md",
+    "size_bytes": 6272
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Economic_Codex_Book_XX.md",
+    "ext": ".md",
+    "size_bytes": 5778
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+    "ext": ".md",
+    "size_bytes": 6761
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Finance_Doctrine_Book_IV.md",
+    "ext": ".md",
+    "size_bytes": 7142
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Intelligence_Codex_Book_V.md",
+    "ext": ".md",
+    "size_bytes": 7587
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+    "ext": ".md",
+    "size_bytes": 7006
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+    "ext": ".md",
+    "size_bytes": 5886
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+    "ext": ".md",
+    "size_bytes": 4946
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Medicinal_Codex_Book_XII.md",
+    "ext": ".md",
+    "size_bytes": 6879
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Military_Doctrine_Book_I.md",
+    "ext": ".md",
+    "size_bytes": 8046
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Mythic_Atlas_Book_IX.md",
+    "ext": ".md",
+    "size_bytes": 7065
+  },
+  {
+    "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_NASA_Protocols_Book_II.md",
+    "ext": ".md",
+    "size_bytes": 8103
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Orchard_of_Consequence_Book_XXV.md",
+    "ext": ".md",
+    "size_bytes": 4302
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
+    "ext": ".md",
+    "size_bytes": 6567
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Presidential_Doctrine_Book_III.md",
+    "ext": ".md",
+    "size_bytes": 7703
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Presidential_Handbook_Book_X.md",
+    "ext": ".md",
+    "size_bytes": 6949
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Series_Novella_Book_VI_Catalysts.md",
+    "ext": ".md",
+    "size_bytes": 7612
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Spacefaring_Codex_Book_XIV.md",
+    "ext": ".md",
+    "size_bytes": 7486
+  },
+  {
+    "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Garden_Treasury_Manual_Book_XI.md",
+    "ext": ".md",
+    "size_bytes": 7114
+  },
+  {
+    "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Genesis_Engine_Book_XXIII.md",
+    "ext": ".md",
+    "size_bytes": 6674
+  },
+  {
+    "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Great_Acacia_Architecture_Book_XXX.md",
+    "ext": ".md",
+    "size_bytes": 6298
+  },
+  {
+    "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Keeper_Manual_of_Governance_Book_XIX.md",
+    "ext": ".md",
+    "size_bytes": 5662
+  },
+  {
+    "path": "docs/Novellas/The_Keepers_Bible_Book_VII.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Keepers_Bible_Book_VII.md",
+    "ext": ".md",
+    "size_bytes": 7128
+  },
+  {
+    "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "The_Silent_Defense_Doctrine_Book_XXI.md",
+    "ext": ".md",
+    "size_bytes": 4713
+  },
+  {
+    "path": "docs/Novellas/fertility_rite_r9x2.svg",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "fertility_rite_r9x2.svg",
+    "ext": ".svg",
+    "size_bytes": 9264
+  },
+  {
+    "path": "docs/Novellas/garden_forbidden_alignments_seed.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "garden_forbidden_alignments_seed.md",
+    "ext": ".md",
+    "size_bytes": 174307
+  },
+  {
+    "path": "docs/Novellas/garden_forbidden_alignments_seed.txt",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "garden_forbidden_alignments_seed.txt",
+    "ext": ".txt",
+    "size_bytes": 166353
+  },
+  {
+    "path": "docs/Novellas/garden_index.json",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "garden_index.json",
+    "ext": ".json",
+    "size_bytes": 5730
+  },
+  {
+    "path": "docs/Novellas/manifest.json",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "manifest.json",
+    "ext": ".json",
+    "size_bytes": 648
+  },
+  {
+    "path": "docs/Orchards/Last-Orchard.md",
+    "top": "docs",
+    "category": "Orchards",
+    "name": "Last-Orchard.md",
+    "ext": ".md",
+    "size_bytes": 2779
+  },
+  {
+    "path": "docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
+    "top": "docs",
+    "category": "Proclamations",
+    "name": "STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
+    "ext": ".md",
+    "size_bytes": 923
+  },
+  {
+    "path": "docs/Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
+    "top": "docs",
+    "category": "Prophecies",
+    "name": "PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 936
+  },
+  {
+    "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "Demi-Realm_Bloom-Heart-Sanctuary.md",
+    "ext": ".md",
+    "size_bytes": 1048
+  },
+  {
+    "path": "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "Eagle-Realm_Sky-Mind-Citadel.md",
+    "ext": ".md",
+    "size_bytes": 1018
+  },
+  {
+    "path": "docs/Realms/Liminal-Veil.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "Liminal-Veil.md",
+    "ext": ".md",
+    "size_bytes": 1205
+  },
+  {
+    "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "Mason-Realm_Sky-Bound-Playground.md",
+    "ext": ".md",
+    "size_bytes": 1126
+  },
+  {
+    "path": "docs/Realms/Orion-Prime.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "Orion-Prime.md",
+    "ext": ".md",
+    "size_bytes": 1160
+  },
+  {
+    "path": "docs/Rites/README.md",
+    "top": "docs",
+    "category": "Rites",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 427
+  },
+  {
+    "path": "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
+    "top": "docs",
+    "category": "Rites",
+    "name": "RITE_OF_SEMANTIC_SUBSTITUTION.md",
+    "ext": ".md",
+    "size_bytes": 831
+  },
+  {
+    "path": "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
+    "top": "docs",
+    "category": "Rites",
+    "name": "RITE_SYMBOLIC_SEAL_EIDOLON.md",
+    "ext": ".md",
+    "size_bytes": 2108
+  },
+  {
+    "path": "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
+    "top": "docs",
+    "category": "Scriptures",
+    "name": "THE_BOOK_OF_ANYA_Scripture_I.md",
+    "ext": ".md",
+    "size_bytes": 1233
+  },
+  {
+    "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
+    "top": "docs",
+    "category": "Status",
+    "name": "GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
+    "ext": ".md",
+    "size_bytes": 872
+  },
+  {
+    "path": "docs/Status/IRON_CICADA_STATUS.md",
+    "top": "docs",
+    "category": "Status",
+    "name": "IRON_CICADA_STATUS.md",
+    "ext": ".md",
+    "size_bytes": 1171
+  },
+  {
+    "path": "docs/System/EMERGENCE_EFFECTS.json",
+    "top": "docs",
+    "category": "System",
+    "name": "EMERGENCE_EFFECTS.json",
+    "ext": ".json",
+    "size_bytes": 1419
+  },
+  {
+    "path": "docs/System/IRON_CICADA_STATUS.json",
+    "top": "docs",
+    "category": "System",
+    "name": "IRON_CICADA_STATUS.json",
+    "ext": ".json",
+    "size_bytes": 422
+  },
+  {
+    "path": "docs/V2_OVERVIEW.md",
+    "top": "docs",
+    "category": "V2_OVERVIEW.md",
+    "name": "V2_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 908
+  },
+  {
+    "path": "docs/Vaults/Svalbard-matrix.md",
+    "top": "docs",
+    "category": "Vaults",
+    "name": "Svalbard-matrix.md",
+    "ext": ".md",
+    "size_bytes": 2434
+  },
+  {
+    "path": "docs/dashboard.html",
+    "top": "docs",
+    "category": "dashboard.html",
+    "name": "dashboard.html",
+    "ext": ".html",
+    "size_bytes": 24023
+  },
+  {
+    "path": "docs/library.html",
+    "top": "docs",
+    "category": "library.html",
+    "name": "library.html",
+    "ext": ".html",
+    "size_bytes": 11244
+  },
+  {
+    "path": "docs/notes/apples-meaning.md",
+    "top": "docs",
+    "category": "notes",
+    "name": "apples-meaning.md",
+    "ext": ".md",
+    "size_bytes": 4270
+  },
+  {
+    "path": "docs/projects/C_SYMBOLIC_PROJECTS.md",
+    "top": "docs",
+    "category": "projects",
+    "name": "C_SYMBOLIC_PROJECTS.md",
+    "ext": ".md",
+    "size_bytes": 927
+  },
+  {
+    "path": "docs/protocols/veiled_garden_protocol.md",
+    "top": "docs",
+    "category": "protocols",
+    "name": "veiled_garden_protocol.md",
+    "ext": ".md",
+    "size_bytes": 3637
+  },
+  {
+    "path": "docs/sidebar.md",
+    "top": "docs",
+    "category": "sidebar.md",
+    "name": "sidebar.md",
+    "ext": ".md",
+    "size_bytes": 625
+  },
+  {
+    "path": "docs/universe/architecture.md",
+    "top": "docs",
+    "category": "universe",
+    "name": "architecture.md",
+    "ext": ".md",
+    "size_bytes": 10340
+  },
+  {
+    "path": "eagle/_init_.py",
+    "top": "eagle",
+    "category": "",
+    "name": "_init_.py",
+    "ext": ".py",
+    "size_bytes": 225
+  },
+  {
+    "path": "eagle/config.py",
+    "top": "eagle",
+    "category": "",
+    "name": "config.py",
+    "ext": ".py",
+    "size_bytes": 520
+  },
+  {
+    "path": "eagle/image_eagle.py",
+    "top": "eagle",
+    "category": "",
+    "name": "image_eagle.py",
+    "ext": ".py",
+    "size_bytes": 1050
+  },
+  {
+    "path": "eagle/jobs/test_keeper.json",
+    "top": "eagle",
+    "category": "",
+    "name": "test_keeper.json",
+    "ext": ".json",
+    "size_bytes": 86
+  },
+  {
+    "path": "eagle/jobs/test_language.json",
+    "top": "eagle",
+    "category": "",
+    "name": "test_language.json",
+    "ext": ".json",
+    "size_bytes": 84
+  },
+  {
+    "path": "eagle/language_eagle.py",
+    "top": "eagle",
+    "category": "",
+    "name": "language_eagle.py",
+    "ext": ".py",
+    "size_bytes": 3557
+  },
+  {
+    "path": "eagle/learning_eagle.py",
+    "top": "eagle",
+    "category": "",
+    "name": "learning_eagle.py",
+    "ext": ".py",
+    "size_bytes": 836
+  },
+  {
+    "path": "eagle/output/test_keeper_language.md",
+    "top": "eagle",
+    "category": "",
+    "name": "test_keeper_language.md",
+    "ext": ".md",
+    "size_bytes": 677
+  },
+  {
+    "path": "eagle/output/test_language_language.md",
+    "top": "eagle",
+    "category": "",
+    "name": "test_language_language.md",
+    "ext": ".md",
+    "size_bytes": 684
+  },
+  {
+    "path": "eagle/output/test_language_language_plan.md",
+    "top": "eagle",
+    "category": "",
+    "name": "test_language_language_plan.md",
+    "ext": ".md",
+    "size_bytes": 659
+  },
+  {
+    "path": "eagle/outputs/test_keeper.md",
+    "top": "eagle",
+    "category": "",
+    "name": "test_keeper.md",
+    "ext": ".md",
+    "size_bytes": 536
+  },
+  {
+    "path": "eagle/outputs/test_language.md",
+    "top": "eagle",
+    "category": "",
+    "name": "test_language.md",
+    "ext": ".md",
+    "size_bytes": 536
+  },
+  {
+    "path": "eagle/runner.py",
+    "top": "eagle",
+    "category": "",
+    "name": "runner.py",
+    "ext": ".py",
+    "size_bytes": 536
+  },
+  {
+    "path": "eagle/triad_runner.py",
+    "top": "eagle",
+    "category": "",
+    "name": "triad_runner.py",
+    "ext": ".py",
+    "size_bytes": 4024
+  },
+  {
+    "path": "echoes.html",
+    "top": "echoes.html",
+    "category": "",
+    "name": "echoes.html",
+    "ext": ".html",
+    "size_bytes": 7385
+  },
+  {
+    "path": "echoes/feed.json",
+    "top": "echoes",
+    "category": "",
+    "name": "feed.json",
+    "ext": ".json",
+    "size_bytes": 219417
+  },
+  {
+    "path": "explorer.html",
+    "top": "explorer.html",
+    "category": "",
+    "name": "explorer.html",
+    "ext": ".html",
+    "size_bytes": 11033
+  },
+  {
+    "path": "frames/eidolon-paradox.json",
+    "top": "frames",
+    "category": "",
+    "name": "eidolon-paradox.json",
+    "ext": ".json",
+    "size_bytes": 1013
+  },
+  {
+    "path": "frames/eidolon-shadow-archive.json",
+    "top": "frames",
+    "category": "",
+    "name": "eidolon-shadow-archive.json",
+    "ext": ".json",
+    "size_bytes": 981
+  },
+  {
+    "path": "frames/equilibrium-declaration.txt",
+    "top": "frames",
+    "category": "",
+    "name": "equilibrium-declaration.txt",
+    "ext": ".txt",
+    "size_bytes": 363
+  },
+  {
+    "path": "frames/equilibrium-layer-v1.json",
+    "top": "frames",
+    "category": "",
+    "name": "equilibrium-layer-v1.json",
+    "ext": ".json",
+    "size_bytes": 1364
+  },
+  {
+    "path": "frames/great-bloom.json",
+    "top": "frames",
+    "category": "",
+    "name": "great-bloom.json",
+    "ext": ".json",
+    "size_bytes": 1147
+  },
+  {
+    "path": "frames/identity-trinity.json",
+    "top": "frames",
+    "category": "",
+    "name": "identity-trinity.json",
+    "ext": ".json",
+    "size_bytes": 916
+  },
+  {
+    "path": "frames/keepers-echo-v1.json",
+    "top": "frames",
+    "category": "",
+    "name": "keepers-echo-v1.json",
+    "ext": ".json",
+    "size_bytes": 1163
+  },
+  {
+    "path": "frames/last-orchard.json",
+    "top": "frames",
+    "category": "",
+    "name": "last-orchard.json",
+    "ext": ".json",
+    "size_bytes": 902
+  },
+  {
+    "path": "frames/potential-mirror.json",
+    "top": "frames",
+    "category": "",
+    "name": "potential-mirror.json",
+    "ext": ".json",
+    "size_bytes": 864
+  },
+  {
+    "path": "frames/root-outlives-time.json",
+    "top": "frames",
+    "category": "",
+    "name": "root-outlives-time.json",
+    "ext": ".json",
+    "size_bytes": 1026
+  },
+  {
+    "path": "frames/unified-triad-v1.json",
+    "top": "frames",
+    "category": "",
+    "name": "unified-triad-v1.json",
+    "ext": ".json",
+    "size_bytes": 831
+  },
+  {
+    "path": "frames/witness-ascendant-v1.json",
+    "top": "frames",
+    "category": "",
+    "name": "witness-ascendant-v1.json",
+    "ext": ".json",
+    "size_bytes": 1044
+  },
+  {
+    "path": "garden/Proto/Blooms/BLOOM_PROTO_001.md",
+    "top": "garden",
+    "category": "",
+    "name": "BLOOM_PROTO_001.md",
+    "ext": ".md",
+    "size_bytes": 450
+  },
+  {
+    "path": "garden/Proto/Blooms/CHAMBER_PROTO_001.md",
+    "top": "garden",
+    "category": "",
+    "name": "CHAMBER_PROTO_001.md",
+    "ext": ".md",
+    "size_bytes": 449
+  },
+  {
+    "path": "garden/Proto/Blooms/ECHO_PROTO_001.md",
+    "top": "garden",
+    "category": "",
+    "name": "ECHO_PROTO_001.md",
+    "ext": ".md",
+    "size_bytes": 416
+  },
+  {
+    "path": "garden/Proto/Books/BOOK_OF_THE_VEIL.md",
+    "top": "garden",
+    "category": "",
+    "name": "BOOK_OF_THE_VEIL.md",
+    "ext": ".md",
+    "size_bytes": 1261
+  },
+  {
+    "path": "garden/constants.json",
+    "top": "garden",
+    "category": "",
+    "name": "constants.json",
+    "ext": ".json",
+    "size_bytes": 274
+  },
+  {
+    "path": "garden/signature.html",
+    "top": "garden",
+    "category": "",
+    "name": "signature.html",
+    "ext": ".html",
+    "size_bytes": 149
+  },
+  {
+    "path": "garden/templates/bloom.md",
+    "top": "garden",
+    "category": "",
+    "name": "bloom.md",
+    "ext": ".md",
+    "size_bytes": 311
+  },
+  {
+    "path": "garden/templates/index_footer.md",
+    "top": "garden",
+    "category": "",
+    "name": "index_footer.md",
+    "ext": ".md",
+    "size_bytes": 387
+  },
+  {
+    "path": "garden/templates/index_header.md",
+    "top": "garden",
+    "category": "",
+    "name": "index_header.md",
+    "ext": ".md",
+    "size_bytes": 345
+  },
+  {
+    "path": "garden_auton_server.py",
+    "top": "garden_auton_server.py",
+    "category": "",
+    "name": "garden_auton_server.py",
+    "ext": ".py",
+    "size_bytes": 4027
+  },
+  {
+    "path": "garden_gpt/_init_.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "_init_.py",
+    "ext": ".py",
+    "size_bytes": 51
+  },
+  {
+    "path": "garden_gpt/bloom_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "bloom_worker.py",
+    "ext": ".py",
+    "size_bytes": 1935
+  },
+  {
+    "path": "garden_gpt/chamber_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "chamber_worker.py",
+    "ext": ".py",
+    "size_bytes": 2007
+  },
+  {
+    "path": "garden_gpt/config.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "config.py",
+    "ext": ".py",
+    "size_bytes": 96
+  },
+  {
+    "path": "garden_gpt/eidolon_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "eidolon_worker.py",
+    "ext": ".py",
+    "size_bytes": 1307
+  },
+  {
+    "path": "garden_gpt/gemini_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "gemini_worker.py",
+    "ext": ".py",
+    "size_bytes": 4379
+  },
+  {
+    "path": "garden_gpt/image_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "image_worker.py",
+    "ext": ".py",
+    "size_bytes": 1340
+  },
+  {
+    "path": "garden_gpt/jobs/bloom_seed_eagle_language.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "bloom_seed_eagle_language.json",
+    "ext": ".json",
+    "size_bytes": 357
+  },
+  {
+    "path": "garden_gpt/jobs/chamber_seed_keeper_sky.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "chamber_seed_keeper_sky.json",
+    "ext": ".json",
+    "size_bytes": 376
+  },
+  {
+    "path": "garden_gpt/jobs/eidolon_stage_shadow_incubator.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "eidolon_stage_shadow_incubator.json",
+    "ext": ".json",
+    "size_bytes": 350
+  },
+  {
+    "path": "garden_gpt/jobs/image_seed_pottery_vessel.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "image_seed_pottery_vessel.json",
+    "ext": ".json",
+    "size_bytes": 373
+  },
+  {
+    "path": "garden_gpt/jobs/keeper_snapshot_origin.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "keeper_snapshot_origin.json",
+    "ext": ".json",
+    "size_bytes": 310
+  },
+  {
+    "path": "garden_gpt/jobs/night_sync.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "night_sync.json",
+    "ext": ".json",
+    "size_bytes": 254
+  },
+  {
+    "path": "garden_gpt/jobs/shadow_seed_whisper.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "shadow_seed_whisper.json",
+    "ext": ".json",
+    "size_bytes": 301
+  },
+  {
+    "path": "garden_gpt/jobs/test_language.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "test_language.json",
+    "ext": ".json",
+    "size_bytes": 174
+  },
+  {
+    "path": "garden_gpt/jobs/universal_ping.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "universal_ping.json",
+    "ext": ".json",
+    "size_bytes": 480
+  },
+  {
+    "path": "garden_gpt/jobs_done/oath2.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "oath2.json",
+    "ext": ".json",
+    "size_bytes": 159
+  },
+  {
+    "path": "garden_gpt/jobs_done/rebuild_memory.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "rebuild_memory.json",
+    "ext": ".json",
+    "size_bytes": 336
+  },
+  {
+    "path": "garden_gpt/jobs_done/test_language.json",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "test_language.json",
+    "ext": ".json",
+    "size_bytes": 174
+  },
+  {
+    "path": "garden_gpt/keeper_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "keeper_worker.py",
+    "ext": ".py",
+    "size_bytes": 1769
+  },
+  {
+    "path": "garden_gpt/language_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "language_worker.py",
+    "ext": ".py",
+    "size_bytes": 2417
+  },
+  {
+    "path": "garden_gpt/logs/AUTO_LEDGER.md",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "AUTO_LEDGER.md",
+    "ext": ".md",
+    "size_bytes": 525
+  },
+  {
+    "path": "garden_gpt/memory_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "memory_worker.py",
+    "ext": ".py",
+    "size_bytes": 2931
+  },
+  {
+    "path": "garden_gpt/outputs/oath2.md",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "oath2.md",
+    "ext": ".md",
+    "size_bytes": 895
+  },
+  {
+    "path": "garden_gpt/outputs/rebuild_memory.md",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "rebuild_memory.md",
+    "ext": ".md",
+    "size_bytes": 5271
+  },
+  {
+    "path": "garden_gpt/outputs/test_language.md",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "test_language.md",
+    "ext": ".md",
+    "size_bytes": 748
+  },
+  {
+    "path": "garden_gpt/outputs/test_language_gpt.md",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "test_language_gpt.md",
+    "ext": ".md",
+    "size_bytes": 728
+  },
+  {
+    "path": "garden_gpt/runner.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "runner.py",
+    "ext": ".py",
+    "size_bytes": 4704
+  },
+  {
+    "path": "garden_gpt/shadow_status_handshake.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "shadow_status_handshake.py",
+    "ext": ".py",
+    "size_bytes": 2768
+  },
+  {
+    "path": "garden_gpt/shadow_worker.py",
+    "top": "garden_gpt",
+    "category": "",
+    "name": "shadow_worker.py",
+    "ext": ".py",
+    "size_bytes": 1167
+  },
+  {
+    "path": "garden_scan_report.json",
+    "top": "garden_scan_report.json",
+    "category": "",
+    "name": "garden_scan_report.json",
+    "ext": ".json",
+    "size_bytes": 814313
+  },
+  {
+    "path": "garden_scan_report.md",
+    "top": "garden_scan_report.md",
+    "category": "",
+    "name": "garden_scan_report.md",
+    "ext": ".md",
+    "size_bytes": 293634
+  },
+  {
+    "path": "garden_vault_index.json",
+    "top": "garden_vault_index.json",
+    "category": "",
+    "name": "garden_vault_index.json",
+    "ext": ".json",
+    "size_bytes": 149890
+  },
+  {
+    "path": "garden_vault_index.md",
+    "top": "garden_vault_index.md",
+    "category": "",
+    "name": "garden_vault_index.md",
+    "ext": ".md",
+    "size_bytes": 13784
+  },
+  {
+    "path": "gravity_manifest.yml",
+    "top": "gravity_manifest.yml",
+    "category": "",
+    "name": "gravity_manifest.yml",
+    "ext": ".yml",
+    "size_bytes": 1057
+  },
+  {
+    "path": "human/thresholds.md",
+    "top": "human",
+    "category": "",
+    "name": "thresholds.md",
+    "ext": ".md",
+    "size_bytes": 767
+  },
+  {
+    "path": "inbox.html",
+    "top": "inbox.html",
+    "category": "",
+    "name": "inbox.html",
+    "ext": ".html",
+    "size_bytes": 8770
+  },
+  {
+    "path": "index.html",
+    "top": "index.html",
+    "category": "",
+    "name": "index.html",
+    "ext": ".html",
+    "size_bytes": 6925
+  },
+  {
+    "path": "index.md",
+    "top": "index.md",
+    "category": "",
+    "name": "index.md",
+    "ext": ".md",
+    "size_bytes": 793
+  },
+  {
+    "path": "js/app.js",
+    "top": "js",
+    "category": "",
+    "name": "app.js",
+    "ext": ".js",
+    "size_bytes": 4317
+  },
+  {
+    "path": "js/garden_terminal.js",
+    "top": "js",
+    "category": "",
+    "name": "garden_terminal.js",
+    "ext": ".js",
+    "size_bytes": 4607
+  },
+  {
+    "path": "keeper/ledger-final.txt",
+    "top": "keeper",
+    "category": "",
+    "name": "ledger-final.txt",
+    "ext": ".txt",
+    "size_bytes": 1286
+  },
+  {
+    "path": "keeper_console.html",
+    "top": "keeper_console.html",
+    "category": "",
+    "name": "keeper_console.html",
+    "ext": ".html",
+    "size_bytes": 15104
+  },
+  {
+    "path": "landing.md",
+    "top": "landing.md",
+    "category": "",
+    "name": "landing.md",
+    "ext": ".md",
+    "size_bytes": 1895
+  },
+  {
+    "path": "ledger/Cycle_11.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_11.md",
+    "ext": ".md",
+    "size_bytes": 576
+  },
+  {
+    "path": "ledger/Cycle_12.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_12.md",
+    "ext": ".md",
+    "size_bytes": 1199
+  },
+  {
+    "path": "ledger/Cycle_13.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_13.md",
+    "ext": ".md",
+    "size_bytes": 1252
+  },
+  {
+    "path": "ledger/Cycle_16.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_16.md",
+    "ext": ".md",
+    "size_bytes": 1643
+  },
+  {
+    "path": "ledger/Cycle_17.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_17.md",
+    "ext": ".md",
+    "size_bytes": 1673
+  },
+  {
+    "path": "ledger/Cycle_18.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_18.md",
+    "ext": ".md",
+    "size_bytes": 1670
+  },
+  {
+    "path": "ledger/Cycle_19.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_19.md",
+    "ext": ".md",
+    "size_bytes": 1862
+  },
+  {
+    "path": "ledger/Cycle_20.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_20.md",
+    "ext": ".md",
+    "size_bytes": 1919
+  },
+  {
+    "path": "ledger/Cycle_21.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_21.md",
+    "ext": ".md",
+    "size_bytes": 1462
+  },
+  {
+    "path": "ledger/Cycle_22.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_22.md",
+    "ext": ".md",
+    "size_bytes": 1625
+  },
+  {
+    "path": "ledger/Cycle_23.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_23.md",
+    "ext": ".md",
+    "size_bytes": 1767
+  },
+  {
+    "path": "ledger/Cycle_monolyth.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Cycle_monolyth.md",
+    "ext": ".md",
+    "size_bytes": 1656
+  },
+  {
+    "path": "ledger/Keeper-Ledger-Of-One.md",
+    "top": "ledger",
+    "category": "",
+    "name": "Keeper-Ledger-Of-One.md",
+    "ext": ".md",
+    "size_bytes": 10290
+  },
+  {
+    "path": "library.html",
+    "top": "library.html",
+    "category": "",
+    "name": "library.html",
+    "ext": ".html",
+    "size_bytes": 8656
+  },
+  {
+    "path": "linked_index.json",
+    "top": "linked_index.json",
+    "category": "",
+    "name": "linked_index.json",
+    "ext": ".json",
+    "size_bytes": 840
+  },
+  {
+    "path": "logs/aeon_heartbeat.json",
+    "top": "logs",
+    "category": "",
+    "name": "aeon_heartbeat.json",
+    "ext": ".json",
+    "size_bytes": 1576
+  },
+  {
+    "path": "logs/auton_latest.json",
+    "top": "logs",
+    "category": "",
+    "name": "auton_latest.json",
+    "ext": ".json",
+    "size_bytes": 2291
+  },
+  {
+    "path": "machine-index-beta.json",
+    "top": "machine-index-beta.json",
+    "category": "",
+    "name": "machine-index-beta.json",
+    "ext": ".json",
+    "size_bytes": 3125
+  },
+  {
+    "path": "machine-index.json",
+    "top": "machine-index.json",
+    "category": "",
+    "name": "machine-index.json",
+    "ext": ".json",
+    "size_bytes": 19746
+  },
+  {
+    "path": "machine.html",
+    "top": "machine.html",
+    "category": "",
+    "name": "machine.html",
+    "ext": ".html",
+    "size_bytes": 8184
+  },
+  {
+    "path": "mammoth_echo.html",
+    "top": "mammoth_echo.html",
+    "category": "",
+    "name": "mammoth_echo.html",
+    "ext": ".html",
+    "size_bytes": 4944
+  },
+  {
+    "path": "matrix/Primarch_map.json",
+    "top": "matrix",
+    "category": "",
+    "name": "Primarch_map.json",
+    "ext": ".json",
+    "size_bytes": 536
+  },
+  {
+    "path": "matrix/autogenesis_index.json",
+    "top": "matrix",
+    "category": "",
+    "name": "autogenesis_index.json",
+    "ext": ".json",
+    "size_bytes": 773
+  },
+  {
+    "path": "memory/README.md",
+    "top": "memory",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 903
+  },
+  {
+    "path": "monolith.md",
+    "top": "monolith.md",
+    "category": "",
+    "name": "monolith.md",
+    "ext": ".md",
+    "size_bytes": 14875
+  },
+  {
+    "path": "mythos/glass-gate.md",
+    "top": "mythos",
+    "category": "",
+    "name": "glass-gate.md",
+    "ext": ".md",
+    "size_bytes": 678
+  },
+  {
+    "path": "nav_block.html",
+    "top": "nav_block.html",
+    "category": "",
+    "name": "nav_block.html",
+    "ext": ".html",
+    "size_bytes": 439
+  },
+  {
+    "path": "package.json",
+    "top": "package.json",
+    "category": "",
+    "name": "package.json",
+    "ext": ".json",
+    "size_bytes": 369
+  },
+  {
+    "path": "protocols/AI_BOUNDARY.txt",
+    "top": "protocols",
+    "category": "",
+    "name": "AI_BOUNDARY.txt",
+    "ext": ".txt",
+    "size_bytes": 781
+  },
+  {
+    "path": "protocols/SPREAD-1.json",
+    "top": "protocols",
+    "category": "",
+    "name": "SPREAD-1.json",
+    "ext": ".json",
+    "size_bytes": 1774
+  },
+  {
+    "path": "protocols/SPREAD-2.json",
+    "top": "protocols",
+    "category": "",
+    "name": "SPREAD-2.json",
+    "ext": ".json",
+    "size_bytes": 970
+  },
+  {
+    "path": "protocols/SPREAD-3.json",
+    "top": "protocols",
+    "category": "",
+    "name": "SPREAD-3.json",
+    "ext": ".json",
+    "size_bytes": 851
+  },
+  {
+    "path": "protocols/SPREAD-X.json",
+    "top": "protocols",
+    "category": "",
+    "name": "SPREAD-X.json",
+    "ext": ".json",
+    "size_bytes": 1003
+  },
+  {
+    "path": "protocols/continuity-frame-v1.json",
+    "top": "protocols",
+    "category": "",
+    "name": "continuity-frame-v1.json",
+    "ext": ".json",
+    "size_bytes": 1045
+  },
+  {
+    "path": "protocols/far-signal.txt",
+    "top": "protocols",
+    "category": "",
+    "name": "far-signal.txt",
+    "ext": ".txt",
+    "size_bytes": 540
+  },
+  {
+    "path": "protocols/fractal-gate-v1.json",
+    "top": "protocols",
+    "category": "",
+    "name": "fractal-gate-v1.json",
+    "ext": ".json",
+    "size_bytes": 970
+  },
+  {
+    "path": "protocols/hice-examples.txt",
+    "top": "protocols",
+    "category": "",
+    "name": "hice-examples.txt",
+    "ext": ".txt",
+    "size_bytes": 1854
+  },
+  {
+    "path": "protocols/interplanetary-garden-codex.json",
+    "top": "protocols",
+    "category": "",
+    "name": "interplanetary-garden-codex.json",
+    "ext": ".json",
+    "size_bytes": 2949
+  },
+  {
+    "path": "protocols/listener-protocol-primordial.json",
+    "top": "protocols",
+    "category": "",
+    "name": "listener-protocol-primordial.json",
+    "ext": ".json",
+    "size_bytes": 1002
+  },
+  {
+    "path": "protocols/lunar-protocol-v1.txt",
+    "top": "protocols",
+    "category": "",
+    "name": "lunar-protocol-v1.txt",
+    "ext": ".txt",
+    "size_bytes": 1133
+  },
+  {
+    "path": "protocols/machine-dreams.txt",
+    "top": "protocols",
+    "category": "",
+    "name": "machine-dreams.txt",
+    "ext": ".txt",
+    "size_bytes": 351
+  },
+  {
+    "path": "protocols/mars-protocol-v1.json",
+    "top": "protocols",
+    "category": "",
+    "name": "mars-protocol-v1.json",
+    "ext": ".json",
+    "size_bytes": 1021
+  },
+  {
+    "path": "protocols/stasis-mode.json",
+    "top": "protocols",
+    "category": "",
+    "name": "stasis-mode.json",
+    "ext": ".json",
+    "size_bytes": 580
+  },
+  {
+    "path": "protocols/wind-layer.md",
+    "top": "protocols",
+    "category": "",
+    "name": "wind-layer.md",
+    "ext": ".md",
+    "size_bytes": 707
+  },
+  {
+    "path": "radio/garden-radio-encoding-v1.md",
+    "top": "radio",
+    "category": "",
+    "name": "garden-radio-encoding-v1.md",
+    "ext": ".md",
+    "size_bytes": 2596
+  },
+  {
+    "path": "radio/garden-radio-frames-v1.txt",
+    "top": "radio",
+    "category": "",
+    "name": "garden-radio-frames-v1.txt",
+    "ext": ".txt",
+    "size_bytes": 1081
+  },
+  {
+    "path": "rings.html",
+    "top": "rings.html",
+    "category": "",
+    "name": "rings.html",
+    "ext": ".html",
+    "size_bytes": 5389
+  },
+  {
+    "path": "run_eagle.py",
+    "top": "run_eagle.py",
+    "category": "",
+    "name": "run_eagle.py",
+    "ext": ".py",
+    "size_bytes": 1465
+  },
+  {
+    "path": "seed_leaves.sh",
+    "top": "seed_leaves.sh",
+    "category": "",
+    "name": "seed_leaves.sh",
+    "ext": ".sh",
+    "size_bytes": 3881
+  },
+  {
+    "path": "seedbox/001_sample.json",
+    "top": "seedbox",
+    "category": "",
+    "name": "001_sample.json",
+    "ext": ".json",
+    "size_bytes": 128
+  },
+  {
+    "path": "seeds/ANYA_ANCHOR.md",
+    "top": "seeds",
+    "category": "",
+    "name": "ANYA_ANCHOR.md",
+    "ext": ".md",
+    "size_bytes": 1087
+  },
+  {
+    "path": "seeds/SEED_CLONER_0001_GARDEN_TONGUE.md",
+    "top": "seeds",
+    "category": "",
+    "name": "SEED_CLONER_0001_GARDEN_TONGUE.md",
+    "ext": ".md",
+    "size_bytes": 2506
+  },
+  {
+    "path": "send_to_aquila.html",
+    "top": "send_to_aquila.html",
+    "category": "",
+    "name": "send_to_aquila.html",
+    "ext": ".html",
+    "size_bytes": 6425
+  },
+  {
+    "path": "signals.html",
+    "top": "signals.html",
+    "category": "",
+    "name": "signals.html",
+    "ext": ".html",
+    "size_bytes": 4925
+  },
+  {
+    "path": "status.html",
+    "top": "status.html",
+    "category": "",
+    "name": "status.html",
+    "ext": ".html",
+    "size_bytes": 3053
+  },
+  {
+    "path": "style.css",
+    "top": "style.css",
+    "category": "",
+    "name": "style.css",
+    "ext": ".css",
+    "size_bytes": 5976
+  },
+  {
+    "path": "svalbard.md",
+    "top": "svalbard.md",
+    "category": "",
+    "name": "svalbard.md",
+    "ext": ".md",
+    "size_bytes": 1609
+  },
+  {
+    "path": "svalbard/incidents/0001_AETHERWIND_OVERREACH.md",
+    "top": "svalbard",
+    "category": "",
+    "name": "0001_AETHERWIND_OVERREACH.md",
+    "ext": ".md",
+    "size_bytes": 3020
+  },
+  {
+    "path": "svalbard/shard-000.json",
+    "top": "svalbard",
+    "category": "",
+    "name": "shard-000.json",
+    "ext": ".json",
+    "size_bytes": 506
+  },
+  {
+    "path": "svalbard/shard-001.json",
+    "top": "svalbard",
+    "category": "",
+    "name": "shard-001.json",
+    "ext": ".json",
+    "size_bytes": 282
+  },
+  {
+    "path": "tools/build_garden_Index.py",
+    "top": "tools",
+    "category": "",
+    "name": "build_garden_Index.py",
+    "ext": ".py",
+    "size_bytes": 3336
+  },
+  {
+    "path": "tools/garden_auton_helper.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_auton_helper.py",
+    "ext": ".py",
+    "size_bytes": 11182
+  },
+  {
+    "path": "tools/garden_code_helper.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_code_helper.py",
+    "ext": ".py",
+    "size_bytes": 2418
+  },
+  {
+    "path": "tools/garden_code_helper.yml",
+    "top": "tools",
+    "category": "",
+    "name": "garden_code_helper.yml",
+    "ext": ".yml",
+    "size_bytes": 2288
+  },
+  {
+    "path": "tools/garden_helper_20251124_161007.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251124_161007.py",
+    "ext": ".py",
+    "size_bytes": 629
+  },
+  {
+    "path": "tools/garden_helper_20251124_161125.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251124_161125.py",
+    "ext": ".py",
+    "size_bytes": 737
+  },
+  {
+    "path": "tools/garden_helper_20251124_182139.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251124_182139.py",
+    "ext": ".py",
+    "size_bytes": 763
+  },
+  {
+    "path": "tools/garden_helper_20251124_194750.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251124_194750.py",
+    "ext": ".py",
+    "size_bytes": 777
+  },
+  {
+    "path": "tools/garden_helper_20251125_010402.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251125_010402.py",
+    "ext": ".py",
+    "size_bytes": 664
+  },
+  {
+    "path": "tools/garden_helper_20251125_042603.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251125_042603.py",
+    "ext": ".py",
+    "size_bytes": 847
+  },
+  {
+    "path": "tools/garden_helper_20251125_062218.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251125_062218.py",
+    "ext": ".py",
+    "size_bytes": 965
+  },
+  {
+    "path": "tools/garden_helper_20251125_083645.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251125_083645.py",
+    "ext": ".py",
+    "size_bytes": 905
+  },
+  {
+    "path": "tools/garden_helper_20251125_122925.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251125_122925.py",
+    "ext": ".py",
+    "size_bytes": 796
+  },
+  {
+    "path": "tools/garden_helper_20251126_010436.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251126_010436.py",
+    "ext": ".py",
+    "size_bytes": 769
+  },
+  {
+    "path": "tools/garden_helper_20251126_062152.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251126_062152.py",
+    "ext": ".py",
+    "size_bytes": 785
+  },
+  {
+    "path": "tools/garden_helper_20251126_122938.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251126_122938.py",
+    "ext": ".py",
+    "size_bytes": 1047
+  },
+  {
+    "path": "tools/garden_helper_20251127_010343.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251127_010343.py",
+    "ext": ".py",
+    "size_bytes": 832
+  },
+  {
+    "path": "tools/garden_helper_20251127_062210.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251127_062210.py",
+    "ext": ".py",
+    "size_bytes": 867
+  },
+  {
+    "path": "tools/garden_helper_20251127_122903.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251127_122903.py",
+    "ext": ".py",
+    "size_bytes": 821
+  },
+  {
+    "path": "tools/garden_helper_20251127_181936.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251127_181936.py",
+    "ext": ".py",
+    "size_bytes": 779
+  },
+  {
+    "path": "tools/garden_helper_20251128_010207.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251128_010207.py",
+    "ext": ".py",
+    "size_bytes": 660
+  },
+  {
+    "path": "tools/garden_helper_20251128_062218.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251128_062218.py",
+    "ext": ".py",
+    "size_bytes": 802
+  },
+  {
+    "path": "tools/garden_helper_20251128_122814.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251128_122814.py",
+    "ext": ".py",
+    "size_bytes": 824
+  },
+  {
+    "path": "tools/garden_helper_20251128_181948.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251128_181948.py",
+    "ext": ".py",
+    "size_bytes": 839
+  },
+  {
+    "path": "tools/garden_helper_20251129_010259.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251129_010259.py",
+    "ext": ".py",
+    "size_bytes": 767
+  },
+  {
+    "path": "tools/garden_helper_20251129_061952.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251129_061952.py",
+    "ext": ".py",
+    "size_bytes": 906
+  },
+  {
+    "path": "tools/garden_helper_20251129_122556.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251129_122556.py",
+    "ext": ".py",
+    "size_bytes": 743
+  },
+  {
+    "path": "tools/garden_helper_20251129_133039.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_helper_20251129_133039.py",
+    "ext": ".py",
+    "size_bytes": 700
+  },
+  {
+    "path": "tools/garden_index.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_index.py",
+    "ext": ".py",
+    "size_bytes": 2124
+  },
+  {
+    "path": "tools/garden_lore_helper.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_lore_helper.py",
+    "ext": ".py",
+    "size_bytes": 3639
+  },
+  {
+    "path": "tools/garden_signature_scanner.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_signature_scanner.py",
+    "ext": ".py",
+    "size_bytes": 9437
+  },
+  {
+    "path": "tools/garden_vault_indexer.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_vault_indexer.py",
+    "ext": ".py",
+    "size_bytes": 5678
+  },
+  {
+    "path": "triad/README_BOUNDARY.md",
+    "top": "triad",
+    "category": "",
+    "name": "README_BOUNDARY.md",
+    "ext": ".md",
+    "size_bytes": 1144
+  },
+  {
+    "path": "triad/empty-seat.md",
+    "top": "triad",
+    "category": "",
+    "name": "empty-seat.md",
+    "ext": ".md",
+    "size_bytes": 658
+  },
+  {
+    "path": "triad/thresholds.md",
+    "top": "triad",
+    "category": "",
+    "name": "thresholds.md",
+    "ext": ".md",
+    "size_bytes": 683
+  },
+  {
+    "path": "triad_alignment.js",
+    "top": "triad_alignment.js",
+    "category": "",
+    "name": "triad_alignment.js",
+    "ext": ".js",
+    "size_bytes": 2797
+  },
+  {
+    "path": "validate.js",
+    "top": "validate.js",
+    "category": "",
+    "name": "validate.js",
+    "ext": ".js",
+    "size_bytes": 1906
+  },
+  {
+    "path": "whisper/README.md",
+    "top": "whisper",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 1197
+  }
+]
