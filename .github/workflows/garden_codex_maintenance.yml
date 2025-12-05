@@ -1,10 +1,6 @@
 name: Garden Codex Maintenance
 
 on:
-  push:
-    paths:
-      - 'docs/**'
-      - '.github/workflows/garden_codex_maintenance.yml'
   workflow_dispatch: {}
 
 permissions:
