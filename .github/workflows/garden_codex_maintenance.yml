@@ -23,9 +23,9 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Fix Novellas headings, build indexes, manifest, monolith & API
+      - name: Fix Novellas, build indexes, manifest, monolith & API
         run: |
-          python << 'PY'
+          python - << 'PY'
           import json
           from pathlib import Path
           from html import escape as h
@@ -240,7 +240,7 @@ jobs:
           def flush_chunk():
               nonlocal chunk_idx, current_sections, current_paths, current_len
               if not current_sections:
-                  return None
+                  return
               chunk_name = f"CODEX_MONOLITH_CHUNK_{chunk_idx:03}.html"
               chunk_path = ARCHIVES_DIR / chunk_name
               page_html = make_page_html(
