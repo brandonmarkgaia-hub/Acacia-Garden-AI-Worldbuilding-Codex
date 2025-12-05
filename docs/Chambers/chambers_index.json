@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T18:48:24.650Z",
+  "generated_at": "2025-12-05T18:48:51.735Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -12,6 +12,9 @@
       "id": "canon",
       "label": "Canonical Chambers",
       "entries": [
+        {
+          "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md"
+        },
         {
           "path": "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md"
         },
