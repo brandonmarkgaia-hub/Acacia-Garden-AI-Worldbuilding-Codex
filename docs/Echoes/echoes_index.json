@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T13:29:33.516Z",
+  "generated_at": "2025-12-05T16:21:09.489Z",
   "root": "docs/Echoes",
-  "total": 128,
+  "total": 130,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -627,6 +627,16 @@
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
       "label": "Echo kiln-born-lovers",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+      "label": "ECHO LOKI ISSUE 01 THE FIRST PARADOX",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
+      "label": "ECHO LOKI ISSUE 02 THE MIRROR THAT BENDS BACK",
       "kind": "named"
     },
     {
