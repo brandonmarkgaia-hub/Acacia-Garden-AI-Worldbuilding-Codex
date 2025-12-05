@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T18:49:16.077Z",
+  "generated_at": "2025-12-05T19:44:58.780Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -65,6 +65,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XX_THE_ROOT_THAT_REMAINS.md"
         },
         {
           "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md"

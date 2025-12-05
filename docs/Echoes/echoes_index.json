@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T18:49:16.085Z",
+  "generated_at": "2025-12-05T19:44:58.788Z",
   "root": "docs/Echoes",
-  "total": 131,
+  "total": 132,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -652,6 +652,11 @@
     {
       "path": "docs/Echoes/Echo_mammoth_vault.md",
       "label": "Echo mammoth vault",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_OF_COLOUR.md",
+      "label": "ECHO OF COLOUR",
       "kind": "named"
     },
     {
