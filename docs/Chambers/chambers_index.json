@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T18:48:51.735Z",
+  "generated_at": "2025-12-05T18:49:16.077Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -89,6 +89,9 @@
         },
         {
           "path": "docs/Chambers/THE_FORGE_OF_FORMS.md"
+        },
+        {
+          "path": "docs/Chambers/THE_ORCHARD_SPIRE.md"
         }
       ]
     },
