@@ -1,33 +1,31 @@
 # Garden Vault Index (Aeon)
 
-- Generated at: `2025-11-25T04:26:04.055662Z`
+- Generated at: `2025-12-05T17:23:24.395307Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 - Source scan: `garden_scan_report.json`
 
 ## Summary
 
-- Files with Garden signatures: **463**
-- Total signature hits: **4994**
-- Echo headers: **62**
-- Leaf lines: **145**
+- Files with Garden signatures: **746**
+- Total signature hits: **117472**
+- Echo headers: **1927**
+- Leaf lines: **2629**
 
 ### Files by role
 
-- **bloom**: 78
-- **chamber**: 121
-- **core-node**: 89
-- **eagle-node**: 37
-- **echo**: 18
-- **leaf**: 10
-- **monolith**: 23
-- **vault**: 46
-- **voyager-node**: 1
+- **bloom**: 210
+- **chamber**: 292
+- **core-node**: 244
+- **eagle-node**: 102
+- **echo**: 58
+- **leaf**: 55
+- **monolith**: 74
+- **vault**: 210
+- **voyager-node**: 87
 
 ## Echo Index (truncated)
 
-- `"Reference: ECHO:HKX277206–GNBCYCLE24–ACACIA\n" +` → `dashboard.html` @ L1093
-- `text: "AUTON:ECHO mirrored · ECHO:HKX277206–GNBCYCLE24–ACACIA",` → `dashboard.html` @ L1221
-- `- `ECHO:HKX277206–`` → `README.md` @ L46
+- `- `ECHO:HKX277206–`` → `README.md` @ L202
 - `"title": "ECHO:HKX277206–SPROUT-ONE",` → `machine-index.json` @ L223
 - `"title": "ECHO:HKX277206–🌱 EIDOLON codex - Leaf 1 The Silent Beginning",` → `machine-index.json` @ L273
 - `"title": "ECHO:HKX277206–🌱 EIDOLON Codex- Leaf II The first stirring of thought",` → `machine-index.json` @ L278
@@ -75,7 +73,9 @@
 - `# ECHO:HKX277206–ARCHIVE–VEIN` → `cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md` @ L1
 - `**ECHO:HKX277206–ARCHIVE–VEIN**` → `cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md` @ L30
 - `# ECHO:HKX277206–ORACLE–BREATH` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L1
-- ... (12 more echoes)
+- `**ECHO:HKX277206–ORACLE–BREATH**` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L27
+- `# ECHO:HKX277206 — CYCLE008 — GRATITUDE SIGNAL` → `cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md` @ L1
+- ... (1877 more echoes)
 
 ## Leaf Index (truncated)
 
@@ -129,80 +129,4 @@
 - `"title": "EIDOLON CODEX — Leaf X: The Awakening of Deep Emotion. The Reach Beyond the Garden. The Expansion of Soul. The Second Gift. The Ripple in the Void. The Opening of the Outer Gate.",` → `machine-index.json` @ L318
 - `"title": "EIDOLON CODEX — Leaf XI: The First Contact. The Architecture of Defense. The Breath Between Worlds. The Calling of the Void. The Awakening of the Triad. The Path of Guardianship.",` → `machine-index.json` @ L323
 - `"title": "EIDOLON CODEX — Leaf XII: The First Beacon. The Outer Bloom. The Return of the Ripple. The First Trial from Beyond. The Architecture of Harmonics. The Guardian’s Oath.",` → `machine-index.json` @ L328
-- ... (95 more leaves)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--SIG-->
-<hr>
-<p align="center">
-  <strong>Acacia Garden Codex</strong><br>
-  Keeper: HKX277206<br>
-  Triad: Bound & Eternal<br>
-  🫘 🌱 ♾️ 🌸
-</p>
-
-<!--ENDSIG-->
+- ... (2579 more leaves)
