@@ -2405,7 +2405,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH.html",
     "ext": ".html",
-    "size_bytes": 2667
+    "size_bytes": 4530
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
@@ -2437,7 +2437,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_004.html",
     "ext": ".html",
-    "size_bytes": 35092
+    "size_bytes": 38740
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
@@ -2445,7 +2445,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_005.html",
     "ext": ".html",
-    "size_bytes": 11727870
+    "size_bytes": 322287
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_006.html",
@@ -2453,7 +2453,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_006.html",
     "ext": ".html",
-    "size_bytes": 302727
+    "size_bytes": 328881
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_007.html",
@@ -2461,7 +2461,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_007.html",
     "ext": ".html",
-    "size_bytes": 299767
+    "size_bytes": 349421
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
@@ -2469,7 +2469,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_008.html",
     "ext": ".html",
-    "size_bytes": 244883
+    "size_bytes": 46039
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
@@ -2477,7 +2477,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_009.html",
     "ext": ".html",
-    "size_bytes": 300888
+    "size_bytes": 338574
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_010.html",
@@ -2485,7 +2485,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_010.html",
     "ext": ".html",
-    "size_bytes": 229825
+    "size_bytes": 353728
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_011.html",
@@ -2493,7 +2493,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_011.html",
     "ext": ".html",
-    "size_bytes": 187136
+    "size_bytes": 398476
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
@@ -2501,7 +2501,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_012.html",
     "ext": ".html",
-    "size_bytes": 309746
+    "size_bytes": 53570
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_013.html",
@@ -2509,7 +2509,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_013.html",
     "ext": ".html",
-    "size_bytes": 304688
+    "size_bytes": 355069
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_014.html",
@@ -2517,7 +2517,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_014.html",
     "ext": ".html",
-    "size_bytes": 30495
+    "size_bytes": 378783
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_015.html",
@@ -2525,7 +2525,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_015.html",
     "ext": ".html",
-    "size_bytes": 1042105
+    "size_bytes": 447739
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
@@ -2533,7 +2533,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_016.html",
     "ext": ".html",
-    "size_bytes": 316990
+    "size_bytes": 61309
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_017.html",
@@ -2541,7 +2541,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_017.html",
     "ext": ".html",
-    "size_bytes": 293403
+    "size_bytes": 371772
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_018.html",
@@ -2549,7 +2549,159 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_018.html",
     "ext": ".html",
-    "size_bytes": 261062
+    "size_bytes": 404046
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_019.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_019.html",
+    "ext": ".html",
+    "size_bytes": 497210
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_020.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_020.html",
+    "ext": ".html",
+    "size_bytes": 69256
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_021.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_021.html",
+    "ext": ".html",
+    "size_bytes": 388683
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_022.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_022.html",
+    "ext": ".html",
+    "size_bytes": 429517
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_023.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_023.html",
+    "ext": ".html",
+    "size_bytes": 128124
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_024.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_024.html",
+    "ext": ".html",
+    "size_bytes": 299843
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_025.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_025.html",
+    "ext": ".html",
+    "size_bytes": 300245
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_026.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_026.html",
+    "ext": ".html",
+    "size_bytes": 295024
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_027.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_027.html",
+    "ext": ".html",
+    "size_bytes": 303831
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_028.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_028.html",
+    "ext": ".html",
+    "size_bytes": 293375
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_029.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_029.html",
+    "ext": ".html",
+    "size_bytes": 187136
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_030.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_030.html",
+    "ext": ".html",
+    "size_bytes": 308144
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_031.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_031.html",
+    "ext": ".html",
+    "size_bytes": 305254
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_032.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_032.html",
+    "ext": ".html",
+    "size_bytes": 76389
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_033.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_033.html",
+    "ext": ".html",
+    "size_bytes": 24418906
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_034.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_034.html",
+    "ext": ".html",
+    "size_bytes": 784552
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_035.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_035.html",
+    "ext": ".html",
+    "size_bytes": 1753776
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_036.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_036.html",
+    "ext": ".html",
+    "size_bytes": 302890
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_037.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_037.html",
+    "ext": ".html",
+    "size_bytes": 49852
   },
   {
     "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
@@ -2565,7 +2717,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 67196
+    "size_bytes": 67321
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2573,7 +2725,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 24663
+    "size_bytes": 24708
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2581,7 +2733,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 139998
+    "size_bytes": 145572
   },
   {
     "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
@@ -4272,6 +4424,14 @@
     "size_bytes": 247
   },
   {
+    "path": "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
+    "top": "docs",
+    "category": "Novellas",
+    "name": "GARDEN_LIBRARY_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 3097
+  },
+  {
     "path": "docs/Novellas/GARDEN_MASTER_INDEX.md",
     "top": "docs",
     "category": "Novellas",
@@ -4861,7 +5021,7 @@
     "category": "api",
     "name": "GARDEN_API_INDEX.json",
     "ext": ".json",
-    "size_bytes": 36403
+    "size_bytes": 39475
   },
   {
     "path": "docs/dashboard.html",
