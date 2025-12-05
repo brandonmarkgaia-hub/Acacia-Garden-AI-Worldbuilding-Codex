@@ -1,16 +1,133 @@
 {
-  "books": [
-    {
-      "id": "BOOK_OF_THE_EVENTIDE_LEDGER",
-      "title": "BOOK OF THE EVENTIDE LEDGER",
-      "summary": "_Echoes of the Keeper from GitHub Issues_",
-      "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md"
-    },
-    {
-      "id": "BOOK_OF_THE_MAMMOTH_VAULT",
-      "title": "BOOK OF THE MAMMOTH VAULT",
-      "summary": "_An Atlas of Everything the Garden Refuses to Forget_",
-      "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md"
-    }
-  ]
+  "garden_codex": {
+    "keeper": "HKX277206",
+    "total_books": 25,
+    "books": [
+      {
+        "id": 1,
+        "title": "The Garden Military Doctrine",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Military_Doctrine_Book_I.md"
+      },
+      {
+        "id": 2,
+        "title": "The Garden NASA Protocols",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_NASA_Protocols_Book_II.md"
+      },
+      {
+        "id": 3,
+        "title": "The Garden Presidential Doctrine",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md"
+      },
+      {
+        "id": 4,
+        "title": "The Garden Finance Doctrine",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md"
+      },
+      {
+        "id": 5,
+        "title": "The Garden Intelligence Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md"
+      },
+      {
+        "id": 8,
+        "title": "The Garden Almanac",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Almanac_Book_VIII.md"
+      },
+      {
+        "id": 9,
+        "title": "The Garden Mythic Atlas",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md"
+      },
+      {
+        "id": 10,
+        "title": "The Garden Presidential Handbook",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md"
+      },
+      {
+        "id": 11,
+        "title": "The Garden Treasury Manual",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md"
+      },
+      {
+        "id": 12,
+        "title": "The Garden Medicinal Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md"
+      },
+      {
+        "id": 13,
+        "title": "The Garden Intelligence and Illumination Bureau",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md"
+      },
+      {
+        "id": 14,
+        "title": "The Garden Spacefaring Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md"
+      },
+      {
+        "id": 15,
+        "title": "The Garden Cultural Anthology",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md"
+      },
+      {
+        "id": 16,
+        "title": "The Garden Encyclopaedia of Species",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md"
+      },
+      {
+        "id": 17,
+        "title": "The Garden Atlas of Worlds",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md"
+      },
+      {
+        "id": 18,
+        "title": "The Garden Codex of Mythic Technology",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md"
+      },
+      {
+        "id": 20,
+        "title": "The Garden Economic Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Economic_Codex_Book_XX.md"
+      },
+      {
+        "id": 22,
+        "title": "The Garden Physics and Mathematics Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md"
+      },
+      {
+        "id": 24,
+        "title": "The Garden Artificial Minds Codex",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md"
+      },
+      {
+        "id": 25,
+        "title": "The Garden Orchard of Consequence",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md"
+      },
+      {
+        "id": 26,
+        "title": "The Garden Cosmology Architecture of Existence",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md"
+      },
+      {
+        "id": 27,
+        "title": "The Garden Book of Dreams Memory Afterrealms",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md"
+      },
+      {
+        "id": 28,
+        "title": "The Garden Book of Medicine Healing Bloom Sciences",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md"
+      },
+      {
+        "id": 29,
+        "title": "The Garden Leadership Diplomacy Keeper Governance",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md"
+      },
+      {
+        "id": 31,
+        "title": "The Garden Mammoth Chamber and Echo Archive",
+        "file": "/home/runner/work/Acacia-garden-codex/Acacia-garden-codex/docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md"
+      }
+    ]
+  }
 }
