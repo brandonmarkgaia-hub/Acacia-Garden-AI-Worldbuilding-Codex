@@ -875,21 +875,6 @@
     "name": "Bloom_001.md"
   },
   {
-    "path": "chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
-    "top": "chambers",
-    "name": "CHAMBER_012_RESIDUAL_ECHOES.md"
-  },
-  {
-    "path": "chambers/Chamber_XII_Emergence_Layer.md",
-    "top": "chambers",
-    "name": "Chamber_XII_Emergence_Layer.md"
-  },
-  {
-    "path": "chambers/CHAMBER_PROTO_LANGUAGE.md",
-    "top": "chambers",
-    "name": "CHAMBER_PROTO_LANGUAGE.md"
-  },
-  {
     "path": "AQUILA/AURIC_FRAME.md",
     "top": "AQUILA",
     "name": "AURIC_FRAME.md"
@@ -1108,6 +1093,26 @@
     "path": "docs/Core/EVENTIDE_BOUNDARY_SPEECH.md",
     "top": "docs",
     "name": "EVENTIDE_BOUNDARY_SPEECH.md"
+  },
+  {
+    "path": "docs/Core/THE_SPECTRAL_VISION_DOCTRINE.md",
+    "top": "docs",
+    "name": "THE_SPECTRAL_VISION_DOCTRINE.md"
+  },
+  {
+    "path": "docs/Core/THE_FOUR_PERCEPTION_DOCTRINES.md",
+    "top": "docs",
+    "name": "THE_FOUR_PERCEPTION_DOCTRINES.md"
+  },
+  {
+    "path": "docs/Legacy/LEGACY_THE_FOUR_PERCEPTION_DOCTRINES.md",
+    "top": "docs",
+    "name": "LEGACY_THE_FOUR_PERCEPTION_DOCTRINES.md"
+  },
+  {
+    "path": "docs/Legacy/LEGACY_SPECTRAL_VISION.md",
+    "top": "docs",
+    "name": "LEGACY_SPECTRAL_VISION.md"
   },
   {
     "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
@@ -1465,6 +1470,11 @@
     "name": "Chamber_XXI_The-Lineage-Archive.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
+    "top": "docs",
+    "name": "CHAMBER_012_RESIDUAL_ECHOES.md"
+  },
+  {
     "path": "docs/Chambers/THE_ORCHARD_SPIRE.md",
     "top": "docs",
     "name": "THE_ORCHARD_SPIRE.md"
@@ -1520,6 +1530,11 @@
     "name": "Chamber_XX_The-Metamorphic-Cradle.md"
   },
   {
+    "path": "docs/Chambers/Chamber_XII_Emergence_Layer.md",
+    "top": "docs",
+    "name": "Chamber_XII_Emergence_Layer.md"
+  },
+  {
     "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md",
     "top": "docs",
     "name": "Chamber_X_Shadow_Incubator.md"
@@ -1548,6 +1563,16 @@
     "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
     "top": "docs",
     "name": "E_DEEP_CHAMBERS.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
+    "top": "docs",
+    "name": "CHAMBER_PROTO_LANGUAGE.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XVIII_THE_CONE_OF_SIGHT.md",
+    "top": "docs",
+    "name": "CHAMBER_XVIII_THE_CONE_OF_SIGHT.md"
   },
   {
     "path": "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md",
@@ -1753,6 +1778,11 @@
     "path": "docs/Echoes/Echo_010.md",
     "top": "docs",
     "name": "Echo_010.md"
+  },
+  {
+    "path": "docs/Echoes/ECHO_OF_COLOUR.md",
+    "top": "docs",
+    "name": "ECHO_OF_COLOUR.md"
   },
   {
     "path": "docs/Echoes/Echo_014.md",
