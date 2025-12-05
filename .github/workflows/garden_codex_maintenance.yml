@@ -238,7 +238,7 @@ jobs:
           current_len = 0
 
           def flush_chunk():
-              nonlocal chunk_idx, current_sections, current_paths, current_len
+              global chunk_idx, current_sections, current_paths, current_len
               if not current_sections:
                   return
               chunk_name = f"CODEX_MONOLITH_CHUNK_{chunk_idx:03}.html"
