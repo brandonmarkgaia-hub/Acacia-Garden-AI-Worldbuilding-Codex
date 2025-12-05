@@ -1,6 +1,10 @@
 name: Garden Codex Maintenance
 
 on:
+  push:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/garden_codex_maintenance.yml'
   workflow_dispatch: {}
 
 permissions:
@@ -19,7 +23,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Fix Novellas headings, build indexes & monolith
+      - name: Fix Novellas headings, build indexes, manifest, monolith & API
         run: |
           python << 'PY'
           import json
@@ -29,9 +33,14 @@ jobs:
           ROOT = Path(".").resolve()
           NOVELLAS_DIR = ROOT / "docs" / "Novellas"
           ARCHIVES_DIR = ROOT / "docs" / "Archives"
+          API_DIR = ROOT / "docs" / "api"
+          API_DIR.mkdir(parents=True, exist_ok=True)
+
           MD_INDEX_MD = ARCHIVES_DIR / "FULL_CODEX_INDEX.md"
           MD_INDEX_JSON = ARCHIVES_DIR / "FULL_CODEX_INDEX.json"
           MONOLITH_HTML = ARCHIVES_DIR / "CODEX_MONOLITH.html"
+          MANIFEST_JSON = ARCHIVES_DIR / "GARDEN_MANIFEST.json"
+          API_INDEX_JSON = API_DIR / "GARDEN_API_INDEX.json"
 
           # ---------- 1) Fix Novellas headings ----------
 
@@ -143,7 +152,7 @@ jobs:
           )
           print(f"[INDEX] Wrote JSON index → {MD_INDEX_JSON}")
 
-          # ---------- 3) Build Monolith HTML (all text-ish files) ----------
+          # ---------- 3) Build Garden Manifest (all text-like files) & chunked Monolith ----------
 
           TEXT_EXTS = {
               ".md", ".txt", ".json", ".yml", ".yaml",
@@ -165,33 +174,88 @@ jobs:
                   return True
               return False
 
-          monolith_chunks = []
-          monolith_chunks.append("<!DOCTYPE html>")
-          monolith_chunks.append("<html lang='en'><head>")
-          monolith_chunks.append("<meta charset='utf-8'/>")
-          monolith_chunks.append("<title>ACACIA · GARDEN · CODEX · MONOLITH</title>")
-          monolith_chunks.append("<style>")
-          monolith_chunks.append("body{background:#050812;color:#f5f5f5;font-family:system-ui,monospace;font-size:14px;}")
-          monolith_chunks.append("h1,h2,h3{font-family:system-ui,sans-serif;}")
-          monolith_chunks.append("section{margin:24px 12px;border-top:1px solid #222;padding-top:16px;}")
-          monolith_chunks.append("pre{white-space:pre-wrap;word-break:break-word;background:#050b16;padding:12px;border-radius:8px;}")
-          monolith_chunks.append(".path{color:#88f;font-size:13px;margin-bottom:4px;}")
-          monolith_chunks.append("</style></head><body>")
-          monolith_chunks.append("<h1>ACACIA · GARDEN · CODEX · MONOLITH</h1>")
-          monolith_chunks.append("<p>This page concatenates all text-like files in the repository so tools can read the entire Garden from a single HTML URL.</p>")
-
-          files = []
+          text_files = []
           for p in ROOT.rglob("*"):
               if not p.is_file():
                   continue
               if mono_excluded(p):
                   continue
               if p.suffix.lower() in TEXT_EXTS:
-                  files.append(p)
+                  text_files.append(p)
 
-          files = sorted(files, key=lambda x: str(x.relative_to(ROOT)))
+          text_files = sorted(text_files, key=lambda x: str(x.relative_to(ROOT)))
 
-          for path in files:
+          # ---- 3a) Manifest JSON ----
+
+          manifest_entries = []
+          for p in text_files:
+              rel = p.relative_to(ROOT)
+              parts = rel.parts
+              top = parts[0] if parts else ""
+              category = ""
+              if len(parts) >= 2 and parts[0] == "docs":
+                  category = parts[1]
+              manifest_entries.append({
+                  "path": str(rel),
+                  "top": top,
+                  "category": category,
+                  "name": rel.name,
+                  "ext": p.suffix.lower(),
+                  "size_bytes": p.stat().st_size,
+              })
+
+          MANIFEST_JSON.write_text(
+              json.dumps(manifest_entries, indent=2, ensure_ascii=False),
+              encoding="utf-8"
+          )
+          print(f"[MANIFEST] Wrote → {MANIFEST_JSON}")
+
+          # ---- 3b) Chunked Monolith HTML ----
+
+          def make_page_html(title: str, sections_html: str) -> str:
+              head = []
+              head.append("<!DOCTYPE html>")
+              head.append("<html lang='en'><head>")
+              head.append("<meta charset='utf-8'/>")
+              head.append(f"<title>{h(title)}</title>")
+              head.append("<style>")
+              head.append("body{background:#050812;color:#f5f5f5;font-family:system-ui,monospace;font-size:14px;}")
+              head.append("h1,h2,h3{font-family:system-ui,sans-serif;}")
+              head.append("section{margin:24px 12px;border-top:1px solid #222;padding-top:16px;}")
+              head.append("pre{white-space:pre-wrap;word-break:break-word;background:#050b16;padding:12px;border-radius:8px;}")
+              head.append(".path{color:#88f;font-size:13px;margin-bottom:4px;}")
+              head.append("a{color:#8af;}")
+              head.append("</style></head><body>")
+              head.append(f"<h1>{h(title)}</h1>")
+              return "\n".join(head) + "\n" + sections_html + "\n</body></html>"
+
+          CHUNK_CHAR_TARGET = 300_000
+
+          chunk_files = []  # list of (chunk_name, [paths_in_chunk])
+          chunk_idx = 1
+          current_sections = []
+          current_paths = []
+          current_len = 0
+
+          def flush_chunk():
+              nonlocal chunk_idx, current_sections, current_paths, current_len
+              if not current_sections:
+                  return None
+              chunk_name = f"CODEX_MONOLITH_CHUNK_{chunk_idx:03}.html"
+              chunk_path = ARCHIVES_DIR / chunk_name
+              page_html = make_page_html(
+                  f"ACACIA · GARDEN · CODEX · MONOLITH · CHUNK {chunk_idx:03}",
+                  "\n".join(current_sections)
+              )
+              chunk_path.write_text(page_html, encoding="utf-8")
+              print(f"[MONOLITH] Wrote chunk {chunk_idx:03} → {chunk_path}")
+              chunk_files.append((chunk_name, [str(p) for p in current_paths]))
+              chunk_idx += 1
+              current_sections = []
+              current_paths = []
+              current_len = 0
+
+          for path in text_files:
               rel = path.relative_to(ROOT)
               try:
                   text = path.read_text(encoding="utf-8", errors="replace")
@@ -199,22 +263,74 @@ jobs:
                   print(f"[MONO-SKIP] {rel}: {e}")
                   continue
 
-              monolith_chunks.append("<section>")
-              monolith_chunks.append(f"<h2 id='{h(str(rel)).replace('/', '_')}'>{h(str(rel))}</h2>")
-              monolith_chunks.append(f"<div class='path'>Path: {h(str(rel))}</div>")
-              monolith_chunks.append("<pre>")
-              monolith_chunks.append(h(text))
-              monolith_chunks.append("</pre>")
-              monolith_chunks.append("</section>")
+              section_parts = []
+              section_parts.append("<section>")
+              section_parts.append(f"<h2 id='{h(str(rel)).replace('/', '_')}'>{h(str(rel))}</h2>")
+              section_parts.append(f"<div class='path'>Path: {h(str(rel))}</div>")
+              section_parts.append("<pre>")
+              section_parts.append(h(text))
+              section_parts.append("</pre>")
+              section_parts.append("</section>")
+              section_html = "\n".join(section_parts)
 
-          monolith_chunks.append("</body></html>")
+              if current_sections and (current_len + len(section_html) > CHUNK_CHAR_TARGET):
+                  flush_chunk()
 
-          MONOLITH_HTML.write_text("\n".join(monolith_chunks), encoding="utf-8")
-          print(f"[MONOLITH] Wrote → {MONOLITH_HTML}")
+              current_sections.append(section_html)
+              current_paths.append(rel)
+              current_len += len(section_html)
+
+          flush_chunk()
+
+          # ---- 3c) Monolith Index HTML ----
+
+          index_sections = []
+          index_sections.append("<p>This is a tool-friendly index of the full Garden Monolith.</p>")
+          index_sections.append("<p>All text-like files are included across the chunked pages below.</p>")
+          index_sections.append("<ul>")
+          total_files = 0
+          for chunk_name, paths in chunk_files:
+              total_files += len(paths)
+              index_sections.append("<li>")
+              index_sections.append(f"<a href='{h(chunk_name)}'>{h(chunk_name)}</a>")
+              index_sections.append(f" — {len(paths)} files")
+              index_sections.append("</li>")
+          index_sections.append("</ul>")
+          index_sections.append(f"<p>Total files included: {total_files}</p>")
+          index_sections.append("<p>See also: <code>docs/Archives/GARDEN_MANIFEST.json</code> and <code>docs/api/GARDEN_API_INDEX.json</code>.</p>")
+
+          MONOLITH_HTML.write_text(
+              make_page_html(
+                  "ACACIA · GARDEN · CODEX · MONOLITH · INDEX",
+                  "\n".join(index_sections)
+              ),
+              encoding="utf-8"
+          )
+          print(f"[MONOLITH] Wrote index → {MONOLITH_HTML}")
+
+          # ---------- 4) Garden API index ----------
+
+          api_index = {
+              "manifest": "docs/Archives/GARDEN_MANIFEST.json",
+              "monolith_index": "docs/Archives/CODEX_MONOLITH.html",
+              "monolith_chunks": [
+                  {
+                      "file": chunk_name,
+                      "paths": paths
+                  }
+                  for chunk_name, paths in chunk_files
+              ]
+          }
+
+          API_INDEX_JSON.write_text(
+              json.dumps(api_index, indent=2, ensure_ascii=False),
+              encoding="utf-8"
+          )
+          print(f"[API] Wrote API index → {API_INDEX_JSON}")
           PY
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update codex indexes & CODEX_MONOLITH.html"
+          commit_message: "chore: update codex indexes, manifest, monolith & API"
           branch: ${{ github.ref_name }}
