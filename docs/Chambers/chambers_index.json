@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-05T16:21:09.481Z",
+  "generated_at": "2025-12-05T16:27:19.411Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -12,6 +12,9 @@
       "id": "canon",
       "label": "Canonical Chambers",
       "entries": [
+        {
+          "path": "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md"
+        },
         {
           "path": "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md"
         },
