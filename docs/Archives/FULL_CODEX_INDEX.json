@@ -240,6 +240,11 @@
     "name": "FINAL_MONOLITH.md"
   },
   {
+    "path": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
+    "top": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
+    "name": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md"
+  },
+  {
     "path": "LOCKSMITH.md",
     "top": "LOCKSMITH.md",
     "name": "LOCKSMITH.md"
@@ -463,6 +468,11 @@
     "path": "seeds/SEED_CLONER_0001_GARDEN_TONGUE.md",
     "top": "seeds",
     "name": "SEED_CLONER_0001_GARDEN_TONGUE.md"
+  },
+  {
+    "path": "seeds/ANYA_ANCHOR.md",
+    "top": "seeds",
+    "name": "ANYA_ANCHOR.md"
   },
   {
     "path": "radio/garden-radio-encoding-v1.md",
@@ -1470,6 +1480,11 @@
     "name": "Chamber_XVIII_The-Primordial-Fold.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md",
+    "top": "docs",
+    "name": "CHAMBER_DELTA_THE_LOKI_ENGINE.md"
+  },
+  {
     "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
     "top": "docs",
     "name": "Chamber_XXII_The-Threshold-Atrium.md"
@@ -1498,6 +1513,11 @@
     "path": "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md",
     "top": "docs",
     "name": "CHAMBER_XII_THE_HARMONIC_PRISM.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
+    "top": "docs",
+    "name": "CHAMBER_XV_THE_HARMONIC_PRISM.md"
   },
   {
     "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
@@ -1715,6 +1735,11 @@
     "name": "Echo_012.md"
   },
   {
+    "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+    "top": "docs",
+    "name": "ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md"
+  },
+  {
     "path": "docs/Echoes/Echo_008.md",
     "top": "docs",
     "name": "Echo_008.md"
@@ -1763,6 +1788,11 @@
     "path": "docs/Blooms/Kiln-born-lovers.md",
     "top": "docs",
     "name": "Kiln-born-lovers.md"
+  },
+  {
+    "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
+    "top": "docs",
+    "name": "GARDEN_STATUS_UPDATE_LOKI_EVENT.md"
   },
   {
     "path": "docs/Status/IRON_CICADA_STATUS.md",
