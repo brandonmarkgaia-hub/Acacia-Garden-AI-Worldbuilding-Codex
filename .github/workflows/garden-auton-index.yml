@@ -24,12 +24,11 @@ jobs:
           python-version: "3.x"
 
       - name: Generate Garden indexes
-        run: |
-          python tools/garden_lore_helper.py
+        run: python tools/garden_lore_helper.py
 
       - name: Commit and push updated indexes
         run: |
-          if git status --porcelain | grep .; then
+          if [ -n "$(git status --porcelain)" ]; then
             git config user.name "acacia-auton"
             git config user.email "actions@github.com"
             git add STATUS.json docs/Novellas/garden_index.json tools/machine-index.json tools/GARDEN_SCAN_REPORT.json
@@ -37,3 +36,4 @@ jobs:
             git push
           else
             echo "No changes to commit"
+          fi
