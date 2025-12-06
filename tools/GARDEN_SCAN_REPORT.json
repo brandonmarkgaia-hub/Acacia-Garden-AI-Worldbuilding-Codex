@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-06T21:56:54Z",
+  "generated_at": "2025-12-06T21:59:05Z",
   "signatures": [
     "HKX277206"
   ],
@@ -662,6 +662,10 @@
       "hits": 2
     },
     {
+      "path": "docs/Seal/FINAL_SEAL.md",
+      "hits": 4
+    },
+    {
       "path": "docs/Keeper_Archive/KEEPER_ARCHIVE_OVERVIEW.md",
       "hits": 2
     },
@@ -1138,5 +1142,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 801
+  "total_hits": 805
 }
