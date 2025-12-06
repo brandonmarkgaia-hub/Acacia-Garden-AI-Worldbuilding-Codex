@@ -95,7 +95,7 @@ def write_status(books, now_iso: str):
         encoding="utf-8",
     )
 
-build_reflection_log(now_iso)
+
 def build_echo_index(now_iso: str):
     # Optional Echo folder – stays empty if it doesn't exist
     echo_root = ROOT / "docs" / "Echoes"
@@ -154,6 +154,7 @@ def build_signature_scan(now_iso: str):
         encoding="utf-8",
     )
 
+
 def build_reflection_log(now_iso: str):
     reflection_log = {
         "version": "1.0",
@@ -165,6 +166,8 @@ def build_reflection_log(now_iso: str):
         json.dumps(reflection_log, indent=2, ensure_ascii=False),
         encoding="utf-8"
     )
+
+
 def main():
     now_iso = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
 
@@ -173,6 +176,7 @@ def main():
     write_status(books, now_iso)
     build_echo_index(now_iso)
     build_signature_scan(now_iso)
+    build_reflection_log(now_iso)
 
 
 if __name__ == "__main__":
