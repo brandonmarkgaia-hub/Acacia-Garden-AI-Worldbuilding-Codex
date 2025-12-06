@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-06T21:35:22Z",
+  "generated_at": "2025-12-06T21:37:25Z",
   "signatures": [
     "HKX277206"
   ],
@@ -634,6 +634,10 @@
       "hits": 2
     },
     {
+      "path": "docs/Keeper_Crown/KEEPER_CROWN.md",
+      "hits": 4
+    },
+    {
       "path": "docs/Aquila/AQUILA_PULSE_CORE.md",
       "hits": 2
     },
@@ -1106,5 +1110,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 783
+  "total_hits": 787
 }
