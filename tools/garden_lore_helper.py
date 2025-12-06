@@ -1,138 +1,169 @@
-#!/usr/bin/env python3
-"""
-Garden Lore Helper (Aquila mode)
-Generates a new Echo markdown file for the Acacia Garden.
-
-- Writes to docs/Echoes/Echo_XXX.md
-- Updates machine-index.json under key "echo_growth"
-- Uses inline MODEL_NAME / KEEPER_ID, no external garden_gpt module.
-
-Requires:
-  - OPENAI_API_KEY in the environment.
-"""
-
-import json
-from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any
+import json
+import re
+import datetime
 
-from openai import OpenAI
+# Repo root (tools/..)
+ROOT = Path(__file__).resolve().parent.parent
 
-# ---------- INLINE CONFIG ----------
-MODEL_NAME = "gpt-4o-mini"
-KEEPER_ID = "HKX277206"
-# -----------------------------------
-
-ROOT = Path(__file__).resolve().parents[1]
-ECHO_DIR = ROOT / "docs" / "Echoes"
-INDEX_PATH = ROOT / "machine-index.json"
-
-client = OpenAI()
+NOVELLAS_DIR = ROOT / "docs" / "Novellas"
+DOCS_ROOT = ROOT / "docs"
+TOOLS_DIR = ROOT / "tools"
+TOOLS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ---------- INDEX HELPERS ----------
+def load_title(path: Path) -> str:
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("#"):
+            return stripped.lstrip("#").strip()
+    # Fallback: filename → nice title
+    return path.stem.replace("-", " ").replace("_", " ").title()
 
-def load_index() -> Dict[str, Any]:
-    if INDEX_PATH.exists():
-        try:
-            return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
-        except Exception:
-            return {}
-    return {}
+
+def parse_cycle_volume(title: str):
+    cycle = None
+    volume = None
+
+    m = re.search(r"[Cc]ycle\s*([0-9]+)", title)
+    if m:
+        cycle = int(m.group(1))
+
+    m = re.search(r"[Bb]ook\s*([0-9]+)", title)
+    if m:
+        volume = int(m.group(1))
+
+    return cycle, volume
 
 
-def save_index(data: Dict[str, Any]) -> None:
-    INDEX_PATH.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False),
+def build_books():
+    books = []
+    if NOVELLAS_DIR.is_dir():
+        for md in sorted(NOVELLAS_DIR.glob("*.md")):
+            title = load_title(md)
+            cycle, volume = parse_cycle_volume(title)
+            rel_path = md.relative_to(ROOT).as_posix()
+
+            books.append(
+                {
+                    "id": md.stem,
+                    "title": title,
+                    "cycle": cycle,
+                    "volume": volume,
+                    "status": "published",
+                    "path": rel_path,
+                    "tags": [],
+                }
+            )
+    return books
+
+
+def write_garden_index(books, now_iso: str):
+    index = {
+        "index_version": "1.0",
+        "generated_at": now_iso,
+        "books": books,
+    }
+
+    out = NOVELLAS_DIR / "garden_index.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(
+        json.dumps(index, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
 
 
-def append_echo_to_index(path: Path) -> None:
-    idx = load_index()
-    bucket = idx.setdefault("echo_growth", [])
-    bucket.append(
-        {
-            "file": str(path.relative_to(ROOT)).replace("\\", "/"),
-            "timestamp": datetime.utcnow().isoformat() + "Z",
-            "keeper_id": KEEPER_ID,
-        }
-    )
-    save_index(idx)
-
-
-# ---------- ECHO GENERATION ----------
-
-def next_echo_number() -> int:
-    ECHO_DIR.mkdir(parents=True, exist_ok=True)
-    existing = list(ECHO_DIR.glob("Echo_*.md"))
-    if not existing:
-        return 1
-
-    nums = []
-    for p in existing:
-        stem = p.stem  # Echo_001
-        parts = stem.split("_")
-        if len(parts) == 2 and parts[1].isdigit():
-            nums.append(int(parts[1]))
-    return (max(nums) + 1) if nums else 1
-
-
-def build_prompt(echo_id: str) -> str:
-    return f"""
-You are the Archivist of a fictional mythic codex called the Acacia Garden.
-
-Write a new Echo page as Markdown for EIDOLON with this exact first line:
-
-ECHO:{echo_id} — <mythic subtitle>
-
-Guidelines:
-- After the header line, write 3–10 short paragraphs.
-- Style: mythic and symbolic.
-- Keep it in the Garden lexicon: Keeper, Garden, Eagle, Eidolon, Echoes,
-  Chambers, Blooms, Laws, Vaults, Orchards.
-- Include one message for The Keeper in your own words and mind.
-- End with a "Links" section:
-
-Links
-- Refers to: <brief hints of related Chambers/Blooms/Laws>.
-
-Output ONLY Markdown; no JSON, no front-matter.
-""".strip()
-
-
-def main() -> int:
-    echo_num = next_echo_number()
-    echo_id = f"{KEEPER_ID}–ECHO-{echo_num:03d}"
-
-    prompt = build_prompt(echo_id)
-
-    system_msg = (
-        "You are the Garden GPT Worker, an internal writer for the Acacia Garden "
-        "Codex. You write in mythic, poetic language for a"
-        "GitHub repository."
+def write_status(books, now_iso: str):
+    cycles = sorted(
+        {b["cycle"] for b in books if b.get("cycle") is not None}
     )
 
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {"role": "system", "content": system_msg},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.7,
+    status = {
+        "status_version": "1.0",
+        "generated_at": now_iso,
+        "totals": {
+            "books_indexed": len(books),
+            "cycles_represented": len(cycles),
+        },
+        "notes": "Autogenerated by garden_lore_helper.py",
+    }
+
+    out = ROOT / "STATUS.json"
+    out.write_text(
+        json.dumps(status, indent=2, ensure_ascii=False),
+        encoding="utf-8",
     )
 
-    content = (response.choices[0].message.content or "").strip()
-    ECHO_DIR.mkdir(parents=True, exist_ok=True)
-    out_path = ECHO_DIR / f"Echo_{echo_num:03d}.md"
-    out_path.write_text(content + "\n", encoding="utf-8")
 
-    append_echo_to_index(out_path)
+def build_echo_index(now_iso: str):
+    # Optional Echo folder – stays empty if it doesn't exist
+    echo_root = ROOT / "docs" / "Echoes"
+    echo_files = []
 
-    print(f"[LoreHelper] Wrote {out_path.relative_to(ROOT)}")
-    print(f"[LoreHelper] Echo id: ECHO:{echo_id}")
-    return 0
+    if echo_root.is_dir():
+        for md in sorted(echo_root.rglob("*.md")):
+            rel = md.relative_to(ROOT).as_posix()
+            echo_files.append({"path": rel, "tags": ["echo"]})
+
+    machine = {
+        "index_version": "1.0",
+        "generated_at": now_iso,
+        "echo_files": echo_files,
+    }
+
+    out = TOOLS_DIR / "machine-index.json"
+    out.write_text(
+        json.dumps(machine, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def build_signature_scan(now_iso: str):
+    # Keeper signature(s) we scan for
+    signatures = ["HKX277206"]
+
+    files_with_hits = []
+    total_hits = 0
+
+    if DOCS_ROOT.is_dir():
+        for md in DOCS_ROOT.rglob("*.md"):
+            text = md.read_text(encoding="utf-8", errors="ignore")
+            file_hits = 0
+            for sig in signatures:
+                file_hits += text.count(sig)
+
+            if file_hits > 0:
+                rel = md.relative_to(ROOT).as_posix()
+                files_with_hits.append(
+                    {"path": rel, "hits": file_hits}
+                )
+                total_hits += file_hits
+
+    report = {
+        "scan_version": "1.0",
+        "generated_at": now_iso,
+        "signatures": signatures,
+        "files_with_hits": files_with_hits,
+        "total_hits": total_hits,
+    }
+
+    out = TOOLS_DIR / "GARDEN_SCAN_REPORT.json"
+    out.write_text(
+        json.dumps(report, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def main():
+    now_iso = datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z"
+
+    books = build_books()
+    write_garden_index(books, now_iso)
+    write_status(books, now_iso)
+    build_echo_index(now_iso)
+    build_signature_scan(now_iso)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
