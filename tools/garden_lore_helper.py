@@ -181,3 +181,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+def build_pulse_status(now_iso: str):
+    pulse = {
+        "version": "1.0",
+        "generated_at": now_iso,
+        "status": "active",
+        "notes": "Symbolic coherence layer initialized."
+    }
+    out = TOOLS_DIR / "pulse-status.json"
+    out.write_text(json.dumps(pulse, indent=2), encoding="utf-8")
