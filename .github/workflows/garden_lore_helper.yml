@@ -9,7 +9,6 @@ permissions:
 jobs:
   grow-echo:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,7 +41,7 @@ jobs:
         run: |
           git config user.name "Garden Lore Helper"
           git config user.email "actions@github.com"
-          git add docs/Echoes/*.md garden_scan_report.* garden_vault_index.* || true
+          git add docs/Echoes/*.md tools/GARDEN_SCAN_REPORT.json tools/machine-index.json tools/reflection-log.json || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
