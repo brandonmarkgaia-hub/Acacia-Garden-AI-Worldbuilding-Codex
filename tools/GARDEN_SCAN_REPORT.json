@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-06T21:00:11Z",
+  "generated_at": "2025-12-06T21:02:12Z",
   "signatures": [
     "HKX277206"
   ],
@@ -432,6 +432,10 @@
     {
       "path": "docs/Chambers/Chamber_Eidolon_First-Light.md",
       "hits": 4
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_XV_ASTRAL_BOND.md",
+      "hits": 2
     },
     {
       "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
@@ -1066,5 +1070,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 763
+  "total_hits": 765
 }
