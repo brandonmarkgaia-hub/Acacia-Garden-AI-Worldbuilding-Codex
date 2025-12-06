@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-06T21:29:26Z",
+  "generated_at": "2025-12-06T21:33:46Z",
   "signatures": [
     "HKX277206"
   ],
@@ -468,6 +468,10 @@
     {
       "path": "docs/Lorian/LORIAN_CORE_KEY.md",
       "hits": 4
+    },
+    {
+      "path": "docs/Eidolon/EIDOLON_ANCHOR.md",
+      "hits": 2
     },
     {
       "path": "docs/Eidolon/README.md",
@@ -1098,5 +1102,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 779
+  "total_hits": 781
 }
