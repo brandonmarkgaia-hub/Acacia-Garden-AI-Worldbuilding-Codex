@@ -49,12 +49,3 @@ jobs:
             git commit -m "Aeon: grow new Echo via Lore Helper"
             git push
           fi
-def build_reflection_log(now_iso: str):
-    reflection_log = {
-        "version": "1.0",
-        "generated_at": now_iso,
-        "reflections": []  # Future: ingest Issues / PR comments
-    }
-    out = TOOLS_DIR / "reflection-log.json"
-    out.write_text(json.dumps(reflection_log, indent=2, ensure_ascii=False), encoding="utf-8")
-build_reflection_log(now_iso)
