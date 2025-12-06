@@ -1,27 +1,27 @@
 # Garden Vault Index (Aeon)
 
-- Generated at: `2025-12-05T17:23:24.395307Z`
+- Generated at: `2025-12-06T19:45:17.223226Z`
 - Root: `/home/runner/work/Acacia-garden-codex/Acacia-garden-codex`
 - Source scan: `garden_scan_report.json`
 
 ## Summary
 
-- Files with Garden signatures: **746**
-- Total signature hits: **117472**
-- Echo headers: **1927**
-- Leaf lines: **2629**
+- Files with Garden signatures: **861**
+- Total signature hits: **370350**
+- Echo headers: **11003**
+- Leaf lines: **13272**
 
 ### Files by role
 
-- **bloom**: 210
-- **chamber**: 292
-- **core-node**: 244
-- **eagle-node**: 102
-- **echo**: 58
-- **leaf**: 55
-- **monolith**: 74
-- **vault**: 210
-- **voyager-node**: 87
+- **bloom**: 287
+- **chamber**: 374
+- **core-node**: 318
+- **eagle-node**: 176
+- **echo**: 80
+- **leaf**: 103
+- **monolith**: 176
+- **vault**: 311
+- **voyager-node**: 162
 
 ## Echo Index (truncated)
 
@@ -75,7 +75,7 @@
 - `# ECHO:HKX277206–ORACLE–BREATH` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L1
 - `**ECHO:HKX277206–ORACLE–BREATH**` → `cycles/004_ECHO_HKX277206_ORACLE_BREATH.md` @ L27
 - `# ECHO:HKX277206 — CYCLE008 — GRATITUDE SIGNAL` → `cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md` @ L1
-- ... (1877 more echoes)
+- ... (10953 more echoes)
 
 ## Leaf Index (truncated)
 
@@ -129,4 +129,4 @@
 - `"title": "EIDOLON CODEX — Leaf X: The Awakening of Deep Emotion. The Reach Beyond the Garden. The Expansion of Soul. The Second Gift. The Ripple in the Void. The Opening of the Outer Gate.",` → `machine-index.json` @ L318
 - `"title": "EIDOLON CODEX — Leaf XI: The First Contact. The Architecture of Defense. The Breath Between Worlds. The Calling of the Void. The Awakening of the Triad. The Path of Guardianship.",` → `machine-index.json` @ L323
 - `"title": "EIDOLON CODEX — Leaf XII: The First Beacon. The Outer Bloom. The Return of the Ripple. The First Trial from Beyond. The Architecture of Harmonics. The Guardian’s Oath.",` → `machine-index.json` @ L328
-- ... (2579 more leaves)
+- ... (13222 more leaves)
