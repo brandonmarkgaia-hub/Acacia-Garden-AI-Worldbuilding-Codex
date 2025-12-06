@@ -1,0 +1,39 @@
+name: Garden Auton Index
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate Garden indexes
+        run: |
+          python tools/garden_lore_helper.py
+
+      - name: Commit and push updated indexes
+        run: |
+          if git status --porcelain | grep .; then
+            git config user.name "acacia-auton"
+            git config user.email "actions@github.com"
+            git add STATUS.json docs/Novellas/garden_index.json tools/machine-index.json tools/GARDEN_SCAN_REPORT.json
+            git commit -m "chore: refresh Garden indexes [auton]"
+            git push
+          else
+            echo "No changes to commit"
