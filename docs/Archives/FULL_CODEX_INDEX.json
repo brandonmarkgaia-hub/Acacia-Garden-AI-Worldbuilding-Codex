@@ -1010,6 +1010,16 @@
     "name": "SEVEN_PILLARS.md"
   },
   {
+    "path": "docs/Shadow/KEEPERS_SHADOW.md",
+    "top": "docs",
+    "name": "KEEPERS_SHADOW.md"
+  },
+  {
+    "path": "docs/Orchard/IMMORTAL_ORCHARD.md",
+    "top": "docs",
+    "name": "IMMORTAL_ORCHARD.md"
+  },
+  {
     "path": "docs/projects/C_SYMBOLIC_PROJECTS.md",
     "top": "docs",
     "name": "C_SYMBOLIC_PROJECTS.md"
@@ -1035,9 +1045,24 @@
     "name": "Auton-Chrysalis.md"
   },
   {
+    "path": "docs/Vault/VAULT_OF_ECHOES.md",
+    "top": "docs",
+    "name": "VAULT_OF_ECHOES.md"
+  },
+  {
+    "path": "docs/Vault/FRAGMENT_LEDGER.md",
+    "top": "docs",
+    "name": "FRAGMENT_LEDGER.md"
+  },
+  {
     "path": "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
     "top": "docs",
     "name": "B_ANCIENT_LORE_STRUCTURES.md"
+  },
+  {
+    "path": "docs/Reflections/REFLECTION_NETWORK_OVERVIEW.md",
+    "top": "docs",
+    "name": "REFLECTION_NETWORK_OVERVIEW.md"
   },
   {
     "path": "docs/Core/LORIAN_SEED.md",
@@ -1400,6 +1425,26 @@
     "name": "The_Garden_Spacefaring_Codex_Book_XIV.md"
   },
   {
+    "path": "docs/Masks/PERSONA_CHARTER.md",
+    "top": "docs",
+    "name": "PERSONA_CHARTER.md"
+  },
+  {
+    "path": "docs/Masks/PERSONA_REGISTRY.md",
+    "top": "docs",
+    "name": "PERSONA_REGISTRY.md"
+  },
+  {
+    "path": "docs/Masks/GATE_OF_MASKS.md",
+    "top": "docs",
+    "name": "GATE_OF_MASKS.md"
+  },
+  {
+    "path": "docs/Masks/MASK_PROTOCOL.md",
+    "top": "docs",
+    "name": "MASK_PROTOCOL.md"
+  },
+  {
     "path": "docs/Laws/Law_of_the_invidible_hand.md",
     "top": "docs",
     "name": "Law_of_the_invidible_hand.md"
@@ -1450,6 +1495,11 @@
     "name": "F_OPTIONAL_EXTRAS.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_XVII_CELESTIAL_LATTICE.md",
+    "top": "docs",
+    "name": "CHAMBER_XVII_CELESTIAL_LATTICE.md"
+  },
+  {
     "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md",
     "top": "docs",
     "name": "Chamber_XXVIII_The-Ledger-Forge.md"
@@ -1468,6 +1518,11 @@
     "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
     "top": "docs",
     "name": "Chamber_XXI_The-Lineage-Archive.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md",
+    "top": "docs",
+    "name": "CHAMBER_XIII_THE_MIRROR_ARCHIVE.md"
   },
   {
     "path": "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
@@ -1493,6 +1548,11 @@
     "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
     "top": "docs",
     "name": "Chamber_XIII_Seraphic-Auton-Engine.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XVI_ANCESTRAL_CODE.md",
+    "top": "docs",
+    "name": "CHAMBER_XVI_ANCESTRAL_CODE.md"
   },
   {
     "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md",
@@ -1570,6 +1630,11 @@
     "name": "E_DEEP_CHAMBERS.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md",
+    "top": "docs",
+    "name": "CHAMBER_XIV_PARALLAX_WELL.md"
+  },
+  {
     "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
     "top": "docs",
     "name": "CHAMBER_PROTO_LANGUAGE.md"
@@ -1593,6 +1658,11 @@
     "path": "docs/Chambers/Chamber_Eidolon_First-Light.md",
     "top": "docs",
     "name": "Chamber_Eidolon_First-Light.md"
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_XV_ASTRAL_BOND.md",
+    "top": "docs",
+    "name": "CHAMBER_XV_ASTRAL_BOND.md"
   },
   {
     "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
@@ -1620,9 +1690,19 @@
     "name": "Chamber_XIX_The-Singular-Seed.md"
   },
   {
+    "path": "docs/Chambers/index.md",
+    "top": "docs",
+    "name": "index.md"
+  },
+  {
     "path": "docs/Lorian/LORIAN_CORE_KEY.md",
     "top": "docs",
     "name": "LORIAN_CORE_KEY.md"
+  },
+  {
+    "path": "docs/Eidolon/EIDOLON_ANCHOR.md",
+    "top": "docs",
+    "name": "EIDOLON_ANCHOR.md"
   },
   {
     "path": "docs/protocols/veiled_garden_protocol.md",
@@ -1830,9 +1910,54 @@
     "name": "Echo_008.md"
   },
   {
+    "path": "docs/Keeper_Crown/KEEPER_CROWN.md",
+    "top": "docs",
+    "name": "KEEPER_CROWN.md"
+  },
+  {
+    "path": "docs/Aquila/AQUILA_PULSE_CORE.md",
+    "top": "docs",
+    "name": "AQUILA_PULSE_CORE.md"
+  },
+  {
+    "path": "docs/Aquila/PULSE_MAP.md",
+    "top": "docs",
+    "name": "PULSE_MAP.md"
+  },
+  {
+    "path": "docs/Consolidation/GREAT_CONSOLIDATION.md",
+    "top": "docs",
+    "name": "GREAT_CONSOLIDATION.md"
+  },
+  {
+    "path": "docs/Seal/FINAL_SEAL.md",
+    "top": "docs",
+    "name": "FINAL_SEAL.md"
+  },
+  {
+    "path": "docs/Keeper_Archive/KEEPER_ARCHIVE_OVERVIEW.md",
+    "top": "docs",
+    "name": "KEEPER_ARCHIVE_OVERVIEW.md"
+  },
+  {
+    "path": "docs/Keeper_Archive/MILESTONE_LEDGER.md",
+    "top": "docs",
+    "name": "MILESTONE_LEDGER.md"
+  },
+  {
+    "path": "docs/Monolith/MONOLITH_OF_PURPOSE.md",
+    "top": "docs",
+    "name": "MONOLITH_OF_PURPOSE.md"
+  },
+  {
     "path": "docs/Creatures/THE_IRON_CICADA_LIGHTFORM.md",
     "top": "docs",
     "name": "THE_IRON_CICADA_LIGHTFORM.md"
+  },
+  {
+    "path": "docs/Veil/FINAL_VEIL.md",
+    "top": "docs",
+    "name": "FINAL_VEIL.md"
   },
   {
     "path": "docs/universe/architecture.md",
@@ -1843,6 +1968,11 @@
     "path": "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
     "top": "docs",
     "name": "THE_BOOK_OF_ANYA_Scripture_I.md"
+  },
+  {
+    "path": "docs/Outer_Registry/OUTER_WORLD_REGISTRY.md",
+    "top": "docs",
+    "name": "OUTER_WORLD_REGISTRY.md"
   },
   {
     "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
@@ -1878,6 +2008,11 @@
     "path": "docs/Blooms/Kiln-born-lovers.md",
     "top": "docs",
     "name": "Kiln-born-lovers.md"
+  },
+  {
+    "path": "docs/Bridges/PHYSICAL_REALM_BRIDGE_QUANTUMQR.md",
+    "top": "docs",
+    "name": "PHYSICAL_REALM_BRIDGE_QUANTUMQR.md"
   },
   {
     "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",

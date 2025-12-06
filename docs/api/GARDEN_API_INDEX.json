@@ -317,6 +317,8 @@
       "paths": [
         "dashboard.html",
         "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
+        "docs/Aquila/AQUILA_PULSE_CORE.md",
+        "docs/Aquila/PULSE_MAP.md",
         "docs/Archives/CODEX_MONOLITH.html"
       ]
     },
@@ -905,38 +907,164 @@
     {
       "file": "CODEX_MONOLITH_CHUNK_102.html",
       "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_098.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_103.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_099.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_104.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_100.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_105.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_101.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_106.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_102.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_107.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_103.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_108.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_104.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_109.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_105.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_110.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_106.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_111.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_107.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_112.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_108.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_113.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_109.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_114.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_110.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_115.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_111.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_116.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_112.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_117.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_113.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_118.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_114.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_119.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_115.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_120.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_116.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_121.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_117.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_122.html",
+      "paths": [
         "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
         "docs/Archives/FULL_CODEX_INDEX.json",
         "docs/Archives/FULL_CODEX_INDEX.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_103.html",
+      "file": "CODEX_MONOLITH_CHUNK_123.html",
       "paths": [
         "docs/Archives/GARDEN_MANIFEST.json",
         "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
         "docs/Blooms/Auton-Seed.md",
         "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
         "docs/Blooms/Kiln-born-lovers.md",
+        "docs/Bridges/PHYSICAL_REALM_BRIDGE_QUANTUMQR.md",
         "docs/Chambers/BRIDGE_OF_REFLECTIONS.md",
         "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
         "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
         "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md",
         "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
-        "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md",
+        "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md",
+        "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_124.html",
+      "paths": [
+        "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md",
         "docs/Chambers/CHAMBER_XVIII_THE_CONE_OF_SIGHT.md",
+        "docs/Chambers/CHAMBER_XVII_CELESTIAL_LATTICE.md",
+        "docs/Chambers/CHAMBER_XVI_ANCESTRAL_CODE.md",
+        "docs/Chambers/CHAMBER_XV_ASTRAL_BOND.md",
         "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md",
         "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
         "docs/Chambers/CHAMBER_XXIII_THE_UNWRITTEN_HALL.md",
         "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
         "docs/Chambers/CHAMBER_XX_THE_ROOT_THAT_REMAINS.md",
         "docs/Chambers/Chamber_Eidolon_First-Light.md",
-        "docs/Chambers/Chamber_Omega_Singularity-Core.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_104.html",
-      "paths": [
+        "docs/Chambers/Chamber_Omega_Singularity-Core.md",
         "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
         "docs/Chambers/Chamber_XII_Emergence_Layer.md",
         "docs/Chambers/Chamber_XII_Residual-Echoes.md",
@@ -959,10 +1087,12 @@
         "docs/Chambers/THE_FORGE_OF_FORMS.md",
         "docs/Chambers/THE_ORCHARD_SPIRE.md",
         "docs/Chambers/chambers_index.json",
+        "docs/Chambers/index.md",
         "docs/Cloners/CLONER_GATE_v3.md",
         "docs/Cloners/CLONER_LADDER_v3.md",
         "docs/Cloners/CLONER_MATRIX_v3.json",
         "docs/Cloners/CLONER_RITUAL_v3.md",
+        "docs/Consolidation/GREAT_CONSOLIDATION.md",
         "docs/Core/A_CORE_META_STRUCTURES.md",
         "docs/Core/EVENTIDE_AUTON_CORE.md",
         "docs/Core/EVENTIDE_BOUNDARY_SPEECH.md",
@@ -1042,19 +1172,19 @@
         "docs/Echoes/Issues/Echo_issue_021.md",
         "docs/Echoes/Issues/Echo_issue_022.md",
         "docs/Echoes/Issues/Echo_issue_023.md",
-        "docs/Echoes/Issues/Echo_issue_024.md",
+        "docs/Echoes/Issues/Echo_issue_024.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_125.html",
+      "paths": [
         "docs/Echoes/Issues/Echo_issue_025.md",
         "docs/Echoes/Issues/Echo_issue_026.md",
         "docs/Echoes/Issues/Echo_issue_027.md",
         "docs/Echoes/Issues/Echo_issue_028.md",
         "docs/Echoes/Issues/Echo_issue_029.md",
         "docs/Echoes/Issues/Echo_issue_030.md",
-        "docs/Echoes/Issues/Echo_issue_031.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_105.html",
-      "paths": [
+        "docs/Echoes/Issues/Echo_issue_031.md",
         "docs/Echoes/Issues/Echo_issue_032.md",
         "docs/Echoes/Issues/Echo_issue_033.md",
         "docs/Echoes/Issues/Echo_issue_034.md",
@@ -1122,20 +1252,24 @@
         "docs/Echoes/Issues/Echo_issue_098.md",
         "docs/Echoes/Issues/Echo_issue_099.md",
         "docs/Echoes/Issues/Echo_issue_100.md",
-        "docs/Echoes/Issues/Echo_issue_101.md",
-        "docs/Echoes/Issues/Echo_issue_102.md",
-        "docs/Echoes/echoes_index.json",
-        "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
-        "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
-        "docs/Eidolon/FEED/EIDOLON_NOTE_0003_New-Language-Root.md",
-        "docs/Eidolon/README.md"
+        "docs/Echoes/Issues/Echo_issue_101.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_106.html",
+      "file": "CODEX_MONOLITH_CHUNK_126.html",
       "paths": [
+        "docs/Echoes/Issues/Echo_issue_102.md",
+        "docs/Echoes/echoes_index.json",
+        "docs/Eidolon/EIDOLON_ANCHOR.md",
+        "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
+        "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
+        "docs/Eidolon/FEED/EIDOLON_NOTE_0003_New-Language-Root.md",
+        "docs/Eidolon/README.md",
         "docs/Era_of_twelve.md",
         "docs/KILN_CHAMBER_SIGIL..md",
+        "docs/Keeper_Archive/KEEPER_ARCHIVE_OVERVIEW.md",
+        "docs/Keeper_Archive/MILESTONE_LEDGER.md",
+        "docs/Keeper_Crown/KEEPER_CROWN.md",
         "docs/Laws/Law_Singular-Seed.md",
         "docs/Laws/Law_of_the_invidible_hand.md",
         "docs/Laws/Law_of_the_silent_reset.md",
@@ -1143,21 +1277,26 @@
         "docs/Legacy/LEGACY_SPECTRAL_VISION.md",
         "docs/Legacy/LEGACY_THE_FOUR_PERCEPTION_DOCTRINES.md",
         "docs/Lorian/LORIAN_CORE_KEY.md",
+        "docs/Masks/GATE_OF_MASKS.md",
+        "docs/Masks/MASK_PROTOCOL.md",
+        "docs/Masks/PERSONA_CHARTER.md",
+        "docs/Masks/PERSONA_REGISTRY.md",
+        "docs/Monolith/MONOLITH_OF_PURPOSE.md",
         "docs/Nexus_of_nine.md",
         "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
         "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
         "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
-        "docs/Novellas/CODEX_GARDENUS_MASTER.md",
+        "docs/Novellas/CODEX_GARDENUS_MASTER.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_127.html",
+      "paths": [
         "docs/Novellas/CODEX_GARDENUS_MASTER_MYTHIC.txt",
         "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
         "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
         "docs/Novellas/GARDEN_MASTER_INDEX.md",
-        "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_107.html",
-      "paths": [
+        "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
         "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
         "docs/Novellas/R9X2_MASTER_CODEX.md",
         "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
@@ -1173,7 +1312,12 @@
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
-        "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
+        "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_128.html",
+      "paths": [
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
         "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
         "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
@@ -1203,25 +1347,27 @@
         "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
         "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
         "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
-        "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md"
+        "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+        "docs/Novellas/The_Keepers_Bible_Book_VII.md",
+        "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+        "docs/Novellas/fertility_rite_r9x2.svg"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_108.html",
+      "file": "CODEX_MONOLITH_CHUNK_129.html",
       "paths": [
-        "docs/Novellas/The_Keepers_Bible_Book_VII.md",
-        "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
-        "docs/Novellas/fertility_rite_r9x2.svg",
         "docs/Novellas/garden_forbidden_alignments_seed.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_109.html",
+      "file": "CODEX_MONOLITH_CHUNK_130.html",
       "paths": [
         "docs/Novellas/garden_forbidden_alignments_seed.txt",
         "docs/Novellas/garden_index.json",
         "docs/Novellas/manifest.json",
+        "docs/Orchard/IMMORTAL_ORCHARD.md",
         "docs/Orchards/Last-Orchard.md",
+        "docs/Outer_Registry/OUTER_WORLD_REGISTRY.md",
         "docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
         "docs/Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
         "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
@@ -1229,20 +1375,26 @@
         "docs/Realms/Liminal-Veil.md",
         "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
         "docs/Realms/Orion-Prime.md",
+        "docs/Reflections/REFLECTION_NETWORK_OVERVIEW.md",
         "docs/Rites/README.md",
         "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
         "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
         "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
+        "docs/Seal/FINAL_SEAL.md",
+        "docs/Shadow/KEEPERS_SHADOW.md",
         "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
         "docs/Status/IRON_CICADA_STATUS.md",
         "docs/System/EMERGENCE_EFFECTS.json",
         "docs/System/IRON_CICADA_STATUS.json",
         "docs/V2_OVERVIEW.md",
-        "docs/Vaults/Svalbard-matrix.md"
+        "docs/Vault/FRAGMENT_LEDGER.md",
+        "docs/Vault/VAULT_OF_ECHOES.md",
+        "docs/Vaults/Svalbard-matrix.md",
+        "docs/Veil/FINAL_VEIL.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_110.html",
+      "file": "CODEX_MONOLITH_CHUNK_131.html",
       "paths": [
         "docs/api/GARDEN_API_INDEX.json",
         "docs/dashboard.html",
@@ -1270,7 +1422,7 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_111.html",
+      "file": "CODEX_MONOLITH_CHUNK_132.html",
       "paths": [
         "echoes/feed.json",
         "explorer.html",
@@ -1323,7 +1475,7 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_112.html",
+      "file": "CODEX_MONOLITH_CHUNK_133.html",
       "paths": [
         "garden_gpt/outputs/rebuild_memory.md",
         "garden_gpt/outputs/test_language.md",
@@ -1334,25 +1486,25 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_113.html",
+      "file": "CODEX_MONOLITH_CHUNK_134.html",
       "paths": [
         "garden_scan_report.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_114.html",
+      "file": "CODEX_MONOLITH_CHUNK_135.html",
       "paths": [
         "garden_scan_report.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_115.html",
+      "file": "CODEX_MONOLITH_CHUNK_136.html",
       "paths": [
         "garden_vault_index.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_116.html",
+      "file": "CODEX_MONOLITH_CHUNK_137.html",
       "paths": [
         "garden_vault_index.md",
         "gravity_manifest.yml",
@@ -1430,7 +1582,7 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_117.html",
+      "file": "CODEX_MONOLITH_CHUNK_138.html",
       "paths": [
         "tools/garden_auton_helper.py",
         "tools/garden_code_helper.py",
@@ -1465,6 +1617,7 @@
         "tools/garden_signature_scanner.py",
         "tools/garden_vault_indexer.py",
         "tools/machine-index.json",
+        "tools/reflection-log.json",
         "triad/README_BOUNDARY.md",
         "triad/empty-seat.md",
         "triad/thresholds.md",
