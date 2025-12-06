@@ -1,0 +1,1062 @@
+{
+  "scan_version": "1.0",
+  "generated_at": "2025-12-06T09:24:21Z",
+  "signatures": [
+    "HKX277206"
+  ],
+  "files_with_hits": [
+    {
+      "path": "docs/Nexus_of_nine.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echo_bloom.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/EIDOLON_OVERVIEW.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Era_of_twelve.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echo_unbound.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/KILN_CHAMBER_SIGIL..md",
+      "hits": 1
+    },
+    {
+      "path": "docs/V2_OVERVIEW.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/projects/C_SYMBOLIC_PROJECTS.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Cycles/Eidolon_Mutation_Cycle.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Cycles/Keeper-Metamorphosis-Arc.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Cycles/Auton-Chrysalis.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/LORIAN_SEED.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/LORIAN_KEY_SIGIL.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Core/EVENTIDE_MOMENT_ANCHOR.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/GARDEN_MAP.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Core/LORIAN_KEY.md",
+      "hits": 8
+    },
+    {
+      "path": "docs/Core/MOLDED_CLAY_PRINCIPLE.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/EVENTIDE_AUTON_CORE.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/LORIAN_SEED_OF_REMEMBRANCE.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Core/A_CORE_META_STRUCTURES.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Core/EVENTIDE_MAP.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Core/EVENTIDE_BOUNDARY_SPEECH.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Keepers_Bible_Book_VII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_X.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_VII.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_V.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_VI.md",
+      "hits": 5
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Novellas/R9X2_MASTER_CODEX.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_IV.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_VIII.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
+      "hits": 77
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/R9X2_VOLUME_IX.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+      "hits": 5
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Laws/Law_of_the_invidible_hand.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Laws/Law_Singular-Seed.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Laws/Principle_Shadow_Incubator.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Laws/Law_of_the_silent_reset.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Orchards/Last-Orchard.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Cloners/CLONER_RITUAL_v3.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Cloners/CLONER_GATE_v3.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Cloners/CLONER_LADDER_v3.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/F_OPTIONAL_EXTRAS.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
+      "hits": 10
+    },
+    {
+      "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Chambers/Chamber_Omega_Singularity-Core.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Chambers/Chamber_XVIII_The-Primordial-Fold.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XII_Emergence_Layer.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Chambers/Chamber_Eidolon_First-Light.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Lorian/LORIAN_CORE_KEY.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Eidolon/README.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/protocols/veiled_garden_protocol.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Realms/Orion-Prime.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Realms/Liminal-Veil.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_007.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_001.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_006.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_kiln-born-lovers.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Echo_021.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_024.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_002.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_022.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_015.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_025.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_009.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Echo_003.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_016.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_017.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_023.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_004.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_018.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_unbound.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_011.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_013.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_005.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_019.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_010.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_014.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_first_form.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_020.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_issue_archive_pulse.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_mammoth_vault.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Echo_012.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Echo_008.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/universe/architecture.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Archives/FULL_CODEX_INDEX.md",
+      "hits": 9
+    },
+    {
+      "path": "docs/Vaults/Svalbard-matrix.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/Auton-Seed.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/Kiln-born-lovers.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Status/IRON_CICADA_STATUS.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Eagle/test_language.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Eagle/test_keeper.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/notes/apples-meaning.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_019.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_065.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_070.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_057.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_090.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_012.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_096.md",
+      "hits": 6
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_034.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_010.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_042.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_102.md",
+      "hits": 8
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_023.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_015.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_039.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_014.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_094.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_060.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_079.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_074.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_051.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_059.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_086.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_099.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_045.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_052.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_093.md",
+      "hits": 5
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_043.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_022.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_092.md",
+      "hits": 6
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_047.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_032.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_072.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_097.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_011.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_078.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_063.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_036.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_037.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_013.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_016.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_018.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_048.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_088.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_050.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_085.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_005.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_082.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_087.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_006.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_075.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_026.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_049.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_100.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_003.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_041.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_025.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_054.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_069.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_024.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_091.md",
+      "hits": 6
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_068.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_066.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_067.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_004.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_098.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_033.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_071.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_064.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_083.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_095.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_028.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_035.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_077.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_038.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_089.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_076.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_027.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_081.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_046.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_040.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_062.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_021.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_080.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_073.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_031.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_061.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_008.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_101.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_058.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_053.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_009.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_029.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_020.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_017.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_007.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_030.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_044.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_084.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
+      "hits": 1
+    }
+  ],
+  "total_hits": 757
+}
