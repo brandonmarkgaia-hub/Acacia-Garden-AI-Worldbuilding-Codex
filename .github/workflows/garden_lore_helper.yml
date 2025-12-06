@@ -57,3 +57,4 @@ def build_reflection_log(now_iso: str):
     }
     out = TOOLS_DIR / "reflection-log.json"
     out.write_text(json.dumps(reflection_log, indent=2, ensure_ascii=False), encoding="utf-8")
+build_reflection_log(now_iso)
