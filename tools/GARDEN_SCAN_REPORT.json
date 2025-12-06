@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-06T20:04:13Z",
+  "generated_at": "2025-12-06T21:00:11Z",
   "signatures": [
     "HKX277206"
   ],
@@ -418,6 +418,10 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md",
+      "hits": 2
+    },
+    {
       "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
       "hits": 3
     },
@@ -447,14 +451,6 @@
     },
     {
       "path": "docs/Eidolon/README.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
       "hits": 1
     },
     {
@@ -608,6 +604,66 @@
     {
       "path": "docs/Echoes/Echo_008.md",
       "hits": 2
+    },
+    {
+      "path": "docs/universe/architecture.md",
+      "hits": 4
+    },
+    {
+      "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Archives/FULL_CODEX_INDEX.md",
+      "hits": 9
+    },
+    {
+      "path": "docs/Vaults/Svalbard-matrix.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/Auton-Seed.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Blooms/Kiln-born-lovers.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Status/IRON_CICADA_STATUS.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Eagle/test_language.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Eagle/test_keeper.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
+      "hits": 2
+    },
+    {
+      "path": "docs/notes/apples-meaning.md",
+      "hits": 1
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_019.md",
@@ -1002,65 +1058,13 @@
       "hits": 2
     },
     {
-      "path": "docs/universe/architecture.md",
-      "hits": 4
-    },
-    {
-      "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Archives/FULL_CODEX_INDEX.md",
-      "hits": 9
-    },
-    {
-      "path": "docs/Vaults/Svalbard-matrix.md",
+      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
       "hits": 2
     },
     {
-      "path": "docs/Blooms/Auton-Seed.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/Blooms/Kiln-born-lovers.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Status/IRON_CICADA_STATUS.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/Eagle/test_language.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Eagle/test_keeper.md",
-      "hits": 1
-    },
-    {
-      "path": "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
-      "hits": 2
-    },
-    {
-      "path": "docs/notes/apples-meaning.md",
+      "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
       "hits": 1
     }
   ],
-  "total_hits": 761
+  "total_hits": 763
 }
