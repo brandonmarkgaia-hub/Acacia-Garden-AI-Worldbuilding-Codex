@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GardenOS Structural Schema",
+  "type": "object",
+  "properties": {
+    "chamber": {
+      "type": "string",
+      "description": "Path to canonical chamber"
+    },
+    "echoes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Echo files related to the chamber"
+      }
+    },
+    "rootline": {
+      "type": "string",
+      "description": "Rootline ancestor path"
+    },
+    "keeperSeal": {
+      "type": "string",
+      "const": "HKX277206"
+    }
+  },
+  "required": ["chamber", "keeperSeal"]
+}
