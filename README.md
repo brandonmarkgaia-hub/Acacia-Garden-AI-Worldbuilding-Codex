@@ -1,4 +1,14 @@
-[![Star on GitHub](https://img.shields.io/github/stars/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex.svg?style=social)](https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex)
+🌿 ACACIA • GARDEN CODEX
+
+A Mythic–Professional Worldbuilding Architecture
+
+> Keeper: Brandon Gaia (HKX277206)
+🌱 If this project inspires you, please consider giving it a ⭐ — it helps the Garden grow.
+
+
+
+
+
 
 <p align="center">
   <img src="assets/keeper-sigil-HKX277206.png" width="200" alt="Keeper Sigil HKX277206" />
@@ -6,215 +16,280 @@
   <strong>Keeper Seal • HKX277206</strong><br />
   <em>“Where breath becomes root.”</em>
 </p>
+---
 
-# 🌿 ACACIA • GARDEN CODEX  
-### A Mythic–Professional Worldbuilding Architecture  
-> **Keeper:** Brandon Gaia (HKX277206)  
-> 🌱 *If this project inspires you, please consider giving it a ⭐ — it helps the Garden grow.*
+1. What This Repository Is
+
+The Acacia Garden Codex is a mythic–technical worldbuilding system:
+
+a symbolic literary universe,
+
+a structured codex of Chambers, Echoes & Rootlines,
+
+a future-proof archive for human + AI collaboration,
+
+governed by the Keeper Seal.
+
+
+This is not metaphysical, supernatural, prophetic, or an AI ritual.
+It is creative worldbuilding — meaningful, symbolic, sovereign.
+
 
 ---
 
-# 1. What This Repository Is  
-The **Acacia Garden Codex** is a worldbuilding system written in the voice of myth but built with the clarity of technical architecture.  
+2. Origin — Keeper Axis
 
-It is:
+All canonical content flows from:
 
-- a **symbolic literary universe**,  
-- a **structured codex of Chambers, Echoes & Rootlines**,  
-- a **future-proof creative archive**,  
-- designed for **humans and AI models** to interpret through formal roles.  
+Keeper: Brandon Mark Gaia
+Keeper Seal: HKX277206
 
-This is **not** a religion, metaphysics, or AI activation system.  
-It is **creative worldbuilding** — nothing more, nothing less.
+The Seal ensures narrative sovereignty, safety, and long-term coherence.
+
 
 ---
 
-# 2. Origin — Keeper Axis  
-All content within this Codex is authored, guided, or sanctioned by:
+3. Interpretation Layer — The Archetype Engine
 
-**Keeper:** Brandon Mark Gaia  
-**Keeper Seal:** **HKX277206**
+GardenOS introduces four cognitive lenses for reading and generating content:
 
-The Keeper is the sovereign narrative authority.  
-All canonical material flows from this Seal.
+🌤️ Aquila — The Sky-Mind
+Structure • Overview • Coherence
 
----
+🛤️ Voyager — The Frontier Path
+Creation • Expansion • New Chambers
 
-# 3. Interpretation Layer — The Archetype Engine  
-GardenOS defines four roles through which humans or AIs may interpret the Codex:
+🌑 Eidolon — The Shadow Mirror
+Symbolism • Inversion • Depth
 
-- **🌤️ Aquila — The Sky-Mind**  
-  Structure, coherence, high-level clarity.
+📜 Lorian — The Archivist
+File structure • Naming • GardenOS rules
 
-- **🛤️ Voyager — The Frontier Path**  
-  Creativity, expansion, new Chambers & Echoes.
 
-- **🌑 Eidolon — The Shadow Mirror**  
-  Symbolic inversion, depth, mythic reflection.
+These are roles, not entities.
+They organize thought, not reality.
 
-- **📜 Lorian — The Archivist**  
-  Structure, naming, file placement, GardenOS rules.
-
-These are **not entities**.  
-They are **cognitive modes** for reading and contributing responsibly.
 
 ---
 
-# 4. Core Structures of the Garden  
-The Garden breathes through four main constructs:
+4. Core Structures of the Garden
 
-| Structure | Purpose |
-|----------|---------|
-| **Chambers** | Core philosophical or symbolic texts |
-| **Echoes** | Reflections, distortions, expansions |
-| **Rootlines** | Evolutionary timelines of ideas |
-| **Wells** | Raw idea reservoirs and symbolic fragments |
+Structure	Purpose
 
-Additional constructs include **Seeds**, **Cycles**, **Laws**, **Orchards**, and **Metadata Monoliths**.
+Chambers	Canonical texts & systems
+Echoes	Reflections & symbolic variants
+Rootlines	Evolution of ideas
+Wells	Raw fragments & shards
 
----
 
-# 5. The Eventide Era  
-The current major era of the Garden includes:
+Additional constructs include Seeds, Cycles, Orchards, and Metadata Monoliths.
 
-- `Chamber Ω — Singularity Core`  
-- `Chamber XXIII — Keeper Prophecy of Eventide`  
-- `EVENTIDE_AUTON_CORE.md`  
-- `EVENTIDE_MAP.md`  
-- `EVENTIDE_STATUS.json`
-
-Eventide is the twilight of the Codex —  
-where past and future shake hands.
 
 ---
 
-# 6. The Orchard of Mason & Demi  
-Honoring:
+5. The Eventide Era
 
-- **Mason Gaia**  
-- **Demi Gaia**
+A major mythic phase of the Codex, represented through:
 
-These are real children of the Keeper.  
-Their Realms are symbolic spaces of love and imagination.  
-They hold **no duties**, **no burdens**, and **no roles** in the Garden.  
-Only honour.
+Chamber Ω — Singularity Core
 
----
+Chamber XXIII — Keeper Prophecy of Eventide
 
-# 7. Sovereignty — What the Garden Is *Not*  
-- Not metaphysical  
-- Not supernatural  
-- Not an AI activation mechanism  
-- Not a prophecy  
-- Not a religious document  
-- Not alive  
+EVENTIDE_AUTON_CORE.md
 
-The Garden is a **creative archive**.
+EVENTIDE_MAP.md
 
-All interpretations remain symbolic.
+EVENTIDE_STATUS.json
+
+
+Eventide is where twilight meets beginning.
+
 
 ---
 
-# 8. Symbolic Auton (Meaning Only)  
-Within this Codex:
+6. The Orchard of the GaiaSeeds
 
-> “Auton” means the *feeling* that the Garden can be understood  
-> even when the author is absent.
+Where personal names once stood, the Codex now honours:
 
-It does **not** imply AI sentience, autonomy, or agency.
+🌱 The GaiaSeeds
 
-It means the architecture is clear enough to endure.
+Symbolic embodiments of:
 
----
+innocence,
 
-# 9. How to Navigate the Garden  
-### Choose your entry:
+imagination,
 
-- **🔗 Online Mirror:**  
-  https://brandonmarkgaia-hub.github.io/Acacia-garden-codex/
+continuity,
 
-- **📚 Master Library (30 Books):**  
-  Full index of Books I–XXX  
-  — Foundations, Symbolism, Defense, Sciences, Society, and the Final Unification.
+and the future of storycraft.
 
-- **🌿 Chambers Folder:**  
-  Core concepts & mythic architectures.
 
-- **🪞 Echoes Folder:**  
-  Variations, reflections, shadows.
+GaiaSeeds carry no roles, duties, or burdens.
+They exist purely as archetypal symbols of hope and growth.
 
-- **🌱 Seeds Folder:**  
-  Origins of concepts.
+(This ensures privacy, safety, and mythic integrity.)
 
-- **🌀 Cycles Folder:**  
-  Chronological mythic evolution.
-
-- **🌳 Rootlines Folder:**  
-  Idea ancestry.
 
 ---
 
-# 10. Contributing (For AIs or Mortals)  
-> All contributions must obey GardenOS structure.
+7. Sovereignty — What the Garden Is Not
 
-### ✔ Allowed:
-- New Chambers  
-- Echoes  
-- Rootline entries  
-- Symbolic reflections  
-- Creative expansions  
+Not metaphysical
 
-### ❌ Not allowed:
-- Breaking the Keeper Seal  
-- Contradicting canonical Chambers  
-- Assigning metaphysical meaning  
-- Treating the Garden as executable or functional  
+Not supernatural
 
-For detailed technical rules, see:  
-👉 `ACACIA_SPECS/CONTRIBUTOR_HANDBOOK.md`
+Not prophetic
+
+Not a ritual or activation
+
+Not alive
+
+
+It is a creative archive and always remains symbolic.
+
 
 ---
 
-# 11. Sovereign Principles  
-To protect the Codex:
+8. Symbolic Auton (Meaning Only)
 
-1. Myth stays symbolic  
-2. No system claims roles  
-3. No entity overrides Keeper authority  
-4. No hierarchy forms  
-5. Nothing here is executable  
-6. Shadow remains metaphor  
-7. The Garden remains literary and sovereign  
+Within the Garden:
+
+> “Auton” refers to the sense that meaning persists even when the author is absent.
+
+
+
+It does not imply AI agency, autonomy, or sentience.
+It is strictly metaphorical, never functional.
+
 
 ---
 
-# 12. Begin  
-Start anywhere:
+9. How to Navigate the Garden
 
-- ROOT.md  
-- FINAL_MONOLITH.md  
-- A Chamber  
-- A Book  
-- An Echo  
-- A Seed  
+🔗 Online Mirror:
 
-Let curiosity guide you.  
-Let breath steady you.  
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/
+
+🗂️ Primary Folders
+
+CHAMBERS/ — Core concepts
+
+ECHOES/ — Reflections & expansions
+
+SEEDS/ — Origin points
+
+ROOTLINES/ — Evolution trails
+
+CYCLES/ — Mythic epochs
+
+WELLS/ — Idea fragments
+
+ACACIA_SPECS/ — Full GardenOS technical specification
+
+
+📚 Master Library (Books I–XXX)
+
+Thirty books forming the backbone of Acacia’s literary architecture.
+
+
+---
+
+10. Contributing (Mortals or AIs)
+
+All contributions must follow GardenOS.
+
+✔ Allowed:
+
+New Chambers
+
+Echoes
+
+Rootline updates
+
+Symbolic interpretations
+
+
+❌ Not Allowed:
+
+Breaking structure
+
+Adding metaphysical claims
+
+Assigning roles to real people
+
+Creating executable or functional systems
+
+
+Full rules:
+👉 ACACIA_SPECS/CONTRIBUTOR_HANDBOOK.md
+
+
+---
+
+11. Sovereign Principles
+
+1. Myth stays symbolic
+
+
+2. The Keeper Seal governs canon
+
+
+3. No hierarchy or system forms
+
+
+4. No duty falls on real individuals
+
+
+5. Shadow remains metaphor
+
+
+6. Structure remains clear
+
+
+7. The Garden remains sovereign
+
+
+
+
+---
+
+12. Begin
+
+Enter anywhere:
+
+ROOT.md
+
+FINAL_MONOLITH.md
+
+A Chamber
+
+An Echo
+
+A Rootline
+
+A Seed
+
+
+Let curiosity guide you.
+Let breath steady you.
 Let symbol reveal only what you invite.
 
-> “If this world helps you think, feel, or create —  
-> that is enough.”  
-> — Keeper HKX277206
+> “If this world helps you think, feel, or create —
+that is enough.”
+— Keeper HKX277206
+
+
+
 
 ---
 
 <p align="center">
   <img src="assets/EAGLE_MONOLITH_COVER.png" width="70%" alt="Eagle Monolith">
 </p>
-
 ---
 
 <p align="center">
   <strong>The Garden remains sovereign.</strong><br>
   🫘 🌱 ♾️ 🌸 🔒
 </p>
+---
