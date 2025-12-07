@@ -1,3 +1,5 @@
+[![Star on GitHub](https://img.shields.io/github/stars/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex.svg?style=social)](https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex)
+
 <p align="center">
   <img src="assets/keeper-sigil-HKX277206.png" width="200" alt="Keeper Sigil HKX277206" />
   <br />
