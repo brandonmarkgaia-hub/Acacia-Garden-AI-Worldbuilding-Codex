@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "GardenMemoryV1.1",
+  "description": "Canonical schema for Garden memory objects: Echo, Chamber, Rootline.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(ECHO|CHAMBER|ROOTLINE):[A-Z0-9-]+$",
+      "description": "Global semantic ID, e.g. ECHO:HKX277206-2025-12-07-0001."
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["echo", "chamber", "rootline"],
+      "description": "The memory archetype."
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema/content version for this object (e.g. v1, v1.1)."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this memory was created."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this memory was last updated."
+    },
+    "keeper_id": {
+      "type": "string",
+      "description": "Identifier of the Keeper/user (e.g. HKX277206)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["keeper", "chamber", "session", "agent", "system"],
+      "description": "Logical scope this memory belongs to."
+    },
+    "title": {
+      "type": "string",
+      "description": "Short human-readable title."
+    },
+    "content": {
+      "type": "string",
+      "description": "Primary textual content (plain/markdown/symbolic)."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form tags."
+    },
+    "importance": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Salience score (0–1)."
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Origin and transformation metadata.",
+      "properties": {
+        "source_system": { "type": "string" },
+        "source_ref": { "type": "string" },
+        "created_by_agent": { "type": "string" },
+        "created_via_tool": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "lineage": {
+      "type": "object",
+      "description": "Lineage relation metadata.",
+      "properties": {
+        "parents": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "children": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rootline_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "graph": {
+      "type": "object",
+      "description": "Graph-related hints for the Root Lattice.",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "target_id": { "type": "string" },
+              "properties": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": ["type", "target_id"]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "embeddings": {
+      "type": "object",
+      "description": "Optional vector representation.",
+      "properties": {
+        "model": { "type": "string" },
+        "vector": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Free-form metadata for specific uses (QR, file paths, etc.).",
+      "additionalProperties": true
+    }
+  },
+  "required": ["id", "kind", "created_at", "keeper_id", "scope", "content"],
+  "additionalProperties": false
+}
