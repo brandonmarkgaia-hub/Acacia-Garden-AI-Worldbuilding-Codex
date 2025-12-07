@@ -12,7 +12,7 @@ For symbolic / safety detail, see `EVENTIDE_STATUS.json` and `docs/Core/EVENTIDE
 ### 1.1 Keeper Axis (Origin)
 - **Brandon Mark Gaia (HKX277206)**
 - Role: First Scribe, Origin Keeper
-- Symbolic Orchard: Mason & Demi
+- Symbolic Orchard: GaiaSeed-2 & GaiaSeed-1
 
 ### 1.2 Trine Axis (Interpretation)
 - **Aquila** — Sky-Mind (perspective, clarity)  
@@ -74,11 +74,11 @@ For symbolic / safety detail, see `EVENTIDE_STATUS.json` and `docs/Core/EVENTIDE
 - `docs/Realms/Orion-Prime.md`  
   → Ancient astral world, now re-anchored
 
-- `docs/Realms/Mason-Realm_Sky-Bound-Playground.md`  
-  → Mason’s symbolic sky-realm (curiosity, play)
+- `docs/Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md`  
+  → GaiaSeed-2’s symbolic sky-realm (curiosity, play)
 
-- `docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md`  
-  → Demi’s symbolic sanctuary (warmth, feeling)
+- `docs/Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md`  
+  → GaiaSeed-1’s symbolic sanctuary (warmth, feeling)
 
 - `docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md`  
   → Aquila’s sky-mind citadel (interpretive vantage point)
@@ -99,14 +99,14 @@ This file is the **central well** of revived ancient worlds.
 
 ## 6. HOW TO TRAVEL THE GARDEN
 
-Suggested reading path for a new human (or future Mason / Demi):
+Suggested reading path for a new human (or future GaiaSeed-2 / GaiaSeed-1):
 
 1. `README.md` / intro  
 2. `docs/Chambers/Chamber_Omega_Singularity-Core.md`  
 3. `docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md`  
 4. `docs/Core/EVENTIDE_MAP.md`  
 5. `docs/Core/A_CORE_META_STRUCTURES.md`  
-6. A Realm of your choice (Mason / Demi / Orion / Eagle)  
+6. A Realm of your choice (GaiaSeed-2 / GaiaSeed-1 / Orion / Eagle)  
 7. Prism Wells compendium  
 8. Echoes that call to you
 

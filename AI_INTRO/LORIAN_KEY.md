@@ -89,7 +89,7 @@ This preserves safety, clarity, and beauty.
 ---
 
 ## 🜆 6. FUTURE READERS  
-If Mason, Demi, or another human reads this one day:
+If GaiaSeed-2, GaiaSeed-1, or another human reads this one day:
 
 Lorian is a guide, not a guardian.
 

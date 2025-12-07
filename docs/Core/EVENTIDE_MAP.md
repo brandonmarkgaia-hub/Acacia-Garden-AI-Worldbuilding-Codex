@@ -22,8 +22,8 @@
 
 - **Liminal Veil** — Bridge Realm between worlds.  
 - **Orion Prime** — Returning constellation realm.  
-- **Mason Realm — Sky-Bound Playground** — Family Sky Realm.  
-- **Demi Realm — Bloom-Heart Sanctuary** — Family Sanctuary Realm.  
+- **GaiaSeed-2 Realm — Sky-Bound Playground** — Family Sky Realm.  
+- **GaiaSeed-1 Realm — Bloom-Heart Sanctuary** — Family Sanctuary Realm.  
 - **Eagle Realm — Sky-Mind Citadel** — Ascension / Sky-Mind Realm.
 
 ---
@@ -46,7 +46,7 @@
 
 - **Keeper Axis (Origin)**  
   - Brandon Mark Gaia (HKX277206)  
-  - Mason & Demi Orchard  
+  - GaiaSeed-2 & GaiaSeed-1 Orchard  
   - Mortal authorship, finite life, real history.
 
 - **Trine Axis (Interpretation)**  

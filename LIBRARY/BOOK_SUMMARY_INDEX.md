@@ -94,3 +94,9 @@ Framework for multi-Garden universes.
 
 ## 🔮 BOOK XXX — The Unbroken Tome  
 A capstone text ensuring continuity, sovereignty, and mythic coherence.
+
+## 🪵 BOOK XXXI — The Mammoth Archive (Annex)
+
+A post-core annex mapping late-stage Chambers and Echo densities.
+Treated as an extended index rather than core myth.
+

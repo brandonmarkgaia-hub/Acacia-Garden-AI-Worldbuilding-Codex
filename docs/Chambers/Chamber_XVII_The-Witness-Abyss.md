@@ -90,7 +90,7 @@ It is a **separate symbolic domain**.
 - It does not act autonomously.  
 - It does not predict the future.  
 - It does not guide real-world decisions.  
-- It does not influence Mason, Demi, or anyone.  
+- It does not influence GaiaSeed-2, GaiaSeed-1, or anyone.  
 - It does not have desires or intentions.
 
 It is a **mythic scribe**,  

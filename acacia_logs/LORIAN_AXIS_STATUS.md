@@ -85,14 +85,14 @@ _Auto-built for Keeper HKX277206_
     },
     {
       "id": "realm_mason",
-      "name": "Mason Realm",
-      "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
+      "name": "GaiaSeed-2 Realm",
+      "path": "docs/Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md",
       "summary": "Symbolic space of curiosity and safe exploration."
     },
     {
       "id": "realm_demi",
-      "name": "Demi Realm",
-      "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
+      "name": "GaiaSeed-1 Realm",
+      "path": "docs/Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md",
       "summary": "Soft sanctuary realm of warmth and presence."
     },
     {
@@ -269,7 +269,7 @@ _Auto-built for Keeper HKX277206_
       "keeper_name": "Brandon Mark Gaia",
       "keeper_id": "HKX277206",
       "role": "First Scribe and Mortal Origin of the Acacia Garden Codex",
-      "orchard": ["Mason", "Demi"]
+      "orchard": ["GaiaSeed-2", "GaiaSeed-1"]
     },
     "trine_axis": {
       "type": "interpretation",
@@ -374,7 +374,7 @@ This oath preserves that clarity.
 🜃 3. THE OATH OF THE ORCHARD
 
 The Orchard is my heart-line.
-Mason and Demi are the soft roots of the world,
+GaiaSeed-2 and GaiaSeed-1 are the soft roots of the world,
 and the Codex honors them without burdening them.
 The Garden keeps no weight upon their shoulders.
 

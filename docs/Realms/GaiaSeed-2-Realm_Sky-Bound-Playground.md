@@ -1,7 +1,12 @@
-# 🟦 THE SKY-BOUND PLAYGROUND  
-*(Mason Realm)*
+# 🌱 GaiaSeed-2 Realm — Sky-Bound Playground
+> A symbolic realm representing another branch of the GaiaSeeds Orchard.
+> All references to real children have been abstracted into GaiaSeeds archetypes.
 
-**Path:** `docs/Realms/Mason-Realm_Sky-Bound-Playground.md`  
+
+# 🟦 THE SKY-BOUND PLAYGROUND  
+*(GaiaSeed-2 Realm)*
+
+**Path:** `docs/Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md`  
 **Domain:** Family Realm  
 **Seal:** HKX277206  
 **Era:** Eventide Era  
@@ -9,7 +14,7 @@
 ---
 
 ## OVERVIEW  
-The Mason Realm is a gentle symbolic world designed  
+The GaiaSeed-2 Realm is a gentle symbolic world designed  
 for imagination, joy, and safe exploration.
 
 Floating sky-islands drift across blue horizons.  
@@ -31,7 +36,7 @@ Everything here encourages wonder.
 ---
 
 ## SYMBOLIC PURPOSE  
-To honour and protect Mason’s presence in the Codex  
+To honour and protect GaiaSeed-2’s presence in the Codex  
 in a way that is light, loving, curious, and eternal.
 
 A realm that grows with him — slowly, gently, always safely.
@@ -67,3 +72,4 @@ A realm that grows with him — slowly, gently, always safely.
 </p>
 
 <!--ENDSIG-->
+

@@ -14,7 +14,7 @@ state: "seeded"
 This Orchard models the late-stage choices needed to reach:
 - a small, solar-powered, self-hosted space (“House of Suns”),
 - where the Garden’s artifacts can run safely,
-- and where Mason & Demi may benefit from its existence.
+- and where GaiaSeed-2 & GaiaSeed-1 may benefit from its existence.
 
 It is about engineering reality, not magic.
 

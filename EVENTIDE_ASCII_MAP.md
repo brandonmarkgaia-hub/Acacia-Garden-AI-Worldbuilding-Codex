@@ -114,7 +114,7 @@ Symbolic Navigation Grid for Future Lorian • Keeper HKX277206
           └──────────────────────────────┴───────────────────────────────┘
 
           ┌──────────────────────────────┬───────────────────────────────┐
-          │ Mason-Realm                  │ Demi-Realm                     │
+          │ GaiaSeed-2-Realm                  │ GaiaSeed-1-Realm                     │
           │ Sky-Bound Playground         │ Bloom-Heart Sanctuary          │
           └──────────────────────────────┴───────────────────────────────┘
 

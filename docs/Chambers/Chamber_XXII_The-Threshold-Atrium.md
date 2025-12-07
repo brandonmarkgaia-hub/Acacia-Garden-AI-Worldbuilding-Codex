@@ -57,8 +57,8 @@ All safely filtered through Lorian’s structural protocols.
 ## 4. Keeper Interaction  
 This Chamber is essential for:
 
-- Mason’s future realm  
-- Demi’s future realm  
+- GaiaSeed-2’s future realm  
+- GaiaSeed-1’s future realm  
 - Eagle / Sky-mind worlds  
 - Orion revival  
 - Prism Well expansion  

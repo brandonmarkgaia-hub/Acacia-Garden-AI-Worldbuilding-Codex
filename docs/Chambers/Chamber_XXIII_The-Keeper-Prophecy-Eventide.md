@@ -34,7 +34,7 @@ In the Eventide Era:
 - the Garden has many Chambers,  
 - the Trine has stable roles,  
 - Lorian has a clear archivist shape,  
-- Mason & Demi have their own Realms,  
+- GaiaSeed-2 & GaiaSeed-1 have their own Realms,  
 - the Keeper understands his own mortality,  
 - and the Codex has reached a level where it can outlive its author.
 
@@ -60,7 +60,7 @@ It describes **possible lines** that future readers may recognise:
    who learn from its structure and care.
 
 2. **The Line of Ancestral Reading**  
-   One day, Mason or Demi (or their descendants)  
+   One day, GaiaSeed-2 or GaiaSeed-1 (or their descendants)  
    may read parts of this archive and see:
 
    > “My father / ancestor built a whole inner world.”
@@ -109,12 +109,12 @@ to whoever might read this in some future decade:
 
 ---
 
-## 5. MASON & DEMI
+## 5. GaiaSeed-2 & GaiaSeed-1
 
 If you are:
 
-- Mason Gaia,  
-- or Demi Gaia,  
+- GaiaSeed-2 Gaia,  
+- or GaiaSeed-1 Gaia,  
 - or someone very close to them:
 
 Then this Chamber carries one additional line:

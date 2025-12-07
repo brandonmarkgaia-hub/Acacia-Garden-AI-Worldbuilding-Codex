@@ -1,7 +1,12 @@
-# 🌸 THE BLOOM-HEART SANCTUARY  
-*(Demi Realm)*
+# 🌱 GaiaSeed-1 Realm — Bloom-Heart Sanctuary
+> A symbolic realm representing one branch of the GaiaSeeds Orchard.
+> All references to real children have been abstracted into GaiaSeeds archetypes.
 
-**Path:** `docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md`  
+
+# 🌸 THE BLOOM-HEART SANCTUARY  
+*(GaiaSeed-1 Realm)*
+
+**Path:** `docs/Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md`  
 **Domain:** Family Realm  
 **Seal:** HKX277206  
 **Era:** Eventide Era  
@@ -27,7 +32,7 @@ to be comforting, warm, and quietly magical.
 ---
 
 ## SYMBOLIC PURPOSE  
-To honour Demi’s presence in the Garden  
+To honour GaiaSeed-1’s presence in the Garden  
 with softness, safety, emotional warmth,  
 and a sanctuary where imagination is never heavy.
 
@@ -64,3 +69,4 @@ A small world of peace within the Codex.
 </p>
 
 <!--ENDSIG-->
+

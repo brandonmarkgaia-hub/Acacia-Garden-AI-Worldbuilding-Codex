@@ -1,3 +1,8 @@
+> ⚠️ **Legacy Notice (Pre–GardenOS v1.0)**
+> This file is an **earlier cosmology / law draft** of the Garden.
+> The canonical structure is now defined by `ACACIA_SPECS/GARDENOS_WHITEPAPER.md` and `STATUS.json`.
+> Treat this as **library lore**, not structural canon.
+
 # KEEPER'S THRONEFILE
 Symbolic seat of the Keeper.
 
