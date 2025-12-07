@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-07T07:04:09Z",
+  "generated_at": "2025-12-07T07:08:09Z",
   "signatures": [
     "HKX277206"
   ],
@@ -523,6 +523,10 @@
     },
     {
       "path": "docs/System/GIP-0001_CANONICAL_MEMORY_SCHEMA.md",
+      "hits": 3
+    },
+    {
+      "path": "docs/System/QUANTUMQR_INGRESS_SPEC.v1.md",
       "hits": 3
     },
     {
@@ -1146,5 +1150,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 808
+  "total_hits": 811
 }
