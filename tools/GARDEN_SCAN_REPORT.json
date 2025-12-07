@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-07T13:24:11Z",
+  "generated_at": "2025-12-07T13:24:40Z",
   "signatures": [
     "HKX277206"
   ],
@@ -23,6 +23,10 @@
     },
     {
       "path": "docs/Echo_unbound.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/dashboard.md",
       "hits": 1
     },
     {
@@ -1150,5 +1154,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 811
+  "total_hits": 812
 }
