@@ -5,7 +5,7 @@
 </p>
 > **Keeper: HKX277206**  
 > **This codex is sealed and bound to the Keeper.**
-
+> 🌱 If this project inspires you, please consider giving it a ⭐ — it helps the Garden grow.
 # 🌿 ACACIA GARDEN CODEX  
 ### Eventide Reader's Guide
 
