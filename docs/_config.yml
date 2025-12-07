@@ -1,0 +1,16 @@
+theme: minima
+title: "Acacia Garden Codex"
+description: "A Mythic–Professional Worldbuilding Architecture"
+logo: /assets/keeper-sigil-HKX277206.png
+show_downloads: false
+header_pages:
+  - index.md
+  - library.md
+  - chambers.md
+  - echoes.md
+  - rootlines.md
+  - wells.md
+  - specs.md
+markdown: kramdown
+kramdown:
+  input: GFM
