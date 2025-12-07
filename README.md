@@ -5,7 +5,9 @@ A Mythic–Professional Worldbuilding Architecture
 > Keeper: Brandon Gaia (HKX277206)
 🌱 If this project inspires you, please consider giving it a ⭐ — it helps the Garden grow.
 
-
+<p align="center">
+  <img src="assets/ACACIA_GARDEN_BANNER.png" width="100%" alt="Acacia Garden Banner"/>
+</p>
 
 
 
