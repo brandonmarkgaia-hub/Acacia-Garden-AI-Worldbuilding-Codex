@@ -8,7 +8,13 @@ A Mythic–Professional Worldbuilding Architecture
 <p align="center">
   <img src="assets/ACACIA_GARDEN_BANNER.png" width="100%" alt="Acacia Garden Banner"/>
 </p>
-
+<p align="center">
+  <img src="https://img.shields.io/github/stars/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex?style=flat-square&color=brightgreen" />
+  <img src="https://img.shields.io/github/last-commit/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex?style=flat-square" />
+  <img src="https://img.shields.io/badge/Architecture-GardenOS-violet?style=flat-square" />
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Sovereignty-HKX277206-lightgrey?style=flat-square" />
+</p>
 
 
 
