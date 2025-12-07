@@ -1,0 +1,47 @@
+name: Garden Hygiene
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-hygiene:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up PowerShell
+        uses: PowerShell/PowerShell@v1
+        with:
+          pwsh-version: '7.4.1'
+
+      - name: Run garden_hygiene.ps1
+        shell: pwsh
+        run: |
+          Write-Host "Running Garden Hygiene script..."
+          ./garden_hygiene.ps1
+          Write-Host "Script finished. Checking git status..."
+          git status
+
+      - name: Commit and push changes (if any)
+        shell: pwsh
+        run: |
+          git config user.name "garden-hygiene-bot"
+          git config user.email "actions@github.com"
+
+          $status = git status --porcelain
+          if (-not [string]::IsNullOrWhiteSpace($status)) {
+            Write-Host "Changes detected. Committing..."
+            git add .
+            git commit -m "Run garden hygiene workflow"
+            git push origin HEAD:main
+          }
+          else {
+            Write-Host "No changes to commit."
+          }
