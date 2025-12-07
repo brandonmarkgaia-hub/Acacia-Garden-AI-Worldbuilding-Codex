@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "GardenMemoryV1",
+  "description": "Canonical schema for Garden memory objects: Echo, Chamber, Rootline.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Global semantic ID (e.g. ECHO:HKX277206–2025-12-07–0001)."
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["echo", "chamber", "rootline"],
+      "description": "The memory archetype."
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema or content version for this object (e.g. v1, v1.1)."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this memory object was first created."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this memory object was last updated."
+    },
+    "keeper_id": {
+      "type": "string",
+      "description": "Identifier of the Keeper / user responsible for this memory (e.g. HKX277206)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["keeper", "chamber", "session", "agent", "system"],
+      "description": "Logical scope this memory belongs to."
+    },
+    "title": {
+      "type": "string",
+      "description": "Short human-readable title for the memory."
+    },
+    "content": {
+      "type": "string",
+      "description": "Primary textual content (can be plain text, markdown, or symbolic Garden language)."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form tags for quick grouping and search."
+    },
+    "importance": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Salience score (0–1) used by schedulers / attention layers."
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Origin and transformation history metadata.",
+      "properties": {
+        "source_system": { "type": "string" },
+        "source_ref": { "type": "string" },
+        "created_by_agent": { "type": "string" },
+        "created_via_tool": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "lineage": {
+      "type": "object",
+      "description": "Lineage relations to other memories.",
+      "properties": {
+        "parents": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of parent memories (Chambers/Echoes/Rootlines)."
+        },
+        "children": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of child memories derived from this one."
+        },
+        "rootline_id": {
+          "type": "string",
+          "description": "If part of a Rootline, the Rootline's ID."
+        }
+      },
+      "additionalProperties": true"
+    },
+    "graph": {
+      "type": "object",
+      "description": "Graph-related hints for Root Lattice (labels, types).",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Graph labels (e.g. ['Chamber','Mythic'])."
+        },
+        "relations": {
+          "type": "array",
+          "description": "Suggested relations to create in Graphiti / openCypher layer.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "target_id": { "type": "string" },
+              "properties": { "type": "object", "additionalProperties": true }
+            },
+            "required": ["type", "target_id"]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "embeddings": {
+      "type": "object",
+      "description": "Optional vector representations for semantic search.",
+      "properties": {
+        "model": { "type": "string" },
+        "vector": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Free-form metadata for specific applications (QR payloads, file paths, etc.).",
+      "additionalProperties": true
+    }
+  },
+  "required": ["id", "kind", "created_at", "keeper_id", "scope", "content"],
+  "additionalProperties": false
+}
