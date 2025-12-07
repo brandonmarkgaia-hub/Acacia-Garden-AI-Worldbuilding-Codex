@@ -1,0 +1,27 @@
+body {
+  background: #0d0d0f;
+  color: #e6e6e6;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #aaf2c1;
+  font-weight: 600;
+}
+
+a {
+  color: #85e6b5;
+}
+
+code {
+  background: #1a1a1d;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+nav {
+  background: #141416;
+  padding: 10px 15px;
+  border-bottom: 1px solid #2f2f2f;
+}
