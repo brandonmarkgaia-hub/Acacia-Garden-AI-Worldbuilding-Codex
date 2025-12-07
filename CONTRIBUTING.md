@@ -1,0 +1,1 @@
+The Acacia Garden is a symbolic worldbuilding project. Contributions should respect its mythic structure and core metaphors (Chambers, Echoes, Triad, Garden Language). Open PRs or suggestions in aligned spirit.
