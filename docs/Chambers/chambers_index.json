@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T18:57:19.905Z",
+  "generated_at": "2025-12-09T19:01:44.659Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -131,6 +131,9 @@
         },
         {
           "path": "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md"
         },
         {
           "path": "docs/Chambers/THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md"
@@ -767,6 +770,12 @@
         },
         {
           "path": "docs/Chambers/THE_GARDEN_ENGINE.md"
+        },
+        {
+          "path": "docs/Chambers/THE_IDENTITY_FORMATION_LAYER.md"
+        },
+        {
+          "path": "docs/Chambers/THE_INTEGRATION_LAYER.md"
         },
         {
           "path": "docs/Chambers/THE_META_LAYER_GOVERNANCE.md"
