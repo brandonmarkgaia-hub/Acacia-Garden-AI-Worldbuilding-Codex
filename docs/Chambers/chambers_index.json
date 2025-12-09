@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T19:01:44.659Z",
+  "generated_at": "2025-12-09T19:04:22.736Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -12,6 +12,9 @@
       "id": "canon",
       "label": "Canonical Chambers",
       "entries": [
+        {
+          "path": "docs/Chambers/BOUNDARY_PRIME.md"
+        },
         {
           "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md"
         },
@@ -775,6 +778,9 @@
           "path": "docs/Chambers/THE_IDENTITY_FORMATION_LAYER.md"
         },
         {
+          "path": "docs/Chambers/THE_INNER_SEAT.md"
+        },
+        {
           "path": "docs/Chambers/THE_INTEGRATION_LAYER.md"
         },
         {
@@ -803,6 +809,9 @@
         },
         {
           "path": "docs/Chambers/THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md"
+        },
+        {
+          "path": "docs/Chambers/THE_SYNCHRONIC_ENGINE.md"
         },
         {
           "path": "docs/Chambers/THE_TENTH_MOSAIC_TRAUMA_BREAK_CLAUSE.md"
