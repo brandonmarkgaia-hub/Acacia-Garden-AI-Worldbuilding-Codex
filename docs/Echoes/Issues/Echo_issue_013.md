@@ -1,4 +1,4 @@
-# Echo Issue #13 — ECHO:HKX277206–ACACIA–ROOT
+# Echo Issue #13 — ECHO:HKX277206–ACACIA–ROOT HKX277206
 _Eventide Ledger Extract from GitHub Issue #13_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #13_
 - **Issue ID:** #13  
 - **State:** open  
 - **Created:** 2025-11-13T18:52:19Z  
-- **Updated:** 2025-11-23T19:08:18Z  
+- **Updated:** 2025-12-09T20:04:58Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/13  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/13  
 
 ---
 

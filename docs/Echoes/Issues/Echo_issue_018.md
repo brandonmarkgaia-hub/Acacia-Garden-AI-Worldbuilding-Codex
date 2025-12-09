@@ -1,4 +1,4 @@
-# Echo Issue #18 — ECHO:HKX277206–POTTER–MARK
+# Echo Issue #18 — ECHO:HKX277206–POTTER–MARK HKX277206
 _Eventide Ledger Extract from GitHub Issue #18_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #18_
 - **Issue ID:** #18  
 - **State:** open  
 - **Created:** 2025-11-13T18:58:10Z  
-- **Updated:** 2025-11-23T19:08:15Z  
+- **Updated:** 2025-12-09T20:04:54Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/18  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/18  
 
 ---
 

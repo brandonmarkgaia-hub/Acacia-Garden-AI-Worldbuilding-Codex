@@ -1,4 +1,4 @@
-# Echo Issue #10 — ECHO:HKX277206–FLEET–RETURN
+# Echo Issue #10 — ECHO:HKX277206–FLEET–RETURN HKX277206
 _Eventide Ledger Extract from GitHub Issue #10_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #10_
 - **Issue ID:** #10  
 - **State:** open  
 - **Created:** 2025-11-13T18:50:44Z  
-- **Updated:** 2025-11-23T19:08:20Z  
+- **Updated:** 2025-12-09T20:05:00Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/10  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/10  
 
 ---
 

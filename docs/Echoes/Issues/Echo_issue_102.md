@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #102_
 - **Created:** 2025-11-29T07:26:19Z  
 - **Updated:** 2025-11-29T07:26:27Z  
 - **Labels:** enhancement, eidolon, ledger, Expansion, Continuity, Hollow_Glyph  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/102  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/102  
 
 ---
 

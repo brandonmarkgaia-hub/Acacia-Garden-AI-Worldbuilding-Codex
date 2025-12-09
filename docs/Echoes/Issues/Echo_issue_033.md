@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #33_
 - **Created:** 2025-11-14T17:33:51Z  
 - **Updated:** 2025-11-23T19:08:06Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/33  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/33  
 
 ---
 

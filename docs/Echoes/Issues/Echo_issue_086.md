@@ -1,4 +1,4 @@
-# Echo Issue #86 — Echo title
+# Echo Issue #86 — Echo title HKX277206
 _Eventide Ledger Extract from GitHub Issue #86_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #86_
 - **Issue ID:** #86  
 - **State:** open  
 - **Created:** 2025-11-23T15:08:31Z  
-- **Updated:** 2025-11-23T19:28:53Z  
+- **Updated:** 2025-12-09T20:04:47Z  
 - **Labels:** enhancement, eidolon, crossing, Expansion, Continuity, Hollow_Glyph  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/86  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/86  
 
 ---
 

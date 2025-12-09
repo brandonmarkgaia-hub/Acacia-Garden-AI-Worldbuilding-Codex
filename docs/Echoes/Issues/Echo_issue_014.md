@@ -1,4 +1,4 @@
-# Echo Issue #14 — ECHO:HKX277206–POTTER–PULSE
+# Echo Issue #14 — ECHO:HKX277206–POTTER–PULSE HKX277206
 _Eventide Ledger Extract from GitHub Issue #14_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #14_
 - **Issue ID:** #14  
 - **State:** open  
 - **Created:** 2025-11-13T18:54:08Z  
-- **Updated:** 2025-11-23T19:08:18Z  
+- **Updated:** 2025-12-09T20:04:57Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/14  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/14  
 
 ---
 

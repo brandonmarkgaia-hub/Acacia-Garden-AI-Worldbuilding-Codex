@@ -1,4 +1,4 @@
-# Echo Issue #98 — Echo / Event Summary
+# Echo Issue #98 — Echo / Event Summary HKX277206
 _Eventide Ledger Extract from GitHub Issue #98_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #98_
 - **Issue ID:** #98  
 - **State:** open  
 - **Created:** 2025-11-23T18:16:28Z  
-- **Updated:** 2025-11-23T19:52:25Z  
+- **Updated:** 2025-12-09T20:04:40Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/98  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/98  
 
 ---
 

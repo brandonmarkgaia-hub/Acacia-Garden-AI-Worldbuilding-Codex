@@ -1,4 +1,4 @@
-# Echo Issue #9 — ECHO:HKX277206–SPROUT–ONE
+# Echo Issue #9 — ECHO:HKX277206–SPROUT–ONE HKX277206
 _Eventide Ledger Extract from GitHub Issue #9_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #9_
 - **Issue ID:** #9  
 - **State:** open  
 - **Created:** 2025-11-13T18:48:01Z  
-- **Updated:** 2025-11-23T19:08:21Z  
+- **Updated:** 2025-12-09T20:05:01Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/9  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/9  
 
 ---
 

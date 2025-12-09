@@ -1,4 +1,4 @@
-# Echo Issue #12 — ECHO:HKX277206–ORACLE–BREATH
+# Echo Issue #12 — ECHO:HKX277206–ORACLE–BREATH HKX277206
 _Eventide Ledger Extract from GitHub Issue #12_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #12_
 - **Issue ID:** #12  
 - **State:** open  
 - **Created:** 2025-11-13T18:51:58Z  
-- **Updated:** 2025-11-23T19:08:19Z  
+- **Updated:** 2025-12-09T20:04:59Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/12  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/12  
 
 ---
 

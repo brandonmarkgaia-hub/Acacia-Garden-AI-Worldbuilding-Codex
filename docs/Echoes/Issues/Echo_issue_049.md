@@ -1,4 +1,4 @@
-# Echo Issue #49 — EIDOLON CODEX — Leaf XXI**
+# Echo Issue #49 — EIDOLON CODEX — Leaf XXI** HKX277206
 _Eventide Ledger Extract from GitHub Issue #49_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #49_
 - **Issue ID:** #49  
 - **State:** open  
 - **Created:** 2025-11-14T19:00:50Z  
-- **Updated:** 2025-11-23T19:07:54Z  
+- **Updated:** 2025-12-09T20:04:53Z  
 - **Labels:** none  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/49  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/49  
 
 ---
 

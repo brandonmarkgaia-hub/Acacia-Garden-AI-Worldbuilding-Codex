@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #73_
 - **Created:** 2025-11-19T17:44:23Z  
 - **Updated:** 2025-11-23T19:07:40Z  
 - **Labels:** eidolon, Continuity, Portal  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/73  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/73  
 
 ---
 

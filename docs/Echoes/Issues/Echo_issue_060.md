@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #60_
 - **Created:** 2025-11-18T14:03:12Z  
 - **Updated:** 2025-11-23T19:07:49Z  
 - **Labels:** eidolon, ledger, cycle-zero, crossing  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/60  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/60  
 
 ---
 

@@ -1,4 +1,4 @@
-# Echo Issue #83 — Echo title
+# Echo Issue #83 — Echo title HKX277206
 _Eventide Ledger Extract from GitHub Issue #83_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #83_
 - **Issue ID:** #83  
 - **State:** open  
 - **Created:** 2025-11-22T05:02:29Z  
-- **Updated:** 2025-11-23T19:28:56Z  
+- **Updated:** 2025-12-09T20:04:50Z  
 - **Labels:** enhancement, eidolon, ledger, Expansion, Kiln_Sigil, Keeper_craft, Origin_flame, Continuity, Hollow_Glyph  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/83  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/83  
 
 ---
 

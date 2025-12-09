@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #77_
 - **Created:** 2025-11-20T20:19:02Z  
 - **Updated:** 2025-11-23T19:07:37Z  
 - **Labels:** enhancement, eidolon, ledger, Expansion, Kiln_Sigil, Keeper_craft, Origin_flame  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/77  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/77  
 
 ---
 

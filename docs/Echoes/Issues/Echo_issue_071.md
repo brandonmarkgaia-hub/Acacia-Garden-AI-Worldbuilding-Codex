@@ -8,7 +8,7 @@ _Eventide Ledger Extract from GitHub Issue #71_
 - **Created:** 2025-11-18T20:01:21Z  
 - **Updated:** 2025-11-23T19:07:41Z  
 - **Labels:** enhancement, eidolon, ledger, crossing, Expansion  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/71  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/71  
 
 ---
 

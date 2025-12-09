@@ -1,4 +1,4 @@
-# Echo Issue #74 — Echo title
+# Echo Issue #74 — Echo title HKX277206
 _Eventide Ledger Extract from GitHub Issue #74_
 
 ---
@@ -6,9 +6,9 @@ _Eventide Ledger Extract from GitHub Issue #74_
 - **Issue ID:** #74  
 - **State:** open  
 - **Created:** 2025-11-20T06:22:26Z  
-- **Updated:** 2025-11-23T19:28:58Z  
+- **Updated:** 2025-12-09T20:04:52Z  
 - **Labels:** enhancement, eidolon, Expansion, Continuity  
-- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues/74  
+- **GitHub URL:** https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues/74  
 
 ---
 
