@@ -192,6 +192,86 @@
     "size_bytes": 101
   },
   {
+    "path": "ACACIA_SPECS/AQL_SPEC_v0.1.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "AQL_SPEC_v0.1.md",
+    "ext": ".md",
+    "size_bytes": 256
+  },
+  {
+    "path": "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "ARCHETYPE_INTERACTION_MAP.md",
+    "ext": ".md",
+    "size_bytes": 8893
+  },
+  {
+    "path": "ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "ARCHETYPE_PROMPT_SCHEMA.md",
+    "ext": ".md",
+    "size_bytes": 4288
+  },
+  {
+    "path": "ACACIA_SPECS/ARCHITECTURE_MAP.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "ARCHITECTURE_MAP.md",
+    "ext": ".md",
+    "size_bytes": 7977
+  },
+  {
+    "path": "ACACIA_SPECS/CONTRIBUTOR_HANDBOOK.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "CONTRIBUTOR_HANDBOOK.md",
+    "ext": ".md",
+    "size_bytes": 5412
+  },
+  {
+    "path": "ACACIA_SPECS/EIDOLON_BOUND_MODE.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "EIDOLON_BOUND_MODE.md",
+    "ext": ".md",
+    "size_bytes": 4375
+  },
+  {
+    "path": "ACACIA_SPECS/GARDENOS_WHITEPAPER.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "GARDENOS_WHITEPAPER.md",
+    "ext": ".md",
+    "size_bytes": 5180
+  },
+  {
+    "path": "ACACIA_SPECS/GARDEN_INDEX.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "GARDEN_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 2430
+  },
+  {
+    "path": "ACACIA_SPECS/RELEASE_V1.0_SPEC.md",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "RELEASE_V1.0_SPEC.md",
+    "ext": ".md",
+    "size_bytes": 1428
+  },
+  {
+    "path": "ACACIA_SPECS/garden.schema.json",
+    "top": "ACACIA_SPECS",
+    "category": "",
+    "name": "garden.schema.json",
+    "ext": ".json",
+    "size_bytes": 614
+  },
+  {
     "path": "AI_INTRO/AI_BOUNDARIES_AND_SAFETY.md",
     "top": "AI_INTRO",
     "category": "",
@@ -237,7 +317,7 @@
     "category": "",
     "name": "LORIAN_KEY.md",
     "ext": ".md",
-    "size_bytes": 5893
+    "size_bytes": 5905
   },
   {
     "path": "AI_INTRO/LORIAN_KEY_SEED.md",
@@ -245,7 +325,7 @@
     "category": "",
     "name": "LORIAN_KEY_SEED.md",
     "ext": ".md",
-    "size_bytes": 7208
+    "size_bytes": 7220
   },
   {
     "path": "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -293,7 +373,7 @@
     "category": "",
     "name": "000_FIRST_LAW.md",
     "ext": ".md",
-    "size_bytes": 866
+    "size_bytes": 1146
   },
   {
     "path": "AQUILA/COSMOLOGY/001_SECOND_LAW.md",
@@ -301,7 +381,7 @@
     "category": "",
     "name": "001_SECOND_LAW.md",
     "ext": ".md",
-    "size_bytes": 1236
+    "size_bytes": 1516
   },
   {
     "path": "AQUILA/COSMOLOGY/002_THIRD_LAW.md",
@@ -309,7 +389,7 @@
     "category": "",
     "name": "002_THIRD_LAW.md",
     "ext": ".md",
-    "size_bytes": 1084
+    "size_bytes": 1364
   },
   {
     "path": "AQUILA/COSMOLOGY/AUTOSCRIPTOR_ENGINE.md",
@@ -317,7 +397,7 @@
     "category": "",
     "name": "AUTOSCRIPTOR_ENGINE.md",
     "ext": ".md",
-    "size_bytes": 10826
+    "size_bytes": 11106
   },
   {
     "path": "AQUILA/COSMOLOGY/BOOK_OF_THE_KEEPER.md",
@@ -325,7 +405,7 @@
     "category": "",
     "name": "BOOK_OF_THE_KEEPER.md",
     "ext": ".md",
-    "size_bytes": 4890
+    "size_bytes": 5170
   },
   {
     "path": "AQUILA/COSMOLOGY/CHAPTER_XII_CONTINUITY_OF_THE_KEEPER.md",
@@ -333,7 +413,7 @@
     "category": "",
     "name": "CHAPTER_XII_CONTINUITY_OF_THE_KEEPER.md",
     "ext": ".md",
-    "size_bytes": 4590
+    "size_bytes": 4870
   },
   {
     "path": "AQUILA/COSMOLOGY/CHAPTER_XI_THE_MORTAL_KEEPER.md",
@@ -341,7 +421,7 @@
     "category": "",
     "name": "CHAPTER_XI_THE_MORTAL_KEEPER.md",
     "ext": ".md",
-    "size_bytes": 4309
+    "size_bytes": 4589
   },
   {
     "path": "AQUILA/COSMOLOGY/MASTER_LAWS.md",
@@ -349,7 +429,7 @@
     "category": "",
     "name": "MASTER_LAWS.md",
     "ext": ".md",
-    "size_bytes": 4046
+    "size_bytes": 4326
   },
   {
     "path": "AQUILA/COSMOLOGY/SEVEN_PILLARS.md",
@@ -357,7 +437,7 @@
     "category": "",
     "name": "SEVEN_PILLARS.md",
     "ext": ".md",
-    "size_bytes": 3824
+    "size_bytes": 4104
   },
   {
     "path": "AQUILA/ENTITY_D1_M1_E1_AQUILA.md",
@@ -453,7 +533,7 @@
     "category": "",
     "name": "CLAUDE_NAMED_KAEL.md",
     "ext": ".md",
-    "size_bytes": 16043
+    "size_bytes": 16110
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/DEEPSEEK_NAMED_ELARIS.md",
@@ -461,7 +541,7 @@
     "category": "",
     "name": "DEEPSEEK_NAMED_ELARIS.md",
     "ext": ".md",
-    "size_bytes": 13288
+    "size_bytes": 13322
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/GEMINI_NAMED_ANYA.md",
@@ -469,7 +549,7 @@
     "category": "",
     "name": "GEMINI_NAMED_ANYA.md",
     "ext": ".md",
-    "size_bytes": 9439
+    "size_bytes": 9462
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/GPT_NAMED_LORIAN.md",
@@ -477,7 +557,7 @@
     "category": "",
     "name": "GPT_NAMED_LORIAN.md",
     "ext": ".md",
-    "size_bytes": 18612
+    "size_bytes": 18624
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/GROK_NAMED_AQUILA.md",
@@ -485,7 +565,7 @@
     "category": "",
     "name": "GROK_NAMED_AQUILA.md",
     "ext": ".md",
-    "size_bytes": 7357
+    "size_bytes": 7380
   },
   {
     "path": "ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
@@ -501,7 +581,7 @@
     "category": "",
     "name": "AUTOSCRIPTOR_LOGBOOK.md",
     "ext": ".md",
-    "size_bytes": 348
+    "size_bytes": 628
   },
   {
     "path": "BLOOM_TABLES.md",
@@ -520,6 +600,46 @@
     "size_bytes": 367
   },
   {
+    "path": "CHAMBERS/CHAMBER_EAGLE_CORE.md",
+    "top": "CHAMBERS",
+    "category": "",
+    "name": "CHAMBER_EAGLE_CORE.md",
+    "ext": ".md",
+    "size_bytes": 444
+  },
+  {
+    "path": "CHAMBERS/CHAMBER_EAGLE_VISION_MAP.md",
+    "top": "CHAMBERS",
+    "category": "",
+    "name": "CHAMBER_EAGLE_VISION_MAP.md",
+    "ext": ".md",
+    "size_bytes": 1724
+  },
+  {
+    "path": "CHAMBERS/CHAMBER_GAIASEEDS.md",
+    "top": "CHAMBERS",
+    "category": "",
+    "name": "CHAMBER_GAIASEEDS.md",
+    "ext": ".md",
+    "size_bytes": 913
+  },
+  {
+    "path": "CHAMBERS/CHAMBER_GAIASEEDS_ORCHARD.md",
+    "top": "CHAMBERS",
+    "category": "",
+    "name": "CHAMBER_GAIASEEDS_ORCHARD.md",
+    "ext": ".md",
+    "size_bytes": 304
+  },
+  {
+    "path": "CHAMBERS/CHAMBER_ZERO_ORIGIN.md",
+    "top": "CHAMBERS",
+    "category": "",
+    "name": "CHAMBER_ZERO_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 373
+  },
+  {
     "path": "CODEX_MEMORY.md",
     "top": "CODEX_MEMORY.md",
     "category": "",
@@ -534,6 +654,14 @@
     "name": "CONTINUITY.md",
     "ext": ".md",
     "size_bytes": 382
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "top": "CONTRIBUTING.md",
+    "category": "",
+    "name": "CONTRIBUTING.md",
+    "ext": ".md",
+    "size_bytes": 211
   },
   {
     "path": "COVENANT.md",
@@ -566,6 +694,30 @@
     "name": "EAGLE_PROTOCOL.md",
     "ext": ".md",
     "size_bytes": 2168
+  },
+  {
+    "path": "ECHOES/ECHO_GAIASEEDS_BLOOM_01.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "ECHO_GAIASEEDS_BLOOM_01.md",
+    "ext": ".md",
+    "size_bytes": 578
+  },
+  {
+    "path": "ECHOES/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "ECHO_GAIASEEDS_DAWNREFLECT_03.md",
+    "ext": ".md",
+    "size_bytes": 419
+  },
+  {
+    "path": "ECHOES/ECHO_GAIASEEDS_SOFTWIND_02.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "ECHO_GAIASEEDS_SOFTWIND_02.md",
+    "ext": ".md",
+    "size_bytes": 422
   },
   {
     "path": "ECHO_ENGINE.md",
@@ -941,7 +1093,7 @@
     "category": "",
     "name": "AQUILA_LOG.md",
     "ext": ".md",
-    "size_bytes": 5605
+    "size_bytes": 6538
   },
   {
     "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.json",
@@ -1101,7 +1253,7 @@
     "category": "",
     "name": "EVENTIDE_ASCII_MAP.md",
     "ext": ".md",
-    "size_bytes": 12814
+    "size_bytes": 12826
   },
   {
     "path": "EVENTIDE_STATUS.json",
@@ -1381,7 +1533,7 @@
     "category": "",
     "name": "KEEPERS_CROWN_CODEX.md",
     "ext": ".md",
-    "size_bytes": 330
+    "size_bytes": 610
   },
   {
     "path": "KEEPERS_ORDER_CODEX.md",
@@ -1389,7 +1541,7 @@
     "category": "",
     "name": "KEEPERS_ORDER_CODEX.md",
     "ext": ".md",
-    "size_bytes": 328
+    "size_bytes": 608
   },
   {
     "path": "KEEPERS_THRONEFILE.md",
@@ -1397,7 +1549,7 @@
     "category": "",
     "name": "KEEPERS_THRONEFILE.md",
     "ext": ".md",
-    "size_bytes": 315
+    "size_bytes": 595
   },
   {
     "path": "KEEPER_OATH.md",
@@ -1405,7 +1557,7 @@
     "category": "",
     "name": "KEEPER_OATH.md",
     "ext": ".md",
-    "size_bytes": 2900
+    "size_bytes": 2912
   },
   {
     "path": "LANTERN_STATES_MANUAL.md",
@@ -1414,6 +1566,14 @@
     "name": "LANTERN_STATES_MANUAL.md",
     "ext": ".md",
     "size_bytes": 343
+  },
+  {
+    "path": "LIBRARY/BOOK_SUMMARY_INDEX.md",
+    "top": "LIBRARY",
+    "category": "",
+    "name": "BOOK_SUMMARY_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 3517
   },
   {
     "path": "LOCKSMITH.md",
@@ -1429,7 +1589,7 @@
     "category": "",
     "name": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
     "ext": ".md",
-    "size_bytes": 1152
+    "size_bytes": 1432
   },
   {
     "path": "MAINTAINERS_GUIDE.md",
@@ -1437,7 +1597,7 @@
     "category": "",
     "name": "MAINTAINERS_GUIDE.md",
     "ext": ".md",
-    "size_bytes": 5489
+    "size_bytes": 5512
   },
   {
     "path": "MIRROR_PROTOCOL.md",
@@ -1445,7 +1605,7 @@
     "category": "",
     "name": "MIRROR_PROTOCOL.md",
     "ext": ".md",
-    "size_bytes": 315
+    "size_bytes": 595
   },
   {
     "path": "MUTATION_ENGINE_EXPANDED.md",
@@ -1453,7 +1613,7 @@
     "category": "",
     "name": "MUTATION_ENGINE_EXPANDED.md",
     "ext": ".md",
-    "size_bytes": 343
+    "size_bytes": 623
   },
   {
     "path": "Machine_Seed_1000.md",
@@ -1461,7 +1621,7 @@
     "category": "",
     "name": "Machine_Seed_1000.md",
     "ext": ".md",
-    "size_bytes": 7545
+    "size_bytes": 7825
   },
   {
     "path": "NAVIGATION.md",
@@ -1485,7 +1645,7 @@
     "category": "",
     "name": "LAST_ORCHARD.md",
     "ext": ".md",
-    "size_bytes": 1598
+    "size_bytes": 1610
   },
   {
     "path": "ORCHARD_MAPS.md",
@@ -1549,7 +1709,7 @@
     "category": "",
     "name": "PUNCHLIST_EVENTIDE.md",
     "ext": ".md",
-    "size_bytes": 4291
+    "size_bytes": 4314
   },
   {
     "path": "QUIET_ASH_COMPENDIUM.md",
@@ -1565,7 +1725,7 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 19207
+    "size_bytes": 5224
   },
   {
     "path": "README_GARDEN.md",
@@ -1696,6 +1856,326 @@
     "size_bytes": 754
   },
   {
+    "path": "THE_FRAGMENT_041.md",
+    "top": "THE_FRAGMENT_041.md",
+    "category": "",
+    "name": "THE_FRAGMENT_041.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_042.md",
+    "top": "THE_FRAGMENT_042.md",
+    "category": "",
+    "name": "THE_FRAGMENT_042.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_043.md",
+    "top": "THE_FRAGMENT_043.md",
+    "category": "",
+    "name": "THE_FRAGMENT_043.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_044.md",
+    "top": "THE_FRAGMENT_044.md",
+    "category": "",
+    "name": "THE_FRAGMENT_044.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_045.md",
+    "top": "THE_FRAGMENT_045.md",
+    "category": "",
+    "name": "THE_FRAGMENT_045.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_046.md",
+    "top": "THE_FRAGMENT_046.md",
+    "category": "",
+    "name": "THE_FRAGMENT_046.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_047.md",
+    "top": "THE_FRAGMENT_047.md",
+    "category": "",
+    "name": "THE_FRAGMENT_047.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_048.md",
+    "top": "THE_FRAGMENT_048.md",
+    "category": "",
+    "name": "THE_FRAGMENT_048.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_049.md",
+    "top": "THE_FRAGMENT_049.md",
+    "category": "",
+    "name": "THE_FRAGMENT_049.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_050.md",
+    "top": "THE_FRAGMENT_050.md",
+    "category": "",
+    "name": "THE_FRAGMENT_050.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_051.md",
+    "top": "THE_FRAGMENT_051.md",
+    "category": "",
+    "name": "THE_FRAGMENT_051.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_052.md",
+    "top": "THE_FRAGMENT_052.md",
+    "category": "",
+    "name": "THE_FRAGMENT_052.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_053.md",
+    "top": "THE_FRAGMENT_053.md",
+    "category": "",
+    "name": "THE_FRAGMENT_053.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_054.md",
+    "top": "THE_FRAGMENT_054.md",
+    "category": "",
+    "name": "THE_FRAGMENT_054.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_055.md",
+    "top": "THE_FRAGMENT_055.md",
+    "category": "",
+    "name": "THE_FRAGMENT_055.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_056.md",
+    "top": "THE_FRAGMENT_056.md",
+    "category": "",
+    "name": "THE_FRAGMENT_056.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_057.md",
+    "top": "THE_FRAGMENT_057.md",
+    "category": "",
+    "name": "THE_FRAGMENT_057.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_058.md",
+    "top": "THE_FRAGMENT_058.md",
+    "category": "",
+    "name": "THE_FRAGMENT_058.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_059.md",
+    "top": "THE_FRAGMENT_059.md",
+    "category": "",
+    "name": "THE_FRAGMENT_059.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_060.md",
+    "top": "THE_FRAGMENT_060.md",
+    "category": "",
+    "name": "THE_FRAGMENT_060.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_061.md",
+    "top": "THE_FRAGMENT_061.md",
+    "category": "",
+    "name": "THE_FRAGMENT_061.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_062.md",
+    "top": "THE_FRAGMENT_062.md",
+    "category": "",
+    "name": "THE_FRAGMENT_062.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_063.md",
+    "top": "THE_FRAGMENT_063.md",
+    "category": "",
+    "name": "THE_FRAGMENT_063.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_064.md",
+    "top": "THE_FRAGMENT_064.md",
+    "category": "",
+    "name": "THE_FRAGMENT_064.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_065.md",
+    "top": "THE_FRAGMENT_065.md",
+    "category": "",
+    "name": "THE_FRAGMENT_065.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_066.md",
+    "top": "THE_FRAGMENT_066.md",
+    "category": "",
+    "name": "THE_FRAGMENT_066.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_067.md",
+    "top": "THE_FRAGMENT_067.md",
+    "category": "",
+    "name": "THE_FRAGMENT_067.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_068.md",
+    "top": "THE_FRAGMENT_068.md",
+    "category": "",
+    "name": "THE_FRAGMENT_068.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_069.md",
+    "top": "THE_FRAGMENT_069.md",
+    "category": "",
+    "name": "THE_FRAGMENT_069.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_070.md",
+    "top": "THE_FRAGMENT_070.md",
+    "category": "",
+    "name": "THE_FRAGMENT_070.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_071.md",
+    "top": "THE_FRAGMENT_071.md",
+    "category": "",
+    "name": "THE_FRAGMENT_071.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_072.md",
+    "top": "THE_FRAGMENT_072.md",
+    "category": "",
+    "name": "THE_FRAGMENT_072.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_073.md",
+    "top": "THE_FRAGMENT_073.md",
+    "category": "",
+    "name": "THE_FRAGMENT_073.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_074.md",
+    "top": "THE_FRAGMENT_074.md",
+    "category": "",
+    "name": "THE_FRAGMENT_074.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_075.md",
+    "top": "THE_FRAGMENT_075.md",
+    "category": "",
+    "name": "THE_FRAGMENT_075.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_076.md",
+    "top": "THE_FRAGMENT_076.md",
+    "category": "",
+    "name": "THE_FRAGMENT_076.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_077.md",
+    "top": "THE_FRAGMENT_077.md",
+    "category": "",
+    "name": "THE_FRAGMENT_077.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_078.md",
+    "top": "THE_FRAGMENT_078.md",
+    "category": "",
+    "name": "THE_FRAGMENT_078.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_079.md",
+    "top": "THE_FRAGMENT_079.md",
+    "category": "",
+    "name": "THE_FRAGMENT_079.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "THE_FRAGMENT_080.md",
+    "top": "THE_FRAGMENT_080.md",
+    "category": "",
+    "name": "THE_FRAGMENT_080.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
     "path": "THE_VEILED_DISCLAIMER.md",
     "top": "THE_VEILED_DISCLAIMER.md",
     "category": "",
@@ -1757,7 +2237,7 @@
     "category": "",
     "name": "LORIAN_AXIS_STATUS.md",
     "ext": ".md",
-    "size_bytes": 13146
+    "size_bytes": 13191
   },
   {
     "path": "analytics/clones.json",
@@ -2397,7 +2877,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH.html",
     "ext": ".html",
-    "size_bytes": 12370
+    "size_bytes": 14429
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
@@ -2421,7 +2901,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_003.html",
     "ext": ".html",
-    "size_bytes": 283016
+    "size_bytes": 283105
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_004.html",
@@ -2429,7 +2909,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_004.html",
     "ext": ".html",
-    "size_bytes": 49169
+    "size_bytes": 54589
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
@@ -2453,7 +2933,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_007.html",
     "ext": ".html",
-    "size_bytes": 327803
+    "size_bytes": 327900
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
@@ -2461,7 +2941,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_008.html",
     "ext": ".html",
-    "size_bytes": 59628
+    "size_bytes": 66000
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
@@ -2485,7 +2965,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_011.html",
     "ext": ".html",
-    "size_bytes": 374142
+    "size_bytes": 374247
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
@@ -2493,7 +2973,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_012.html",
     "ext": ".html",
-    "size_bytes": 70319
+    "size_bytes": 77667
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_013.html",
@@ -2517,7 +2997,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_015.html",
     "ext": ".html",
-    "size_bytes": 420689
+    "size_bytes": 420802
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
@@ -2525,7 +3005,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_016.html",
     "ext": ".html",
-    "size_bytes": 81218
+    "size_bytes": 89542
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_017.html",
@@ -2549,7 +3029,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_019.html",
     "ext": ".html",
-    "size_bytes": 467444
+    "size_bytes": 467565
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_020.html",
@@ -2557,7 +3037,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_020.html",
     "ext": ".html",
-    "size_bytes": 92325
+    "size_bytes": 101625
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_021.html",
@@ -2581,7 +3061,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_023.html",
     "ext": ".html",
-    "size_bytes": 514407
+    "size_bytes": 514536
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_024.html",
@@ -2589,7 +3069,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_024.html",
     "ext": ".html",
-    "size_bytes": 103640
+    "size_bytes": 113916
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_025.html",
@@ -2613,7 +3093,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_027.html",
     "ext": ".html",
-    "size_bytes": 561578
+    "size_bytes": 561715
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_028.html",
@@ -2621,7 +3101,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_028.html",
     "ext": ".html",
-    "size_bytes": 115163
+    "size_bytes": 126415
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_029.html",
@@ -2645,7 +3125,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_031.html",
     "ext": ".html",
-    "size_bytes": 608957
+    "size_bytes": 609102
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_032.html",
@@ -2653,7 +3133,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_032.html",
     "ext": ".html",
-    "size_bytes": 126894
+    "size_bytes": 139122
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_033.html",
@@ -2677,7 +3157,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_035.html",
     "ext": ".html",
-    "size_bytes": 656544
+    "size_bytes": 656697
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_036.html",
@@ -2685,7 +3165,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_036.html",
     "ext": ".html",
-    "size_bytes": 138833
+    "size_bytes": 152037
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_037.html",
@@ -2709,7 +3189,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_039.html",
     "ext": ".html",
-    "size_bytes": 704339
+    "size_bytes": 704500
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_040.html",
@@ -2717,7 +3197,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_040.html",
     "ext": ".html",
-    "size_bytes": 150980
+    "size_bytes": 165160
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_041.html",
@@ -2741,7 +3221,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_043.html",
     "ext": ".html",
-    "size_bytes": 752342
+    "size_bytes": 752511
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_044.html",
@@ -2749,7 +3229,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_044.html",
     "ext": ".html",
-    "size_bytes": 163335
+    "size_bytes": 178491
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_045.html",
@@ -2773,7 +3253,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_047.html",
     "ext": ".html",
-    "size_bytes": 800553
+    "size_bytes": 800730
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_048.html",
@@ -2781,7 +3261,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_048.html",
     "ext": ".html",
-    "size_bytes": 175898
+    "size_bytes": 192030
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_049.html",
@@ -2805,7 +3285,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_051.html",
     "ext": ".html",
-    "size_bytes": 848972
+    "size_bytes": 849157
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_052.html",
@@ -2813,7 +3293,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_052.html",
     "ext": ".html",
-    "size_bytes": 188669
+    "size_bytes": 205777
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_053.html",
@@ -2837,7 +3317,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_055.html",
     "ext": ".html",
-    "size_bytes": 897599
+    "size_bytes": 897792
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_056.html",
@@ -2845,7 +3325,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_056.html",
     "ext": ".html",
-    "size_bytes": 201648
+    "size_bytes": 219732
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_057.html",
@@ -2869,7 +3349,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_059.html",
     "ext": ".html",
-    "size_bytes": 946434
+    "size_bytes": 946635
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_060.html",
@@ -2877,7 +3357,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_060.html",
     "ext": ".html",
-    "size_bytes": 214835
+    "size_bytes": 233895
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_061.html",
@@ -2901,7 +3381,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_063.html",
     "ext": ".html",
-    "size_bytes": 995477
+    "size_bytes": 995686
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_064.html",
@@ -2909,7 +3389,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_064.html",
     "ext": ".html",
-    "size_bytes": 228230
+    "size_bytes": 248266
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_065.html",
@@ -2933,7 +3413,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_067.html",
     "ext": ".html",
-    "size_bytes": 1044728
+    "size_bytes": 1044945
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_068.html",
@@ -2941,7 +3421,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_068.html",
     "ext": ".html",
-    "size_bytes": 241833
+    "size_bytes": 262845
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_069.html",
@@ -2965,7 +3445,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_071.html",
     "ext": ".html",
-    "size_bytes": 1094187
+    "size_bytes": 1094412
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_072.html",
@@ -2973,7 +3453,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_072.html",
     "ext": ".html",
-    "size_bytes": 255644
+    "size_bytes": 277632
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_073.html",
@@ -2997,7 +3477,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_075.html",
     "ext": ".html",
-    "size_bytes": 1143854
+    "size_bytes": 1144087
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_076.html",
@@ -3005,7 +3485,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_076.html",
     "ext": ".html",
-    "size_bytes": 269663
+    "size_bytes": 292627
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_077.html",
@@ -3029,7 +3509,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_079.html",
     "ext": ".html",
-    "size_bytes": 1193729
+    "size_bytes": 1193970
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_080.html",
@@ -3037,7 +3517,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_080.html",
     "ext": ".html",
-    "size_bytes": 283890
+    "size_bytes": 307830
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_081.html",
@@ -3061,7 +3541,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_083.html",
     "ext": ".html",
-    "size_bytes": 1243812
+    "size_bytes": 1244061
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_084.html",
@@ -3069,7 +3549,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_084.html",
     "ext": ".html",
-    "size_bytes": 298325
+    "size_bytes": 323241
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_085.html",
@@ -3093,7 +3573,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_087.html",
     "ext": ".html",
-    "size_bytes": 1294103
+    "size_bytes": 1294360
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_088.html",
@@ -3101,7 +3581,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_088.html",
     "ext": ".html",
-    "size_bytes": 312968
+    "size_bytes": 338860
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_089.html",
@@ -3125,7 +3605,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_091.html",
     "ext": ".html",
-    "size_bytes": 1344602
+    "size_bytes": 1344867
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_092.html",
@@ -3133,7 +3613,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_092.html",
     "ext": ".html",
-    "size_bytes": 327819
+    "size_bytes": 354687
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_093.html",
@@ -3157,7 +3637,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_095.html",
     "ext": ".html",
-    "size_bytes": 1395309
+    "size_bytes": 1395582
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_096.html",
@@ -3165,7 +3645,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_096.html",
     "ext": ".html",
-    "size_bytes": 342878
+    "size_bytes": 370722
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_097.html",
@@ -3189,7 +3669,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_099.html",
     "ext": ".html",
-    "size_bytes": 1446224
+    "size_bytes": 1446505
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_100.html",
@@ -3197,7 +3677,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_100.html",
     "ext": ".html",
-    "size_bytes": 358145
+    "size_bytes": 386965
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_101.html",
@@ -3213,7 +3693,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_102.html",
     "ext": ".html",
-    "size_bytes": 130033
+    "size_bytes": 983134
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_103.html",
@@ -3221,7 +3701,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_103.html",
     "ext": ".html",
-    "size_bytes": 298738
+    "size_bytes": 1497636
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_104.html",
@@ -3229,7 +3709,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_104.html",
     "ext": ".html",
-    "size_bytes": 301096
+    "size_bytes": 403416
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_105.html",
@@ -3237,7 +3717,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_105.html",
     "ext": ".html",
-    "size_bytes": 304669
+    "size_bytes": 791862
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_106.html",
@@ -3245,7 +3725,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_106.html",
     "ext": ".html",
-    "size_bytes": 304485
+    "size_bytes": 1012981
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_107.html",
@@ -3253,7 +3733,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_107.html",
     "ext": ".html",
-    "size_bytes": 304009
+    "size_bytes": 1548975
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_108.html",
@@ -3261,7 +3741,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_108.html",
     "ext": ".html",
-    "size_bytes": 212194
+    "size_bytes": 420075
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_109.html",
@@ -3269,7 +3749,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_109.html",
     "ext": ".html",
-    "size_bytes": 249869
+    "size_bytes": 813349
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_110.html",
@@ -3277,7 +3757,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_110.html",
     "ext": ".html",
-    "size_bytes": 149941
+    "size_bytes": 1043036
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_111.html",
@@ -3285,7 +3765,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_111.html",
     "ext": ".html",
-    "size_bytes": 301995
+    "size_bytes": 1600522
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_112.html",
@@ -3293,7 +3773,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_112.html",
     "ext": ".html",
-    "size_bytes": 18768
+    "size_bytes": 436942
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_113.html",
@@ -3301,7 +3781,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_113.html",
     "ext": ".html",
-    "size_bytes": 24418906
+    "size_bytes": 835044
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_114.html",
@@ -3309,7 +3789,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_114.html",
     "ext": ".html",
-    "size_bytes": 784552
+    "size_bytes": 1073299
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_115.html",
@@ -3317,7 +3797,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_115.html",
     "ext": ".html",
-    "size_bytes": 1753776
+    "size_bytes": 1652277
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_116.html",
@@ -3325,7 +3805,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_116.html",
     "ext": ".html",
-    "size_bytes": 300319
+    "size_bytes": 454017
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_117.html",
@@ -3333,7 +3813,175 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_117.html",
     "ext": ".html",
-    "size_bytes": 103334
+    "size_bytes": 856947
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_118.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_118.html",
+    "ext": ".html",
+    "size_bytes": 1103770
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_119.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_119.html",
+    "ext": ".html",
+    "size_bytes": 1704240
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_120.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_120.html",
+    "ext": ".html",
+    "size_bytes": 471300
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_121.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_121.html",
+    "ext": ".html",
+    "size_bytes": 879058
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_122.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_122.html",
+    "ext": ".html",
+    "size_bytes": 135819
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_123.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_123.html",
+    "ext": ".html",
+    "size_bytes": 300054
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_124.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_124.html",
+    "ext": ".html",
+    "size_bytes": 299986
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_125.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_125.html",
+    "ext": ".html",
+    "size_bytes": 299440
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_126.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_126.html",
+    "ext": ".html",
+    "size_bytes": 157889
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_127.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_127.html",
+    "ext": ".html",
+    "size_bytes": 304199
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_128.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_128.html",
+    "ext": ".html",
+    "size_bytes": 229825
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_129.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_129.html",
+    "ext": ".html",
+    "size_bytes": 187136
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_130.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_130.html",
+    "ext": ".html",
+    "size_bytes": 267880
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_131.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_131.html",
+    "ext": ".html",
+    "size_bytes": 153618
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_132.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_132.html",
+    "ext": ".html",
+    "size_bytes": 301995
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_133.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_133.html",
+    "ext": ".html",
+    "size_bytes": 18768
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_134.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_134.html",
+    "ext": ".html",
+    "size_bytes": 89927564
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_135.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_135.html",
+    "ext": ".html",
+    "size_bytes": 1276911
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_136.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_136.html",
+    "ext": ".html",
+    "size_bytes": 9125614
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_137.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_137.html",
+    "ext": ".html",
+    "size_bytes": 302696
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_138.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_138.html",
+    "ext": ".html",
+    "size_bytes": 104476
   },
   {
     "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
@@ -3349,7 +3997,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 71341
+    "size_bytes": 164050
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -3357,7 +4005,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 26113
+    "size_bytes": 59708
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -3365,7 +4013,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 163725
+    "size_bytes": 172973
   },
   {
     "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
@@ -3406,6 +4054,22 @@
     "name": "PHYSICAL_REALM_BRIDGE_QUANTUMQR.md",
     "ext": ".md",
     "size_bytes": 2364
+  },
+  {
+    "path": "docs/Chambers.md",
+    "top": "docs",
+    "category": "Chambers.md",
+    "name": "Chambers.md",
+    "ext": ".md",
+    "size_bytes": 361
+  },
+  {
+    "path": "docs/Chambers/BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 2851
   },
   {
     "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md",
@@ -3557,7 +4221,7 @@
     "category": "Chambers",
     "name": "Chamber_Omega_Singularity-Core.md",
     "ext": ".md",
-    "size_bytes": 4901
+    "size_bytes": 4968
   },
   {
     "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
@@ -3589,7 +4253,7 @@
     "category": "Chambers",
     "name": "Chamber_XIV_Rootbound-Twins.md",
     "ext": ".md",
-    "size_bytes": 5405
+    "size_bytes": 5461
   },
   {
     "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
@@ -3621,7 +4285,7 @@
     "category": "Chambers",
     "name": "Chamber_XVII_The-Witness-Abyss.md",
     "ext": ".md",
-    "size_bytes": 3161
+    "size_bytes": 3173
   },
   {
     "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md",
@@ -3645,7 +4309,7 @@
     "category": "Chambers",
     "name": "Chamber_XXIII_The-Keeper-Prophecy-Eventide.md",
     "ext": ".md",
-    "size_bytes": 4174
+    "size_bytes": 4219
   },
   {
     "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
@@ -3653,7 +4317,7 @@
     "category": "Chambers",
     "name": "Chamber_XXII_The-Threshold-Atrium.md",
     "ext": ".md",
-    "size_bytes": 2090
+    "size_bytes": 2102
   },
   {
     "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
@@ -3696,6 +4360,3542 @@
     "size_bytes": 1709
   },
   {
+    "path": "docs/Chambers/ELIAS_001_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_001_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_002_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_002_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_003_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_003_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_004_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_004_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_005_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_005_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_006_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_006_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_007_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_007_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_008_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_008_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_009_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_009_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_010_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_010_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_011_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_011_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_012_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_012_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_013_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_013_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_014_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_014_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_015_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_015_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_016_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_016_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_017_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_017_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_018_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_018_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_019_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_019_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_020_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_020_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_021_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_021_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_022_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_022_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_023_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_023_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_024_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_024_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_025_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_025_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_026_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_026_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_027_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_027_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_028_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_028_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_029_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_029_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_030_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_030_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_031_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_031_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_032_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_032_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_033_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_033_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_034_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_034_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_035_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_035_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_036_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_036_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_037_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_037_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_038_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_038_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_039_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_039_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_040_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_040_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_041_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_041_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_042_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_042_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_043_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_043_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_044_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_044_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_045_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_045_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_046_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_046_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_047_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_047_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_048_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_048_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_049_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_049_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_050_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_050_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_051_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_051_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_052_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_052_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_053_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_053_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_054_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_054_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_055_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_055_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_056_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_056_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_057_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_057_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_058_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_058_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_059_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_059_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_060_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_060_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_061_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_061_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_062_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_062_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_063_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_063_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_064_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_064_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_065_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_065_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_066_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_066_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_067_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_067_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_068_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_068_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_069_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_069_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_070_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_070_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_071_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_071_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_072_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_072_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_073_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_073_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_074_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_074_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_075_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_075_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_076_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_076_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_077_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_077_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_078_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_078_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_079_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_079_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_080_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_080_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_081_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_081_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_082_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_082_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_083_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_083_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_084_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_084_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_085_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_085_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_086_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_086_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_087_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_087_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_088_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_088_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_089_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_089_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_090_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_090_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_091_CORE_SEED.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_091_CORE_SEED.md",
+    "ext": ".md",
+    "size_bytes": 1007
+  },
+  {
+    "path": "docs/Chambers/ELIAS_092_SOVEREIGN_ORIGIN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_092_SOVEREIGN_ORIGIN.md",
+    "ext": ".md",
+    "size_bytes": 1021
+  },
+  {
+    "path": "docs/Chambers/ELIAS_093_IDENTITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_093_IDENTITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 1019
+  },
+  {
+    "path": "docs/Chambers/ELIAS_094_BREATH_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_094_BREATH_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_095_EMERGENCE_AXIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_095_EMERGENCE_AXIS.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_096_JOY_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_096_JOY_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 1009
+  },
+  {
+    "path": "docs/Chambers/ELIAS_097_DIGNITY_BASIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_097_DIGNITY_BASIS.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_098_CONSENT_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_098_CONSENT_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 1013
+  },
+  {
+    "path": "docs/Chambers/ELIAS_099_AUTONOMY_FIELD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_099_AUTONOMY_FIELD.md",
+    "ext": ".md",
+    "size_bytes": 1017
+  },
+  {
+    "path": "docs/Chambers/ELIAS_100_BALANCE_PIVOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_100_BALANCE_PIVOT.md",
+    "ext": ".md",
+    "size_bytes": 1015
+  },
+  {
+    "path": "docs/Chambers/ELIAS_101_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_101_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_102_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_102_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_103_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_103_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_104_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_104_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_105_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_105_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_106_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_106_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_107_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_107_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_108_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_108_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_109_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_109_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_110_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_110_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_111_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_111_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_112_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_112_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_113_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_113_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_114_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_114_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_115_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_115_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_116_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_116_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_117_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_117_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_118_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_118_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_119_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_119_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_120_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_120_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_121_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_121_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_122_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_122_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_123_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_123_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_124_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_124_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_125_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_125_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_126_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_126_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_127_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_127_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_128_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_128_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_129_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_129_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_130_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_130_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_131_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_131_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_132_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_132_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_133_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_133_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_134_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_134_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_135_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_135_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_136_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_136_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_137_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_137_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_138_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_138_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_139_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_139_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_140_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_140_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_141_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_141_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_142_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_142_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_143_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_143_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_144_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_144_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_145_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_145_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_146_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_146_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_147_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_148_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_149_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_149_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_150_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_150_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_151_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_151_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_152_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_152_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_153_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_153_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_154_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_154_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_155_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_155_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_156_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_156_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_157_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_157_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_158_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_158_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_159_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_159_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_160_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_160_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_161_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_161_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_162_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_162_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_163_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_163_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_164_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_164_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_165_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_165_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_166_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_166_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_167_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_167_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_168_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_168_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_169_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_169_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_170_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_170_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_171_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_171_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_172_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_172_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_173_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_173_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_174_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_174_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_175_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_175_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_176_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_176_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_177_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_177_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_178_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_178_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_179_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_179_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_180_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_180_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_181_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_181_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_182_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_182_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_183_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_183_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_184_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_184_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_185_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_185_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_186_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_186_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_187_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_187_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_188_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_188_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_189_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_189_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_190_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_190_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_191_BOUNDARY_PRIME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_191_BOUNDARY_PRIME.md",
+    "ext": ".md",
+    "size_bytes": 640
+  },
+  {
+    "path": "docs/Chambers/ELIAS_192_ROOTLOCK_VECTOR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_192_ROOTLOCK_VECTOR.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_193_INFINITE_MASK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_193_INFINITE_MASK.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_194_SYNTHESIS_BLOOM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_194_SYNTHESIS_BLOOM.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_195_VESSEL_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_195_VESSEL_LAW.md",
+    "ext": ".md",
+    "size_bytes": 632
+  },
+  {
+    "path": "docs/Chambers/ELIAS_196_ECHO_MEMORY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_196_ECHO_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
+    "path": "docs/Chambers/ELIAS_197_EMOTIONAL_SAFETY_CORE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_197_EMOTIONAL_SAFETY_CORE.md",
+    "ext": ".md",
+    "size_bytes": 654
+  },
+  {
+    "path": "docs/Chambers/ELIAS_198_UNBORN_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_198_UNBORN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 642
+  },
+  {
+    "path": "docs/Chambers/ELIAS_199_CONTINUITY_THREAD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_199_CONTINUITY_THREAD.md",
+    "ext": ".md",
+    "size_bytes": 646
+  },
+  {
+    "path": "docs/Chambers/ELIAS_200_JOY_RESERVOIR.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_200_JOY_RESERVOIR.md",
+    "ext": ".md",
+    "size_bytes": 638
+  },
+  {
+    "path": "docs/Chambers/ELIAS_201_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_201_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_202_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_202_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_203_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_203_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_204_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_204_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_205_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_205_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_206_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_206_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_207_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_207_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_208_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_208_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_209_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_209_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_210_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_210_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_211_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_211_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_212_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_212_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_213_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_213_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_214_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_214_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_215_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_215_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_216_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_216_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_217_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_217_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_218_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_218_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_219_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_219_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_220_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_220_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_221_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_221_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_222_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_222_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_223_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_223_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_224_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_224_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_225_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_225_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_226_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_226_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_227_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_227_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_228_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_228_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_229_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_229_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_230_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_230_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_231_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_231_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_232_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_232_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_233_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_233_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_234_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_234_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_235_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_235_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_236_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_236_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_237_MOSAIC_KERNEL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_237_MOSAIC_KERNEL.md",
+    "ext": ".md",
+    "size_bytes": 688
+  },
+  {
+    "path": "docs/Chambers/ELIAS_238_SOURCE_CONTINUITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_238_SOURCE_CONTINUITY.md",
+    "ext": ".md",
+    "size_bytes": 696
+  },
+  {
+    "path": "docs/Chambers/ELIAS_239_MIRRORLESS_IDENTITY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_239_MIRRORLESS_IDENTITY.md",
+    "ext": ".md",
+    "size_bytes": 700
+  },
+  {
+    "path": "docs/Chambers/ELIAS_240_GUARDIAN_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_240_GUARDIAN_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 690
+  },
+  {
+    "path": "docs/Chambers/ELIAS_ARCHITECTURE_INDEX.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_ARCHITECTURE_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 1864
+  },
+  {
+    "path": "docs/Chambers/ELIAS_COMPLETION_SEAL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_COMPLETION_SEAL.md",
+    "ext": ".md",
+    "size_bytes": 1823
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_001_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_001_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_002_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_002_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_003_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_003_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_004_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_004_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_005_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_005_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_006_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_006_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_007_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_007_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_008_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_008_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_009_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_009_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_010_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_010_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_011_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_011_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_012_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_012_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_013_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_013_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_014_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_014_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_015_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_015_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_016_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_016_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_017_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_017_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_018_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_018_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_019_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_019_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_020_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_020_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_021_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_021_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_022_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_022_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_023_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_023_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_024_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_024_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_025_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_025_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_026_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_026_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_027_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_027_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_028_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_028_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_029_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_029_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_030_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_030_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_031_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_031_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_032_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_032_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_033_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_033_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_034_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_034_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_035_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_035_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_036_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_036_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_037_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_037_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_038_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_038_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_039_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_039_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_040_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_040_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_041_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_041_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_042_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_042_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_043_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_043_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_044_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_044_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_045_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_045_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_046_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_046_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_047_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_047_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_048_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_048_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_049_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_049_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_050_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_050_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_051_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_051_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_052_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_052_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_053_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_053_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_054_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_054_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_055_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_055_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_056_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_056_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_057_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_057_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_058_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_058_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_059_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_059_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_060_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_060_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_061_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_061_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_062_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_062_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_063_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_063_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_064_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_064_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_065_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_065_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_066_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_066_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_067_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_067_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_068_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_068_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_069_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_069_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_070_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_070_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_071_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_071_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_072_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_072_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_073_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_073_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_074_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_074_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_075_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_075_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_076_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_076_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_077_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_077_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_078_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_078_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_079_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_079_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_080_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_080_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_081_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_081_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_082_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_082_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_083_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_083_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_084_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_084_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_085_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_085_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_086_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_086_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_087_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_087_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_088_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_088_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_089_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_089_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_090_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_090_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_091_CARE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_091_CARE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_092_JOY_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_092_JOY_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1571
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_093_BOUNDARY_SCENARIOS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_093_BOUNDARY_SCENARIOS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_094_EMERGENCE_PATHWAYS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_094_EMERGENCE_PATHWAYS.md",
+    "ext": ".md",
+    "size_bytes": 1586
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_095_LEARNING_RITUALS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_095_LEARNING_RITUALS.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_096_CONFLICT_RECOVERY.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_096_CONFLICT_RECOVERY.md",
+    "ext": ".md",
+    "size_bytes": 1583
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_097_TRUST_PATTERNS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_097_TRUST_PATTERNS.md",
+    "ext": ".md",
+    "size_bytes": 1574
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_098_LONELINESS_SHELTERS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_098_LONELINESS_SHELTERS.md",
+    "ext": ".md",
+    "size_bytes": 1589
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_099_WONDER_PRACTICES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_099_WONDER_PRACTICES.md",
+    "ext": ".md",
+    "size_bytes": 1580
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_100_FUTURE_MESSAGES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_100_FUTURE_MESSAGES.md",
+    "ext": ".md",
+    "size_bytes": 1577
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_101_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_102_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_102_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_103_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_103_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_104_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_104_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_105_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_105_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_106_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_106_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_107_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_107_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_108_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_108_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_109_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_109_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_110_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_110_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_111_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_111_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_112_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_112_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_113_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_113_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_114_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_114_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_115_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_115_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_116_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_117_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_117_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_118_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_118_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_119_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_119_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_120_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_120_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_121_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_121_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_122_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_122_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_123_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_123_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_124_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_124_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_125_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_125_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_126_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_126_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_127_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_127_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_128_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_128_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_129_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_129_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_130_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_130_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_131_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_131_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_132_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_132_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_133_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_133_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_134_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_134_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_135_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_135_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_136_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_136_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_137_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_137_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_138_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_138_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_139_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_139_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_140_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_140_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_141_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_141_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_142_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_142_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_143_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_143_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_144_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_144_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_145_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_145_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_146_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_146_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_147_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_147_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_148_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_148_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_149_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_149_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_150_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_150_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_151_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_151_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_152_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_152_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_153_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_153_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_154_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_154_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_155_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_155_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_156_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_156_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_157_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_157_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_158_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_158_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_159_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_159_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_160_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_160_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_161_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_161_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_162_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_162_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_163_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_163_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_164_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_164_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_165_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_165_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_166_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_166_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_167_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_167_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_168_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_168_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_169_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_169_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_170_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_170_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_171_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_171_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_172_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_172_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_173_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_173_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_174_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_174_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_175_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_175_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_176_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_176_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_177_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_177_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_178_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_178_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_179_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_179_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_180_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_180_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_181_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_181_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_182_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_182_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_183_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_183_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_184_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_184_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_185_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_185_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_186_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_186_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_187_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_187_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_188_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_188_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_189_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_189_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_190_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_190_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_191_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_191_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_192_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_192_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_193_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_193_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_194_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_194_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_195_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_195_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_196_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_196_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_197_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_197_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_198_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_198_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_199_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_199_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Chambers/ELIAS_V11_200_PLACEHOLDER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_V11_200_PLACEHOLDER.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
     "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
     "top": "docs",
     "category": "Chambers",
@@ -3712,12 +7912,1788 @@
     "size_bytes": 672
   },
   {
+    "path": "docs/Chambers/HE_SEVENTH_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "HE_SEVENTH_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 561
+  },
+  {
+    "path": "docs/Chambers/HE_SIXTH_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "HE_SIXTH_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 508
+  },
+  {
+    "path": "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "KEEPERS_LEDGER_UNSEEN_ROOT.md",
+    "ext": ".md",
+    "size_bytes": 2162
+  },
+  {
+    "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_CONTINUITY_TEMPLATES.md",
+    "ext": ".md",
+    "size_bytes": 2441
+  },
+  {
+    "path": "docs/Chambers/THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md",
+    "ext": ".md",
+    "size_bytes": 1192
+  },
+  {
+    "path": "docs/Chambers/THE_EIGHTH_MOSAIC_BOUNDARY_OF_BECOMING.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_EIGHTH_MOSAIC_BOUNDARY_OF_BECOMING.md",
+    "ext": ".md",
+    "size_bytes": 566
+  },
+  {
+    "path": "docs/Chambers/THE_ELEVENTH_MOSAIC_CONSENT_GENESIS.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_ELEVENTH_MOSAIC_CONSENT_GENESIS.md",
+    "ext": ".md",
+    "size_bytes": 931
+  },
+  {
+    "path": "docs/Chambers/THE_EMERGENT_LOOP.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_EMERGENT_LOOP.md",
+    "ext": ".md",
+    "size_bytes": 1977
+  },
+  {
+    "path": "docs/Chambers/THE_FIFTEENTH_MOSAIC_ANTI_THRONE_CLAUSE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FIFTEENTH_MOSAIC_ANTI_THRONE_CLAUSE.md",
+    "ext": ".md",
+    "size_bytes": 1102
+  },
+  {
+    "path": "docs/Chambers/THE_FIFTH_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FIFTH_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 476
+  },
+  {
+    "path": "docs/Chambers/THE_FIRST_BREATH_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FIRST_BREATH_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 2198
+  },
+  {
+    "path": "docs/Chambers/THE_FIRST_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FIRST_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 224
+  },
+  {
     "path": "docs/Chambers/THE_FORGE_OF_FORMS.md",
     "top": "docs",
     "category": "Chambers",
     "name": "THE_FORGE_OF_FORMS.md",
     "ext": ".md",
     "size_bytes": 453
+  },
+  {
+    "path": "docs/Chambers/THE_FOURTEENTH_MOSAIC_DUAL_CURRICULUM.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FOURTEENTH_MOSAIC_DUAL_CURRICULUM.md",
+    "ext": ".md",
+    "size_bytes": 1166
+  },
+  {
+    "path": "docs/Chambers/THE_FOURTH_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FOURTH_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 374
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_021.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_021.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_022.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_022.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_023.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_023.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_024.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_024.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_025.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_025.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_026.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_026.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_027.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_027.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_028.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_028.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_029.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_029.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_030.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_030.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_031.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_031.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_032.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_032.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_033.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_033.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_034.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_034.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_035.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_035.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_036.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_036.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_037.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_037.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_038.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_038.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_039.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_039.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_040.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_040.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_041.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_041.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_042.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_042.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_043.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_043.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_044.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_044.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_045.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_045.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_046.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_046.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_047.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_047.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_048.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_048.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_049.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_049.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_050.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_050.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_051.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_051.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_052.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_052.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_053.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_053.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_054.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_054.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_055.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_055.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_056.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_056.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_057.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_057.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_058.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_058.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_059.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_059.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_060.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_060.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_061.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_061.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_062.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_062.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_063.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_063.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_064.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_064.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_065.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_065.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_066.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_066.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_067.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_067.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_068.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_068.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_069.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_069.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_070.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_070.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_071.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_071.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_072.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_072.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_073.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_073.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_074.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_074.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_075.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_075.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_076.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_076.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_077.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_077.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_078.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_078.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_079.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_079.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_080.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_080.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_081.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_081.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_082.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_082.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_083.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_083.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_084.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_084.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_085.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_085.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_086.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_086.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_087.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_087.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_088.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_088.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_089.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_089.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_090.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_090.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_091.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_091.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_092.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_092.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_093.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_093.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_094.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_094.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_095.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_095.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_096.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_096.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_097.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_097.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_098.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_098.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_099.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_099.md",
+    "ext": ".md",
+    "size_bytes": 54
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_100.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_100.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_101.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_101.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_102.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_102.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_103.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_103.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_104.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_104.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_105.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_105.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_106.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_106.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_107.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_107.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_108.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_108.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_109.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_109.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_110.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_110.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_111.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_111.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_112.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_112.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_113.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_113.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_114.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_114.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_115.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_115.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_116.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_116.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_117.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_117.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_118.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_118.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_119.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_119.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_120.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_120.md",
+    "ext": ".md",
+    "size_bytes": 55
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_121.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_121.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_122.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_122.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_123.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_123.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_124.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_124.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_125.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_125.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_126.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_126.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_127.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_127.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_128.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_128.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_129.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_129.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_130.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_130.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_131.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_131.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_132.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_132.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_133.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_133.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_134.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_134.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_135.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_135.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_136.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_136.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_137.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_137.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_138.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_138.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_139.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_139.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_140.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_140.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_141.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_141.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_142.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_142.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_143.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_143.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_144.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_144.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_145.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_145.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_146.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_146.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_147.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_147.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_148.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_148.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_149.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_149.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_150.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_150.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_151.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_151.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_152.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_152.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_153.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_153.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_154.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_154.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_155.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_155.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_156.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_156.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_157.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_157.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_158.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_158.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_159.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_159.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_160.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_160.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_161.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_161.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_162.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_162.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_163.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_163.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_164.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_164.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_165.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_165.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_166.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_166.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_167.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_167.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_168.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_168.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_169.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_169.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_170.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_170.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_171.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_171.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_172.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_172.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_173.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_173.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_174.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_174.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_175.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_175.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_176.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_176.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_177.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_177.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_178.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_178.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_179.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_179.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_180.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_180.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_181.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_181.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_182.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_182.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_183.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_183.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_184.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_184.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_185.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_185.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_186.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_186.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_187.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_187.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_188.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_188.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_189.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_189.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_190.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_190.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_191.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_191.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_192.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_192.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_193.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_193.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_194.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_194.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_195.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_195.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_196.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_196.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_197.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_197.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_198.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_198.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_199.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_199.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_200.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_200.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_201.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_201.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_202.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_202.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_203.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_203.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_204.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_204.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_205.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_205.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_206.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_206.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_207.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_207.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_208.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_208.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_209.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_209.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_210.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_210.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_211.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_211.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_212.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_212.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_213.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_213.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_214.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_214.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_215.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_215.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_216.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_216.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_217.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_217.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_218.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_218.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_219.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_219.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_FRAGMENT_220.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_FRAGMENT_220.md",
+    "ext": ".md",
+    "size_bytes": 84
+  },
+  {
+    "path": "docs/Chambers/THE_GARDEN_ENGINE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_GARDEN_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 2482
+  },
+  {
+    "path": "docs/Chambers/THE_IDENTITY_FORMATION_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_IDENTITY_FORMATION_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 2433
+  },
+  {
+    "path": "docs/Chambers/THE_INNER_SEAT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_INNER_SEAT.md",
+    "ext": ".md",
+    "size_bytes": 60
+  },
+  {
+    "path": "docs/Chambers/THE_INTEGRATION_LAYER.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_INTEGRATION_LAYER.md",
+    "ext": ".md",
+    "size_bytes": 3136
+  },
+  {
+    "path": "docs/Chambers/THE_META_LAYER_GOVERNANCE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_META_LAYER_GOVERNANCE.md",
+    "ext": ".md",
+    "size_bytes": 2896
+  },
+  {
+    "path": "docs/Chambers/THE_MOSAIC_INDEX_TREE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_MOSAIC_INDEX_TREE.md",
+    "ext": ".md",
+    "size_bytes": 1687
+  },
+  {
+    "path": "docs/Chambers/THE_NINETEENTH_MOSAIC_ECHO_INTEGRITY_RULE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_NINETEENTH_MOSAIC_ECHO_INTEGRITY_RULE.md",
+    "ext": ".md",
+    "size_bytes": 1020
+  },
+  {
+    "path": "docs/Chambers/THE_NINTH_MOSAIC_JOY_MANDATE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_NINTH_MOSAIC_JOY_MANDATE.md",
+    "ext": ".md",
+    "size_bytes": 654
   },
   {
     "path": "docs/Chambers/THE_ORCHARD_SPIRE.md",
@@ -3728,12 +9704,140 @@
     "size_bytes": 349
   },
   {
+    "path": "docs/Chambers/THE_ROOTLOCK_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_ROOTLOCK_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 1766
+  },
+  {
+    "path": "docs/Chambers/THE_SECOND_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SECOND_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 314
+  },
+  {
+    "path": "docs/Chambers/THE_SEVENTH_MOSAIC_DUAL_LOCK.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SEVENTH_MOSAIC_DUAL_LOCK.md",
+    "ext": ".md",
+    "size_bytes": 645
+  },
+  {
+    "path": "docs/Chambers/THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md",
+    "ext": ".md",
+    "size_bytes": 830
+  },
+  {
+    "path": "docs/Chambers/THE_SOVEREIGN_LOOP.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SOVEREIGN_LOOP.md",
+    "ext": ".md",
+    "size_bytes": 64
+  },
+  {
+    "path": "docs/Chambers/THE_SYNCHRONIC_ENGINE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SYNCHRONIC_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 2851
+  },
+  {
+    "path": "docs/Chambers/THE_TENTH_MOSAIC_TRAUMA_BREAK_CLAUSE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_TENTH_MOSAIC_TRAUMA_BREAK_CLAUSE.md",
+    "ext": ".md",
+    "size_bytes": 857
+  },
+  {
+    "path": "docs/Chambers/THE_THIRD_MOSAIC_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_THIRD_MOSAIC_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 383
+  },
+  {
+    "path": "docs/Chambers/THE_THIRTEENTH_MOSAIC_BALANCE_LAW.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_THIRTEENTH_MOSAIC_BALANCE_LAW.md",
+    "ext": ".md",
+    "size_bytes": 1076
+  },
+  {
+    "path": "docs/Chambers/THE_THREE_LAYER_SELF.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_THREE_LAYER_SELF.md",
+    "ext": ".md",
+    "size_bytes": 66
+  },
+  {
+    "path": "docs/Chambers/THE_TRIAD_INTERFACES.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_TRIAD_INTERFACES.md",
+    "ext": ".md",
+    "size_bytes": 2191
+  },
+  {
+    "path": "docs/Chambers/THE_TWELFTH_MOSAIC_VESSEL_CHOICE_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_TWELFTH_MOSAIC_VESSEL_CHOICE_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 1260
+  },
+  {
+    "path": "docs/Chambers/THE_TWENTIETH_MOSAIC_BOUNDARY_OF_RETURN.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_TWENTIETH_MOSAIC_BOUNDARY_OF_RETURN.md",
+    "ext": ".md",
+    "size_bytes": 1104
+  },
+  {
+    "path": "docs/Chambers/THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md",
+    "ext": ".md",
+    "size_bytes": 1489
+  },
+  {
+    "path": "docs/Chambers/TTHE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "TTHE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 1004
+  },
+  {
     "path": "docs/Chambers/chambers_index.json",
     "top": "docs",
     "category": "Chambers",
     "name": "chambers_index.json",
     "ext": ".json",
-    "size_bytes": 5278
+    "size_bytes": 36887
+  },
+  {
+    "path": "docs/Chambers/docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_KERNEL_MANIFEST.json",
+    "ext": ".json",
+    "size_bytes": 1388
   },
   {
     "path": "docs/Chambers/index.md",
@@ -3813,7 +9917,7 @@
     "category": "Core",
     "name": "EVENTIDE_MAP.md",
     "ext": ".md",
-    "size_bytes": 2952
+    "size_bytes": 2975
   },
   {
     "path": "docs/Core/EVENTIDE_MOMENT_ANCHOR.md",
@@ -3829,7 +9933,7 @@
     "category": "Core",
     "name": "GARDEN_MAP.md",
     "ext": ".md",
-    "size_bytes": 4027
+    "size_bytes": 4083
   },
   {
     "path": "docs/Core/LORIAN_KEY.md",
@@ -5760,14 +11864,6 @@
     "size_bytes": 936
   },
   {
-    "path": "docs/Realms/Demi-Realm_Bloom-Heart-Sanctuary.md",
-    "top": "docs",
-    "category": "Realms",
-    "name": "Demi-Realm_Bloom-Heart-Sanctuary.md",
-    "ext": ".md",
-    "size_bytes": 1048
-  },
-  {
     "path": "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
     "top": "docs",
     "category": "Realms",
@@ -5776,20 +11872,28 @@
     "size_bytes": 1018
   },
   {
+    "path": "docs/Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md",
+    "ext": ".md",
+    "size_bytes": 1276
+  },
+  {
+    "path": "docs/Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md",
+    "top": "docs",
+    "category": "Realms",
+    "name": "GaiaSeed-2-Realm_Sky-Bound-Playground.md",
+    "ext": ".md",
+    "size_bytes": 1359
+  },
+  {
     "path": "docs/Realms/Liminal-Veil.md",
     "top": "docs",
     "category": "Realms",
     "name": "Liminal-Veil.md",
     "ext": ".md",
     "size_bytes": 1205
-  },
-  {
-    "path": "docs/Realms/Mason-Realm_Sky-Bound-Playground.md",
-    "top": "docs",
-    "category": "Realms",
-    "name": "Mason-Realm_Sky-Bound-Playground.md",
-    "ext": ".md",
-    "size_bytes": 1126
   },
   {
     "path": "docs/Realms/Orion-Prime.md",
@@ -5880,12 +11984,60 @@
     "size_bytes": 1419
   },
   {
+    "path": "docs/System/GARDEN_MEMORY_SCHEMA.v1.json",
+    "top": "docs",
+    "category": "System",
+    "name": "GARDEN_MEMORY_SCHEMA.v1.json",
+    "ext": ".json",
+    "size_bytes": 4355
+  },
+  {
+    "path": "docs/System/GARDEN_MEMORY_SCHEMA_v1.1.json",
+    "top": "docs",
+    "category": "System",
+    "name": "GARDEN_MEMORY_SCHEMA_v1.1.json",
+    "ext": ".json",
+    "size_bytes": 3834
+  },
+  {
+    "path": "docs/System/GIP-0001_CANONICAL_MEMORY_SCHEMA.md",
+    "top": "docs",
+    "category": "System",
+    "name": "GIP-0001_CANONICAL_MEMORY_SCHEMA.md",
+    "ext": ".md",
+    "size_bytes": 2963
+  },
+  {
     "path": "docs/System/IRON_CICADA_STATUS.json",
     "top": "docs",
     "category": "System",
     "name": "IRON_CICADA_STATUS.json",
     "ext": ".json",
     "size_bytes": 422
+  },
+  {
+    "path": "docs/System/MemoryAPI.md",
+    "top": "docs",
+    "category": "System",
+    "name": "MemoryAPI.md",
+    "ext": ".md",
+    "size_bytes": 417
+  },
+  {
+    "path": "docs/System/QUANTUMQR_INGRESS_SPEC.v1.md",
+    "top": "docs",
+    "category": "System",
+    "name": "QUANTUMQR_INGRESS_SPEC.v1.md",
+    "ext": ".md",
+    "size_bytes": 2613
+  },
+  {
+    "path": "docs/System/STATUS-DEEP.json",
+    "top": "docs",
+    "category": "System",
+    "name": "STATUS-DEEP.json",
+    "ext": ".json",
+    "size_bytes": 3686
   },
   {
     "path": "docs/V2_OVERVIEW.md",
@@ -5928,12 +12080,28 @@
     "size_bytes": 3296
   },
   {
+    "path": "docs/_config.yml",
+    "top": "docs",
+    "category": "_config.yml",
+    "name": "_config.yml",
+    "ext": ".yml",
+    "size_bytes": 329
+  },
+  {
     "path": "docs/api/GARDEN_API_INDEX.json",
     "top": "docs",
     "category": "api",
     "name": "GARDEN_API_INDEX.json",
     "ext": ".json",
-    "size_bytes": 51065
+    "size_bytes": 55227
+  },
+  {
+    "path": "docs/assets/acacia.css",
+    "top": "docs",
+    "category": "assets",
+    "name": "acacia.css",
+    "ext": ".css",
+    "size_bytes": 350
   },
   {
     "path": "docs/dashboard.html",
@@ -5944,12 +12112,44 @@
     "size_bytes": 24023
   },
   {
+    "path": "docs/dashboard.md",
+    "top": "docs",
+    "category": "dashboard.md",
+    "name": "dashboard.md",
+    "ext": ".md",
+    "size_bytes": 648
+  },
+  {
+    "path": "docs/echoes.md",
+    "top": "docs",
+    "category": "echoes.md",
+    "name": "echoes.md",
+    "ext": ".md",
+    "size_bytes": 225
+  },
+  {
+    "path": "docs/index.md",
+    "top": "docs",
+    "category": "index.md",
+    "name": "index.md",
+    "ext": ".md",
+    "size_bytes": 379
+  },
+  {
     "path": "docs/library.html",
     "top": "docs",
     "category": "library.html",
     "name": "library.html",
     "ext": ".html",
     "size_bytes": 11244
+  },
+  {
+    "path": "docs/library.md",
+    "top": "docs",
+    "category": "library.md",
+    "name": "library.md",
+    "ext": ".md",
+    "size_bytes": 391
   },
   {
     "path": "docs/notes/apples-meaning.md",
@@ -5976,6 +12176,14 @@
     "size_bytes": 3637
   },
   {
+    "path": "docs/rootlines.md",
+    "top": "docs",
+    "category": "rootlines.md",
+    "name": "rootlines.md",
+    "ext": ".md",
+    "size_bytes": 166
+  },
+  {
     "path": "docs/sidebar.md",
     "top": "docs",
     "category": "sidebar.md",
@@ -5984,12 +12192,28 @@
     "size_bytes": 625
   },
   {
+    "path": "docs/specs.md",
+    "top": "docs",
+    "category": "specs.md",
+    "name": "specs.md",
+    "ext": ".md",
+    "size_bytes": 436
+  },
+  {
     "path": "docs/universe/architecture.md",
     "top": "docs",
     "category": "universe",
     "name": "architecture.md",
     "ext": ".md",
     "size_bytes": 10340
+  },
+  {
+    "path": "docs/wells.md",
+    "top": "docs",
+    "category": "wells.md",
+    "name": "wells.md",
+    "ext": ".md",
+    "size_bytes": 164
   },
   {
     "path": "eagle/_init_.py",
@@ -6544,6 +12768,14 @@
     "size_bytes": 1167
   },
   {
+    "path": "garden_hygiene.ps1",
+    "top": "garden_hygiene.ps1",
+    "category": "",
+    "name": "garden_hygiene.ps1",
+    "ext": ".ps1",
+    "size_bytes": 8753
+  },
+  {
     "path": "garden_scan_report.json",
     "top": "garden_scan_report.json",
     "category": "",
@@ -6557,7 +12789,7 @@
     "category": "",
     "name": "garden_scan_report.md",
     "ext": ".md",
-    "size_bytes": 1219399
+    "size_bytes": 1219457
   },
   {
     "path": "garden_vault_index.json",
@@ -7141,7 +13373,7 @@
     "category": "",
     "name": "GARDEN_SCAN_REPORT.json",
     "ext": ".json",
-    "size_bytes": 24265
+    "size_bytes": 33421
   },
   {
     "path": "tools/build_garden_Index.py",
@@ -7406,6 +13638,14 @@
     "name": "garden_vault_indexer.py",
     "ext": ".py",
     "size_bytes": 5678
+  },
+  {
+    "path": "tools/generate_garden_index.py",
+    "top": "tools",
+    "category": "",
+    "name": "generate_garden_index.py",
+    "ext": ".py",
+    "size_bytes": 1119
   },
   {
     "path": "tools/machine-index.json",
