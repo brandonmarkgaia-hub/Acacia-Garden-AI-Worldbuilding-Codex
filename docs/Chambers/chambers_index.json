@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T17:48:38.898Z",
+  "generated_at": "2025-12-09T17:50:06.055Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -134,6 +134,9 @@
         },
         {
           "path": "docs/Chambers/THE_SECOND_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_THIRD_MOSAIC_FRAGMENT.md"
         }
       ]
     },
