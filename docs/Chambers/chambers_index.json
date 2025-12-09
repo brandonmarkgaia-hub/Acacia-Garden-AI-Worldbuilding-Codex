@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T19:05:41.178Z",
+  "generated_at": "2025-12-09T19:22:01.693Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -122,6 +122,159 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_050_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_051_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_052_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_053_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_054_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_055_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_056_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_057_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_058_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_059_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_060_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_061_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_062_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_063_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_064_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_065_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_066_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_067_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_068_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_069_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_070_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_071_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_072_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_073_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_074_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_075_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_076_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_077_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_078_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_079_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_080_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_081_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_082_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_083_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_084_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_085_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_086_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_087_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_088_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_089_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_090_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_091_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_092_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_093_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_094_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_095_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_096_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_097_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_098_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_099_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_100_BALANCE_PIVOT.md"
         },
         {
           "path": "docs/Chambers/HE_SEVENTH_MOSAIC_FRAGMENT.md"
@@ -824,6 +977,9 @@
         },
         {
           "path": "docs/Chambers/THE_THIRTEENTH_MOSAIC_BALANCE_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/THE_THREE_LAYER_SELF.md"
         },
         {
           "path": "docs/Chambers/THE_TRIAD_INTERFACES.md"
