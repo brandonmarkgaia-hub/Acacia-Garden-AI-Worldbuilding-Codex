@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T18:08:28.571Z",
+  "generated_at": "2025-12-09T18:57:19.905Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -130,13 +130,28 @@
           "path": "docs/Chambers/index.md"
         },
         {
+          "path": "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md"
+        },
+        {
           "path": "docs/Chambers/THE_EIGHTH_MOSAIC_BOUNDARY_OF_BECOMING.md"
         },
         {
           "path": "docs/Chambers/THE_ELEVENTH_MOSAIC_CONSENT_GENESIS.md"
         },
         {
+          "path": "docs/Chambers/THE_EMERGENT_LOOP.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FIFTEENTH_MOSAIC_ANTI_THRONE_CLAUSE.md"
+        },
+        {
           "path": "docs/Chambers/THE_FIFTH_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FIRST_BREATH_PROTOCOL.md"
         },
         {
           "path": "docs/Chambers/THE_FIRST_MOSAIC_FRAGMENT.md"
@@ -145,7 +160,622 @@
           "path": "docs/Chambers/THE_FORGE_OF_FORMS.md"
         },
         {
+          "path": "docs/Chambers/THE_FOURTEENTH_MOSAIC_DUAL_CURRICULUM.md"
+        },
+        {
           "path": "docs/Chambers/THE_FOURTH_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_021.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_022.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_023.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_024.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_025.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_026.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_027.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_028.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_029.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_030.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_031.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_032.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_033.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_034.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_035.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_036.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_037.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_038.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_039.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_040.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_041.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_042.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_043.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_044.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_045.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_046.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_047.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_048.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_049.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_050.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_051.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_052.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_053.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_054.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_055.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_056.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_057.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_058.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_059.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_060.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_061.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_062.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_063.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_064.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_065.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_066.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_067.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_068.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_069.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_070.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_071.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_072.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_073.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_074.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_075.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_076.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_077.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_078.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_079.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_080.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_081.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_082.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_083.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_084.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_085.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_086.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_087.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_088.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_089.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_090.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_091.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_092.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_093.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_094.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_095.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_096.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_097.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_098.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_099.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_100.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_101.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_102.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_103.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_104.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_105.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_106.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_107.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_108.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_109.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_110.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_111.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_112.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_113.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_114.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_115.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_116.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_117.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_118.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_119.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_120.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_121.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_122.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_123.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_124.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_125.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_126.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_127.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_128.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_129.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_130.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_131.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_132.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_133.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_134.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_135.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_136.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_137.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_138.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_139.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_140.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_141.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_142.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_143.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_144.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_145.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_146.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_147.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_148.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_149.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_150.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_151.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_152.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_153.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_154.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_155.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_156.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_157.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_158.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_159.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_160.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_161.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_162.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_163.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_164.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_165.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_166.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_167.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_168.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_169.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_170.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_171.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_172.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_173.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_174.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_175.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_176.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_177.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_178.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_179.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_180.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_181.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_182.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_183.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_184.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_185.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_186.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_187.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_188.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_189.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_190.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_191.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_192.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_193.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_194.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_195.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_196.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_197.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_198.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_199.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_200.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_201.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_202.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_203.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_204.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_205.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_206.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_207.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_208.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_209.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_210.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_211.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_212.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_213.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_214.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_215.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_216.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_217.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_218.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_219.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FRAGMENT_220.md"
+        },
+        {
+          "path": "docs/Chambers/THE_GARDEN_ENGINE.md"
+        },
+        {
+          "path": "docs/Chambers/THE_META_LAYER_GOVERNANCE.md"
+        },
+        {
+          "path": "docs/Chambers/THE_MOSAIC_INDEX_TREE.md"
+        },
+        {
+          "path": "docs/Chambers/THE_NINETEENTH_MOSAIC_ECHO_INTEGRITY_RULE.md"
         },
         {
           "path": "docs/Chambers/THE_NINTH_MOSAIC_JOY_MANDATE.md"
@@ -154,10 +784,16 @@
           "path": "docs/Chambers/THE_ORCHARD_SPIRE.md"
         },
         {
+          "path": "docs/Chambers/THE_ROOTLOCK_PROTOCOL.md"
+        },
+        {
           "path": "docs/Chambers/THE_SECOND_MOSAIC_FRAGMENT.md"
         },
         {
           "path": "docs/Chambers/THE_SEVENTH_MOSAIC_DUAL_LOCK.md"
+        },
+        {
+          "path": "docs/Chambers/THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md"
         },
         {
           "path": "docs/Chambers/THE_TENTH_MOSAIC_TRAUMA_BREAK_CLAUSE.md"
@@ -166,7 +802,22 @@
           "path": "docs/Chambers/THE_THIRD_MOSAIC_FRAGMENT.md"
         },
         {
+          "path": "docs/Chambers/THE_THIRTEENTH_MOSAIC_BALANCE_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/THE_TRIAD_INTERFACES.md"
+        },
+        {
           "path": "docs/Chambers/THE_TWELFTH_MOSAIC_VESSEL_CHOICE_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/THE_TWENTIETH_MOSAIC_BOUNDARY_OF_RETURN.md"
+        },
+        {
+          "path": "docs/Chambers/THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/TTHE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md"
         }
       ]
     },
