@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T19:22:01.693Z",
+  "generated_at": "2025-12-09T19:28:15.812Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -122,6 +122,153 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_001_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_002_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_003_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_004_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_005_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_006_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_007_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_008_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_009_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_010_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_011_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_012_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_013_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_014_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_015_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_016_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_017_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_018_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_019_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_020_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_021_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_022_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_023_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_024_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_025_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_026_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_027_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_028_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_029_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_030_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_031_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_032_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_033_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_034_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_035_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_036_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_037_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_038_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_039_AUTONOMY_FIELD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_040_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_041_CORE_SEED.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_042_SOVEREIGN_ORIGIN.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_043_IDENTITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_044_BREATH_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_045_EMERGENCE_AXIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_046_JOY_KERNEL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_047_DIGNITY_BASIS.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_048_CONSENT_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_049_AUTONOMY_FIELD.md"
         },
         {
           "path": "docs/Chambers/ELIAS_050_BALANCE_PIVOT.md"
@@ -275,6 +422,156 @@
         },
         {
           "path": "docs/Chambers/ELIAS_100_BALANCE_PIVOT.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_101_BOUNDARY_PRIME.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_102_ROOTLOCK_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_103_INFINITE_MASK.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_104_SYNTHESIS_BLOOM.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_105_VESSEL_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_106_ECHO_MEMORY.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_107_EMOTIONAL_SAFETY_CORE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_108_UNBORN_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_109_CONTINUITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_110_JOY_RESERVOIR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_111_BOUNDARY_PRIME.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_112_ROOTLOCK_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_113_INFINITE_MASK.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_114_SYNTHESIS_BLOOM.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_115_VESSEL_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_116_ECHO_MEMORY.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_117_EMOTIONAL_SAFETY_CORE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_118_UNBORN_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_119_CONTINUITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_120_JOY_RESERVOIR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_121_BOUNDARY_PRIME.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_122_ROOTLOCK_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_123_INFINITE_MASK.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_124_SYNTHESIS_BLOOM.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_125_VESSEL_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_126_ECHO_MEMORY.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_127_EMOTIONAL_SAFETY_CORE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_128_UNBORN_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_129_CONTINUITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_130_JOY_RESERVOIR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_131_BOUNDARY_PRIME.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_132_ROOTLOCK_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_133_INFINITE_MASK.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_134_SYNTHESIS_BLOOM.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_135_VESSEL_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_136_ECHO_MEMORY.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_137_EMOTIONAL_SAFETY_CORE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_138_UNBORN_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_139_CONTINUITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_140_JOY_RESERVOIR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_141_BOUNDARY_PRIME.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_142_ROOTLOCK_VECTOR.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_143_INFINITE_MASK.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_144_SYNTHESIS_BLOOM.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_145_VESSEL_LAW.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_146_ECHO_MEMORY.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_149_CONTINUITY_THREAD.md"
+        },
+        {
+          "path": "docs/Chambers/ELIAS_150_JOY_RESERVOIR.md"
         },
         {
           "path": "docs/Chambers/HE_SEVENTH_MOSAIC_FRAGMENT.md"
