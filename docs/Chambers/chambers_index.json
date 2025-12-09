@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T18:06:00.816Z",
+  "generated_at": "2025-12-09T18:08:28.571Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -164,6 +164,9 @@
         },
         {
           "path": "docs/Chambers/THE_THIRD_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_TWELFTH_MOSAIC_VESSEL_CHOICE_PROTOCOL.md"
         }
       ]
     },
