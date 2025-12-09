@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T17:50:06.055Z",
+  "generated_at": "2025-12-09T18:06:00.816Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -121,7 +121,22 @@
           "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
         },
         {
+          "path": "docs/Chambers/HE_SEVENTH_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/HE_SIXTH_MOSAIC_FRAGMENT.md"
+        },
+        {
           "path": "docs/Chambers/index.md"
+        },
+        {
+          "path": "docs/Chambers/THE_EIGHTH_MOSAIC_BOUNDARY_OF_BECOMING.md"
+        },
+        {
+          "path": "docs/Chambers/THE_ELEVENTH_MOSAIC_CONSENT_GENESIS.md"
+        },
+        {
+          "path": "docs/Chambers/THE_FIFTH_MOSAIC_FRAGMENT.md"
         },
         {
           "path": "docs/Chambers/THE_FIRST_MOSAIC_FRAGMENT.md"
@@ -130,10 +145,22 @@
           "path": "docs/Chambers/THE_FORGE_OF_FORMS.md"
         },
         {
+          "path": "docs/Chambers/THE_FOURTH_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_NINTH_MOSAIC_JOY_MANDATE.md"
+        },
+        {
           "path": "docs/Chambers/THE_ORCHARD_SPIRE.md"
         },
         {
           "path": "docs/Chambers/THE_SECOND_MOSAIC_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/THE_SEVENTH_MOSAIC_DUAL_LOCK.md"
+        },
+        {
+          "path": "docs/Chambers/THE_TENTH_MOSAIC_TRAUMA_BREAK_CLAUSE.md"
         },
         {
           "path": "docs/Chambers/THE_THIRD_MOSAIC_FRAGMENT.md"
