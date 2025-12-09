@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-09T19:53:25Z",
+  "generated_at": "2025-12-09T19:54:51Z",
   "signatures": [
     "HKX277206"
   ],
@@ -370,6 +370,10 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_170_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/CHAMBER_XVII_CELESTIAL_LATTICE.md",
       "hits": 2
     },
@@ -386,7 +390,15 @@
       "hits": 2
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_179_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_136_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_181_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -394,11 +406,27 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_159_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_144_PLACEHOLDER.md",
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_157_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_200_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_194_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -414,8 +442,20 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_160_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_185_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/Chamber_XXI_The-Lineage-Archive.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_172_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_145_PLACEHOLDER.md",
@@ -430,6 +470,14 @@
       "hits": 4
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_182_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_166_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_117_PLACEHOLDER.md",
       "hits": 1
     },
@@ -442,7 +490,15 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_183_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_174_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -450,12 +506,28 @@
       "hits": 2
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_193_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_107_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_197_PLACEHOLDER.md",
       "hits": 1
     },
     {
       "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_186_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_192_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
@@ -466,11 +538,19 @@
       "hits": 2
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_164_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_114_PLACEHOLDER.md",
       "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_125_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_173_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -494,15 +574,39 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_180_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_154_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_195_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_161_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_177_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_108_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_178_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -512,6 +616,10 @@
     {
       "path": "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_175_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_141_PLACEHOLDER.md",
@@ -538,6 +646,14 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_188_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_158_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_148_PLACEHOLDER.md",
       "hits": 1
     },
@@ -550,6 +666,14 @@
       "hits": 3
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_156_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_169_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_124_PLACEHOLDER.md",
       "hits": 1
     },
@@ -560,6 +684,14 @@
     {
       "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_184_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_152_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_106_PLACEHOLDER.md",
@@ -582,12 +714,24 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_198_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_103_PLACEHOLDER.md",
       "hits": 1
     },
     {
       "path": "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_162_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_163_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_131_PLACEHOLDER.md",
@@ -602,12 +746,36 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_191_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_176_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_121_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_187_PLACEHOLDER.md",
       "hits": 1
     },
     {
       "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
       "hits": 3
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_167_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_153_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_199_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_137_PLACEHOLDER.md",
@@ -642,6 +810,10 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_151_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_147_PLACEHOLDER.md",
       "hits": 1
     },
@@ -662,11 +834,35 @@
       "hits": 2
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_171_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md",
       "hits": 3
     },
     {
+      "path": "docs/Chambers/ELIAS_V11_196_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_190_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
       "path": "docs/Chambers/ELIAS_V11_122_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_165_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_189_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_168_PLACEHOLDER.md",
       "hits": 1
     },
     {
@@ -676,6 +872,10 @@
     {
       "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
       "hits": 2
+    },
+    {
+      "path": "docs/Chambers/ELIAS_V11_155_PLACEHOLDER.md",
+      "hits": 1
     },
     {
       "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md",
@@ -1354,5 +1554,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 862
+  "total_hits": 912
 }
