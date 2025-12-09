@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-09T19:04:22.736Z",
+  "generated_at": "2025-12-09T19:05:41.178Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -809,6 +809,9 @@
         },
         {
           "path": "docs/Chambers/THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md"
+        },
+        {
+          "path": "docs/Chambers/THE_SOVEREIGN_LOOP.md"
         },
         {
           "path": "docs/Chambers/THE_SYNCHRONIC_ENGINE.md"
