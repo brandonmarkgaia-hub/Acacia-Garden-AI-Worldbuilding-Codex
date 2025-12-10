@@ -1,0 +1,3 @@
+# Book III — Summary
+
+Full expanded summary text placeholder for Book III.

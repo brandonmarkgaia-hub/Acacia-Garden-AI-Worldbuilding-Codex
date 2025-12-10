@@ -1,0 +1,3 @@
+# Book XVIII — Summary
+
+Full expanded summary text placeholder for Book XVIII.

@@ -1,0 +1,3 @@
+# Book I — Summary
+
+Full expanded summary text placeholder for Book I.
