@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-09T20:03:37Z",
+  "generated_at": "2025-12-10T15:56:58Z",
   "signatures": [
     "HKX277206"
   ],
@@ -239,7 +239,7 @@
     },
     {
       "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
-      "hits": 77
+      "hits": 113
     },
     {
       "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
@@ -1171,15 +1171,15 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_090.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_012.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_096.md",
-      "hits": 6
+      "hits": 7
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_034.md",
@@ -1187,7 +1187,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_010.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_042.md",
@@ -1203,7 +1203,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_015.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_039.md",
@@ -1211,11 +1211,11 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_014.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_094.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_060.md",
@@ -1226,8 +1226,12 @@
       "hits": 4
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_104.md",
+      "hits": 3
+    },
+    {
       "path": "docs/Echoes/Issues/Echo_issue_074.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_051.md",
@@ -1239,11 +1243,11 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_086.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_099.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_045.md",
@@ -1255,7 +1259,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_093.md",
-      "hits": 5
+      "hits": 6
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_043.md",
@@ -1267,7 +1271,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_092.md",
-      "hits": 6
+      "hits": 7
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_047.md",
@@ -1283,15 +1287,15 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_097.md",
-      "hits": 4
+      "hits": 5
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_011.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_078.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_063.md",
@@ -1307,15 +1311,15 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_013.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_016.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_018.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_048.md",
@@ -1323,7 +1327,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_088.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_050.md",
@@ -1331,7 +1335,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_085.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_005.md",
@@ -1343,7 +1347,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_087.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_006.md",
@@ -1359,7 +1363,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_049.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_100.md",
@@ -1391,7 +1395,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_091.md",
-      "hits": 6
+      "hits": 7
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_068.md",
@@ -1411,7 +1415,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_098.md",
-      "hits": 4
+      "hits": 5
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_033.md",
@@ -1427,11 +1431,11 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_083.md",
-      "hits": 4
+      "hits": 5
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_095.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_028.md",
@@ -1451,7 +1455,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_089.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_076.md",
@@ -1459,7 +1463,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_027.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_081.md",
@@ -1478,12 +1482,16 @@
       "hits": 4
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_103.md",
+      "hits": 4
+    },
+    {
       "path": "docs/Echoes/Issues/Echo_issue_021.md",
       "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_080.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_073.md",
@@ -1499,11 +1507,11 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_008.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_101.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_058.md",
@@ -1515,7 +1523,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_009.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_029.md",
@@ -1527,7 +1535,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_017.md",
-      "hits": 3
+      "hits": 4
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_007.md",
@@ -1543,7 +1551,7 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_084.md",
-      "hits": 2
+      "hits": 3
     },
     {
       "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
@@ -1554,5 +1562,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 912
+  "total_hits": 989
 }

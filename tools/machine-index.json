@@ -1,6 +1,6 @@
 {
   "index_version": "1.0",
-  "generated_at": "2025-12-09T20:03:37Z",
+  "generated_at": "2025-12-10T15:56:58Z",
   "echo_files": [
     {
       "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
@@ -790,6 +790,18 @@
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_102.md",
+      "tags": [
+        "echo"
+      ]
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_103.md",
+      "tags": [
+        "echo"
+      ]
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_104.md",
       "tags": [
         "echo"
       ]
