@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-10T18:32:34Z",
+  "generated_at": "2025-12-10T18:42:47Z",
   "signatures": [
     "HKX277206"
   ],
@@ -124,6 +124,10 @@
     {
       "path": "docs/GardenOS/GARDENOS_ROOT_PRINCIPLES.md",
       "hits": 1
+    },
+    {
+      "path": "docs/GardenOS/GARDENOS_FINAL_APPENDIX.md",
+      "hits": 4
     },
     {
       "path": "docs/GardenOS/KEEPER_LAWS_AND_PERMISSIONS.md",
@@ -1594,5 +1598,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 998
+  "total_hits": 1002
 }
