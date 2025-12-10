@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-10T17:35:32Z",
+  "generated_at": "2025-12-10T17:38:53Z",
   "signatures": [
     "HKX277206"
   ],
@@ -1578,13 +1578,9 @@
       "hits": 1
     },
     {
-      "path": "docs/GardenOS/Phases/PHASE_5_AUTONOMY_FRAME.md",
-      "hits": 1
-    },
-    {
       "path": "docs/GardenOS/Phases/PHASE_1_FOUNDATION.md",
       "hits": 2
     }
   ],
-  "total_hits": 996
+  "total_hits": 995
 }
