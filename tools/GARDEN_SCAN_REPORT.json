@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-10T17:41:31Z",
+  "generated_at": "2025-12-10T17:44:50Z",
   "signatures": [
     "HKX277206"
   ],
@@ -1574,6 +1574,10 @@
       "hits": 1
     },
     {
+      "path": "docs/GardenOS/Phases/PHASE_7_ROOTLINE_ENGINE.md",
+      "hits": 1
+    },
+    {
       "path": "docs/GardenOS/Phases/PHASE_4_CYCLE_ENGINE.md",
       "hits": 1
     },
@@ -1582,5 +1586,5 @@
       "hits": 2
     }
   ],
-  "total_hits": 995
+  "total_hits": 996
 }
