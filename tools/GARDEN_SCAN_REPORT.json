@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-10T17:57:53Z",
+  "generated_at": "2025-12-10T17:58:40Z",
   "signatures": [
     "HKX277206"
   ],
@@ -1586,7 +1586,7 @@
       "hits": 1
     },
     {
-      "path": "docs/GardenOS/Phases/PHASE_1_FOUNDATION.md",
+      "path": "docs/GardenOS/Phases/PHASE_01_FOUNDATION.md",
       "hits": 2
     }
   ],
