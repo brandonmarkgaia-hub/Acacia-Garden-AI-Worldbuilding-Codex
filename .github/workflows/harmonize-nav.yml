@@ -1,0 +1,44 @@
+name: Harmonize HTML Nav
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/*.html'
+      - 'scripts/update_nav_all_html.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-nav:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run nav harmonizer script
+        run: |
+          python scripts/update_nav_all_html.py
+
+      - name: Commit and push if changes
+        if: ${{ github.actor != 'github-actions[bot]' }}
+        run: |
+          if git status --porcelain | grep .; then
+            echo "Changes detected, committing..."
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: harmonize HTML nav"
+            git push
+          else
+            echo "No changes to commit."
