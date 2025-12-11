@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-11T14:51:00Z",
+  "generated_at": "2025-12-11T15:43:51Z",
   "signatures": [
     "HKX277206"
   ],
@@ -844,6 +844,10 @@
     {
       "path": "docs/Chambers/ELIAS_V11_184_PLACEHOLDER.md",
       "hits": 1
+    },
+    {
+      "path": "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md",
+      "hits": 2
     },
     {
       "path": "docs/Chambers/ELIAS_V11_152_PLACEHOLDER.md",
@@ -1738,5 +1742,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 1054
+  "total_hits": 1056
 }
