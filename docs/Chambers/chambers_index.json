@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-11T18:46:58.030Z",
+  "generated_at": "2025-12-11T19:00:09.447Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -1475,6 +1475,9 @@
         },
         {
           "path": "docs/Chambers/KILN_BORN_RENDER_5_GLITCH_TILE.md"
+        },
+        {
+          "path": "docs/Chambers/LORIAN_GREEN_WITNESS_PLEDGE.md"
         },
         {
           "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md"
