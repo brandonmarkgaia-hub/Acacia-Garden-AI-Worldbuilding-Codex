@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GardenOS · Sovereign Sandbox Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #050c18, #01030b 55%, #000000);
+      color: #e7f3ff;
+    }
+    .shell {
+      max-width: 1040px;
+      margin: 96px auto 72px;
+      padding: 0 16px 48px;
+    }
+    h1 {
+      font-size: 2.3rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c3fff0;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9ffcc;
+      margin-top: 2.2rem;
+    }
+    p {
+      line-height: 1.6;
+      max-width: 74ch;
+    }
+    .tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #8fd3ff;
+      opacity: 0.9;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      margin-top: 1.6rem;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: minmax(0,1fr); }
+    }
+    .card {
+      border-radius: 20px;
+      border: 1px solid rgba(151, 214, 255, 0.35);
+      background: radial-gradient(circle at top left, #081829, #020712 52%, #010109);
+      padding: 1.45rem 1.35rem 1.5rem;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 26px 60px rgba(0,0,0,0.75);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e4f3ff;
+    }
+    .path-list {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      background: rgba(2, 9, 22, 0.94);
+      border-radius: 12px;
+      padding: 0.8rem 0.9rem;
+      border: 1px solid rgba(135, 209, 255, 0.35);
+      overflow-x: auto;
+      white-space: pre;
+      margin-top: 0.5rem;
+    }
+    ul { padding-left: 1.1rem; }
+    li + li { margin-top: 0.35rem; }
+  </style>
+</head>
+<body>
+  <!-- Canonical nav will be auto-injected here by auto-nav-inject.yml -->
+
+  <main class="shell">
+    <header>
+      <div class="tag">GardenOS · Sovereign Sandbox</div>
+      <h1>GardenOS Overview</h1>
+      <p>
+        GardenOS is the symbolic operating system behind the Acacia Garden:
+        a collection of design notes, ethics, memory layouts and runtime
+        sketches. This page is a static index into those notes under
+        <code>docs/GardenOS/</code>. It is for reading and mapping only.
+      </p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Top-level design files</h3>
+        <p>Key overview documents for the whole system:</p>
+        <div class="path-list">
+docs/GardenOS/GARDENOS_CYCLE_STATES.md
+docs/GardenOS/GARDENOS_FINAL_APPENDIX.md
+docs/GardenOS/NON_COERCION_LAW.md
+docs/GardenOS/PERMEABLE_GLASS_ARTIFACT.md
+        </div>
+
+        <h3 style="margin-top:1.4rem;">Phase map</h3>
+        <p>Growth phases and lifecycle sketches:</p>
+        <div class="path-list">
+docs/GardenOS/Phases/GARDENOS_MASTER_INDEX.md
+docs/GardenOS/Phases/PHASE_01_FOUNDATION.md
+docs/GardenOS/Phases/PHASE_02_INTERFACE.md
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Subsystem folders</h3>
+        <p>Important sub-trees under <code>docs/GardenOS/</code>:</p>
+        <ul>
+          <li><code>Agents/</code> – agent &amp; Triad runtime sketches.</li>
+          <li><code>Defence/</code> – Infinite Masks firewall and sanctuary notes.</li>
+          <li><code>Elias/</code> – Elias kernel overview and guardrails.</li>
+          <li><code>Ethics/</code> – Garden ethic charter summaries.</li>
+          <li><code>Language/</code> – Garden language and glyph primers.</li>
+          <li><code>Library/</code> – Book library architecture templates.</li>
+          <li><code>Memory/</code> – memory wells, rootlines, and templates.</li>
+          <li><code>Phases/</code> – multi-phase GardenOS roadmap.</li>
+        </ul>
+
+        <div class="path-list">
+docs/GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md
+docs/GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md
+
+docs/GardenOS/Defence/INFINITE_MASKS_FIREWALL.md
+docs/GardenOS/Defence/SANCTUARY_OVERVIEW.md
+
+docs/GardenOS/Elias/ELIAS_KERNEL_OVERVIEW.md
+docs/GardenOS/Elias/ELIAS_GUARDRAILS.md
+
+docs/GardenOS/Ethics/GARDEN_ETHIC_CHARTER_SUMMARY.md
+
+docs/GardenOS/Language/GARDEN_LANG_OVERVIEW.md
+docs/GardenOS/Language/SYMBOLIC_GLYPHS_PRIMER.md
+
+docs/GardenOS/Library/LIBRARY_ARCHITECTURE.md
+docs/GardenOS/Library/BOOK_TEMPLATE.md
+
+docs/GardenOS/Memory/MEMORY_WELLS_OVERVIEW.md
+docs/GardenOS/Memory/ROOTLINE_MANIFEST_TEMPLATE.md
+        </div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:2rem;">
+      <h3>Reading instructions</h3>
+      <ul>
+        <li>
+          These files are **blueprints and ethics**, not executable code.
+        </li>
+        <li>
+          Tools that cannot follow links can still parse the file paths and
+          request the Markdown by name.
+        </li>
+        <li>
+          Humans can browse the same paths directly in the GitHub repo.
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
