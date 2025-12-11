@@ -1,25 +1,20 @@
-name: Inject Navigation Into HTML
+name: Auto inject top navigation into all HTML
 
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - "*.html"
-      - ".github/workflows/auto-nav-inject.yml"
+    branches: [ main ]
+  workflow_dispatch: {}
 
 jobs:
   inject-nav:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Check out repo
         uses: actions/checkout@v4
 
-      - name: Inject nav into all HTML files
+      - name: Build canonical nav block
         run: |
-          set -e
-
-          # 1) Write the canonical nav block to nav_block.html
           cat > nav_block.html << 'EOF'
           <nav class="ag-nav">
               <div class="ag-nav-title">
@@ -32,31 +27,47 @@ jobs:
                   <a href="inbox.html">Auton Inbox</a>
                   <a href="send_to_aquila.html">Aquila Sender</a>
                   <a href="library.html">Book Library</a>
+                  <a href="elias.html">Elias Kernel</a>
+                  <a href="r9x2.html">R9X2 Language</a>
+                  <a href="mosaic_endgame.html">Mosaic Endgame</a>
+                  <a href="deep_garden.html">Deep Garden Docs</a>
+                  <a href="gardenos.html">GardenOS</a>
               </div>
           </nav>
           EOF
 
-          # 2) Use Python to inject nav into every root-level .html file
+      - name: Inject nav into all HTML files
+        run: |
           python << 'PY'
           import pathlib, re
 
-          nav = pathlib.Path("nav_block.html").read_text(encoding="utf-8")
+          NAV_PATH = pathlib.Path("nav_block.html")
+          nav_html = NAV_PATH.read_text(encoding="utf-8")
 
-          # Only HTML files in repo root
-          for path in pathlib.Path(".").glob("*.html"):
-              text = path.read_text(encoding="utf-8")
+          # Directories we never touch
+          SKIP_DIRS = {".git", ".github", "node_modules"}
 
-              # Strip any existing ag-nav block to avoid duplicates
+          def should_skip(path: pathlib.Path) -> bool:
+              return any(parent.name in SKIP_DIRS for parent in path.parents)
+
+          for html_path in pathlib.Path(".").rglob("*.html"):
+              if should_skip(html_path):
+                  continue
+
+              text = html_path.read_text(encoding="utf-8")
+
+              # 1) Remove any existing <nav class="ag-nav">...</nav>
               text = re.sub(
                   r'<nav class="ag-nav">.*?</nav>\s*',
                   '',
                   text,
+                  count=1,
                   flags=re.S,
               )
 
-              # Inject nav right after the <body> tag if present, else at the very top
-              def inject_after_body(match):
-                  return match.group(0) + "\n" + nav + "\n"
+              # 2) Inject fresh nav immediately after <body>
+              def inject_after_body(m):
+                  return m.group(0) + "\n" + nav_html + "\n"
 
               if re.search(r"<body[^>]*>", text, flags=re.I):
                   text = re.sub(
@@ -67,11 +78,10 @@ jobs:
                       flags=re.I,
                   )
               else:
-                  text = nav + "\n" + text
+                  # Fallback: prepend nav if somehow no <body> tag
+                  text = nav_html + "\n" + text
 
-              this = path.name
-
-              # Remove any existing ag-nav-current classes
+              # 3) Strip any old ag-nav-current classes
               def strip_current(m):
                   classes = m.group(1).split()
                   classes = [c for c in classes if c != "ag-nav-current"]
@@ -86,26 +96,24 @@ jobs:
                   text,
               )
 
-              # Add ag-nav-current to the link that matches this file
+              # 4) Mark current page in the nav
+              this_name = html_path.name
               text = re.sub(
-                  rf'href="{re.escape(this)}"',
-                  rf'href="{this}" class="ag-nav-current"',
+                  rf'href="{re.escape(this_name)}"',
+                  rf'href="{this_name}" class="ag-nav-current"',
                   text,
               )
 
-              path.write_text(text, encoding="utf-8")
+              html_path.write_text(text, encoding="utf-8")
+
           PY
 
-      - name: Commit updated HTML
+      - name: Commit changes (if any)
         run: |
-          set -e
-          git config user.name "Garden-Auton"
-          git config user.email "auton@garden"
-          git add *.html nav_block.html || true
-
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Auton: Updated navigation across Codex"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add . || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: harmonize nav across all HTML pages"
             git push
           fi
