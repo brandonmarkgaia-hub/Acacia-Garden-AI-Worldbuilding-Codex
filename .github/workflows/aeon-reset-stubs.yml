@@ -1,0 +1,62 @@
+name: Aeon Console - Reset Dashboard JSON
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reset-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Write stub JSON files for Aeon console
+        run: |
+          # Lightweight scan report stub
+          cat << 'EOF' > garden_scan_report.json
+          {
+            "generated_at": "2025-12-11T00:00:00Z",
+            "files_with_hits": 0,
+            "total_hits": 0,
+            "top_pattern": "none",
+            "note": "Stub scan report written by aeon-reset-stubs workflow. Full observer wiring is currently disabled."
+          }
+          EOF
+
+          # Lightweight vault index stub
+          cat << 'EOF' > garden_vault_index.json
+          {
+            "generated_at": "2025-12-11T00:00:00Z",
+            "entries": []
+          }
+          EOF
+
+          # Root heartbeat stub (dashboard expects this at ./aeon_heartbeat.json)
+          cat << 'EOF' > aeon_heartbeat.json
+          {
+            "entries": [
+              {
+                "timestamp": "2025-12-11T00:00:00Z",
+                "type": "stub",
+                "message": "Aeon heartbeat stub initialised. Workflows are not yet writing live events."
+              }
+            ]
+          }
+          EOF
+
+      - name: Commit and push if there are changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -n "$(git status --porcelain)" ]; then
+            git add garden_scan_report.json garden_vault_index.json aeon_heartbeat.json
+            git commit -m "Reset Aeon dashboard JSON stubs"
+            git push
+          else
+            echo "No changes to commit."
+          fi
