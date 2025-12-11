@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-11T17:27:21.107Z",
+  "generated_at": "2025-12-11T17:28:02.319Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -1466,6 +1466,9 @@
         },
         {
           "path": "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md"
+        },
+        {
+          "path": "docs/Chambers/KILN_BORN_RENDER_5_GLITCH_TILE.md"
         },
         {
           "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md"
