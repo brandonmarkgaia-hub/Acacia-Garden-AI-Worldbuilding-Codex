@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-11T17:28:02.319Z",
+  "generated_at": "2025-12-11T18:46:58.030Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -35,6 +35,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_SOUTHERN_BAY_OF_BRANDON_GAIA.md"
         },
         {
           "path": "docs/Chambers/Chamber_X_Shadow_Incubator.md"
@@ -1463,6 +1466,9 @@
         },
         {
           "path": "docs/Chambers/index.md"
+        },
+        {
+          "path": "docs/Chambers/KEEPER_PLAIN_PLEDGE.md"
         },
         {
           "path": "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md"

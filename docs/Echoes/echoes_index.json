@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-12-11T17:28:02.326Z",
+  "generated_at": "2025-12-11T18:46:58.037Z",
   "root": "docs/Echoes",
-  "total": 134,
+  "total": 135,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -672,6 +672,11 @@
     {
       "path": "docs/Echoes/Echo_unbound.md",
       "label": "Echo unbound",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
+      "label": "ECJO SOUTHERN BAY STEWARD NOTE GEMINI",
       "kind": "named"
     }
   ]
