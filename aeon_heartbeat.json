@@ -1,0 +1,9 @@
+{
+  "entries": [
+    {
+      "timestamp": "2025-12-11T00:00:00Z",
+      "type": "stub",
+      "message": "Aeon heartbeat stub initialised. Workflows are not yet writing live events."
+    }
+  ]
+}
