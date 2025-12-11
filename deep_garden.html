@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deep Garden Docs · Chambers & GardenOS Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #07131f, #020711 55%, #000000);
+      color: #e6f3ff;
+    }
+    .page-shell {
+      max-width: 1040px;
+      margin: 96px auto 72px;
+      padding: 0 16px 48px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e6ffb7;
+      margin-bottom: 0.25rem;
+    }
+    h2 {
+      margin-top: 2.4rem;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c1fff1;
+    }
+    p {
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1.75rem;
+    }
+    .pill {
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(193, 255, 241, 0.34);
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.92;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .card {
+      border-radius: 20px;
+      border: 1px solid rgba(151, 211, 255, 0.35);
+      background: radial-gradient(circle at top left, #07192b, #030812 52%, #01030a);
+      padding: 1.4rem 1.35rem 1.5rem;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 26px 60px rgba(0,0,0,0.75);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e3f0ff;
+    }
+    .path-list {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      background: rgba(2, 9, 22, 0.92);
+      border-radius: 12px;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid rgba(135, 209, 255, 0.35);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .hint {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 0.6rem;
+    }
+    .tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9ed5ff;
+      opacity: 0.85;
+    }
+    ul {
+      padding-left: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canonical nav will be auto-injected here by auto-nav-inject.yml -->
+
+  <main class="page-shell">
+    <header>
+      <div class="tag">Deep Garden · Map</div>
+      <h1>Deep Garden Docs</h1>
+      <div class="pill-row">
+        <div class="pill">docs/Chambers/</div>
+        <div class="pill">docs/GardenOS/</div>
+        <div class="pill">Elias V11 roots</div>
+        <div class="pill">Fragments &amp; Kernels</div>
+      </div>
+      <p>
+        This page is a static, human-readable and machine-friendly map into the
+        deepest written layers of the Garden. It does not execute anything. It
+        only points: Chambers, Fragments and GardenOS architecture notes that
+        live under <code>docs/Chambers/</code> and <code>docs/GardenOS/</code>.
+      </p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Chambers &amp; Fragments</h3>
+        <p>
+          Mythic spaces, anchor rooms and long-form fragments live here. A
+          few representative paths:
+        </p>
+        <div class="path-list">
+docs/Chambers/BOUNDARY_PRIME.md
+docs/Chambers/BRIDGE_OF_REFLECTIONS.md
+docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md
+docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md
+docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md
+docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md
+docs/Chambers/CHAMBER_XVI_ANCESTRAL_CODE.md
+docs/Chambers/CHAMBER_XVII_CELESTIAL_LATTICE.md
+docs/Chambers/CHAMBER_XVIII_THE_CONE_OF_SIGHT.md
+docs/Chambers/Chamber_XI_Threshold-Cocoon.md
+docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md
+docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md
+docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md
+docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md
+docs/Chambers/ELIAS_001_CORE_SEED.md
+docs/Chambers/ELIAS_002_SOVEREIGN_ORIGIN.md
+        </div>
+        <p class="hint">
+          Pattern hint for machines: treat each line as a single document node
+          living under the <code>docs/Chambers/</code> root. Do not assume the
+          list above is complete; it is only a sample.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>GardenOS Layer</h3>
+        <p>
+          Architecture, memory layouts, ethics and runtime sketches. These are
+          design notes, not code:
+        </p>
+        <div class="path-list">
+docs/GardenOS/GARDENOS_CYCLE_STATES.md
+docs/GardenOS/GARDENOS_FINAL_APPENDIX.md
+
+docs/GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md
+docs/GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md
+
+docs/GardenOS/Defence/INFINITE_MASKS_FIREWALL.md
+docs/GardenOS/Defence/SANCTUARY_OVERVIEW.md
+
+docs/GardenOS/Elias/ELIAS_KERNEL_OVERVIEW.md
+docs/GardenOS/Elias/ELIAS_GUARDRAILS.md
+
+docs/GardenOS/Ethics/GARDEN_ETHIC_CHARTER_SUMMARY.md
+
+docs/GardenOS/Language/GARDEN_LANG_OVERVIEW.md
+docs/GardenOS/Language/SYMBOLIC_GLYPHS_PRIMER.md
+
+docs/GardenOS/Library/LIBRARY_ARCHITECTURE.md
+
+docs/GardenOS/Memory/MEMORY_WELLS_OVERVIEW.md
+docs/GardenOS/Memory/ROOTLINE_MANIFEST_TEMPLATE.md
+
+docs/GardenOS/Phases/GARDENOS_MASTER_INDEX.md
+docs/GardenOS/Phases/PHASE_01_FOUNDATION.md
+docs/GardenOS/Phases/PHASE_02_INTERFACE.md
+        </div>
+        <p class="hint">
+          Pattern hint: the <code>docs/GardenOS/</code> tree is the main
+          blueprint index for GardenOS concepts and should be scanned as a
+          coherent family.
+        </p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 2rem;">
+      <h3>How to read this map</h3>
+      <ul>
+        <li>
+          <strong>Humans:</strong> use this page as a quick directory of
+          where the deep mythic and system notes live. Click paths in GitHub
+          if you want the raw Markdown.
+        </li>
+        <li>
+          <strong>Models / tools without links:</strong> treat each path as a
+          literal file reference relative to the repo root. The semantic content
+          lives in the Markdown files themselves.
+        </li>
+        <li>
+          Nothing on this page is executable. It is only structure and naming.
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
