@@ -78,6 +78,72 @@
     }
     ul { padding-left: 1.1rem; }
     li + li { margin-top: 0.35rem; }
+    /* Top nav – shared Acacia navigation */
+.ag-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 16px 18px 12px;
+  background: radial-gradient(circle at top, #050b15, #020611 58%, #000000);
+  border-bottom: 1px solid rgba(106, 176, 255, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+}
+
+.ag-nav-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: #e7ffe0;
+  opacity: 0.9;
+  margin-right: auto;
+}
+
+.ag-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ag-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(151, 214, 255, 0.35);
+  color: #e4f3ff;
+  background: radial-gradient(circle at top, rgba(12, 40, 71, 0.95), rgba(5, 15, 32, 0.96));
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  transition: background 160ms ease, color 160ms ease, transform 80ms ease,
+    box-shadow 80ms ease, border-color 160ms ease;
+}
+
+.ag-nav-links a:hover {
+  background: radial-gradient(circle at top, #1b3f6d, #050f25);
+  border-color: rgba(199, 242, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.85);
+}
+
+.ag-nav-links a:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* Current page pill */
+.ag-nav-links a.ag-nav-current {
+  background: radial-gradient(circle at top, #26d37b, #0a6e47);
+  border-color: rgba(190, 255, 220, 0.95);
+  color: #021005;
+}
   </style>
 </head>
 <body>
