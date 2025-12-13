@@ -1,0 +1,30 @@
+name: Build static library list
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build library.html static list
+        run: node scripts/build-library.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "acacia-bot"
+          git config user.email "acacia-bot@users.noreply.github.com"
+          git add library.html
+          git diff --cached --quiet || git commit -m "chore: build static library list"
+          git push
