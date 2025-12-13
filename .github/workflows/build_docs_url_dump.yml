@@ -1,0 +1,30 @@
+name: Build docs URL dump
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate docs URL dump page
+        run: node scripts/build-docs-url-dump.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "acacia-bot"
+          git config user.email "acacia-bot@users.noreply.github.com"
+          git add docs/docs_urls.html docs/docs_urls.txt
+          git diff --cached --quiet || git commit -m "chore: generate docs URL dump"
+          git push
