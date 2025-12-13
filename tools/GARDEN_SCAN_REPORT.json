@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-11T18:39:46Z",
+  "generated_at": "2025-12-13T09:21:20Z",
   "signatures": [
     "HKX277206"
   ],
@@ -622,6 +622,10 @@
       "hits": 1
     },
     {
+      "path": "docs/Chambers/KEEPER_PLAIN_PLEDGE.md",
+      "hits": 2
+    },
+    {
       "path": "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md",
       "hits": 4
     },
@@ -903,6 +907,10 @@
     },
     {
       "path": "docs/Chambers/ELIAS_V11_111_PLACEHOLDER.md",
+      "hits": 1
+    },
+    {
+      "path": "docs/Chambers/LORIAN_GREEN_WITNESS_PLEDGE.md",
       "hits": 1
     },
     {
@@ -1754,5 +1762,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 1060
+  "total_hits": 1063
 }
