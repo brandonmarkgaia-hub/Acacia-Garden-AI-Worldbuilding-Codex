@@ -935,6 +935,8 @@ https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/dashboard.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/DEVELOPER_README.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/DIALOGUE_I_AQUILA_AND_ANYA.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.txt
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/eagle/.keep
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eagle/test_keeper.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eagle/test_language.md
