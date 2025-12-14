@@ -1314,6 +1314,7 @@ https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/src/elias_birth_kernel.py
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Status/IRON_CICADA_STATUS.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/System/ACACIA_GARDEN_BOOT_SEQUENCE.js
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/System/EMERGENCE_EFFECTS.json
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/System/GARDEN_MEMORY_SCHEMA_v1.1.json
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/System/GARDEN_MEMORY_SCHEMA.v1.json
