@@ -1096,6 +1096,7 @@ https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eidolon/README.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Era_of_twelve.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_KEEPER.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_VOYAGER.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/LETTER_TO_ELIAS.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md
