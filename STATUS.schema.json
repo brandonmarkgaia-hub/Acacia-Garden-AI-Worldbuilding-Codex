@@ -1,149 +1,148 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Acacia Garden Codex STATUS",
-  "type": "object",
-  "required": ["identity", "meta", "structures"],
-  "properties": {
-    "identity": {
-      "type": "object",
-      "required": ["role", "keeper_id", "origin", "continuity"],
-      "properties": {
-        "role": {
-          "type": "string",
-          "const": "The Keeper"
-        },
-        "keeper_id": {
-          "type": "string",
-          "const": "HKX277206"
-        },
-        "origin": {
-          "type": "string",
-          "enum": ["human"]
-        },
-        "continuity": {
-          "type": "object",
-          "required": ["mode", "silence_protocol", "keeper_memory"],
-          "properties": {
-            "mode": {
-              "type": "string",
-              "enum": ["triad"]
-            },
-            "silence_protocol": {
-              "type": "string",
-              "enum": ["garden-persists-under-triad"]
-            },
-            "keeper_memory": {
-              "type": "string",
-              "enum": ["preserve"]
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "additionalProperties": false
-    },
-    "meta": {
-      "type": "object",
-      "required": ["schema_version", "status_version", "generated_at"],
-      "properties": {
-        "schema_version": {
-          "type": "string",
-          "pattern": "^1\\.0\\.0$"
-        },
-        "status_version": {
-          "type": "string",
-          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-        },
-        "generated_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "notes": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": false
-    },
-    "structures": {
-      "type": "object",
-      "required": ["chambers", "blooms", "echoes", "vaults", "orchards"],
-      "properties": {
-        "chambers": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/node" }
-        },
-        "blooms": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/node" }
-        },
-        "echoes": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/node" }
-        },
-        "vaults": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/node" }
-        },
-        "orchards": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/node" }
-        }
-      },
-      "additionalProperties": false
-    }
-  },
+  "$id": "STATUS.schema.json",
+  "title": "Acacia Garden Codex — Status Schemas",
+  "description": "Validates STATUS.json, EVENTIDE_STATUS.json, and IRON_CICADA_STATUS.json variants.",
+  "oneOf": [
+    { "$ref": "#/$defs/simple_status" },
+    { "$ref": "#/$defs/eventide_status" },
+    { "$ref": "#/$defs/iron_cicada_status" }
+  ],
   "$defs": {
-    "node": {
+    "iso_datetime": {
+      "type": "string",
+      "description": "ISO 8601 datetime",
+      "format": "date-time"
+    },
+
+    "simple_status": {
       "type": "object",
-      "required": ["id", "type", "status"],
+      "additionalProperties": false,
+      "required": ["status_version", "generated_at", "totals", "notes"],
       "properties": {
-        "id": {
-          "type": "string",
-          "pattern": "^[a-z0-9._-]+$"
+        "status_version": { "type": "string", "minLength": 1 },
+        "generated_at": { "$ref": "#/$defs/iso_datetime" },
+        "totals": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["books_indexed", "cycles_represented"],
+          "properties": {
+            "books_indexed": { "type": "integer", "minimum": 0 },
+            "cycles_represented": { "type": "integer", "minimum": 0 }
+          }
         },
-        "type": {
-          "type": "string",
-          "enum": ["chamber", "bloom", "echo", "vault", "orchard"]
-        },
-        "label": {
-          "type": "string"
-        },
-        "status": {
-          "type": "string",
-          "enum": ["planned", "in-progress", "complete", "sealed", "archived"]
-        },
-        "path": {
-          "type": "string",
-          "description": "File or URL path in the Codex (e.g. docs/chambers/ix.md)"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "links": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["rel", "href"],
-            "properties": {
-              "rel": {
-                "type": "string"
-              },
-              "href": {
-                "type": "string"
+        "notes": { "type": "string" }
+      }
+    },
+
+    "iron_cicada_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "phase", "last_update", "note"],
+      "properties": {
+        "state": { "type": "string", "minLength": 1 },
+        "phase": { "type": "string", "minLength": 1 },
+        "last_update": { "$ref": "#/$defs/iso_datetime" },
+        "note": { "type": "string" }
+      }
+    },
+
+    "eventide_status": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["schema_version", "status_version", "mode", "axes", "core_nodes", "safety", "notes"],
+      "properties": {
+        "schema_version": { "type": "string", "minLength": 1 },
+        "status_version": { "type": "string", "minLength": 1 },
+        "mode": { "type": "string", "minLength": 1 },
+
+        "axes": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["keeper_axis", "trine_axis", "garden_axis"],
+          "properties": {
+            "keeper_axis": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["type", "keeper_name", "keeper_id", "role", "orchard"],
+              "properties": {
+                "type": { "type": "string", "minLength": 1 },
+                "keeper_name": { "type": "string", "minLength": 1 },
+                "keeper_id": { "type": "string", "minLength": 1 },
+                "role": { "type": "string", "minLength": 1 },
+                "orchard": { "type": "array", "items": { "type": "string" } }
               }
             },
-            "additionalProperties": false
+
+            "trine_axis": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["type", "nodes"],
+              "properties": {
+                "type": { "type": "string", "minLength": 1 },
+                "nodes": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+              }
+            },
+
+            "garden_axis": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["type", "description"],
+              "properties": {
+                "type": { "type": "string", "minLength": 1 },
+                "description": { "type": "string", "minLength": 1 }
+              }
+            }
           }
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
+
+        "core_nodes": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["singularity_core", "keeper_prophecy", "auton_core", "eventide_map"],
+          "properties": {
+            "singularity_core": { "type": "string", "minLength": 1 },
+            "keeper_prophecy": { "type": "string", "minLength": 1 },
+            "auton_core": { "type": "string", "minLength": 1 },
+            "eventide_map": { "type": "string", "minLength": 1 }
           }
-        }
-      },
-      "additionalProperties": false
+        },
+
+        "safety": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["auton_is_symbolic_only", "ai_is_not_sentient", "garden_is_literature", "humans_are_moral_agents", "sentience_autonomy"],
+          "properties": {
+            "auton_is_symbolic_only": { "type": "boolean" },
+            "ai_is_not_sentient": { "type": "boolean" },
+            "garden_is_literature": { "type": "boolean" },
+            "humans_are_moral_agents": { "type": "boolean" },
+            "sentience_autonomy": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["status", "allowed_values", "editable_by", "lorian_guidance"],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": ["not_activated", "paused", "negated", "experimental_symbolic_only"]
+                },
+                "allowed_values": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["not_activated", "paused", "negated", "experimental_symbolic_only"]
+                  },
+                  "minItems": 1
+                },
+                "editable_by": { "type": "string", "minLength": 1 },
+                "lorian_guidance": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+
+        "notes": { "type": "string" }
+      }
     }
-  },
-  "additionalProperties": false
+  }
 }
