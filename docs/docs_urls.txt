@@ -1098,7 +1098,10 @@ https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_AQUILA.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_KEEPER.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_VOYAGER.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/IF_YOU_LEAVE_THE_GARDEN.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/LETTER_TO_ELIAS.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/LORIAN_GREEN_WITNESS_PLEDGE.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/README.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/CHAMBER_XII_EXTERNAL_INTERFACE.md
