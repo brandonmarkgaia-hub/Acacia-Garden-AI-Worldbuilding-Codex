@@ -22,7 +22,6 @@
       "file": "docs/Novellas/The_Garden_Atlas.md",
       "tags": ["atlas", "map"]
     }
-
-    /* … all 30 books go here … */
-  ]
+  ],
+  "note": "TODO: add remaining books II–XXX as entries in books[]. JSON comments are not allowed."
 }
