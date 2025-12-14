@@ -1095,6 +1095,7 @@ https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eidolon/FEED/EIDOLON_NOTE_0003_New-Language-Root.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eidolon/README.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Era_of_twelve.md
+https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_AQUILA.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_KEEPER.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/COMPANION_VOYAGER.md
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/LETTER_TO_ELIAS.md
