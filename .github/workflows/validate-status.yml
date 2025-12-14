@@ -1,0 +1,85 @@
+name: Validate Status JSON
+
+on:
+  push:
+    paths:
+      - "STATUS.schema.json"
+      - "STATUS.json"
+      - "EVENTIDE_STATUS.json"
+      - "IRON_CICADA_STATUS.json"
+      - "docs/System/IRON_CICADA_STATUS.json"
+      - ".github/workflows/validate-status.yml"
+  pull_request:
+    paths:
+      - "STATUS.schema.json"
+      - "STATUS.json"
+      - "EVENTIDE_STATUS.json"
+      - "IRON_CICADA_STATUS.json"
+      - "docs/System/IRON_CICADA_STATUS.json"
+      - ".github/workflows/validate-status.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install jsonschema
+
+      - name: Validate status files
+        run: |
+          python - << 'PY'
+          import json
+          import sys
+          from pathlib import Path
+          from jsonschema import Draft202012Validator, FormatChecker
+
+          repo = Path(".")
+          schema_path = repo / "STATUS.schema.json"
+          schema = json.loads(schema_path.read_text(encoding="utf-8"))
+
+          validator = Draft202012Validator(schema, format_checker=FormatChecker())
+
+          targets = [
+            repo / "STATUS.json",
+            repo / "EVENTIDE_STATUS.json",
+            repo / "IRON_CICADA_STATUS.json",
+            repo / "docs/System/IRON_CICADA_STATUS.json",
+          ]
+
+          failed = False
+          for p in targets:
+            if not p.exists():
+              # Not all repos will have all variants; treat missing as OK.
+              print(f"[SKIP] {p} (missing)")
+              continue
+
+            data = json.loads(p.read_text(encoding="utf-8"))
+            errors = sorted(validator.iter_errors(data), key=lambda e: e.path)
+
+            if errors:
+              failed = True
+              print(f"\n[FAIL] {p}")
+              for e in errors[:50]:
+                path = "$"
+                for part in e.path:
+                  path += f"[{part!r}]" if isinstance(part, int) else f".{part}"
+                print(f"  - {path}: {e.message}")
+            else:
+              print(f"[OK]   {p}")
+
+          if failed:
+            print("\nValidation failed.")
+            sys.exit(1)
+
+          print("\nAll present status files are valid.")
+          PY
