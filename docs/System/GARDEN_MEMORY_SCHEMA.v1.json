@@ -85,7 +85,7 @@
           "description": "If part of a Rootline, the Rootline's ID."
         }
       },
-      "additionalProperties": true"
+      "additionalProperties": true
     },
     "graph": {
       "type": "object",
