@@ -1,0 +1,122 @@
+name: Build ACACIA Mega Monolith
+
+on:
+  workflow_dispatch:
+    inputs:
+      printable_base64:
+        description: "Also generate printable .b64.txt (bigger than binary)"
+        type: boolean
+        default: true
+      include_git_history_bundle:
+        description: "Also generate a full git history bundle (optional, bigger)"
+        type: boolean
+        default: false
+      retention_days:
+        description: "Artifact retention days (1-90)"
+        required: true
+        default: "7"
+
+jobs:
+  monolith:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history so SOURCE_DATE_EPOCH is stable)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y zstd xz-utils
+
+      - name: Build monolith (tracked files)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Stable timestamp for reproducible tar metadata
+          SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
+          export SOURCE_DATE_EPOCH
+          echo "SOURCE_DATE_EPOCH=$SOURCE_DATE_EPOCH" >> "$GITHUB_ENV"
+
+          OUTDIR="out"
+          mkdir -p "$OUTDIR"
+
+          BASE="ACACIA_MEGA_MONOLITH"
+
+          # Pack *everything tracked by git* (no .git history, no runner junk)
+          git ls-files -z | tar \
+            --null --files-from=- \
+            --sort=name \
+            --mtime="@${SOURCE_DATE_EPOCH}" \
+            --owner=0 --group=0 --numeric-owner \
+            --pax-option=exthdr.name=%d/PaxHeaders/%f,delete=atime,delete=ctime \
+            -cf "${BASE}.tar"
+
+          # Compress hard with both; keep the smaller file
+          zstd --ultra -22 -T0 -q -o "${BASE}.tar.zst" "${BASE}.tar"
+          xz -9e -c "${BASE}.tar" > "${BASE}.tar.xz"
+          rm -f "${BASE}.tar"
+
+          SZ_ZST=$(stat -c%s "${BASE}.tar.zst")
+          SZ_XZ=$(stat -c%s "${BASE}.tar.xz")
+
+          if [ "$SZ_XZ" -lt "$SZ_ZST" ]; then
+            rm -f "${BASE}.tar.zst"
+            BEST="${BASE}.tar.xz"
+            echo "BEST_COMPRESSION=xz" >> "$GITHUB_ENV"
+          else
+            rm -f "${BASE}.tar.xz"
+            BEST="${BASE}.tar.zst"
+            echo "BEST_COMPRESSION=zstd" >> "$GITHUB_ENV"
+          fi
+
+          echo "BEST_FILE=$BEST" >> "$GITHUB_ENV"
+
+          sha256sum "$BEST" > "${BEST}.sha256"
+
+          mv "$BEST" "${BEST}.sha256" "$OUTDIR/"
+
+          echo "Built: $OUTDIR/$BEST"
+          echo "SHA256: $(cat "$OUTDIR/${BEST}.sha256")"
+
+      - name: Optional: printable base64 (single text file)
+        if: ${{ inputs.printable_base64 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          BEST="${{ env.BEST_FILE }}"
+          IN="out/$BEST"
+          SUM="out/${BEST}.sha256"
+          OUT="out/${BEST}.b64.txt"
+
+          {
+            echo "# ACACIA MEGA MONOLITH (printable)"
+            echo "# Binary file: $BEST"
+            echo "# Binary SHA256: $(cut -d' ' -f1 "$SUM")"
+            echo "# NOTE: Base64 increases size (~33%)."
+            echo "# ----BEGIN BASE64----"
+            base64 -w 76 "$IN"
+            echo "# ----END BASE64----"
+          } > "$OUT"
+
+          sha256sum "$OUT" > "${OUT}.sha256"
+
+      - name: Optional: full git history bundle (for true “everything” incl history)
+        if: ${{ inputs.include_git_history_bundle }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          B="out/ACACIA_GIT_HISTORY.bundle"
+          git bundle create "$B" --all
+          zstd --ultra -22 -T0 -q -o "${B}.zst" "$B"
+          rm -f "$B"
+          sha256sum "${B}.zst" > "${B}.zst.sha256"
+
+      - name: Upload artifact (no double-compression)
+        uses: actions/upload-artifact@v4
+        with:
+          name: acacia-mega-monolith
+          path: out/
+          compression-level: 0
+          retention-days: ${{ inputs.retention_days }}
+          include-hidden-files: true
