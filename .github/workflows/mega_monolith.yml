@@ -5,12 +5,12 @@ on:
     inputs:
       printable_base64:
         description: "Also generate printable .b64.txt (bigger than binary)"
-        type: boolean
-        default: true
-      include_git_history_bundle:
-        description: "Also generate a full git history bundle (optional, bigger)"
-        type: boolean
-        default: false
+        required: true
+        default: "true"
+      include_git_bundle:
+        description: "Also generate full git history bundle (bigger, but best for full recovery)"
+        required: true
+        default: "false"
       retention_days:
         description: "Artifact retention days (1-90)"
         required: true
@@ -20,30 +20,37 @@ jobs:
   monolith:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (full history so SOURCE_DATE_EPOCH is stable)
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install tools
-        run: sudo apt-get update && sudo apt-get install -y zstd xz-utils
+        run: sudo apt-get update && sudo apt-get install -y zstd xz-utils git-lfs
 
-      - name: Build monolith (tracked files)
+      - name: Pull LFS (if any)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git lfs install --local || true
+          git lfs pull || true
+
+      - name: Build monolith (tracked files snapshot)
         shell: bash
         run: |
           set -euo pipefail
 
-          # Stable timestamp for reproducible tar metadata
-          SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
-          export SOURCE_DATE_EPOCH
-          echo "SOURCE_DATE_EPOCH=$SOURCE_DATE_EPOCH" >> "$GITHUB_ENV"
-
           OUTDIR="out"
           mkdir -p "$OUTDIR"
 
-          BASE="ACACIA_MEGA_MONOLITH"
+          # stable timestamp for deterministic tar metadata
+          SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
+          echo "SOURCE_DATE_EPOCH=$SOURCE_DATE_EPOCH" >> "$GITHUB_ENV"
 
-          # Pack *everything tracked by git* (no .git history, no runner junk)
+          SHORT_SHA="$(git rev-parse --short=12 HEAD)"
+          BASE="ACACIA_MEGA_MONOLITH_${SHORT_SHA}"
+
+          # Pack everything tracked by git (the whole Garden content)
           git ls-files -z | tar \
             --null --files-from=- \
             --sort=name \
@@ -52,7 +59,7 @@ jobs:
             --pax-option=exthdr.name=%d/PaxHeaders/%f,delete=atime,delete=ctime \
             -cf "${BASE}.tar"
 
-          # Compress hard with both; keep the smaller file
+          # Compress hard with both; keep smaller result
           zstd --ultra -22 -T0 -q -o "${BASE}.tar.zst" "${BASE}.tar"
           xz -9e -c "${BASE}.tar" > "${BASE}.tar.xz"
           rm -f "${BASE}.tar"
@@ -63,24 +70,34 @@ jobs:
           if [ "$SZ_XZ" -lt "$SZ_ZST" ]; then
             rm -f "${BASE}.tar.zst"
             BEST="${BASE}.tar.xz"
-            echo "BEST_COMPRESSION=xz" >> "$GITHUB_ENV"
           else
             rm -f "${BASE}.tar.xz"
             BEST="${BASE}.tar.zst"
-            echo "BEST_COMPRESSION=zstd" >> "$GITHUB_ENV"
           fi
 
           echo "BEST_FILE=$BEST" >> "$GITHUB_ENV"
-
           sha256sum "$BEST" > "${BEST}.sha256"
+
+          # Recovery notes (so future-you can rebuild the Garden anywhere)
+          {
+            echo "ACACIA MEGA MONOLITH"
+            echo "Commit: $(git rev-parse HEAD)"
+            echo "Built (epoch): ${SOURCE_DATE_EPOCH}"
+            echo "Best file: ${BEST}"
+            echo "SHA256: $(cut -d' ' -f1 "${BEST}.sha256")"
+            echo ""
+            echo "RESTORE:"
+            echo "  If .tar.zst:  zstd -d -c ${BEST} | tar -xvf -"
+            echo "  If .tar.xz :  xz -d -c ${BEST} | tar -xvf -"
+            echo ""
+            echo "VERIFY:"
+            echo "  sha256sum -c ${BEST}.sha256"
+          } > "${OUTDIR}/RECOVER.txt"
 
           mv "$BEST" "${BEST}.sha256" "$OUTDIR/"
 
-          echo "Built: $OUTDIR/$BEST"
-          echo "SHA256: $(cat "$OUTDIR/${BEST}.sha256")"
-
-      - name: Optional: printable base64 (single text file)
-        if: ${{ inputs.printable_base64 }}
+      - name: Optional printable base64 (single text file)
+        if: ${{ github.event.inputs.printable_base64 == 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -93,7 +110,7 @@ jobs:
             echo "# ACACIA MEGA MONOLITH (printable)"
             echo "# Binary file: $BEST"
             echo "# Binary SHA256: $(cut -d' ' -f1 "$SUM")"
-            echo "# NOTE: Base64 increases size (~33%)."
+            echo "# NOTE: Base64 is bigger than binary."
             echo "# ----BEGIN BASE64----"
             base64 -w 76 "$IN"
             echo "# ----END BASE64----"
@@ -101,8 +118,8 @@ jobs:
 
           sha256sum "$OUT" > "${OUT}.sha256"
 
-      - name: Optional: full git history bundle (for true “everything” incl history)
-        if: ${{ inputs.include_git_history_bundle }}
+      - name: Optional full git history bundle (best for full resurrection)
+        if: ${{ github.event.inputs.include_git_bundle == 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -118,5 +135,4 @@ jobs:
           name: acacia-mega-monolith
           path: out/
           compression-level: 0
-          retention-days: ${{ inputs.retention_days }}
-          include-hidden-files: true
+          retention-days: ${{ github.event.inputs.retention_days }}
