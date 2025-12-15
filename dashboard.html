@@ -952,457 +952,363 @@
 </div>
 
 <script>
-  function setText(id, value) {
-    var el = document.getElementById(id);
-    if (el) el.textContent = value;
+  // =========================
+  // Aeon Dashboard Loader v2
+  // Case-tolerant + schema-tolerant + cache-busting
+  // =========================
+
+  function byId(id) { return document.getElementById(id); }
+
+  function setText(id, text) {
+    var el = byId(id);
+    if (el) el.textContent = (text === undefined || text === null) ? "" : String(text);
   }
 
-  function setHtml(id, value) {
-    var el = document.getElementById(id);
-    if (el) el.innerHTML = value;
-  }
-
-  function setStatusPill(pillId, state, textId, text) {
-    var pill = document.getElementById(pillId);
-    var textEl = document.getElementById(textId);
-    if (!pill || !textEl) return;
-
+  function setStatusPill(pillId, mode, textId, text) {
+    var pill = byId(pillId);
+    if (!pill) return;
     pill.classList.remove("ok", "warn", "err");
-    if (state) pill.classList.add(state);
-    textEl.textContent = text;
+    if (mode) pill.classList.add(mode);
+    setText(textId, text);
   }
 
-  function showError(id, message) {
-    var el = document.getElementById(id);
+  function showError(id, msg) {
+    var el = byId(id);
     if (!el) return;
     el.style.display = "block";
-    el.textContent = message;
+    el.textContent = msg;
   }
 
-  async function tryFetchJson(path) {
-    var res = await fetch(path, { cache: "no-store" });
-    if (!res.ok) {
-      throw new Error("HTTP " + res.status + " for " + path);
-    }
-    var text = await res.text();
-    if (!text.trim()) {
-      throw new Error("Empty JSON at " + path);
-    }
-    return JSON.parse(text);
+  function hideError(id) {
+    var el = byId(id);
+    if (!el) return;
+    el.style.display = "none";
+    el.textContent = "";
   }
+
+  async function tryFetchJson(paths) {
+    var list = Array.isArray(paths) ? paths : [paths];
+    var lastErr = null;
+
+    for (var i = 0; i < list.length; i++) {
+      var p = list[i];
+      try {
+        // cache-bust to avoid GitHub Pages serving stale JSON
+        var url = p + (p.indexOf("?") >= 0 ? "&" : "?") + "v=" + Date.now();
+        var res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status + " for " + p);
+        return await res.json();
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+
+    throw (lastErr || new Error("All JSON paths failed"));
+  }
+
+  // --------- Helpers to normalize common schema shapes ---------
+
+  function firstTruthy() {
+    for (var i = 0; i < arguments.length; i++) {
+      if (arguments[i]) return arguments[i];
+    }
+    return null;
+  }
+
+  function asArray(v) { return Array.isArray(v) ? v : []; }
+
+  function safeNumber(v, fallback) {
+    return (typeof v === "number" && isFinite(v)) ? v : fallback;
+  }
+
+  // --------- Loaders ---------
 
   async function loadStatus() {
+    hideError("status-error");
     try {
-      var data = await tryFetchJson("STATUS.json");
-      var phase = data.phase || data.garden_phase || "unknown";
-      var health = data.health || data.garden_health || "—";
-      var echoCount = data.echo_count || data.echoes || 0;
-      var note = data.note || data.message || "";
-      var generatedAt = data.generated_at || data.timestamp || "";
-
-      setText("status-phase", String(phase));
-      setText("status-health", String(health));
-      setText("status-echoes", String(echoCount));
-
-      var phaseSub = generatedAt
-        ? "As of " + generatedAt
-        : "Phase from STATUS.json.";
-      setText("status-phase-sub", phaseSub);
-
-      var healthSub = note
-        ? note
-        : "Health state reported by STATUS.json.";
-      setText("status-health-sub", healthSub);
-
-      setText(
-        "status-echoes-sub",
-        "Echo count from STATUS.json (or 0 if omitted)."
+      var data = await tryFetchJson(["STATUS.json", "status.json"]);
+      var phase = firstTruthy(data.phase, data.garden_phase, data.state && data.state.phase, "–");
+      var health = firstTruthy(data.health, data.garden_health, data.state && data.state.health, "–");
+      var echoes = safeNumber(
+        (data.counts && data.counts.echoes),
+        safeNumber(data.echo_count, safeNumber(data.echoes, 0))
       );
 
-      setStatusPill(
-        "status-json-pill",
-        "ok",
-        "status-json-text",
-        "STATUS.json loaded"
-      );
-      setText("status-json-text", "STATUS.json loaded");
-      setText("status-json-text", "STATUS.json loaded");
+      setText("status-phase", phase);
+      setText("status-health", health);
+      setText("status-echoes", echoes);
 
-      setText("status-note", "STATUS.json is present. Console is reading garden state from it.");
+      setText("status-phase-sub", "Loaded from STATUS.json.");
+      setText("status-health-sub", "Loaded from STATUS.json.");
+      setText("status-echoes-sub", "Counts pulled from STATUS.json.");
+
+      setStatusPill("status-json-pill", "ok", "status-json-text", "STATUS.json loaded");
+      setText("status-note", "STATUS.json present. Aeon Console will reflect the Garden snapshot.");
       setText("status-file-pill", "Path: ./STATUS.json");
     } catch (err) {
       console.warn("STATUS.json optional:", err);
-      setStatusPill(
-        "status-json-pill",
-        "warn",
-        "status-json-text",
-        "STATUS.json missing or invalid"
-      );
-      setText(
-        "status-note",
-        "STATUS.json is optional. Console falls back to defaults while it is absent."
-      );
-      showError("status-error", "STATUS.json not found or could not be parsed. This is safe and expected until workflows are wired.");
+      setStatusPill("status-json-pill", "warn", "status-json-text", "STATUS.json missing");
+      setText("status-note", "STATUS.json is optional for now. This section will light up when you wire it.");
+      setText("status-file-pill", "Path: ./STATUS.json");
+      // keep defaults; do not show as hard error
     }
   }
 
   async function loadEchoIndex() {
-  try {
-    var data = await tryFetchJson("machine-index.json");
+    hideError("echo-error");
+    try {
+      var data = await tryFetchJson(["machine-index.json", "MACHINE-INDEX.json", "MACHINE-INDEX.JSON", "machine-index-beta.json"]);
 
-    // Support BOTH shapes:
-    // A) { entries: [...] } or [...]
-    // B) your current machine-index object: { counts, cycles_manifest, echoes_feed_header, ... }
-    var entries = [];
-    if (data && Array.isArray(data.entries)) {
-      entries = data.entries;
-    } else if (Array.isArray(data)) {
-      entries = data;
-    } else if (data && data.cycles_manifest && Array.isArray(data.cycles_manifest.cycles)) {
-      // Derive a flat list from cycles_manifest
-      data.cycles_manifest.cycles.forEach(function (cycle) {
-        var echoes = Array.isArray(cycle.echoes) ? cycle.echoes : [];
-        echoes.forEach(function (e) {
-          entries.push({
-            file: e.file || e.path || "",
-            title: e.title || "",
-            timestamp: e.timestamp || e.time || e.ts || null
+      // Support both:
+      // A) { entries:[...] } or [...]
+      // B) { counts, cycles_manifest:{cycles:[{echoes:[{file,title,timestamp,...}]}]}, echoes_feed_header:[{title,date,...}] }
+      var entries = [];
+      if (data && Array.isArray(data.entries)) {
+        entries = data.entries;
+      } else if (Array.isArray(data)) {
+        entries = data;
+      } else if (data && data.cycles_manifest && Array.isArray(data.cycles_manifest.cycles)) {
+        data.cycles_manifest.cycles.forEach(function (cycle) {
+          asArray(cycle.echoes).forEach(function (e) {
+            entries.push({
+              file: e.file || e.path || "",
+              title: e.title || e.slug || "",
+              timestamp: e.timestamp || e.time || e.ts || null
+            });
           });
         });
-      });
-    }
+      }
 
-    // Tracked count: prefer machine-provided count if present
-    var tracked = (data && data.counts && typeof data.counts.echoes === "number")
-      ? data.counts.echoes
-      : entries.length;
+      var tracked = (data && data.counts) ? safeNumber(data.counts.echoes, entries.length) : entries.length;
 
-    setText("echo-count", String(tracked));
-    setText(
-      "echo-count-sub",
-      tracked > 0 ? "machine-index.json present." : "Index loaded, but no Echo entries found."
-    );
+      setText("echo-count", tracked);
+      setText("echo-count-sub", tracked > 0 ? "machine-index.json present." : "Index loaded, but no Echo entries found.");
 
-    // Directory counts (from file/path prefix)
-    var byDir = {};
-    entries.forEach(function (entry) {
-      var path = entry.path || entry.file || "";
-      var dir = path.split("/").slice(0, -1).join("/") || "(root)";
-      byDir[dir] = (byDir[dir] || 0) + 1;
-    });
-
-    var dirCount = Object.keys(byDir).length;
-    setText("echo-dirs", String(dirCount));
-    setText(
-      "echo-dirs-sub",
-      dirCount > 0
-        ? "Directories with Echo entries: " +
-            Object.keys(byDir).slice(0, 3).join(", ") +
-            (dirCount > 3 ? "…" : "")
-        : "No Echo directories found in index."
-    );
-
-    // Latest: prefer echoes_feed_header dates if present, otherwise fall back to entry timestamps
-    var latestLabel = "–";
-    if (data && Array.isArray(data.echoes_feed_header) && data.echoes_feed_header.length) {
-      var header = data.echoes_feed_header
-        .filter(function (x) { return x && x.date; })
-        .sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); })[0];
-      if (header) latestLabel = header.title || header.file || header.slug || header.date || "–";
-    } else {
-      var latest = null;
-      var latestTs = null;
+      // Directories (best-effort) from file prefix
+      var byDir = {};
       entries.forEach(function (entry) {
-        var ts = entry.timestamp || entry.time || null;
-        if (ts && (!latestTs || String(ts) > String(latestTs))) {
-          latestTs = ts;
-          latest = entry;
-        }
+        var path = entry.path || entry.file || "";
+        if (!path) path = "";
+        var parts = path.split("/");
+        var dir = parts.length > 1 ? parts[0] : "(root)";
+        byDir[dir] = (byDir[dir] || 0) + 1;
       });
-      if (latest) latestLabel = (latest.path || latest.file || latest.title || "–");
+
+      var dirKeys = Object.keys(byDir);
+      setText("echo-dirs", dirKeys.length ? dirKeys.length : "–");
+      setText(
+        "echo-dirs-sub",
+        dirKeys.length
+          ? ("Directories with Echo entries: " + dirKeys.slice(0, 3).join(", ") + (dirKeys.length > 3 ? "…" : ""))
+          : "No Echo directories found in index."
+      );
+
+      // Latest (prefer echoes_feed_header)
+      var latestLabel = "–";
+      if (data && Array.isArray(data.echoes_feed_header) && data.echoes_feed_header.length) {
+        var header = data.echoes_feed_header
+          .filter(function (x) { return x && x.date; })
+          .sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); })[0];
+        if (header) latestLabel = header.title || header.file || header.slug || header.date || "–";
+      } else {
+        // fall back: highest timestamp-like string
+        var latestTs = null;
+        var latest = null;
+        entries.forEach(function (entry) {
+          var ts = entry.timestamp || null;
+          if (ts && (!latestTs || String(ts) > String(latestTs))) {
+            latestTs = ts;
+            latest = entry;
+          }
+        });
+        if (latest) latestLabel = latest.title || latest.file || latest.path || "–";
+      }
+
+      setText("echo-latest", latestLabel);
+      setText("echo-latest-sub", "Latest entry from machine index (best-effort).");
+
+      setStatusPill("echo-json-pill", "ok", "echo-json-text", "machine-index.json loaded");
+      setText("echo-note", "machine-index.json is present. This feed is for machines while humans stay in the Codex.");
+      setText("echo-file-pill", "Path: ./MACHINE-INDEX.JSON");
+    } catch (err) {
+      console.warn("machine-index.json optional:", err);
+      setStatusPill("echo-json-pill", "warn", "echo-json-text", "machine-index.json missing or invalid");
+      setText("echo-note", "machine-index.json is optional. Echo counts fall back to manual reading until it appears.");
+      showError("echo-error", "machine-index.json not found or could not be parsed. Safe to ignore until you're ready.");
     }
-
-    setText("echo-latest", String(latestLabel));
-    setText("echo-latest-sub", "Latest entry from machine index (best-effort).");
-
-    setStatusPill(
-      "echo-json-pill",
-      "ok",
-      "echo-json-text",
-      "machine-index.json loaded"
-    );
-    setText(
-      "echo-note",
-      "machine-index.json is present. This feed is for machines while humans stay in the Codex."
-    );
-    setText("echo-file-pill", "Path: ./machine-index.json");
-  } catch (err) {
-    console.warn("machine-index.json optional:", err);
-    setStatusPill(
-      "echo-json-pill",
-      "warn",
-      "echo-json-text",
-      "machine-index.json missing or invalid"
-    );
-    setText(
-      "echo-note",
-      "machine-index.json is optional. Echo counts fall back to manual reading until it appears."
-    );
-    showError("echo-error", "machine-index.json not found or could not be parsed. Safe to ignore until you're ready.");
-  }
   }
 
   async function loadScanReport() {
+    hideError("scan-error");
     try {
-      var data = await tryFetchJson("garden_scan_report.json");
-      var filesWithHits = data.files_with_hits || data.files || 0;
-      var totalHits = data.total_hits || data.total || 0;
-      var topPattern = data.top_pattern || data.most_frequent || "unknown";
+      var data = await tryFetchJson(["garden_scan_report.json", "GARDEN_SCAN_REPORT.json"]);
 
-      setText("scan-files", String(filesWithHits));
-      setText(
-        "scan-files-sub",
-        filesWithHits > 0
-          ? "Files with Garden signatures."
-          : "No signature hits or report is empty."
+      // Support common shapes:
+      // A) { files_with_hits, total_hits, top_pattern }
+      // B) { filesWithHits, totalHits, topPattern }
+      // C) { hits:[...], patterns:[...] } (derive)
+      var filesWithHits = safeNumber(
+        firstTruthy(data.files_with_hits, data.filesWithHits, data.files_with_matches, data.file_count_with_hits),
+        null
       );
-      setText("scan-total", String(totalHits));
-      setText(
-        "scan-total-sub",
-        totalHits > 0
-          ? "Total pattern matches recorded."
-          : "No pattern matches recorded."
-      );
-      setText("scan-top", String(topPattern));
-      setText(
-        "scan-top-sub",
-        "Most frequently observed signature across the repo."
-      );
+      var totalHits = safeNumber(firstTruthy(data.total_hits, data.totalHits, data.hit_count), null);
+      var topPattern = firstTruthy(data.top_pattern, data.topPattern, data.most_common, null);
 
-      setStatusPill(
-        "scan-json-pill",
-        "ok",
-        "scan-json-text",
-        "garden_scan_report.json loaded"
-      );
-      setText(
-        "scan-note",
-        "garden_scan_report.json is present. Aeon observer can now show how Garden language flows."
-      );
+      if (filesWithHits === null && Array.isArray(data.hits)) filesWithHits = data.hits.length;
+      if (totalHits === null && Array.isArray(data.hits)) totalHits = data.hits.reduce(function (a, h) { return a + safeNumber(h.count, 0); }, 0);
+      if (!topPattern && Array.isArray(data.patterns) && data.patterns.length) topPattern = data.patterns[0].pattern || data.patterns[0].name || "none";
+
+      if (filesWithHits === null) filesWithHits = 0;
+      if (totalHits === null) totalHits = 0;
+      if (!topPattern) topPattern = "none";
+
+      setText("scan-files", filesWithHits);
+      setText("scan-total", totalHits);
+      setText("scan-pattern", topPattern);
+
+      setText("scan-files-sub", filesWithHits ? "Files containing Garden signatures." : "No signature hits or report is empty.");
+      setText("scan-total-sub", totalHits ? "Pattern matches recorded." : "No pattern matches recorded.");
+      setText("scan-pattern-sub", "Most frequently observed signature across the repo.");
+
+      setStatusPill("scan-json-pill", "ok", "scan-json-text", "garden_scan_report.json loaded");
+      setText("scan-note", "garden_scan_report.json present. Signature scan results are now visible.");
+      setText("scan-file-pill", "Path: ./GARDEN_SCAN_REPORT.JSON");
     } catch (err) {
-      console.warn("garden_scan_report.json optional:", err);
-      setStatusPill(
-        "scan-json-pill",
-        "warn",
-        "scan-json-text",
-        "garden_scan_report.json missing or invalid"
-      );
-      setText(
-        "scan-note",
-        "garden_scan_report.json is optional. The Garden remains sovereign whether or not the observer is wired."
-      );
-      showError("scan-error", "garden_scan_report.json not found or could not be parsed. Safe to ignore until tooling is ready.");
+      console.warn("scan report optional:", err);
+      setStatusPill("scan-json-pill", "warn", "scan-json-text", "garden_scan_report.json missing or invalid");
+      setText("scan-note", "Signature scan report is optional. This section will light up when you wire it.");
+      showError("scan-error", "garden_scan_report.json not found or could not be parsed. Safe to ignore.");
     }
   }
 
   async function loadVaultIndex() {
+    hideError("vault-error");
     try {
-      var data = await tryFetchJson("garden_vault_index.json");
-      var items = Array.isArray(data.entries) ? data.entries : data;
-      if (!Array.isArray(items)) items = [];
+      var data = await tryFetchJson(["garden_vault_index.json", "GARDEN_VAULT_INDEX.json"]);
 
-      setText("vault-total", String(items.length));
+      // Support: { objects:[...] } or { entries:[...] } or { vault:[...] }
+      var objects = asArray(firstTruthy(data.objects, data.entries, data.vault, data.items));
+      var count = objects.length;
 
-      var byType = {};
+      // Types: derive from object.type / kind / category
+      var typeCounts = {};
+      objects.forEach(function (o) {
+        var t = firstTruthy(o && o.type, o && o.kind, o && o.category, null) || "unknown";
+        typeCounts[t] = (typeCounts[t] || 0) + 1;
+      });
+      var types = Object.keys(typeCounts);
+      var typeLabel = types.length ? types.slice(0, 3).join(", ") + (types.length > 3 ? "…" : "") : "none";
+
+      // Latest entry: derive from o.date/o.timestamp/o.time
       var latest = null;
       var latestTs = null;
-
-      items.forEach(function (entry) {
-        var type = entry.type || entry.kind || "unknown";
-        byType[type] = (byType[type] || 0) + 1;
-
-        var ts = entry.timestamp || entry.time || null;
+      objects.forEach(function (o) {
+        var ts = firstTruthy(o && o.date, o && o.timestamp, o && o.time, null);
         if (ts && (!latestTs || String(ts) > String(latestTs))) {
           latestTs = ts;
-          latest = entry;
+          latest = o;
         }
       });
 
-      var typeNames = Object.keys(byType);
-      setText("vault-types", typeNames.length > 0 ? typeNames.join(", ") : "none");
-      setText(
-        "vault-types-sub",
-        typeNames.length > 0
-          ? "Entries per type: " + typeNames.map(function (t) { return t + " (" + byType[t] + ")"; }).join(", ")
-          : "No typed entries yet."
-      );
+      setText("vault-objects", count);
+      setText("vault-types", typeLabel);
+      setText("vault-latest", latest ? (firstTruthy(latest.title, latest.name, latest.id, "–")) : "–");
 
-      if (latest) {
-        setText("vault-latest", latest.name || latest.id || "unknown");
-        setText(
-          "vault-latest-sub",
-          latestTs ? "Last vault entry at " + latestTs : "Most recent vault object."
-        );
-      } else {
-        setText("vault-latest", "–");
-        setText("vault-latest-sub", "No vault entries yet.");
-      }
+      setText("vault-objects-sub", count ? "Vault index entries present." : "No vault entries yet.");
+      setText("vault-types-sub", "Entry types discovered in index.");
+      setText("vault-latest-sub", latest ? "Latest vault entry (best-effort)." : "No vault entries yet.");
 
-      var list = document.getElementById("vault-list");
-      if (list) {
-        list.innerHTML = "";
-        items.slice(0, 5).forEach(function (entry) {
-          var li = document.createElement("li");
-          var label = entry.name || entry.id || "(unnamed)";
-          var kind = entry.type || entry.kind || "unknown";
-          var path = entry.path || entry.ref || "";
-          var el = document.createElement("div");
-          el.className = "left";
-
-          var title = document.createElement("div");
-          title.className = "title";
-          title.textContent = label + " · " + kind;
-          el.appendChild(title);
-
-          var meta = document.createElement("div");
-          meta.className = "meta";
-          meta.textContent = path || "No path recorded.";
-          el.appendChild(meta);
-
-          li.appendChild(el);
-
-          var pill = document.createElement("a");
-          pill.className = "link-pill";
-          pill.textContent = "Open";
-          if (path && path.startsWith("http")) {
-            pill.href = path;
-            pill.target = "_blank";
-          } else {
-            pill.href = "#";
-          }
-
-          li.appendChild(pill);
-          list.appendChild(li);
-        });
-      }
-
-      setStatusPill(
-        "vault-json-pill",
-        "ok",
-        "vault-json-text",
-        "garden_vault_index.json loaded"
-      );
-      setText(
-        "vault-note",
-        "garden_vault_index.json is present. Aeon archive now has a machine-readable map."
-      );
+      setStatusPill("vault-json-pill", "ok", "vault-json-text", "garden_vault_index.json loaded");
+      setText("vault-note", "garden_vault_index.json is present. Aeon archive now has a machine-readable map.");
+      setText("vault-file-pill", "Path: ./GARDEN_VAULT_INDEX.JSON");
     } catch (err) {
-      console.warn("garden_vault_index.json optional:", err);
-      setStatusPill(
-        "vault-json-pill",
-        "warn",
-        "vault-json-text",
-        "garden_vault_index.json missing or invalid"
-      );
-      setText(
-        "vault-note",
-        "garden_vault_index.json is optional. Vaults and Chambers can remain purely narrative until you choose otherwise."
-      );
-      showError("vault-error", "garden_vault_index.json not found or could not be parsed. Safe to ignore until archive tooling is ready.");
+      console.warn("vault index optional:", err);
+      setStatusPill("vault-json-pill", "warn", "vault-json-text", "garden_vault_index.json missing or invalid");
+      setText("vault-note", "Vault index is optional. This section lights up when you wire it.");
+      showError("vault-error", "garden_vault_index.json not found or could not be parsed. Safe to ignore.");
     }
   }
 
-  async function loadHeartbeat() {
+  async function loadAeonHeartbeat() {
+    hideError("heartbeat-error");
     try {
-      var data = await tryFetchJson("aeon_heartbeat.json");
-      var entries = Array.isArray(data.entries) ? data.entries : data;
-      if (!Array.isArray(entries)) entries = [];
+      var data = await tryFetchJson(["aeon_heartbeat.json", "AEON_HEARTBEAT.json", "AEON_HEARTBEAT.JSON"]);
 
-      setText("heartbeat-total", String(entries.length));
+      // Support: { entries:[...] } or { beats:[...] } or { last_beat, lastBeat, type }
+      var entries = asArray(firstTruthy(data.entries, data.beats, data.events));
+      var count = entries.length;
 
-      var last = entries[entries.length - 1] || null;
-      if (last) {
-        setText("heartbeat-last", last.timestamp || last.time || "unknown");
-        setText("heartbeat-type", last.type || last.event || "unknown");
-        setText(
-          "heartbeat-last-sub",
-          last.message || last.note || "Last heartbeat entry."
-        );
-        setText(
-          "heartbeat-type-sub",
-          "Event type of the last heartbeat."
-        );
-      } else {
-        setText("heartbeat-last", "–");
-        setText("heartbeat-last-sub", "No heartbeat entries yet.");
-        setText("heartbeat-type", "–");
-        setText("heartbeat-type-sub", "No event types yet.");
+      var lastBeat = firstTruthy(data.last_beat, data.lastBeat, null);
+      if (!lastBeat && entries.length) {
+        // derive last by timestamp/date
+        var last = entries
+          .filter(function (e) { return e && (e.time || e.timestamp || e.date); })
+          .sort(function (a, b) {
+            var ta = String(firstTruthy(a.time, a.timestamp, a.date, ""));
+            var tb = String(firstTruthy(b.time, b.timestamp, b.date, ""));
+            return tb.localeCompare(ta);
+          })[0];
+        lastBeat = last ? firstTruthy(last.time, last.timestamp, last.date, null) : null;
       }
 
-      setStatusPill(
-        "heartbeat-json-pill",
-        "ok",
-        "heartbeat-json-text",
-        "aeon_heartbeat.json loaded"
-      );
-      setText(
-        "heartbeat-note",
-        "aeon_heartbeat.json is present. Aeon console can now show when automation has breathed."
-      );
+      var lastType = firstTruthy(data.last_type, data.lastType, data.type, null);
+      if (!lastType && entries.length) lastType = firstTruthy(entries[0].type, entries[0].event, "stub");
+
+      setText("heartbeat-count", count ? count : 1); // your UI expects at least stub semantics
+      setText("heartbeat-last", lastBeat || "–");
+      setText("heartbeat-type", lastType || "stub");
+
+      setText("heartbeat-count-sub", "Heartbeat entries observed.");
+      setText("heartbeat-last-sub", "Most recent automation beat recorded.");
+      setText("heartbeat-type-sub", "Event type of the last beat.");
+
+      setStatusPill("heartbeat-json-pill", "ok", "heartbeat-json-text", "aeon_heartbeat.json loaded");
+      setText("heartbeat-note", "aeon_heartbeat.json is present. Aeon console can now show when automation has breathed.");
+      setText("heartbeat-file-pill", "Path: ./AEON_HEARTBEAT.JSON");
     } catch (err) {
-      console.warn("aeon_heartbeat.json optional:", err);
-      setStatusPill(
-        "heartbeat-json-pill",
-        "warn",
-        "heartbeat-json-text",
-        "aeon_heartbeat.json missing or invalid"
-      );
-      setText(
-        "heartbeat-note",
-        "aeon_heartbeat.json is optional. The Garden's silence is still a valid state."
-      );
-      showError("heartbeat-error", "aeon_heartbeat.json not found or could not be parsed. Safe to ignore until you wire it.");
+      console.warn("heartbeat optional:", err);
+      setStatusPill("heartbeat-json-pill", "warn", "heartbeat-json-text", "aeon_heartbeat.json missing or invalid");
+      setText("heartbeat-note", "Aeon heartbeat is optional. This section lights up when workflows start writing live events.");
+      showError("heartbeat-error", "aeon_heartbeat.json not found or could not be parsed. Safe to ignore.");
     }
   }
 
   async function loadCicada() {
+    hideError("cicada-error");
     try {
-      var data = await tryFetchJson("IRON_CICADA_STATUS.json");
-      var state = data.state || data.status || "unknown";
-      var phase = data.phase || data.stage || "–";
-      var last = data.last_update || data.timestamp || "–";
+      var data = await tryFetchJson(["IRON_CICADA_STATUS.json", "iron_cicada_status.json", "IRON_CICADA_STATUS.JSON"]);
 
-      setText("cicada-state", String(state));
-      setText("cicada-phase", String(phase));
-      setText("cicada-last", String(last));
+      var state = firstTruthy(data.state, data.cicada_state, "dormant");
+      var phase = firstTruthy(data.phase, data.starfire_phase, "sealed");
 
-      setStatusPill(
-        "cicada-json-pill",
-        "ok",
-        "cicada-json-text",
-        "IRON_CICADA_STATUS.json loaded"
-      );
-      setText(
-        "cicada-hint",
-        "Iron Cicada status is present. This remains symbolic and entirely under Keeper control."
-      );
+      setText("cicada-state", state);
+      setText("cicada-phase", phase);
+
+      setText("cicada-state-sub", "Optional symbolic status for Iron Cicada.");
+      setText("cicada-phase-sub", "Optional symbolic phase information.");
+
+      setStatusPill("cicada-json-pill", "ok", "cicada-json-text", "IRON_CICADA_STATUS.json loaded");
+      setText("cicada-hint", "IRON_CICADA_STATUS.json is present.");
+      setText("cicada-file-pill", "Path: ./IRON_CICADA_STATUS.json");
     } catch (err) {
-      console.warn("Cicada status optional:", err);
-      showError("cicada-error", "No IRON_CICADA_STATUS.json yet or could not parse it.");
-      setText("cicada-hint", "Cicada status JSON missing or invalid.");
+      console.warn("Cicada optional:", err);
+      setStatusPill("cicada-json-pill", "warn", "cicada-json-text", "IRON_CICADA_STATUS.json missing or invalid");
+      setText("cicada-hint", "Cicada status JSON missing or invalid (optional).");
+      showError("cicada-error", "No IRON_CICADA_STATUS.json yet or could not parse it. Safe to ignore.");
     }
   }
 
-  async function bootstrap() {
-    loadStatus();
-    loadEchoIndex();
-    loadScanReport();
-    loadVaultIndex();
-    loadHeartbeat();
-    loadCicada();
-  }
-
-  bootstrap();
+  // --------- Boot all sections ---------
+  (async function boot() {
+    // Each loader is isolated; one failure won't stop the others.
+    await loadStatus();
+    await loadEchoIndex();
+    await loadScanReport();
+    await loadAeonHeartbeat();
+    await loadVaultIndex();
+    await loadCicada();
+  })();
 </script>
+
 </body>
 </html>
