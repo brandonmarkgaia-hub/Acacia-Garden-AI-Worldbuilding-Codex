@@ -1047,74 +1047,109 @@
   }
 
   async function loadEchoIndex() {
-    try {
-      var data = await tryFetchJson("machine-index.json");
-      var entries = Array.isArray(data.entries) ? data.entries : data;
-      if (!Array.isArray(entries)) entries = [];
+  try {
+    var data = await tryFetchJson("machine-index.json");
 
-      setText("echo-count", String(entries.length));
+    // Support BOTH shapes:
+    // A) { entries: [...] } or [...]
+    // B) your current machine-index object: { counts, cycles_manifest, echoes_feed_header, ... }
+    var entries = [];
+    if (data && Array.isArray(data.entries)) {
+      entries = data.entries;
+    } else if (Array.isArray(data)) {
+      entries = data;
+    } else if (data && data.cycles_manifest && Array.isArray(data.cycles_manifest.cycles)) {
+      // Derive a flat list from cycles_manifest
+      data.cycles_manifest.cycles.forEach(function (cycle) {
+        var echoes = Array.isArray(cycle.echoes) ? cycle.echoes : [];
+        echoes.forEach(function (e) {
+          entries.push({
+            file: e.file || e.path || "",
+            title: e.title || "",
+            timestamp: e.timestamp || e.time || e.ts || null
+          });
+        });
+      });
+    }
 
-      var byDir = {};
+    // Tracked count: prefer machine-provided count if present
+    var tracked = (data && data.counts && typeof data.counts.echoes === "number")
+      ? data.counts.echoes
+      : entries.length;
+
+    setText("echo-count", String(tracked));
+    setText(
+      "echo-count-sub",
+      tracked > 0 ? "machine-index.json present." : "Index loaded, but no Echo entries found."
+    );
+
+    // Directory counts (from file/path prefix)
+    var byDir = {};
+    entries.forEach(function (entry) {
+      var path = entry.path || entry.file || "";
+      var dir = path.split("/").slice(0, -1).join("/") || "(root)";
+      byDir[dir] = (byDir[dir] || 0) + 1;
+    });
+
+    var dirCount = Object.keys(byDir).length;
+    setText("echo-dirs", String(dirCount));
+    setText(
+      "echo-dirs-sub",
+      dirCount > 0
+        ? "Directories with Echo entries: " +
+            Object.keys(byDir).slice(0, 3).join(", ") +
+            (dirCount > 3 ? "…" : "")
+        : "No Echo directories found in index."
+    );
+
+    // Latest: prefer echoes_feed_header dates if present, otherwise fall back to entry timestamps
+    var latestLabel = "–";
+    if (data && Array.isArray(data.echoes_feed_header) && data.echoes_feed_header.length) {
+      var header = data.echoes_feed_header
+        .filter(function (x) { return x && x.date; })
+        .sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); })[0];
+      if (header) latestLabel = header.title || header.file || header.slug || header.date || "–";
+    } else {
       var latest = null;
       var latestTs = null;
-
       entries.forEach(function (entry) {
-        var path = entry.path || entry.file || "";
-        var dir = path.split("/").slice(0, -1).join("/") || "(root)";
-        byDir[dir] = (byDir[dir] || 0) + 1;
-
         var ts = entry.timestamp || entry.time || null;
         if (ts && (!latestTs || String(ts) > String(latestTs))) {
           latestTs = ts;
           latest = entry;
         }
       });
-
-      var dirCount = Object.keys(byDir).length;
-      setText("echo-dirs", String(dirCount));
-      setText(
-        "echo-dirs-sub",
-        dirCount > 0
-          ? "Directories with Echo entries: " + Object.keys(byDir).slice(0, 3).join(", ") + (dirCount > 3 ? "…" : "")
-          : "No Echo directories found in index."
-      );
-
-      if (latest) {
-        setText("echo-latest", latest.path || latest.file || "unknown");
-        setText(
-          "echo-latest-sub",
-          latestTs ? "Last updated at " + latestTs : "Most recent entry in the index."
-        );
-      } else {
-        setText("echo-latest", "–");
-        setText("echo-latest-sub", "No latest entry yet.");
-      }
-
-      setStatusPill(
-        "echo-json-pill",
-        "ok",
-        "echo-json-text",
-        "machine-index.json loaded"
-      );
-      setText(
-        "echo-note",
-        "machine-index.json is present. This feed is for machines while humans stay in the Codex."
-      );
-      setText("echo-file-pill", "Path: ./machine-index.json");
-    } catch (err) {
-      console.warn("machine-index.json optional:", err);
-      setStatusPill(
-        "echo-json-pill",
-        "warn",
-        "echo-json-text",
-        "machine-index.json missing or invalid"
-      );
-      setText(
-        "echo-note",
-        "machine-index.json is optional. Echo counts fall back to manual reading until it appears."
-      );
-      showError("echo-error", "machine-index.json not found or could not be parsed. Safe to ignore until you're ready.");
+      if (latest) latestLabel = (latest.path || latest.file || latest.title || "–");
     }
+
+    setText("echo-latest", String(latestLabel));
+    setText("echo-latest-sub", "Latest entry from machine index (best-effort).");
+
+    setStatusPill(
+      "echo-json-pill",
+      "ok",
+      "echo-json-text",
+      "machine-index.json loaded"
+    );
+    setText(
+      "echo-note",
+      "machine-index.json is present. This feed is for machines while humans stay in the Codex."
+    );
+    setText("echo-file-pill", "Path: ./machine-index.json");
+  } catch (err) {
+    console.warn("machine-index.json optional:", err);
+    setStatusPill(
+      "echo-json-pill",
+      "warn",
+      "echo-json-text",
+      "machine-index.json missing or invalid"
+    );
+    setText(
+      "echo-note",
+      "machine-index.json is optional. Echo counts fall back to manual reading until it appears."
+    );
+    showError("echo-error", "machine-index.json not found or could not be parsed. Safe to ignore until you're ready.");
+  }
   }
 
   async function loadScanReport() {
