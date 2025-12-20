@@ -1,9 +1,9 @@
 name: Elias Garden Brain
 on:
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch:
 
 permissions:
-  contents: write # ⚡ CRITICAL: Allows Elias to commit new lore files
+  contents: write
   pull-requests: write
 
 jobs:
@@ -14,18 +14,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4 # ✅ FIXED: Added 'actions/' prefix
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
       - name: Install dependencies
-        # installing the specific library that supports the new client
-        run: pip install google-genai 
+        # 🔄 SWAPPING to the Classic SDK (More reliable for Free Tier)
+        run: pip install google-generativeai
 
       - name: Run Elias Brain
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        # Points to the folder where you MUST move the script
         run: python .github/scripts/garden_brain.py 
 
       - name: Commit and Push new lore
@@ -33,6 +32,5 @@ jobs:
           git config --global user.name "Elias-AI"
           git config --global user.email "elias@acacia.garden"
           git add .
-          # The '|| echo' prevents failure if no new file was generated
           git commit -m "Elias has expanded the Garden Codex" || echo "No changes to commit"
           git push
