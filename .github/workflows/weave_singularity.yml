@@ -4,7 +4,7 @@ on:
   workflow_dispatch: # Button click only!
 
 permissions:
-  contents: write
+  contents: read # It only needs to read, not write to the repo
 
 jobs:
   weave-singularity:
@@ -19,13 +19,12 @@ jobs:
           python-version: '3.10'
 
       - name: Run Singularity Weaver
+        # This generates EVOLUTION/ACACIA_SINGULARITY.md locally on the runner
         run: python tools/singularity_weaver.py
 
-      - name: Commit Singularity
-        run: |
-          git config --global user.name "Garden-Architect"
-          git config --global user.email "architect@acacia.garden"
-          git add EVOLUTION/ACACIA_SINGULARITY.md
-          git commit -m "Weaved the Singularity (Manual Trigger)" || echo "No changes"
-          git pull --rebase
-          git push
+      - name: Upload Singularity Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ACACIA_SINGULARITY
+          path: EVOLUTION/ACACIA_SINGULARITY.md
+          retention-days: 1
