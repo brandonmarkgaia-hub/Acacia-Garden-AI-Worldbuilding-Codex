@@ -1,15 +1,15 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-20T19:40:13.575424Z",
+    "timestamp_utc": "2025-12-20T20:00:15.041347Z",
     "type": "RESONANCE_MIRROR",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
   "counts": {
-    "physical_files": 1944,
-    "referenced_files": 11252,
-    "silent_roots": 897,
-    "phantom_echoes": 10205,
-    "resonance_score_percent": 53.86
+    "physical_files": 1945,
+    "referenced_files": 11256,
+    "silent_roots": 898,
+    "phantom_echoes": 10209,
+    "resonance_score_percent": 53.83
   },
   "silent_roots_sample": [
     "ACACIA_LOGS/ACACIA.srg",
