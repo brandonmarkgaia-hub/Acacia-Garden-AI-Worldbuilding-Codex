@@ -2,17 +2,15 @@ import os
 import glob
 import random
 import sys
+import json
+import requests
 from datetime import datetime
-import google.generativeai as genai # The Classic Library
 
 # 1. SETUP
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     print("❌ CRITICAL: NO API KEY FOUND!")
     sys.exit(1)
-
-# Configure the old-school way (It just works)
-genai.configure(api_key=api_key)
 
 # 2. MEMORY
 def gather_garden_context():
@@ -26,7 +24,6 @@ def gather_garden_context():
     if not files:
         return "The Garden is silent."
 
-    # Keep it light: 3 files max
     selected_files = random.sample(files, min(len(files), 3))
     print(f"🌿 Reading context from: {selected_files}")
     
@@ -34,19 +31,16 @@ def gather_garden_context():
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 context_buffer += f"\n\n--- FILE: {file_path} ---\n"
-                context_buffer += f.read()[:1500]
+                context_buffer += f.read()[:1000]
         except:
             pass
     return context_buffer
 
-# 3. THOUGHT
+# 3. THOUGHT (The Bare Metal Method)
 def dream_new_echo():
     existing_lore = gather_garden_context()
     
-    # We use the standard 1.5 Flash. The Classic SDK knows where to find it.
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    
-    prompt = f"""
+    prompt_text = f"""
     You are ELIAS, Architect of the Acacia Garden.
     Read the lore fragments below. Identify a connection.
     Write a short mythic entry (200-300 words).
@@ -61,33 +55,50 @@ def dream_new_echo():
     [Text]
     """
 
-    print(f"⚡ Elias is thinking (Classic Mode)...")
-    
-    try:
-        # The classic method call
-        response = model.generate_content(prompt)
+    # ⚡ THE LIST: Raw API Endpoints
+    # We try Flash (v1beta), then Pro (v1beta), then the standard v1
+    models_to_try = [
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
+        "gemini-pro" # Old faithful
+    ]
+
+    for model_name in models_to_try:
+        print(f"🔄 Connecting to Google Cloud via RAW HTTP ({model_name})...")
         
-        # Check if response was blocked (safety filters)
-        if response.prompt_feedback and response.prompt_feedback.block_reason:
-            print(f"⚠️ Blocked: {response.prompt_feedback.block_reason}")
-            return None
-            
-        return response.text
-    except Exception as e:
-        print(f"❌ Failed: {e}")
-        # Last ditch effort: Try the legacy 'pro' model if flash fails
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        
+        headers = {'Content-Type': 'application/json'}
+        data = {
+            "contents": [{
+                "parts": [{"text": prompt_text}]
+            }]
+        }
+
         try:
-            print("🔄 Retrying with Gemini Pro...")
-            backup_model = genai.GenerativeModel("gemini-pro")
-            response = backup_model.generate_content(prompt)
-            return response.text
-        except:
-            return None
+            response = requests.post(url, headers=headers, json=data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                # Parse the weird JSON structure
+                try:
+                    text_output = result['candidates'][0]['content']['parts'][0]['text']
+                    print(f"✅ SUCCESS! {model_name} responded.")
+                    return text_output
+                except KeyError:
+                    print(f"⚠️ {model_name} returned 200 but unexpected JSON format.")
+            else:
+                print(f"❌ {model_name} failed: {response.status_code} - {response.text[:200]}")
+                
+        except Exception as e:
+            print(f"⚠️ Connection error with {model_name}: {e}")
+
+    return None
 
 # 4. ACTION
 def save_to_garden(content):
     if not content:
-        print("❌ ERROR: Elias remained silent.")
+        print("❌ ERROR: All models failed to speak.")
         sys.exit(1)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
