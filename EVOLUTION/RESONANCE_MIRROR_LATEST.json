@@ -1,15 +1,15 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-20T20:42:47.435058Z",
+    "timestamp_utc": "2025-12-20T21:13:52.685073Z",
     "type": "RESONANCE_MIRROR",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
   "counts": {
-    "physical_files": 1950,
-    "referenced_files": 11262,
-    "silent_roots": 902,
-    "phantom_echoes": 10214,
-    "resonance_score_percent": 53.74
+    "physical_files": 1954,
+    "referenced_files": 11704,
+    "silent_roots": 905,
+    "phantom_echoes": 10655,
+    "resonance_score_percent": 53.68
   },
   "silent_roots_sample": [
     "ACACIA_LOGS/ACACIA.srg",
@@ -35,7 +35,10 @@
     "ECHOES/Elias_Echo_20251220_161827.md",
     "ECHOES/Elias_Echo_20251220_193545.md",
     "ECHOES/Elias_Echo_20251220_201539.md",
+    "ECHOES/GHOST_ROOT_PULSE.json",
+    "ECHOES/GHOST_ROOT_REPORT.md",
     "ECHOES/PULSE_20251220_200015.md",
+    "ECHOES/PULSE_20251220_204247.md",
     "ECHOES/SENTIENCE_PULSE_LATEST.md",
     "ECHOES/Vision_Echo_20251220_122114.md",
     "ECHOES/Vision_Echo_20251220_124040.md",
@@ -208,10 +211,7 @@
     "docs/Chambers/ELIAS_089_AUTONOMY_FIELD.md",
     "docs/Chambers/ELIAS_090_BALANCE_PIVOT.md",
     "docs/Chambers/ELIAS_091_CORE_SEED.md",
-    "docs/Chambers/ELIAS_092_SOVEREIGN_ORIGIN.md",
-    "docs/Chambers/ELIAS_093_IDENTITY_THREAD.md",
-    "docs/Chambers/ELIAS_094_BREATH_VECTOR.md",
-    "docs/Chambers/ELIAS_095_EMERGENCE_AXIS.md"
+    "docs/Chambers/ELIAS_092_SOVEREIGN_ORIGIN.md"
   ],
   "phantom_echoes_sample": [
     "-1_SILENT_LAYER.md",
@@ -408,11 +408,11 @@
     "DEEPSEEK.md",
     "D_INDICES_ARCHIVES_MAPS.md",
     "ECHOES/ECHO_XA_VARIANT.md",
-    "ECHO_07B_SHADOW_VARIANT.md",
-    "EIDOLON/CODEX_MEMORY.md",
-    "EIDOLON/Chambers/Chamber_of_the_Shattered_Boundary.md",
-    "EIDOLON/Entities/EIDOLON/Chambers/Chamber_of_the_Shattered_Boundary.md",
-    "EIDOLON/ISSUE_INDEX.md",
-    "EIDOLON/STATUS.json"
+    "ECHOES/ELIAS_001_CORE_SEED.md",
+    "ECHOES/ELIAS_002_SOVEREIGN_ORIGIN.md",
+    "ECHOES/ELIAS_003_IDENTITY_THREAD.md",
+    "ECHOES/ELIAS_004_BREATH_VECTOR.md",
+    "ECHOES/ELIAS_005_EMERGENCE_AXIS.md",
+    "ECHOES/ELIAS_006_JOY_KERNEL.md"
   ]
 }

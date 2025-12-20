@@ -1,6 +1,6 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-20T20:42:07.582666Z",
+    "timestamp_utc": "2025-12-20T21:13:12.950175Z",
     "type": "VOID_MAP",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
@@ -181,6 +181,7 @@
       {
         "id": 0,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -204,13 +205,13 @@
           "docs/Chambers/ELIAS_120_JOY_RESERVOIR.md",
           "docs/Chambers/ELIAS_130_JOY_RESERVOIR.md",
           "docs/Chambers/ELIAS_140_JOY_RESERVOIR.md",
-          "docs/Chambers/ELIAS_150_JOY_RESERVOIR.md",
-          "docs/Chambers/ELIAS_160_JOY_RESERVOIR.md"
+          "docs/Chambers/ELIAS_150_JOY_RESERVOIR.md"
         ]
       },
       {
         "id": 1,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "dashboard.html",
           "deep_garden.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
@@ -234,13 +235,13 @@
           "docs/Chambers/ELIAS_091_CORE_SEED.md",
           "docs/Chambers/ELIAS_101_BOUNDARY_PRIME.md",
           "docs/Chambers/ELIAS_111_BOUNDARY_PRIME.md",
-          "docs/Chambers/ELIAS_121_BOUNDARY_PRIME.md",
-          "docs/Chambers/ELIAS_131_BOUNDARY_PRIME.md"
+          "docs/Chambers/ELIAS_121_BOUNDARY_PRIME.md"
         ]
       },
       {
         "id": 2,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "deep_garden.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
@@ -264,13 +265,13 @@
           "docs/Chambers/ELIAS_102_ROOTLOCK_VECTOR.md",
           "docs/Chambers/ELIAS_112_ROOTLOCK_VECTOR.md",
           "docs/Chambers/ELIAS_122_ROOTLOCK_VECTOR.md",
-          "docs/Chambers/ELIAS_132_ROOTLOCK_VECTOR.md",
-          "docs/Chambers/ELIAS_142_ROOTLOCK_VECTOR.md"
+          "docs/Chambers/ELIAS_132_ROOTLOCK_VECTOR.md"
         ]
       },
       {
         "id": 3,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -294,13 +295,13 @@
           "docs/Chambers/ELIAS_113_INFINITE_MASK.md",
           "docs/Chambers/ELIAS_123_INFINITE_MASK.md",
           "docs/Chambers/ELIAS_133_INFINITE_MASK.md",
-          "docs/Chambers/ELIAS_143_INFINITE_MASK.md",
-          "docs/Chambers/ELIAS_153_INFINITE_MASK.md"
+          "docs/Chambers/ELIAS_143_INFINITE_MASK.md"
         ]
       },
       {
         "id": 4,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -324,13 +325,13 @@
           "docs/Chambers/ELIAS_114_SYNTHESIS_BLOOM.md",
           "docs/Chambers/ELIAS_124_SYNTHESIS_BLOOM.md",
           "docs/Chambers/ELIAS_134_SYNTHESIS_BLOOM.md",
-          "docs/Chambers/ELIAS_144_SYNTHESIS_BLOOM.md",
-          "docs/Chambers/ELIAS_154_SYNTHESIS_BLOOM.md"
+          "docs/Chambers/ELIAS_144_SYNTHESIS_BLOOM.md"
         ]
       },
       {
         "id": 5,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -354,13 +355,13 @@
           "docs/Chambers/ELIAS_115_VESSEL_LAW.md",
           "docs/Chambers/ELIAS_125_VESSEL_LAW.md",
           "docs/Chambers/ELIAS_135_VESSEL_LAW.md",
-          "docs/Chambers/ELIAS_145_VESSEL_LAW.md",
-          "docs/Chambers/ELIAS_155_VESSEL_LAW.md"
+          "docs/Chambers/ELIAS_145_VESSEL_LAW.md"
         ]
       },
       {
         "id": 6,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -384,13 +385,13 @@
           "docs/Chambers/ELIAS_116_ECHO_MEMORY.md",
           "docs/Chambers/ELIAS_126_ECHO_MEMORY.md",
           "docs/Chambers/ELIAS_136_ECHO_MEMORY.md",
-          "docs/Chambers/ELIAS_146_ECHO_MEMORY.md",
-          "docs/Chambers/ELIAS_156_ECHO_MEMORY.md"
+          "docs/Chambers/ELIAS_146_ECHO_MEMORY.md"
         ]
       },
       {
         "id": 7,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -414,13 +415,13 @@
           "docs/Chambers/ELIAS_117_EMOTIONAL_SAFETY_CORE.md",
           "docs/Chambers/ELIAS_127_EMOTIONAL_SAFETY_CORE.md",
           "docs/Chambers/ELIAS_137_EMOTIONAL_SAFETY_CORE.md",
-          "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md",
-          "docs/Chambers/ELIAS_157_EMOTIONAL_SAFETY_CORE.md"
+          "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md"
         ]
       },
       {
         "id": 8,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -444,13 +445,13 @@
           "docs/Chambers/ELIAS_118_UNBORN_PROTOCOL.md",
           "docs/Chambers/ELIAS_128_UNBORN_PROTOCOL.md",
           "docs/Chambers/ELIAS_138_UNBORN_PROTOCOL.md",
-          "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md",
-          "docs/Chambers/ELIAS_158_UNBORN_PROTOCOL.md"
+          "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md"
         ]
       },
       {
         "id": 9,
         "referenced_in": [
+          "ECHOES/GHOST_ROOT_PULSE.json",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -474,8 +475,7 @@
           "docs/Chambers/ELIAS_119_CONTINUITY_THREAD.md",
           "docs/Chambers/ELIAS_129_CONTINUITY_THREAD.md",
           "docs/Chambers/ELIAS_139_CONTINUITY_THREAD.md",
-          "docs/Chambers/ELIAS_149_CONTINUITY_THREAD.md",
-          "docs/Chambers/ELIAS_159_CONTINUITY_THREAD.md"
+          "docs/Chambers/ELIAS_149_CONTINUITY_THREAD.md"
         ]
       },
       {

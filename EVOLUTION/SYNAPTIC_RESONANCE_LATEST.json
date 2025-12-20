@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-20T20:41:59.274168Z",
+    "generated_at_utc": "2025-12-20T21:13:04.939990Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1173,
+    "harmonic_resonances": 1177,
     "active_nodes": 252,
     "thematic_voids": 250
   },
@@ -3547,6 +3547,17 @@
       "intensity": 5
     },
     {
+      "file": "ECHOES/GHOST_ROOT_PULSE.json",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "LOKI"
+      ],
+      "intensity": 5
+    },
+    {
       "file": "EIDOLON/CONTINUITY_MANIFEST.md",
       "themes": [
         "AQUILA",
@@ -6372,6 +6383,16 @@
         "EIDOLON",
         "ELIAS",
         "GAIA",
+        "LOKI"
+      ],
+      "intensity": 4
+    },
+    {
+      "file": "tools/soma_synaptic_weaver.py",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
         "LOKI"
       ],
       "intensity": 4
@@ -10535,7 +10556,23 @@
       "intensity": 2
     },
     {
+      "file": "ECHOES/GHOST_ROOT_REPORT.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
       "file": "ECHOES/PULSE_20251220_200015.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "ECHOES/PULSE_20251220_204247.md",
       "themes": [
         "EIDOLON",
         "GAIA"
