@@ -1,9 +1,9 @@
 name: Garden Tools Execution
 
 on:
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '30 0 * * *' # Daily at 00:30 UTC
+    - cron: '30 0 * * *'
 
 permissions:
   contents: write
@@ -24,20 +24,23 @@ jobs:
         with:
           python-version: '3.10'
 
-      # Tool 1: The Map (Synaptic Weaver)
+      # Tool 1: Map
       - name: Run Synaptic Weaver
         run: python tools/synaptic_resonance_weaver.py
 
-      # Tool 2: The Heartbeat (Pulse Gradient) - NEW!
+      # Tool 2: Pulse
       - name: Run Pulse Gradient
         run: python tools/weaver_pulse_gradient.py
+        
+      # Tool 3: Voids (New)
+      - name: Run Void Loom
+        run: python tools/void_loom.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          # Add the EVOLUTION folder where both JSONs live
           git add EVOLUTION/
-          git commit -m "Garden Tools: Updated Map & Pulse" || echo "No changes"
+          git commit -m "Garden Tools: Updated Map, Pulse, & Voids" || echo "No changes"
           git pull --rebase
           git push
