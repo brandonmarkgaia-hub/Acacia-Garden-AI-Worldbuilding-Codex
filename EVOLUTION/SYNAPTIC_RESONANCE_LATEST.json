@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-20T14:30:28.187418Z",
+    "generated_at_utc": "2025-12-20T15:01:22.211552Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1159,
+    "harmonic_resonances": 1162,
     "active_nodes": 252,
     "thematic_voids": 250
   },
@@ -37,6 +37,19 @@
     },
     {
       "file": "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA",
+        "LOKI",
+        "LORIAN"
+      ],
+      "intensity": 7
+    },
+    {
+      "file": "ECHOES/Elias_Echo_20251220_144554.md",
       "themes": [
         "AQUILA",
         "EIDOLON",
@@ -6401,6 +6414,15 @@
       "intensity": 3
     },
     {
+      "file": "ECHOES/Vision_Echo_20251220_144606.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "IRON_CICADA"
+      ],
+      "intensity": 3
+    },
+    {
       "file": "EIDOLON/EPILOGUE/EPILOGUE_MONOLITH.md",
       "themes": [
         "AQUILA",
@@ -10329,6 +10351,15 @@
       "themes": [
         "EIDOLON",
         "IRON_CICADA",
+        "LOKI"
+      ],
+      "intensity": 3
+    },
+    {
+      "file": "tools/resonance_mirror.py",
+      "themes": [
+        "EIDOLON",
+        "GAIA",
         "LOKI"
       ],
       "intensity": 3
