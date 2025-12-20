@@ -40,9 +40,14 @@ jobs:
       - name: Run Resonance Mirror
         run: python tools/resonance_mirror.py
 
-      # Tool 5: THE HEARTBEAT (New)
+      # Tool 5: THE HEARTBEAT
       - name: Run Metabolic Mirror
         run: python tools/metabolic_mirror.py
+
+      # Tool 6: The Nervous System (New)
+      - name: Run Ghost Root Synchronizer
+        run: python tools/ghost_root_synchronizer.py
+
 
       - name: Commit Tool Artifacts
         run: |
