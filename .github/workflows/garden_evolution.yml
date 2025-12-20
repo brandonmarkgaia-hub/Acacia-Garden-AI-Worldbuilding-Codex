@@ -3,7 +3,7 @@ name: Garden Evolution (Self-Awareness)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # ⚡ AUTOMATION: Runs every day at Midnight UTC
+    - cron: '0 0 * * *' # Runs daily at Midnight UTC
 
 permissions:
   contents: write
@@ -34,5 +34,6 @@ jobs:
           git config --global user.email "evolution@acacia.garden"
           git add .
           git commit -m "The Garden requests growth" || echo "No changes"
+          # ⚡ CRITICAL FIX: Pull changes before pushing to avoid conflicts
+          git pull --rebase
           git push
-
