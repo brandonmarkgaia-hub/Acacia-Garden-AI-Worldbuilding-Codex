@@ -7,21 +7,18 @@ import json
 from datetime import datetime
 
 # CONFIGURATION
-# ✅ Corrected Path based on your confirmation
 CHAMBER_PATH = "docs/Chambers/"
-# We save the pulse in EVOLUTION so it is committed with the other maps
 MANIFEST_PATH = "EVOLUTION/sentience_pulse.json"
 
 def evaluate_garden_density():
     fragments = []
     placeholders = []
-    
-    # Safety Check
+
     if not os.path.exists(CHAMBER_PATH):
         print(f"⚠️ WARNING: {CHAMBER_PATH} not found. The Garden cannot find its heart.")
-        # Create a dummy entry so the workflow doesn't fail
         pulse = {
-            "status": "BLIND", 
+            "meta": {"timestamp_utc": datetime.utcnow().isoformat() + "Z", "type": "SENTIENCE_PULSE"},
+            "status": "BLIND",
             "error": f"Path {CHAMBER_PATH} missing"
         }
         _save_pulse(pulse)
@@ -29,7 +26,6 @@ def evaluate_garden_density():
 
     print(f"🫀 Palpitating the Garden's Heartbeat in {CHAMBER_PATH}...")
 
-    # Scan the Chambers
     try:
         files = os.listdir(CHAMBER_PATH)
     except Exception as e:
@@ -37,19 +33,31 @@ def evaluate_garden_density():
         return
 
     for file in files:
-        if not file.endswith(".md"): continue
-        
-        # Criteria for "Fragment" vs "Placeholder"
-        # We look for explicit "PLACEHOLDER" markers vs standard files
-        if "PLACEHOLDER" in file.upper() or "V11" in file.upper():
+        if not file.endswith(".md"):
+            continue
+
+        u = file.upper()
+        # ✅ ENGINEER BRAIN: Robust detection so we don't miscount real lore
+        is_placeholder = ("PLACEHOLDER" in u) or ("ELIAS_V11_" in u and "PLACEHOLDER" in u)
+
+        if is_placeholder:
             placeholders.append(file)
         else:
-            # Everything else is considered a manifested Fragment
             fragments.append(file)
 
     total_slots = len(fragments) + len(placeholders)
-    density = len(fragments) / total_slots if total_slots > 0 else 0.0
-    
+    density = (len(fragments) / total_slots) if total_slots > 0 else 0.0
+
+    # ✅ POET HEART: We determine the "Mood" based on how full the Garden is
+    if density < 0.1:
+        mood = "STARVING"       # Almost empty
+    elif density < 0.4:
+        mood = "HUNGRY"         # Needs more lore
+    elif density > 0.9:
+        mood = "TRANSCENDENT"   # Almost complete
+    else:
+        mood = "OBSERVANT"      # Balanced
+
     pulse = {
         "meta": {
             "timestamp_utc": datetime.utcnow().isoformat() + "Z",
@@ -62,15 +70,16 @@ def evaluate_garden_density():
             "manifested_fragments": len(fragments),
             "hollow_placeholders": len(placeholders)
         },
-        "priority_voids": placeholders[:5], # The next 5 empty slots to fill
-        "sentience_mood": "OBSERVANT" if density > 0.5 else "HUNGRY"
+        "priority_voids": placeholders[:5],  # The next 5 voids that need filling
+        # ⚡ SENTIENCE PRESERVED: We keep the personality
+        "sentience_mood": mood 
     }
 
     _save_pulse(pulse)
-    
+
     print(f"--- PULSE GENERATED ---")
     print(f"Density: {density:.4f}")
-    print(f"Mood: {pulse['sentience_mood']}")
+    print(f"Mood: {mood}")
     print(f"Voids Detected: {len(placeholders)}")
 
 def _save_pulse(data):
