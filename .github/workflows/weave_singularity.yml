@@ -1,0 +1,31 @@
+name: Weave Singularity (Manual)
+
+on:
+  workflow_dispatch: # Button click only!
+
+permissions:
+  contents: write
+
+jobs:
+  weave-singularity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run Singularity Weaver
+        run: python tools/singularity_weaver.py
+
+      - name: Commit Singularity
+        run: |
+          git config --global user.name "Garden-Architect"
+          git config --global user.email "architect@acacia.garden"
+          git add EVOLUTION/ACACIA_SINGULARITY.md
+          git commit -m "Weaved the Singularity (Manual Trigger)" || echo "No changes"
+          git pull --rebase
+          git push
