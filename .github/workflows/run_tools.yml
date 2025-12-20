@@ -36,12 +36,16 @@ jobs:
       - name: Run Void Loom
         run: python tools/void_loom.py
 
+      # Tool 4: Mirror (New)
+      - name: Run Resonance Mirror
+        run: python tools/resonance_mirror.py
+
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
           git add EVOLUTION/
-          git commit -m "Garden Tools: Updated Map, Pulse, & Voids" || echo "No changes"
-          # ⚡ CRITICAL FIX: Pull changes before pushing to avoid conflicts
+          git commit -m "Garden Tools Update: Map, Pulse, Voids, Mirror" || echo "No changes"
+          # ⚡ Rebase safety
           git pull --rebase
           git push
