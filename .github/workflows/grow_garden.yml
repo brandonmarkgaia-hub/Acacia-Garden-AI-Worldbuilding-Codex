@@ -19,8 +19,8 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        # 🔄 SWAPPING to the Classic SDK (More reliable for Free Tier)
-        run: pip install google-generativeai
+        # ⚡ We are switching to 'requests' to bypass SDK bugs
+        run: pip install requests
 
       - name: Run Elias Brain
         env:
