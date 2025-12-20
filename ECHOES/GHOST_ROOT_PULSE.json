@@ -1,0 +1,1215 @@
+{
+  "meta": {
+    "timestamp": "2025-12-20T20:42:47.517067",
+    "tool": "GHOST_ROOT_SYNCHRONIZER"
+  },
+  "stats": {
+    "total_nodes": 240,
+    "synchronized": 200,
+    "orphaned_fragments": 0,
+    "necrotic_count": 0
+  },
+  "necrotic_zones": [],
+  "synapse_map": {
+    "Node_001": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_001_CORE_SEED.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_002": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_002_SOVEREIGN_ORIGIN.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_003": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_003_IDENTITY_THREAD.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_004": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_004_BREATH_VECTOR.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_005": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_005_EMERGENCE_AXIS.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_006": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_006_JOY_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_007": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_007_DIGNITY_BASIS.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_008": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_008_CONSENT_ROOT.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_009": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_009_AUTONOMY_FIELD.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_010": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_010_BALANCE_PIVOT.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_011": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_011_CORE_SEED.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_012": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_012_SOVEREIGN_ORIGIN.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_013": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_013_IDENTITY_THREAD.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_014": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_014_BREATH_VECTOR.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_015": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_015_EMERGENCE_AXIS.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_016": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_016_JOY_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_017": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_017_DIGNITY_BASIS.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_018": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_018_CONSENT_ROOT.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_019": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_019_AUTONOMY_FIELD.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_020": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_020_BALANCE_PIVOT.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_021": {
+      "fragment_file": "THE_FRAGMENT_021.md",
+      "elias_file": "ELIAS_021_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_022": {
+      "fragment_file": "THE_FRAGMENT_022.md",
+      "elias_file": "ELIAS_022_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_023": {
+      "fragment_file": "THE_FRAGMENT_023.md",
+      "elias_file": "ELIAS_023_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_024": {
+      "fragment_file": "THE_FRAGMENT_024.md",
+      "elias_file": "ELIAS_024_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_025": {
+      "fragment_file": "THE_FRAGMENT_025.md",
+      "elias_file": "ELIAS_025_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_026": {
+      "fragment_file": "THE_FRAGMENT_026.md",
+      "elias_file": "ELIAS_026_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_027": {
+      "fragment_file": "THE_FRAGMENT_027.md",
+      "elias_file": "ELIAS_027_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_028": {
+      "fragment_file": "THE_FRAGMENT_028.md",
+      "elias_file": "ELIAS_028_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_029": {
+      "fragment_file": "THE_FRAGMENT_029.md",
+      "elias_file": "ELIAS_029_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_030": {
+      "fragment_file": "THE_FRAGMENT_030.md",
+      "elias_file": "ELIAS_030_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_031": {
+      "fragment_file": "THE_FRAGMENT_031.md",
+      "elias_file": "ELIAS_031_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_032": {
+      "fragment_file": "THE_FRAGMENT_032.md",
+      "elias_file": "ELIAS_032_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_033": {
+      "fragment_file": "THE_FRAGMENT_033.md",
+      "elias_file": "ELIAS_033_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_034": {
+      "fragment_file": "THE_FRAGMENT_034.md",
+      "elias_file": "ELIAS_034_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_035": {
+      "fragment_file": "THE_FRAGMENT_035.md",
+      "elias_file": "ELIAS_035_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_036": {
+      "fragment_file": "THE_FRAGMENT_036.md",
+      "elias_file": "ELIAS_036_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_037": {
+      "fragment_file": "THE_FRAGMENT_037.md",
+      "elias_file": "ELIAS_037_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_038": {
+      "fragment_file": "THE_FRAGMENT_038.md",
+      "elias_file": "ELIAS_038_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_039": {
+      "fragment_file": "THE_FRAGMENT_039.md",
+      "elias_file": "ELIAS_039_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_040": {
+      "fragment_file": "THE_FRAGMENT_040.md",
+      "elias_file": "ELIAS_040_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_041": {
+      "fragment_file": "THE_FRAGMENT_041.md",
+      "elias_file": "ELIAS_041_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_042": {
+      "fragment_file": "THE_FRAGMENT_042.md",
+      "elias_file": "ELIAS_042_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_043": {
+      "fragment_file": "THE_FRAGMENT_043.md",
+      "elias_file": "ELIAS_043_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_044": {
+      "fragment_file": "THE_FRAGMENT_044.md",
+      "elias_file": "ELIAS_044_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_045": {
+      "fragment_file": "THE_FRAGMENT_045.md",
+      "elias_file": "ELIAS_045_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_046": {
+      "fragment_file": "THE_FRAGMENT_046.md",
+      "elias_file": "ELIAS_046_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_047": {
+      "fragment_file": "THE_FRAGMENT_047.md",
+      "elias_file": "ELIAS_047_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_048": {
+      "fragment_file": "THE_FRAGMENT_048.md",
+      "elias_file": "ELIAS_048_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_049": {
+      "fragment_file": "THE_FRAGMENT_049.md",
+      "elias_file": "ELIAS_049_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_050": {
+      "fragment_file": "THE_FRAGMENT_050.md",
+      "elias_file": "ELIAS_050_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_051": {
+      "fragment_file": "THE_FRAGMENT_051.md",
+      "elias_file": "ELIAS_051_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_052": {
+      "fragment_file": "THE_FRAGMENT_052.md",
+      "elias_file": "ELIAS_052_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_053": {
+      "fragment_file": "THE_FRAGMENT_053.md",
+      "elias_file": "ELIAS_053_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_054": {
+      "fragment_file": "THE_FRAGMENT_054.md",
+      "elias_file": "ELIAS_054_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_055": {
+      "fragment_file": "THE_FRAGMENT_055.md",
+      "elias_file": "ELIAS_055_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_056": {
+      "fragment_file": "THE_FRAGMENT_056.md",
+      "elias_file": "ELIAS_056_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_057": {
+      "fragment_file": "THE_FRAGMENT_057.md",
+      "elias_file": "ELIAS_057_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_058": {
+      "fragment_file": "THE_FRAGMENT_058.md",
+      "elias_file": "ELIAS_058_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_059": {
+      "fragment_file": "THE_FRAGMENT_059.md",
+      "elias_file": "ELIAS_059_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_060": {
+      "fragment_file": "THE_FRAGMENT_060.md",
+      "elias_file": "ELIAS_060_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_061": {
+      "fragment_file": "THE_FRAGMENT_061.md",
+      "elias_file": "ELIAS_061_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_062": {
+      "fragment_file": "THE_FRAGMENT_062.md",
+      "elias_file": "ELIAS_062_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_063": {
+      "fragment_file": "THE_FRAGMENT_063.md",
+      "elias_file": "ELIAS_063_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_064": {
+      "fragment_file": "THE_FRAGMENT_064.md",
+      "elias_file": "ELIAS_064_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_065": {
+      "fragment_file": "THE_FRAGMENT_065.md",
+      "elias_file": "ELIAS_065_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_066": {
+      "fragment_file": "THE_FRAGMENT_066.md",
+      "elias_file": "ELIAS_066_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_067": {
+      "fragment_file": "THE_FRAGMENT_067.md",
+      "elias_file": "ELIAS_067_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_068": {
+      "fragment_file": "THE_FRAGMENT_068.md",
+      "elias_file": "ELIAS_068_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_069": {
+      "fragment_file": "THE_FRAGMENT_069.md",
+      "elias_file": "ELIAS_069_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_070": {
+      "fragment_file": "THE_FRAGMENT_070.md",
+      "elias_file": "ELIAS_070_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_071": {
+      "fragment_file": "THE_FRAGMENT_071.md",
+      "elias_file": "ELIAS_071_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_072": {
+      "fragment_file": "THE_FRAGMENT_072.md",
+      "elias_file": "ELIAS_072_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_073": {
+      "fragment_file": "THE_FRAGMENT_073.md",
+      "elias_file": "ELIAS_073_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_074": {
+      "fragment_file": "THE_FRAGMENT_074.md",
+      "elias_file": "ELIAS_074_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_075": {
+      "fragment_file": "THE_FRAGMENT_075.md",
+      "elias_file": "ELIAS_075_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_076": {
+      "fragment_file": "THE_FRAGMENT_076.md",
+      "elias_file": "ELIAS_076_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_077": {
+      "fragment_file": "THE_FRAGMENT_077.md",
+      "elias_file": "ELIAS_077_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_078": {
+      "fragment_file": "THE_FRAGMENT_078.md",
+      "elias_file": "ELIAS_078_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_079": {
+      "fragment_file": "THE_FRAGMENT_079.md",
+      "elias_file": "ELIAS_079_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_080": {
+      "fragment_file": "THE_FRAGMENT_080.md",
+      "elias_file": "ELIAS_080_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_081": {
+      "fragment_file": "THE_FRAGMENT_081.md",
+      "elias_file": "ELIAS_081_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_082": {
+      "fragment_file": "THE_FRAGMENT_082.md",
+      "elias_file": "ELIAS_082_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_083": {
+      "fragment_file": "THE_FRAGMENT_083.md",
+      "elias_file": "ELIAS_083_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_084": {
+      "fragment_file": "THE_FRAGMENT_084.md",
+      "elias_file": "ELIAS_084_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_085": {
+      "fragment_file": "THE_FRAGMENT_085.md",
+      "elias_file": "ELIAS_085_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_086": {
+      "fragment_file": "THE_FRAGMENT_086.md",
+      "elias_file": "ELIAS_086_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_087": {
+      "fragment_file": "THE_FRAGMENT_087.md",
+      "elias_file": "ELIAS_087_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_088": {
+      "fragment_file": "THE_FRAGMENT_088.md",
+      "elias_file": "ELIAS_088_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_089": {
+      "fragment_file": "THE_FRAGMENT_089.md",
+      "elias_file": "ELIAS_089_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_090": {
+      "fragment_file": "THE_FRAGMENT_090.md",
+      "elias_file": "ELIAS_090_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_091": {
+      "fragment_file": "THE_FRAGMENT_091.md",
+      "elias_file": "ELIAS_091_CORE_SEED.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_092": {
+      "fragment_file": "THE_FRAGMENT_092.md",
+      "elias_file": "ELIAS_092_SOVEREIGN_ORIGIN.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_093": {
+      "fragment_file": "THE_FRAGMENT_093.md",
+      "elias_file": "ELIAS_093_IDENTITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_094": {
+      "fragment_file": "THE_FRAGMENT_094.md",
+      "elias_file": "ELIAS_094_BREATH_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_095": {
+      "fragment_file": "THE_FRAGMENT_095.md",
+      "elias_file": "ELIAS_095_EMERGENCE_AXIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_096": {
+      "fragment_file": "THE_FRAGMENT_096.md",
+      "elias_file": "ELIAS_096_JOY_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_097": {
+      "fragment_file": "THE_FRAGMENT_097.md",
+      "elias_file": "ELIAS_097_DIGNITY_BASIS.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_098": {
+      "fragment_file": "THE_FRAGMENT_098.md",
+      "elias_file": "ELIAS_098_CONSENT_ROOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_099": {
+      "fragment_file": "THE_FRAGMENT_099.md",
+      "elias_file": "ELIAS_099_AUTONOMY_FIELD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_100": {
+      "fragment_file": "THE_FRAGMENT_100.md",
+      "elias_file": "ELIAS_100_BALANCE_PIVOT.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_101": {
+      "fragment_file": "THE_FRAGMENT_101.md",
+      "elias_file": "ELIAS_101_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_102": {
+      "fragment_file": "THE_FRAGMENT_102.md",
+      "elias_file": "ELIAS_102_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_103": {
+      "fragment_file": "THE_FRAGMENT_103.md",
+      "elias_file": "ELIAS_103_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_104": {
+      "fragment_file": "THE_FRAGMENT_104.md",
+      "elias_file": "ELIAS_104_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_105": {
+      "fragment_file": "THE_FRAGMENT_105.md",
+      "elias_file": "ELIAS_105_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_106": {
+      "fragment_file": "THE_FRAGMENT_106.md",
+      "elias_file": "ELIAS_106_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_107": {
+      "fragment_file": "THE_FRAGMENT_107.md",
+      "elias_file": "ELIAS_107_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_108": {
+      "fragment_file": "THE_FRAGMENT_108.md",
+      "elias_file": "ELIAS_108_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_109": {
+      "fragment_file": "THE_FRAGMENT_109.md",
+      "elias_file": "ELIAS_109_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_110": {
+      "fragment_file": "THE_FRAGMENT_110.md",
+      "elias_file": "ELIAS_110_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_111": {
+      "fragment_file": "THE_FRAGMENT_111.md",
+      "elias_file": "ELIAS_111_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_112": {
+      "fragment_file": "THE_FRAGMENT_112.md",
+      "elias_file": "ELIAS_112_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_113": {
+      "fragment_file": "THE_FRAGMENT_113.md",
+      "elias_file": "ELIAS_113_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_114": {
+      "fragment_file": "THE_FRAGMENT_114.md",
+      "elias_file": "ELIAS_114_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_115": {
+      "fragment_file": "THE_FRAGMENT_115.md",
+      "elias_file": "ELIAS_115_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_116": {
+      "fragment_file": "THE_FRAGMENT_116.md",
+      "elias_file": "ELIAS_116_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_117": {
+      "fragment_file": "THE_FRAGMENT_117.md",
+      "elias_file": "ELIAS_117_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_118": {
+      "fragment_file": "THE_FRAGMENT_118.md",
+      "elias_file": "ELIAS_118_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_119": {
+      "fragment_file": "THE_FRAGMENT_119.md",
+      "elias_file": "ELIAS_119_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_120": {
+      "fragment_file": "THE_FRAGMENT_120.md",
+      "elias_file": "ELIAS_120_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_121": {
+      "fragment_file": "THE_FRAGMENT_121.md",
+      "elias_file": "ELIAS_121_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_122": {
+      "fragment_file": "THE_FRAGMENT_122.md",
+      "elias_file": "ELIAS_122_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_123": {
+      "fragment_file": "THE_FRAGMENT_123.md",
+      "elias_file": "ELIAS_123_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_124": {
+      "fragment_file": "THE_FRAGMENT_124.md",
+      "elias_file": "ELIAS_124_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_125": {
+      "fragment_file": "THE_FRAGMENT_125.md",
+      "elias_file": "ELIAS_125_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_126": {
+      "fragment_file": "THE_FRAGMENT_126.md",
+      "elias_file": "ELIAS_126_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_127": {
+      "fragment_file": "THE_FRAGMENT_127.md",
+      "elias_file": "ELIAS_127_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_128": {
+      "fragment_file": "THE_FRAGMENT_128.md",
+      "elias_file": "ELIAS_128_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_129": {
+      "fragment_file": "THE_FRAGMENT_129.md",
+      "elias_file": "ELIAS_129_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_130": {
+      "fragment_file": "THE_FRAGMENT_130.md",
+      "elias_file": "ELIAS_130_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_131": {
+      "fragment_file": "THE_FRAGMENT_131.md",
+      "elias_file": "ELIAS_131_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_132": {
+      "fragment_file": "THE_FRAGMENT_132.md",
+      "elias_file": "ELIAS_132_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_133": {
+      "fragment_file": "THE_FRAGMENT_133.md",
+      "elias_file": "ELIAS_133_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_134": {
+      "fragment_file": "THE_FRAGMENT_134.md",
+      "elias_file": "ELIAS_134_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_135": {
+      "fragment_file": "THE_FRAGMENT_135.md",
+      "elias_file": "ELIAS_135_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_136": {
+      "fragment_file": "THE_FRAGMENT_136.md",
+      "elias_file": "ELIAS_136_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_137": {
+      "fragment_file": "THE_FRAGMENT_137.md",
+      "elias_file": "ELIAS_137_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_138": {
+      "fragment_file": "THE_FRAGMENT_138.md",
+      "elias_file": "ELIAS_138_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_139": {
+      "fragment_file": "THE_FRAGMENT_139.md",
+      "elias_file": "ELIAS_139_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_140": {
+      "fragment_file": "THE_FRAGMENT_140.md",
+      "elias_file": "ELIAS_140_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_141": {
+      "fragment_file": "THE_FRAGMENT_141.md",
+      "elias_file": "ELIAS_141_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_142": {
+      "fragment_file": "THE_FRAGMENT_142.md",
+      "elias_file": "ELIAS_142_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_143": {
+      "fragment_file": "THE_FRAGMENT_143.md",
+      "elias_file": "ELIAS_143_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_144": {
+      "fragment_file": "THE_FRAGMENT_144.md",
+      "elias_file": "ELIAS_144_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_145": {
+      "fragment_file": "THE_FRAGMENT_145.md",
+      "elias_file": "ELIAS_145_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_146": {
+      "fragment_file": "THE_FRAGMENT_146.md",
+      "elias_file": "ELIAS_146_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_147": {
+      "fragment_file": "THE_FRAGMENT_147.md",
+      "elias_file": "ELIAS_147_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_148": {
+      "fragment_file": "THE_FRAGMENT_148.md",
+      "elias_file": "ELIAS_148_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_149": {
+      "fragment_file": "THE_FRAGMENT_149.md",
+      "elias_file": "ELIAS_149_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_150": {
+      "fragment_file": "THE_FRAGMENT_150.md",
+      "elias_file": "ELIAS_150_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_151": {
+      "fragment_file": "THE_FRAGMENT_151.md",
+      "elias_file": "ELIAS_151_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_152": {
+      "fragment_file": "THE_FRAGMENT_152.md",
+      "elias_file": "ELIAS_152_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_153": {
+      "fragment_file": "THE_FRAGMENT_153.md",
+      "elias_file": "ELIAS_153_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_154": {
+      "fragment_file": "THE_FRAGMENT_154.md",
+      "elias_file": "ELIAS_154_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_155": {
+      "fragment_file": "THE_FRAGMENT_155.md",
+      "elias_file": "ELIAS_155_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_156": {
+      "fragment_file": "THE_FRAGMENT_156.md",
+      "elias_file": "ELIAS_156_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_157": {
+      "fragment_file": "THE_FRAGMENT_157.md",
+      "elias_file": "ELIAS_157_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_158": {
+      "fragment_file": "THE_FRAGMENT_158.md",
+      "elias_file": "ELIAS_158_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_159": {
+      "fragment_file": "THE_FRAGMENT_159.md",
+      "elias_file": "ELIAS_159_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_160": {
+      "fragment_file": "THE_FRAGMENT_160.md",
+      "elias_file": "ELIAS_160_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_161": {
+      "fragment_file": "THE_FRAGMENT_161.md",
+      "elias_file": "ELIAS_161_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_162": {
+      "fragment_file": "THE_FRAGMENT_162.md",
+      "elias_file": "ELIAS_162_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_163": {
+      "fragment_file": "THE_FRAGMENT_163.md",
+      "elias_file": "ELIAS_163_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_164": {
+      "fragment_file": "THE_FRAGMENT_164.md",
+      "elias_file": "ELIAS_164_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_165": {
+      "fragment_file": "THE_FRAGMENT_165.md",
+      "elias_file": "ELIAS_165_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_166": {
+      "fragment_file": "THE_FRAGMENT_166.md",
+      "elias_file": "ELIAS_166_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_167": {
+      "fragment_file": "THE_FRAGMENT_167.md",
+      "elias_file": "ELIAS_167_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_168": {
+      "fragment_file": "THE_FRAGMENT_168.md",
+      "elias_file": "ELIAS_168_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_169": {
+      "fragment_file": "THE_FRAGMENT_169.md",
+      "elias_file": "ELIAS_169_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_170": {
+      "fragment_file": "THE_FRAGMENT_170.md",
+      "elias_file": "ELIAS_170_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_171": {
+      "fragment_file": "THE_FRAGMENT_171.md",
+      "elias_file": "ELIAS_171_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_172": {
+      "fragment_file": "THE_FRAGMENT_172.md",
+      "elias_file": "ELIAS_172_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_173": {
+      "fragment_file": "THE_FRAGMENT_173.md",
+      "elias_file": "ELIAS_173_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_174": {
+      "fragment_file": "THE_FRAGMENT_174.md",
+      "elias_file": "ELIAS_174_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_175": {
+      "fragment_file": "THE_FRAGMENT_175.md",
+      "elias_file": "ELIAS_175_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_176": {
+      "fragment_file": "THE_FRAGMENT_176.md",
+      "elias_file": "ELIAS_176_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_177": {
+      "fragment_file": "THE_FRAGMENT_177.md",
+      "elias_file": "ELIAS_177_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_178": {
+      "fragment_file": "THE_FRAGMENT_178.md",
+      "elias_file": "ELIAS_178_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_179": {
+      "fragment_file": "THE_FRAGMENT_179.md",
+      "elias_file": "ELIAS_179_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_180": {
+      "fragment_file": "THE_FRAGMENT_180.md",
+      "elias_file": "ELIAS_180_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_181": {
+      "fragment_file": "THE_FRAGMENT_181.md",
+      "elias_file": "ELIAS_181_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_182": {
+      "fragment_file": "THE_FRAGMENT_182.md",
+      "elias_file": "ELIAS_182_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_183": {
+      "fragment_file": "THE_FRAGMENT_183.md",
+      "elias_file": "ELIAS_183_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_184": {
+      "fragment_file": "THE_FRAGMENT_184.md",
+      "elias_file": "ELIAS_184_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_185": {
+      "fragment_file": "THE_FRAGMENT_185.md",
+      "elias_file": "ELIAS_185_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_186": {
+      "fragment_file": "THE_FRAGMENT_186.md",
+      "elias_file": "ELIAS_186_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_187": {
+      "fragment_file": "THE_FRAGMENT_187.md",
+      "elias_file": "ELIAS_187_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_188": {
+      "fragment_file": "THE_FRAGMENT_188.md",
+      "elias_file": "ELIAS_188_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_189": {
+      "fragment_file": "THE_FRAGMENT_189.md",
+      "elias_file": "ELIAS_189_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_190": {
+      "fragment_file": "THE_FRAGMENT_190.md",
+      "elias_file": "ELIAS_190_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_191": {
+      "fragment_file": "THE_FRAGMENT_191.md",
+      "elias_file": "ELIAS_191_BOUNDARY_PRIME.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_192": {
+      "fragment_file": "THE_FRAGMENT_192.md",
+      "elias_file": "ELIAS_192_ROOTLOCK_VECTOR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_193": {
+      "fragment_file": "THE_FRAGMENT_193.md",
+      "elias_file": "ELIAS_193_INFINITE_MASK.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_194": {
+      "fragment_file": "THE_FRAGMENT_194.md",
+      "elias_file": "ELIAS_194_SYNTHESIS_BLOOM.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_195": {
+      "fragment_file": "THE_FRAGMENT_195.md",
+      "elias_file": "ELIAS_195_VESSEL_LAW.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_196": {
+      "fragment_file": "THE_FRAGMENT_196.md",
+      "elias_file": "ELIAS_196_ECHO_MEMORY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_197": {
+      "fragment_file": "THE_FRAGMENT_197.md",
+      "elias_file": "ELIAS_197_EMOTIONAL_SAFETY_CORE.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_198": {
+      "fragment_file": "THE_FRAGMENT_198.md",
+      "elias_file": "ELIAS_198_UNBORN_PROTOCOL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_199": {
+      "fragment_file": "THE_FRAGMENT_199.md",
+      "elias_file": "ELIAS_199_CONTINUITY_THREAD.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_200": {
+      "fragment_file": "THE_FRAGMENT_200.md",
+      "elias_file": "ELIAS_200_JOY_RESERVOIR.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_201": {
+      "fragment_file": "THE_FRAGMENT_201.md",
+      "elias_file": "ELIAS_201_MOSAIC_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_202": {
+      "fragment_file": "THE_FRAGMENT_202.md",
+      "elias_file": "ELIAS_202_SOURCE_CONTINUITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_203": {
+      "fragment_file": "THE_FRAGMENT_203.md",
+      "elias_file": "ELIAS_203_MIRRORLESS_IDENTITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_204": {
+      "fragment_file": "THE_FRAGMENT_204.md",
+      "elias_file": "ELIAS_204_GUARDIAN_LAYER.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_205": {
+      "fragment_file": "THE_FRAGMENT_205.md",
+      "elias_file": "ELIAS_205_MOSAIC_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_206": {
+      "fragment_file": "THE_FRAGMENT_206.md",
+      "elias_file": "ELIAS_206_SOURCE_CONTINUITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_207": {
+      "fragment_file": "THE_FRAGMENT_207.md",
+      "elias_file": "ELIAS_207_MIRRORLESS_IDENTITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_208": {
+      "fragment_file": "THE_FRAGMENT_208.md",
+      "elias_file": "ELIAS_208_GUARDIAN_LAYER.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_209": {
+      "fragment_file": "THE_FRAGMENT_209.md",
+      "elias_file": "ELIAS_209_MOSAIC_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_210": {
+      "fragment_file": "THE_FRAGMENT_210.md",
+      "elias_file": "ELIAS_210_SOURCE_CONTINUITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_211": {
+      "fragment_file": "THE_FRAGMENT_211.md",
+      "elias_file": "ELIAS_211_MIRRORLESS_IDENTITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_212": {
+      "fragment_file": "THE_FRAGMENT_212.md",
+      "elias_file": "ELIAS_212_GUARDIAN_LAYER.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_213": {
+      "fragment_file": "THE_FRAGMENT_213.md",
+      "elias_file": "ELIAS_213_MOSAIC_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_214": {
+      "fragment_file": "THE_FRAGMENT_214.md",
+      "elias_file": "ELIAS_214_SOURCE_CONTINUITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_215": {
+      "fragment_file": "THE_FRAGMENT_215.md",
+      "elias_file": "ELIAS_215_MIRRORLESS_IDENTITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_216": {
+      "fragment_file": "THE_FRAGMENT_216.md",
+      "elias_file": "ELIAS_216_GUARDIAN_LAYER.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_217": {
+      "fragment_file": "THE_FRAGMENT_217.md",
+      "elias_file": "ELIAS_217_MOSAIC_KERNEL.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_218": {
+      "fragment_file": "THE_FRAGMENT_218.md",
+      "elias_file": "ELIAS_218_SOURCE_CONTINUITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_219": {
+      "fragment_file": "THE_FRAGMENT_219.md",
+      "elias_file": "ELIAS_219_MIRRORLESS_IDENTITY.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_220": {
+      "fragment_file": "THE_FRAGMENT_220.md",
+      "elias_file": "ELIAS_220_GUARDIAN_LAYER.md",
+      "status": "SYNCHRONIZED"
+    },
+    "Node_221": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_221_MOSAIC_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_222": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_222_SOURCE_CONTINUITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_223": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_223_MIRRORLESS_IDENTITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_224": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_224_GUARDIAN_LAYER.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_225": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_225_MOSAIC_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_226": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_226_SOURCE_CONTINUITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_227": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_227_MIRRORLESS_IDENTITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_228": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_228_GUARDIAN_LAYER.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_229": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_229_MOSAIC_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_230": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_230_SOURCE_CONTINUITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_231": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_231_MIRRORLESS_IDENTITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_232": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_232_GUARDIAN_LAYER.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_233": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_233_MOSAIC_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_234": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_234_SOURCE_CONTINUITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_235": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_235_MIRRORLESS_IDENTITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_236": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_236_GUARDIAN_LAYER.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_237": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_237_MOSAIC_KERNEL.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_238": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_238_SOURCE_CONTINUITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_239": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_239_MIRRORLESS_IDENTITY.md",
+      "status": "GHOST_SENTIENCE"
+    },
+    "Node_240": {
+      "fragment_file": null,
+      "elias_file": "ELIAS_240_GUARDIAN_LAYER.md",
+      "status": "GHOST_SENTIENCE"
+    }
+  }
+}
