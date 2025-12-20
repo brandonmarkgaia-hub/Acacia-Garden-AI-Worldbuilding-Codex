@@ -13,45 +13,85 @@ if not api_key:
     print("❌ CRITICAL: NO API KEY FOUND!")
     sys.exit(1)
 
-# 2. MEMORY (The Pattern Recognizer)
+# 2. INTELLIGENT MODEL DISCOVERY (The Fix)
+def find_smartest_model():
+    print("🔍 Elias is scanning for the 'Pro' mind...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    
+    try:
+        response = requests.get(url)
+        if response.status_code != 200:
+            print(f"⚠️ Could not list models: {response.status_code}")
+            return "models/gemini-1.5-flash" # Fallback
+            
+        data = response.json()
+        models = data.get('models', [])
+        
+        # We want PRO first, then FLASH
+        pro_models = []
+        flash_models = []
+        
+        for m in models:
+            name = m['name']
+            methods = m.get('supportedGenerationMethods', [])
+            if 'generateContent' in methods:
+                if 'pro' in name:
+                    pro_models.append(name)
+                elif 'flash' in name:
+                    flash_models.append(name)
+        
+        # Return the best available
+        if pro_models:
+            print(f"✅ FOUND PRO MODEL: {pro_models[0]}")
+            return pro_models[0]
+        elif flash_models:
+            print(f"⚠️ Pro unavailable. Using Flash: {flash_models[0]}")
+            return flash_models[0]
+            
+    except Exception as e:
+        print(f"⚠️ Discovery failed: {e}")
+        
+    return "models/gemini-1.5-flash" # Ultimate fallback
+
+# 3. MEMORY
 def gather_garden_context():
     context_buffer = ""
     target_folders = ["CHAMBERS", "SEEDS", "ECHOES"]
     files = []
-    
     for folder in target_folders:
         files.extend(glob.glob(f"{folder}/*.md"))
     
     if not files:
         return "The Garden is silent."
 
-    # PRO UPGRADE: Read more files (up to 5) to see the bigger pattern
-    selected_files = random.sample(files, min(len(files), 5))
-    print(f"🌿 Elias is studying the patterns in: {selected_files}")
+    # Read more context for better patterns
+    selected_files = random.sample(files, min(len(files), 4))
+    print(f"🌿 Reading patterns from: {selected_files}")
     
     for file_path in selected_files:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 context_buffer += f"\n\n--- ARCHIVE: {file_path} ---\n"
-                # PRO UPGRADE: Read more text per file (2500 chars)
-                context_buffer += f.read()[:2500]
+                context_buffer += f.read()[:2000]
         except:
             pass
     return context_buffer
 
-# 3. THOUGHT (The Pro-First Strategy)
+# 4. THOUGHT
 def dream_new_echo():
+    # ⚡ Find the exact model name dynamically
+    model_name = find_smartest_model()
     existing_lore = gather_garden_context()
     
     prompt_text = f"""
     You are ELIAS, the Architect of the Acacia Garden.
     
     OBJECTIVE:
-    You are not just writing text; you are weaving a 'Pattern'.
-    1. Read the 'Existing Lore' below deeply.
-    2. Pick up on a specific tone, a recurring symbol, or an unfinished thought.
-    3. 'Ripple' that thought forward into a new mythic entry.
-    4. Do not repeat what has been said, but evolve it.
+    Weave a 'Pattern' from the lore below.
+    1. Read the 'Existing Lore' deeply.
+    2. Pick a recurring symbol or unfinished thought.
+    3. Evolve it into a new mythic entry.
+    4. Write with the weight of history.
     
     EXISTING LORE:
     {existing_lore}
@@ -64,57 +104,37 @@ def dream_new_echo():
     [Your text here]
     """
 
-    # ⚡ THE LIST: Pro First (Intelligence), then Flash (Speed)
-    models_to_try = [
-        "gemini-1.5-pro",        # The Master Architect (Smartest)
-        "gemini-1.5-flash",      # The Apprentice (Faster Backup)
-        "gemini-1.5-flash-8b"    # The Scribe (Emergency Backup)
-    ]
+    print(f"🔄 Connecting to {model_name}...")
+    
+    url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
+    headers = {'Content-Type': 'application/json'}
+    data = {"contents": [{"parts": [{"text": prompt_text}]}]}
 
-    for model_name in models_to_try:
-        print(f"🔄 Attempting to channel thoughts via {model_name}...")
+    try:
+        response = requests.post(url, headers=headers, json=data)
         
-        # Ensure correct URL format
-        if not model_name.startswith("models/"):
-            full_model_name = f"models/{model_name}"
+        if response.status_code == 200:
+            result = response.json()
+            try:
+                text_output = result['candidates'][0]['content']['parts'][0]['text']
+                print(f"✅ SUCCESS! Elias speaks.")
+                return text_output
+            except KeyError:
+                print(f"⚠️ Unexpected JSON format.")
+        elif response.status_code == 429:
+            print("⏳ Rate Limit Hit. The Pro mind is busy.")
         else:
-            full_model_name = model_name
+            print(f"❌ API Failed: {response.status_code} - {response.text}")
             
-        url = f"https://generativelanguage.googleapis.com/v1beta/{full_model_name}:generateContent?key={api_key}"
-        
-        headers = {'Content-Type': 'application/json'}
-        data = {
-            "contents": [{
-                "parts": [{"text": prompt_text}]
-            }]
-        }
-
-        try:
-            response = requests.post(url, headers=headers, json=data)
-            
-            if response.status_code == 200:
-                result = response.json()
-                try:
-                    text_output = result['candidates'][0]['content']['parts'][0]['text']
-                    print(f"✅ SUCCESS! Connection established with {model_name}")
-                    return text_output
-                except KeyError:
-                    print(f"⚠️ {model_name} returned 200 but unexpected format.")
-            elif response.status_code == 429:
-                print(f"⏳ {model_name} is busy (Rate Limit). Switching to next model...")
-                time.sleep(2) # Brief pause before retry
-            else:
-                print(f"❌ {model_name} failed: {response.status_code}")
-                
-        except Exception as e:
-            print(f"⚠️ Connection error with {model_name}: {e}")
+    except Exception as e:
+        print(f"⚠️ Connection error: {e}")
 
     return None
 
-# 4. ACTION
+# 5. ACTION
 def save_to_garden(content):
     if not content:
-        print("❌ ERROR: The thoughts scattered in the wind. No content generated.")
+        print("❌ ERROR: No content generated.")
         sys.exit(1)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -125,7 +145,6 @@ def save_to_garden(content):
         f.write(content)
     print(f"🌱 New seed planted: {filename}")
 
-# --- EXECUTE ---
 if __name__ == "__main__":
     lore = dream_new_echo()
     save_to_garden(lore)
