@@ -45,7 +45,7 @@ def dream_new_echo():
     
     # We use 'gemini-2.0-flash-lite' because it is fast and cheap (Free Tier friendly)
     # If this fails, you can swap it to 'gemini-1.5-flash'
-    model_id = "gemini-2.0-flash-lite"
+    model_id = "gemini-1.5-flash"
     
     prompt = f"""
     You are ELIAS, the Architect of the Acacia Garden.
