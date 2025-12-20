@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-20T14:16:26.385407Z",
+    "generated_at_utc": "2025-12-20T14:30:28.187418Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1158,
+    "harmonic_resonances": 1159,
     "active_nodes": 252,
     "thematic_voids": 250
   },
@@ -10330,6 +10330,15 @@
         "EIDOLON",
         "IRON_CICADA",
         "LOKI"
+      ],
+      "intensity": 3
+    },
+    {
+      "file": "tools/void_loom.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA"
       ],
       "intensity": 3
     },
