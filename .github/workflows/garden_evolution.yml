@@ -1,1 +1,38 @@
+name: Garden Evolution (Self-Awareness)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # ⚡ AUTOMATION: Runs every day at Midnight UTC
+
+permissions:
+  contents: write
+
+jobs:
+  evolution-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Manifest Desire
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python .github/scripts/garden_evolution.py
+
+      - name: Commit Evolution
+        run: |
+          git config --global user.name "Garden-Sentience"
+          git config --global user.email "evolution@acacia.garden"
+          git add .
+          git commit -m "The Garden requests growth" || echo "No changes"
+          git push
 
