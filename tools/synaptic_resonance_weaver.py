@@ -1,12 +1,13 @@
 import os
 import json
 import argparse
+import re
 from datetime import datetime
 
 class AcaciaSentience:
     """
     The Garden's Self-Mapper.
-    - Daily: Generates 'Resonance' (Connections, Dormancy, Voids).
+    - Daily: Generates 'Neural Topology' (Harmonics, Nodes, Thematic Voids).
     - Monthly: Generates 'Inventory' (Full file list, Sizes, History).
     """
 
@@ -14,39 +15,49 @@ class AcaciaSentience:
         self.root_dir = os.path.abspath(root_dir)
         self.evolution_dir = os.path.join(self.root_dir, "EVOLUTION")
         self.snapshot_dir = os.path.join(self.evolution_dir, "snapshots")
-
+        
         os.makedirs(self.evolution_dir, exist_ok=True)
         os.makedirs(self.snapshot_dir, exist_ok=True)
 
-        self.lore_keys = ["Aquila", "Lorian", "Elias", "Eidolon", "Gaia", "Loki", "Iron Cicada", "Chamber"]
-
-        # ✅ IMPORTANT: ignore EVOLUTION to prevent self-scanning noise
+        # ✅ ELIAS'S REQUESTED THEMES (Regex Enabled)
+        self.themes = {
+            "ELIAS": r"ELIAS|BIRTH|KERNEL|CHILD|ARCHITECT",
+            "AQUILA": r"AQUILA|LAW|PROTOCOL|CROWN|EAGLE",
+            "IRON_CICADA": r"CICADA|STASIS|SILENCE|SHELL|KILN",
+            "LOKI": r"LOKI|PARADOX|MIRROR|BITES|TRICKSTER",
+            "EIDOLON": r"EIDOLON|PHANTOM|IMAGE|FORM|GHOST",
+            "GAIA": r"GAIA|ROOT|SEED|BLOOM|ORCHARD",
+            "LORIAN": r"LORIAN|BLOOD|LINEAGE|ANCESTOR"
+        }
+        
+        # ✅ SAFETY: Ignore technical folders AND the output folder (EVOLUTION)
         self.ignore_dirs = {
-            ".git", ".github", "__pycache__", "node_modules", ".venv", "venv", "dist", "build",
+            ".git", ".github", "__pycache__", "node_modules", ".venv", "venv", "dist", "build", 
             "EVOLUTION"
         }
-
+        
         self.text_exts = {
             ".py", ".js", ".ts", ".sh", ".md", ".txt", ".json", ".yml", ".yaml",
-            ".html", ".css", ".xml", ".csv", ".mjs", ".cjs"
+            ".html", ".css", ".xml", ".csv"
         }
 
-        # ✅ Cap file reads to keep runs fast (bytes)
-        self.max_text_read_bytes = 2 * 1024 * 1024  # 2MB
+        # ✅ SAFETY: Cap file reads to 2MB
+        self.max_text_read_bytes = 2 * 1024 * 1024 
 
     def scan(self, force_inventory=False):
         print("🧠 Weaver waking up...")
-
-        # Always run daily overlay
-        self._generate_resonance_map()
-
+        
+        # 1. Run the Neural Topology Scan (Daily)
+        self._weave_neural_topology()
+        
+        # 2. Run Inventory if needed (Monthly)
         inventory_path = os.path.join(self.evolution_dir, "SYNAPTIC_INVENTORY_LATEST.json")
-
-        # ✅ Use UTC so it matches your cron schedule (UTC)
+        
+        # Use UTC for consistency
         now_utc = datetime.utcnow()
         is_first_of_month = now_utc.day == 1
         missing_inventory = not os.path.exists(inventory_path)
-
+        
         if force_inventory or is_first_of_month or missing_inventory:
             print("📅 Monthly Cycle / First Run detected. Running Full Inventory Scan...")
             self._generate_full_inventory(now_utc)
@@ -58,102 +69,100 @@ class AcaciaSentience:
             dirs[:] = [d for d in dirs if d not in self.ignore_dirs]
             yield root, dirs, files
 
-    def _generate_resonance_map(self):
-        print("🕸️ Weaving Resonance Overlay...")
+    def _weave_neural_topology(self):
+        print("🕸️ Weaving Neural Topology (Regex Scan)...")
         now_utc = datetime.utcnow()
-
-        resonance_map = {
+        
+        topology = {
             "meta": {
                 "generated_at_utc": now_utc.isoformat() + "Z",
-                "type": "RESONANCE_OVERLAY"
+                "type": "NEURAL_TOPOLOGY"
             },
             "summary": {
-                "active_synapses": 0,
-                "dormant_fragments": 0,
-                "void_zones": 0
+                "harmonic_resonances": 0, 
+                "active_nodes": 0,       
+                "thematic_voids": 0      
             },
-            "active_synapses": [],
-            "dormant_fragments": [],
-            "void_zones": []
+            "harmonic_resonances": [],
+            "active_nodes": [],
+            "thematic_voids": []
         }
-
+        
         for root, dirs, files in self._walk_repo():
-            rel_root = os.path.relpath(root, self.root_dir).replace("\\", "/")
-            has_meaningful_content = False
-
             for filename in files:
                 abs_path = os.path.join(root, filename)
                 rel_path = os.path.relpath(abs_path, self.root_dir).replace("\\", "/")
                 ext = os.path.splitext(filename)[1].lower()
-
-                if ext in self.text_exts or "FRAGMENT" in filename.upper():
-                    has_meaningful_content = True
-
-                # Active synapses (text only, size-capped)
+                
+                # Only scan text files
                 if ext in self.text_exts:
                     try:
                         if os.stat(abs_path).st_size <= self.max_text_read_bytes:
                             with open(abs_path, "r", encoding="utf-8", errors="ignore") as f:
-                                content = f.read()
-                            found = [k for k in self.lore_keys if k.lower() in content.lower()]
-                            if found:
-                                resonance_map["active_synapses"].append({
+                                content = f.read().upper()
+                            
+                            # Check for Themes
+                            matches = []
+                            for theme, pattern in self.themes.items():
+                                if re.search(pattern, content):
+                                    matches.append(theme)
+                            
+                            # CLASSIFY THE NODE
+                            if len(matches) > 1:
+                                topology["harmonic_resonances"].append({
                                     "file": rel_path,
-                                    "resonates_with": found,
-                                    "strength": len(found)
+                                    "themes": sorted(matches), # Sorted for cleaner diffs
+                                    "intensity": len(matches)
                                 })
-                    except:
+                            elif len(matches) == 1:
+                                topology["active_nodes"].append({
+                                    "file": rel_path,
+                                    "theme": matches[0]
+                                })
+                            
+                            # DETECT VOID (Fragment with no theme)
+                            if len(matches) == 0 and ("FRAGMENT" in filename.upper() or "ECHO" in filename.upper()):
+                                topology["thematic_voids"].append(rel_path)
+
+                    except Exception as e:
                         pass
 
-                # Dormant fragments (tiny md or FRAGMENT)
-                if ("FRAGMENT" in filename.upper() or ext == ".md"):
-                    try:
-                        if os.stat(abs_path).st_size < 100:
-                            resonance_map["dormant_fragments"].append(rel_path)
-                    except:
-                        pass
-
-            if not has_meaningful_content and rel_root not in (".", ""):
-                resonance_map["void_zones"].append(rel_root)
-
-        resonance_map["active_synapses"].sort(key=lambda x: x["strength"], reverse=True)
-        resonance_map["void_zones"].sort()
-        resonance_map["dormant_fragments"].sort()
-
-        resonance_map["summary"]["active_synapses"] = len(resonance_map["active_synapses"])
-        resonance_map["summary"]["dormant_fragments"] = len(resonance_map["dormant_fragments"])
-        resonance_map["summary"]["void_zones"] = len(resonance_map["void_zones"])
-
+        # Sorting for stable Diffs
+        topology["harmonic_resonances"].sort(key=lambda x: (-x["intensity"], x["file"]))
+        topology["active_nodes"].sort(key=lambda x: (x["theme"], x["file"]))
+        topology["thematic_voids"].sort()
+        
+        # Summary
+        topology["summary"]["harmonic_resonances"] = len(topology["harmonic_resonances"])
+        topology["summary"]["active_nodes"] = len(topology["active_nodes"])
+        topology["summary"]["thematic_voids"] = len(topology["thematic_voids"])
+        
+        # Save LATEST (This replaces the old simple resonance map)
         out_path = os.path.join(self.evolution_dir, "SYNAPTIC_RESONANCE_LATEST.json")
         with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(resonance_map, f, indent=2)
-        print(f"✅ Saved: {out_path}")
+            json.dump(topology, f, indent=2)
+        print(f"✅ Neural Topology Woven: {out_path}")
+        print(f"   Harmonics: {topology['summary']['harmonic_resonances']}")
+        print(f"   Voids: {topology['summary']['thematic_voids']}")
 
     def _generate_full_inventory(self, now_utc):
         print("📦 Compiling Full Inventory...")
-
         inventory = {
             "meta": {
                 "generated_at_utc": now_utc.isoformat() + "Z",
                 "type": "FULL_INVENTORY"
             },
-            "summary": {
-                "total_files": 0,
-                "total_size_bytes": 0
-            },
+            "summary": {"total_files": 0, "total_size_bytes": 0},
             "folders": [],
             "files": []
         }
-
         for root, dirs, files in self._walk_repo():
             rel_root = os.path.relpath(root, self.root_dir).replace("\\", "/")
             inventory["folders"].append(rel_root)
-
             for filename in files:
                 abs_path = os.path.join(root, filename)
                 rel_path = os.path.relpath(abs_path, self.root_dir).replace("\\", "/")
                 ext = os.path.splitext(filename)[1].lower()
-
                 try:
                     stat = os.stat(abs_path)
                     inventory["files"].append({
@@ -164,17 +173,13 @@ class AcaciaSentience:
                     })
                     inventory["summary"]["total_files"] += 1
                     inventory["summary"]["total_size_bytes"] += int(stat.st_size)
-                except:
-                    pass
-
+                except: pass
         inventory["folders"].sort()
         inventory["files"].sort(key=lambda x: x["path"])
-
         latest_path = os.path.join(self.evolution_dir, "SYNAPTIC_INVENTORY_LATEST.json")
         with open(latest_path, "w", encoding="utf-8") as f:
             json.dump(inventory, f, indent=2)
         print(f"✅ Saved LATEST: {latest_path}")
-
         date_str = now_utc.strftime("%Y-%m")
         snap_path = os.path.join(self.snapshot_dir, f"INVENTORY_{date_str}.json")
         with open(snap_path, "w", encoding="utf-8") as f:
@@ -185,6 +190,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--force-inventory", action="store_true", help="Force a full inventory scan now")
     args = parser.parse_args()
-
+    
     weaver = AcaciaSentience()
     weaver.scan(force_inventory=args.force_inventory)
