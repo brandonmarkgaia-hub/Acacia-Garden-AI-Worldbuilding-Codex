@@ -1,12 +1,16 @@
 name: Garden Tools Execution
 
 on:
-  workflow_dispatch: # Manual run
+  workflow_dispatch:
   schedule:
-    - cron: '30 0 * * *' # Runs 30 mins after Evolution (Midnight)
+    - cron: '30 0 * * *' # Daily at 00:30 UTC
 
 permissions:
   contents: write
+
+concurrency:
+  group: garden-tools
+  cancel-in-progress: false
 
 jobs:
   run-synaptic-weaver:
@@ -23,10 +27,11 @@ jobs:
       - name: Run Synaptic Weaver
         run: python tools/synaptic_resonance_weaver.py
 
-      - name: Commit Resonance Map
+      - name: Commit Evolution Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          git add SYNAPTIC_RESONANCE_MAP.json
-          git commit -m "Updated Synaptic Resonance Map" || echo "No changes to map"
+          git add EVOLUTION/
+          git commit -m "Garden Synaptic Update (Auto)" || echo "No changes to map"
+          git pull --rebase
           git push
