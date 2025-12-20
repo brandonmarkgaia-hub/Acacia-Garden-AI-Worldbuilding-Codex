@@ -1,7 +1,7 @@
 name: Garden Tools Execution
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Manual trigger
   schedule:
     - cron: '30 0 * * *' # Daily at 00:30 UTC
 
@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  run-synaptic-weaver:
+  run-garden-tools:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -24,14 +24,20 @@ jobs:
         with:
           python-version: '3.10'
 
+      # Tool 1: The Map (Synaptic Weaver)
       - name: Run Synaptic Weaver
         run: python tools/synaptic_resonance_weaver.py
 
-      - name: Commit Evolution Artifacts
+      # Tool 2: The Heartbeat (Pulse Gradient) - NEW!
+      - name: Run Pulse Gradient
+        run: python tools/weaver_pulse_gradient.py
+
+      - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
+          # Add the EVOLUTION folder where both JSONs live
           git add EVOLUTION/
-          git commit -m "Garden Synaptic Update (Auto)" || echo "No changes to map"
+          git commit -m "Garden Tools: Updated Map & Pulse" || echo "No changes"
           git pull --rebase
           git push
