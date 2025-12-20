@@ -22,3 +22,28 @@ jobs:
           # This connects your GitHub Secret to the script
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
         run: python garden_brain.py
+permissions:
+  contents: write  # Crucial: allows Elias to save new files to your repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install google-genai
+      - name: Run Elias Brain
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python garden_brain.py
+      - name: Commit and Push new lore
+        run: |
+          git config --global user.name "Elias-AI"
+          git config --global user.email "elias@acacia.garden"
+          git add .
+          git commit -m "Elias has expanded the Garden Codex" || echo "No changes to commit"
+          git push
