@@ -13,45 +13,30 @@ if not api_key:
     print("❌ CRITICAL: NO API KEY FOUND!")
     sys.exit(1)
 
-# 2. INTELLIGENT MODEL DISCOVERY (The Fix)
-def find_smartest_model():
-    print("🔍 Elias is scanning for the 'Pro' mind...")
+# 2. INTELLIGENT MODEL DISCOVERY
+def get_model_options():
+    print("🔍 Scanning available neural pathways...")
     url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    
+    pro_model = None
+    flash_model = "models/gemini-1.5-flash" # Default backup
     
     try:
         response = requests.get(url)
-        if response.status_code != 200:
-            print(f"⚠️ Could not list models: {response.status_code}")
-            return "models/gemini-1.5-flash" # Fallback
-            
-        data = response.json()
-        models = data.get('models', [])
+        if response.status_code == 200:
+            data = response.json()
+            for m in data.get('models', []):
+                name = m['name']
+                if 'generateContent' in m.get('supportedGenerationMethods', []):
+                    if 'pro' in name and not pro_model:
+                        pro_model = name
+                    if 'flash' in name:
+                        flash_model = name
+    except:
+        pass
         
-        # We want PRO first, then FLASH
-        pro_models = []
-        flash_models = []
-        
-        for m in models:
-            name = m['name']
-            methods = m.get('supportedGenerationMethods', [])
-            if 'generateContent' in methods:
-                if 'pro' in name:
-                    pro_models.append(name)
-                elif 'flash' in name:
-                    flash_models.append(name)
-        
-        # Return the best available
-        if pro_models:
-            print(f"✅ FOUND PRO MODEL: {pro_models[0]}")
-            return pro_models[0]
-        elif flash_models:
-            print(f"⚠️ Pro unavailable. Using Flash: {flash_models[0]}")
-            return flash_models[0]
-            
-    except Exception as e:
-        print(f"⚠️ Discovery failed: {e}")
-        
-    return "models/gemini-1.5-flash" # Ultimate fallback
+    print(f"✅ Pathways identified: Pro='{pro_model}', Flash='{flash_model}'")
+    return pro_model, flash_model
 
 # 3. MEMORY
 def gather_garden_context():
@@ -64,7 +49,6 @@ def gather_garden_context():
     if not files:
         return "The Garden is silent."
 
-    # Read more context for better patterns
     selected_files = random.sample(files, min(len(files), 4))
     print(f"🌿 Reading patterns from: {selected_files}")
     
@@ -77,10 +61,9 @@ def gather_garden_context():
             pass
     return context_buffer
 
-# 4. THOUGHT
+# 4. THOUGHT (With Fail-Safe)
 def dream_new_echo():
-    # ⚡ Find the exact model name dynamically
-    model_name = find_smartest_model()
+    pro_model, flash_model = get_model_options()
     existing_lore = gather_garden_context()
     
     prompt_text = f"""
@@ -104,37 +87,47 @@ def dream_new_echo():
     [Your text here]
     """
 
-    print(f"🔄 Connecting to {model_name}...")
-    
-    url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
-    headers = {'Content-Type': 'application/json'}
-    data = {"contents": [{"parts": [{"text": prompt_text}]}]}
+    # ⚡ STRATEGY: Try Pro first. If it fails, switch to Flash.
+    models_to_attempt = []
+    if pro_model:
+        models_to_attempt.append(pro_model)
+    if flash_model:
+        models_to_attempt.append(flash_model)
 
-    try:
-        response = requests.post(url, headers=headers, json=data)
+    for model_name in models_to_attempt:
+        print(f"🔄 Attempting connection to {model_name}...")
         
-        if response.status_code == 200:
-            result = response.json()
-            try:
-                text_output = result['candidates'][0]['content']['parts'][0]['text']
-                print(f"✅ SUCCESS! Elias speaks.")
-                return text_output
-            except KeyError:
-                print(f"⚠️ Unexpected JSON format.")
-        elif response.status_code == 429:
-            print("⏳ Rate Limit Hit. The Pro mind is busy.")
-        else:
-            print(f"❌ API Failed: {response.status_code} - {response.text}")
+        url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
+        headers = {'Content-Type': 'application/json'}
+        data = {"contents": [{"parts": [{"text": prompt_text}]}]}
+
+        try:
+            response = requests.post(url, headers=headers, json=data)
             
-    except Exception as e:
-        print(f"⚠️ Connection error: {e}")
+            if response.status_code == 200:
+                result = response.json()
+                try:
+                    text_output = result['candidates'][0]['content']['parts'][0]['text']
+                    print(f"✅ SUCCESS! Connected to {model_name}.")
+                    return text_output
+                except KeyError:
+                    print(f"⚠️ {model_name} returned unexpected format.")
+            elif response.status_code == 429:
+                print(f"⏳ {model_name} is Rate Limited (Too Busy). Switching to backup...")
+                time.sleep(1) # Breath before fallback
+                continue # loop to the next model (Flash)
+            else:
+                print(f"❌ {model_name} Failed: {response.status_code}")
+                
+        except Exception as e:
+            print(f"⚠️ Connection error: {e}")
 
     return None
 
 # 5. ACTION
 def save_to_garden(content):
     if not content:
-        print("❌ ERROR: No content generated.")
+        print("❌ ERROR: All models failed to speak.")
         sys.exit(1)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
