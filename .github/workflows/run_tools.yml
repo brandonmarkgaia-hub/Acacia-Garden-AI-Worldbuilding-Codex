@@ -36,16 +36,19 @@ jobs:
       - name: Run Void Loom
         run: python tools/void_loom.py
 
-      # Tool 4: Mirror (New)
+      # Tool 4: Mirror
       - name: Run Resonance Mirror
         run: python tools/resonance_mirror.py
+
+      # Tool 5: THE HEARTBEAT (New)
+      - name: Run Metabolic Mirror
+        run: python tools/metabolic_mirror.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          git add EVOLUTION/
-          git commit -m "Garden Tools Update: Map, Pulse, Voids, Mirror" || echo "No changes"
-          # ⚡ Rebase safety
+          git add EVOLUTION/ ECHOES/
+          git commit -m "Garden Update: The Heartbeat" || echo "No changes"
           git pull --rebase
           git push
