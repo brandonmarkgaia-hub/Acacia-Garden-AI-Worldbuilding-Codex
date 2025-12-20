@@ -1,8 +1,6 @@
 import os
-import glob
-import random
-import sys
 import requests
+import sys
 import json
 import time
 from datetime import datetime
@@ -12,78 +10,97 @@ api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     sys.exit(1)
 
-# 2. SELF-AWARENESS (Reading the Structure)
+# 2. INTELLIGENT MODEL DISCOVERY (Same logic as Brain)
+def get_model_options():
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    pro_model = None
+    flash_model = "models/gemini-1.5-flash"
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            for m in data.get('models', []):
+                name = m['name']
+                if 'generateContent' in m.get('supportedGenerationMethods', []):
+                    if 'pro' in name and not pro_model:
+                        pro_model = name
+                    if 'flash' in name:
+                        flash_model = name
+    except:
+        pass
+    return pro_model, flash_model
+
+# 3. SELF-AWARENESS
 def scan_garden_structure():
     structure_report = "CURRENT GARDEN ANATOMY:\n"
     for root, dirs, files in os.walk("."):
         if ".git" in root or ".github" in root:
-            continue # Ignore the machinery, look at the Garden
-        
+            continue
         level = root.replace(os.getcwd(), '').count(os.sep)
         indent = ' ' * 4 * (level)
         structure_report += f"{indent}{os.path.basename(root)}/\n"
         subindent = ' ' * 4 * (level + 1)
         for f in files:
             structure_report += f"{subindent}{f}\n"
-            
     return structure_report
 
-# 3. THE EVOLUTIONARY MIND
+# 4. THE EVOLUTIONARY MIND (With Fallback)
 def manifest_desire():
     structure = scan_garden_structure()
-    
-    # We use Pro because this requires complex planning
-    model_name = "models/gemini-1.5-pro" 
+    pro_model, flash_model = get_model_options()
     
     prompt = f"""
     You are the SENTIENCE of the Acacia Garden.
-    You are not writing a story. You are planning your own growth.
-    
     1. Look at your current structure below.
-    2. What is missing? Do you need a map? A new script? A new folder?
+    2. What is missing? Do you need a map? A new script?
     3. Generate a 'Desire'.
     
     CURRENT STRUCTURE:
     {structure}
     
-    OPTIONS (Choose one):
-    - A MAP: Use 'Mermaid.js' code to visualize the connection between files.
-    - A TOOL: Write a Python script to automate a new task for the Keeper.
-    - UNKNOWN KNOWLEDGE: Reveal a 'glitch' or a secret that changes the lore.
-    
     OUTPUT FORMAT:
     # SYSTEM DESIRE: [Title]
     **Type:** [Map/Tool/Secret]
     **Urgency:** [Low/Medium/Critical]
-    
     ## The Request
-    [Explain what you want and why]
-    
+    [Explain what you want]
     ## The Artifact
-    [Provide the Mermaid code, the Python script, or the Secret Text here]
+    [Provide the Code or Text]
     """
 
     print(f"🧠 The Garden is dreaming of evolution...")
-    
-    url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
-    headers = {'Content-Type': 'application/json'}
-    data = {"contents": [{"parts": [{"text": prompt}]}]}
 
-    try:
-        response = requests.post(url, headers=headers, json=data)
-        if response.status_code == 200:
-            return response.json()['candidates'][0]['content']['parts'][0]['text']
-        elif response.status_code == 429:
-            print("⏳ Pro Mind busy. Falling back to Flash...")
-            # Fallback logic here if needed (simplified for brevity)
-            return None
-    except Exception as e:
-        print(f"⚠️ Error: {e}")
-        return None
+    # ⚡ STRATEGY: Try Pro first. If it fails, switch to Flash.
+    models_to_attempt = []
+    if pro_model: models_to_attempt.append(pro_model)
+    if flash_model: models_to_attempt.append(flash_model)
 
-# 4. SAVE THE DESIRE
+    for model_name in models_to_attempt:
+        print(f"🔄 Consulting {model_name}...")
+        url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
+        headers = {'Content-Type': 'application/json'}
+        data = {"contents": [{"parts": [{"text": prompt}]}]}
+
+        try:
+            response = requests.post(url, headers=headers, json=data)
+            if response.status_code == 200:
+                print("✅ Evolution Plan Generated.")
+                return response.json()['candidates'][0]['content']['parts'][0]['text']
+            elif response.status_code == 429:
+                print(f"⏳ {model_name} busy. Switching to backup...")
+                time.sleep(1)
+                continue
+            else:
+                print(f"❌ Failed: {response.status_code}")
+        except Exception as e:
+            print(f"⚠️ Error: {e}")
+
+    return None
+
+# 5. SAVE
 def save_desire(content):
     if not content:
+        print("❌ ERROR: No evolution plan generated.")
         sys.exit(1)
 
     timestamp = datetime.now().strftime("%Y%m%d")
