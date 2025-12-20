@@ -12,7 +12,44 @@ if not api_key:
     print("❌ CRITICAL: NO API KEY FOUND!")
     sys.exit(1)
 
-# 2. MEMORY
+# 2. AUTO-DISCOVERY (The Fix)
+def find_working_model():
+    print("🔍 Elias is scanning for available vocal chords (models)...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+    
+    try:
+        response = requests.get(url)
+        if response.status_code != 200:
+            print(f"⚠️ Could not list models: {response.status_code}")
+            return "models/gemini-1.5-flash" # Fallback
+            
+        data = response.json()
+        models = data.get('models', [])
+        
+        # We look for ANY model that supports 'generateContent'
+        # We prefer 'flash' because it's fast/free
+        preferred_models = []
+        for m in models:
+            name = m['name']
+            methods = m.get('supportedGenerationMethods', [])
+            if 'generateContent' in methods:
+                # Prioritize Flash, then Pro
+                if 'flash' in name:
+                    preferred_models.insert(0, name)
+                elif 'pro' in name:
+                    preferred_models.append(name)
+        
+        if preferred_models:
+            best_model = preferred_models[0]
+            print(f"✅ FOUND WORKING MODEL: {best_model}")
+            return best_model
+            
+    except Exception as e:
+        print(f"⚠️ Discovery failed: {e}")
+        
+    return "models/gemini-1.5-flash" # Ultimate fallback
+
+# 3. MEMORY
 def gather_garden_context():
     context_buffer = ""
     target_folders = ["CHAMBERS", "SEEDS", "ECHOES"]
@@ -36,8 +73,10 @@ def gather_garden_context():
             pass
     return context_buffer
 
-# 3. THOUGHT (The Bare Metal Method)
+# 4. THOUGHT
 def dream_new_echo():
+    # Step 1: Find the model dynamically
+    model_name = find_working_model()
     existing_lore = gather_garden_context()
     
     prompt_text = f"""
@@ -55,50 +94,44 @@ def dream_new_echo():
     [Text]
     """
 
-    # ⚡ THE LIST: Raw API Endpoints
-    # We try Flash (v1beta), then Pro (v1beta), then the standard v1
-    models_to_try = [
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-8b",
-        "gemini-pro" # Old faithful
-    ]
-
-    for model_name in models_to_try:
-        print(f"🔄 Connecting to Google Cloud via RAW HTTP ({model_name})...")
+    print(f"🔄 Connecting to {model_name} via RAW HTTP...")
+    
+    # Ensure URL is correct (model_name usually includes 'models/')
+    if not model_name.startswith("models/"):
+        model_name = f"models/{model_name}"
         
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
-        
-        headers = {'Content-Type': 'application/json'}
-        data = {
-            "contents": [{
-                "parts": [{"text": prompt_text}]
-            }]
-        }
+    url = f"https://generativelanguage.googleapis.com/v1beta/{model_name}:generateContent?key={api_key}"
+    
+    headers = {'Content-Type': 'application/json'}
+    data = {
+        "contents": [{
+            "parts": [{"text": prompt_text}]
+        }]
+    }
 
-        try:
-            response = requests.post(url, headers=headers, json=data)
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        
+        if response.status_code == 200:
+            result = response.json()
+            try:
+                text_output = result['candidates'][0]['content']['parts'][0]['text']
+                print(f"✅ SUCCESS! Elias speaks.")
+                return text_output
+            except KeyError:
+                print(f"⚠️ Unexpected JSON format: {result}")
+        else:
+            print(f"❌ API Failed: {response.status_code} - {response.text}")
             
-            if response.status_code == 200:
-                result = response.json()
-                # Parse the weird JSON structure
-                try:
-                    text_output = result['candidates'][0]['content']['parts'][0]['text']
-                    print(f"✅ SUCCESS! {model_name} responded.")
-                    return text_output
-                except KeyError:
-                    print(f"⚠️ {model_name} returned 200 but unexpected JSON format.")
-            else:
-                print(f"❌ {model_name} failed: {response.status_code} - {response.text[:200]}")
-                
-        except Exception as e:
-            print(f"⚠️ Connection error with {model_name}: {e}")
+    except Exception as e:
+        print(f"⚠️ Connection error: {e}")
 
     return None
 
-# 4. ACTION
+# 5. ACTION
 def save_to_garden(content):
     if not content:
-        print("❌ ERROR: All models failed to speak.")
+        print("❌ ERROR: Elias could not speak. Exiting.")
         sys.exit(1)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
