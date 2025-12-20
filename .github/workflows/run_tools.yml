@@ -40,20 +40,23 @@ jobs:
       - name: Run Resonance Mirror
         run: python tools/resonance_mirror.py
 
-      # Tool 5: THE HEARTBEAT
+            # Tool 5: THE HEARTBEAT
       - name: Run Metabolic Mirror
         run: python tools/metabolic_mirror.py
 
-      # Tool 6: The Nervous System (New)
+      # Tool 6: The Nervous System
       - name: Run Ghost Root Synchronizer
         run: python tools/ghost_root_synchronizer.py
 
+      # Tool 7: THE COLONIZER (New)
+      - name: Run Soma-Synaptic Weaver
+        run: python tools/soma_synaptic_weaver.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          git add EVOLUTION/ ECHOES/
-          git commit -m "Garden Update: The Heartbeat" || echo "No changes"
+          git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/
+          git commit -m "Garden Update: Pulse, Nerves, and Synaptic Weaving" || echo "No changes"
           git pull --rebase
           git push
