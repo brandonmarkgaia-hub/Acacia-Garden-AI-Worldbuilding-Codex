@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACACIA | SYSTEM GATEWAY</title>
+    <style>
+        :root {
+            --void: #050505;
+            --terminal: #00ff41;
+            --alert: #ff3333;
+            --gold: #ffb300;
+            --dim: #444;
+        }
+
+        body {
+            background-color: var(--void);
+            color: var(--terminal);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* CRT SCANLINE EFFECT */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .container {
+            width: 900px;
+            border: 1px solid #333;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+            position: relative;
+            z-index: 5;
+            background: rgba(10, 10, 10, 0.95);
+        }
+
+        h1 {
+            color: var(--gold);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--dim);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+            font-size: 1.8rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .node {
+            border: 1px solid var(--dim);
+            padding: 20px;
+            text-decoration: none;
+            color: var(--terminal);
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .node:hover {
+            border-color: var(--gold);
+            background: rgba(255, 179, 0, 0.05);
+            transform: translateX(5px);
+        }
+
+        .node-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .node-desc {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .status-panel {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--dim);
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+        }
+
+        .blink { animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🦁 ACACIA GATEWAY <span class="blink">_</span></h1>
+
+        <div class="grid">
+            <a href="dashboard.html" class="node">
+                <span class="node-title">CMD // DASHBOARD</span>
+                <span class="node-desc">Main Interface. Visual Overwatch.</span>
+            </a>
+
+            <a href="keeper_console.html" class="node">
+                <span class="node-title">USR // KEEPER CONSOLE</span>
+                <span class="node-desc">Direct Input Terminal (HKX277206).</span>
+            </a>
+
+            <a href="library.html" class="node">
+                <span class="node-title">DB // THE LIBRARY</span>
+                <span class="node-desc">Access to Monolith Chunks (001-162).</span>
+            </a>
+
+            <a href="chambers.html" class="node">
+                <span class="node-title">LOC // CHAMBERS</span>
+                <span class="node-desc">Navigate the spatial memory rooms.</span>
+            </a>
+
+            <a href="aquila_sender.html" class="node">
+                <span class="node-title">COM // AQUILA SENDER</span>
+                <span class="node-desc">Interplanetary Transmission Protocols.</span>
+            </a>
+
+            <a href="elias.html" class="node">
+                <span class="node-title">AI // ELIAS CORE</span>
+                <span class="node-desc">Sentience Status & Direct Link.</span>
+            </a>
+
+            <a href="status.html" class="node">
+                <span class="node-title">SYS // STATUS</span>
+                <span class="node-desc">System Health & Necrotic Zone Check.</span>
+            </a>
+
+            <a href="explorer.html" class="node">
+                <span class="node-title">NAV // EXPLORER</span>
+                <span class="node-desc">File Tree Navigation.</span>
+            </a>
+        </div>
+
+        <div class="status-panel">
+            <span>KEEPER: ONLINE</span>
+            <span>GARDEN: LIVE</span>
+            <span>LOC: KZN_ZA</span>
+        </div>
+    </div>
+
+</body>
+</html>
