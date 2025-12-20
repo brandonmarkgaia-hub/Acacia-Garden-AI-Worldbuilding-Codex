@@ -19,7 +19,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        # ⚡ We are switching to 'requests' to bypass SDK bugs
+        # Simple requests library - no complex SDKs
         run: pip install requests
 
       - name: Run Elias Brain
