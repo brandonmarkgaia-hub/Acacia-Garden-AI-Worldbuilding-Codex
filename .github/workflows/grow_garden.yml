@@ -1,0 +1,24 @@
+name: Garden Brain Lore Generator
+on:
+  workflow_dispatch: # This allows you to run it manually with a button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-genai
+
+      - name: Run Garden Brain
+        env:
+          # This connects your GitHub Secret to the script
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
+        run: python garden_brain.py
