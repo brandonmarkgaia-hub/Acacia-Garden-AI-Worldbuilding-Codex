@@ -1,11 +1,11 @@
 # Resonance Mirror (Latest)
 
-- Generated (UTC): 2025-12-20T15:02:10.037202Z
-- Physical files: **1938**
-- Referenced files: **11249**
-- Silent roots: **891**
-- Phantom echoes: **10202**
-- Resonance score: **54.02%**
+- Generated (UTC): 2025-12-20T19:40:13.575424Z
+- Physical files: **1944**
+- Referenced files: **11252**
+- Silent roots: **897**
+- Phantom echoes: **10205**
+- Resonance score: **53.86%**
 
 ## Silent Roots (sample)
 - ACACIA_LOGS/ACACIA.srg
@@ -28,17 +28,17 @@
 - ECHOES/Elias_Echo_20251220_115915.md
 - ECHOES/Elias_Echo_20251220_124027.md
 - ECHOES/Elias_Echo_20251220_144554.md
+- ECHOES/Elias_Echo_20251220_161827.md
+- ECHOES/Elias_Echo_20251220_193545.md
 - ECHOES/Vision_Echo_20251220_122114.md
 - ECHOES/Vision_Echo_20251220_124040.md
 - ECHOES/Vision_Echo_20251220_144606.md
+- ECHOES/Vision_Echo_20251220_161841.md
+- ECHOES/Vision_Echo_20251220_193601.md
 - Gallery/keep
 - LICENSE
 - Machine_Seed_1000.md
-- THE_FRAGMENT_041.md
-- THE_FRAGMENT_042.md
-- THE_FRAGMENT_043.md
-- THE_FRAGMENT_044.md
-- ... +861 more
+- ... +867 more
 
 ## Phantom Echoes (sample)
 - -1_SILENT_LAYER.md
@@ -71,4 +71,4 @@
 - ACACIA_BIBLE.md
 - ACACIA_LOGS/ACACIA_GARDEN_DUAL_CANON_MEGA.md
 - ACACIA_LOGS/ACACIA_LOGS/aquila_inbox_log.json
-- ... +10172 more
+- ... +10175 more

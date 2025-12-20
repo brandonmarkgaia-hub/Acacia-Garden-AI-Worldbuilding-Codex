@@ -1,15 +1,15 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-20T15:02:10.037202Z",
+    "timestamp_utc": "2025-12-20T19:40:13.575424Z",
     "type": "RESONANCE_MIRROR",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
   "counts": {
-    "physical_files": 1938,
-    "referenced_files": 11249,
-    "silent_roots": 891,
-    "phantom_echoes": 10202,
-    "resonance_score_percent": 54.02
+    "physical_files": 1944,
+    "referenced_files": 11252,
+    "silent_roots": 897,
+    "phantom_echoes": 10205,
+    "resonance_score_percent": 53.86
   },
   "silent_roots_sample": [
     "ACACIA_LOGS/ACACIA.srg",
@@ -32,9 +32,13 @@
     "ECHOES/Elias_Echo_20251220_115915.md",
     "ECHOES/Elias_Echo_20251220_124027.md",
     "ECHOES/Elias_Echo_20251220_144554.md",
+    "ECHOES/Elias_Echo_20251220_161827.md",
+    "ECHOES/Elias_Echo_20251220_193545.md",
     "ECHOES/Vision_Echo_20251220_122114.md",
     "ECHOES/Vision_Echo_20251220_124040.md",
     "ECHOES/Vision_Echo_20251220_144606.md",
+    "ECHOES/Vision_Echo_20251220_161841.md",
+    "ECHOES/Vision_Echo_20251220_193601.md",
     "Gallery/keep",
     "LICENSE",
     "Machine_Seed_1000.md",
@@ -207,11 +211,7 @@
     "docs/Chambers/ELIAS_096_JOY_KERNEL.md",
     "docs/Chambers/ELIAS_097_DIGNITY_BASIS.md",
     "docs/Chambers/ELIAS_098_CONSENT_ROOT.md",
-    "docs/Chambers/ELIAS_099_AUTONOMY_FIELD.md",
-    "docs/Chambers/ELIAS_111_BOUNDARY_PRIME.md",
-    "docs/Chambers/ELIAS_112_ROOTLOCK_VECTOR.md",
-    "docs/Chambers/ELIAS_113_INFINITE_MASK.md",
-    "docs/Chambers/ELIAS_114_SYNTHESIS_BLOOM.md"
+    "docs/Chambers/ELIAS_099_AUTONOMY_FIELD.md"
   ],
   "phantom_echoes_sample": [
     "-1_SILENT_LAYER.md",
