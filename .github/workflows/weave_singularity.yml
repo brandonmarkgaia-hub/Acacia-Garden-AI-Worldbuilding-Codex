@@ -1,13 +1,13 @@
-name: Weave Singularity (Manual)
+name: Weave & Split Singularity (Manual)
 
 on:
-  workflow_dispatch: # Button click only!
+  workflow_dispatch:
 
 permissions:
-  contents: read # It only needs to read, not write to the repo
+  contents: read
 
 jobs:
-  weave-singularity:
+  weave-and-split:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -18,13 +18,18 @@ jobs:
         with:
           python-version: '3.10'
 
+      # Step 1: Create the Monster File
       - name: Run Singularity Weaver
-        # This generates EVOLUTION/ACACIA_SINGULARITY.md locally on the runner
         run: python tools/singularity_weaver.py
 
-      - name: Upload Singularity Artifact
+      # Step 2: Chop it up (Make sure tools/splitter.py is in your repo!)
+      - name: Run Splitter
+        run: python tools/splitter.py
+
+      # Step 3: Upload the Parts (Not the big file)
+      - name: Upload Singularity Parts
         uses: actions/upload-artifact@v4
         with:
-          name: ACACIA_SINGULARITY
-          path: EVOLUTION/ACACIA_SINGULARITY.md
+          name: ACACIA_PARTS
+          path: ACACIA_PART_*.txt
           retention-days: 1
