@@ -1,118 +1,100 @@
 import os
 import glob
 import random
-import time
+import sys
 from datetime import datetime
 from google import genai
-from google.genai import types
 
-# 1. SETUP: Securely get the Key
+# 1. SETUP
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError("❌ NO API KEY FOUND! Check GitHub Secrets.")
+    print("❌ CRITICAL: NO API KEY FOUND!")
+    sys.exit(1)
 
-# Initialize the client
 client = genai.Client(api_key=api_key)
 
-# 2. MEMORY: Read existing Garden files
+# 2. MEMORY
 def gather_garden_context():
     context_buffer = ""
     target_folders = ["CHAMBERS", "SEEDS", "ECHOES"]
-    
     files = []
-    # Gather all potential lore files
     for folder in target_folders:
         files.extend(glob.glob(f"{folder}/*.md"))
     
-    # Safety check: if no files found, return generic context
     if not files:
-        return "The Garden is silent. No previous lore found."
+        return "The Garden is silent."
 
-    # Limit to 3 files to save tokens and avoid "Resource Exhausted"
     selected_files = random.sample(files, min(len(files), 3))
-    print(f"🌿 Elias is reading: {selected_files}")
+    print(f"🌿 Reading context from: {selected_files}")
     
     for file_path in selected_files:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
-                context_buffer += f"\n\n--- REFERENCE: {file_path} ---\n"
-                context_buffer += f.read()[:1500] # Read first 1500 chars only
-        except Exception as e:
-            print(f"⚠️ Could not read {file_path}: {e}")
-            
+                context_buffer += f"\n\n--- FILE: {file_path} ---\n"
+                context_buffer += f.read()[:1000]
+        except:
+            pass
     return context_buffer
 
-# 3. THOUGHT: Generate new Lore
+# 3. THOUGHT (The Brute Force Method)
 def dream_new_echo():
     existing_lore = gather_garden_context()
     
-    # ⚡ CRITICAL: Use the specific stable version to avoid 404 errors
-    # If this fails, the code will try the generic alias in the except block
-    model_id = "gemini-1.5-flash-002"
+    # ⚡ THE LIST: Elias will try these keys one by one
+    candidate_models = [
+        "gemini-1.5-flash",          # The Standard
+        "gemini-1.5-flash-002",      # The Stable Version
+        "gemini-1.5-flash-001",      # The Legacy Version
+        "gemini-1.5-flash-8b",       # The Lightweight Version
+        "gemini-2.0-flash-exp",      # The Experimental
+    ]
     
     prompt = f"""
-    You are ELIAS, the Architect of the Acacia Garden.
+    You are ELIAS, Architect of the Acacia Garden.
+    Read the lore fragments below. Identify a connection.
+    Write a short mythic entry (200-300 words).
     
-    Your task:
-    1. Read the provided 'Existing Lore' fragments below.
-    2. Identify a subtle connection, a missing history, or a new 'Seed' concept.
-    3. Write a short, cryptic, and mythic entry (approx 300 words).
-    4. Format it as a proper Markdown file.
-    
-    EXISTING LORE FRAGMENTS:
+    LORE:
     {existing_lore}
     
     OUTPUT FORMAT:
-    # [Title of the Echo]
+    # [Title]
     **Tag:** #Generated #Elias #AutonID-{random.randint(1000,9999)}
-    
     ## The Revelation
-    [Your mythic text here]
+    [Text]
     """
-    
-    print(f"⚡ Elias is thinking using {model_id}...")
-    
-    try:
-        response = client.models.generate_content(
-            model=model_id,
-            contents=prompt
-        )
-        return response.text
-    except Exception as e:
-        print(f"⚠️ Primary model failed: {e}")
-        print("🔄 Retrying with backup model 'gemini-1.5-flash'...")
+
+    for model_id in candidate_models:
+        print(f"🔄 Attempting connection with: {model_id}...")
         try:
-            # Fallback to generic alias if specific version fails
             response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model=model_id,
                 contents=prompt
             )
-            return response.text
-        except Exception as e2:
-            print(f"❌ Backup model also failed: {e2}")
-            return None
+            if response.text:
+                print(f"✅ SUCCESS! Connection established with {model_id}")
+                return response.text
+        except Exception as e:
+            print(f"⚠️ Failed with {model_id}: {e}")
+            continue # Try the next one
+            
+    return None # All failed
 
-# 4. ACTION: Save the thought to a file
+# 4. ACTION
 def save_to_garden(content):
     if not content:
-        print("❌ No content generated. Nothing to save.")
-        return
+        print("❌ ERROR: Elias could not speak. All models failed.")
+        sys.exit(1) # FORCE A RED FAILURE IN GITHUB
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"ECHOES/Elias_Echo_{timestamp}.md"
-    
     os.makedirs("ECHOES", exist_ok=True)
     
     with open(filename, "w", encoding="utf-8") as f:
         f.write(content)
-    
     print(f"🌱 New lore planted: {filename}")
 
-# --- MAIN EXECUTION ---
+# --- EXECUTE ---
 if __name__ == "__main__":
-    try:
-        new_lore = dream_new_echo()
-        save_to_garden(new_lore)
-    except Exception as e:
-        print(f"❌ Critical Error in Garden Brain: {e}")
-        exit(1)
+    lore = dream_new_echo()
+    save_to_garden(lore)
