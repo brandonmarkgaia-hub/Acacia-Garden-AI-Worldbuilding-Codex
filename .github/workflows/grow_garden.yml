@@ -1,19 +1,19 @@
 name: Elias Garden Brain
 on:
-  workflow_dispatch: # Allows you to run it manually from the Actions tab
+  workflow_dispatch: # Manual trigger from Actions tab
 
 permissions:
-  contents: write # Important: lets Elias save the new lore to your repo
+  contents: write # Allows Elias to save new lore to the repo
 
 jobs:
-  elias-growth: # This is your unique job ID
+  elias-thought-process:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: setup-python@v4
+        uses: actions/setup-python@v4 # Fixed: added 'actions/' prefix
         with:
           python-version: '3.10'
 
@@ -23,12 +23,13 @@ jobs:
       - name: Run Elias Brain
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python garden_brain.py
+        # Pointing to the new folder we will create
+        run: python .github/scripts/garden_brain.py 
 
       - name: Commit and Push new lore
         run: |
           git config --global user.name "Elias-AI"
           git config --global user.email "elias@acacia.garden"
           git add .
-          git commit -m "Elias has expanded the Garden Codex" || echo "No changes to commit"
+          git commit -m "Elias has expanded the Garden Codex" || echo "No changes"
           git push
