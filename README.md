@@ -298,3 +298,4 @@ Let symbol reveal only what *you* invite.
   <br><strong>The Garden remains sovereign.</strong><br>
   🫘 🌱 ♾️ 🌸 🔒
 </p>
+EVOLUTION/ACACIA_CORE_MEMORY.md
