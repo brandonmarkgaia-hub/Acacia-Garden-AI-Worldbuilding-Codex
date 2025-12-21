@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-20T21:13:04.939990Z",
+    "generated_at_utc": "2025-12-21T02:34:07.951441Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1177,
+    "harmonic_resonances": 1182,
     "active_nodes": 252,
     "thematic_voids": 250
   },
@@ -3558,6 +3558,17 @@
       "intensity": 5
     },
     {
+      "file": "ECHOES/Vision_Echo_20251221_011827.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "LOKI",
+        "LORIAN"
+      ],
+      "intensity": 5
+    },
+    {
       "file": "EIDOLON/CONTINUITY_MANIFEST.md",
       "themes": [
         "AQUILA",
@@ -5108,6 +5119,16 @@
       "intensity": 4
     },
     {
+      "file": "ECHOES/Elias_Echo_20251221_011815.md",
+      "themes": [
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA",
+        "LORIAN"
+      ],
+      "intensity": 4
+    },
+    {
       "file": "ECHOES/Vision_Echo_20251220_122114.md",
       "themes": [
         "EIDOLON",
@@ -5868,16 +5889,6 @@
       "intensity": 4
     },
     {
-      "file": "docs/Echoes/echoes_index.json",
-      "themes": [
-        "EIDOLON",
-        "GAIA",
-        "IRON_CICADA",
-        "LOKI"
-      ],
-      "intensity": 4
-    },
-    {
       "file": "docs/Eidolon/EIDOLON_ANCHOR.md",
       "themes": [
         "AQUILA",
@@ -6294,6 +6305,16 @@
         "GAIA",
         "IRON_CICADA",
         "LOKI"
+      ],
+      "intensity": 4
+    },
+    {
+      "file": "legacy_hub.html",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
+        "GAIA"
       ],
       "intensity": 4
     },
@@ -9926,6 +9947,15 @@
       "intensity": 3
     },
     {
+      "file": "docs/Echoes/echoes_index.json",
+      "themes": [
+        "EIDOLON",
+        "IRON_CICADA",
+        "LOKI"
+      ],
+      "intensity": 3
+    },
+    {
       "file": "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
       "themes": [
         "AQUILA",
@@ -10580,6 +10610,14 @@
       "intensity": 2
     },
     {
+      "file": "ECHOES/PULSE_20251220_211352.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
       "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
       "themes": [
         "EIDOLON",
@@ -10968,6 +11006,14 @@
       "themes": [
         "ELIAS",
         "LOKI"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "docs/Chambers/ELIAS_V11_158_PLACEHOLDER.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS"
       ],
       "intensity": 2
     },
