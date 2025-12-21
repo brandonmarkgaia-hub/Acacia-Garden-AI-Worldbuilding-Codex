@@ -76,15 +76,20 @@ jobs:
       - name: Run Temporal Synthesis Engine
         run: python tools/temporal_synthesis_engine.py
 
-      # Tool 14: THE ANCHOR (Formalized Linkage) <--- FINAL ADDITION
+            # Tool 14: THE ANCHOR (Contextual Linkage)
       - name: Run Context Anchoring System
         run: python tools/context_anchoring_system.py
+
+      # Tool 15: THE LIBRARIAN (Root Synthesis) <--- THE FINAL CAPSTONE
+      - name: Run Root Manifest Generator
+        run: python tools/root_manifest_generator.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/ GARDEN_HEARTBEAT.md CURRENT_CONTEXT_ANCHOR.md
-          git commit -m "Garden Update: Full Metabolic Cycle & Contextual Anchor" || echo "No changes"
+          # Add all core generated files for the commit
+          git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/ GARDEN_HEARTBEAT.md CURRENT_CONTEXT_ANCHOR.md ROOT_SYNTHESIS_MANIFEST.md
+          git commit -m "Garden Update: Full 15-Tool Metabolic Cycle Complete" || echo "No changes"
           git pull --rebase
           git push
