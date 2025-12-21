@@ -1,11 +1,11 @@
 # Resonance Mirror (Latest)
 
-- Generated (UTC): 2025-12-21T11:53:40.306046Z
-- Physical files: **1977**
-- Referenced files: **12455**
-- Silent roots: **272**
-- Phantom echoes: **10750**
-- Resonance score: **86.24%**
+- Generated (UTC): 2025-12-21T13:13:27.257668Z
+- Physical files: **1983**
+- Referenced files: **12463**
+- Silent roots: **278**
+- Phantom echoes: **10758**
+- Resonance score: **85.98%**
 
 ## Silent Roots (sample)
 - ACACIA_LOGS/ACACIA.srg
@@ -34,11 +34,11 @@
 - ECHOES/Elias_Echo_20251221_011815.md
 - ECHOES/Elias_Echo_20251221_043322.md
 - ECHOES/Elias_Echo_20251221_082020.md
+- ECHOES/Elias_Echo_20251221_122849.md
 - ECHOES/GHOST_ROOT_PULSE.json
 - ECHOES/GHOST_ROOT_REPORT.md
 - ECHOES/PULSE_20251220_200015.md
-- ECHOES/PULSE_20251220_204247.md
-- ... +242 more
+- ... +248 more
 
 ## Phantom Echoes (sample)
 - -1_SILENT_LAYER.md
@@ -71,4 +71,4 @@
 - ACACIA_BIBLE.md
 - ACACIA_LOGS/ACACIA_GARDEN_DUAL_CANON_MEGA.md
 - ACACIA_LOGS/ACACIA_LOGS/aquila_inbox_log.json
-- ... +10720 more
+- ... +10728 more

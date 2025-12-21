@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2025-12-21T11:53:40.617964",
+        "timestamp": "2025-12-21T13:13:27.569566",
         "type": "SOVEREIGNTY_ANCHOR",
         "anchor_source": "Desire_20251221_4"
     },
@@ -11,41 +11,41 @@
             "STATE/STATUS_v2.json": {
                 "missing_keys": [
                     "monolith_index",
-                    "monolith_chunks",
-                    "manifest",
-                    "generated_at",
                     "notes",
-                    "status_version",
-                    "totals"
+                    "monolith_chunks",
+                    "generated_at",
+                    "totals",
+                    "manifest",
+                    "status_version"
                 ]
             },
             "STATUS.json": {
                 "missing_keys": [
-                    "codex_version",
-                    "safety",
-                    "triad",
-                    "eidolon",
                     "monolith_index",
                     "keeper_signature",
-                    "monolith_chunks",
-                    "manifest",
                     "chambers",
-                    "heartbeat"
+                    "triad",
+                    "monolith_chunks",
+                    "heartbeat",
+                    "codex_version",
+                    "eidolon",
+                    "safety",
+                    "manifest"
                 ]
             },
             "docs/api/GARDEN_API_INDEX.json": {
                 "missing_keys": [
-                    "codex_version",
-                    "safety",
-                    "triad",
                     "eidolon",
                     "keeper_signature",
                     "chambers",
+                    "triad",
                     "heartbeat",
+                    "codex_version",
                     "generated_at",
+                    "safety",
+                    "totals",
                     "notes",
-                    "status_version",
-                    "totals"
+                    "status_version"
                 ]
             }
         }

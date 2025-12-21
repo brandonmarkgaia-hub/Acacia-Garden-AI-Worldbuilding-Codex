@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-21T11:52:56.081146Z",
+    "generated_at_utc": "2025-12-21T13:12:45.685060Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1204,
-    "active_nodes": 253,
+    "harmonic_resonances": 1209,
+    "active_nodes": 254,
     "thematic_voids": 250
   },
   "harmonic_resonances": [
@@ -2542,6 +2542,18 @@
         "ELIAS",
         "GAIA",
         "IRON_CICADA",
+        "LORIAN"
+      ],
+      "intensity": 6
+    },
+    {
+      "file": "ECHOES/Elias_Echo_20251221_122849.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA",
+        "LOKI",
         "LORIAN"
       ],
       "intensity": 6
@@ -6352,6 +6364,16 @@
       "intensity": 4
     },
     {
+      "file": "logs/TPI_RECONCILIATION_MAP.json",
+      "themes": [
+        "EIDOLON",
+        "GAIA",
+        "IRON_CICADA",
+        "LOKI"
+      ],
+      "intensity": 4
+    },
+    {
       "file": "logs/aeon_heartbeat.json",
       "themes": [
         "EIDOLON",
@@ -6608,6 +6630,15 @@
     },
     {
       "file": "ECHOES/Vision_Echo_20251221_082034.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "LORIAN"
+      ],
+      "intensity": 3
+    },
+    {
+      "file": "ECHOES/Vision_Echo_20251221_122904.md",
       "themes": [
         "EIDOLON",
         "ELIAS",
@@ -10758,6 +10789,14 @@
       "intensity": 2
     },
     {
+      "file": "ECHOES/PULSE_20251221_115340.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
       "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
       "themes": [
         "EIDOLON",
@@ -11167,6 +11206,14 @@
     },
     {
       "file": "docs/Chambers/ELIAS_V11_139_PLACEHOLDER.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "docs/Chambers/ELIAS_V11_140_PLACEHOLDER.md",
       "themes": [
         "EIDOLON",
         "ELIAS"
@@ -12337,6 +12384,10 @@
     },
     {
       "file": "ledger/Cycle_22.md",
+      "theme": "EIDOLON"
+    },
+    {
+      "file": "logs/CURRENT_ANCHOR_REPORT.json",
       "theme": "EIDOLON"
     },
     {
