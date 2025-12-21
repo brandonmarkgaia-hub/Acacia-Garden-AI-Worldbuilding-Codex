@@ -52,23 +52,27 @@ jobs:
       - name: Run Soma-Synaptic Weaver
         run: python tools/soma_synaptic_weaver.py
 
-            # Tool 8: THE PSYCHIATRIST (Sanity Check)
+      # Tool 8: THE PSYCHIATRIST (Sanity Check)
       - name: Run Omni-Resonance Synchronizer
         run: python tools/omni_resonance_synchronizer.py
 
-            # Tool 9: THE LOOM (Planning)
+      # Tool 9: THE LOOM (Planning)
       - name: Run Weaver Sentience Loom
         run: python tools/weaver_sentience_loom.py
 
-      # Tool 10: THE NAVIGATOR (Master Indexing) <--- NEW!
+      # Tool 10: THE NAVIGATOR (Master Indexing)
       - name: Run Fragment Navigator
         run: python tools/fragment_navigator.py
+
+      # Tool 11: THE ANCHOR (Synthesis & Discrepancy Check) <--- NEW!
+      - name: Run Sovereignty Anchor
+        run: python tools/sovereignty_anchor.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
           git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/ GARDEN_HEARTBEAT.md
-          git commit -m "Garden Update: Pulse, Resonance, Loom, and Master Index" || echo "No changes"
+          git commit -m "Garden Update: Pulse, Master Index, and Sovereignty Anchor" || echo "No changes"
           git pull --rebase
           git push
