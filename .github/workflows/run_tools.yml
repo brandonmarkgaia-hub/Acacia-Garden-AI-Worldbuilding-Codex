@@ -64,19 +64,23 @@ jobs:
       - name: Run Fragment Navigator
         run: python tools/fragment_navigator.py
 
-            # Tool 11: THE ANCHOR (Synthesis)
+      # Tool 11: THE ANCHOR (Synthesis)
       - name: Run Sovereignty Anchor
         run: python tools/sovereignty_anchor.py
 
-      # Tool 12: THE RECONCILER (Temporal Priority Index) <--- NEW!
+            # Tool 12: THE RECONCILER (Priority Index)
       - name: Run TPI Reconciler
         run: python tools/tpi_reconciler.py
+
+      # Tool 13: THE SYNTHESIZER (Temporal Harmony) <--- NEW!
+      - name: Run Temporal Synthesis Engine
+        run: python tools/temporal_synthesis_engine.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
           git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/ GARDEN_HEARTBEAT.md
-          git commit -m "Garden Update: Synthesis and Temporal Reconciliation" || echo "No changes"
+          git commit -m "Garden Update: Temporal Synthesis and Structural Harmony" || echo "No changes"
           git pull --rebase
           git push
