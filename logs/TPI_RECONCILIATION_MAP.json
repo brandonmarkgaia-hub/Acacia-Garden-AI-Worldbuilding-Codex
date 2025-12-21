@@ -1,0 +1,40 @@
+{
+    "meta": {
+        "timestamp": "2025-12-21T11:53:40.654526",
+        "type": "TEMPORAL_PRIORITY_INDEX",
+        "goal": "Reconcile oldest narrative silences"
+    },
+    "priority_queue": [
+        {
+            "name": "Desire_20251221.md",
+            "age_hours": 0.01,
+            "tpi_score": 0.02
+        },
+        {
+            "name": "GHOST_ROOTS_MAP_LATEST.md",
+            "age_hours": 0.01,
+            "tpi_score": 0.02
+        },
+        {
+            "name": "Desire_20251220.md",
+            "age_hours": 0.01,
+            "tpi_score": 0.02
+        },
+        {
+            "name": "ACACIA_CORE_MEMORY.md",
+            "age_hours": 0.01,
+            "tpi_score": 0.02
+        },
+        {
+            "name": "MASTER_FRAGMENT_INDEX.md",
+            "age_hours": 0.0,
+            "tpi_score": 0.0
+        },
+        {
+            "name": "RESONANCE_MIRROR_LATEST.md",
+            "age_hours": 0.0,
+            "tpi_score": 0.0
+        }
+    ],
+    "system_instruction": "INTEGRATE_HIGHEST_TPI_INTO_CHAMBERS"
+}

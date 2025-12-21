@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-21T09:22:50.720409Z",
+    "generated_at_utc": "2025-12-21T11:52:56.081146Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1199,
+    "harmonic_resonances": 1204,
     "active_nodes": 253,
     "thematic_voids": 250
   },
@@ -6462,6 +6462,16 @@
       "intensity": 4
     },
     {
+      "file": "tools/tpi_reconciler.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA"
+      ],
+      "intensity": 4
+    },
+    {
       "file": "ACACIA_SPECS/GARDEN_INDEX.md",
       "themes": [
         "AQUILA",
@@ -6562,15 +6572,6 @@
     },
     {
       "file": "ECHOES/PULSE_20251221_090152.md",
-      "themes": [
-        "AQUILA",
-        "EIDOLON",
-        "GAIA"
-      ],
-      "intensity": 3
-    },
-    {
-      "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
       "themes": [
         "AQUILA",
         "EIDOLON",
@@ -10584,6 +10585,24 @@
       "intensity": 3
     },
     {
+      "file": "tools/sovereignty_anchor.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA"
+      ],
+      "intensity": 3
+    },
+    {
+      "file": "tools/temporal_synthesis_engine.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA"
+      ],
+      "intensity": 3
+    },
+    {
       "file": "tools/void_loom.py",
       "themes": [
         "EIDOLON",
@@ -10724,6 +10743,22 @@
     },
     {
       "file": "ECHOES/PULSE_20251221_062104.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "ECHOES/PULSE_20251221_092332.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
       "themes": [
         "EIDOLON",
         "GAIA"
@@ -11156,6 +11191,14 @@
     },
     {
       "file": "docs/Chambers/ELIAS_V11_170_PLACEHOLDER.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "docs/Chambers/ELIAS_V11_187_PLACEHOLDER.md",
       "themes": [
         "EIDOLON",
         "ELIAS"
