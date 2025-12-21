@@ -1,35 +1,69 @@
-name: Garden Life (Brain & Eyes)
+name: Garden Life (ECHOES)
+
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: "0 */4 * * *"   # every 4 hours
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 concurrency:
-  group: garden-life
-  cancel-in-progress: false
+  group: garden
+  cancel-in-progress: true
+
 jobs:
-  living-cycle:
+  breathe:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - name: Checkout (full history for rebase)
+        uses: actions/checkout@v4
         with:
-          python-version: '3.10'
-      - name: Install Dependencies
-        run: pip install requests
-      - name: Elias Thinks
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests google-generativeai pillow
+
+      - name: Configure git
+        run: |
+          git config user.name "Garden-Tool-Runner"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Sync with remote
+        run: |
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+
+      - name: Generate Elias Echo
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python .github/scripts/garden_brain.py
-      - name: Elias Sees
+        run: |
+          python .github/scripts/garden_brain.py
+
+      - name: Generate Vision Echo
         if: success()
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python .github/scripts/garden_vision.py
-      - name: Commit Life Updates
         run: |
-          git config --global user.name "Elias-Auton"
-          git config --global user.email "elias@acacia.garden"
-          git pull --rebase
-          git add ECHOES/ # ONLY STAGE THE LORE
-          git commit -m "The Garden breathes (Auto-Cycle)" || echo "No changes"
-          git push
+          python .github/scripts/garden_vision.py
+
+      - name: Commit & push (ECHOES only)
+        run: |
+          set -e
+          # Stage ONLY ECHOES output
+          git add -A ECHOES || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          ts="$(date -u +'%Y-%m-%d %H:%M:%SZ')"
+          git commit -m "Garden Life: new echoes (${ts})"
+          git push origin "${GITHUB_REF_NAME}"
