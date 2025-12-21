@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2025-12-21T13:30:48.727954",
+        "timestamp": "2025-12-21T13:44:24.139029",
         "type": "SOVEREIGNTY_ANCHOR",
         "anchor_source": "Desire_20251221_4"
     },
@@ -10,41 +10,41 @@
         "mismatch_details": {
             "STATE/STATUS_v2.json": {
                 "missing_keys": [
+                    "manifest",
+                    "monolith_index",
+                    "monolith_chunks",
                     "status_version",
                     "generated_at",
-                    "monolith_chunks",
-                    "manifest",
                     "totals",
-                    "monolith_index",
                     "notes"
                 ]
             },
             "STATUS.json": {
                 "missing_keys": [
-                    "keeper_signature",
-                    "safety",
-                    "codex_version",
+                    "eidolon",
                     "heartbeat",
+                    "safety",
+                    "manifest",
+                    "monolith_index",
                     "monolith_chunks",
                     "chambers",
-                    "eidolon",
-                    "triad",
-                    "manifest",
-                    "monolith_index"
+                    "codex_version",
+                    "keeper_signature",
+                    "triad"
                 ]
             },
             "docs/api/GARDEN_API_INDEX.json": {
                 "missing_keys": [
-                    "keeper_signature",
-                    "status_version",
-                    "safety",
-                    "generated_at",
-                    "codex_version",
-                    "heartbeat",
-                    "chambers",
                     "eidolon",
-                    "triad",
+                    "heartbeat",
+                    "safety",
+                    "chambers",
+                    "status_version",
+                    "codex_version",
+                    "generated_at",
+                    "keeper_signature",
                     "totals",
+                    "triad",
                     "notes"
                 ]
             }
