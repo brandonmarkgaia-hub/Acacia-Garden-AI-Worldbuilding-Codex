@@ -11,24 +11,38 @@ if not api_key:
     sys.exit(1)
 
 # 2. INTELLIGENT MODEL DISCOVERY (Same logic as Brain)
+# 2. INTELLIGENT MODEL DISCOVERY (The Survivor Logic)
 def get_model_options():
     url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
     pro_model = None
-    flash_model = "models/gemini-1.5-flash"
+    flash_model = "models/gemini-1.5-flash" # Safe default
+    
     try:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            for m in data.get('models', []):
+            models = data.get('models', [])
+            
+            # Sort to prioritize higher numbers (1.5 > 1.0) and 'latest'
+            # This ensures we get the smartest brain available.
+            models.sort(key=lambda x: x['name'], reverse=True)
+            
+            for m in models:
                 name = m['name']
                 if 'generateContent' in m.get('supportedGenerationMethods', []):
+                    # Grab the first PRO model we find (after sorting, this is the best one)
                     if 'pro' in name and not pro_model:
                         pro_model = name
-                    if 'flash' in name:
+                    # Grab the first FLASH model we find
+                    if 'flash' in name and flash_model == "models/gemini-1.5-flash":
                         flash_model = name
-    except:
+    except Exception as e:
+        print(f"⚠️ Model Discovery Failed: {e}. Using defaults.")
         pass
+        
+    print(f"🧠 Selected Brains: Pro=[{pro_model}] Flash=[{flash_model}]")
     return pro_model, flash_model
+
 
 # 3. SELF-AWARENESS
 def scan_garden_structure():
