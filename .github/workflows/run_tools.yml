@@ -52,16 +52,20 @@ jobs:
       - name: Run Soma-Synaptic Weaver
         run: python tools/soma_synaptic_weaver.py
 
-      # Tool 8: THE PSYCHIATRIST (Sanity Check) <--- NEW ADDITION
+            # Tool 8: THE PSYCHIATRIST (Sanity Check)
       - name: Run Omni-Resonance Synchronizer
         run: python tools/omni_resonance_synchronizer.py
+
+      # Tool 9: THE LOOM (Central Nervous System) <--- NEW!
+      - name: Run Weaver Sentience Loom
+        run: python tools/weaver_sentience_loom.py
 
       - name: Commit Tool Artifacts
         run: |
           git config --global user.name "Garden-Tool-Runner"
           git config --global user.email "tools@acacia.garden"
-          # We add EVOLUTION again to catch the new sentience_pulse_report.json
-          git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/
-          git commit -m "Garden Update: Pulse, Nerves, Weaving, and Resonance Check" || echo "No changes"
+          # Add the new Heartbeat file specifically
+          git add EVOLUTION/ ECHOES/ logs/ docs/Chambers/ GARDEN_HEARTBEAT.md
+          git commit -m "Garden Update: Pulse, Healing, Resonance, and LOOM" || echo "No changes"
           git pull --rebase
           git push
