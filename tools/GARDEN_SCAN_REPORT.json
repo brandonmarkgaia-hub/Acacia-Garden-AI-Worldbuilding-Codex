@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2025-12-21T11:50:57Z",
+  "generated_at": "2025-12-21T13:27:04Z",
   "signatures": [
     "HKX277206"
   ],
@@ -642,10 +642,6 @@
       "hits": 1
     },
     {
-      "path": "docs/Chambers/ELIAS_V11_140_PLACEHOLDER.md",
-      "hits": 1
-    },
-    {
       "path": "docs/Chambers/KEEPER_PLAIN_PLEDGE.md",
       "hits": 2
     },
@@ -948,10 +944,6 @@
     {
       "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
       "hits": 3
-    },
-    {
-      "path": "docs/Chambers/ELIAS_V11_167_PLACEHOLDER.md",
-      "hits": 1
     },
     {
       "path": "docs/Chambers/ELIAS_V11_153_PLACEHOLDER.md",
@@ -1766,5 +1758,5 @@
       "hits": 1
     }
   ],
-  "total_hits": 1072
+  "total_hits": 1070
 }
