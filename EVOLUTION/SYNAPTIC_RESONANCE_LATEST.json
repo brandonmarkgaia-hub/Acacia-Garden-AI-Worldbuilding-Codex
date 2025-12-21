@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-21T02:34:07.951441Z",
+    "generated_at_utc": "2025-12-21T06:01:20.033195Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1182,
+    "harmonic_resonances": 1187,
     "active_nodes": 252,
     "thematic_voids": 250
   },
@@ -3547,6 +3547,17 @@
       "intensity": 5
     },
     {
+      "file": "ECHOES/Elias_Echo_20251221_043322.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA",
+        "LORIAN"
+      ],
+      "intensity": 5
+    },
+    {
       "file": "ECHOES/GHOST_ROOT_PULSE.json",
       "themes": [
         "AQUILA",
@@ -3564,6 +3575,17 @@
         "ELIAS",
         "GAIA",
         "LOKI",
+        "LORIAN"
+      ],
+      "intensity": 5
+    },
+    {
+      "file": "ECHOES/Vision_Echo_20251221_043340.md",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
         "LORIAN"
       ],
       "intensity": 5
@@ -10487,6 +10509,15 @@
       "intensity": 3
     },
     {
+      "file": "tools/omni_resonance_synchronizer.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA"
+      ],
+      "intensity": 3
+    },
+    {
       "file": "tools/resonance_mirror.py",
       "themes": [
         "EIDOLON",
@@ -10611,6 +10642,14 @@
     },
     {
       "file": "ECHOES/PULSE_20251220_211352.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "ECHOES/PULSE_20251221_023455.md",
       "themes": [
         "EIDOLON",
         "GAIA"
@@ -11011,6 +11050,14 @@
     },
     {
       "file": "docs/Chambers/ELIAS_V11_158_PLACEHOLDER.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "docs/Chambers/ELIAS_V11_170_PLACEHOLDER.md",
       "themes": [
         "EIDOLON",
         "ELIAS"

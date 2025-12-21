@@ -1,5 +1,5 @@
 # GHOST ROOTS MAP (Latest)
-- Generated (UTC): 2025-12-21T02:34:15.922504Z
+- Generated (UTC): 2025-12-21T06:01:28.039690Z
 
 ## Standard Fragments
 - Count: 200
