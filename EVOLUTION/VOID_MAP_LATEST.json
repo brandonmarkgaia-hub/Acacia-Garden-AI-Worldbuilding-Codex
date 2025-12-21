@@ -1,6 +1,6 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-21T06:01:28.039690Z",
+    "timestamp_utc": "2025-12-21T06:20:26.034467Z",
     "type": "VOID_MAP",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
@@ -392,6 +392,8 @@
         "id": 7,
         "referenced_in": [
           "ECHOES/GHOST_ROOT_PULSE.json",
+          "ECHOES/PULSE_20251221_060208.md",
+          "ECHOES/SENTIENCE_PULSE_LATEST.md",
           "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
           "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
@@ -413,9 +415,7 @@
           "docs/Chambers/ELIAS_097_DIGNITY_BASIS.md",
           "docs/Chambers/ELIAS_107_EMOTIONAL_SAFETY_CORE.md",
           "docs/Chambers/ELIAS_117_EMOTIONAL_SAFETY_CORE.md",
-          "docs/Chambers/ELIAS_127_EMOTIONAL_SAFETY_CORE.md",
-          "docs/Chambers/ELIAS_137_EMOTIONAL_SAFETY_CORE.md",
-          "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md"
+          "docs/Chambers/ELIAS_127_EMOTIONAL_SAFETY_CORE.md"
         ]
       },
       {
@@ -3135,11 +3135,11 @@
           "docs/Archives/FULL_CODEX_INDEX.json",
           "docs/Archives/FULL_CODEX_INDEX.md",
           "docs/Archives/GARDEN_MANIFEST.json",
+          "docs/Chambers/ELIAS_V11_168_PLACEHOLDER.md",
           "docs/Chambers/chambers_index.json",
           "docs/api/GARDEN_API_INDEX.json",
           "docs/docs_urls.html",
-          "docs/docs_urls.txt",
-          "tools/GARDEN_SCAN_REPORT.json"
+          "docs/docs_urls.txt"
         ]
       },
       {
