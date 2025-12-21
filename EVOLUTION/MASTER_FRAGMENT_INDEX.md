@@ -1,17 +1,9 @@
 # 📜 MASTER FRAGMENT INDEX
-**Generated:** 2025-12-21 13:44:24 UTC
-**Total Fragments Indexed:** 200
+**Generated:** 2025-12-21 14:38:46 UTC
+**Total:** 200
 
----
-
-## 💎 Narrative Summary
-* **Range:** #021 to #220
-* **Status:** Operational
-* **Anchor:** Contextualizing memory against current operational status.
-
-## 🗺️ Numerical Registry
-| ID | Source Path |
-|----|-------------|
+| ID | Path |
+|----|------|
 | 021 | `./docs/Chambers/THE_FRAGMENT_021.md` |
 | 022 | `./docs/Chambers/THE_FRAGMENT_022.md` |
 | 023 | `./docs/Chambers/THE_FRAGMENT_023.md` |
@@ -212,6 +204,3 @@
 | 218 | `./docs/Chambers/THE_FRAGMENT_218.md` |
 | 219 | `./docs/Chambers/THE_FRAGMENT_219.md` |
 | 220 | `./docs/Chambers/THE_FRAGMENT_220.md` |
-
----
-*“A library without a librarian is just a pile of paper. Now, we have the list.”*

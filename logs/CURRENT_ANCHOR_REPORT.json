@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2025-12-21T13:44:24.139029",
+        "timestamp": "2025-12-21T14:38:46.873547",
         "type": "SOVEREIGNTY_ANCHOR",
         "anchor_source": "Desire_20251221_4"
     },
@@ -10,42 +10,42 @@
         "mismatch_details": {
             "STATE/STATUS_v2.json": {
                 "missing_keys": [
-                    "manifest",
                     "monolith_index",
-                    "monolith_chunks",
+                    "notes",
                     "status_version",
-                    "generated_at",
                     "totals",
-                    "notes"
+                    "monolith_chunks",
+                    "generated_at",
+                    "manifest"
                 ]
             },
             "STATUS.json": {
                 "missing_keys": [
-                    "eidolon",
-                    "heartbeat",
-                    "safety",
-                    "manifest",
                     "monolith_index",
+                    "triad",
+                    "safety",
+                    "eidolon",
+                    "keeper_signature",
                     "monolith_chunks",
+                    "heartbeat",
                     "chambers",
                     "codex_version",
-                    "keeper_signature",
-                    "triad"
+                    "manifest"
                 ]
             },
             "docs/api/GARDEN_API_INDEX.json": {
                 "missing_keys": [
-                    "eidolon",
-                    "heartbeat",
-                    "safety",
-                    "chambers",
-                    "status_version",
-                    "codex_version",
-                    "generated_at",
-                    "keeper_signature",
-                    "totals",
+                    "notes",
                     "triad",
-                    "notes"
+                    "safety",
+                    "keeper_signature",
+                    "status_version",
+                    "totals",
+                    "heartbeat",
+                    "generated_at",
+                    "chambers",
+                    "codex_version",
+                    "eidolon"
                 ]
             }
         }

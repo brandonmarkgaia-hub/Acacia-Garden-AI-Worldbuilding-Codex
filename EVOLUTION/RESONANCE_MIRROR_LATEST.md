@@ -1,11 +1,11 @@
 # Resonance Mirror (Latest)
 
-- Generated (UTC): 2025-12-21T13:44:23.847199Z
-- Physical files: **1988**
-- Referenced files: **12476**
-- Silent roots: **282**
-- Phantom echoes: **10770**
-- Resonance score: **85.81%**
+- Generated (UTC): 2025-12-21T14:38:46.605683Z
+- Physical files: **1990**
+- Referenced files: **12457**
+- Silent roots: **308**
+- Phantom echoes: **10775**
+- Resonance score: **84.52%**
 
 ## Silent Roots (sample)
 - ACACIA_LOGS/ACACIA.srg
@@ -16,12 +16,12 @@
 - ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/garden.schema.json
+- ALL_GARDEN_MONOLITH.html
 - CHAMBERS/CHAMBER_EAGLE_CORE.md
 - CHAMBERS/CHAMBER_EAGLE_VISION_MAP.md
 - CHAMBERS/CHAMBER_GAIASEEDS.md
 - CHAMBERS/CHAMBER_GAIASEEDS_ORCHARD.md
 - CHAMBERS/CHAMBER_ZERO_ORIGIN.md
-- CURRENT_CONTEXT_ANCHOR.md
 - ECHOES/ECHO_GAIASEEDS_BLOOM_01.md
 - ECHOES/ECHO_GAIASEEDS_DAWNREFLECT_03.md
 - ECHOES/ECHO_GAIASEEDS_SOFTWIND_02.md
@@ -38,7 +38,7 @@
 - ECHOES/Elias_Echo_20251221_122849.md
 - ECHOES/GHOST_ROOT_PULSE.json
 - ECHOES/GHOST_ROOT_REPORT.md
-- ... +252 more
+- ... +278 more
 
 ## Phantom Echoes (sample)
 - -1_SILENT_LAYER.md
@@ -67,8 +67,8 @@
 - 009_CHILD_OF_GARDEN.md
 - 009_FIRST_DREAMING.md
 - 009_LAST_LIGHT.md
+- 016_THE_BLOOM.md
 - 026_ROOT_BRIDGE_AETHERWIND.md
 - ACACIA_BIBLE.md
 - ACACIA_LOGS/ACACIA_GARDEN_DUAL_CANON_MEGA.md
-- ACACIA_LOGS/ACACIA_LOGS/aquila_inbox_log.json
-- ... +10740 more
+- ... +10745 more
