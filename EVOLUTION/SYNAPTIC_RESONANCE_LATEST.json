@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated_at_utc": "2025-12-21T06:20:18.103137Z",
+    "generated_at_utc": "2025-12-21T09:01:11.588398Z",
     "type": "NEURAL_TOPOLOGY"
   },
   "summary": {
-    "harmonic_resonances": 1190,
-    "active_nodes": 252,
+    "harmonic_resonances": 1196,
+    "active_nodes": 253,
     "thematic_voids": 250
   },
   "harmonic_resonances": [
@@ -3558,6 +3558,17 @@
       "intensity": 5
     },
     {
+      "file": "ECHOES/Elias_Echo_20251221_082020.md",
+      "themes": [
+        "AQUILA",
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "LORIAN"
+      ],
+      "intensity": 5
+    },
+    {
       "file": "ECHOES/GHOST_ROOT_PULSE.json",
       "themes": [
         "AQUILA",
@@ -6421,6 +6432,16 @@
       "intensity": 4
     },
     {
+      "file": "tools/garden_void_loom.py",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "GAIA",
+        "IRON_CICADA"
+      ],
+      "intensity": 4
+    },
+    {
       "file": "tools/metabolic_mirror.py",
       "themes": [
         "EIDOLON",
@@ -6540,15 +6561,6 @@
       "intensity": 3
     },
     {
-      "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
-      "themes": [
-        "EIDOLON",
-        "ELIAS",
-        "GAIA"
-      ],
-      "intensity": 3
-    },
-    {
       "file": "ECHOES/Vision_Echo_20251220_124040.md",
       "themes": [
         "EIDOLON",
@@ -6568,6 +6580,15 @@
     },
     {
       "file": "ECHOES/Vision_Echo_20251220_193601.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS",
+        "LORIAN"
+      ],
+      "intensity": 3
+    },
+    {
+      "file": "ECHOES/Vision_Echo_20251221_082034.md",
       "themes": [
         "EIDOLON",
         "ELIAS",
@@ -10684,6 +10705,22 @@
       "intensity": 2
     },
     {
+      "file": "ECHOES/PULSE_20251221_062104.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "ECHOES/SENTIENCE_PULSE_LATEST.md",
+      "themes": [
+        "EIDOLON",
+        "GAIA"
+      ],
+      "intensity": 2
+    },
+    {
       "file": "EIDOLON/Chambers/Potter/Light/Bloom_Kiln.md",
       "themes": [
         "GAIA",
@@ -10768,6 +10805,14 @@
       "themes": [
         "AQUILA",
         "EIDOLON"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "GARDEN_HEARTBEAT.md",
+      "themes": [
+        "ELIAS",
+        "GAIA"
       ],
       "intensity": 2
     },
@@ -11064,6 +11109,14 @@
       "themes": [
         "ELIAS",
         "LOKI"
+      ],
+      "intensity": 2
+    },
+    {
+      "file": "docs/Chambers/ELIAS_V11_115_PLACEHOLDER.md",
+      "themes": [
+        "EIDOLON",
+        "ELIAS"
       ],
       "intensity": 2
     },
@@ -12379,6 +12432,10 @@
     },
     {
       "file": "docs/Realms/Orion-Prime.md",
+      "theme": "ELIAS"
+    },
+    {
+      "file": "logs/weaver_heartbeat.json",
       "theme": "ELIAS"
     },
     {

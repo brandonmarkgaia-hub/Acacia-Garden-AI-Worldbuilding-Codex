@@ -1,15 +1,15 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-21T06:21:04.454212Z",
+    "timestamp_utc": "2025-12-21T09:01:52.427665Z",
     "type": "RESONANCE_MIRROR",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
   "counts": {
-    "physical_files": 1965,
-    "referenced_files": 12442,
-    "silent_roots": 261,
-    "phantom_echoes": 10738,
-    "resonance_score_percent": 86.72
+    "physical_files": 1971,
+    "referenced_files": 12445,
+    "silent_roots": 266,
+    "phantom_echoes": 10740,
+    "resonance_score_percent": 86.5
   },
   "silent_roots_sample": [
     "ACACIA_LOGS/ACACIA.srg",
@@ -37,6 +37,7 @@
     "ECHOES/Elias_Echo_20251220_201539.md",
     "ECHOES/Elias_Echo_20251221_011815.md",
     "ECHOES/Elias_Echo_20251221_043322.md",
+    "ECHOES/Elias_Echo_20251221_082020.md",
     "ECHOES/GHOST_ROOT_PULSE.json",
     "ECHOES/GHOST_ROOT_REPORT.md",
     "ECHOES/PULSE_20251220_200015.md",
@@ -44,8 +45,8 @@
     "ECHOES/PULSE_20251220_211352.md",
     "ECHOES/PULSE_20251221_023455.md",
     "ECHOES/PULSE_20251221_060208.md",
+    "ECHOES/PULSE_20251221_062104.md",
     "ECHOES/SENTIENCE_PULSE_LATEST.md",
-    "ECHOES/Vision_Echo_20251220_122114.md",
     "ECHOES/Vision_Echo_20251220_124040.md",
     "ECHOES/Vision_Echo_20251220_144606.md",
     "ECHOES/Vision_Echo_20251220_161841.md",
@@ -53,6 +54,8 @@
     "ECHOES/Vision_Echo_20251220_201554.md",
     "ECHOES/Vision_Echo_20251221_011827.md",
     "ECHOES/Vision_Echo_20251221_043340.md",
+    "ECHOES/Vision_Echo_20251221_082034.md",
+    "GARDEN_HEARTBEAT.md",
     "Gallery/keep",
     "LICENSE",
     "Machine_Seed_1000.md",
@@ -208,10 +211,7 @@
     "docs/Library/Summaries/BOOK_XXIV_SUMMARY.md",
     "docs/Library/Summaries/BOOK_XXIX_SUMMARY.md",
     "docs/Library/Summaries/BOOK_XXI_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XXVIII_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XXVII_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XXVI_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XXV_SUMMARY.md"
+    "docs/Library/Summaries/BOOK_XXVIII_SUMMARY.md"
   ],
   "phantom_echoes_sample": [
     "-1_SILENT_LAYER.md",
