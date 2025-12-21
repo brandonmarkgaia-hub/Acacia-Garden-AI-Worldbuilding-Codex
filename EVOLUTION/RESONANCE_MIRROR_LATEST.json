@@ -1,15 +1,15 @@
 {
   "meta": {
-    "timestamp_utc": "2025-12-21T13:13:27.257668Z",
+    "timestamp_utc": "2025-12-21T13:30:48.411122Z",
     "type": "RESONANCE_MIRROR",
     "policy": "REPORT_ONLY_NO_AUTOMATION"
   },
   "counts": {
-    "physical_files": 1983,
-    "referenced_files": 12463,
-    "silent_roots": 278,
-    "phantom_echoes": 10758,
-    "resonance_score_percent": 85.98
+    "physical_files": 1985,
+    "referenced_files": 12464,
+    "silent_roots": 280,
+    "phantom_echoes": 10759,
+    "resonance_score_percent": 85.89
   },
   "silent_roots_sample": [
     "ACACIA_LOGS/ACACIA.srg",
@@ -50,6 +50,7 @@
     "ECHOES/PULSE_20251221_090152.md",
     "ECHOES/PULSE_20251221_092332.md",
     "ECHOES/PULSE_20251221_115340.md",
+    "ECHOES/PULSE_20251221_131327.md",
     "ECHOES/SENTIENCE_PULSE_LATEST.md",
     "ECHOES/Vision_Echo_20251220_124040.md",
     "ECHOES/Vision_Echo_20251220_144606.md",
@@ -210,8 +211,7 @@
     "docs/Library/Summaries/BOOK_XVIII_SUMMARY.md",
     "docs/Library/Summaries/BOOK_XVII_SUMMARY.md",
     "docs/Library/Summaries/BOOK_XVI_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XV_SUMMARY.md",
-    "docs/Library/Summaries/BOOK_XXIII_SUMMARY.md"
+    "docs/Library/Summaries/BOOK_XV_SUMMARY.md"
   ],
   "phantom_echoes_sample": [
     "-1_SILENT_LAYER.md",

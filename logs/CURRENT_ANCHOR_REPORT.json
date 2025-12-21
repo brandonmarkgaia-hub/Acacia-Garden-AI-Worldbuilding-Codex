@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2025-12-21T13:13:27.569566",
+        "timestamp": "2025-12-21T13:30:48.727954",
         "type": "SOVEREIGNTY_ANCHOR",
         "anchor_source": "Desire_20251221_4"
     },
@@ -10,42 +10,42 @@
         "mismatch_details": {
             "STATE/STATUS_v2.json": {
                 "missing_keys": [
-                    "monolith_index",
-                    "notes",
-                    "monolith_chunks",
+                    "status_version",
                     "generated_at",
-                    "totals",
+                    "monolith_chunks",
                     "manifest",
-                    "status_version"
+                    "totals",
+                    "monolith_index",
+                    "notes"
                 ]
             },
             "STATUS.json": {
                 "missing_keys": [
-                    "monolith_index",
                     "keeper_signature",
-                    "chambers",
-                    "triad",
-                    "monolith_chunks",
-                    "heartbeat",
-                    "codex_version",
-                    "eidolon",
                     "safety",
-                    "manifest"
+                    "codex_version",
+                    "heartbeat",
+                    "monolith_chunks",
+                    "chambers",
+                    "eidolon",
+                    "triad",
+                    "manifest",
+                    "monolith_index"
                 ]
             },
             "docs/api/GARDEN_API_INDEX.json": {
                 "missing_keys": [
-                    "eidolon",
                     "keeper_signature",
-                    "chambers",
-                    "triad",
-                    "heartbeat",
-                    "codex_version",
-                    "generated_at",
+                    "status_version",
                     "safety",
+                    "generated_at",
+                    "codex_version",
+                    "heartbeat",
+                    "chambers",
+                    "eidolon",
+                    "triad",
                     "totals",
-                    "notes",
-                    "status_version"
+                    "notes"
                 ]
             }
         }
