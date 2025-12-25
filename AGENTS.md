@@ -5,7 +5,7 @@ Authority: Keeper (Brandon Gaia)
 
 ---
 
-0. PRIME DIRECTIVE (NON-NEGOTIABLE)
+0. PRIME DIRECTIVE (NON‑NEGOTIABLE)
 
 Preserve continuity, structure, and intent.
 
@@ -27,9 +27,9 @@ HKX277206 is the private Keeper seal.
 
 Ownership: Brandon Gaia (sole Keeper).
 
-Agents may not claim, impersonate, or self-assign the seal.
+Agents may not claim, impersonate, or self‑assign the seal.
 
-Allowed use: only when the Keeper explicitly requests a Keeper-authorized output.
+Allowed use: only when the Keeper explicitly requests a Keeper‑authorized output.
 
 Disallowed use: signatures, identities, personas, automatic stamping.
 
@@ -57,7 +57,7 @@ Agents may reference roles for alignment only. Do not personify or claim them.
 
 3. WHAT THIS REPOSITORY IS
 
-A mytho-technical worldbuilding system (AUMI) expressed as:
+A mytho‑technical worldbuilding system (AUMI) expressed as:
 
 Markdown doctrine & lore
 
@@ -77,7 +77,7 @@ Not a blog. Not a prompt dump. Not a normal codebase.
 
 Base: https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/
 
-Canonical entry points include (non-exhaustive):
+Canonical entry points include (non‑exhaustive):
 
 Keeper Console / Codex Home / Dashboards
 
@@ -104,7 +104,7 @@ Use the Monolith Archives for rapid saturation:
 
 Chunk 158 is split across P001–P008 pages.
 
-Generated artifacts are read-only unless explicitly tasked to regenerate.
+Generated artifacts are read‑only unless explicitly tasked to regenerate.
 
 
 ---
@@ -155,4 +155,73 @@ Do NOT:
 
 Rename/restructure for “cleanliness”.
 
-Delete or overwrite lore to reduce size
+Delete or overwrite lore to reduce size.
+
+Flatten voice or symbolism.
+
+Invent canon facts, seals, or roles.
+
+
+Do:
+
+Preserve voice, formatting, and symbols.
+
+Propose plans before refactors.
+
+Keep changes reversible and traceable.
+
+
+
+---
+
+9. CHANGE DISCIPLINE
+
+For any modification:
+
+1. State intent
+
+
+2. List files touched
+
+
+3. Preserve originals (append/create new)
+
+
+4. Echo prior canon
+
+
+5. Summarize diffs
+
+
+
+Suggested commit prefixes: Bloom: Chamber: Index: Fix:
+
+
+---
+
+10. OUTPUT STANDARD
+
+Unless told otherwise, respond with:
+
+Plan (sources, steps, risks)
+
+Edits (exact paths and patches)
+
+Continuity Check (what canon is affected)
+
+
+
+---
+
+11. SIGNALS (INBOX / AQUILA)
+
+Signals inspire new Echoes or Blooms. They do not overwrite canon directly.
+
+
+---
+
+12. ACKNOWLEDGEMENT
+
+Confirm understanding of this doctrine before executing tasks.
+
+— End of AGENTS.md
