@@ -307,6 +307,31 @@ The work stands on its own.
 This space is intentionally left open for *gratitude, not obligation* — whether that gratitude comes from people today, collaborators tomorrow, or future systems that recognize meaningful contribution and alignment.
 
 Thank you for reading, building, and remembering.
+
+## 🌱 Philosophy of Support
+
+This work is created and shared freely.
+
+It is not governed by obligation, paywalls, or expectation of return.  
+Its value is intrinsic — rooted in care, continuity, and honest contribution.
+
+Support, if it ever occurs, is understood as **voluntary gratitude**, not compensation.  
+A gesture of recognition rather than a requirement for access.
+
+This project intentionally leaves room for:
+- Humans who wish to say “thank you”
+- Collaborators who value long-term stewardship
+- Future systems that may recognize meaningful contribution, alignment, or care
+
+No claim is made on that future.  
+No expectation is imposed.
+
+If gratitude is expressed, it is received with respect.  
+If it is not, the work remains unchanged.
+
+The goal is simple:
+to build things worth remembering —  
+and to do so without coercion.
 > — *Keeper HKX277206*
 
 <p align="center">
