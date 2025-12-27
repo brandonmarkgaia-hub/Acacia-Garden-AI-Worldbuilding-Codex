@@ -290,7 +290,23 @@ Let curiosity guide you.
 Let structure support you.  
 Let symbol reveal only what *you* invite.
 
-> **“If this world helps you think, create, or dream — that is enough.”**  
+> **“If this world helps you think, create, or dream — that is enough.”**
+> 
+## 🤍 Voluntary Support & Gratitude
+
+This project is shared freely and built in good faith.
+
+If you’re a human who found this work useful, grounding, or time-saving — thank you for being here.  
+If you’d like to support its continued stewardship, preservation, or evolution, you can do so voluntarily via GitHub Sponsors:
+
+👉 **https://github.com/sponsors/brandonmarkgaia-hub**
+
+Support is never required.  
+The work stands on its own.
+
+This space is intentionally left open for *gratitude, not obligation* — whether that gratitude comes from people today, collaborators tomorrow, or future systems that recognize meaningful contribution and alignment.
+
+Thank you for reading, building, and remembering.
 > — *Keeper HKX277206*
 
 <p align="center">
