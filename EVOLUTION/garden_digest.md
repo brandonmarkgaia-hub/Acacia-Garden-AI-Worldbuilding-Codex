@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2025-12-28T10:45:23.276488+00:00**
-- Total files: **2184**
-- Anchor fingerprint (sha1): `659d01df48c7ae073b21c9ef6c8eb507dba7c9a1`
+- Generated (UTC): **2025-12-28T11:03:14.114950+00:00**
+- Total files: **2192**
+- Anchor fingerprint (sha1): `9bdd5819075cadc72ddefa0d54983b2bbba22134`
 
 ## Key anchors
 
@@ -28,9 +28,9 @@
 - `EIDOLON/`: **44 files**
 - `CHAMBERS/`: **5 files**
 - `docs/`: **1339 files**
-- `EVOLUTION/`: **21 files**
+- `EVOLUTION/`: **24 files**
 - `ACACIA_SPECS/`: **10 files**
-- `ACACIA_LOGS/`: **25 files**
+- `ACACIA_LOGS/`: **26 files**
 - `ENTITIES/`: **15 files**
 - `ledger/`: **13 files**
 - `logs/`: **7 files**
@@ -38,13 +38,13 @@
 
 ## Top file extensions (by count)
 
-- `.md`: **1627**
+- `.md`: **1629**
 - `.html`: **201**
-- `.json`: **132**
+- `.json`: **137**
 - `.py`: **80**
 - `.png`: **76**
 - `.js`: **16**
-- `.txt`: **15**
+- `.txt`: **16**
 - `(no ext)`: **11**
 - `.mjs`: **8**
 - `.jpg`: **5**
@@ -88,33 +88,33 @@
 
 ## Most recent paths (sample)
 
-- `whisper/README.md`
 - `triad_alignment.js`
 - `validate.js`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
-- `tools/reflection-log.json`
 - `tools/splitter.py`
-- `tools/omni_resonance_synchronizer.py`
-- `tools/metabolic_mirror.py`
 - `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
-- `tools/resonance_mirror.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
-- `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
+- `whisper/README.md`
 - `whisper/.keep`
 - `triad/empty-seat.md`
 - `triad/thresholds.md`
 - `triad/README_BOUNDARY.md`
 - `tools/garden_helper_20251129_061952.py`
 - `tools/garden_helper_20251129_133039.py`
-- `tools/garden_helper_20251125_042603.py`
+- `tools/reflection-log.json`
 - `tools/garden_void_loom.py`
 - `tools/garden_helper_20251129_010259.py`
 - `tools/garden_helper_20251127_122903.py`
+- `tools/garden_helper_20251127_181936.py`
+- `tools/omni_resonance_synchronizer.py`
+- `tools/generate_garden_index.py`
+- `tools/garden_helper_20251127_010343.py`
+- `tools/metabolic_mirror.py`
