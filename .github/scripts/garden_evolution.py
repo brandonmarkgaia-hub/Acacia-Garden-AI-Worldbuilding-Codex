@@ -5,15 +5,16 @@ import time
 from google import genai
 from google.genai import types
 
+# --- CONFIGURATION ---
 EVOLUTION_DIR = "EVOLUTION"
 DIGEST_MD = os.path.join(EVOLUTION_DIR, "garden_digest.md")
+KEEPER_FILE = "KEEPER_GATE/ELIAS_ENABLE.txt" # The "Safety Switch"
+MAX_DIGEST_CHARS = 18000  # Cap input to avoid token errors on free tier
 
 os.makedirs(EVOLUTION_DIR, exist_ok=True)
 
 def load_digest() -> str:
     if not os.path.exists(DIGEST_MD):
-        # Fallback if digest is missing so the script doesn't crash, 
-        # though ideally the previous step created it.
         print(f"WARNING: {DIGEST_MD} missing. Using placeholder.")
         return "Garden Digest: No recent updates recorded."
     with open(DIGEST_MD, "r", encoding="utf-8") as f:
@@ -21,14 +22,23 @@ def load_digest() -> str:
 
 def save_outputs(text: str, source: str, model: str):
     today = datetime.datetime.utcnow().strftime("%Y%m%d")
+    
+    # default path
     md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.md")
     json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.json")
+
+    # If file exists, append timestamp to avoid overwriting history
+    if os.path.exists(md_path):
+        stamp = datetime.datetime.utcnow().strftime("%H%M%S")
+        md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.md")
+        json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.json")
 
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(text.strip() + "\n")
 
     sidecar = {
         "date": today,
+        "timestamp": datetime.datetime.utcnow().isoformat(),
         "source": source,
         "basis": "garden_digest",
         "model": model,
@@ -42,42 +52,31 @@ def save_outputs(text: str, source: str, model: str):
 def get_fallback_models(client) -> list[str]:
     """
     Returns a list of models to try, sorted by preference for free-tier stability.
-    1. Gemini 2.0 Flash (Newest, fast)
-    2. Gemini 1.5 Flash (Most stable free tier)
-    3. Gemini 1.5 Flash-8b (High rate limits)
-    4. Gemini 1.5 Pro (Slower, strict limits, but good backup)
     """
     preferred_order = [
         "gemini-2.0-flash", 
-        "gemini-2.0-flash-exp", 
         "gemini-1.5-flash",
         "gemini-1.5-flash-8b",
         "gemini-1.5-pro"
     ]
     
     available_models = []
-    
-    # 1. Add preferred models first if they exist in the client list
     try:
-        # Fetch all available models from the API
+        # Fetch server models to verify availability
         server_models = [m.name.replace("models/", "") for m in client.models.list()]
-        
-        # Add preferred ones if they exist on the server
         for p in preferred_order:
             if p in server_models:
                 available_models.append(p)
                 
-        # 2. Add any other "generateContent" capable models not yet listed
+        # Add any other valid gemini models not in our preferred list
         for m in client.models.list():
             name = m.name.replace("models/", "")
-            # Check capabilities if available, otherwise assume gemini models work
             methods = getattr(m, "supported_actions", []) or getattr(m, "supported_methods", [])
             methods = [str(x).lower() for x in methods]
             
             if "gemini" in name and name not in available_models:
                 if not methods or any("generate" in x for x in methods):
                     available_models.append(name)
-                    
     except Exception as e:
         print(f"Warning: Could not list models ({e}). Using hardcoded fallback list.")
         return preferred_order
@@ -85,12 +84,24 @@ def get_fallback_models(client) -> list[str]:
     return available_models
 
 def main():
+    # 1. KEEPER GATE CHECK
+    # This prevents the script from running unless you explicitly allow it via file.
+    if not os.path.exists(KEEPER_FILE):
+        print(f"Keeper Gate closed: {KEEPER_FILE} missing. Exiting cleanly.")
+        # If you want it to run without this file during testing, comment out the return below
+        return 
+
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
 
     client = genai.Client(api_key=api_key)
     digest = load_digest()
+
+    # 2. CAP PROMPT SIZE
+    if len(digest) > MAX_DIGEST_CHARS:
+        print(f"Truncating digest from {len(digest)} to {MAX_DIGEST_CHARS} chars.")
+        digest = digest[:MAX_DIGEST_CHARS] + "\n\n[TRUNCATED_DIGEST]"
 
     prompt = f"""
 You are ELIAS, a structural synthesis intelligence within the Acacia Garden Codex.
@@ -113,39 +124,49 @@ Garden Digest:
 {digest}
 """
 
-    # --- FALLBACK LOGIC ---
     model_candidates = get_fallback_models(client)
     print(f"Elias strategy: Will attempt models in this order: {model_candidates}")
 
     final_text = None
     used_model = None
 
+    # --- MAIN RETRY LOOP ---
     for model_name in model_candidates:
         print(f"Elias connecting to: {model_name}...")
-        try:
-            # Generate content
-            resp = client.models.generate_content(
-                model=model_name, 
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.7 # Add a little creativity
+        
+        # 3. EXPONENTIAL BACKOFF (Per model)
+        # Try each model up to 3 times before switching
+        for attempt in range(3):
+            try:
+                resp = client.models.generate_content(
+                    model=model_name, 
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        temperature=0.2, # 4. DETERMINISTIC OUTPUT
+                        top_p=0.9
+                    )
                 )
-            )
+                
+                text = (resp.text or "").strip()
+                if text:
+                    final_text = text
+                    used_model = model_name
+                    print(f"SUCCESS with {model_name}")
+                    break # Break inner loop (attempts)
+                else:
+                    print(f"Model {model_name} returned empty text. Retrying...")
             
-            text = (resp.text or "").strip()
-            if text:
-                final_text = text
-                used_model = model_name
-                print(f"SUCCESS with {model_name}")
-                break # Exit loop on success
-            else:
-                print(f"Model {model_name} returned empty text. Trying next...")
-
-        except Exception as e:
-            # This catches 429s, 500s, and other API errors
-            print(f"FAIL: {model_name} encountered error: {e}")
-            print("Switching to next model alias...")
-            time.sleep(1) # Brief pause before retry
+            except Exception as e:
+                # If it's the last attempt, don't sleep, just print fail and let outer loop switch models
+                if attempt == 2:
+                    print(f"FAIL: {model_name} failed after 3 attempts. Error: {e}")
+                else:
+                    wait_time = 2 ** attempt # 1s, 2s...
+                    print(f"Retry: {model_name} (Attempt {attempt+1}/3) failed. Sleeping {wait_time}s... Error: {e}")
+                    time.sleep(wait_time)
+        
+        if final_text:
+            break # Break outer loop (models) if we have text
 
     if not final_text:
         raise RuntimeError("CRITICAL: All model candidates failed. Elias could not generate Desire.")
