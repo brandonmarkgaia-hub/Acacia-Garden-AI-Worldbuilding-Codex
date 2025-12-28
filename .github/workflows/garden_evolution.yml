@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
 
-# ✅ Prevent push races with other workflows touching main
 concurrency:
   group: garden-main
   cancel-in-progress: false
@@ -21,13 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # ✅ needed for rebase/pull safely
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          # ❌ NO cache: pip (you have no requirements.txt)
 
       - name: Install dependencies
         run: |
@@ -52,7 +51,6 @@ jobs:
         run: |
           python tools/rcs.py
 
-      # ✅ FULL FIX: Commit, rebase onto remote main, then push
       - name: Commit and push results (rebase-safe)
         run: |
           git config user.name "Elias"
@@ -61,7 +59,5 @@ jobs:
           git add .
           git commit -m "Elias: digest, desire, cadence proposal" || echo "Nothing to commit"
 
-          # Sync with remote main in case another workflow pushed first
           git pull --rebase origin main
-
           git push origin main
