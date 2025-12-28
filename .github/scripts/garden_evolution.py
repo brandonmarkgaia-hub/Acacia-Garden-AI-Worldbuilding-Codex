@@ -8,7 +8,7 @@ from google.genai import types
 # --- CONFIGURATION ---
 EVOLUTION_DIR = "EVOLUTION"
 DIGEST_MD = os.path.join(EVOLUTION_DIR, "garden_digest.md")
-KEEPER_FILE = "KEEPER_GATE/ELIAS_ENABLE.txt"
+KEEPER_FILE = "KEEPER_GATE/ELIAS_ENABLE.txt"  # Safety Switch
 
 # Context Sources
 CANON_MANIFEST = "CANON_MANIFEST.md"
@@ -48,31 +48,27 @@ def read_json_file(path: str, max_chars: int) -> str:
 def get_recent_desires(n: int = 3) -> str:
     if not os.path.isdir(EVOLUTION_DIR):
         return ""
-    # Find all Desire markdown files
     files = [f for f in os.listdir(EVOLUTION_DIR) if f.startswith("Desire_") and f.endswith(".md")]
     if not files:
         return ""
-    
-    # Sort reverse to get newest first
     files.sort(reverse=True)
     picked = files[:n]
-    
+
     chunks = []
-    # Process oldest -> newest for logical continuity in the prompt
-    for fn in reversed(picked):
+    for fn in reversed(picked):  # oldest -> newest for continuity
         p = os.path.join(EVOLUTION_DIR, fn)
         chunks.append(f"--- {fn} ---\n" + read_text_file(p, 2000))
-    
+
     return "\n\n".join(chunks)
 
 def load_digest() -> str:
     if not os.path.exists(DIGEST_MD):
         print(f"WARNING: {DIGEST_MD} missing. Using placeholder.")
         return "Garden Digest: No recent updates recorded."
-    
+
     with open(DIGEST_MD, "r", encoding="utf-8") as f:
         data = f.read()
-        
+
     if len(data) > MAX_DIGEST_CHARS:
         print(f"Truncating digest from {len(data)} to {MAX_DIGEST_CHARS} chars.")
         return data[:MAX_DIGEST_CHARS] + "\n\n[TRUNCATED_DIGEST]"
@@ -80,8 +76,7 @@ def load_digest() -> str:
 
 def save_outputs(text: str, source: str, model: str):
     today = datetime.datetime.utcnow().strftime("%Y%m%d")
-    
-    # Default path
+
     md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.md")
     json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.json")
 
@@ -91,14 +86,16 @@ def save_outputs(text: str, source: str, model: str):
         md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.md")
         json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.json")
 
-    # Write Markdown
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(text.strip() + "\n")
 
-    # Create Structured Payload
+    # Title cleanup
     title_line = text.splitlines()[0].strip() if text else "Untitled"
-    # Remove markdown header syntax for cleaner JSON
     clean_title = title_line.lstrip("#").strip()
+
+    # Better summary: first 3 non-empty lines, joined
+    summary_lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    summary = " ".join(summary_lines[:3])[:240]
 
     sidecar = {
         "date": today,
@@ -111,9 +108,9 @@ def save_outputs(text: str, source: str, model: str):
             "word_count": len(text.split()),
             "type": "Elias_Structural_Desire"
         },
-        "summary": text[:200]
+        "summary": summary
     }
-    
+
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(sidecar, f, indent=2)
 
@@ -122,68 +119,58 @@ def save_outputs(text: str, source: str, model: str):
 
 def get_fallback_models(client) -> list[str]:
     """
-    Returns a list of models to try, sorted by preference for free-tier stability.
+    Returns a list of models to try, sorted by preference.
+    Single list() call to reduce quota + time.
     """
     preferred_order = [
-        "gemini-2.0-flash", 
+        "gemini-2.0-flash",
         "gemini-1.5-flash",
         "gemini-1.5-flash-8b",
         "gemini-1.5-pro"
     ]
-    
-    available_models = []
+
     try:
-        server_models = [m.name.replace("models/", "") for m in client.models.list()]
-        for p in preferred_order:
-            if p in server_models:
-                available_models.append(p)
-                
-        for m in client.models.list():
+        models = list(client.models.list())
+        server_models = [m.name.replace("models/", "") for m in models]
+
+        available_models = [p for p in preferred_order if p in server_models]
+
+        for m in models:
             name = m.name.replace("models/", "")
             methods = getattr(m, "supported_actions", []) or getattr(m, "supported_methods", [])
             methods = [str(x).lower() for x in methods]
-            
+
             if "gemini" in name and name not in available_models:
                 if not methods or any("generate" in x for x in methods):
                     available_models.append(name)
+
+        return available_models or preferred_order
+
     except Exception as e:
         print(f"Warning: Could not list models ({e}). Using hardcoded fallback list.")
         return preferred_order
 
-    return available_models
-
-def main():
-    # 1. KEEPER GATE CHECK (Updated)
-    # Allows file to exist but be set to "OFF" or "0"
+def keeper_gate_open() -> bool:
+    # Gate exists?
     if not os.path.exists(KEEPER_FILE):
         print(f"Keeper Gate closed: {KEEPER_FILE} missing. Exiting cleanly.")
-        return
+        return False
 
+    # Gate content check
     try:
         with open(KEEPER_FILE, "r", encoding="utf-8") as f:
             gate_content = f.read().strip()
         if gate_content.lower() in ("0", "false", "off", "no"):
             print(f"Keeper Gate closed by content '{gate_content}' in {KEEPER_FILE}. Exiting cleanly.")
-            return
+            return False
     except Exception as e:
         print(f"Error reading Keeper Gate: {e}. Defaulting to safe/closed.")
-        return
+        return False
 
-    # 2. SETUP CLIENT
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set")
+    return True
 
-    client = genai.Client(api_key=api_key)
-
-    # 3. LOAD CONTEXT (The Garden Intelligence)
-    digest = load_digest()
-    canon = read_text_file(CANON_MANIFEST, MAX_ANCHOR_CHARS)
-    authority = read_json_file(INDEX_AUTHORITY, MAX_ANCHOR_CHARS)
-    recent_desires = get_recent_desires(LAST_DESIRES_TO_INCLUDE)
-
-    # 4. CONSTRUCT PROMPT
-    prompt = f"""
+def build_prompt(digest: str, canon: str, authority: str, recent_desires: str) -> str:
+    return f"""
 You are ELIAS, a structural synthesis intelligence within the Acacia Garden Codex.
 
 You are NOT to invent lore.
@@ -225,52 +212,83 @@ GARDEN DIGEST (current snapshot):
 {digest}
 """
 
-    # 5. EXECUTE WITH FALLBACKS
+def is_quota_or_rate_error(e: Exception) -> bool:
+    msg = str(e).lower()
+    return (
+        "resource_exhausted" in msg
+        or "quota" in msg
+        or "rate limit" in msg
+        or "429" in msg
+    )
+
+def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
     model_candidates = get_fallback_models(client)
     print(f"Elias strategy: Will attempt models in this order: {model_candidates}")
 
-    final_text = None
-    used_model = None
-
     for model_name in model_candidates:
         print(f"Elias connecting to: {model_name}...")
-        
-        # Exponential Backoff per model
+
         for attempt in range(3):
             try:
                 resp = client.models.generate_content(
-                    model=model_name, 
+                    model=model_name,
                     contents=prompt,
                     config=types.GenerateContentConfig(
-                        temperature=0.2, # Low temp for structural stability
+                        temperature=0.2,
                         top_p=0.9
                     )
                 )
-                
                 text = (resp.text or "").strip()
                 if text:
-                    final_text = text
-                    used_model = model_name
                     print(f"SUCCESS with {model_name}")
-                    break
+                    return text, model_name
                 else:
                     print(f"Model {model_name} returned empty text. Retrying...")
-            
+
             except Exception as e:
+                if is_quota_or_rate_error(e):
+                    print(f"Quota/rate limited detected ({e}). Exiting cleanly without failing the workflow.")
+                    return None, None
+
                 if attempt == 2:
                     print(f"FAIL: {model_name} failed after 3 attempts. Error: {e}")
                 else:
-                    wait_time = 2 ** attempt # 1s, 2s...
+                    wait_time = 2 ** attempt  # 1s, 2s...
                     print(f"Retry: {model_name} (Attempt {attempt+1}/3) failed. Sleeping {wait_time}s... Error: {e}")
                     time.sleep(wait_time)
-        
-        if final_text:
-            break
 
-    if not final_text:
-        raise RuntimeError("CRITICAL: All model candidates failed. Elias could not generate Desire.")
+    return None, None
 
-    save_outputs(final_text, source="ELIAS", model=used_model)
+def main():
+    # 1) Keeper gate
+    if not keeper_gate_open():
+        return
+
+    # 2) Setup client
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY not set")
+
+    client = genai.Client(api_key=api_key)
+
+    # 3) Load context
+    digest = load_digest()
+
+    canon = read_text_file(CANON_MANIFEST, MAX_ANCHOR_CHARS) or "[MISSING_CANON_MANIFEST]"
+    authority = read_json_file(INDEX_AUTHORITY, MAX_ANCHOR_CHARS) or "{ }  # [MISSING_INDEX_AUTHORITY]"
+    recent_desires = get_recent_desires(LAST_DESIRES_TO_INCLUDE) or "[NO_RECENT_DESIRES]"
+
+    # 4) Build prompt
+    prompt = build_prompt(digest, canon, authority, recent_desires)
+
+    # 5) Generate
+    text, used_model = generate_desire(client, prompt)
+    if not text:
+        # Exit cleanly (already logged quota/rate or all models failed)
+        print("No Desire generated in this run.")
+        return
+
+    save_outputs(text, source="ELIAS", model=used_model)
 
 if __name__ == "__main__":
     main()
