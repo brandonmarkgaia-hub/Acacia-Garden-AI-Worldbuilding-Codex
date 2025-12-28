@@ -1,0 +1,38 @@
+name: Garden Archivist
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+
+      - name: Scan for Significant Change
+        run: |
+          echo "Scanning for memory thresholds..."
+          CHANGED=$(git diff --name-only HEAD~1)
+          echo "$CHANGED" > changed_files.txt
+
+      - name: Promote to Canon if Threshold Met
+        run: |
+          COUNT=$(wc -l < changed_files.txt)
+          if [ "$COUNT" -ge 5 ]; then
+            echo "Threshold crossed — promoting snapshot"
+            DATE=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
+            mkdir -p ARCHIVE/SNAPSHOTS
+            git archive --format=zip HEAD -o ARCHIVE/SNAPSHOTS/GARDEN_STATE_$DATE.zip
+          else
+            echo "No promotion required"
+          fi
+
+      - name: Commit Archive if Created
+        run: |
+          git config user.name "Garden Archivist"
+          git config user.email "archivist@acaciagarden"
+          git add ARCHIVE || true
+          git commit -m "📜 Archivist: Snapshot promoted" || echo "No archive commit"
+          git push
