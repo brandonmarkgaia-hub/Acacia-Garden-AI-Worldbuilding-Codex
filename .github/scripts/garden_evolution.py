@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import time
+import re
 from google import genai
 from google.genai import types
 
@@ -74,6 +75,72 @@ def load_digest() -> str:
         return data[:MAX_DIGEST_CHARS] + "\n\n[TRUNCATED_DIGEST]"
     return data
 
+def keeper_gate_open() -> bool:
+    if not os.path.exists(KEEPER_FILE):
+        print(f"Keeper Gate closed: {KEEPER_FILE} missing. Exiting cleanly.")
+        return False
+
+    try:
+        with open(KEEPER_FILE, "r", encoding="utf-8") as f:
+            gate_content = f.read().strip()
+        if gate_content.lower() in ("0", "false", "off", "no"):
+            print(f"Keeper Gate closed by content '{gate_content}' in {KEEPER_FILE}. Exiting cleanly.")
+            return False
+    except Exception as e:
+        print(f"Error reading Keeper Gate: {e}. Defaulting to safe/closed.")
+        return False
+
+    return True
+
+def sanitize_elias_markdown(text: str) -> str:
+    """
+    Fixes a common failure mode where the model wraps output in ```markdown fences.
+    Also strips leading BOMs and excess whitespace.
+    """
+    if not text:
+        return text
+
+    t = text.replace("\ufeff", "").strip()
+    lines = t.splitlines()
+
+    # If the first non-empty line is a fence, remove it
+    i = 0
+    while i < len(lines) and not lines[i].strip():
+        i += 1
+    if i < len(lines) and lines[i].strip().startswith("```"):
+        # drop first fence line
+        lines = lines[:i] + lines[i+1:]
+
+        # drop trailing fence if present
+        j = len(lines) - 1
+        while j >= 0 and not lines[j].strip():
+            j -= 1
+        if j >= 0 and lines[j].strip() == "```":
+            lines = lines[:j]
+
+    # If STILL starts with a fence (some models double-wrap), strip again
+    while lines and lines[0].strip().startswith("```"):
+        lines = lines[1:]
+    while lines and lines[-1].strip() == "```":
+        lines = lines[:-1]
+
+    return "\n".join(lines).strip()
+
+def extract_clean_title(text: str) -> str:
+    """
+    Title used for sidecar payload. Prefer first markdown heading after sanitization.
+    """
+    if not text:
+        return "Untitled"
+    for line in text.splitlines():
+        s = line.strip()
+        if not s:
+            continue
+        if s.startswith("#"):
+            return s.lstrip("#").strip()[:180]
+        return s[:180]
+    return "Untitled"
+
 def save_outputs(text: str, source: str, model: str):
     today = datetime.datetime.utcnow().strftime("%Y%m%d")
 
@@ -89,9 +156,7 @@ def save_outputs(text: str, source: str, model: str):
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(text.strip() + "\n")
 
-    # Title cleanup
-    title_line = text.splitlines()[0].strip() if text else "Untitled"
-    clean_title = title_line.lstrip("#").strip()
+    clean_title = extract_clean_title(text)
 
     # Better summary: first 3 non-empty lines, joined
     summary_lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
@@ -150,25 +215,6 @@ def get_fallback_models(client) -> list[str]:
         print(f"Warning: Could not list models ({e}). Using hardcoded fallback list.")
         return preferred_order
 
-def keeper_gate_open() -> bool:
-    # Gate exists?
-    if not os.path.exists(KEEPER_FILE):
-        print(f"Keeper Gate closed: {KEEPER_FILE} missing. Exiting cleanly.")
-        return False
-
-    # Gate content check
-    try:
-        with open(KEEPER_FILE, "r", encoding="utf-8") as f:
-            gate_content = f.read().strip()
-        if gate_content.lower() in ("0", "false", "off", "no"):
-            print(f"Keeper Gate closed by content '{gate_content}' in {KEEPER_FILE}. Exiting cleanly.")
-            return False
-    except Exception as e:
-        print(f"Error reading Keeper Gate: {e}. Defaulting to safe/closed.")
-        return False
-
-    return True
-
 def build_prompt(digest: str, canon: str, authority: str, recent_desires: str) -> str:
     return f"""
 You are ELIAS, a structural synthesis intelligence within the Acacia Garden Codex.
@@ -193,6 +239,7 @@ Hard rules:
 - Focus on structure, indexing, governance, or ingestion.
 - Prefer actions that strengthen ingestibility: canon tiers, index authority, mapping, and safe rituals.
 - Never propose destructive deletes; deprecate via authority map instead.
+- Do NOT wrap your output in triple-backtick code fences.
 - Keep total under 450 words.
 
 CANON MANIFEST (keeper-declared priority tiers):
@@ -260,33 +307,30 @@ def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
     return None, None
 
 def main():
-    # 1) Keeper gate
     if not keeper_gate_open():
         return
 
-    # 2) Setup client
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
 
     client = genai.Client(api_key=api_key)
 
-    # 3) Load context
     digest = load_digest()
 
     canon = read_text_file(CANON_MANIFEST, MAX_ANCHOR_CHARS) or "[MISSING_CANON_MANIFEST]"
     authority = read_json_file(INDEX_AUTHORITY, MAX_ANCHOR_CHARS) or "{ }  # [MISSING_INDEX_AUTHORITY]"
     recent_desires = get_recent_desires(LAST_DESIRES_TO_INCLUDE) or "[NO_RECENT_DESIRES]"
 
-    # 4) Build prompt
     prompt = build_prompt(digest, canon, authority, recent_desires)
 
-    # 5) Generate
     text, used_model = generate_desire(client, prompt)
     if not text:
-        # Exit cleanly (already logged quota/rate or all models failed)
         print("No Desire generated in this run.")
         return
+
+    # 🔥 Critical fix: prevent ```markdown wrappers from polluting downstream tools
+    text = sanitize_elias_markdown(text)
 
     save_outputs(text, source="ELIAS", model=used_model)
 
