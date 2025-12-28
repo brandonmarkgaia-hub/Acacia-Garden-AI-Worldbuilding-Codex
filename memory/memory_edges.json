@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "id": "Chamber_IX",
+      "links": [
+        { "to": "Desire_0031", "type": "emerged_from", "timestamp": "2025-12-28" },
+        { "to": "Bloom_Anya", "type": "reflected_by" }
+      ]
+    }
+  ]
+}
