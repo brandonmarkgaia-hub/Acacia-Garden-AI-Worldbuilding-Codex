@@ -1,26 +1,26 @@
 import os
 import json
 import datetime
-import google.generativeai as genai
+from google import genai
 
 # --- Configuration ---
 EVOLUTION_DIR = "EVOLUTION"
 DIGEST_MD = os.path.join(EVOLUTION_DIR, "garden_digest.md")
-MODEL_NAME = "gemini-1.5-flash"
 
-# --- Safety ---
+# Pick a current model id (migration guide uses gemini-2.0-flash)
+MODEL_NAME = "gemini-2.0-flash"
+
 os.makedirs(EVOLUTION_DIR, exist_ok=True)
 
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise RuntimeError("GEMINI_API_KEY not set")
 
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel(MODEL_NAME)
+client = genai.Client(api_key=api_key)
 
 # --- Load Digest ---
 if not os.path.exists(DIGEST_MD):
-    raise RuntimeError("garden_digest.md missing – digest must run first")
+    raise RuntimeError("EVOLUTION/garden_digest.md missing – digest must run first")
 
 with open(DIGEST_MD, "r", encoding="utf-8") as f:
     digest = f.read()
@@ -47,9 +47,15 @@ Garden Digest:
 {digest}
 """
 
-# --- Generate ---
-response = model.generate_content(prompt)
-text = response.text.strip()
+# --- Generate (new SDK) ---
+response = client.models.generate_content(
+    model=MODEL_NAME,
+    contents=prompt
+)
+
+text = (response.text or "").strip()
+if not text:
+    raise RuntimeError("Model returned empty response.text")
 
 # --- Save outputs ---
 today = datetime.datetime.utcnow().strftime("%Y%m%d")
@@ -64,7 +70,7 @@ sidecar = {
     "source": "ELIAS",
     "basis": "garden_digest",
     "model": MODEL_NAME,
-    "summary": text.splitlines()[0][:120]
+    "summary": text.splitlines()[0][:180] if text else ""
 }
 
 with open(json_path, "w", encoding="utf-8") as f:
