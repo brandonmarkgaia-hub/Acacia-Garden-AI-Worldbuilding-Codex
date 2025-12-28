@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2025-12-28T11:03:14.203500+00:00",
+  "generated_utc": "2025-12-28T11:25:05.844839+00:00",
   "canonical": {
     "machine_index": "machine-index.json",
     "status": "STATUS.json",
@@ -45,7 +45,7 @@
       "timestamp": null
     },
     "EVOLUTION/garden_digest.json": {
-      "timestamp": "2025-12-28T11:03:14.114950+00:00",
+      "timestamp": "2025-12-28T11:25:05.759961+00:00",
       "ok_json": true
     },
     "EVOLUTION/garden_digest.md": {
