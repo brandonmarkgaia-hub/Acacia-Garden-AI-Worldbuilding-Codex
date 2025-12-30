@@ -1,0 +1,118 @@
+name: Garden Maintenance (Safe)
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        description: "How deep to run"
+        required: true
+        default: "safe"
+        type: choice
+        options:
+          - safe        # indexes + html injection + urls
+          - full        # safe + echoes/issues sync + analytics (if present)
+          - monolith    # monolith-only heavy build (manual)
+
+concurrency:
+  group: garden-maintenance
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install requirements (if present)
+        run: |
+          if [ -f ".github/scripts/requirements.txt" ]; then
+            pip install -r .github/scripts/requirements.txt
+          else
+            pip install -U pip
+          fi
+
+      # --- SAFE CORE: do these every time ---
+      - name: Build/refresh Garden index (safe)
+        run: |
+          if [ -f ".github/scripts/build_garden_index.py" ]; then
+            python .github/scripts/build_garden_index.py
+          elif [ -f ".github/scripts/garden_index.py" ]; then
+            python .github/scripts/garden_index.py
+          else
+            echo "No garden index script found — skipping"
+          fi
+
+      - name: Inject/Harmonize HTML nav (safe)
+        run: |
+          if [ -f ".github/scripts/nav_inject.py" ]; then
+            python .github/scripts/nav_inject.py
+          elif [ -f ".github/scripts/harmonize_nav.py" ]; then
+            python .github/scripts/harmonize_nav.py
+          else
+            echo "No nav inject script found — skipping"
+          fi
+
+      - name: Build docs URL dump (safe)
+        run: |
+          if [ -f ".github/scripts/build_docs_url_dump.py" ]; then
+            python .github/scripts/build_docs_url_dump.py
+          else
+            echo "No docs url dump script found — skipping"
+          fi
+
+      # --- FULL LEVEL: only when selected ---
+      - name: Echoes / issue sync (full)
+        if: ${{ github.event.inputs.level == 'full' }}
+        run: |
+          if [ -f ".github/scripts/import_issue_echoes.py" ]; then
+            python .github/scripts/import_issue_echoes.py
+          else
+            echo "No issue->echoes script found — skipping"
+          fi
+
+      - name: Traffic analytics (full)
+        if: ${{ github.event.inputs.level == 'full' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f ".github/scripts/traffic_analytics.py" ]; then
+            python .github/scripts/traffic_analytics.py
+          else
+            echo "No traffic analytics script found — skipping"
+          fi
+
+      # --- MONOLITH LEVEL: heavy build only ---
+      - name: Mega Monolith build (monolith)
+        if: ${{ github.event.inputs.level == 'monolith' }}
+        run: |
+          if [ -f ".github/scripts/mega_monolith.py" ]; then
+            python .github/scripts/mega_monolith.py
+          else
+            echo "No mega monolith script found — skipping"
+          fi
+
+      # --- Commit once, at the end ---
+      - name: Commit changes (single commit)
+        run: |
+          git config user.name "garden-maintenance-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Index/Nav refresh (Garden Maintenance)"
+          git push
