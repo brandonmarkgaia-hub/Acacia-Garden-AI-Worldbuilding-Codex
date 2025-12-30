@@ -1,17 +1,17 @@
-name: Garden Maintenance (Safe)
+name: Garden Maintenance (Single Safe Run)
 
 on:
   workflow_dispatch:
     inputs:
       level:
-        description: "How deep to run"
+        description: "Run level"
         required: true
         default: "safe"
         type: choice
         options:
-          - safe        # indexes + html injection + urls
-          - full        # safe + echoes/issues sync + analytics (if present)
-          - monolith    # monolith-only heavy build (manual)
+          - safe
+          - full
+          - monolith
 
 concurrency:
   group: garden-maintenance
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -36,83 +36,48 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install requirements (if present)
+      - name: Install Python deps (if any)
         run: |
+          pip install --upgrade pip
           if [ -f ".github/scripts/requirements.txt" ]; then
             pip install -r .github/scripts/requirements.txt
-          else
-            pip install -U pip
           fi
 
-      # --- SAFE CORE: do these every time ---
-      - name: Build/refresh Garden index (safe)
-        run: |
-          if [ -f ".github/scripts/build_garden_index.py" ]; then
-            python .github/scripts/build_garden_index.py
-          elif [ -f ".github/scripts/garden_index.py" ]; then
-            python .github/scripts/garden_index.py
-          else
-            echo "No garden index script found — skipping"
-          fi
+      # ---------- SAFE CORE ----------
+      - name: Garden Brain (safe AI)
+        run: python .github/scripts/garden_brain.py
 
-      - name: Inject/Harmonize HTML nav (safe)
-        run: |
-          if [ -f ".github/scripts/nav_inject.py" ]; then
-            python .github/scripts/nav_inject.py
-          elif [ -f ".github/scripts/harmonize_nav.py" ]; then
-            python .github/scripts/harmonize_nav.py
-          else
-            echo "No nav inject script found — skipping"
-          fi
+      - name: Garden Vision (safe AI)
+        run: python .github/scripts/garden_vision.py
 
-      - name: Build docs URL dump (safe)
-        run: |
-          if [ -f ".github/scripts/build_docs_url_dump.py" ]; then
-            python .github/scripts/build_docs_url_dump.py
-          else
-            echo "No docs url dump script found — skipping"
-          fi
-
-      # --- FULL LEVEL: only when selected ---
-      - name: Echoes / issue sync (full)
+      # ---------- FULL ----------
+      - name: Garden Evolution (full AI)
         if: ${{ github.event.inputs.level == 'full' }}
-        run: |
-          if [ -f ".github/scripts/import_issue_echoes.py" ]; then
-            python .github/scripts/import_issue_echoes.py
-          else
-            echo "No issue->echoes script found — skipping"
-          fi
+        run: python .github/scripts/garden_evolution.py
 
-      - name: Traffic analytics (full)
+      - name: Normalize issue titles (full)
         if: ${{ github.event.inputs.level == 'full' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if [ -f ".github/scripts/traffic_analytics.py" ]; then
-            python .github/scripts/traffic_analytics.py
-          else
-            echo "No traffic analytics script found — skipping"
-          fi
+        run: python .github/scripts/normalize_issue_titles.py
 
-      # --- MONOLITH LEVEL: heavy build only ---
-      - name: Mega Monolith build (monolith)
+      # ---------- MONOLITH ----------
+      - name: Mega Monolith Build
         if: ${{ github.event.inputs.level == 'monolith' }}
         run: |
           if [ -f ".github/scripts/mega_monolith.py" ]; then
             python .github/scripts/mega_monolith.py
           else
-            echo "No mega monolith script found — skipping"
+            echo "No mega_monolith.py found — skipping"
           fi
 
-      # --- Commit once, at the end ---
-      - name: Commit changes (single commit)
+      # ---------- COMMIT ONCE ----------
+      - name: Commit changes
         run: |
           git config user.name "garden-maintenance-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes to commit"
             exit 0
           fi
-          git commit -m "Index/Nav refresh (Garden Maintenance)"
+          git commit -m "Garden maintenance run"
           git push
