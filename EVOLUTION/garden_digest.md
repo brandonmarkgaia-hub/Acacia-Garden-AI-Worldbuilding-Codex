@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2025-12-29T03:52:30.511936+00:00**
-- Total files: **2204**
-- Anchor fingerprint (sha1): `c1699e7f015757d9c5e80727a411ea31dbf7459f`
+- Generated (UTC): **2025-12-30T03:40:47.188666+00:00**
+- Total files: **2218**
+- Anchor fingerprint (sha1): `1393a4c0063935c011c2c2d8d2a6eeb1c849fc9f`
 
 ## Key anchors
 
@@ -30,7 +30,7 @@
 - `docs/`: **1339 files**
 - `EVOLUTION/`: **24 files**
 - `ACACIA_SPECS/`: **10 files**
-- `ACACIA_LOGS/`: **26 files**
+- `ACACIA_LOGS/`: **27 files**
 - `ENTITIES/`: **15 files**
 - `ledger/`: **13 files**
 - `logs/`: **7 files**
@@ -38,9 +38,9 @@
 
 ## Top file extensions (by count)
 
-- `.md`: **1638**
+- `.md`: **1651**
 - `.html`: **201**
-- `.json`: **140**
+- `.json`: **141**
 - `.py`: **80**
 - `.png`: **76**
 - `.js`: **16**
@@ -90,31 +90,31 @@
 
 - `triad_alignment.js`
 - `validate.js`
-- `whisper/README.md`
-- `whisper/.keep`
-- `triad/thresholds.md`
-- `tools/singularity_weaver.py`
-- `tools/root_manifest_generator.py`
-- `tools/reflection-log.json`
-- `tools/splitter.py`
-- `tools/omni_resonance_synchronizer.py`
-- `tools/metabolic_mirror.py`
-- `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
-- `tools/resonance_mirror.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
-- `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
-- `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
+- `whisper/README.md`
+- `whisper/.keep`
 - `triad/empty-seat.md`
+- `triad/thresholds.md`
 - `triad/README_BOUNDARY.md`
-- `tools/garden_helper_20251129_061952.py`
-- `tools/garden_helper_20251129_133039.py`
+- `tools/singularity_weaver.py`
+- `tools/root_manifest_generator.py`
+- `tools/reflection-log.json`
 - `tools/garden_void_loom.py`
-- `tools/garden_helper_20251129_010259.py`
+- `tools/splitter.py`
+- `tools/omni_resonance_synchronizer.py`
 - `tools/generate_garden_index.py`
-- `tools/garden_helper_20251129_122556.py`
+- `tools/metabolic_mirror.py`
+- `tools/soma_synaptic_weaver.py`
+- `tools/garden_signature_scanner.py`
+- `tools/resonance_mirror.py`
+- `tools/ghost_root_synchronizer.py`
+- `tools/garden_vault_indexer.py`
+- `tools/machine-index.json`
+- `tools/sovereignty_anchor.py`
+- `tools/garden_lore_helper.py`
