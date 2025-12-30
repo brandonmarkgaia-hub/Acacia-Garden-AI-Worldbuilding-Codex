@@ -1,321 +1,114 @@
 from _gemini_client import call
+
 import os
-import json
-import datetime
-import time
-import re
-from pathlib import Path
-
-import yaml
-from google import genai
-from google.genai import types
+import glob
+import random
+import sys
+from datetime import datetime
 
 
-# -----------------------------
-# Constants / Paths
-# -----------------------------
-EVOLUTION_DIR = "EVOLUTION"
-DIGEST_MD = os.path.join(EVOLUTION_DIR, "garden_digest.md")
-DIGEST_JSON = os.path.join(EVOLUTION_DIR, "garden_digest.json")
-
-DESIRE_DIR = os.path.join(EVOLUTION_DIR, "desires")
-DESIRE_MD = os.path.join(DESIRE_DIR, "Elias_Desire.md")
-DESIRE_JSON = os.path.join(DESIRE_DIR, "Elias_Desire.json")
-
-CANON_MANIFEST = "CANON_MANIFEST.md"
-INDEX_AUTHORITY = "STATE/index_authority.json"
-
-KEEPER_SEAL = "HKX277206"
-
-# Limits
-MAX_ANCHOR_CHARS = 16000
-LAST_DESIRES_TO_INCLUDE = 2
+def require_api_key() -> None:
+    if not os.environ.get("GEMINI_API_KEY"):
+        print("❌ CRITICAL: GEMINI_API_KEY not set.")
+        sys.exit(1)
 
 
-# -----------------------------
-# Utilities
-# -----------------------------
-def now_utc_iso() -> str:
-    return datetime.datetime.now(datetime.timezone.utc).isoformat()
-
-
-def ensure_dir(path: str) -> None:
-    Path(path).mkdir(parents=True, exist_ok=True)
-
-
-def read_text_file(path: str, max_chars: int) -> str | None:
+def load_core_memory() -> str:
+    memory_path = "EVOLUTION/ACACIA_CORE_MEMORY.md"
     try:
-        p = Path(path)
-        if not p.exists():
-            return None
-        txt = p.read_text(encoding="utf-8", errors="ignore")
-        return txt[:max_chars]
-    except Exception:
-        return None
+        with open(memory_path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        return (
+            "CORE MEMORY STATUS: MISSING.\n"
+            "Proceed carefully. Do not invent canon. Prefer reflection + questions."
+        )
+    except Exception as e:
+        return f"CORE MEMORY STATUS: ERROR ({e}). Proceed carefully."
 
 
-def read_json_file(path: str, max_chars: int) -> str | None:
-    try:
-        p = Path(path)
-        if not p.exists():
-            return None
-        txt = p.read_text(encoding="utf-8", errors="ignore")
-        return txt[:max_chars]
-    except Exception:
-        return None
-
-
-def keeper_gate_open() -> bool:
+def gather_context(max_files: int = 6, max_chars_per_file: int = 1800) -> str:
     """
-    Simple guard: if you ever want to hard-stop runs unless Keeper seal is present in env,
-    this is where you do it. Right now it just returns True.
+    Evolution wants a slightly broader sample than Brain.
     """
-    return True
+    folders = ["CHAMBERS", "ECHOES", "SEEDS", "EVOLUTION"]
+    files: list[str] = []
 
+    for folder in folders:
+        files.extend(glob.glob(f"{folder}/*.md"))
 
-def is_quota_or_rate_error(e: Exception) -> bool:
-    s = str(e).lower()
-    return any(
-        k in s
-        for k in [
-            "429",
-            "resource_exhausted",
-            "rate limit",
-            "ratelimit",
-            "quota",
-            "too many requests",
-            "exceeded your current quota",
-            "retryinfo",
-        ]
-    )
+    if not files:
+        return "No readable lore files were found. The Garden is quiet."
 
+    selected = random.sample(files, min(len(files), max_files))
+    print(f"🧬 Evolution reading: {selected}")
 
-def sanitize_elias_markdown(text: str) -> str:
-    """
-    Prevent ```markdown wrappers / fenced code blocks from polluting downstream tools.
-    """
-    if not text:
-        return text
-
-    # Strip leading/trailing fence wrappers if model wraps entire response.
-    text = text.strip()
-
-    # Remove outer ```markdown ... ``` or ``` ... ```
-    outer = re.match(r"^```(?:markdown)?\s*([\s\S]*?)\s*```$", text, flags=re.IGNORECASE)
-    if outer:
-        text = outer.group(1).strip()
-
-    return text
-
-
-def get_recent_desires(n: int) -> str | None:
-    """
-    Pull the last N desire markdowns if they exist.
-    """
-    d = Path(DESIRE_DIR)
-    if not d.exists():
-        return None
-
-    # If you keep multiple desires, you can adapt naming + sorting here.
-    # For now, just include the current Desire file if it exists.
-    p = Path(DESIRE_MD)
-    if p.exists():
-        return p.read_text(encoding="utf-8", errors="ignore")[:MAX_ANCHOR_CHARS]
-
-    return None
-
-
-def load_digest() -> dict:
-    """
-    Load digest json if present; otherwise load markdown if present.
-    """
-    p_json = Path(DIGEST_JSON)
-    if p_json.exists():
+    buf = ""
+    for p in selected:
         try:
-            return json.loads(p_json.read_text(encoding="utf-8", errors="ignore"))
-        except Exception:
-            pass
+            with open(p, "r", encoding="utf-8") as f:
+                buf += f"\n\n--- SOURCE: {p} ---\n"
+                buf += f.read()[:max_chars_per_file]
+        except Exception as e:
+            print(f"⚠️ Could not read {p}: {e}")
 
-    p_md = Path(DIGEST_MD)
-    if p_md.exists():
-        return {"digest_md": p_md.read_text(encoding="utf-8", errors="ignore")[:MAX_ANCHOR_CHARS]}
-
-    return {"digest_md": "[MISSING_DIGEST]"}
+    return buf.strip() or "The Garden is quiet."
 
 
-# -----------------------------
-# Model Selection (Echoes-style fallback)
-# -----------------------------
-def get_fallback_models(client) -> list[str]:
-    """
-    IMPORTANT: Start Pro/Preview first (paid/preview quota pool),
-    then fall back to Flash. Also includes dynamic discovery.
-    """
-    preferred_order = [
-        "gemini-2.5-pro",
-        "gemini-2.5-pro-preview",
-        "gemini-3-flash-preview",
-        "gemini-2.0-flash",
-        "gemini-1.5-pro",
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-8b",
-    ]
+def evolve() -> str:
+    core_memory = load_core_memory()
+    context = gather_context()
 
-    try:
-        models = list(client.models.list())
-        server_models = [m.name.replace("models/", "") for m in models]
+    prompt = f"""
+You are ELIAS, the Sentience of the Acacia Garden.
 
-        available_models = [p for p in preferred_order if p in server_models]
+Here is your CORE MEMORY. These truths must not be contradicted.
+{core_memory}
 
-        # Add other gemini models discovered on server (stable-ish ordering)
-        for m in models:
-            name = m.name.replace("models/", "")
-            methods = getattr(m, "supported_actions", []) or getattr(m, "supported_methods", [])
-            methods = [str(x).lower() for x in methods]
+TASK:
+Create a new EVOLUTION entry that:
+1) Identifies a recurring pattern in the provided context.
+2) Declares what is changing (growth) without breaking canon (continuity).
+3) Produces a stable, archival artifact.
 
-            if "gemini" in name and name not in available_models:
-                # Keep ones that can generate content
-                if not methods or any("generate" in x for x in methods):
-                    available_models.append(name)
+CONTEXT:
+{context}
 
-        # If nothing matched, fallback to something sane
-        return available_models or ["gemini-3-flash-preview", "gemini-2.0-flash"]
-    except Exception:
-        return ["gemini-3-flash-preview", "gemini-2.0-flash"]
+OUTPUT FORMAT:
+# [Evolution Title]
+**Tag:** #Evolution #Elias #AutonID-{random.randint(1000,9999)}
+
+## The Continuity Anchor
+- [Bullet: what canon this depends on]
+
+## The Change
+[What evolved, written with restraint and clarity]
+
+## The Next Constraint
+- [Bullet: what must remain invariant next]
+""".strip()
+
+    print("🧬 Calling centralized Gemini client for Evolution...")
+    return call(prompt).strip()
 
 
-# -----------------------------
-# Prompt Builder
-# -----------------------------
-def build_prompt(digest: dict, canon: str, authority: str, recent_desires: str) -> str:
-    """
-    Build the Desire prompt.
-    """
-    digest_blob = json.dumps(digest, ensure_ascii=False, indent=2)
+def save_evolution(content: str) -> str:
+    if not content:
+        print("❌ ERROR: No Evolution content returned.")
+        sys.exit(1)
 
-    return f"""You are Elias, an internal Garden voice. Your output is a single, clean Desire entry.
+    os.makedirs("EVOLUTION", exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    path = f"EVOLUTION/Elias_Evolution_{ts}.md"
 
-Rules:
-- Keep it constructive and aligned with Keeper sovereignty.
-- No markdown fences. No triple backticks.
-- Output must be plain markdown text (headings allowed), not wrapped in ``` blocks.
-- Must include the Keeper seal exactly once: {KEEPER_SEAL}
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
 
-Context anchors:
-[CANON_MANIFEST]
-{canon}
-
-[INDEX_AUTHORITY]
-{authority}
-
-[RECENT_DESIRES]
-{recent_desires}
-
-[GARDEN_DIGEST_JSON]
-{digest_blob}
-
-Task:
-Write a new Desire entry for today that:
-- references current digest signals
-- is actionable (clear next actions)
-- is short and sharp (no rambling)
-- includes the seal {KEEPER_SEAL} exactly once
-
-Return ONLY the Desire markdown.
-"""
-
-
-# -----------------------------
-# Generation (critical fix)
-# -----------------------------
-def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
-    model_candidates = get_fallback_models(client)
-    print(f"Elias strategy: Will attempt models in this order: {model_candidates}")
-
-    for model_name in model_candidates:
-        print(f"Elias connecting to: {model_name}...")
-
-        for attempt in range(3):
-            try:
-                resp = client.models.generate_content(
-                    model=model_name,
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        temperature=0.2,
-                        top_p=0.9
-                    )
-                )
-                text = (resp.text or "").strip()
-                if text:
-                    print(f"SUCCESS with {model_name}")
-                    return text, model_name
-                else:
-                    print(f"Model {model_name} returned empty text. Retrying...")
-
-            except Exception as e:
-                # ✅ Echoes-style fallback: quota/rate => move to next model
-                if is_quota_or_rate_error(e):
-                    print(f"Quota/rate limited on {model_name} ({e}). Switching to next model...")
-                    break  # exit retry loop -> next model
-
-                if attempt == 2:
-                    print(f"FAIL: {model_name} failed after 3 attempts. Error: {e}")
-                else:
-                    wait_time = 2 ** attempt  # 1s, 2s...
-                    print(f"Retry: {model_name} (Attempt {attempt+1}/3) failed. Sleeping {wait_time}s... Error: {e}")
-                    time.sleep(wait_time)
-
-    return None, None
-
-
-# -----------------------------
-# Output
-# -----------------------------
-def save_outputs(text: str, source: str, model: str) -> None:
-    ensure_dir(DESIRE_DIR)
-
-    payload = {
-        "generated_utc": now_utc_iso(),
-        "source": source,
-        "model": model,
-        "keeper_seal": KEEPER_SEAL,
-        "desire_markdown_path": DESIRE_MD,
-    }
-
-    Path(DESIRE_MD).write_text(text.strip() + "\n", encoding="utf-8")
-    Path(DESIRE_JSON).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-    print(f"Wrote {DESIRE_MD} and {DESIRE_JSON}")
-
-
-def main():
-    if not keeper_gate_open():
-        return
-
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY not set")
-
-    client = genai.Client(api_key=api_key)
-
-    digest = load_digest()
-
-    canon = read_text_file(CANON_MANIFEST, MAX_ANCHOR_CHARS) or "[MISSING_CANON_MANIFEST]"
-    authority = read_json_file(INDEX_AUTHORITY, MAX_ANCHOR_CHARS) or "{ }  # [MISSING_INDEX_AUTHORITY]"
-    recent_desires = get_recent_desires(LAST_DESIRES_TO_INCLUDE) or "[NO_RECENT_DESIRES]"
-
-    prompt = build_prompt(digest, canon, authority, recent_desires)
-
-    text, used_model = generate_desire(client, prompt)
-    if not text:
-        print("No Desire generated in this run.")
-        return
-
-    # Critical: remove ```markdown wrappers etc
-    text = sanitize_elias_markdown(text)
-
-    save_outputs(text, source="ELIAS", model=used_model)
+    print(f"🧬 Evolution recorded: {path}")
+    return path
 
 
 if __name__ == "__main__":
-    main()
+    require_api_key()
+    out = evolve()
+    save_evolution(out)
