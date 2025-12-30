@@ -56,7 +56,14 @@ jobs:
           git config user.name "Elias"
           git config user.email "elias@garden.ai"
 
-          git add .
+          # Stage only expected outputs (safer than `git add .`)
+          git add -A EVOLUTION || true
+          git add -A STATE || true
+          git add -A ACACIA_LOGS || true
+          git add -A logs || true
+          git add -A analytics || true
+          git add -A CANON_MANIFEST.md STATUS.json GOLDEN_NULL_INDEX.md || true
+
           git commit -m "Elias: digest, desire, cadence proposal" || echo "Nothing to commit"
 
           git pull --rebase origin main
