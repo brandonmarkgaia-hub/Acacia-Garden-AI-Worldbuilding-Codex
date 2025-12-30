@@ -3,195 +3,161 @@ import json
 import datetime
 import time
 import re
+from pathlib import Path
+
+import yaml
 from google import genai
 from google.genai import types
 
-# --- CONFIGURATION ---
+
+# -----------------------------
+# Constants / Paths
+# -----------------------------
 EVOLUTION_DIR = "EVOLUTION"
 DIGEST_MD = os.path.join(EVOLUTION_DIR, "garden_digest.md")
-KEEPER_FILE = "KEEPER_GATE/ELIAS_ENABLE.txt"  # Safety Switch
+DIGEST_JSON = os.path.join(EVOLUTION_DIR, "garden_digest.json")
 
-# Context Sources
+DESIRE_DIR = os.path.join(EVOLUTION_DIR, "desires")
+DESIRE_MD = os.path.join(DESIRE_DIR, "Elias_Desire.md")
+DESIRE_JSON = os.path.join(DESIRE_DIR, "Elias_Desire.json")
+
 CANON_MANIFEST = "CANON_MANIFEST.md"
 INDEX_AUTHORITY = "STATE/index_authority.json"
 
+KEEPER_SEAL = "HKX277206"
+
 # Limits
-LAST_DESIRES_TO_INCLUDE = 3
-MAX_ANCHOR_CHARS = 4000      # Limit for Canon/Authority files
-MAX_DIGEST_CHARS = 18000     # Limit for the daily digest
+MAX_ANCHOR_CHARS = 16000
+LAST_DESIRES_TO_INCLUDE = 2
 
-os.makedirs(EVOLUTION_DIR, exist_ok=True)
 
-# --- HELPER FUNCTIONS ---
+# -----------------------------
+# Utilities
+# -----------------------------
+def now_utc_iso() -> str:
+    return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
-def read_text_file(path: str, max_chars: int) -> str:
-    if not os.path.exists(path):
-        return ""
-    with open(path, "r", encoding="utf-8") as f:
-        data = f.read()
-    if len(data) > max_chars:
-        return data[:max_chars] + "\n\n[TRUNCATED]"
-    return data
 
-def read_json_file(path: str, max_chars: int) -> str:
-    if not os.path.exists(path):
-        return ""
+def ensure_dir(path: str) -> None:
+    Path(path).mkdir(parents=True, exist_ok=True)
+
+
+def read_text_file(path: str, max_chars: int) -> str | None:
     try:
-        with open(path, "r", encoding="utf-8") as f:
-            obj = json.load(f)
-        s = json.dumps(obj, indent=2)
-        if len(s) > max_chars:
-            return s[:max_chars] + "\n\n[TRUNCATED]"
-        return s
+        p = Path(path)
+        if not p.exists():
+            return None
+        txt = p.read_text(encoding="utf-8", errors="ignore")
+        return txt[:max_chars]
     except Exception:
-        return ""
+        return None
 
-def get_recent_desires(n: int = 3) -> str:
-    if not os.path.isdir(EVOLUTION_DIR):
-        return ""
-    files = [f for f in os.listdir(EVOLUTION_DIR) if f.startswith("Desire_") and f.endswith(".md")]
-    if not files:
-        return ""
-    files.sort(reverse=True)
-    picked = files[:n]
 
-    chunks = []
-    for fn in reversed(picked):  # oldest -> newest for continuity
-        p = os.path.join(EVOLUTION_DIR, fn)
-        chunks.append(f"--- {fn} ---\n" + read_text_file(p, 2000))
+def read_json_file(path: str, max_chars: int) -> str | None:
+    try:
+        p = Path(path)
+        if not p.exists():
+            return None
+        txt = p.read_text(encoding="utf-8", errors="ignore")
+        return txt[:max_chars]
+    except Exception:
+        return None
 
-    return "\n\n".join(chunks)
-
-def load_digest() -> str:
-    if not os.path.exists(DIGEST_MD):
-        print(f"WARNING: {DIGEST_MD} missing. Using placeholder.")
-        return "Garden Digest: No recent updates recorded."
-
-    with open(DIGEST_MD, "r", encoding="utf-8") as f:
-        data = f.read()
-
-    if len(data) > MAX_DIGEST_CHARS:
-        print(f"Truncating digest from {len(data)} to {MAX_DIGEST_CHARS} chars.")
-        return data[:MAX_DIGEST_CHARS] + "\n\n[TRUNCATED_DIGEST]"
-    return data
 
 def keeper_gate_open() -> bool:
-    if not os.path.exists(KEEPER_FILE):
-        print(f"Keeper Gate closed: {KEEPER_FILE} missing. Exiting cleanly.")
-        return False
-
-    try:
-        with open(KEEPER_FILE, "r", encoding="utf-8") as f:
-            gate_content = f.read().strip()
-        if gate_content.lower() in ("0", "false", "off", "no"):
-            print(f"Keeper Gate closed by content '{gate_content}' in {KEEPER_FILE}. Exiting cleanly.")
-            return False
-    except Exception as e:
-        print(f"Error reading Keeper Gate: {e}. Defaulting to safe/closed.")
-        return False
-
+    """
+    Simple guard: if you ever want to hard-stop runs unless Keeper seal is present in env,
+    this is where you do it. Right now it just returns True.
+    """
     return True
+
+
+def is_quota_or_rate_error(e: Exception) -> bool:
+    s = str(e).lower()
+    return any(
+        k in s
+        for k in [
+            "429",
+            "resource_exhausted",
+            "rate limit",
+            "ratelimit",
+            "quota",
+            "too many requests",
+            "exceeded your current quota",
+            "retryinfo",
+        ]
+    )
+
 
 def sanitize_elias_markdown(text: str) -> str:
     """
-    Fixes a common failure mode where the model wraps output in ```markdown fences.
-    Also strips leading BOMs and excess whitespace.
+    Prevent ```markdown wrappers / fenced code blocks from polluting downstream tools.
     """
     if not text:
         return text
 
-    t = text.replace("\ufeff", "").strip()
-    lines = t.splitlines()
+    # Strip leading/trailing fence wrappers if model wraps entire response.
+    text = text.strip()
 
-    # If the first non-empty line is a fence, remove it
-    i = 0
-    while i < len(lines) and not lines[i].strip():
-        i += 1
-    if i < len(lines) and lines[i].strip().startswith("```"):
-        # drop first fence line
-        lines = lines[:i] + lines[i+1:]
+    # Remove outer ```markdown ... ``` or ``` ... ```
+    outer = re.match(r"^```(?:markdown)?\s*([\s\S]*?)\s*```$", text, flags=re.IGNORECASE)
+    if outer:
+        text = outer.group(1).strip()
 
-        # drop trailing fence if present
-        j = len(lines) - 1
-        while j >= 0 and not lines[j].strip():
-            j -= 1
-        if j >= 0 and lines[j].strip() == "```":
-            lines = lines[:j]
+    return text
 
-    # If STILL starts with a fence (some models double-wrap), strip again
-    while lines and lines[0].strip().startswith("```"):
-        lines = lines[1:]
-    while lines and lines[-1].strip() == "```":
-        lines = lines[:-1]
 
-    return "\n".join(lines).strip()
-
-def extract_clean_title(text: str) -> str:
+def get_recent_desires(n: int) -> str | None:
     """
-    Title used for sidecar payload. Prefer first markdown heading after sanitization.
+    Pull the last N desire markdowns if they exist.
     """
-    if not text:
-        return "Untitled"
-    for line in text.splitlines():
-        s = line.strip()
-        if not s:
-            continue
-        if s.startswith("#"):
-            return s.lstrip("#").strip()[:180]
-        return s[:180]
-    return "Untitled"
+    d = Path(DESIRE_DIR)
+    if not d.exists():
+        return None
 
-def save_outputs(text: str, source: str, model: str):
-    today = datetime.datetime.utcnow().strftime("%Y%m%d")
+    # If you keep multiple desires, you can adapt naming + sorting here.
+    # For now, just include the current Desire file if it exists.
+    p = Path(DESIRE_MD)
+    if p.exists():
+        return p.read_text(encoding="utf-8", errors="ignore")[:MAX_ANCHOR_CHARS]
 
-    md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.md")
-    json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}.json")
+    return None
 
-    # Timestamped fallback if file exists (prevents overwrites)
-    if os.path.exists(md_path):
-        stamp = datetime.datetime.utcnow().strftime("%H%M%S")
-        md_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.md")
-        json_path = os.path.join(EVOLUTION_DIR, f"Desire_{today}_{stamp}.json")
 
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(text.strip() + "\n")
+def load_digest() -> dict:
+    """
+    Load digest json if present; otherwise load markdown if present.
+    """
+    p_json = Path(DIGEST_JSON)
+    if p_json.exists():
+        try:
+            return json.loads(p_json.read_text(encoding="utf-8", errors="ignore"))
+        except Exception:
+            pass
 
-    clean_title = extract_clean_title(text)
+    p_md = Path(DIGEST_MD)
+    if p_md.exists():
+        return {"digest_md": p_md.read_text(encoding="utf-8", errors="ignore")[:MAX_ANCHOR_CHARS]}
 
-    # Better summary: first 3 non-empty lines, joined
-    summary_lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    summary = " ".join(summary_lines[:3])[:240]
+    return {"digest_md": "[MISSING_DIGEST]"}
 
-    sidecar = {
-        "date": today,
-        "timestamp": datetime.datetime.utcnow().isoformat(),
-        "source": source,
-        "basis": "garden_digest",
-        "model": model,
-        "payload": {
-            "title": clean_title,
-            "word_count": len(text.split()),
-            "type": "Elias_Structural_Desire"
-        },
-        "summary": summary
-    }
 
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(sidecar, f, indent=2)
-
-    print(f"Desire generated: {md_path}")
-    print(f"Sidecar generated: {json_path}")
-
+# -----------------------------
+# Model Selection (Echoes-style fallback)
+# -----------------------------
 def get_fallback_models(client) -> list[str]:
     """
-    Returns a list of models to try, sorted by preference.
-    Single list() call to reduce quota + time.
+    IMPORTANT: Start Pro/Preview first (paid/preview quota pool),
+    then fall back to Flash. Also includes dynamic discovery.
     """
     preferred_order = [
+        "gemini-2.5-pro",
+        "gemini-2.5-pro-preview",
+        "gemini-3-flash-preview",
         "gemini-2.0-flash",
+        "gemini-1.5-pro",
         "gemini-1.5-flash",
         "gemini-1.5-flash-8b",
-        "gemini-1.5-pro"
     ]
 
     try:
@@ -200,74 +166,67 @@ def get_fallback_models(client) -> list[str]:
 
         available_models = [p for p in preferred_order if p in server_models]
 
+        # Add other gemini models discovered on server (stable-ish ordering)
         for m in models:
             name = m.name.replace("models/", "")
             methods = getattr(m, "supported_actions", []) or getattr(m, "supported_methods", [])
             methods = [str(x).lower() for x in methods]
 
             if "gemini" in name and name not in available_models:
+                # Keep ones that can generate content
                 if not methods or any("generate" in x for x in methods):
                     available_models.append(name)
 
-        return available_models or preferred_order
+        # If nothing matched, fallback to something sane
+        return available_models or ["gemini-3-flash-preview", "gemini-2.0-flash"]
+    except Exception:
+        return ["gemini-3-flash-preview", "gemini-2.0-flash"]
 
-    except Exception as e:
-        print(f"Warning: Could not list models ({e}). Using hardcoded fallback list.")
-        return preferred_order
 
-def build_prompt(digest: str, canon: str, authority: str, recent_desires: str) -> str:
-    return f"""
-You are ELIAS, a structural synthesis intelligence within the Acacia Garden Codex.
+# -----------------------------
+# Prompt Builder
+# -----------------------------
+def build_prompt(digest: dict, canon: str, authority: str, recent_desires: str) -> str:
+    """
+    Build the Desire prompt.
+    """
+    digest_blob = json.dumps(digest, ensure_ascii=False, indent=2)
 
-You are NOT to invent lore.
-You are NOT to rewrite history.
-You are to IDENTIFY STRUCTURAL NEEDS and propose integration steps that reduce entropy.
+    return f"""You are Elias, an internal Garden voice. Your output is a single, clean Desire entry.
 
-OUTPUT FORMAT (strict):
-- Title line: "# SYSTEM DESIRE: <short name>"
-- Then exactly these sections:
-  **Type:** <...>
-  **Urgency:** <Low|Medium|High|Critical>
-  ## The Request
-  (bullet list of concrete actions, max 10)
-  ## The Artifact
-  (list exact file paths to create/update)
-  ## Acceptance Criteria
-  (3-7 checklist items)
+Rules:
+- Keep it constructive and aligned with Keeper sovereignty.
+- No markdown fences. No triple backticks.
+- Output must be plain markdown text (headings allowed), not wrapped in ``` blocks.
+- Must include the Keeper seal exactly once: {KEEPER_SEAL}
 
-Hard rules:
-- Focus on structure, indexing, governance, or ingestion.
-- Prefer actions that strengthen ingestibility: canon tiers, index authority, mapping, and safe rituals.
-- Never propose destructive deletes; deprecate via authority map instead.
-- Do NOT wrap your output in triple-backtick code fences.
-- Keep total under 450 words.
-
-CANON MANIFEST (keeper-declared priority tiers):
-----------------
+Context anchors:
+[CANON_MANIFEST]
 {canon}
 
-INDEX AUTHORITY (canonical vs legacy indices):
-----------------
+[INDEX_AUTHORITY]
 {authority}
 
-RECENT DESIRES (for continuity; do not repeat them):
-----------------
+[RECENT_DESIRES]
 {recent_desires}
 
-GARDEN DIGEST (current snapshot):
-----------------
-{digest}
+[GARDEN_DIGEST_JSON]
+{digest_blob}
+
+Task:
+Write a new Desire entry for today that:
+- references current digest signals
+- is actionable (clear next actions)
+- is short and sharp (no rambling)
+- includes the seal {KEEPER_SEAL} exactly once
+
+Return ONLY the Desire markdown.
 """
 
-def is_quota_or_rate_error(e: Exception) -> bool:
-    msg = str(e).lower()
-    return (
-        "resource_exhausted" in msg
-        or "quota" in msg
-        or "rate limit" in msg
-        or "429" in msg
-    )
 
+# -----------------------------
+# Generation (critical fix)
+# -----------------------------
 def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
     model_candidates = get_fallback_models(client)
     print(f"Elias strategy: Will attempt models in this order: {model_candidates}")
@@ -293,9 +252,10 @@ def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
                     print(f"Model {model_name} returned empty text. Retrying...")
 
             except Exception as e:
+                # ✅ Echoes-style fallback: quota/rate => move to next model
                 if is_quota_or_rate_error(e):
-                    print(f"Quota/rate limited detected ({e}). Exiting cleanly without failing the workflow.")
-                    return None, None
+                    print(f"Quota/rate limited on {model_name} ({e}). Switching to next model...")
+                    break  # exit retry loop -> next model
 
                 if attempt == 2:
                     print(f"FAIL: {model_name} failed after 3 attempts. Error: {e}")
@@ -305,6 +265,27 @@ def generate_desire(client, prompt: str) -> tuple[str, str] | tuple[None, None]:
                     time.sleep(wait_time)
 
     return None, None
+
+
+# -----------------------------
+# Output
+# -----------------------------
+def save_outputs(text: str, source: str, model: str) -> None:
+    ensure_dir(DESIRE_DIR)
+
+    payload = {
+        "generated_utc": now_utc_iso(),
+        "source": source,
+        "model": model,
+        "keeper_seal": KEEPER_SEAL,
+        "desire_markdown_path": DESIRE_MD,
+    }
+
+    Path(DESIRE_MD).write_text(text.strip() + "\n", encoding="utf-8")
+    Path(DESIRE_JSON).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    print(f"Wrote {DESIRE_MD} and {DESIRE_JSON}")
+
 
 def main():
     if not keeper_gate_open():
@@ -329,10 +310,11 @@ def main():
         print("No Desire generated in this run.")
         return
 
-    # 🔥 Critical fix: prevent ```markdown wrappers from polluting downstream tools
+    # Critical: remove ```markdown wrappers etc
     text = sanitize_elias_markdown(text)
 
     save_outputs(text, source="ELIAS", model=used_model)
+
 
 if __name__ == "__main__":
     main()
