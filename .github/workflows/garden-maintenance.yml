@@ -45,11 +45,15 @@ jobs:
 
       # ---------- SAFE CORE ----------
       - name: Garden Brain (safe AI)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python .github/scripts/garden_brain.py
 
       # ---------- FULL ----------
       - name: Garden Evolution (full AI)
         if: ${{ github.event.inputs.level == 'full' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python .github/scripts/garden_evolution.py
 
       - name: Normalize issue titles (full)
