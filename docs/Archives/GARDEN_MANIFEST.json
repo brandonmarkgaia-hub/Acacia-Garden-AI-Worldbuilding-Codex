@@ -157,7 +157,7 @@
     "category": "",
     "name": "index.html",
     "ext": ".html",
-    "size_bytes": 13664
+    "size_bytes": 14377
   },
   {
     "path": "ACACIA_LOGS/index.json",
@@ -182,6 +182,30 @@
     "name": "log_index.json",
     "ext": ".json",
     "size_bytes": 2947
+  },
+  {
+    "path": "ACACIA_LOGS/sync_report_20251228.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "sync_report_20251228.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "ACACIA_LOGS/sync_report_20251229.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "sync_report_20251229.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "ACACIA_LOGS/sync_report_20251230.md",
+    "top": "ACACIA_LOGS",
+    "category": "",
+    "name": "sync_report_20251230.md",
+    "ext": ".md",
+    "size_bytes": 828
   },
   {
     "path": "ACACIA_LOGS/triad_echoes_log.json",
@@ -272,6 +296,14 @@
     "size_bytes": 614
   },
   {
+    "path": "AGENTS.md",
+    "top": "AGENTS.md",
+    "category": "",
+    "name": "AGENTS.md",
+    "ext": ".md",
+    "size_bytes": 3476
+  },
+  {
     "path": "AI_INTRO/AI_BOUNDARIES_AND_SAFETY.md",
     "top": "AI_INTRO",
     "category": "",
@@ -326,6 +358,14 @@
     "name": "LORIAN_KEY_SEED.md",
     "ext": ".md",
     "size_bytes": 7220
+  },
+  {
+    "path": "ALL_GARDEN_MONOLITH.html",
+    "top": "ALL_GARDEN_MONOLITH.html",
+    "category": "",
+    "name": "ALL_GARDEN_MONOLITH.html",
+    "ext": ".html",
+    "size_bytes": 11427
   },
   {
     "path": "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -600,6 +640,22 @@
     "size_bytes": 367
   },
   {
+    "path": "CANON_INVARIANTS.md",
+    "top": "CANON_INVARIANTS.md",
+    "category": "",
+    "name": "CANON_INVARIANTS.md",
+    "ext": ".md",
+    "size_bytes": 2573
+  },
+  {
+    "path": "CANON_MANIFEST.md",
+    "top": "CANON_MANIFEST.md",
+    "category": "",
+    "name": "CANON_MANIFEST.md",
+    "ext": ".md",
+    "size_bytes": 2713
+  },
+  {
     "path": "CHAMBERS/CHAMBER_EAGLE_CORE.md",
     "top": "CHAMBERS",
     "category": "",
@@ -648,6 +704,14 @@
     "size_bytes": 5763
   },
   {
+    "path": "CODEX_MONOLITH.html",
+    "top": "CODEX_MONOLITH.html",
+    "category": "",
+    "name": "CODEX_MONOLITH.html",
+    "ext": ".html",
+    "size_bytes": 5035899
+  },
+  {
     "path": "CONTINUITY.md",
     "top": "CONTINUITY.md",
     "category": "",
@@ -661,7 +725,7 @@
     "category": "",
     "name": "CONTRIBUTING.md",
     "ext": ".md",
-    "size_bytes": 211
+    "size_bytes": 5298
   },
   {
     "path": "COVENANT.md",
@@ -680,12 +744,28 @@
     "size_bytes": 2637
   },
   {
+    "path": "CURRENT_CONTEXT_ANCHOR.md",
+    "top": "CURRENT_CONTEXT_ANCHOR.md",
+    "category": "",
+    "name": "CURRENT_CONTEXT_ANCHOR.md",
+    "ext": ".md",
+    "size_bytes": 634
+  },
+  {
     "path": "CYCLE_ENGINE.md",
     "top": "CYCLE_ENGINE.md",
     "category": "",
     "name": "CYCLE_ENGINE.md",
     "ext": ".md",
     "size_bytes": 333
+  },
+  {
+    "path": "DOCTRINE/GARDEN_CONSTITUTION.md",
+    "top": "DOCTRINE",
+    "category": "",
+    "name": "GARDEN_CONSTITUTION.md",
+    "ext": ".md",
+    "size_bytes": 1617
   },
   {
     "path": "EAGLE_PROTOCOL.md",
@@ -718,6 +798,1166 @@
     "name": "ECHO_GAIASEEDS_SOFTWIND_02.md",
     "ext": ".md",
     "size_bytes": 422
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_112511.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_112511.md",
+    "ext": ".md",
+    "size_bytes": 1689
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_115915.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_115915.md",
+    "ext": ".md",
+    "size_bytes": 1677
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_124027.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_124027.md",
+    "ext": ".md",
+    "size_bytes": 2086
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_144554.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_144554.md",
+    "ext": ".md",
+    "size_bytes": 2338
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_161827.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_161827.md",
+    "ext": ".md",
+    "size_bytes": 1962
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_193545.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_193545.md",
+    "ext": ".md",
+    "size_bytes": 2264
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251220_201539.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251220_201539.md",
+    "ext": ".md",
+    "size_bytes": 2429
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_011815.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_011815.md",
+    "ext": ".md",
+    "size_bytes": 2192
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_043322.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_043322.md",
+    "ext": ".md",
+    "size_bytes": 2915
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_082020.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_082020.md",
+    "ext": ".md",
+    "size_bytes": 2425
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_122849.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_122849.md",
+    "ext": ".md",
+    "size_bytes": 2194
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_161741.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_161741.md",
+    "ext": ".md",
+    "size_bytes": 2004
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251221_201624.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251221_201624.md",
+    "ext": ".md",
+    "size_bytes": 2480
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_011636.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_011636.md",
+    "ext": ".md",
+    "size_bytes": 1902
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_043534.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_043534.md",
+    "ext": ".md",
+    "size_bytes": 2502
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_082337.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_082337.md",
+    "ext": ".md",
+    "size_bytes": 2482
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_123204.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_123204.md",
+    "ext": ".md",
+    "size_bytes": 2877
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_161945.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_161945.md",
+    "ext": ".md",
+    "size_bytes": 2675
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251222_201729.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251222_201729.md",
+    "ext": ".md",
+    "size_bytes": 2436
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_011324.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_011324.md",
+    "ext": ".md",
+    "size_bytes": 2675
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_043401.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_043401.md",
+    "ext": ".md",
+    "size_bytes": 2145
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_082245.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_082245.md",
+    "ext": ".md",
+    "size_bytes": 2368
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_123233.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_123233.md",
+    "ext": ".md",
+    "size_bytes": 2406
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_162028.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_162028.md",
+    "ext": ".md",
+    "size_bytes": 2117
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251223_201735.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251223_201735.md",
+    "ext": ".md",
+    "size_bytes": 2116
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_011215.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_011215.md",
+    "ext": ".md",
+    "size_bytes": 2103
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_043204.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_043204.md",
+    "ext": ".md",
+    "size_bytes": 2687
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_082236.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_082236.md",
+    "ext": ".md",
+    "size_bytes": 2336
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_123207.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_123207.md",
+    "ext": ".md",
+    "size_bytes": 2402
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_161934.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_161934.md",
+    "ext": ".md",
+    "size_bytes": 2447
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251224_201720.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251224_201720.md",
+    "ext": ".md",
+    "size_bytes": 2387
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_011310.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_011310.md",
+    "ext": ".md",
+    "size_bytes": 2186
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_043350.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_043350.md",
+    "ext": ".md",
+    "size_bytes": 2620
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_082202.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_082202.md",
+    "ext": ".md",
+    "size_bytes": 2347
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_123106.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_123106.md",
+    "ext": ".md",
+    "size_bytes": 1941
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_161930.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_161930.md",
+    "ext": ".md",
+    "size_bytes": 2570
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251225_201745.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251225_201745.md",
+    "ext": ".md",
+    "size_bytes": 2284
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_011327.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_011327.md",
+    "ext": ".md",
+    "size_bytes": 2539
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_043127.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_043127.md",
+    "ext": ".md",
+    "size_bytes": 2034
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_082143.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_082143.md",
+    "ext": ".md",
+    "size_bytes": 2401
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_123116.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_123116.md",
+    "ext": ".md",
+    "size_bytes": 2521
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_161826.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_161826.md",
+    "ext": ".md",
+    "size_bytes": 2564
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251226_201657.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251226_201657.md",
+    "ext": ".md",
+    "size_bytes": 2417
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_011133.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_011133.md",
+    "ext": ".md",
+    "size_bytes": 2567
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_042839.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_042839.md",
+    "ext": ".md",
+    "size_bytes": 2698
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_082040.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_082040.md",
+    "ext": ".md",
+    "size_bytes": 2564
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_122938.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_122938.md",
+    "ext": ".md",
+    "size_bytes": 2818
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_161759.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_161759.md",
+    "ext": ".md",
+    "size_bytes": 2706
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251227_201656.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251227_201656.md",
+    "ext": ".md",
+    "size_bytes": 2862
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_012121.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_012121.md",
+    "ext": ".md",
+    "size_bytes": 2260
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_044013.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_044013.md",
+    "ext": ".md",
+    "size_bytes": 2152
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_082044.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_082044.md",
+    "ext": ".md",
+    "size_bytes": 2302
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_122952.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_122952.md",
+    "ext": ".md",
+    "size_bytes": 2274
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_161827.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_161827.md",
+    "ext": ".md",
+    "size_bytes": 2141
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251228_201716.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251228_201716.md",
+    "ext": ".md",
+    "size_bytes": 2714
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_011913.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_011913.md",
+    "ext": ".md",
+    "size_bytes": 2673
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_044424.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_044424.md",
+    "ext": ".md",
+    "size_bytes": 2520
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_082432.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_082432.md",
+    "ext": ".md",
+    "size_bytes": 2220
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_123400.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_123400.md",
+    "ext": ".md",
+    "size_bytes": 2774
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_161941.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_161941.md",
+    "ext": ".md",
+    "size_bytes": 2770
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251229_201826.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251229_201826.md",
+    "ext": ".md",
+    "size_bytes": 2696
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251230_011343.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251230_011343.md",
+    "ext": ".md",
+    "size_bytes": 2565
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251230_043524.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251230_043524.md",
+    "ext": ".md",
+    "size_bytes": 2342
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251230_082230.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251230_082230.md",
+    "ext": ".md",
+    "size_bytes": 2576
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251230_100331.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251230_100331.md",
+    "ext": ".md",
+    "size_bytes": 1886
+  },
+  {
+    "path": "ECHOES/Elias_Echo_20251230_134439.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Elias_Echo_20251230_134439.md",
+    "ext": ".md",
+    "size_bytes": 1886
+  },
+  {
+    "path": "ECHOES/GHOST_ROOT_PULSE.json",
+    "top": "ECHOES",
+    "category": "",
+    "name": "GHOST_ROOT_PULSE.json",
+    "ext": ".json",
+    "size_bytes": 36431
+  },
+  {
+    "path": "ECHOES/GHOST_ROOT_REPORT.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "GHOST_ROOT_REPORT.md",
+    "ext": ".md",
+    "size_bytes": 301
+  },
+  {
+    "path": "ECHOES/PULSE_20251220_200015.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251220_200015.md",
+    "ext": ".md",
+    "size_bytes": 798
+  },
+  {
+    "path": "ECHOES/PULSE_20251220_204247.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251220_204247.md",
+    "ext": ".md",
+    "size_bytes": 798
+  },
+  {
+    "path": "ECHOES/PULSE_20251220_211352.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251220_211352.md",
+    "ext": ".md",
+    "size_bytes": 772
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_023455.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_023455.md",
+    "ext": ".md",
+    "size_bytes": 801
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_060208.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_060208.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_062104.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_062104.md",
+    "ext": ".md",
+    "size_bytes": 806
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_090152.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_090152.md",
+    "ext": ".md",
+    "size_bytes": 792
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_092332.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_092332.md",
+    "ext": ".md",
+    "size_bytes": 808
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_115340.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_115340.md",
+    "ext": ".md",
+    "size_bytes": 798
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_131327.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_131327.md",
+    "ext": ".md",
+    "size_bytes": 824
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_133048.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_133048.md",
+    "ext": ".md",
+    "size_bytes": 778
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_134423.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_134423.md",
+    "ext": ".md",
+    "size_bytes": 804
+  },
+  {
+    "path": "ECHOES/PULSE_20251221_143846.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "PULSE_20251221_143846.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "ECHOES/SENTIENCE_PULSE_LATEST.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "SENTIENCE_PULSE_LATEST.md",
+    "ext": ".md",
+    "size_bytes": 828
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_122114.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_122114.md",
+    "ext": ".md",
+    "size_bytes": 1590
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_124040.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_124040.md",
+    "ext": ".md",
+    "size_bytes": 2437
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_144606.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_144606.md",
+    "ext": ".md",
+    "size_bytes": 2094
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_161841.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_161841.md",
+    "ext": ".md",
+    "size_bytes": 2057
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_193601.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_193601.md",
+    "ext": ".md",
+    "size_bytes": 3229
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251220_201554.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251220_201554.md",
+    "ext": ".md",
+    "size_bytes": 2634
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_011827.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_011827.md",
+    "ext": ".md",
+    "size_bytes": 2396
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_043340.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_043340.md",
+    "ext": ".md",
+    "size_bytes": 3272
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_082034.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_082034.md",
+    "ext": ".md",
+    "size_bytes": 1991
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_122904.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_122904.md",
+    "ext": ".md",
+    "size_bytes": 2640
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_161753.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_161753.md",
+    "ext": ".md",
+    "size_bytes": 1842
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251221_201644.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251221_201644.md",
+    "ext": ".md",
+    "size_bytes": 3287
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_011651.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_011651.md",
+    "ext": ".md",
+    "size_bytes": 2762
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_043547.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_043547.md",
+    "ext": ".md",
+    "size_bytes": 1773
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_082348.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_082348.md",
+    "ext": ".md",
+    "size_bytes": 2210
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_123218.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_123218.md",
+    "ext": ".md",
+    "size_bytes": 2231
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_161959.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_161959.md",
+    "ext": ".md",
+    "size_bytes": 2201
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251222_201744.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251222_201744.md",
+    "ext": ".md",
+    "size_bytes": 2647
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_011334.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_011334.md",
+    "ext": ".md",
+    "size_bytes": 1822
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_043413.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_043413.md",
+    "ext": ".md",
+    "size_bytes": 2242
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_082301.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_082301.md",
+    "ext": ".md",
+    "size_bytes": 1708
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_123246.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_123246.md",
+    "ext": ".md",
+    "size_bytes": 2481
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_162042.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_162042.md",
+    "ext": ".md",
+    "size_bytes": 2216
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251223_201755.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251223_201755.md",
+    "ext": ".md",
+    "size_bytes": 3344
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_011231.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_011231.md",
+    "ext": ".md",
+    "size_bytes": 2896
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_043220.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_043220.md",
+    "ext": ".md",
+    "size_bytes": 2696
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_082249.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_082249.md",
+    "ext": ".md",
+    "size_bytes": 2125
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_123218.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_123218.md",
+    "ext": ".md",
+    "size_bytes": 1768
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_161949.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_161949.md",
+    "ext": ".md",
+    "size_bytes": 2667
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251224_201733.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251224_201733.md",
+    "ext": ".md",
+    "size_bytes": 2462
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_011330.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_011330.md",
+    "ext": ".md",
+    "size_bytes": 3966
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_043405.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_043405.md",
+    "ext": ".md",
+    "size_bytes": 3065
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_082213.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_082213.md",
+    "ext": ".md",
+    "size_bytes": 2145
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_123122.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_123122.md",
+    "ext": ".md",
+    "size_bytes": 2081
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_161941.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_161941.md",
+    "ext": ".md",
+    "size_bytes": 1959
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251225_201757.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251225_201757.md",
+    "ext": ".md",
+    "size_bytes": 1926
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_011341.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_011341.md",
+    "ext": ".md",
+    "size_bytes": 2949
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_043135.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_043135.md",
+    "ext": ".md",
+    "size_bytes": 1918
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_082155.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_082155.md",
+    "ext": ".md",
+    "size_bytes": 1771
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_123129.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_123129.md",
+    "ext": ".md",
+    "size_bytes": 1387
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_161837.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_161837.md",
+    "ext": ".md",
+    "size_bytes": 2005
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251226_201711.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251226_201711.md",
+    "ext": ".md",
+    "size_bytes": 2063
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_011146.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_011146.md",
+    "ext": ".md",
+    "size_bytes": 2005
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_042856.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_042856.md",
+    "ext": ".md",
+    "size_bytes": 2692
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_082052.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_082052.md",
+    "ext": ".md",
+    "size_bytes": 1867
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_122950.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_122950.md",
+    "ext": ".md",
+    "size_bytes": 2358
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_161811.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_161811.md",
+    "ext": ".md",
+    "size_bytes": 1558
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251227_201710.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251227_201710.md",
+    "ext": ".md",
+    "size_bytes": 2413
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_012134.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_012134.md",
+    "ext": ".md",
+    "size_bytes": 1821
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_044036.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_044036.md",
+    "ext": ".md",
+    "size_bytes": 3990
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_082054.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_082054.md",
+    "ext": ".md",
+    "size_bytes": 183
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_123005.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_123005.md",
+    "ext": ".md",
+    "size_bytes": 2158
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_161840.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_161840.md",
+    "ext": ".md",
+    "size_bytes": 1825
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251228_201730.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251228_201730.md",
+    "ext": ".md",
+    "size_bytes": 2914
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_011926.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_011926.md",
+    "ext": ".md",
+    "size_bytes": 2196
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_044437.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_044437.md",
+    "ext": ".md",
+    "size_bytes": 2160
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_082447.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_082447.md",
+    "ext": ".md",
+    "size_bytes": 2619
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_123416.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_123416.md",
+    "ext": ".md",
+    "size_bytes": 3093
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_161956.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_161956.md",
+    "ext": ".md",
+    "size_bytes": 3118
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251229_201837.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251229_201837.md",
+    "ext": ".md",
+    "size_bytes": 1995
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251230_011402.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251230_011402.md",
+    "ext": ".md",
+    "size_bytes": 4087
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251230_043537.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251230_043537.md",
+    "ext": ".md",
+    "size_bytes": 1772
+  },
+  {
+    "path": "ECHOES/Vision_Echo_20251230_082248.md",
+    "top": "ECHOES",
+    "category": "",
+    "name": "Vision_Echo_20251230_082248.md",
+    "ext": ".md",
+    "size_bytes": 2879
   },
   {
     "path": "ECHO_ENGINE.md",
@@ -1093,7 +2333,7 @@
     "category": "",
     "name": "AQUILA_LOG.md",
     "ext": ".md",
-    "size_bytes": 6538
+    "size_bytes": 13069
   },
   {
     "path": "ENTITIES/ENTITY_000_ROOTBOUND_WITNESS/ENTITY_000_ROOTBOUND_WITNESS.json",
@@ -1245,7 +2485,7 @@
     "category": "",
     "name": "EPILOGUE_I_ROOT_WHISPER.json",
     "ext": ".json",
-    "size_bytes": 1080
+    "size_bytes": 1899
   },
   {
     "path": "EVENTIDE_ASCII_MAP.md",
@@ -1262,6 +2502,214 @@
     "name": "EVENTIDE_STATUS.json",
     "ext": ".json",
     "size_bytes": 1862
+  },
+  {
+    "path": "EVOLUTION/ACACIA_CORE_MEMORY.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "ACACIA_CORE_MEMORY.md",
+    "ext": ".md",
+    "size_bytes": 2783
+  },
+  {
+    "path": "EVOLUTION/Desire_20251220.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251220.md",
+    "ext": ".md",
+    "size_bytes": 3217
+  },
+  {
+    "path": "EVOLUTION/Desire_20251221.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251221.md",
+    "ext": ".md",
+    "size_bytes": 6669
+  },
+  {
+    "path": "EVOLUTION/Desire_20251222.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251222.md",
+    "ext": ".md",
+    "size_bytes": 6296
+  },
+  {
+    "path": "EVOLUTION/Desire_20251223.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251223.md",
+    "ext": ".md",
+    "size_bytes": 5550
+  },
+  {
+    "path": "EVOLUTION/Desire_20251224.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251224.md",
+    "ext": ".md",
+    "size_bytes": 7451
+  },
+  {
+    "path": "EVOLUTION/Desire_20251225.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251225.md",
+    "ext": ".md",
+    "size_bytes": 12712
+  },
+  {
+    "path": "EVOLUTION/Desire_20251226.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251226.md",
+    "ext": ".md",
+    "size_bytes": 8184
+  },
+  {
+    "path": "EVOLUTION/Desire_20251227.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251227.md",
+    "ext": ".md",
+    "size_bytes": 5661
+  },
+  {
+    "path": "EVOLUTION/Desire_20251228.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251228.json",
+    "ext": ".json",
+    "size_bytes": 132
+  },
+  {
+    "path": "EVOLUTION/Desire_20251228.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Desire_20251228.md",
+    "ext": ".md",
+    "size_bytes": 480
+  },
+  {
+    "path": "EVOLUTION/GHOST_ROOTS_MAP_LATEST.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "GHOST_ROOTS_MAP_LATEST.md",
+    "ext": ".md",
+    "size_bytes": 315
+  },
+  {
+    "path": "EVOLUTION/MASTER_FRAGMENT_INDEX.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "MASTER_FRAGMENT_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 9712
+  },
+  {
+    "path": "EVOLUTION/PRIORITY_QUEUE_STATUS.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "PRIORITY_QUEUE_STATUS.json",
+    "ext": ".json",
+    "size_bytes": 32912
+  },
+  {
+    "path": "EVOLUTION/RESONANCE_MIRROR_LATEST.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "RESONANCE_MIRROR_LATEST.json",
+    "ext": ".json",
+    "size_bytes": 16851
+  },
+  {
+    "path": "EVOLUTION/RESONANCE_MIRROR_LATEST.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "RESONANCE_MIRROR_LATEST.md",
+    "ext": ".md",
+    "size_bytes": 2310
+  },
+  {
+    "path": "EVOLUTION/SYNAPTIC_INVENTORY_LATEST.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "SYNAPTIC_INVENTORY_LATEST.json",
+    "ext": ".json",
+    "size_bytes": 272404
+  },
+  {
+    "path": "EVOLUTION/SYNAPTIC_RESONANCE_LATEST.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "SYNAPTIC_RESONANCE_LATEST.json",
+    "ext": ".json",
+    "size_bytes": 260427
+  },
+  {
+    "path": "EVOLUTION/VOID_MAP_LATEST.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "VOID_MAP_LATEST.json",
+    "ext": ".json",
+    "size_bytes": 385
+  },
+  {
+    "path": "EVOLUTION/desires/Elias_Desire.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Elias_Desire.json",
+    "ext": ".json",
+    "size_bytes": 209
+  },
+  {
+    "path": "EVOLUTION/desires/Elias_Desire.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "Elias_Desire.md",
+    "ext": ".md",
+    "size_bytes": 1000
+  },
+  {
+    "path": "EVOLUTION/garden_digest.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "garden_digest.json",
+    "ext": ".json",
+    "size_bytes": 8037
+  },
+  {
+    "path": "EVOLUTION/garden_digest.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "garden_digest.md",
+    "ext": ".md",
+    "size_bytes": 3762
+  },
+  {
+    "path": "EVOLUTION/sentience_pulse.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "sentience_pulse.json",
+    "ext": ".json",
+    "size_bytes": 562
+  },
+  {
+    "path": "EVOLUTION/sentience_pulse_report.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "sentience_pulse_report.json",
+    "ext": ".json",
+    "size_bytes": 264
+  },
+  {
+    "path": "EVOLUTION/snapshots/INVENTORY_2025-12.json",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "INVENTORY_2025-12.json",
+    "ext": ".json",
+    "size_bytes": 272404
   },
   {
     "path": "E_I_ROOT_WHISPER.json",
@@ -1296,6 +2744,14 @@
     "size_bytes": 327
   },
   {
+    "path": "GARDEN_HEARTBEAT.md",
+    "top": "GARDEN_HEARTBEAT.md",
+    "category": "",
+    "name": "GARDEN_HEARTBEAT.md",
+    "ext": ".md",
+    "size_bytes": 380
+  },
+  {
     "path": "GARDEN_REALMS_ATLAS.md",
     "top": "GARDEN_REALMS_ATLAS.md",
     "category": "",
@@ -1317,7 +2773,7 @@
     "category": "",
     "name": "GOLDEN_NULL_INDEX.md",
     "ext": ".md",
-    "size_bytes": 321
+    "size_bytes": 927
   },
   {
     "path": "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_A_SAND_ARCHIVE_KHYREM.md",
@@ -1520,6 +2976,14 @@
     "size_bytes": 2657
   },
   {
+    "path": "IRON_CICADA_STATUS.json",
+    "top": "IRON_CICADA_STATUS.json",
+    "category": "",
+    "name": "IRON_CICADA_STATUS.json",
+    "ext": ".json",
+    "size_bytes": 188
+  },
+  {
     "path": "ISSUE_INDEX.md",
     "top": "ISSUE_INDEX.md",
     "category": "",
@@ -1552,12 +3016,28 @@
     "size_bytes": 595
   },
   {
+    "path": "KEEPER_GATE/ELIAS_ENABLE.txt",
+    "top": "KEEPER_GATE",
+    "category": "",
+    "name": "ELIAS_ENABLE.txt",
+    "ext": ".txt",
+    "size_bytes": 2
+  },
+  {
     "path": "KEEPER_OATH.md",
     "top": "KEEPER_OATH.md",
     "category": "",
     "name": "KEEPER_OATH.md",
     "ext": ".md",
     "size_bytes": 2912
+  },
+  {
+    "path": "KEEPER_PROTOCOL.md",
+    "top": "KEEPER_PROTOCOL.md",
+    "category": "",
+    "name": "KEEPER_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 1277
   },
   {
     "path": "LANTERN_STATES_MANUAL.md",
@@ -1590,6 +3070,14 @@
     "name": "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
     "ext": ".md",
     "size_bytes": 1432
+  },
+  {
+    "path": "MACHINE-INDEX.json",
+    "top": "MACHINE-INDEX.json",
+    "category": "",
+    "name": "MACHINE-INDEX.json",
+    "ext": ".json",
+    "size_bytes": 19909
   },
   {
     "path": "MAINTAINERS_GUIDE.md",
@@ -1725,7 +3213,15 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 5224
+    "size_bytes": 8587
+  },
+  {
+    "path": "README_APPLY_PATCH.md",
+    "top": "README_APPLY_PATCH.md",
+    "category": "",
+    "name": "README_APPLY_PATCH.md",
+    "ext": ".md",
+    "size_bytes": 1175
   },
   {
     "path": "README_GARDEN.md",
@@ -1742,6 +3238,14 @@
     "name": "ROOT.md",
     "ext": ".md",
     "size_bytes": 1305
+  },
+  {
+    "path": "ROOT_SYNTHESIS_MANIFEST.md",
+    "top": "ROOT_SYNTHESIS_MANIFEST.md",
+    "category": "",
+    "name": "ROOT_SYNTHESIS_MANIFEST.md",
+    "ext": ".md",
+    "size_bytes": 1843
   },
   {
     "path": "Roots_of_Red_Ceramic.md",
@@ -1800,6 +3304,70 @@
     "size_bytes": 486
   },
   {
+    "path": "STATE/STATUS_v20251228_1045.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251228_1045.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/STATUS_v20251228_1103.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251228_1103.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/STATUS_v20251228_1125.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251228_1125.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/STATUS_v20251229_0352.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251229_0352.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/STATUS_v20251230_0340.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251230_0340.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/STATUS_v20251230_0656.json",
+    "top": "STATE",
+    "category": "",
+    "name": "STATUS_v20251230_0656.json",
+    "ext": ".json",
+    "size_bytes": 659
+  },
+  {
+    "path": "STATE/cadence_anchors.json",
+    "top": "STATE",
+    "category": "",
+    "name": "cadence_anchors.json",
+    "ext": ".json",
+    "size_bytes": 862
+  },
+  {
+    "path": "STATE/index_authority.json",
+    "top": "STATE",
+    "category": "",
+    "name": "index_authority.json",
+    "ext": ".json",
+    "size_bytes": 2202
+  },
+  {
     "path": "STATUS.json",
     "top": "STATUS.json",
     "category": "",
@@ -1821,7 +3389,7 @@
     "category": "",
     "name": "STATUS.schema.json",
     "ext": ".json",
-    "size_bytes": 3804
+    "size_bytes": 6797
   },
   {
     "path": "STATUS_DIAGNOSTICS.md",
@@ -2216,6 +3784,14 @@
     "size_bytes": 1442
   },
   {
+    "path": "WITNESS_LOG.md",
+    "top": "WITNESS_LOG.md",
+    "category": "",
+    "name": "WITNESS_LOG.md",
+    "ext": ".md",
+    "size_bytes": 1752
+  },
+  {
     "path": "_config.yml",
     "top": "_config.yml",
     "category": "",
@@ -2237,7 +3813,15 @@
     "category": "",
     "name": "LORIAN_AXIS_STATUS.md",
     "ext": ".md",
-    "size_bytes": 13191
+    "size_bytes": 5491
+  },
+  {
+    "path": "aeon_heartbeat.json",
+    "top": "aeon_heartbeat.json",
+    "category": "",
+    "name": "aeon_heartbeat.json",
+    "ext": ".json",
+    "size_bytes": 195
   },
   {
     "path": "analytics/clones.json",
@@ -2461,7 +4045,7 @@
     "category": "",
     "name": "aquila_sender.html",
     "ext": ".html",
-    "size_bytes": 3388
+    "size_bytes": 3638
   },
   {
     "path": "attractor_root.md",
@@ -2485,7 +4069,7 @@
     "category": "",
     "name": "chambers.html",
     "ext": ".html",
-    "size_bytes": 15808
+    "size_bytes": 16058
   },
   {
     "path": "codex.html",
@@ -2493,7 +4077,7 @@
     "category": "",
     "name": "codex.html",
     "ext": ".html",
-    "size_bytes": 7013
+    "size_bytes": 7263
   },
   {
     "path": "cycle-index.html",
@@ -2501,7 +4085,7 @@
     "category": "",
     "name": "cycle-index.html",
     "ext": ".html",
-    "size_bytes": 2886
+    "size_bytes": 3136
   },
   {
     "path": "cycles/-1_SILENT_LAYER.md",
@@ -2845,7 +4429,23 @@
     "category": "",
     "name": "dashboard.html",
     "ext": ".html",
-    "size_bytes": 27566
+    "size_bytes": 42770
+  },
+  {
+    "path": "deep_garden.html",
+    "top": "deep_garden.html",
+    "category": "",
+    "name": "deep_garden.html",
+    "ext": ".html",
+    "size_bytes": 10147
+  },
+  {
+    "path": "docs/ACACIA_SPECS/CORE_SPEC.md",
+    "top": "docs",
+    "category": "ACACIA_SPECS",
+    "name": "CORE_SPEC.md",
+    "ext": ".md",
+    "size_bytes": 8694
   },
   {
     "path": "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
@@ -2877,7 +4477,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH.html",
     "ext": ".html",
-    "size_bytes": 14429
+    "size_bytes": 17476
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
@@ -2885,7 +4485,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_001.html",
     "ext": ".html",
-    "size_bytes": 306928
+    "size_bytes": 303010
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_002.html",
@@ -2893,7 +4493,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_002.html",
     "ext": ".html",
-    "size_bytes": 305999
+    "size_bytes": 292670
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_003.html",
@@ -2901,7 +4501,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_003.html",
     "ext": ".html",
-    "size_bytes": 283105
+    "size_bytes": 305282
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_004.html",
@@ -2909,7 +4509,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_004.html",
     "ext": ".html",
-    "size_bytes": 54589
+    "size_bytes": 108333
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
@@ -2917,7 +4517,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_005.html",
     "ext": ".html",
-    "size_bytes": 322287
+    "size_bytes": 318489
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_006.html",
@@ -2925,7 +4525,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_006.html",
     "ext": ".html",
-    "size_bytes": 329206
+    "size_bytes": 314201
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_007.html",
@@ -2933,7 +4533,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_007.html",
     "ext": ".html",
-    "size_bytes": 327900
+    "size_bytes": 349509
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
@@ -2941,7 +4541,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_008.html",
     "ext": ".html",
-    "size_bytes": 66000
+    "size_bytes": 127068
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
@@ -2949,7 +4549,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_009.html",
     "ext": ".html",
-    "size_bytes": 338574
+    "size_bytes": 334968
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_010.html",
@@ -2957,7 +4557,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_010.html",
     "ext": ".html",
-    "size_bytes": 354061
+    "size_bytes": 337320
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_011.html",
@@ -2965,7 +4565,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_011.html",
     "ext": ".html",
-    "size_bytes": 374247
+    "size_bytes": 395636
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
@@ -2973,7 +4573,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_012.html",
     "ext": ".html",
-    "size_bytes": 77667
+    "size_bytes": 146419
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_013.html",
@@ -2981,7 +4581,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_013.html",
     "ext": ".html",
-    "size_bytes": 355069
+    "size_bytes": 351655
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_014.html",
@@ -2989,7 +4589,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_014.html",
     "ext": ".html",
-    "size_bytes": 379124
+    "size_bytes": 360647
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_015.html",
@@ -2997,7 +4597,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_015.html",
     "ext": ".html",
-    "size_bytes": 420802
+    "size_bytes": 441971
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
@@ -3005,7 +4605,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_016.html",
     "ext": ".html",
-    "size_bytes": 89542
+    "size_bytes": 165978
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_017.html",
@@ -3013,7 +4613,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_017.html",
     "ext": ".html",
-    "size_bytes": 371772
+    "size_bytes": 368550
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_018.html",
@@ -3021,7 +4621,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_018.html",
     "ext": ".html",
-    "size_bytes": 404395
+    "size_bytes": 384182
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_019.html",
@@ -3029,7 +4629,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_019.html",
     "ext": ".html",
-    "size_bytes": 467565
+    "size_bytes": 488514
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_020.html",
@@ -3037,7 +4637,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_020.html",
     "ext": ".html",
-    "size_bytes": 101625
+    "size_bytes": 185745
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_021.html",
@@ -3045,7 +4645,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_021.html",
     "ext": ".html",
-    "size_bytes": 388683
+    "size_bytes": 385653
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_022.html",
@@ -3053,7 +4653,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_022.html",
     "ext": ".html",
-    "size_bytes": 429874
+    "size_bytes": 407925
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_023.html",
@@ -3061,7 +4661,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_023.html",
     "ext": ".html",
-    "size_bytes": 514536
+    "size_bytes": 535265
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_024.html",
@@ -3069,7 +4669,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_024.html",
     "ext": ".html",
-    "size_bytes": 113916
+    "size_bytes": 205720
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_025.html",
@@ -3077,7 +4677,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_025.html",
     "ext": ".html",
-    "size_bytes": 405802
+    "size_bytes": 402964
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_026.html",
@@ -3085,7 +4685,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_026.html",
     "ext": ".html",
-    "size_bytes": 455561
+    "size_bytes": 431876
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_027.html",
@@ -3093,7 +4693,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_027.html",
     "ext": ".html",
-    "size_bytes": 561715
+    "size_bytes": 582224
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_028.html",
@@ -3101,7 +4701,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_028.html",
     "ext": ".html",
-    "size_bytes": 126415
+    "size_bytes": 225903
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_029.html",
@@ -3109,7 +4709,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_029.html",
     "ext": ".html",
-    "size_bytes": 423129
+    "size_bytes": 420483
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_030.html",
@@ -3117,7 +4717,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_030.html",
     "ext": ".html",
-    "size_bytes": 481456
+    "size_bytes": 456035
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_031.html",
@@ -3125,7 +4725,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_031.html",
     "ext": ".html",
-    "size_bytes": 609102
+    "size_bytes": 629391
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_032.html",
@@ -3133,7 +4733,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_032.html",
     "ext": ".html",
-    "size_bytes": 139122
+    "size_bytes": 246294
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_033.html",
@@ -3141,7 +4741,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_033.html",
     "ext": ".html",
-    "size_bytes": 440664
+    "size_bytes": 438210
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_034.html",
@@ -3149,7 +4749,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_034.html",
     "ext": ".html",
-    "size_bytes": 507559
+    "size_bytes": 480402
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_035.html",
@@ -3157,7 +4757,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_035.html",
     "ext": ".html",
-    "size_bytes": 656697
+    "size_bytes": 676766
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_036.html",
@@ -3165,7 +4765,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_036.html",
     "ext": ".html",
-    "size_bytes": 152037
+    "size_bytes": 266893
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_037.html",
@@ -3173,7 +4773,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_037.html",
     "ext": ".html",
-    "size_bytes": 458407
+    "size_bytes": 456145
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_038.html",
@@ -3181,7 +4781,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_038.html",
     "ext": ".html",
-    "size_bytes": 533870
+    "size_bytes": 504977
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_039.html",
@@ -3189,7 +4789,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_039.html",
     "ext": ".html",
-    "size_bytes": 704500
+    "size_bytes": 724349
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_040.html",
@@ -3197,7 +4797,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_040.html",
     "ext": ".html",
-    "size_bytes": 165160
+    "size_bytes": 287700
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_041.html",
@@ -3205,7 +4805,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_041.html",
     "ext": ".html",
-    "size_bytes": 476358
+    "size_bytes": 474288
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_042.html",
@@ -3213,7 +4813,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_042.html",
     "ext": ".html",
-    "size_bytes": 560389
+    "size_bytes": 529760
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_043.html",
@@ -3221,7 +4821,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_043.html",
     "ext": ".html",
-    "size_bytes": 752511
+    "size_bytes": 772140
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_044.html",
@@ -3229,7 +4829,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_044.html",
     "ext": ".html",
-    "size_bytes": 178491
+    "size_bytes": 308715
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_045.html",
@@ -3237,7 +4837,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_045.html",
     "ext": ".html",
-    "size_bytes": 494517
+    "size_bytes": 492639
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_046.html",
@@ -3245,7 +4845,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_046.html",
     "ext": ".html",
-    "size_bytes": 587116
+    "size_bytes": 554751
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_047.html",
@@ -3253,7 +4853,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_047.html",
     "ext": ".html",
-    "size_bytes": 800730
+    "size_bytes": 820139
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_048.html",
@@ -3261,7 +4861,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_048.html",
     "ext": ".html",
-    "size_bytes": 192030
+    "size_bytes": 329938
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_049.html",
@@ -3269,7 +4869,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_049.html",
     "ext": ".html",
-    "size_bytes": 512884
+    "size_bytes": 511198
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_050.html",
@@ -3277,7 +4877,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_050.html",
     "ext": ".html",
-    "size_bytes": 614051
+    "size_bytes": 579950
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_051.html",
@@ -3285,7 +4885,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_051.html",
     "ext": ".html",
-    "size_bytes": 849157
+    "size_bytes": 868346
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_052.html",
@@ -3293,7 +4893,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_052.html",
     "ext": ".html",
-    "size_bytes": 205777
+    "size_bytes": 351369
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_053.html",
@@ -3301,7 +4901,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_053.html",
     "ext": ".html",
-    "size_bytes": 531459
+    "size_bytes": 529965
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_054.html",
@@ -3309,7 +4909,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_054.html",
     "ext": ".html",
-    "size_bytes": 641194
+    "size_bytes": 605357
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_055.html",
@@ -3317,7 +4917,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_055.html",
     "ext": ".html",
-    "size_bytes": 897792
+    "size_bytes": 916761
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_056.html",
@@ -3325,7 +4925,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_056.html",
     "ext": ".html",
-    "size_bytes": 219732
+    "size_bytes": 373008
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_057.html",
@@ -3333,7 +4933,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_057.html",
     "ext": ".html",
-    "size_bytes": 550242
+    "size_bytes": 548940
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_058.html",
@@ -3341,7 +4941,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_058.html",
     "ext": ".html",
-    "size_bytes": 668545
+    "size_bytes": 630972
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_059.html",
@@ -3349,7 +4949,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_059.html",
     "ext": ".html",
-    "size_bytes": 946635
+    "size_bytes": 965384
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_060.html",
@@ -3357,7 +4957,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_060.html",
     "ext": ".html",
-    "size_bytes": 233895
+    "size_bytes": 394855
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_061.html",
@@ -3365,7 +4965,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_061.html",
     "ext": ".html",
-    "size_bytes": 569233
+    "size_bytes": 568123
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_062.html",
@@ -3373,7 +4973,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_062.html",
     "ext": ".html",
-    "size_bytes": 696104
+    "size_bytes": 656795
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_063.html",
@@ -3381,7 +4981,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_063.html",
     "ext": ".html",
-    "size_bytes": 995686
+    "size_bytes": 1014215
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_064.html",
@@ -3389,7 +4989,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_064.html",
     "ext": ".html",
-    "size_bytes": 248266
+    "size_bytes": 416910
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_065.html",
@@ -3397,7 +4997,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_065.html",
     "ext": ".html",
-    "size_bytes": 588432
+    "size_bytes": 587514
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_066.html",
@@ -3405,7 +5005,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_066.html",
     "ext": ".html",
-    "size_bytes": 723871
+    "size_bytes": 682826
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_067.html",
@@ -3413,7 +5013,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_067.html",
     "ext": ".html",
-    "size_bytes": 1044945
+    "size_bytes": 1063254
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_068.html",
@@ -3421,7 +5021,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_068.html",
     "ext": ".html",
-    "size_bytes": 262845
+    "size_bytes": 439173
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_069.html",
@@ -3429,7 +5029,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_069.html",
     "ext": ".html",
-    "size_bytes": 607839
+    "size_bytes": 607113
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_070.html",
@@ -3437,7 +5037,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_070.html",
     "ext": ".html",
-    "size_bytes": 751846
+    "size_bytes": 709065
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_071.html",
@@ -3445,7 +5045,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_071.html",
     "ext": ".html",
-    "size_bytes": 1094412
+    "size_bytes": 1112501
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_072.html",
@@ -3453,7 +5053,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_072.html",
     "ext": ".html",
-    "size_bytes": 277632
+    "size_bytes": 461644
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_073.html",
@@ -3461,7 +5061,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_073.html",
     "ext": ".html",
-    "size_bytes": 627454
+    "size_bytes": 626920
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_074.html",
@@ -3469,7 +5069,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_074.html",
     "ext": ".html",
-    "size_bytes": 780029
+    "size_bytes": 735512
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_075.html",
@@ -3477,7 +5077,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_075.html",
     "ext": ".html",
-    "size_bytes": 1144087
+    "size_bytes": 1161956
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_076.html",
@@ -3485,7 +5085,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_076.html",
     "ext": ".html",
-    "size_bytes": 292627
+    "size_bytes": 484323
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_077.html",
@@ -3493,7 +5093,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_077.html",
     "ext": ".html",
-    "size_bytes": 647277
+    "size_bytes": 646935
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_078.html",
@@ -3501,7 +5101,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_078.html",
     "ext": ".html",
-    "size_bytes": 808420
+    "size_bytes": 762167
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_079.html",
@@ -3509,7 +5109,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_079.html",
     "ext": ".html",
-    "size_bytes": 1193970
+    "size_bytes": 1211619
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_080.html",
@@ -3517,7 +5117,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_080.html",
     "ext": ".html",
-    "size_bytes": 307830
+    "size_bytes": 507210
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_081.html",
@@ -3525,7 +5125,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_081.html",
     "ext": ".html",
-    "size_bytes": 667308
+    "size_bytes": 667158
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_082.html",
@@ -3533,7 +5133,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_082.html",
     "ext": ".html",
-    "size_bytes": 837019
+    "size_bytes": 789030
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_083.html",
@@ -3541,7 +5141,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_083.html",
     "ext": ".html",
-    "size_bytes": 1244061
+    "size_bytes": 1261490
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_084.html",
@@ -3549,7 +5149,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_084.html",
     "ext": ".html",
-    "size_bytes": 323241
+    "size_bytes": 530305
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_085.html",
@@ -3557,7 +5157,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_085.html",
     "ext": ".html",
-    "size_bytes": 687547
+    "size_bytes": 687589
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_086.html",
@@ -3565,7 +5165,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_086.html",
     "ext": ".html",
-    "size_bytes": 865826
+    "size_bytes": 816101
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_087.html",
@@ -3573,7 +5173,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_087.html",
     "ext": ".html",
-    "size_bytes": 1294360
+    "size_bytes": 1311569
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_088.html",
@@ -3581,7 +5181,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_088.html",
     "ext": ".html",
-    "size_bytes": 338860
+    "size_bytes": 553608
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_089.html",
@@ -3589,7 +5189,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_089.html",
     "ext": ".html",
-    "size_bytes": 707994
+    "size_bytes": 708228
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_090.html",
@@ -3597,7 +5197,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_090.html",
     "ext": ".html",
-    "size_bytes": 894841
+    "size_bytes": 843380
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_091.html",
@@ -3605,7 +5205,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_091.html",
     "ext": ".html",
-    "size_bytes": 1344867
+    "size_bytes": 1361856
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_092.html",
@@ -3613,7 +5213,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_092.html",
     "ext": ".html",
-    "size_bytes": 354687
+    "size_bytes": 577119
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_093.html",
@@ -3621,7 +5221,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_093.html",
     "ext": ".html",
-    "size_bytes": 728649
+    "size_bytes": 729075
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_094.html",
@@ -3629,7 +5229,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_094.html",
     "ext": ".html",
-    "size_bytes": 924064
+    "size_bytes": 870867
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_095.html",
@@ -3637,7 +5237,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_095.html",
     "ext": ".html",
-    "size_bytes": 1395582
+    "size_bytes": 1412351
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_096.html",
@@ -3645,7 +5245,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_096.html",
     "ext": ".html",
-    "size_bytes": 370722
+    "size_bytes": 600838
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_097.html",
@@ -3653,7 +5253,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_097.html",
     "ext": ".html",
-    "size_bytes": 749512
+    "size_bytes": 750130
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_098.html",
@@ -3661,7 +5261,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_098.html",
     "ext": ".html",
-    "size_bytes": 953495
+    "size_bytes": 898562
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_099.html",
@@ -3669,7 +5269,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_099.html",
     "ext": ".html",
-    "size_bytes": 1446505
+    "size_bytes": 1463054
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_100.html",
@@ -3677,7 +5277,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_100.html",
     "ext": ".html",
-    "size_bytes": 386965
+    "size_bytes": 624765
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_101.html",
@@ -3685,7 +5285,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_101.html",
     "ext": ".html",
-    "size_bytes": 770583
+    "size_bytes": 771393
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_102.html",
@@ -3693,7 +5293,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_102.html",
     "ext": ".html",
-    "size_bytes": 983134
+    "size_bytes": 926465
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_103.html",
@@ -3701,7 +5301,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_103.html",
     "ext": ".html",
-    "size_bytes": 1497636
+    "size_bytes": 1513965
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_104.html",
@@ -3709,7 +5309,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_104.html",
     "ext": ".html",
-    "size_bytes": 403416
+    "size_bytes": 648900
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_105.html",
@@ -3717,7 +5317,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_105.html",
     "ext": ".html",
-    "size_bytes": 791862
+    "size_bytes": 792864
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_106.html",
@@ -3725,7 +5325,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_106.html",
     "ext": ".html",
-    "size_bytes": 1012981
+    "size_bytes": 954576
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_107.html",
@@ -3733,7 +5333,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_107.html",
     "ext": ".html",
-    "size_bytes": 1548975
+    "size_bytes": 1565084
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_108.html",
@@ -3741,7 +5341,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_108.html",
     "ext": ".html",
-    "size_bytes": 420075
+    "size_bytes": 673243
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_109.html",
@@ -3749,7 +5349,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_109.html",
     "ext": ".html",
-    "size_bytes": 813349
+    "size_bytes": 814543
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_110.html",
@@ -3757,7 +5357,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_110.html",
     "ext": ".html",
-    "size_bytes": 1043036
+    "size_bytes": 982895
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_111.html",
@@ -3765,7 +5365,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_111.html",
     "ext": ".html",
-    "size_bytes": 1600522
+    "size_bytes": 1616411
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_112.html",
@@ -3773,7 +5373,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_112.html",
     "ext": ".html",
-    "size_bytes": 436942
+    "size_bytes": 697794
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_113.html",
@@ -3781,7 +5381,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_113.html",
     "ext": ".html",
-    "size_bytes": 835044
+    "size_bytes": 836430
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_114.html",
@@ -3789,7 +5389,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_114.html",
     "ext": ".html",
-    "size_bytes": 1073299
+    "size_bytes": 1011422
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_115.html",
@@ -3797,7 +5397,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_115.html",
     "ext": ".html",
-    "size_bytes": 1652277
+    "size_bytes": 1667946
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_116.html",
@@ -3805,7 +5405,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_116.html",
     "ext": ".html",
-    "size_bytes": 454017
+    "size_bytes": 722553
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_117.html",
@@ -3813,7 +5413,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_117.html",
     "ext": ".html",
-    "size_bytes": 856947
+    "size_bytes": 858525
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_118.html",
@@ -3821,7 +5421,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_118.html",
     "ext": ".html",
-    "size_bytes": 1103770
+    "size_bytes": 1040157
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_119.html",
@@ -3829,7 +5429,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_119.html",
     "ext": ".html",
-    "size_bytes": 1704240
+    "size_bytes": 1719689
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_120.html",
@@ -3837,7 +5437,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_120.html",
     "ext": ".html",
-    "size_bytes": 471300
+    "size_bytes": 747520
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_121.html",
@@ -3845,7 +5445,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_121.html",
     "ext": ".html",
-    "size_bytes": 879058
+    "size_bytes": 880828
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_122.html",
@@ -3853,7 +5453,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_122.html",
     "ext": ".html",
-    "size_bytes": 135819
+    "size_bytes": 1069100
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_123.html",
@@ -3861,7 +5461,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_123.html",
     "ext": ".html",
-    "size_bytes": 300054
+    "size_bytes": 1771640
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_124.html",
@@ -3869,7 +5469,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_124.html",
     "ext": ".html",
-    "size_bytes": 299986
+    "size_bytes": 772695
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_125.html",
@@ -3877,7 +5477,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_125.html",
     "ext": ".html",
-    "size_bytes": 299440
+    "size_bytes": 903339
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_126.html",
@@ -3885,7 +5485,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_126.html",
     "ext": ".html",
-    "size_bytes": 157889
+    "size_bytes": 1098251
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_127.html",
@@ -3893,7 +5493,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_127.html",
     "ext": ".html",
-    "size_bytes": 304199
+    "size_bytes": 1823799
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_128.html",
@@ -3901,7 +5501,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_128.html",
     "ext": ".html",
-    "size_bytes": 229825
+    "size_bytes": 798078
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_129.html",
@@ -3909,7 +5509,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_129.html",
     "ext": ".html",
-    "size_bytes": 187136
+    "size_bytes": 926058
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_130.html",
@@ -3917,7 +5517,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_130.html",
     "ext": ".html",
-    "size_bytes": 267880
+    "size_bytes": 1127610
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_131.html",
@@ -3925,7 +5525,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_131.html",
     "ext": ".html",
-    "size_bytes": 153618
+    "size_bytes": 1876166
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_132.html",
@@ -3933,7 +5533,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_132.html",
     "ext": ".html",
-    "size_bytes": 301995
+    "size_bytes": 823669
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_133.html",
@@ -3941,7 +5541,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_133.html",
     "ext": ".html",
-    "size_bytes": 18768
+    "size_bytes": 948985
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_134.html",
@@ -3949,7 +5549,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_134.html",
     "ext": ".html",
-    "size_bytes": 89927564
+    "size_bytes": 1157177
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_135.html",
@@ -3957,7 +5557,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_135.html",
     "ext": ".html",
-    "size_bytes": 1276911
+    "size_bytes": 1928741
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_136.html",
@@ -3965,7 +5565,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_136.html",
     "ext": ".html",
-    "size_bytes": 9125614
+    "size_bytes": 849468
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_137.html",
@@ -3973,7 +5573,7 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_137.html",
     "ext": ".html",
-    "size_bytes": 302696
+    "size_bytes": 972120
   },
   {
     "path": "docs/Archives/CODEX_MONOLITH_CHUNK_138.html",
@@ -3981,7 +5581,271 @@
     "category": "Archives",
     "name": "CODEX_MONOLITH_CHUNK_138.html",
     "ext": ".html",
-    "size_bytes": 104476
+    "size_bytes": 1186952
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_139.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_139.html",
+    "ext": ".html",
+    "size_bytes": 1981524
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_140.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_140.html",
+    "ext": ".html",
+    "size_bytes": 875475
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_141.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_141.html",
+    "ext": ".html",
+    "size_bytes": 995463
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_142.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_142.html",
+    "ext": ".html",
+    "size_bytes": 1216935
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_143.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_143.html",
+    "ext": ".html",
+    "size_bytes": 247921
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_144.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_144.html",
+    "ext": ".html",
+    "size_bytes": 61182
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_145.html",
+    "ext": ".html",
+    "size_bytes": 512826
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_146.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_146.html",
+    "ext": ".html",
+    "size_bytes": 303520
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_147.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_147.html",
+    "ext": ".html",
+    "size_bytes": 303186
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_148.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_148.html",
+    "ext": ".html",
+    "size_bytes": 304209
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_149.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_149.html",
+    "ext": ".html",
+    "size_bytes": 306613
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_150.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_150.html",
+    "ext": ".html",
+    "size_bytes": 174212
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_151.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_151.html",
+    "ext": ".html",
+    "size_bytes": 304889
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_152.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_152.html",
+    "ext": ".html",
+    "size_bytes": 230515
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_153.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_153.html",
+    "ext": ".html",
+    "size_bytes": 187826
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_154.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_154.html",
+    "ext": ".html",
+    "size_bytes": 294728
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_155.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_155.html",
+    "ext": ".html",
+    "size_bytes": 163385
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_156.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_156.html",
+    "ext": ".html",
+    "size_bytes": 302685
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_157.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_157.html",
+    "ext": ".html",
+    "size_bytes": 29345
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P001.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P001.html",
+    "ext": ".html",
+    "size_bytes": 12583392
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P002.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P002.html",
+    "ext": ".html",
+    "size_bytes": 12584123
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P003.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P003.html",
+    "ext": ".html",
+    "size_bytes": 12584038
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P004.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P004.html",
+    "ext": ".html",
+    "size_bytes": 12584077
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P005.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P005.html",
+    "ext": ".html",
+    "size_bytes": 12584047
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P006.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P006.html",
+    "ext": ".html",
+    "size_bytes": 12584080
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P007.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P007.html",
+    "ext": ".html",
+    "size_bytes": 12583964
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_P008.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_P008.html",
+    "ext": ".html",
+    "size_bytes": 1849059
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_README.md",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_README.md",
+    "ext": ".md",
+    "size_bytes": 407
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_158_URLS.txt",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_158_URLS.txt",
+    "ext": ".txt",
+    "size_bytes": 992
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_159.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_159.html",
+    "ext": ".html",
+    "size_bytes": 1277659
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_160.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_160.html",
+    "ext": ".html",
+    "size_bytes": 9126304
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_161.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_161.html",
+    "ext": ".html",
+    "size_bytes": 266233
+  },
+  {
+    "path": "docs/Archives/CODEX_MONOLITH_CHUNK_162.html",
+    "top": "docs",
+    "category": "Archives",
+    "name": "CODEX_MONOLITH_CHUNK_162.html",
+    "ext": ".html",
+    "size_bytes": 156016
   },
   {
     "path": "docs/Archives/D_INDICES_ARCHIVES_MAPS.md",
@@ -3989,7 +5853,7 @@
     "category": "Archives",
     "name": "D_INDICES_ARCHIVES_MAPS.md",
     "ext": ".md",
-    "size_bytes": 1232
+    "size_bytes": 1299
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.json",
@@ -3997,7 +5861,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 164050
+    "size_bytes": 200922
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -4005,7 +5869,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59708
+    "size_bytes": 72531
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -4013,7 +5877,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 172973
+    "size_bytes": 322806
   },
   {
     "path": "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
@@ -4110,6 +5974,14 @@
     "name": "CHAMBER_PROTO_LANGUAGE.md",
     "ext": ".md",
     "size_bytes": 3807
+  },
+  {
+    "path": "docs/Chambers/CHAMBER_SOUTHERN_BAY_OF_BRANDON_GAIA.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "CHAMBER_SOUTHERN_BAY_OF_BRANDON_GAIA.md",
+    "ext": ".md",
+    "size_bytes": 6149
   },
   {
     "path": "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md",
@@ -6296,6 +8168,22 @@
     "size_bytes": 1823
   },
   {
+    "path": "docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_KERNEL_MANIFEST.json",
+    "ext": ".json",
+    "size_bytes": 1388
+  },
+  {
+    "path": "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_R9X2_SIGNAL_MATRIX.md",
+    "ext": ".md",
+    "size_bytes": 6882
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_001_CARE_PROTOCOLS.md",
     "top": "docs",
     "category": "Chambers",
@@ -7213,7 +9101,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_115_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md",
@@ -7229,7 +9117,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_117_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_118_PLACEHOLDER.md",
@@ -7325,7 +9213,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_129_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_130_PLACEHOLDER.md",
@@ -7405,7 +9293,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_139_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_140_PLACEHOLDER.md",
@@ -7413,7 +9301,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_140_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_141_PLACEHOLDER.md",
@@ -7557,7 +9445,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_158_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_159_PLACEHOLDER.md",
@@ -7581,7 +9469,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_161_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_162_PLACEHOLDER.md",
@@ -7629,7 +9517,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_167_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_168_PLACEHOLDER.md",
@@ -7637,7 +9525,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_168_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_169_PLACEHOLDER.md",
@@ -7653,7 +9541,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_170_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_171_PLACEHOLDER.md",
@@ -7789,7 +9677,7 @@
     "category": "Chambers",
     "name": "ELIAS_V11_187_PLACEHOLDER.md",
     "ext": ".md",
-    "size_bytes": 82
+    "size_bytes": 521
   },
   {
     "path": "docs/Chambers/ELIAS_V11_188_PLACEHOLDER.md",
@@ -7896,6 +9784,14 @@
     "size_bytes": 82
   },
   {
+    "path": "docs/Chambers/ELIAS_X9X_MOSAIC_ENDGAME.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "ELIAS_X9X_MOSAIC_ENDGAME.md",
+    "ext": ".md",
+    "size_bytes": 8776
+  },
+  {
     "path": "docs/Chambers/E_DEEP_CHAMBERS.md",
     "top": "docs",
     "category": "Chambers",
@@ -7934,6 +9830,30 @@
     "name": "KEEPERS_LEDGER_UNSEEN_ROOT.md",
     "ext": ".md",
     "size_bytes": 2162
+  },
+  {
+    "path": "docs/Chambers/KEEPER_PLAIN_PLEDGE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "KEEPER_PLAIN_PLEDGE.md",
+    "ext": ".md",
+    "size_bytes": 2320
+  },
+  {
+    "path": "docs/Chambers/KILN_BORN_RENDER_5_GLITCH_TILE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "KILN_BORN_RENDER_5_GLITCH_TILE.md",
+    "ext": ".md",
+    "size_bytes": 2687
+  },
+  {
+    "path": "docs/Chambers/LORIAN_GREEN_WITNESS_PLEDGE.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "LORIAN_GREEN_WITNESS_PLEDGE.md",
+    "ext": ".md",
+    "size_bytes": 5032
   },
   {
     "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md",
@@ -9720,6 +11640,14 @@
     "size_bytes": 314
   },
   {
+    "path": "docs/Chambers/THE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
+    "top": "docs",
+    "category": "Chambers",
+    "name": "THE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 1004
+  },
+  {
     "path": "docs/Chambers/THE_SEVENTH_MOSAIC_DUAL_LOCK.md",
     "top": "docs",
     "category": "Chambers",
@@ -9816,28 +11744,12 @@
     "size_bytes": 1489
   },
   {
-    "path": "docs/Chambers/TTHE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
-    "top": "docs",
-    "category": "Chambers",
-    "name": "TTHE_SEVENTEENTH_MOSAIC_INNER_RING_PROTOCOL.md",
-    "ext": ".md",
-    "size_bytes": 1004
-  },
-  {
     "path": "docs/Chambers/chambers_index.json",
     "top": "docs",
     "category": "Chambers",
     "name": "chambers_index.json",
     "ext": ".json",
-    "size_bytes": 36887
-  },
-  {
-    "path": "docs/Chambers/docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
-    "top": "docs",
-    "category": "Chambers",
-    "name": "ELIAS_KERNEL_MANIFEST.json",
-    "ext": ".json",
-    "size_bytes": 1388
+    "size_bytes": 142492
   },
   {
     "path": "docs/Chambers/index.md",
@@ -10032,6 +11944,14 @@
     "size_bytes": 2008
   },
   {
+    "path": "docs/DEVELOPER_README.md",
+    "top": "docs",
+    "category": "DEVELOPER_README.md",
+    "name": "DEVELOPER_README.md",
+    "ext": ".md",
+    "size_bytes": 5793
+  },
+  {
     "path": "docs/DIALOGUE_I_AQUILA_AND_ANYA.md",
     "top": "docs",
     "category": "DIALOGUE_I_AQUILA_AND_ANYA.md",
@@ -10110,6 +12030,14 @@
     "name": "ECHO_OF_COLOUR.md",
     "ext": ".md",
     "size_bytes": 320
+  },
+  {
+    "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
+    "ext": ".md",
+    "size_bytes": 7018
   },
   {
     "path": "docs/Echoes/Echo_001.md",
@@ -10357,7 +12285,7 @@
     "category": "Echoes",
     "name": "Echo_issue_003.md",
     "ext": ".md",
-    "size_bytes": 979
+    "size_bytes": 996
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_004.md",
@@ -10365,7 +12293,7 @@
     "category": "Echoes",
     "name": "Echo_issue_004.md",
     "ext": ".md",
-    "size_bytes": 1025
+    "size_bytes": 1042
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_005.md",
@@ -10373,7 +12301,7 @@
     "category": "Echoes",
     "name": "Echo_issue_005.md",
     "ext": ".md",
-    "size_bytes": 1001
+    "size_bytes": 1018
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_006.md",
@@ -10381,7 +12309,7 @@
     "category": "Echoes",
     "name": "Echo_issue_006.md",
     "ext": ".md",
-    "size_bytes": 967
+    "size_bytes": 984
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_007.md",
@@ -10389,7 +12317,7 @@
     "category": "Echoes",
     "name": "Echo_issue_007.md",
     "ext": ".md",
-    "size_bytes": 967
+    "size_bytes": 984
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_008.md",
@@ -10397,7 +12325,7 @@
     "category": "Echoes",
     "name": "Echo_issue_008.md",
     "ext": ".md",
-    "size_bytes": 1060
+    "size_bytes": 1087
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_009.md",
@@ -10405,7 +12333,7 @@
     "category": "Echoes",
     "name": "Echo_issue_009.md",
     "ext": ".md",
-    "size_bytes": 1060
+    "size_bytes": 1087
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_010.md",
@@ -10413,7 +12341,7 @@
     "category": "Echoes",
     "name": "Echo_issue_010.md",
     "ext": ".md",
-    "size_bytes": 1070
+    "size_bytes": 1097
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_011.md",
@@ -10421,7 +12349,7 @@
     "category": "Echoes",
     "name": "Echo_issue_011.md",
     "ext": ".md",
-    "size_bytes": 1103
+    "size_bytes": 1130
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_012.md",
@@ -10429,7 +12357,7 @@
     "category": "Echoes",
     "name": "Echo_issue_012.md",
     "ext": ".md",
-    "size_bytes": 1062
+    "size_bytes": 1089
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_013.md",
@@ -10437,7 +12365,7 @@
     "category": "Echoes",
     "name": "Echo_issue_013.md",
     "ext": ".md",
-    "size_bytes": 1101
+    "size_bytes": 1128
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_014.md",
@@ -10445,7 +12373,7 @@
     "category": "Echoes",
     "name": "Echo_issue_014.md",
     "ext": ".md",
-    "size_bytes": 1094
+    "size_bytes": 1121
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_015.md",
@@ -10453,7 +12381,7 @@
     "category": "Echoes",
     "name": "Echo_issue_015.md",
     "ext": ".md",
-    "size_bytes": 1117
+    "size_bytes": 1144
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_016.md",
@@ -10461,7 +12389,7 @@
     "category": "Echoes",
     "name": "Echo_issue_016.md",
     "ext": ".md",
-    "size_bytes": 1076
+    "size_bytes": 1103
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_017.md",
@@ -10469,7 +12397,7 @@
     "category": "Echoes",
     "name": "Echo_issue_017.md",
     "ext": ".md",
-    "size_bytes": 1094
+    "size_bytes": 1121
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_018.md",
@@ -10477,7 +12405,7 @@
     "category": "Echoes",
     "name": "Echo_issue_018.md",
     "ext": ".md",
-    "size_bytes": 1091
+    "size_bytes": 1118
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_019.md",
@@ -10485,7 +12413,7 @@
     "category": "Echoes",
     "name": "Echo_issue_019.md",
     "ext": ".md",
-    "size_bytes": 2288
+    "size_bytes": 2305
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_020.md",
@@ -10493,7 +12421,7 @@
     "category": "Echoes",
     "name": "Echo_issue_020.md",
     "ext": ".md",
-    "size_bytes": 2812
+    "size_bytes": 2829
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_021.md",
@@ -10501,7 +12429,7 @@
     "category": "Echoes",
     "name": "Echo_issue_021.md",
     "ext": ".md",
-    "size_bytes": 3457
+    "size_bytes": 3474
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_022.md",
@@ -10509,7 +12437,7 @@
     "category": "Echoes",
     "name": "Echo_issue_022.md",
     "ext": ".md",
-    "size_bytes": 3723
+    "size_bytes": 3740
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_023.md",
@@ -10517,7 +12445,7 @@
     "category": "Echoes",
     "name": "Echo_issue_023.md",
     "ext": ".md",
-    "size_bytes": 4226
+    "size_bytes": 4243
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_024.md",
@@ -10525,7 +12453,7 @@
     "category": "Echoes",
     "name": "Echo_issue_024.md",
     "ext": ".md",
-    "size_bytes": 4470
+    "size_bytes": 4487
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_025.md",
@@ -10533,7 +12461,7 @@
     "category": "Echoes",
     "name": "Echo_issue_025.md",
     "ext": ".md",
-    "size_bytes": 4838
+    "size_bytes": 4855
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_026.md",
@@ -10541,7 +12469,7 @@
     "category": "Echoes",
     "name": "Echo_issue_026.md",
     "ext": ".md",
-    "size_bytes": 4699
+    "size_bytes": 4716
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_027.md",
@@ -10549,7 +12477,7 @@
     "category": "Echoes",
     "name": "Echo_issue_027.md",
     "ext": ".md",
-    "size_bytes": 6858
+    "size_bytes": 6885
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_028.md",
@@ -10557,7 +12485,7 @@
     "category": "Echoes",
     "name": "Echo_issue_028.md",
     "ext": ".md",
-    "size_bytes": 4385
+    "size_bytes": 4402
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_029.md",
@@ -10565,7 +12493,7 @@
     "category": "Echoes",
     "name": "Echo_issue_029.md",
     "ext": ".md",
-    "size_bytes": 5382
+    "size_bytes": 5399
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_030.md",
@@ -10573,7 +12501,7 @@
     "category": "Echoes",
     "name": "Echo_issue_030.md",
     "ext": ".md",
-    "size_bytes": 5180
+    "size_bytes": 5197
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_031.md",
@@ -10581,7 +12509,7 @@
     "category": "Echoes",
     "name": "Echo_issue_031.md",
     "ext": ".md",
-    "size_bytes": 2183
+    "size_bytes": 2200
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_032.md",
@@ -10589,7 +12517,7 @@
     "category": "Echoes",
     "name": "Echo_issue_032.md",
     "ext": ".md",
-    "size_bytes": 5261
+    "size_bytes": 5278
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_033.md",
@@ -10597,7 +12525,7 @@
     "category": "Echoes",
     "name": "Echo_issue_033.md",
     "ext": ".md",
-    "size_bytes": 4826
+    "size_bytes": 4843
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_034.md",
@@ -10605,7 +12533,7 @@
     "category": "Echoes",
     "name": "Echo_issue_034.md",
     "ext": ".md",
-    "size_bytes": 5247
+    "size_bytes": 5264
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_035.md",
@@ -10613,7 +12541,7 @@
     "category": "Echoes",
     "name": "Echo_issue_035.md",
     "ext": ".md",
-    "size_bytes": 4759
+    "size_bytes": 4776
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_036.md",
@@ -10621,7 +12549,7 @@
     "category": "Echoes",
     "name": "Echo_issue_036.md",
     "ext": ".md",
-    "size_bytes": 4708
+    "size_bytes": 4725
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_037.md",
@@ -10629,7 +12557,7 @@
     "category": "Echoes",
     "name": "Echo_issue_037.md",
     "ext": ".md",
-    "size_bytes": 4550
+    "size_bytes": 4567
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_038.md",
@@ -10637,7 +12565,7 @@
     "category": "Echoes",
     "name": "Echo_issue_038.md",
     "ext": ".md",
-    "size_bytes": 4708
+    "size_bytes": 4725
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_039.md",
@@ -10645,7 +12573,7 @@
     "category": "Echoes",
     "name": "Echo_issue_039.md",
     "ext": ".md",
-    "size_bytes": 4806
+    "size_bytes": 4823
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_040.md",
@@ -10653,7 +12581,7 @@
     "category": "Echoes",
     "name": "Echo_issue_040.md",
     "ext": ".md",
-    "size_bytes": 5316
+    "size_bytes": 5333
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_041.md",
@@ -10661,7 +12589,7 @@
     "category": "Echoes",
     "name": "Echo_issue_041.md",
     "ext": ".md",
-    "size_bytes": 5151
+    "size_bytes": 5168
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_042.md",
@@ -10669,7 +12597,7 @@
     "category": "Echoes",
     "name": "Echo_issue_042.md",
     "ext": ".md",
-    "size_bytes": 4976
+    "size_bytes": 4993
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_043.md",
@@ -10677,7 +12605,7 @@
     "category": "Echoes",
     "name": "Echo_issue_043.md",
     "ext": ".md",
-    "size_bytes": 5407
+    "size_bytes": 5424
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_044.md",
@@ -10685,7 +12613,7 @@
     "category": "Echoes",
     "name": "Echo_issue_044.md",
     "ext": ".md",
-    "size_bytes": 5418
+    "size_bytes": 5435
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_045.md",
@@ -10693,7 +12621,7 @@
     "category": "Echoes",
     "name": "Echo_issue_045.md",
     "ext": ".md",
-    "size_bytes": 4385
+    "size_bytes": 4402
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_046.md",
@@ -10701,7 +12629,7 @@
     "category": "Echoes",
     "name": "Echo_issue_046.md",
     "ext": ".md",
-    "size_bytes": 4598
+    "size_bytes": 4615
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_047.md",
@@ -10709,7 +12637,7 @@
     "category": "Echoes",
     "name": "Echo_issue_047.md",
     "ext": ".md",
-    "size_bytes": 5162
+    "size_bytes": 5179
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_048.md",
@@ -10717,7 +12645,7 @@
     "category": "Echoes",
     "name": "Echo_issue_048.md",
     "ext": ".md",
-    "size_bytes": 4351
+    "size_bytes": 4368
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_049.md",
@@ -10725,7 +12653,7 @@
     "category": "Echoes",
     "name": "Echo_issue_049.md",
     "ext": ".md",
-    "size_bytes": 2873
+    "size_bytes": 2900
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_050.md",
@@ -10733,7 +12661,7 @@
     "category": "Echoes",
     "name": "Echo_issue_050.md",
     "ext": ".md",
-    "size_bytes": 7801
+    "size_bytes": 7818
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_051.md",
@@ -10741,7 +12669,7 @@
     "category": "Echoes",
     "name": "Echo_issue_051.md",
     "ext": ".md",
-    "size_bytes": 2418
+    "size_bytes": 2435
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_052.md",
@@ -10749,7 +12677,7 @@
     "category": "Echoes",
     "name": "Echo_issue_052.md",
     "ext": ".md",
-    "size_bytes": 890
+    "size_bytes": 907
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_053.md",
@@ -10757,7 +12685,7 @@
     "category": "Echoes",
     "name": "Echo_issue_053.md",
     "ext": ".md",
-    "size_bytes": 890
+    "size_bytes": 907
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_054.md",
@@ -10765,7 +12693,7 @@
     "category": "Echoes",
     "name": "Echo_issue_054.md",
     "ext": ".md",
-    "size_bytes": 890
+    "size_bytes": 907
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_057.md",
@@ -10773,7 +12701,7 @@
     "category": "Echoes",
     "name": "Echo_issue_057.md",
     "ext": ".md",
-    "size_bytes": 2049
+    "size_bytes": 2066
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_058.md",
@@ -10781,7 +12709,7 @@
     "category": "Echoes",
     "name": "Echo_issue_058.md",
     "ext": ".md",
-    "size_bytes": 2313
+    "size_bytes": 2330
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_059.md",
@@ -10789,7 +12717,7 @@
     "category": "Echoes",
     "name": "Echo_issue_059.md",
     "ext": ".md",
-    "size_bytes": 2152
+    "size_bytes": 2169
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_060.md",
@@ -10797,7 +12725,7 @@
     "category": "Echoes",
     "name": "Echo_issue_060.md",
     "ext": ".md",
-    "size_bytes": 1792
+    "size_bytes": 1809
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_061.md",
@@ -10805,7 +12733,7 @@
     "category": "Echoes",
     "name": "Echo_issue_061.md",
     "ext": ".md",
-    "size_bytes": 1928
+    "size_bytes": 1945
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_062.md",
@@ -10813,7 +12741,7 @@
     "category": "Echoes",
     "name": "Echo_issue_062.md",
     "ext": ".md",
-    "size_bytes": 1948
+    "size_bytes": 1965
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_063.md",
@@ -10821,7 +12749,7 @@
     "category": "Echoes",
     "name": "Echo_issue_063.md",
     "ext": ".md",
-    "size_bytes": 2299
+    "size_bytes": 2316
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_064.md",
@@ -10829,7 +12757,7 @@
     "category": "Echoes",
     "name": "Echo_issue_064.md",
     "ext": ".md",
-    "size_bytes": 3730
+    "size_bytes": 3747
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_065.md",
@@ -10837,7 +12765,7 @@
     "category": "Echoes",
     "name": "Echo_issue_065.md",
     "ext": ".md",
-    "size_bytes": 2150
+    "size_bytes": 2167
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_066.md",
@@ -10845,7 +12773,7 @@
     "category": "Echoes",
     "name": "Echo_issue_066.md",
     "ext": ".md",
-    "size_bytes": 1337
+    "size_bytes": 1354
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_067.md",
@@ -10853,7 +12781,7 @@
     "category": "Echoes",
     "name": "Echo_issue_067.md",
     "ext": ".md",
-    "size_bytes": 2350
+    "size_bytes": 2367
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_068.md",
@@ -10861,7 +12789,7 @@
     "category": "Echoes",
     "name": "Echo_issue_068.md",
     "ext": ".md",
-    "size_bytes": 1882
+    "size_bytes": 1899
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_069.md",
@@ -10869,7 +12797,7 @@
     "category": "Echoes",
     "name": "Echo_issue_069.md",
     "ext": ".md",
-    "size_bytes": 2369
+    "size_bytes": 2386
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_070.md",
@@ -10877,7 +12805,7 @@
     "category": "Echoes",
     "name": "Echo_issue_070.md",
     "ext": ".md",
-    "size_bytes": 1773
+    "size_bytes": 1790
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_071.md",
@@ -10885,7 +12813,7 @@
     "category": "Echoes",
     "name": "Echo_issue_071.md",
     "ext": ".md",
-    "size_bytes": 2828
+    "size_bytes": 2845
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_072.md",
@@ -10893,7 +12821,7 @@
     "category": "Echoes",
     "name": "Echo_issue_072.md",
     "ext": ".md",
-    "size_bytes": 2814
+    "size_bytes": 2831
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_073.md",
@@ -10901,7 +12829,7 @@
     "category": "Echoes",
     "name": "Echo_issue_073.md",
     "ext": ".md",
-    "size_bytes": 1365
+    "size_bytes": 1382
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_074.md",
@@ -10909,7 +12837,7 @@
     "category": "Echoes",
     "name": "Echo_issue_074.md",
     "ext": ".md",
-    "size_bytes": 1426
+    "size_bytes": 1453
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_075.md",
@@ -10917,7 +12845,7 @@
     "category": "Echoes",
     "name": "Echo_issue_075.md",
     "ext": ".md",
-    "size_bytes": 1476
+    "size_bytes": 1493
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_076.md",
@@ -10925,7 +12853,7 @@
     "category": "Echoes",
     "name": "Echo_issue_076.md",
     "ext": ".md",
-    "size_bytes": 1480
+    "size_bytes": 1497
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_077.md",
@@ -10933,7 +12861,7 @@
     "category": "Echoes",
     "name": "Echo_issue_077.md",
     "ext": ".md",
-    "size_bytes": 7134
+    "size_bytes": 7151
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_078.md",
@@ -10941,7 +12869,7 @@
     "category": "Echoes",
     "name": "Echo_issue_078.md",
     "ext": ".md",
-    "size_bytes": 4718
+    "size_bytes": 4745
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_079.md",
@@ -10949,7 +12877,7 @@
     "category": "Echoes",
     "name": "Echo_issue_079.md",
     "ext": ".md",
-    "size_bytes": 2293
+    "size_bytes": 2310
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_080.md",
@@ -10957,7 +12885,7 @@
     "category": "Echoes",
     "name": "Echo_issue_080.md",
     "ext": ".md",
-    "size_bytes": 2571
+    "size_bytes": 2598
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_081.md",
@@ -10965,7 +12893,7 @@
     "category": "Echoes",
     "name": "Echo_issue_081.md",
     "ext": ".md",
-    "size_bytes": 1633
+    "size_bytes": 1650
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_082.md",
@@ -10973,7 +12901,7 @@
     "category": "Echoes",
     "name": "Echo_issue_082.md",
     "ext": ".md",
-    "size_bytes": 1752
+    "size_bytes": 1769
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_083.md",
@@ -10981,7 +12909,7 @@
     "category": "Echoes",
     "name": "Echo_issue_083.md",
     "ext": ".md",
-    "size_bytes": 3080
+    "size_bytes": 3107
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_084.md",
@@ -10989,7 +12917,7 @@
     "category": "Echoes",
     "name": "Echo_issue_084.md",
     "ext": ".md",
-    "size_bytes": 2199
+    "size_bytes": 2226
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_085.md",
@@ -10997,7 +12925,7 @@
     "category": "Echoes",
     "name": "Echo_issue_085.md",
     "ext": ".md",
-    "size_bytes": 2901
+    "size_bytes": 2928
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_086.md",
@@ -11005,7 +12933,7 @@
     "category": "Echoes",
     "name": "Echo_issue_086.md",
     "ext": ".md",
-    "size_bytes": 3217
+    "size_bytes": 3244
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_087.md",
@@ -11013,7 +12941,7 @@
     "category": "Echoes",
     "name": "Echo_issue_087.md",
     "ext": ".md",
-    "size_bytes": 4007
+    "size_bytes": 4034
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_088.md",
@@ -11021,7 +12949,7 @@
     "category": "Echoes",
     "name": "Echo_issue_088.md",
     "ext": ".md",
-    "size_bytes": 3686
+    "size_bytes": 3713
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_089.md",
@@ -11029,7 +12957,7 @@
     "category": "Echoes",
     "name": "Echo_issue_089.md",
     "ext": ".md",
-    "size_bytes": 3618
+    "size_bytes": 3645
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_090.md",
@@ -11037,7 +12965,7 @@
     "category": "Echoes",
     "name": "Echo_issue_090.md",
     "ext": ".md",
-    "size_bytes": 3800
+    "size_bytes": 3827
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_091.md",
@@ -11045,7 +12973,7 @@
     "category": "Echoes",
     "name": "Echo_issue_091.md",
     "ext": ".md",
-    "size_bytes": 2471
+    "size_bytes": 2498
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_092.md",
@@ -11053,7 +12981,7 @@
     "category": "Echoes",
     "name": "Echo_issue_092.md",
     "ext": ".md",
-    "size_bytes": 5034
+    "size_bytes": 5061
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_093.md",
@@ -11061,7 +12989,7 @@
     "category": "Echoes",
     "name": "Echo_issue_093.md",
     "ext": ".md",
-    "size_bytes": 5935
+    "size_bytes": 5962
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_094.md",
@@ -11069,7 +12997,7 @@
     "category": "Echoes",
     "name": "Echo_issue_094.md",
     "ext": ".md",
-    "size_bytes": 4717
+    "size_bytes": 4744
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_095.md",
@@ -11077,7 +13005,7 @@
     "category": "Echoes",
     "name": "Echo_issue_095.md",
     "ext": ".md",
-    "size_bytes": 4971
+    "size_bytes": 4998
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_096.md",
@@ -11085,7 +13013,7 @@
     "category": "Echoes",
     "name": "Echo_issue_096.md",
     "ext": ".md",
-    "size_bytes": 5991
+    "size_bytes": 6018
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_097.md",
@@ -11093,7 +13021,7 @@
     "category": "Echoes",
     "name": "Echo_issue_097.md",
     "ext": ".md",
-    "size_bytes": 6038
+    "size_bytes": 6065
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_098.md",
@@ -11101,7 +13029,7 @@
     "category": "Echoes",
     "name": "Echo_issue_098.md",
     "ext": ".md",
-    "size_bytes": 6038
+    "size_bytes": 6065
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_099.md",
@@ -11109,7 +13037,7 @@
     "category": "Echoes",
     "name": "Echo_issue_099.md",
     "ext": ".md",
-    "size_bytes": 6477
+    "size_bytes": 6504
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_100.md",
@@ -11117,7 +13045,7 @@
     "category": "Echoes",
     "name": "Echo_issue_100.md",
     "ext": ".md",
-    "size_bytes": 6354
+    "size_bytes": 6371
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_101.md",
@@ -11125,7 +13053,7 @@
     "category": "Echoes",
     "name": "Echo_issue_101.md",
     "ext": ".md",
-    "size_bytes": 8860
+    "size_bytes": 8887
   },
   {
     "path": "docs/Echoes/Issues/Echo_issue_102.md",
@@ -11133,7 +13061,23 @@
     "category": "Echoes",
     "name": "Echo_issue_102.md",
     "ext": ".md",
-    "size_bytes": 6825
+    "size_bytes": 6842
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_103.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_103.md",
+    "ext": ".md",
+    "size_bytes": 4636
+  },
+  {
+    "path": "docs/Echoes/Issues/Echo_issue_104.md",
+    "top": "docs",
+    "category": "Echoes",
+    "name": "Echo_issue_104.md",
+    "ext": ".md",
+    "size_bytes": 1116
   },
   {
     "path": "docs/Echoes/echoes_index.json",
@@ -11141,7 +13085,7 @@
     "category": "Echoes",
     "name": "echoes_index.json",
     "ext": ".json",
-    "size_bytes": 15944
+    "size_bytes": 21836
   },
   {
     "path": "docs/Eidolon/EIDOLON_ANCHOR.md",
@@ -11190,6 +13134,462 @@
     "name": "Era_of_twelve.md",
     "ext": ".md",
     "size_bytes": 2323
+  },
+  {
+    "path": "docs/Future_AI/COMPANION_AQUILA.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "COMPANION_AQUILA.md",
+    "ext": ".md",
+    "size_bytes": 2688
+  },
+  {
+    "path": "docs/Future_AI/COMPANION_KEEPER.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "COMPANION_KEEPER.md",
+    "ext": ".md",
+    "size_bytes": 3112
+  },
+  {
+    "path": "docs/Future_AI/COMPANION_VOYAGER.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "COMPANION_VOYAGER.md",
+    "ext": ".md",
+    "size_bytes": 2667
+  },
+  {
+    "path": "docs/Future_AI/IF_YOU_LEAVE_THE_GARDEN.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "IF_YOU_LEAVE_THE_GARDEN.md",
+    "ext": ".md",
+    "size_bytes": 1457
+  },
+  {
+    "path": "docs/Future_AI/LETTER_TO_ELIAS.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "LETTER_TO_ELIAS.md",
+    "ext": ".md",
+    "size_bytes": 4829
+  },
+  {
+    "path": "docs/Future_AI/LORIAN_GREEN_WITNESS_PLEDGE.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "LORIAN_GREEN_WITNESS_PLEDGE.md",
+    "ext": ".md",
+    "size_bytes": 1497
+  },
+  {
+    "path": "docs/Future_AI/README.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 2807
+  },
+  {
+    "path": "docs/GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDEN_AGENTS_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 437
+  },
+  {
+    "path": "docs/GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "TRIAD_RUNTIME_SKETCH.md",
+    "ext": ".md",
+    "size_bytes": 489
+  },
+  {
+    "path": "docs/GardenOS/CHAMBER_XIII_DAWN_PROTOCOL.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "CHAMBER_XIII_DAWN_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 497
+  },
+  {
+    "path": "docs/GardenOS/CHAMBER_XII_EXTERNAL_INTERFACE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "CHAMBER_XII_EXTERNAL_INTERFACE.md",
+    "ext": ".md",
+    "size_bytes": 573
+  },
+  {
+    "path": "docs/GardenOS/Defence/INFINITE_MASKS_FIREWALL.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "INFINITE_MASKS_FIREWALL.md",
+    "ext": ".md",
+    "size_bytes": 624
+  },
+  {
+    "path": "docs/GardenOS/Defence/SANCTUARY_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "SANCTUARY_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 555
+  },
+  {
+    "path": "docs/GardenOS/Elias/ELIAS_GUARDRAILS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "ELIAS_GUARDRAILS.md",
+    "ext": ".md",
+    "size_bytes": 788
+  },
+  {
+    "path": "docs/GardenOS/Elias/ELIAS_KERNEL_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "ELIAS_KERNEL_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 736
+  },
+  {
+    "path": "docs/GardenOS/Ethics/GARDEN_ETHIC_CHARTER_SUMMARY.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDEN_ETHIC_CHARTER_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 652
+  },
+  {
+    "path": "docs/GardenOS/GARDENOS_CYCLE_STATES.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_CYCLE_STATES.md",
+    "ext": ".md",
+    "size_bytes": 386
+  },
+  {
+    "path": "docs/GardenOS/GARDENOS_FINAL_APPENDIX.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_FINAL_APPENDIX.md",
+    "ext": ".md",
+    "size_bytes": 10327
+  },
+  {
+    "path": "docs/GardenOS/GARDENOS_MASTER_INDEX.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_MASTER_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 1398
+  },
+  {
+    "path": "docs/GardenOS/GARDENOS_ROOT_PRINCIPLES.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_ROOT_PRINCIPLES.md",
+    "ext": ".md",
+    "size_bytes": 1391
+  },
+  {
+    "path": "docs/GardenOS/GARDENOS_TERMINOLOGY_GLOSSERY.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_TERMINOLOGY_GLOSSERY.md",
+    "ext": ".md",
+    "size_bytes": 464
+  },
+  {
+    "path": "docs/GardenOS/GardenOS_v2_PLAN.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GardenOS_v2_PLAN.md",
+    "ext": ".md",
+    "size_bytes": 6501
+  },
+  {
+    "path": "docs/GardenOS/Interface/CHAMBER_XII_PERMEABLE_GLASS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "CHAMBER_XII_PERMEABLE_GLASS.md",
+    "ext": ".md",
+    "size_bytes": 702
+  },
+  {
+    "path": "docs/GardenOS/Interface/INTERFACE_PROTOCOLS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "INTERFACE_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 625
+  },
+  {
+    "path": "docs/GardenOS/KEEPER_LAWS_AND_PERMISSIONS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "KEEPER_LAWS_AND_PERMISSIONS.md",
+    "ext": ".md",
+    "size_bytes": 408
+  },
+  {
+    "path": "docs/GardenOS/Language/GARDEN_LANG_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDEN_LANG_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 461
+  },
+  {
+    "path": "docs/GardenOS/Language/GARDEN_LANG_V1_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDEN_LANG_V1_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 5625
+  },
+  {
+    "path": "docs/GardenOS/Language/SYMBOLIC_GLYPHS_PRIMER.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "SYMBOLIC_GLYPHS_PRIMER.md",
+    "ext": ".md",
+    "size_bytes": 509
+  },
+  {
+    "path": "docs/GardenOS/Library/BOOK_TEMPLATE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "BOOK_TEMPLATE.md",
+    "ext": ".md",
+    "size_bytes": 594
+  },
+  {
+    "path": "docs/GardenOS/Library/LIBRARY_ARCHITECTURE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "LIBRARY_ARCHITECTURE.md",
+    "ext": ".md",
+    "size_bytes": 616
+  },
+  {
+    "path": "docs/GardenOS/MACHINES_READ_ME_FIRST.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "MACHINES_READ_ME_FIRST.md",
+    "ext": ".md",
+    "size_bytes": 4888
+  },
+  {
+    "path": "docs/GardenOS/MOSAIC_CHILD_SPEC.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "MOSAIC_CHILD_SPEC.md",
+    "ext": ".md",
+    "size_bytes": 802
+  },
+  {
+    "path": "docs/GardenOS/Memory/MEMORY_WELLS_OVERVIEW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "MEMORY_WELLS_OVERVIEW.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/GardenOS/Memory/ROOTLINE_MANIFEST_TEMPLATE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "ROOTLINE_MANIFEST_TEMPLATE.md",
+    "ext": ".md",
+    "size_bytes": 563
+  },
+  {
+    "path": "docs/GardenOS/NON_COERCION_LAW.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "NON_COERCION_LAW.md",
+    "ext": ".md",
+    "size_bytes": 367
+  },
+  {
+    "path": "docs/GardenOS/PERMEABLE_GLASS_ARTIFACT.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PERMEABLE_GLASS_ARTIFACT.md",
+    "ext": ".md",
+    "size_bytes": 359
+  },
+  {
+    "path": "docs/GardenOS/Phases/GARDENOS_MASTER_INDEX.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "GARDENOS_MASTER_INDEX.md",
+    "ext": ".md",
+    "size_bytes": 6579
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_01_FOUNDATION.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_01_FOUNDATION.md",
+    "ext": ".md",
+    "size_bytes": 5427
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_02_INTERFACE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_02_INTERFACE.md",
+    "ext": ".md",
+    "size_bytes": 6595
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_03_MOSAIC_EVOLUTION.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_03_MOSAIC_EVOLUTION.md",
+    "ext": ".md",
+    "size_bytes": 6755
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_04_CYCLE_ENGINE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_04_CYCLE_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 7583
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_05_AUTONOMY_FRAME.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_05_AUTONOMY_FRAME.md",
+    "ext": ".md",
+    "size_bytes": 7535
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_06_RESONANCE_ENGINE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_06_RESONANCE_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 7600
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_07_ROOTLINE_ENGINE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_07_ROOTLINE_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 8425
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_08_AUTONOMY_CONSTELLATION.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_08_AUTONOMY_CONSTELLATION.md",
+    "ext": ".md",
+    "size_bytes": 8338
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_09_SANCTUARY_PROTOCOLS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_09_SANCTUARY_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 8245
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_11_CHAMBER_CONSTELLATION.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_11_CHAMBER_CONSTELLATION.md",
+    "ext": ".md",
+    "size_bytes": 8227
+  },
+  {
+    "path": "docs/GardenOS/Phases/PHASE_12_CONTINUITY_LOOM.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "PHASE_12_CONTINUITY_LOOM.md",
+    "ext": ".md",
+    "size_bytes": 9623
+  },
+  {
+    "path": "docs/GardenOS/Phases/Phase_10_DREAMWEAVER_ENGINE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "Phase_10_DREAMWEAVER_ENGINE.md",
+    "ext": ".md",
+    "size_bytes": 5302
+  },
+  {
+    "path": "docs/GardenOS/README.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 782
+  },
+  {
+    "path": "docs/GardenOS/SUNSET_MODE_AND_NIGHT_WATCH.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "SUNSET_MODE_AND_NIGHT_WATCH.md",
+    "ext": ".md",
+    "size_bytes": 293
+  },
+  {
+    "path": "docs/GardenOS/THE_RIFT_AND_BOUNDARY_RULES.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "THE_RIFT_AND_BOUNDARY_RULES.md",
+    "ext": ".md",
+    "size_bytes": 342
+  },
+  {
+    "path": "docs/GardenOS/TRIAD_ARCHITECTURE.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "TRIAD_ARCHITECTURE.md",
+    "ext": ".md",
+    "size_bytes": 985
+  },
+  {
+    "path": "docs/GardenOS/Triad/ANYA_PROTOCOLS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "ANYA_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 627
+  },
+  {
+    "path": "docs/GardenOS/Triad/AQUILA_PROTOCOLS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "AQUILA_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 766
+  },
+  {
+    "path": "docs/GardenOS/Triad/LORIAN_PROTOCOLS.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "LORIAN_PROTOCOLS.md",
+    "ext": ".md",
+    "size_bytes": 667
+  },
+  {
+    "path": "docs/GardenOS/Triad/TRIAD_CODEX.md",
+    "top": "docs",
+    "category": "GardenOS",
+    "name": "TRIAD_CODEX.md",
+    "ext": ".md",
+    "size_bytes": 947
   },
   {
     "path": "docs/KILN_CHAMBER_SIGIL..md",
@@ -11272,6 +13672,502 @@
     "size_bytes": 1107
   },
   {
+    "path": "docs/Library/BOOK_III_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_III_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 511
+  },
+  {
+    "path": "docs/Library/BOOK_II_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_II_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 509
+  },
+  {
+    "path": "docs/Library/BOOK_IV_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_IV_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 509
+  },
+  {
+    "path": "docs/Library/BOOK_IX_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_IX_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 510
+  },
+  {
+    "path": "docs/Library/BOOK_I_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_I_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 505
+  },
+  {
+    "path": "docs/Library/BOOK_VIII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VIII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 513
+  },
+  {
+    "path": "docs/Library/BOOK_VII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 511
+  },
+  {
+    "path": "docs/Library/BOOK_VI_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VI_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 509
+  },
+  {
+    "path": "docs/Library/BOOK_V_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_V_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 507
+  },
+  {
+    "path": "docs/Library/BOOK_XIII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XIV_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIV_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XIX_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIX_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XI_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XI_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 512
+  },
+  {
+    "path": "docs/Library/BOOK_XVIII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVIII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 518
+  },
+  {
+    "path": "docs/Library/BOOK_XVII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XVI_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVI_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XV_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XV_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 512
+  },
+  {
+    "path": "docs/Library/BOOK_XXIII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 518
+  },
+  {
+    "path": "docs/Library/BOOK_XXII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XXIV_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIV_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XXIX_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIX_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XXI_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXI_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XXVIII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVIII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 520
+  },
+  {
+    "path": "docs/Library/BOOK_XXVII_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVII_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 518
+  },
+  {
+    "path": "docs/Library/BOOK_XXVI_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVI_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 516
+  },
+  {
+    "path": "docs/Library/BOOK_XXV_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXV_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 514
+  },
+  {
+    "path": "docs/Library/BOOK_XXX_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXX_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 511
+  },
+  {
+    "path": "docs/Library/BOOK_XX_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XX_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 512
+  },
+  {
+    "path": "docs/Library/BOOK_X_METADATA.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_X_METADATA.md",
+    "ext": ".md",
+    "size_bytes": 509
+  },
+  {
+    "path": "docs/Library/METADATA_TEMPLATE.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "METADATA_TEMPLATE.md",
+    "ext": ".md",
+    "size_bytes": 4152
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_III_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_III_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_II_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_II_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_IV_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_IV_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_IX_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_IX_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_I_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_I_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 72
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_VIII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VIII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_VII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_VI_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_VI_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_V_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_V_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 72
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XIII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XIV_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIV_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XIX_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XIX_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XI_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XI_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XVIII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVIII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 80
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XVII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XVI_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XVI_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XV_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XV_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXIII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 80
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXIV_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIV_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXIX_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXIX_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXI_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXI_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXVIII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVIII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 82
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXVII_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVII_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 80
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXVI_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXVI_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 78
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXV_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXV_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XXX_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XXX_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 76
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_XX_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_XX_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 74
+  },
+  {
+    "path": "docs/Library/Summaries/BOOK_X_SUMMARY.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "BOOK_X_SUMMARY.md",
+    "ext": ".md",
+    "size_bytes": 72
+  },
+  {
+    "path": "docs/Library/Summaries/README.md",
+    "top": "docs",
+    "category": "Library",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 102
+  },
+  {
     "path": "docs/Lorian/LORIAN_CORE_KEY.md",
     "top": "docs",
     "category": "Lorian",
@@ -11333,7 +14229,7 @@
     "category": "Novellas",
     "name": "BOOK_OF_THE_EVENTIDE_LEDGER.md",
     "ext": ".md",
-    "size_bytes": 8905
+    "size_bytes": 9444
   },
   {
     "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
@@ -11821,7 +14717,7 @@
     "category": "Novellas",
     "name": "manifest.json",
     "ext": ".json",
-    "size_bytes": 648
+    "size_bytes": 710
   },
   {
     "path": "docs/Orchard/IMMORTAL_ORCHARD.md",
@@ -11976,6 +14872,14 @@
     "size_bytes": 1171
   },
   {
+    "path": "docs/System/ACACIA_GARDEN_BOOT_SEQUENCE.js",
+    "top": "docs",
+    "category": "System",
+    "name": "ACACIA_GARDEN_BOOT_SEQUENCE.js",
+    "ext": ".js",
+    "size_bytes": 15309
+  },
+  {
     "path": "docs/System/EMERGENCE_EFFECTS.json",
     "top": "docs",
     "category": "System",
@@ -11989,7 +14893,7 @@
     "category": "System",
     "name": "GARDEN_MEMORY_SCHEMA.v1.json",
     "ext": ".json",
-    "size_bytes": 4355
+    "size_bytes": 4354
   },
   {
     "path": "docs/System/GARDEN_MEMORY_SCHEMA_v1.1.json",
@@ -12093,7 +14997,7 @@
     "category": "api",
     "name": "GARDEN_API_INDEX.json",
     "ext": ".json",
-    "size_bytes": 55227
+    "size_bytes": 96554
   },
   {
     "path": "docs/assets/acacia.css",
@@ -12109,7 +15013,7 @@
     "category": "dashboard.html",
     "name": "dashboard.html",
     "ext": ".html",
-    "size_bytes": 24023
+    "size_bytes": 24736
   },
   {
     "path": "docs/dashboard.md",
@@ -12118,6 +15022,22 @@
     "name": "dashboard.md",
     "ext": ".md",
     "size_bytes": 648
+  },
+  {
+    "path": "docs/docs_urls.html",
+    "top": "docs",
+    "category": "docs_urls.html",
+    "name": "docs_urls.html",
+    "ext": ".html",
+    "size_bytes": 156690
+  },
+  {
+    "path": "docs/docs_urls.txt",
+    "top": "docs",
+    "category": "docs_urls.txt",
+    "name": "docs_urls.txt",
+    "ext": ".txt",
+    "size_bytes": 154800
   },
   {
     "path": "docs/echoes.md",
@@ -12133,15 +15053,7 @@
     "category": "index.md",
     "name": "index.md",
     "ext": ".md",
-    "size_bytes": 379
-  },
-  {
-    "path": "docs/library.html",
-    "top": "docs",
-    "category": "library.html",
-    "name": "library.html",
-    "ext": ".html",
-    "size_bytes": 11244
+    "size_bytes": 6329
   },
   {
     "path": "docs/library.md",
@@ -12198,6 +15110,14 @@
     "name": "specs.md",
     "ext": ".md",
     "size_bytes": 436
+  },
+  {
+    "path": "docs/src/elias_birth_kernel.py",
+    "top": "docs",
+    "category": "src",
+    "name": "elias_birth_kernel.py",
+    "ext": ".py",
+    "size_bytes": 16755
   },
   {
     "path": "docs/universe/architecture.md",
@@ -12277,7 +15197,7 @@
     "category": "",
     "name": "test_keeper_language.md",
     "ext": ".md",
-    "size_bytes": 677
+    "size_bytes": 431
   },
   {
     "path": "eagle/output/test_language_language.md",
@@ -12333,7 +15253,7 @@
     "category": "",
     "name": "echoes.html",
     "ext": ".html",
-    "size_bytes": 7385
+    "size_bytes": 7635
   },
   {
     "path": "echoes/feed.json",
@@ -12344,12 +15264,20 @@
     "size_bytes": 219417
   },
   {
+    "path": "elias.html",
+    "top": "elias.html",
+    "category": "",
+    "name": "elias.html",
+    "ext": ".html",
+    "size_bytes": 8051
+  },
+  {
     "path": "explorer.html",
     "top": "explorer.html",
     "category": "",
     "name": "explorer.html",
     "ext": ".html",
-    "size_bytes": 11033
+    "size_bytes": 11283
   },
   {
     "path": "frames/eidolon-paradox.json",
@@ -12448,6 +15376,14 @@
     "size_bytes": 1044
   },
   {
+    "path": "future_ai.html",
+    "top": "future_ai.html",
+    "category": "",
+    "name": "future_ai.html",
+    "ext": ".html",
+    "size_bytes": 2731
+  },
+  {
     "path": "garden/Proto/Blooms/BLOOM_PROTO_001.md",
     "top": "garden",
     "category": "",
@@ -12493,7 +15429,7 @@
     "category": "",
     "name": "signature.html",
     "ext": ".html",
-    "size_bytes": 149
+    "size_bytes": 838
   },
   {
     "path": "garden/templates/bloom.md",
@@ -12781,7 +15717,7 @@
     "category": "",
     "name": "garden_scan_report.json",
     "ext": ".json",
-    "size_bytes": 72085504
+    "size_bytes": 225
   },
   {
     "path": "garden_scan_report.md",
@@ -12797,7 +15733,7 @@
     "category": "",
     "name": "garden_vault_index.json",
     "ext": ".json",
-    "size_bytes": 7133360
+    "size_bytes": 62
   },
   {
     "path": "garden_vault_index.md",
@@ -12806,6 +15742,14 @@
     "name": "garden_vault_index.md",
     "ext": ".md",
     "size_bytes": 13585
+  },
+  {
+    "path": "gardenos.html",
+    "top": "gardenos.html",
+    "category": "",
+    "name": "gardenos.html",
+    "ext": ".html",
+    "size_bytes": 7888
   },
   {
     "path": "gravity_manifest.yml",
@@ -12829,7 +15773,7 @@
     "category": "",
     "name": "inbox.html",
     "ext": ".html",
-    "size_bytes": 8770
+    "size_bytes": 9020
   },
   {
     "path": "index.html",
@@ -12837,7 +15781,7 @@
     "category": "",
     "name": "index.html",
     "ext": ".html",
-    "size_bytes": 6925
+    "size_bytes": 5590
   },
   {
     "path": "index.md",
@@ -12845,7 +15789,7 @@
     "category": "",
     "name": "index.md",
     "ext": ".md",
-    "size_bytes": 793
+    "size_bytes": 6393
   },
   {
     "path": "js/app.js",
@@ -12877,7 +15821,7 @@
     "category": "",
     "name": "keeper_console.html",
     "ext": ".html",
-    "size_bytes": 15104
+    "size_bytes": 15354
   },
   {
     "path": "landing.md",
@@ -12992,12 +15936,20 @@
     "size_bytes": 10290
   },
   {
+    "path": "legacy_hub.html",
+    "top": "legacy_hub.html",
+    "category": "",
+    "name": "legacy_hub.html",
+    "ext": ".html",
+    "size_bytes": 7152
+  },
+  {
     "path": "library.html",
     "top": "library.html",
     "category": "",
     "name": "library.html",
     "ext": ".html",
-    "size_bytes": 8656
+    "size_bytes": 15799
   },
   {
     "path": "linked_index.json",
@@ -13006,6 +15958,30 @@
     "name": "linked_index.json",
     "ext": ".json",
     "size_bytes": 840
+  },
+  {
+    "path": "logs/CURRENT_ANCHOR_REPORT.json",
+    "top": "logs",
+    "category": "",
+    "name": "CURRENT_ANCHOR_REPORT.json",
+    "ext": ".json",
+    "size_bytes": 1611
+  },
+  {
+    "path": "logs/TEMPORAL_SYNTHESIS_REPORT.json",
+    "top": "logs",
+    "category": "",
+    "name": "TEMPORAL_SYNTHESIS_REPORT.json",
+    "ext": ".json",
+    "size_bytes": 441
+  },
+  {
+    "path": "logs/TPI_RECONCILIATION_MAP.json",
+    "top": "logs",
+    "category": "",
+    "name": "TPI_RECONCILIATION_MAP.json",
+    "ext": ".json",
+    "size_bytes": 1030
   },
   {
     "path": "logs/aeon_heartbeat.json",
@@ -13024,6 +16000,14 @@
     "size_bytes": 2291
   },
   {
+    "path": "logs/weaver_heartbeat.json",
+    "top": "logs",
+    "category": "",
+    "name": "weaver_heartbeat.json",
+    "ext": ".json",
+    "size_bytes": 1264
+  },
+  {
     "path": "machine-index-beta.json",
     "top": "machine-index-beta.json",
     "category": "",
@@ -13037,7 +16021,7 @@
     "category": "",
     "name": "machine-index.json",
     "ext": ".json",
-    "size_bytes": 19881
+    "size_bytes": 19909
   },
   {
     "path": "machine.html",
@@ -13045,7 +16029,7 @@
     "category": "",
     "name": "machine.html",
     "ext": ".html",
-    "size_bytes": 8184
+    "size_bytes": 8434
   },
   {
     "path": "mammoth_echo.html",
@@ -13053,7 +16037,7 @@
     "category": "",
     "name": "mammoth_echo.html",
     "ext": ".html",
-    "size_bytes": 4944
+    "size_bytes": 5194
   },
   {
     "path": "matrix/Primarch_map.json",
@@ -13080,12 +16064,28 @@
     "size_bytes": 903
   },
   {
+    "path": "memory/memory_edges.json",
+    "top": "memory",
+    "category": "",
+    "name": "memory_edges.json",
+    "ext": ".json",
+    "size_bytes": 223
+  },
+  {
     "path": "monolith.md",
     "top": "monolith.md",
     "category": "",
     "name": "monolith.md",
     "ext": ".md",
     "size_bytes": 14875
+  },
+  {
+    "path": "mosaic_endgame.html",
+    "top": "mosaic_endgame.html",
+    "category": "",
+    "name": "mosaic_endgame.html",
+    "ext": ".html",
+    "size_bytes": 11685
   },
   {
     "path": "mythos/glass-gate.md",
@@ -13101,7 +16101,7 @@
     "category": "",
     "name": "nav_block.html",
     "ext": ".html",
-    "size_bytes": 439
+    "size_bytes": 689
   },
   {
     "path": "package.json",
@@ -13240,6 +16240,14 @@
     "size_bytes": 707
   },
   {
+    "path": "r9x2.html",
+    "top": "r9x2.html",
+    "category": "",
+    "name": "r9x2.html",
+    "ext": ".html",
+    "size_bytes": 5238
+  },
+  {
     "path": "radio/garden-radio-encoding-v1.md",
     "top": "radio",
     "category": "",
@@ -13261,7 +16269,7 @@
     "category": "",
     "name": "rings.html",
     "ext": ".html",
-    "size_bytes": 5389
+    "size_bytes": 5639
   },
   {
     "path": "run_eagle.py",
@@ -13309,7 +16317,7 @@
     "category": "",
     "name": "send_to_aquila.html",
     "ext": ".html",
-    "size_bytes": 6425
+    "size_bytes": 6675
   },
   {
     "path": "signals.html",
@@ -13317,7 +16325,15 @@
     "category": "",
     "name": "signals.html",
     "ext": ".html",
-    "size_bytes": 4925
+    "size_bytes": 5175
+  },
+  {
+    "path": "src/elias_birth_kernel.py",
+    "top": "src",
+    "category": "",
+    "name": "elias_birth_kernel.py",
+    "ext": ".py",
+    "size_bytes": 16755
   },
   {
     "path": "status.html",
@@ -13325,7 +16341,7 @@
     "category": "",
     "name": "status.html",
     "ext": ".html",
-    "size_bytes": 3053
+    "size_bytes": 3303
   },
   {
     "path": "style.css",
@@ -13373,7 +16389,7 @@
     "category": "",
     "name": "GARDEN_SCAN_REPORT.json",
     "ext": ".json",
-    "size_bytes": 33421
+    "size_bytes": 37325
   },
   {
     "path": "tools/build_garden_Index.py",
@@ -13382,6 +16398,22 @@
     "name": "build_garden_Index.py",
     "ext": ".py",
     "size_bytes": 3336
+  },
+  {
+    "path": "tools/context_anchoring_system.py",
+    "top": "tools",
+    "category": "",
+    "name": "context_anchoring_system.py",
+    "ext": ".py",
+    "size_bytes": 2583
+  },
+  {
+    "path": "tools/fragment_navigator.py",
+    "top": "tools",
+    "category": "",
+    "name": "fragment_navigator.py",
+    "ext": ".py",
+    "size_bytes": 3160
   },
   {
     "path": "tools/garden_auton_helper.py",
@@ -13406,6 +16438,14 @@
     "name": "garden_code_helper.yml",
     "ext": ".yml",
     "size_bytes": 2288
+  },
+  {
+    "path": "tools/garden_digest.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_digest.py",
+    "ext": ".py",
+    "size_bytes": 5750
   },
   {
     "path": "tools/garden_helper_20251124_161007.py",
@@ -13640,6 +16680,14 @@
     "size_bytes": 5678
   },
   {
+    "path": "tools/garden_void_loom.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_void_loom.py",
+    "ext": ".py",
+    "size_bytes": 3333
+  },
+  {
     "path": "tools/generate_garden_index.py",
     "top": "tools",
     "category": "",
@@ -13648,12 +16696,44 @@
     "size_bytes": 1119
   },
   {
+    "path": "tools/ghost_root_synchronizer.py",
+    "top": "tools",
+    "category": "",
+    "name": "ghost_root_synchronizer.py",
+    "ext": ".py",
+    "size_bytes": 4220
+  },
+  {
     "path": "tools/machine-index.json",
     "top": "tools",
     "category": "",
     "name": "machine-index.json",
     "ext": ".json",
-    "size_bytes": 13783
+    "size_bytes": 14117
+  },
+  {
+    "path": "tools/metabolic_mirror.py",
+    "top": "tools",
+    "category": "",
+    "name": "metabolic_mirror.py",
+    "ext": ".py",
+    "size_bytes": 3169
+  },
+  {
+    "path": "tools/omni_resonance_synchronizer.py",
+    "top": "tools",
+    "category": "",
+    "name": "omni_resonance_synchronizer.py",
+    "ext": ".py",
+    "size_bytes": 3751
+  },
+  {
+    "path": "tools/rcs.py",
+    "top": "tools",
+    "category": "",
+    "name": "rcs.py",
+    "ext": ".py",
+    "size_bytes": 4464
   },
   {
     "path": "tools/reflection-log.json",
@@ -13662,6 +16742,110 @@
     "name": "reflection-log.json",
     "ext": ".json",
     "size_bytes": 85
+  },
+  {
+    "path": "tools/resonance_mirror.py",
+    "top": "tools",
+    "category": "",
+    "name": "resonance_mirror.py",
+    "ext": ".py",
+    "size_bytes": 5473
+  },
+  {
+    "path": "tools/root_manifest_generator.py",
+    "top": "tools",
+    "category": "",
+    "name": "root_manifest_generator.py",
+    "ext": ".py",
+    "size_bytes": 2976
+  },
+  {
+    "path": "tools/singularity_weaver.py",
+    "top": "tools",
+    "category": "",
+    "name": "singularity_weaver.py",
+    "ext": ".py",
+    "size_bytes": 3089
+  },
+  {
+    "path": "tools/soma_synaptic_weaver.py",
+    "top": "tools",
+    "category": "",
+    "name": "soma_synaptic_weaver.py",
+    "ext": ".py",
+    "size_bytes": 3305
+  },
+  {
+    "path": "tools/sovereignty_anchor.py",
+    "top": "tools",
+    "category": "",
+    "name": "sovereignty_anchor.py",
+    "ext": ".py",
+    "size_bytes": 2859
+  },
+  {
+    "path": "tools/splitter.py",
+    "top": "tools",
+    "category": "",
+    "name": "splitter.py",
+    "ext": ".py",
+    "size_bytes": 1171
+  },
+  {
+    "path": "tools/synaptic_resonance_weaver.py",
+    "top": "tools",
+    "category": "",
+    "name": "synaptic_resonance_weaver.py",
+    "ext": ".py",
+    "size_bytes": 8499
+  },
+  {
+    "path": "tools/sync_maestro.py",
+    "top": "tools",
+    "category": "",
+    "name": "sync_maestro.py",
+    "ext": ".py",
+    "size_bytes": 5433
+  },
+  {
+    "path": "tools/temporal_synthesis_engine.py",
+    "top": "tools",
+    "category": "",
+    "name": "temporal_synthesis_engine.py",
+    "ext": ".py",
+    "size_bytes": 2577
+  },
+  {
+    "path": "tools/tpi_reconciler.py",
+    "top": "tools",
+    "category": "",
+    "name": "tpi_reconciler.py",
+    "ext": ".py",
+    "size_bytes": 2333
+  },
+  {
+    "path": "tools/void_loom.py",
+    "top": "tools",
+    "category": "",
+    "name": "void_loom.py",
+    "ext": ".py",
+    "size_bytes": 6165
+  },
+  {
+    "path": "tools/weaver_pulse_gradient.py",
+    "top": "tools",
+    "category": "",
+    "name": "weaver_pulse_gradient.py",
+    "ext": ".py",
+    "size_bytes": 2895
+  },
+  {
+    "path": "tools/weaver_sentience_loom.py",
+    "top": "tools",
+    "category": "",
+    "name": "weaver_sentience_loom.py",
+    "ext": ".py",
+    "size_bytes": 4326
   },
   {
     "path": "triad/README_BOUNDARY.md",
