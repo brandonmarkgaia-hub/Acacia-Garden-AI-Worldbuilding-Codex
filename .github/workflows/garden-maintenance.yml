@@ -47,9 +47,6 @@ jobs:
       - name: Garden Brain (safe AI)
         run: python .github/scripts/garden_brain.py
 
-      - name: Garden Vision (safe AI)
-        run: python .github/scripts/garden_vision.py
-
       # ---------- FULL ----------
       - name: Garden Evolution (full AI)
         if: ${{ github.event.inputs.level == 'full' }}
