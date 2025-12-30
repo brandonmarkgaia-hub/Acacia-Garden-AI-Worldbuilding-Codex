@@ -1,0 +1,16 @@
+name: Guard Doctrine
+
+on: [pull_request]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block edits to doctrine
+        run: |
+          if git diff --name-only origin/main...HEAD | grep -E "(AGENTS.md|CANON_INVARIANTS.md|KEEPER_PROTOCOL.md|WITNESS_LOG.md)"; then
+            if ! git log -1 --pretty=%B | grep -q "Keeper-Authorized"; then
+              echo "Doctrine touched without Keeper authorization"
+              exit 1
+            fi
+          fi
