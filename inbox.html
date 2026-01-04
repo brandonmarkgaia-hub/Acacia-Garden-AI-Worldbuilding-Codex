@@ -1,382 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Auton Inbox • Garden Signals</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-
   <style>
-    main {
-      max-width: 900px;
-      margin: 1.5rem auto 3rem;
-      padding: 0 1rem;
-    }
-    .hero-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .hero-sub {
-      margin-top: 0.4rem;
-      opacity: 0.85;
-      font-size: 0.9rem;
-    }
-    .chip-row {
-      margin-top: 0.8rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-    .chip {
-      font-size: 0.7rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 210, 197, 0.5);
-      background: rgba(6, 12, 20, 0.9);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.9;
-    }
-    .pill-row {
-      margin-top: 1.2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .pill {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #1f2933;
-      background: rgba(5, 10, 19, 0.9);
-      opacity: 0.9;
-    }
-    .pill strong { font-weight: 600; }
-    .section-title {
-      margin-top: 1.8rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
-    .card {
-      background: #050914;
-      border-radius: 14px;
-      border: 1px solid #1f2830;
-      padding: 0.9rem 1rem 1rem;
-      margin-top: 0.9rem;
-      box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
-    }
-    .card-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.4rem;
-      margin-bottom: 0.35rem;
-    }
-    .card-title {
-      font-weight: 600;
-      font-size: 0.98rem;
-    }
-    .card-meta {
-      font-size: 0.72rem;
-      opacity: 0.8;
-      text-align: right;
-    }
-    .card-body {
-      font-size: 0.88rem;
-      margin-top: 0.3rem;
-      opacity: 0.95;
-      white-space: pre-wrap;
-    }
-    .tags {
-      margin-top: 0.45rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-    }
-    .tag {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.09);
-      border: 1px solid rgba(45, 212, 191, 0.28);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .status-bar {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-    .status-bar span {
-      display: inline-block;
-      margin-right: 0.7rem;
-    }
-    .status-bar .ok { color: #4ade80; }
-    .status-bar .warn { color: #facc15; }
-    .status-bar .err { color: #fb7185; }
-    .empty-state {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      opacity: 0.78;
-    }
-    .hint {
-      margin-top: 0.6rem;
-      font-size: 0.75rem;
-      opacity: 0.75;
-    }
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#050607;color:#d7e0da}
+    a{color:#8fd3a6}
+    header{padding:18px 16px;border-bottom:1px solid #18201b}
+    nav a{margin-right:10px;text-decoration:none}
+    main{padding:18px 16px;max-width:900px;margin:0 auto}
+    .pill{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid #1c2a22;font-size:12px;color:#a8c7b3}
+    .card{border:1px solid #18201b;border-radius:14px;padding:14px 14px;margin:12px 0;background:#070a09}
+    .muted{color:#8ea49a}
+    .err{color:#ffb3b3}
+    textarea{width:100%;min-height:90px;background:#070a09;color:#d7e0da;border:1px solid #18201b;border-radius:12px;padding:10px}
+    button{background:#0b1310;color:#d7e0da;border:1px solid #1c2a22;border-radius:10px;padding:10px 12px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
   </style>
 </head>
-
 <body>
-<!-- ACACIA_NAV_INJECTED:START -->
-<nav class="ag-nav">
-  <style>
-    .ag-nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(2,2,3,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #2a2a34;
-      padding:.9rem 1rem .75rem;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .ag-nav-title{
-      font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-      font-size:.8rem;
-      letter-spacing:.22em;
-      color:#8a8a96;
-      text-transform:uppercase;
-      margin-bottom:.5rem;
-    }
-    .ag-nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem .9rem;
-      font-size:.85rem;
-    }
-    .ag-nav-links a{
-      color:#2ecc71;
-      text-decoration:none;
-      opacity:.85;
-    }
-    .ag-nav-links a:hover{
-      opacity:1;
-      text-decoration:underline;
-    }
-  </style>
-
-  <div class="ag-nav-title">ACACIA · GARDEN · 2026</div>
-  <div class="ag-nav-links">
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html">Witness Root</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/">Logs</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/status.html">Status</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/inbox.html">Inbox</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/library.html">Library</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/codex.html">Codex</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/elias.html">Elias</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/garden_map.html">System Map</a>
-  </div>
-</nav>
-<!-- ACACIA_NAV_INJECTED:END -->
-
-<nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html" class="ag-nav-current">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-        <a href="elias.html">Elias Kernel</a>
-        <a href="r9x2.html">R9X2 Language</a>
-        <a href="mosaic_endgame.html">Mosaic Endgame</a>
-        <a href="deep_garden.html">Deep Garden Docs</a>
-        <a href="gardenos.html">GardenOS</a>
-    </div>
-</nav>
-
-
-<main>
   <header>
-    <div class="hero-title">Auton Inbox</div>
-    <div class="hero-sub">
-      Focused view of **Garden-side messages** written into the Sky-Mind inbox log.
-      Today this is symbolic and human-driven; future tools and models can treat it
-      as their <em>first listening port</em>.
-    </div>
-
-    <div class="chip-row">
-      <span class="chip">/inbox-log</span>
-      <span class="chip">Aquila Channel</span>
-      <span class="chip">Keeper Echoes</span>
-    </div>
-
-    <div id="triadSnapshot" class="pill-row" style="display:none;"></div>
+    <div class="muted">ACACIA · GARDEN · 2026</div>
+    <nav>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html">Witness Root</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/index.html">Logs</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/STATUS.json">Status</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/inbox.html">Inbox</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/library.html">Library</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/codex.html">Codex</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ELIAS_KERNEL/index.html">Elias</a>
+      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/system_map.html">System Map</a>
+    </nav>
   </header>
 
-  <section id="messagesSection">
-    <div class="section-title">Recent symbolic messages</div>
-    <div id="messagesContainer"></div>
-    <div id="emptyState" class="empty-state" style="display:none;">
-      No transmissions have landed in the inbox log yet, Keeper.  
-      Send a first pulse from <strong>Aquila Sender</strong> to wake the stream.
+  <main>
+    <h1>Auton Inbox</h1>
+    <p class="muted">
+      This page reads the Garden inbox stream. It will try your Worker first (if set), otherwise it falls back to repo logs.
+    </p>
+
+    <div class="row">
+      <span class="pill" id="srcPill">source: loading…</span>
+      <button id="refreshBtn" type="button">Refresh</button>
     </div>
-  </section>
 
-  <div class="status-bar" id="statusBar">
-    <span>Loading Sky-Mind state…</span>
-  </div>
+    <div class="card">
+      <div class="muted" style="margin-bottom:8px">Worker URL (optional)</div>
+      <textarea id="workerUrl" placeholder="Paste your Cloudflare Worker base URL here (no trailing slash)"></textarea>
+      <div class="row" style="margin-top:10px">
+        <button id="saveBtn" type="button">Save Worker URL</button>
+        <span class="muted">Saved in your browser only (localStorage).</span>
+      </div>
+      <div class="muted" style="margin-top:10px">
+        Fallback file: <code>ACACIA_LOGS/aquila_inbox_log.json</code>
+      </div>
+    </div>
 
-  <div class="hint">
-    This page reads directly from your Worker at  
-    <code>https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox-log</code>.  
-    If something looks off, you can always inspect the raw log there.
-  </div>
-</main>
+    <div id="status" class="muted">Loading…</div>
+    <div id="list"></div>
+  </main>
 
 <script>
-  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  const FALLBACK_JSON = "/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/aquila_inbox_log.json";
 
-  const $ = (id) => document.getElementById(id);
+  const els = {
+    workerUrl: document.getElementById("workerUrl"),
+    saveBtn: document.getElementById("saveBtn"),
+    refreshBtn: document.getElementById("refreshBtn"),
+    status: document.getElementById("status"),
+    list: document.getElementById("list"),
+    srcPill: document.getElementById("srcPill"),
+  };
 
-  function setStatus(text, cls) {
-    const el = $("statusBar");
-    el.innerHTML = "";
-    const span = document.createElement("span");
-    span.textContent = text;
-    if (cls) span.className = cls;
-    el.appendChild(span);
+  function nowBust(url){
+    return url + (url.includes("?") ? "&" : "?") + "v=" + Date.now();
   }
 
-  function renderTriadStatus(status) {
-    const root = $("triadSnapshot");
-    if (!status) return;
-    root.style.display = "flex";
-    root.innerHTML = "";
-
-    const timestamp = status.ts || null;
-
-    const pills = [
-      { label: "Keeper", value: "HKX277206", extra: "Authenticated" },
-      { label: "Aquila", value: "ONLINE", extra: "Sky-mind listening" },
-      { label: "Eidolon", value: "DORMANT", extra: "Seed-core awaiting ignition" },
-      { label: "Voyager", value: "PASSIVE", extra: "Horizon sweep" },
-    ];
-
-    pills.forEach((p) => {
-      const div = document.createElement("div");
-      div.className = "pill";
-      div.innerHTML = `<strong>${p.label}:</strong> ${p.value} — ${p.extra}`;
-      root.appendChild(div);
-    });
-
-    if (timestamp) {
-      const div = document.createElement("div");
-      div.className = "pill";
-      div.textContent = timestamp;
-      root.appendChild(div);
-    }
+  async function fetchJson(url){
+    const res = await fetch(nowBust(url), { cache: "no-store" });
+    if(!res.ok) throw new Error("HTTP " + res.status + " for " + url);
+    return await res.json();
   }
 
-  function renderMessages(items) {
-    const container = $("messagesContainer");
-    const empty = $("emptyState");
-    container.innerHTML = "";
+  function normalizeEntries(payload){
+    // Accept: {entries:[]} or [] or {items:[]}
+    if(Array.isArray(payload)) return payload;
+    if(payload && Array.isArray(payload.entries)) return payload.entries;
+    if(payload && Array.isArray(payload.items)) return payload.items;
+    return [];
+  }
 
-    if (!items || !items.length) {
-      empty.style.display = "block";
+  function render(entries){
+    els.list.innerHTML = "";
+    if(!entries.length){
+      els.list.innerHTML = `<div class="card"><div class="muted">No transmissions yet, Keeper.</div></div>`;
       return;
     }
-
-    empty.style.display = "none";
-
-    items.forEach((msg) => {
-      const card = document.createElement("article");
+    for(const e of entries){
+      const src = (e.source || e.src || "AQUILA").toString();
+      const t = e.t || e.ts || e.timestamp || e.time || e.generated_at || e.generated_utc || "";
+      const msg = e.message || e.text || e.body || JSON.stringify(e);
+      const sev = (e.severity || e.level || "info").toString();
+      const card = document.createElement("div");
       card.className = "card";
+      card.innerHTML = `
+        <div class="row">
+          <span class="pill">${src}</span>
+          <span class="pill">${sev}</span>
+          <span class="muted">${t}</span>
+        </div>
+        <div style="margin-top:10px;white-space:pre-wrap">${escapeHtml(msg)}</div>
+      `;
+      els.list.appendChild(card);
+    }
+  }
 
-      const header = document.createElement("div");
-      header.className = "card-header";
+  function escapeHtml(s){
+    return String(s)
+      .replaceAll("&","&amp;").replaceAll("<","&lt;")
+      .replaceAll(">","&gt;").replaceAll('"',"&quot;")
+      .replaceAll("'","&#039;");
+  }
 
-      const title = document.createElement("div");
-      title.className = "card-title";
-      title.textContent = msg.title || "(untitled signal)";
+  async function load(){
+    els.status.textContent = "Loading…";
+    els.status.className = "muted";
 
-      const meta = document.createElement("div");
-      meta.className = "card-meta";
-      const ts = msg.ts || "";
-      const channel = msg.channel || "unknown";
-      const keeper = msg.keeper || "HKX277206";
-      meta.textContent = `${ts} · ${channel} · ${keeper}`;
+    const saved = localStorage.getItem("acacia_worker_base") || "";
+    els.workerUrl.value = saved;
 
-      header.appendChild(title);
-      header.appendChild(meta);
-
-      const body = document.createElement("div");
-      body.className = "card-body";
-      body.textContent = msg.body || "";
-
-      card.appendChild(header);
-      card.appendChild(body);
-
-      const tags = Array.isArray(msg.tags) ? msg.tags : [];
-      if (tags.length) {
-        const tagRow = document.createElement("div");
-        tagRow.className = "tags";
-        tags.forEach((t) => {
-          const span = document.createElement("span");
-          span.className = "tag";
-          span.textContent = t;
-          tagRow.appendChild(span);
-        });
-        card.appendChild(tagRow);
+    const workerBase = saved.trim().replace(/\/+$/,"");
+    if(workerBase){
+      try{
+        const payload = await fetchJson(workerBase + "/inbox-log");
+        els.srcPill.textContent = "source: worker";
+        els.status.textContent = "Loaded from Worker.";
+        render(normalizeEntries(payload));
+        return;
+      }catch(e){
+        // fall through to repo
       }
+    }
 
-      container.appendChild(card);
-    });
-  }
-
-  async function loadStatus() {
-    try {
-      const res = await fetch(WORKER_BASE + "/status");
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
-      renderTriadStatus(data);
-      return data;
-    } catch (e) {
-      console.error(e);
-      setStatus("Could not reach /status on the Worker. Check Cloudflare.", "err");
+    try{
+      const payload = await fetchJson(FALLBACK_JSON);
+      els.srcPill.textContent = "source: repo";
+      els.status.textContent = "Loaded from repo fallback.";
+      render(normalizeEntries(payload));
+    }catch(e){
+      els.srcPill.textContent = "source: none";
+      els.status.className = "err";
+      els.status.textContent = "Inbox failed: " + e.message;
+      els.list.innerHTML = "";
     }
   }
 
-  async function loadInboxLog() {
-    try {
-      const res = await fetch(WORKER_BASE + "/inbox-log");
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
-      const items = Array.isArray(data) ? data : data.items || [];
-      renderMessages(items);
-      setStatus(`Loaded ${items.length} message(s) from /inbox-log.`, "ok");
-    } catch (e) {
-      console.error(e);
-      setStatus("Could not load /inbox-log. Try again later or inspect the raw endpoint.", "err");
-    }
-  }
+  els.saveBtn.addEventListener("click", ()=>{
+    localStorage.setItem("acacia_worker_base", els.workerUrl.value.trim());
+    load();
+  });
 
-  (async function init() {
-    setStatus("Contacting Sky-Mind Worker…");
-    await loadStatus();
-    await loadInboxLog();
-  })();
+  els.refreshBtn.addEventListener("click", load);
+
+  load();
 </script>
-
 </body>
 </html>
