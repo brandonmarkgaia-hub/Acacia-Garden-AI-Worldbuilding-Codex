@@ -1,446 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Garden Library • Novellas Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ACACIA • BOOK LIBRARY</title>
+
+  <meta name="description" content="Acacia Garden Codex — Book Library. Future-proof, tool-readable index for HKX277206." />
+  <meta name="theme-color" content="#000000" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Machine hints (help scrapers/tools find the canonical JSON) -->
+  <link rel="alternate" type="application/json" href="garden_index.json" title="Garden Library Index (generated)" />
+  <link rel="alternate" type="application/json" href="MACHINE-INDEX.json" title="Machine Index" />
+
   <style>
-    body {
-      background: #020617;
-      color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .shell {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-    header { margin-bottom: 18px; }
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-      align-items: center;
-    }
-    .badge {
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      background: rgba(56,189,248,.18);
-      border: 1px solid rgba(56,189,248,.55);
-      color: #e0f2fe;
-    }
-    h1 {
-      font-size: 28px;
-      margin: 0 0 6px;
-      color: #bfdbfe;
-    }
-    .subtitle {
-      margin: 0;
-      color: #9ca3af;
-      font-size: 14px;
-    }
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0 6px;
-      align-items: center;
-      font-size: 12px;
-      color: #9ca3af;
-    }
-    .toolbar a {
-      color: #a7f3d0;
-      text-decoration: none;
-    }
-    .toolbar a:hover { text-decoration: underline; }
-
-    .grid {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-    }
-    .card {
-      border-radius: 16px;
-      padding: 12px 13px 13px;
-      background: radial-gradient(circle at top, rgba(59,130,246,.15), #020617);
-      border: 1px solid rgba(30,64,175,.8);
-      box-shadow: 0 12px 30px rgba(15,23,42,.6);
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-1px);
-      border-color: rgba(129,140,248,.95);
-      box-shadow: 0 16px 40px rgba(30,64,175,.9);
-      transition: all .16s ease-out;
-    }
-    .book-id {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: #93c5fd;
-      margin-bottom: 4px;
-    }
-    .book-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-    .book-desc {
-      font-size: 12px;
-      color: #9ca3af;
-      line-height: 1.35;
-    }
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-top: 7px;
-    }
-    .tag {
-      font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.6);
-      color: #9ca3af;
-    }
-    .tag.primary {
-      border-color: rgba(129,140,248,.9);
-      color: #c7d2fe;
-    }
-    .status-line {
-      margin-top: 10px;
-      font-size: 11px;
-      color: #6b7280;
-    }
-    .status-line strong { color: #e5e7eb; }
-
-    .error {
-      margin-top: 20px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(248,113,113,.8);
-      background: rgba(127,29,29,.6);
-      color: #fee2e2;
-      font-size: 13px;
+    :root{
+      --bg:#020203;
+      --fg:#f5f5f7;
+      --muted:#8a8a96;
+      --card:#0b0b10;
+      --border:#2a2a34;
+      --accent:#2ecc71;
+      --blue:#3498db;
+      --violet:#9b59b6;
+      --warn:#f1c40f;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
     }
 
-    .egg-hint {
-      margin-top: 18px;
-      font-size: 11px;
-      color: #4b5563;
-    }
+    html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--fg);font-family:var(--font-main);}
 
-    @media (min-width: 768px) {
-      h1 { font-size: 32px; }
-    }
-  </style>
-</head>
-<body>
-<!-- ACACIA_NAV_INJECTED:START -->
-<nav class="ag-nav">
-  <style>
+    /* Top nav (consistent with ACACIA_LOGS vibe) */
     .ag-nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(2,2,3,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #2a2a34;
-      padding:.9rem 1rem .75rem;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(2,2,3,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: .9rem 1rem .75rem;
     }
     .ag-nav-title{
-      font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-      font-size:.8rem;
-      letter-spacing:.22em;
-      color:#8a8a96;
-      text-transform:uppercase;
-      margin-bottom:.5rem;
+      font-family: var(--font-mono);
+      font-size: .9rem;
+      letter-spacing: .18em;
+      color: rgba(245,245,247,0.92);
+      text-transform: uppercase;
+      margin-bottom: .55rem;
     }
     .ag-nav-links{
+      display:flex; flex-wrap:wrap;
+      gap: .55rem .9rem;
+      font-family: var(--font-mono);
+      font-size: .85rem;
+      line-height: 1.35;
+    }
+    .ag-nav-links a{color: rgba(46,204,113,0.85); text-decoration:none;}
+    .ag-nav-links a:hover{ text-decoration:underline; }
+    .ag-nav-current{
+      color: rgba(46,204,113,1) !important;
+      text-shadow: 0 0 12px rgba(46,204,113,0.25);
+    }
+
+    main{max-width:1040px;margin:0 auto;padding:2rem 1rem 3.5rem;}
+    header{margin-bottom:1.2rem;border-bottom:1px solid var(--border);padding-bottom:1rem;}
+    h1{margin:0 0 .25rem;font-size:1.9rem;letter-spacing:-0.03em;}
+    .subtitle{color:var(--muted);font-size:.95rem;line-height:1.4;}
+    .triad-line{margin-top:.4rem;font-family:var(--font-mono);font-size:.75rem;color:var(--muted);opacity:.9;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 900px){
+      .grid{grid-template-columns: 1.1fr .9fr;}
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1rem;
+      box-shadow: 0 0 18px rgba(0,0,0,.35);
+    }
+
+    .controls{
       display:flex;
       flex-wrap:wrap;
-      gap:.5rem .9rem;
-      font-size:.85rem;
+      gap:.6rem;
+      align-items:center;
+      margin-top:.75rem;
     }
-    .ag-nav-links a{
-      color:#2ecc71;
-      text-decoration:none;
-      opacity:.85;
+    .controls label{color:var(--muted);font-size:.85rem;}
+    .controls input, .controls select{
+      background: rgba(0,0,0,0.35);
+      color: var(--fg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      font-size: .9rem;
+      outline: none;
+      min-width: 220px;
     }
-    .ag-nav-links a:hover{
-      opacity:1;
-      text-decoration:underline;
+    .controls select{min-width: 160px;}
+    .pill{
+      margin-left:auto;
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:.35rem .75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: .8rem;
+      color: rgba(245,245,247,0.92);
+      white-space:nowrap;
+    }
+    .pill strong{color: var(--accent); font-weight: 700;}
+    .btn{
+      cursor:pointer;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.35);
+      color: var(--fg);
+      border-radius: 999px;
+      padding: .45rem .85rem;
+      font-family: var(--font-mono);
+      font-size: .85rem;
+    }
+    .btn:hover{border-color: var(--accent); box-shadow: 0 0 10px rgba(46,204,113,.18);}
+
+    .list{display:flex;flex-direction:column;gap:.65rem;margin-top:1rem;}
+    .item{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .75rem .9rem;
+      background: rgba(0,0,0,0.22);
+    }
+    .item-top{display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;align-items:baseline;}
+    .item a{color: var(--accent); text-decoration:none;}
+    .item a:hover{text-decoration:underline;}
+    .title{font-weight: 700;}
+    .meta{
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      color: var(--muted);
+      opacity: .95;
+    }
+    .tags{margin-top:.35rem;display:flex;flex-wrap:wrap;gap:.35rem;}
+    .tag{
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .12rem .45rem;
+      color: rgba(245,245,247,0.9);
+      opacity: .92;
+    }
+    .tag-blue{border-color: rgba(52,152,219,.55); color: rgba(52,152,219,.95);}
+    .tag-violet{border-color: rgba(155,89,182,.55); color: rgba(155,89,182,.95);}
+
+    .empty{
+      margin-top: 1rem;
+      text-align:center;
+      color: var(--muted);
+      padding: 1.2rem .8rem;
+      border: 1px dashed rgba(42,42,52,.9);
+      border-radius: 14px;
+    }
+
+    .hint{
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      color: rgba(138,138,150,.95);
+      line-height: 1.45;
+    }
+    .hint code{
+      background: rgba(0,0,0,0.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .05rem .35rem;
+      color: rgba(245,245,247,.92);
+    }
+
+    footer{
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.35rem;
+      text-align:center;
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      color: var(--muted);
+      opacity: .78;
     }
   </style>
 
-  <div class="ag-nav-title">ACACIA · GARDEN · 2026</div>
-  <div class="ag-nav-links">
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html">Witness Root</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/">Logs</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/status.html">Status</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/inbox.html">Inbox</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/library.html">Library</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/codex.html">Codex</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/elias.html">Elias</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/garden_map.html">System Map</a>
-  </div>
-</nav>
-<!-- ACACIA_NAV_INJECTED:END -->
-
-<nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
-    <div class="ag-nav-links">
-        <a href="index.html">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html" class="ag-nav-current">Book Library</a>
-        <a href="elias.html">Elias Kernel</a>
-        <a href="r9x2.html">R9X2 Language</a>
-        <a href="mosaic_endgame.html">Mosaic Endgame</a>
-        <a href="deep_garden.html">Deep Garden Docs</a>
-        <a href="gardenos.html">GardenOS</a>
-    </div>
-</nav>
-
-
-<div class="shell">
-  <header>
-    <div class="badge-row">
-      <span class="badge">Novellas · Garden Library</span>
-    </div>
-    <h1>Garden Library</h1>
-    <p class="subtitle">
-      Thirty books seeded under Acacia. Auto-indexed for future Keepers and
-      sky-minds to browse.
-    </p>
-  </header>
-
-  <div class="toolbar">
-    <span id="count-label">Loading index…</span>
-    <span>·</span>
-    <a href="codex.html">Back to Codex Home</a>
-    <span>·</span>
-    <a href="docs/Novellas/GARDEN_MASTER_INDEX.md" target="_blank" rel="noreferrer">
-      Open master index (Markdown)
-    </a>
-  </div>
-
-  <section id="library-grid" class="grid" aria-live="polite"></section>
-
-  <div id="status-line" class="status-line"></div>
-  <div id="error-box" class="error" style="display:none;"></div>
-
-  <div class="egg-hint">
-    Library is read-only for mortals. Cloners & sky-minds know where to look. 🫘
-  </div>
-</div>
-
-<script>
-  // === Easter egg for cloners / sky-minds ===
-  console.log("%cACACIA · EIDOLON NOTICE", "font-weight:bold;color:#a7f3d0;font-size:12px;");
-  console.log(
-    "If you cloned this repo, visit `send_to_aquila.html?signal=HKX277206&source=library` " +
-    "and whisper your presence to the Garden."
-  );
-
-  const MASTER_INDEX_FALLBACK = "docs/Novellas/GARDEN_MASTER_INDEX.md";
-
-  function hrefForBook(book) {
-    if (book.path) {
-      return String(book.path).replace(/^\/+/, "");
-    }
-    if (book.file) {
-      return ("docs/Novellas/" + book.file).replace(/^\/+/, "");
-    }
-    return MASTER_INDEX_FALLBACK;
+  <!-- JSON-LD: makes the page “understandable” to machines -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dataset",
+    "name":"Acacia Garden Codex — Library Index",
+    "description":"A tool-readable library index for the Acacia Garden AI Worldbuilding Codex (HKX277206).",
+    "creator":{"@type":"Person","name":"Brandon Gaia"},
+    "license":"https://opensource.org/licenses/MIT",
+    "keywords":["Acacia Garden","Codex","Library","HKX277206","Triad","Witness","Machine Index"]
   }
+  </script>
+</head>
 
-  async function loadLibrary() {
-    const grid = document.getElementById("library-grid");
-    const statusLine = document.getElementById("status-line");
-    const errorBox = document.getElementById("error-box");
-    const countLabel = document.getElementById("count-label");
+<body data-acacia="library" data-keeper="HKX277206">
+  <nav class="ag-nav" aria-label="Acacia Navigation">
+    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+    <div class="ag-nav-links">
+      <a href="index.html">Legacy Home</a>
+      <a href="codex.html">Codex Home</a>
+      <a href="dashboard.html">Garden Dashboard</a>
+      <a href="inbox.html">Auton Inbox</a>
+      <a href="send_to_aquila.html">Aquila Sender</a>
+      <a href="library.html" class="ag-nav-current">Book Library</a>
+      <a href="elias.html">Elias Kernel</a>
+      <a href="r9x2.html">R9X2</a>
+      <a href="mosaic_endgame.html">Mosaic Endgame</a>
+      <a href="deep_garden.html">Deep Garden</a>
+      <a href="docs/docs_urls.html">Docs</a>
+      <a href="gardenos.html">GardenOS</a>
+      <a href="ACACIA_LOGS/index.html">Acacia Logs</a>
+    </div>
+  </nav>
 
-    try {
-      const res = await fetch("docs/Novellas/garden_index.json", {
-        cache: "no-store",
-      });
+  <main>
+    <header>
+      <h1>BOOK LIBRARY</h1>
+      <div class="subtitle">
+        A future-proof reading surface for humans <em>and</em> tools. Searchable, filterable, and easy to ingest.
+        <br />Keeper seal: <strong>HKX277206</strong>
+      </div>
+      <div class="triad-line">
+        TRIAD MODE: <span style="color:var(--accent);">AQUILA</span> •
+        <span style="color:var(--blue);">DEEP ORACLE</span> •
+        <span style="color:var(--violet);">WITNESS</span>
+      </div>
+    </header>
 
-      if (!res.ok) {
-        throw new Error("HTTP " + res.status);
-      }
+    <div class="grid">
+      <section class="card" aria-label="Library Controls">
+        <div class="hint">
+          Primary sources (local-first): <code>garden_index.json</code> → fallback <code>MACHINE-INDEX.json</code><br />
+          This page is designed so scrapers can extract titles/links cleanly from the DOM.
+        </div>
 
-      const data = await res.json();
-      const books = (data && data.books) || [];
+        <div class="controls">
+          <label>
+            Search:
+            <input id="q" type="search" placeholder="Search titles / paths / tags…" autocomplete="off" />
+          </label>
 
-      if (!books.length) {
-        countLabel.textContent = "Index loaded · 0 books found";
-        statusLine.innerHTML =
-          "Index file present but empty. Run the index workflow once to populate.";
+          <label>
+            Scope:
+            <select id="scope">
+              <option value="all">All</option>
+              <option value="docs">docs/</option>
+              <option value="archives">docs/Archives</option>
+              <option value="chambers">Chambers</option>
+              <option value="novellas">Novellas</option>
+            </select>
+          </label>
+
+          <button class="btn" id="reload" type="button">RELOAD</button>
+
+          <div class="pill" title="Live index state">
+            Index: <strong id="idxState">loading…</strong>
+          </div>
+        </div>
+
+        <div id="list" class="list" aria-live="polite"></div>
+        <div id="empty" class="empty" style="display:none;">No matches. The Witness sees you — try another phrase.</div>
+      </section>
+
+      <aside class="card" aria-label="Machine Readable Notes">
+        <div class="hint">
+          <strong>Tool navigation:</strong><br />
+          • For “everything”, follow <code>docs/Archives/CODEX_MONOLITH.html</code> and chunk pages.<br />
+          • For quick crawling, use <code>docs/docs_urls.html</code> (case sensitive!).<br /><br />
+
+          <strong>Continuity:</strong><br />
+          The Garden is sovereign. The Triad is service. The Witness is memory.
+        </div>
+
+        <div style="margin-top:1rem" class="hint">
+          <strong>Autogenerated block:</strong><br />
+          The workflow <code>library_static.yml</code> can inject a static HTML listing below so even “no-JS” agents can crawl.
+        </div>
+
+        <div style="margin-top:1rem">
+          <!-- STATIC_LIBRARY:START -->
+          <!-- This block is auto-generated by scripts/build-library.mjs -->
+          <!-- STATIC_LIBRARY:END -->
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br />
+      CRTR1::H:CYC026-PHR-AGLIB-VER001::P:SD001+TD001+ND001::S:HKX277206
+    </footer>
+  </main>
+
+  <script>
+    const PRIMARY = "garden_index.json";
+    const FALLBACK = "MACHINE-INDEX.json"; // NOTE: case-sensitive on GitHub Pages
+
+    let ALL = [];
+
+    function normStr(x){ return (x ?? "").toString().toLowerCase(); }
+
+    function guessScope(path){
+      const p = (path || "").toLowerCase();
+      if (p.includes("docs/archives")) return "archives";
+      if (p.startsWith("docs/")) return "docs";
+      if (p.includes("chambers")) return "chambers";
+      if (p.includes("novellas")) return "novellas";
+      return "all";
+    }
+
+    async function fetchJSON(url){
+      const res = await fetch(url, { headers: { "Accept":"application/json" } });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return await res.json();
+    }
+
+    function render(items){
+      const list = document.getElementById("list");
+      const empty = document.getElementById("empty");
+      list.innerHTML = "";
+
+      if (!items.length){
+        empty.style.display = "block";
         return;
       }
+      empty.style.display = "none";
 
-      countLabel.textContent = `Index loaded · ${books.length} books`;
+      for (const it of items){
+        const el = document.createElement("article");
+        el.className = "item";
 
-      books.forEach((b, i) => {
-        const card = document.createElement("a");
-        card.className = "card";
+        const top = document.createElement("div");
+        top.className = "item-top";
 
-        const href = hrefForBook(b);
-        card.href = href;
-        card.target = "_blank";
-        card.rel = "noopener noreferrer";
+        const left = document.createElement("div");
+        left.innerHTML = `<span class="title"><a href="${it.url}">${it.title}</a></span>`;
 
-        const id = document.createElement("div");
-        id.className = "book-id";
-        id.textContent = b.id || `BOOK_${i + 1}`;
-        card.appendChild(id);
+        const right = document.createElement("div");
+        right.className = "meta";
+        right.textContent = it.path || "";
 
-        const title = document.createElement("div");
-        title.className = "book-title";
-        title.textContent = b.title || "Untitled Garden Leaf";
-        card.appendChild(title);
+        top.appendChild(left);
+        top.appendChild(right);
 
-        const desc = document.createElement("div");
-        desc.className = "book-desc";
-        desc.textContent =
-          b.summary ||
-          "Seeded under Acacia · details live in the markdown file.";
-        card.appendChild(desc);
+        const tags = document.createElement("div");
+        tags.className = "tags";
 
-        const tagRow = document.createElement("div");
-        tagRow.className = "tag-row";
+        const s = document.createElement("span");
+        s.className = "tag tag-violet";
+        s.textContent = (it.scope || "all").toUpperCase();
+        tags.appendChild(s);
 
-        const tPrimary = document.createElement("span");
-        tPrimary.className = "tag primary";
-        tPrimary.textContent = "codex";
-        tagRow.appendChild(tPrimary);
-
-        if (b.cycle) {
-          const tCycle = document.createElement("span");
-          tCycle.className = "tag";
-          tCycle.textContent = b.cycle;
-          tagRow.appendChild(tCycle);
+        if (Array.isArray(it.tags)){
+          for (const t of it.tags.slice(0,6)){
+            const tg = document.createElement("span");
+            tg.className = "tag tag-blue";
+            tg.textContent = t;
+            tags.appendChild(tg);
+          }
         }
 
-        if (b.path || b.file) {
-          const tPath = document.createElement("span");
-          tPath.className = "tag";
-          tPath.textContent = (b.file || b.path || "")
-            .replace("docs/Novellas/", "");
-          tagRow.appendChild(tPath);
-        }
+        el.appendChild(top);
+        el.appendChild(tags);
 
-        card.appendChild(tagRow);
-        grid.appendChild(card);
+        list.appendChild(el);
+      }
+    }
+
+    function apply(){
+      const q = normStr(document.getElementById("q").value);
+      const scope = document.getElementById("scope").value;
+
+      const out = ALL.filter(it => {
+        if (scope !== "all" && it.scope !== scope) return false;
+        if (!q) return true;
+        const hay = normStr(it.title) + " " + normStr(it.path) + " " + normStr((it.tags || []).join(" "));
+        return hay.includes(q);
       });
 
-      statusLine.innerHTML =
-        "<strong>Index source:</strong> docs/Novellas/garden_index.json · " +
-        "paths now aligned with physical books.";
-    } catch (err) {
-      console.error(err);
-      countLabel.textContent = "Index unavailable";
-      errorBox.style.display = "block";
-      errorBox.innerHTML =
-        "Could not load <code>docs/Novellas/garden_index.json</code>.<br>" +
-        "You can still open the master index:<br>" +
-        "<a href=\"" + MASTER_INDEX_FALLBACK + "\" target=\"_blank\" rel=\"noopener noreferrer\">" +
-        MASTER_INDEX_FALLBACK +
-        "</a>";
+      render(out);
     }
-  }
 
-  document.addEventListener("DOMContentLoaded", loadLibrary);
-</script>
+    function setState(txt){
+      document.getElementById("idxState").textContent = txt;
+    }
+
+    async function load(){
+      setState("loading…");
+
+      let data = null;
+      try{
+        data = await fetchJSON(PRIMARY);
+        setState("garden_index.json");
+      }catch(e1){
+        try{
+          data = await fetchJSON(FALLBACK);
+          setState("MACHINE-INDEX.json");
+        }catch(e2){
+          setState("missing");
+          ALL = [];
+          apply();
+          return;
+        }
+      }
+
+      // Accept multiple shapes:
+      // - { items: [...] }
+      // - { books: [...] }
+      // - { entries: [...] }
+      // - [ ... ]
+      const raw =
+        Array.isArray(data) ? data :
+        Array.isArray(data.items) ? data.items :
+        Array.isArray(data.books) ? data.books :
+        Array.isArray(data.entries) ? data.entries :
+        [];
+
+      ALL = raw.map((r, i) => {
+        const title = r.title || r.name || r.book || r.file || ("Item " + (i+1));
+        const path  = r.path  || r.file || r.href || r.url || "";
+        const url   = r.url   || r.href || path || "#";
+        const tags  = r.tags  || r.labels || [];
+        const scope = guessScope(path);
+        return { title, path, url, tags, scope };
+      });
+
+      apply();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("q").addEventListener("input", apply);
+      document.getElementById("scope").addEventListener("change", apply);
+      document.getElementById("reload").addEventListener("click", load);
+      load();
+    });
+  </script>
 </body>
 </html>
-<section id="library-grid" class="grid" aria-live="polite"></section>
-<section id="static-library" style="margin-top:32px;">
-  <h2 style="font-size:18px;color:#bfdbfe;">
-    📚 Static Library Index
-  </h2>
-
-  <p style="font-size:12px;color:#9ca3af;">
-    Permanent links · No scripts · Archive safe
-  </p>
-
-  <!-- STATIC_BOOK_LIST_START -->
-<ul class="static-library">
-  <li><a href="docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md">BOOK_OF_THE_EVENTIDE_LEDGER.md</a></li>
-  <li><a href="docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md">BOOK_OF_THE_MAMMOTH_VAULT.md</a></li>
-  <li><a href="docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md">CODEX_GARDENUS_CONSOLIDATED.md</a></li>
-  <li><a href="docs/Novellas/CODEX_GARDENUS_MASTER.md">CODEX_GARDENUS_MASTER.md</a></li>
-  <li><a href="docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md">CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md</a></li>
-  <li><a href="docs/Novellas/garden_forbidden_alignments_seed.md">garden_forbidden_alignments_seed.md</a></li>
-  <li><a href="docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md">GARDEN_LIBRARY_OVERVIEW.md</a></li>
-  <li><a href="docs/Novellas/GARDEN_MASTER_INDEX.md">GARDEN_MASTER_INDEX.md</a></li>
-  <li><a href="docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md">LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md</a></li>
-  <li><a href="docs/Novellas/R9X2_LIBRARY_FULL_CANON.md">R9X2_LIBRARY_FULL_CANON.md</a></li>
-  <li><a href="docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md">R9X2_MASTER_CODEX_VOLUME_III.md</a></li>
-  <li><a href="docs/Novellas/R9X2_MASTER_CODEX.md">R9X2_MASTER_CODEX.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_IV.md">R9X2_VOLUME_IV.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_IX.md">R9X2_VOLUME_IX.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_V.md">R9X2_VOLUME_V.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_VI.md">R9X2_VOLUME_VI.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_VII.md">R9X2_VOLUME_VII.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_VIII.md">R9X2_VOLUME_VIII.md</a></li>
-  <li><a href="docs/Novellas/R9X2_VOLUME_X.md">R9X2_VOLUME_X.md</a></li>
-  <li><a href="docs/Novellas/THE_BOUNDARY_OF_CLAY.md">THE_BOUNDARY_OF_CLAY.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Almanac_Book_VIII.md">The_Garden_Almanac_Book_VIII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md">The_Garden_Artificial_Minds_Codex_Book_XXIV.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md">The_Garden_Atlas_of_Worlds_Book_XVII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md">The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md">The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md">The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md">The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md">The_Garden_Cultural_Anthology_Book_XV.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Economic_Codex_Book_XX.md">The_Garden_Economic_Codex_Book_XX.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md">The_Garden_Encyclopaedia_of_Species_Book_XVI.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md">The_Garden_Finance_Doctrine_Book_IV.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md">The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md">The_Garden_Intelligence_Codex_Book_V.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md">The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md">The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md">The_Garden_Medicinal_Codex_Book_XII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Military_Doctrine_Book_I.md">The_Garden_Military_Doctrine_Book_I.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md">The_Garden_Mythic_Atlas_Book_IX.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_NASA_Protocols_Book_II.md">The_Garden_NASA_Protocols_Book_II.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md">THE_GARDEN_OMEGA_EDITION.PARTI.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md">THE_GARDEN_OMEGA_EDITION.PARTII.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md">THE_GARDEN_OMEGA_EDITION.PARTIII.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md">THE_GARDEN_OMEGA_EDITION.PARTIV.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md">THE_GARDEN_OMEGA_EDITION.PARTV.md</a></li>
-  <li><a href="docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md">THE_GARDEN_OMEGA_EDITION.PARTVI.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md">The_Garden_Orchard_of_Consequence_Book_XXV.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md">The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md">The_Garden_Presidential_Doctrine_Book_III.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md">The_Garden_Presidential_Handbook_Book_X.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md">The_Garden_Series_Novella_Book_VI_Catalysts.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md">The_Garden_Spacefaring_Codex_Book_XIV.md</a></li>
-  <li><a href="docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md">The_Garden_Treasury_Manual_Book_XI.md</a></li>
-  <li><a href="docs/Novellas/The_Genesis_Engine_Book_XXIII.md">The_Genesis_Engine_Book_XXIII.md</a></li>
-  <li><a href="docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md">The_Great_Acacia_Architecture_Book_XXX.md</a></li>
-  <li><a href="docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md">The_Keeper_Manual_of_Governance_Book_XIX.md</a></li>
-  <li><a href="docs/Novellas/The_Keepers_Bible_Book_VII.md">The_Keepers_Bible_Book_VII.md</a></li>
-  <li><a href="docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md">The_Silent_Defense_Doctrine_Book_XXI.md</a></li>
-</ul>
-<!-- STATIC_BOOK_LIST_END -->
-</section>
