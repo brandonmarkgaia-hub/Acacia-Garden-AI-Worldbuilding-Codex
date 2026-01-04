@@ -1,0 +1,111 @@
+name: Core Triad Inject (Non-Destructive)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "tools/**"
+      - "STATE/**"
+      - "STATUS.json"
+      - "aeon_heartbeat.json"
+      - "machine-index.json"
+      - "garden_scan_report.json"
+      - ".github/workflows/core-triad-inject.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: core-triad-inject-main
+  cancel-in-progress: true
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run non-destructive injector
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "== Preflight: ensure script exists =="
+          if [ ! -f "tools/core_triad_injector.py" ]; then
+            echo "ERROR: tools/core_triad_injector.py not found."
+            exit 1
+          fi
+
+          echo "== Ensure STATE directory exists =="
+          mkdir -p STATE
+          mkdir -p ACACIA_LOGS
+
+          echo "== Run injector =="
+          python tools/core_triad_injector.py
+
+      - name: Guardrail — fail if canon files changed
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # These are your canonical files that must NOT be overwritten by "inject".
+          CANON_FILES=(
+            "STATUS.json"
+            "status.json"
+            "aeon_heartbeat.json"
+            "Aeon_heartbeat.json"
+            "machine-index.json"
+            "machine_index.json"
+            "garden_scan_report.json"
+            "Garden_scan_report.json"
+          )
+
+          echo "== Checking for forbidden modifications to canon files =="
+          for f in "${CANON_FILES[@]}"; do
+            if git diff --name-only | grep -qx "$f"; then
+              echo "ERROR: Injector modified canonical file: $f"
+              echo "This workflow is NON-DESTRUCTIVE and will now fail."
+              echo ""
+              echo "Diff summary:"
+              git --no-pager diff -- "$f" || true
+              exit 1
+            fi
+          done
+
+          echo "OK: No canonical files changed."
+
+      - name: Commit injected outputs (STATE + logs) if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Only commit if there are changes at all.
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          # Stage only safe generated outputs
+          git add STATE/ ACACIA_LOGS/ || true
+
+          # If staging resulted in nothing, exit cleanly
+          if [ -z "$(git diff --cached --name-only)" ]; then
+            echo "Nothing staged (no STATE/ or ACACIA_LOGS/ changes)."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git commit -m "core-triad: non-destructive injection (STATE/)"
+          git push
