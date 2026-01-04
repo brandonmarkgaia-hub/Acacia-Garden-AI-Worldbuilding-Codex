@@ -1,30 +1,40 @@
 name: Build static library list
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ "main" ]
-  workflow_dispatch: {}
+    branches: [ main ]
+    paths:
+      - "docs/Library/**"
+      - "scripts/build-library.mjs"
 
 permissions:
   contents: write
+
+concurrency:
+  group: build-library
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
 
-      - name: Build library.html static list
+      - name: Build library index
         run: node scripts/build-library.mjs
 
-      - name: Commit changes (if any)
+      - name: Commit outputs (if any)
         run: |
-          git config user.name "acacia-bot"
-          git config user.email "acacia-bot@users.noreply.github.com"
-          git add library.html
-          git diff --cached --quiet || git commit -m "chore: build static library list"
+          git config user.name "acacia-garden-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/library_index.json || true
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Update library index"
           git push
