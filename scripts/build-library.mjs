@@ -1,50 +1,76 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { execSync } from "node:child_process";
+// scripts/build-library.mjs
+import fs from "node:fs";
+import path from "node:path";
 
-const LIBRARY_HTML = "library.html";
+const ROOT = process.cwd();
+const LIB_DIR = path.join(ROOT, "docs", "Library");
+const OUT_JSON = path.join(ROOT, "docs", "library_index.json");
 
-// 1) Collect novellas (tracked files only, so no junk)
-const files = execSync("git ls-files", { encoding: "utf8" })
-  .split("\n")
-  .map(s => s.trim())
-  .filter(Boolean)
-  .filter(p =>
-    p.toLowerCase().startsWith("docs/novellas/") &&
-    p.toLowerCase().endsWith(".md")
-  )
-  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
-
-if (!existsSync(LIBRARY_HTML)) {
-  throw new Error(`Missing ${LIBRARY_HTML} at repo root`);
+function readText(p) {
+  return fs.readFileSync(p, "utf8");
 }
 
-let html = readFileSync(LIBRARY_HTML, "utf8");
-
-// 2) Inject between markers
-const START = "<!-- STATIC_BOOK_LIST_START -->";
-const END   = "<!-- STATIC_BOOK_LIST_END -->";
-
-if (!html.includes(START) || !html.includes(END)) {
-  throw new Error(
-    `Add marker comments to ${LIBRARY_HTML}:\n${START}\n${END}`
-  );
+function pick(re, s) {
+  const m = s.match(re);
+  return m ? m[1].trim() : "";
 }
 
-const listItems = files.map(p => {
-  // GitHub Pages serves /<repo>/<path>
-  // Keep link relative so it works locally + on Pages
-  return `  <li><a href="${p}">${p.replace(/^docs\/Novellas\//i, "")}</a></li>`;
-}).join("\n");
+function pickList(re, s) {
+  const m = s.match(re);
+  if (!m) return [];
+  const raw = m[1].trim();
+  // accept: ["a","b"] OR a, b OR a | b
+  if (raw.startsWith("[") && raw.endsWith("]")) {
+    try { return JSON.parse(raw); } catch { /* fallthrough */ }
+  }
+  return raw
+    .split(/[,|]/g)
+    .map(x => x.trim())
+    .filter(Boolean);
+}
 
-const injected = [
-  START,
-  `<ul class="static-library">`,
-  listItems || `  <li>(No books found under docs/Novellas/)</li>`,
-  `</ul>`,
-  END
-].join("\n");
+function main() {
+  if (!fs.existsSync(LIB_DIR)) {
+    console.log(`[library] Missing ${LIB_DIR} (nothing to build)`);
+    fs.writeFileSync(OUT_JSON, JSON.stringify({ ok:true, items:[] }, null, 2));
+    return;
+  }
 
-html = html.replace(new RegExp(`${START}[\\s\\S]*?${END}`, "m"), injected);
+  const files = fs.readdirSync(LIB_DIR).filter(f => f.toLowerCase().endsWith(".md"));
+  const items = [];
 
-writeFileSync(LIBRARY_HTML, html, "utf8");
-console.log(`Injected ${files.length} book links into ${LIBRARY_HTML}`);
+  for (const f of files) {
+    const full = path.join(LIB_DIR, f);
+    const s = readText(full);
+
+    const title  = pick(/^\s*title:\s*["']?(.+?)["']?\s*$/mi, s) || f.replace(/\.md$/i,"");
+    const author = pick(/^\s*author:\s*["']?(.+?)["']?\s*$/mi, s);
+    const year   = pick(/^\s*year:\s*["']?(.+?)["']?\s*$/mi, s);
+    const tags   = pickList(/^\s*tags:\s*(.+?)\s*$/mi, s);
+
+    const rel = path.posix.join("docs", "Library", f);
+
+    items.push({
+      id: f.replace(/\.md$/i,""),
+      title,
+      author,
+      year,
+      tags,
+      url: rel
+    });
+  }
+
+  items.sort((a,b)=> a.title.localeCompare(b.title));
+
+  const payload = {
+    ok: true,
+    generated_utc: new Date().toISOString(),
+    count: items.length,
+    items
+  };
+
+  fs.writeFileSync(OUT_JSON, JSON.stringify(payload, null, 2));
+  console.log(`[library] wrote ${OUT_JSON} (${items.length} items)`);
+}
+
+main();
