@@ -1,0 +1,255 @@
+{
+  "ok": true,
+  "generated_utc": "2026-01-04T20:00:51.825Z",
+  "count": 31,
+  "items": [
+    {
+      "id": "METADATA_TEMPLATE",
+      "title": "<FULL TITLE>",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/METADATA_TEMPLATE.md"
+    },
+    {
+      "id": "BOOK_I_METADATA",
+      "title": "Book I",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_I_METADATA.md"
+    },
+    {
+      "id": "BOOK_II_METADATA",
+      "title": "Book II",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_II_METADATA.md"
+    },
+    {
+      "id": "BOOK_III_METADATA",
+      "title": "Book III",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_III_METADATA.md"
+    },
+    {
+      "id": "BOOK_IV_METADATA",
+      "title": "Book IV",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_IV_METADATA.md"
+    },
+    {
+      "id": "BOOK_IX_METADATA",
+      "title": "Book IX",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_IX_METADATA.md"
+    },
+    {
+      "id": "BOOK_V_METADATA",
+      "title": "Book V",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_V_METADATA.md"
+    },
+    {
+      "id": "BOOK_VI_METADATA",
+      "title": "Book VI",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_VI_METADATA.md"
+    },
+    {
+      "id": "BOOK_VII_METADATA",
+      "title": "Book VII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_VII_METADATA.md"
+    },
+    {
+      "id": "BOOK_VIII_METADATA",
+      "title": "Book VIII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_VIII_METADATA.md"
+    },
+    {
+      "id": "BOOK_X_METADATA",
+      "title": "Book X",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_X_METADATA.md"
+    },
+    {
+      "id": "BOOK_XI_METADATA",
+      "title": "Book XI",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XI_METADATA.md"
+    },
+    {
+      "id": "BOOK_XII_METADATA",
+      "title": "Book XII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XIII_METADATA",
+      "title": "Book XIII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XIII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XIV_METADATA",
+      "title": "Book XIV",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XIV_METADATA.md"
+    },
+    {
+      "id": "BOOK_XIX_METADATA",
+      "title": "Book XIX",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XIX_METADATA.md"
+    },
+    {
+      "id": "BOOK_XV_METADATA",
+      "title": "Book XV",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XV_METADATA.md"
+    },
+    {
+      "id": "BOOK_XVI_METADATA",
+      "title": "Book XVI",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XVI_METADATA.md"
+    },
+    {
+      "id": "BOOK_XVII_METADATA",
+      "title": "Book XVII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XVII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XVIII_METADATA",
+      "title": "Book XVIII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XVIII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XX_METADATA",
+      "title": "Book XX",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XX_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXI_METADATA",
+      "title": "Book XXI",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXI_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXII_METADATA",
+      "title": "Book XXII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXIII_METADATA",
+      "title": "Book XXIII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXIII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXIV_METADATA",
+      "title": "Book XXIV",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXIV_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXIX_METADATA",
+      "title": "Book XXIX",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXIX_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXV_METADATA",
+      "title": "Book XXV",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXV_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXVI_METADATA",
+      "title": "Book XXVI",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXVI_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXVII_METADATA",
+      "title": "Book XXVII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXVII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXVIII_METADATA",
+      "title": "Book XXVIII",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXVIII_METADATA.md"
+    },
+    {
+      "id": "BOOK_XXX_METADATA",
+      "title": "Book XXX",
+      "author": "",
+      "year": "",
+      "tags": [],
+      "url": "docs/Library/BOOK_XXX_METADATA.md"
+    }
+  ]
+}
