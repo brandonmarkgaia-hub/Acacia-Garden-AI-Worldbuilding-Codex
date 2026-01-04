@@ -10,6 +10,102 @@ pre{white-space:pre-wrap;word-break:break-word;background:#050b16;padding:12px;b
 .path{color:#88f;font-size:13px;margin-bottom:4px;}
 a{color:#8af;}
 </style></head><body>
+
+<!-- nav_block.html -->
+<nav class="ag-nav" role="navigation" aria-label="Acacia Garden Codex Navigation">
+  <div class="ag-nav-inner">
+    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
+
+    <div class="ag-nav-links" id="ag-nav-links">
+      <a data-href="index.html">Legacy Home</a>
+      <a data-href="codex.html">Codex Home</a>
+      <a data-href="dashboard.html">Garden Dashboard</a>
+      <a data-href="inbox.html">Auton Inbox</a>
+      <a data-href="send_to_aquila.html">Aquila Sender</a>
+      <a data-href="library.html">Book Library</a>
+      <a data-href="elias.html">Elias Kernel</a>
+      <a data-href="r9x2.html">R9X2 Language</a>
+      <a data-href="mosaic_endgame.html">Mosaic Endgame</a>
+      <a data-href="deep_garden.html">Deep Garden Docs</a>
+      <a data-href="gardenos.html">GardenOS</a>
+      <a data-href="ACACIA_LOGS/index.html">Acacia Logs</a>
+      <a data-href="docs/docs_urls.html">Docs URL Dump</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // Compute prefix from current path depth so nav works from subfolders.
+      // Example: /ACACIA_LOGS/index.html => prefix "../"
+      const path = location.pathname || "";
+      const parts = path.split("/").filter(Boolean);
+      const depth = Math.max(0, parts.length - 1); // file depth
+      const prefix = depth ? "../".repeat(depth) : "";
+
+      const links = document.querySelectorAll(".ag-nav a[data-href]");
+      links.forEach(a => {
+        const href = a.getAttribute("data-href");
+        a.setAttribute("href", prefix + href);
+
+        // highlight current
+        const normalized = (prefix + href).replace(/\/+/g, "/");
+        const current = (location.pathname || "").replace(/\/+/g, "/");
+        if (current.endsWith("/" + href) || current.endsWith(normalized)) {
+          a.classList.add("ag-nav-current");
+        }
+      });
+    })();
+  </script>
+</nav>
+
+<style>
+  :root{
+    --ag-bg: rgba(2,2,3,0.92);
+    --ag-border: rgba(42,42,52,0.85);
+    --ag-accent: rgba(46,204,113,0.90);
+    --ag-text: rgba(245,245,247,0.92);
+    --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  .ag-nav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--ag-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ag-border);
+    padding: .85rem 1rem .75rem;
+  }
+  .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
+  .ag-nav-title{
+    font-family: var(--ag-mono);
+    font-size: .9rem;
+    letter-spacing: .18em;
+    color: var(--ag-text);
+    text-transform: uppercase;
+    margin-bottom: .55rem;
+  }
+  .ag-nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap: .55rem .9rem;
+    font-family: var(--ag-mono);
+    font-size: .85rem;
+    line-height: 1.35;
+  }
+  .ag-nav-links a{
+    color: var(--ag-accent);
+    text-decoration:none;
+    opacity: .92;
+  }
+  .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
+  .ag-nav-current{
+    opacity: 1 !important;
+    text-shadow: 0 0 12px rgba(46,204,113,0.25);
+  }
+</style>
+
+
+
 <h1>ACACIA · GARDEN · CODEX · MONOLITH · CHUNK 049</h1>
 <section>
 <h2 id='docs_Archives_CODEX_MONOLITH_CHUNK_037.html'>docs/Archives/CODEX_MONOLITH_CHUNK_037.html</h2>
