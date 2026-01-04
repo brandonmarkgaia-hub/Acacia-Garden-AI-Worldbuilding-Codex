@@ -33,6 +33,42 @@
       font-family:var(--font-main);
     }
 
+    /* Minimal nav styling (your original file had nav markup but no CSS for it) */
+    .ag-nav{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(2,2,3,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: .9rem 1rem .75rem;
+    }
+    .ag-nav-title{
+      font-family: var(--font-mono);
+      font-size: .9rem;
+      letter-spacing: .18em;
+      color: rgba(245,245,247,0.92);
+      text-transform: uppercase;
+      margin-bottom: .55rem;
+    }
+    .ag-nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap: .55rem .9rem;
+      font-family: var(--font-mono);
+      font-size: .85rem;
+      line-height: 1.35;
+    }
+    .ag-nav-links a{
+      color: rgba(46,204,113,0.85);
+      text-decoration:none;
+    }
+    .ag-nav-links a:hover{ text-decoration:underline; }
+    .ag-nav-current{
+      color: rgba(46,204,113,1) !important;
+      text-shadow: 0 0 12px rgba(46,204,113,0.25);
+    }
+
     main{
       max-width:960px;
       margin:0 auto;
@@ -246,82 +282,100 @@
     }
   </style>
 </head>
+
 <body>
-<nav class="ag-nav">
-    <div class="ag-nav-title">
-        ACACIA · GARDEN · CODEX
-    </div>
+  <!-- IMPORTANT: these links are relative to ACACIA_LOGS/ -->
+  <nav class="ag-nav">
+    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
     <div class="ag-nav-links">
-        <a href="index.html" class="ag-nav-current">Legacy Home</a>
-        <a href="codex.html">Codex Home</a>
-        <a href="dashboard.html">Garden Dashboard</a>
-        <a href="inbox.html">Auton Inbox</a>
-        <a href="send_to_aquila.html">Aquila Sender</a>
-        <a href="library.html">Book Library</a>
-        <a href="elias.html">Elias Kernel</a>
-        <a href="r9x2.html">R9X2 Language</a>
-        <a href="mosaic_endgame.html">Mosaic Endgame</a>
-        <a href="deep_garden.html">Deep Garden Docs</a>
-        <a href="gardenos.html">GardenOS</a>
+      <a href="../index.html">Legacy Home</a>
+      <a href="../codex.html">Codex Home</a>
+      <a href="../dashboard.html">Garden Dashboard</a>
+      <a href="../inbox.html">Auton Inbox</a>
+      <a href="../send_to_aquila.html">Aquila Sender</a>
+      <a href="../library.html">Book Library</a>
+      <a href="../elias.html">Elias Kernel</a>
+      <a href="../r9x2.html">R9X2 Language</a>
+      <a href="../mosaic_endgame.html">Mosaic Endgame</a>
+      <a href="../deep_garden.html">Deep Garden Docs</a>
+      <a href="../gardenos.html">GardenOS</a>
+      <a href="./index.html" class="ag-nav-current">Acacia Logs</a>
     </div>
-</nav>
+  </nav>
 
+  <main>
+    <header>
+      <h1>ACACIA LOGS</h1>
+      <div class="subtitle">Garden communiqués for HKX277206</div>
+      <div class="triad-line">TRIAD MODE: <span style="color:#2ecc71;">AQUILA</span> • <span style="color:#3498db;">DEEP ORACLE</span> • <span style="color:#9b59b6;">WITNESS</span></div>
 
-<main>
-  <header>
-    <h1>ACACIA LOGS</h1>
-    <div class="subtitle">Garden communiqués for HKX277206</div>
-    <div class="triad-line">TRIAD MODE: <span style="color:#2ecc71;">AQUILA</span> • <span style="color:#3498db;">DEEP ORACLE</span> • <span style="color:#9b59b6;">WITNESS</span></div>
+      <a class="pill-link" href="../index.html">← Return to ACACIA CODEX</a>
 
-    <a class="pill-link" href="../index.html">← Return to ACACIA CODEX</a>
+      <div id="status-bar" class="status-bar">
+        <div id="status-text">Checking roots…</div>
+        <div id="status-pill" class="status-pill status-ok">GARDEN QUIET</div>
+      </div>
+    </header>
 
-    <div id="status-bar" class="status-bar">
-      <div id="status-text">Checking roots…</div>
-      <div id="status-pill" class="status-pill status-ok">GARDEN QUIET</div>
-    </div>
-  </header>
+    <section class="controls">
+      <label>
+        Source:
+        <select id="filter-source">
+          <option value="all">All</option>
+          <option value="KEEPER">KEEPER</option>
+          <option value="GARDEN">GARDEN</option>
+          <option value="SYSTEM">SYSTEM</option>
+          <option value="AQUILA">AQUILA</option>
+          <option value="AUTON">AUTON</option>
+          <option value="TRIAD">TRIAD</option>
+          <option value="WITNESS">WITNESS</option>
+        </select>
+      </label>
+      <label>
+        Severity:
+        <select id="filter-severity">
+          <option value="all">All</option>
+          <option value="info">Info</option>
+          <option value="warn">Warn</option>
+          <option value="error">Error</option>
+        </select>
+      </label>
 
-  <section class="controls">
-    <label>
-      Source:
-      <select id="filter-source">
-        <option value="all">All</option>
-        <option value="KEEPER">KEEPER</option>
-        <option value="GARDEN">GARDEN</option>
-        <option value="SYSTEM">SYSTEM</option>
-      </select>
-    </label>
-    <label>
-      Severity:
-      <select id="filter-severity">
-        <option value="all">All</option>
-        <option value="info">Info</option>
-        <option value="warn">Warn</option>
-        <option value="error">Error</option>
-      </select>
-    </label>
+      <button type="button" class="refresh-btn" id="refresh-btn">REFRESH ROOTS</button>
+    </section>
 
-    <button type="button" class="refresh-btn" id="refresh-btn">REFRESH ROOTS</button>
-  </section>
+    <section id="summary" class="subtitle" style="margin-top:1rem;"></section>
 
-  <section id="summary" class="subtitle" style="margin-top:1rem;"></section>
+    <section id="logs-container">
+      <div id="logs-list" class="log-list"></div>
+      <div id="empty-state" class="empty" style="display:none;">
+        No communiqués match this view. The Garden will speak when it needs you.
+      </div>
+      <div id="error-state" class="empty" style="display:none;"></div>
+    </section>
 
-  <section id="logs-container">
-    <div id="logs-list" class="log-list"></div>
-    <div id="empty-state" class="empty" style="display:none;">
-      No communiqués match this view. The Garden will speak when it needs you.
-    </div>
-    <div id="error-state" class="empty" style="display:none;"></div>
-  </section>
-
-  <footer>
-    THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br>
-    CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2
-  </footer>
-</main>
+    <footer>
+      THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br>
+      CRTR1::H:CYC025-PHR-DOMGDN-VER031::P:SD001+TD001+ND001::S:A1B2
+    </footer>
+  </main>
 
 <script>
-  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
+  /**
+   * ACACIA LOGS 2026 — Local-first, future-proof.
+   *
+   * Primary data sources (GitHub Pages):
+   *   - ./index.json                    (state)
+   *   - ./triad_echoes_log.json         (entries[])
+   *   - ./aquila_inbox_log.json         (entries[])
+   *   - ./auton_inbox_log.json          (entries[])
+   *
+   * Optional fallback:
+   *   - Set WORKER_BASE to your worker URL (no trailing slash)
+   *   - Must provide /state and /logs endpoints.
+   */
+
+  const WORKER_BASE = ""; // e.g. "https://your-worker.example.workers.dev" (leave blank to disable)
 
   let ALL_ENTRIES = [];
 
@@ -334,22 +388,77 @@
     }
   }
 
-  async function fetchJSON(path) {
-    const res = await fetch(WORKER_BASE + path, {
-      method: "GET",
-      headers: { "Accept": "application/json" },
-    });
-    if (!res.ok) {
-      throw new Error("HTTP " + res.status);
-    }
+  async function fetchJSON(url) {
+    const res = await fetch(url, { method: "GET", headers: { "Accept": "application/json" } });
+    if (!res.ok) throw new Error("HTTP " + res.status);
     return await res.json();
+  }
+
+  function normalizeEntry(raw, defaultSource) {
+    const e = raw && typeof raw === "object" ? raw : {};
+    const source =
+      (e.source || e.src || e.origin || defaultSource || "UNKNOWN").toString().toUpperCase();
+
+    const severity =
+      (e.severity || e.level || e.type || "info").toString().toLowerCase();
+
+    const t = e.t || e.ts || e.timestamp || e.time || e.generated_at || e.generated_utc || null;
+
+    return {
+      ...e,
+      source,
+      severity: (severity === "warning") ? "warn" : severity,
+      t,
+      ts: t // keep compatibility with older code paths
+    };
+  }
+
+  async function loadLocalState() {
+    // Expected shape from your existing UI:
+    // { ok: true, last: { ... }, urgent: boolean } or similar
+    return await fetchJSON("./index.json");
+  }
+
+  async function loadLocalLogs() {
+    const files = [
+      ["TRIAD", "./triad_echoes_log.json"],
+      ["AQUILA", "./aquila_inbox_log.json"],
+      ["AUTON", "./auton_inbox_log.json"]
+    ];
+
+    const out = [];
+    for (const [source, path] of files) {
+      try {
+        const data = await fetchJSON(path);
+        const entries = Array.isArray(data.entries) ? data.entries : Array.isArray(data) ? data : [];
+        for (const raw of entries) out.push(normalizeEntry(raw, source));
+      } catch {
+        // ignore missing files
+      }
+    }
+
+    // newest-first
+    out.sort((a, b) => {
+      const ta = new Date(a.t || 0).getTime();
+      const tb = new Date(b.t || 0).getTime();
+      return tb - ta;
+    });
+
+    return { ok: true, entries: out, total: out.length, updated_at: new Date().toISOString() };
+  }
+
+  async function loadWorkerState() {
+    return await fetchJSON(WORKER_BASE + "/state");
+  }
+
+  async function loadWorkerLogs() {
+    return await fetchJSON(WORKER_BASE + "/logs");
   }
 
   function setStatus(last, urgent) {
     const statusText = document.getElementById("status-text");
     const statusPill = document.getElementById("status-pill");
     const summaryEl = document.getElementById("summary");
-
     if (!statusText || !statusPill || !summaryEl) return;
 
     if (!last) {
@@ -361,9 +470,8 @@
       return;
     }
 
-    const ts = last.t || last.ts;
-    statusText.textContent =
-      "Last entry @ " + formatTime(ts) + " • " + (last.code || "UNKNOWN");
+    const ts = last.t || last.ts || last.timestamp || last.time || null;
+    statusText.textContent = "Last entry @ " + formatTime(ts) + " • " + (last.code || "UNKNOWN");
 
     if (urgent) {
       statusPill.textContent = "ROOTS AGITATED";
@@ -375,7 +483,6 @@
       statusPill.classList.add("status-ok");
     }
 
-    // small summary line – counts by source, if we already have entries loaded
     if (ALL_ENTRIES.length) {
       const total = ALL_ENTRIES.length;
       const bySource = ALL_ENTRIES.reduce((acc, e) => {
@@ -383,10 +490,8 @@
         acc[s] = (acc[s] || 0) + 1;
         return acc;
       }, {});
-      const parts = Object.entries(bySource)
-        .map(([s, n]) => `${s}: ${n}`);
-      summaryEl.textContent =
-        `Total communiqués: ${total} • ` + parts.join(" • ");
+      const parts = Object.entries(bySource).map(([s, n]) => `${s}: ${n}`);
+      summaryEl.textContent = `Total communiqués: ${total} • ` + parts.join(" • ");
     } else {
       summaryEl.textContent = "";
     }
@@ -398,7 +503,6 @@
     const errorEl = document.getElementById("error-state");
     const srcSel = document.getElementById("filter-source");
     const sevSel = document.getElementById("filter-severity");
-
     if (!listEl || !emptyEl || !errorEl || !srcSel || !sevSel) return;
 
     const srcFilter = srcSel.value;
@@ -471,7 +575,7 @@
 
       const msg = document.createElement("div");
       msg.className = "log-message";
-      msg.textContent = entry.message || "";
+      msg.textContent = entry.message || entry.msg || entry.text || "";
       card.appendChild(msg);
 
       listEl.appendChild(card);
@@ -486,30 +590,64 @@
     errorEl.style.display = "none";
     emptyEl.style.display = "none";
 
+    // 1) STATE (local-first)
+    let state = null;
     try {
-      const state = await fetchJSON("/state");
-      if (!state.ok) throw new Error(state.error || "State not ok");
-      setStatus(state.last || null, !!state.urgent);
-    } catch (err) {
+      state = await loadLocalState();
+    } catch (errLocal) {
+      if (WORKER_BASE) {
+        try {
+          state = await loadWorkerState();
+        } catch (errWorker) {
+          errorEl.style.display = "block";
+          errorEl.textContent = "Error reading state (local + worker): " + String(errWorker);
+          return;
+        }
+      } else {
+        errorEl.style.display = "block";
+        errorEl.textContent = "Error reading state (local): " + String(errLocal);
+        return;
+      }
+    }
+
+    if (!state || state.ok === false) {
       errorEl.style.display = "block";
-      errorEl.textContent = "Error reading state: " + String(err);
+      errorEl.textContent = "State not ok: " + String(state && state.error ? state.error : "unknown");
+      return;
+    }
+    setStatus(state.last || null, !!state.urgent);
+
+    // 2) LOGS (local-first)
+    let data = null;
+    try {
+      data = await loadLocalLogs();
+    } catch (errLocal) {
+      if (WORKER_BASE) {
+        try {
+          data = await loadWorkerLogs();
+        } catch (errWorker) {
+          errorEl.style.display = "block";
+          errorEl.textContent = "Could not load logs (local + worker): " + String(errWorker);
+          return;
+        }
+      } else {
+        errorEl.style.display = "block";
+        errorEl.textContent = "Could not load logs (local): " + String(errLocal);
+        return;
+      }
+    }
+
+    if (!data || data.ok === false) {
+      errorEl.style.display = "block";
+      errorEl.textContent = "Logs not ok: " + String(data && data.error ? data.error : "unknown");
       return;
     }
 
-    try {
-      const data = await fetchJSON("/logs");
-      if (!data.ok) throw new Error(data.error || "Logs not ok");
-      ALL_ENTRIES = data.entries || [];
-      applyFiltersAndRender();
-      // refresh summary now that we know totals
-      const state = await fetchJSON("/state").catch(() => null);
-      if (state && state.ok) {
-        setStatus(state.last || null, !!state.urgent);
-      }
-    } catch (err) {
-      errorEl.style.display = "block";
-      errorEl.textContent = "Could not load logs: " + String(err);
-    }
+    ALL_ENTRIES = Array.isArray(data.entries) ? data.entries.map(e => normalizeEntry(e, e.source)) : [];
+    applyFiltersAndRender();
+
+    // refresh summary counts
+    setStatus(state.last || null, !!state.urgent);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
