@@ -1,13 +1,11 @@
-name: Build docs URL dump (2026)
+name: Build docs URL dump
 
 on:
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches: [ main ]
     paths:
       - "docs/**"
-      - "**/*.html"
-      - ".github/workflows/build-docs-url-dump.yml"
       - ".github/scripts/build_docs_url_dump.py"
 
 permissions:
@@ -20,13 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # prevent infinite loops on bot commits
-    if: ${{ github.actor != 'github-actions[bot]' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,16 +28,14 @@ jobs:
           python-version: "3.11"
 
       - name: Build docs URL dump
-        run: python .github/scripts/build_docs_url_dump.py
-
-      - name: Commit changes (if any)
         run: |
-          git config user.name "docs-url-dump[bot]"
-          git config user.email "docs-url-dump@users.noreply.github.com"
+          python .github/scripts/build_docs_url_dump.py
+
+      - name: Commit outputs (if any)
+        run: |
+          git config user.name "acacia-garden-bot"
+          git config user.email "actions@users.noreply.github.com"
           git add docs/docs_urls.html docs/docs_urls.json || true
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git commit -m "chore(2026): rebuild docs URL dump [skip ci]"
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Update docs URL dump"
           git push
