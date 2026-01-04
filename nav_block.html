@@ -1,49 +1,47 @@
-<nav class="ag-nav">
+<!-- AG_NAV:BEGIN -->
+<nav class="ag-nav" role="navigation" aria-label="Acacia navigation">
   <style>
-    .ag-nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(2,2,3,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #2a2a34;
-      padding:.9rem 1rem .75rem;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .ag-nav-title{
-      font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-      font-size:.8rem;
-      letter-spacing:.22em;
-      color:#8a8a96;
-      text-transform:uppercase;
-      margin-bottom:.5rem;
-    }
-    .ag-nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem .9rem;
-      font-size:.85rem;
-    }
-    .ag-nav-links a{
-      color:#2ecc71;
-      text-decoration:none;
-      opacity:.85;
-    }
-    .ag-nav-links a:hover{
-      opacity:1;
-      text-decoration:underline;
-    }
+    .ag-nav{position:sticky;top:0;z-index:50;background:rgba(2,2,3,.92);backdrop-filter:blur(10px);border-bottom:1px solid #2a2a34;padding:.9rem 1rem .75rem}
+    .ag-nav-title{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.9rem;letter-spacing:.18em;color:rgba(245,245,247,.92);text-transform:uppercase;margin-bottom:.55rem}
+    .ag-nav-links{display:flex;flex-wrap:wrap;gap:.55rem .9rem;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.85rem;line-height:1.35}
+    .ag-nav-links a{color:rgba(46,204,113,.85);text-decoration:none}
+    .ag-nav-links a:hover{text-decoration:underline}
+    .ag-nav-current{color:rgba(46,204,113,1)!important;text-shadow:0 0 12px rgba(46,204,113,.25)}
   </style>
 
-  <div class="ag-nav-title">ACACIA · GARDEN · 2026</div>
+  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
   <div class="ag-nav-links">
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html">Witness Root</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/">Logs</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/status.html">Status</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/inbox.html">Inbox</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/library.html">Library</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/codex.html">Codex</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/elias.html">Elias</a>
-    <a href="/Acacia-Garden-AI-Worldbuilding-Codex/garden_map.html">System Map</a>
+    <a data-path="index.html">Legacy Home</a>
+    <a data-path="codex.html">Codex Home</a>
+    <a data-path="acacia_2026.html">Acacia 2026</a>
+    <a data-path="dashboard.html">Garden Dashboard</a>
+    <a data-path="inbox.html">Auton Inbox</a>
+    <a data-path="send_to_aquila.html">Aquila Sender</a>
+    <a data-path="library.html">Book Library</a>
+    <a data-path="elias.html">Elias Kernel</a>
+    <a data-path="r9x2.html">R9X2 Language</a>
+    <a data-path="mosaic_endgame.html">Mosaic Endgame</a>
+    <a data-path="deep_garden.html">Deep Garden Docs</a>
+    <a data-path="gardenos.html">GardenOS</a>
+    <a data-path="ACACIA_LOGS/index.html">Acacia Logs</a>
+    <a data-path="docs/docs_urls.html">Docs URLs</a>
   </div>
+
+  <script>
+    (function(){
+      try{
+        const parts = location.pathname.split('/').filter(Boolean);
+        const repo = parts.length ? parts[0] : '';
+        const root = repo ? ('/' + repo + '/') : '/';
+        document.querySelectorAll('.ag-nav [data-path]').forEach(a=>{
+          const p = a.getAttribute('data-path');
+          a.setAttribute('href', root + p);
+          const here = location.pathname.replace(/\/index\.html$/,'/').toLowerCase();
+          const target = (root + p).replace(/\/index\.html$/,'/').toLowerCase();
+          if(here === target) a.classList.add('ag-nav-current');
+        });
+      }catch(e){}
+    })();
+  </script>
 </nav>
+<!-- AG_NAV:END -->
