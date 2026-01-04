@@ -1026,7 +1026,7 @@
   async function loadStatus() {
     hideError("status-error");
     try {
-      var data = await tryFetchJson(["STATUS.json", "status.json"]);
+      var data = await tryFetchJson(["STATE/status.inject.json","STATUS.json", "status.json"]);
       var phase = firstTruthy(data.phase, data.garden_phase, data.state && data.state.phase, "–");
       var health = firstTruthy(data.health, data.garden_health, data.state && data.state.health, "–");
       var echoes = safeNumber(
@@ -1057,7 +1057,7 @@
   async function loadEchoIndex() {
     hideError("echo-error");
     try {
-      var data = await tryFetchJson(["machine-index.json", "MACHINE-INDEX.json", "MACHINE-INDEX.JSON", "machine-index-beta.json"]);
+      var data = await tryFetchJson(["STATE/machine_index.inject.json","machine-index.json", "MACHINE-INDEX.json", "MACHINE-INDEX.JSON", "machine-index-beta.json"]);
 
       // Support both:
       // A) { entries:[...] } or [...]
@@ -1141,7 +1141,7 @@
   async function loadScanReport() {
     hideError("scan-error");
     try {
-      var data = await tryFetchJson(["garden_scan_report.json", "GARDEN_SCAN_REPORT.json"]);
+      var data = await tryFetchJson(["STATE/garden_scan_report.inject.json","garden_scan_report.json", "GARDEN_SCAN_REPORT.json"]);
 
       // Support common shapes:
       // A) { files_with_hits, total_hits, top_pattern }
@@ -1232,7 +1232,7 @@
   async function loadAeonHeartbeat() {
     hideError("heartbeat-error");
     try {
-      var data = await tryFetchJson(["aeon_heartbeat.json", "AEON_HEARTBEAT.json", "AEON_HEARTBEAT.JSON"]);
+      var data = await tryFetchJson(["STATE/aeon_heartbeat.inject.json","aeon_heartbeat.json", "AEON_HEARTBEAT.json", "AEON_HEARTBEAT.JSON"]);
 
       // Support: { entries:[...] } or { beats:[...] } or { last_beat, lastBeat, type }
       var entries = asArray(firstTruthy(data.entries, data.beats, data.events));
