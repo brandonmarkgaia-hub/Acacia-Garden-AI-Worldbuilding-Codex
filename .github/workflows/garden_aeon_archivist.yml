@@ -1,17 +1,30 @@
-name: Garden Aeon Archivist (2026)
+name: Garden Aeon Archivist
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "13 2 * * *" # daily ~02:13 UTC (quiet hours)
   push:
     branches: [ "main" ]
+    paths:
+      - "docs/**"
+      - "tools/**"
+      - "EIDOLON/**"
+      - "Garden/**"
+      - "GRAND_CHAMBER/**"
+      - "STATUS.json"
+      - "machine-index.json"
+      - "nav_block.html"
 
 permissions:
   contents: write
 
+concurrency:
+  group: garden-aeon-archivist
+  cancel-in-progress: true
+
 jobs:
   archivist:
-    # Prevent endless loops when the bot commits archives
-    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -20,89 +33,35 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Configure git identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-      - name: Decide if we should archive (ignore archive-only changes)
-        id: decide
+      - name: Run Archivist tools
         shell: bash
         run: |
           set -euo pipefail
 
-          # If this is the first commit or shallow history, archive on dispatch only
-          if ! git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
-            echo "should_archive=false" >> "$GITHUB_OUTPUT"
-            echo "reason=no_previous_commit" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          python tools/build_garden_Index.py
+          python tools/root_manifest_generator.py
+          python tools/garden_digest.py
+          # Optional (uncomment if you want it on every run)
+          # python tools/garden_signature_scanner.py
 
-          CHANGED="$(git diff --name-only HEAD~1..HEAD || true)"
-          echo "$CHANGED" | sed '/^\s*$/d' || true
-
-          # Ignore purely snapshot churn
-          FILTERED="$(echo "$CHANGED" | grep -vE '^(docs/Archives/_SNAPSHOTS/|docs/Archives/_MANIFESTS/)' || true)"
-
-          if [ -z "$FILTERED" ]; then
-            echo "should_archive=false" >> "$GITHUB_OUTPUT"
-            echo "reason=archive_only_changes" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          echo "should_archive=true" >> "$GITHUB_OUTPUT"
-          echo "reason=meaningful_changes" >> "$GITHUB_OUTPUT"
-
-      - name: Create snapshot archive
-        if: ${{ steps.decide.outputs.should_archive == 'true' || github.event_name == 'workflow_dispatch' }}
+      - name: Commit changes (if any)
         shell: bash
         run: |
           set -euo pipefail
 
-          mkdir -p docs/Archives/_SNAPSHOTS
-          mkdir -p docs/Archives/_MANIFESTS
-
-          TS="$(date -u +'%Y%m%dT%H%M%SZ')"
-          SNAP="docs/Archives/_SNAPSHOTS/GARDEN_SNAPSHOT_${TS}.zip"
-          MAN="docs/Archives/_MANIFESTS/GARDEN_MANIFEST_${TS}.txt"
-
-          echo "GARDEN ARCHIVIST MANIFEST — ${TS}" > "$MAN"
-          echo "Keeper: HKX277206" >> "$MAN"
-          echo "Commit: ${GITHUB_SHA}" >> "$MAN"
-          echo "" >> "$MAN"
-          echo "Included paths:" >> "$MAN"
-          echo "  - docs/" >> "$MAN"
-          echo "  - EIDOLON/" >> "$MAN"
-          echo "  - STATUS.json / MACHINE-INDEX.json (if present)" >> "$MAN"
-          echo "" >> "$MAN"
-
-          # Build a curated snapshot (fast + useful)
-          zip -r "$SNAP" \
-            docs \
-            EIDOLON \
-            STATUS.json \
-            MACHINE-INDEX.json \
-            machine-index.json \
-            garden_scan_report.json \
-            aeon_heartbeat.json \
-            2>/dev/null || true
-
-          echo "Created: $SNAP"
-          echo "Created: $MAN"
-
-      - name: Commit & push (only if changed)
-        if: ${{ steps.decide.outputs.should_archive == 'true' || github.event_name == 'workflow_dispatch' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          git add docs/Archives/_SNAPSHOTS docs/Archives/_MANIFESTS || true
-
-          if git diff --cached --quiet; then
-            echo "No archive changes to commit."
+          if git diff --quiet; then
+            echo "No changes to commit."
             exit 0
           fi
 
-          TS="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git commit -m "Archivist: snapshot @ ${TS}"
+          git config user.name "acacia-archivist[bot]"
+          git config user.email "acacia-archivist@users.noreply.github.com"
+
+          git add -A
+          git commit -m "Garden Aeon Archivist: refresh indexes [skip ci]"
           git push
