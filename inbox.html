@@ -4,39 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Auton Inbox • Garden Signals</title>
+
   <style>
     body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#050607;color:#d7e0da}
     a{color:#8fd3a6}
-    header{padding:18px 16px;border-bottom:1px solid #18201b}
-    nav a{margin-right:10px;text-decoration:none}
+
     main{padding:18px 16px;max-width:900px;margin:0 auto}
+
     .pill{display:inline-block;padding:2px 10px;border-radius:999px;border:1px solid #1c2a22;font-size:12px;color:#a8c7b3}
     .card{border:1px solid #18201b;border-radius:14px;padding:14px 14px;margin:12px 0;background:#070a09}
     .muted{color:#8ea49a}
     .err{color:#ffb3b3}
-    textarea{width:100%;min-height:90px;background:#070a09;color:#d7e0da;border:1px solid #18201b;border-radius:12px;padding:10px}
+    textarea{width:100%;min-height:80px;background:#070a09;color:#d7e0da;border:1px solid #18201b;border-radius:12px;padding:10px}
     button{background:#0b1310;color:#d7e0da;border:1px solid #1c2a22;border-radius:10px;padding:10px 12px}
+    button:hover{filter:brightness(1.08)}
     .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    code{color:#cfe7d8}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:720px){ .split{grid-template-columns:1fr} }
   </style>
 </head>
+
 <body>
-<nav class="ag-nav">
-  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-  <div class="ag-nav-links">
-    <a href="index.html" class="ag-nav-link">Legacy Home</a>
-    <a href="codex.html" class="ag-nav-link">Codex Home</a>
-    <a href="dashboard.html" class="ag-nav-link">Garden Dashboard</a>
-    <a href="inbox.html" class="ag-nav-link ag-nav-current">Auton Inbox</a>
-    <a href="send_to_aquila.html" class="ag-nav-link">Aquila Sender</a>
-    <a href="library.html" class="ag-nav-link">Book Library</a>
-    <a href="elias.html" class="ag-nav-link">Elias Kernel</a>
-    <a href="r9x2.html" class="ag-nav-link">R9X2 Language</a>
-    <a href="mosaic_endgame.html" class="ag-nav-link">Mosaic Endgame</a>
-  </div>
-</nav>
 
-
-<!-- nav_block.html -->
+<!-- nav_block.html (single source of truth) -->
 <nav class="ag-nav" role="navigation" aria-label="Acacia Garden Codex Navigation">
   <div class="ag-nav-inner">
     <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
@@ -129,59 +120,56 @@
   }
 </style>
 
+<main>
+  <h1>Auton Inbox</h1>
+  <p class="muted">
+    Reads the Garden inbox stream. Tries your Cloudflare Worker first (if set), otherwise falls back to repo logs.
+  </p>
 
+  <div class="row">
+    <span class="pill" id="srcPill">source: loading…</span>
+    <button id="refreshBtn" type="button">Refresh</button>
+    <button id="testBtn" type="button">Test Worker</button>
+  </div>
 
-  <header>
-    <div class="muted">ACACIA · GARDEN · 2026</div>
-    <nav>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html">Witness Root</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/index.html">Logs</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/STATUS.json">Status</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/inbox.html">Inbox</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/library.html">Library</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/codex.html">Codex</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/ELIAS_KERNEL/index.html">Elias</a>
-      <a href="/Acacia-Garden-AI-Worldbuilding-Codex/system_map.html">System Map</a>
-    </nav>
-  </header>
+  <div class="card">
+    <div class="muted" style="margin-bottom:8px">Worker URL (optional)</div>
+    <textarea id="workerUrl" placeholder="Paste your Cloudflare Worker base URL here (no trailing slash)"></textarea>
 
-  <main>
-    <h1>Auton Inbox</h1>
-    <p class="muted">
-      This page reads the Garden inbox stream. It will try your Worker first (if set), otherwise it falls back to repo logs.
-    </p>
-
-    <div class="row">
-      <span class="pill" id="srcPill">source: loading…</span>
-      <button id="refreshBtn" type="button">Refresh</button>
+    <div class="row" style="margin-top:10px">
+      <button id="saveBtn" type="button">Save Worker URL</button>
+      <button id="clearWorkerBtn" type="button">Clear</button>
+      <span class="muted">Saved in your browser only (localStorage).</span>
     </div>
 
-    <div class="card">
-      <div class="muted" style="margin-bottom:8px">Worker URL (optional)</div>
-      <textarea id="workerUrl" placeholder="Paste your Cloudflare Worker base URL here (no trailing slash)"></textarea>
-      <div class="row" style="margin-top:10px">
-        <button id="saveBtn" type="button">Save Worker URL</button>
-        <span class="muted">Saved in your browser only (localStorage).</span>
+    <div class="split" style="margin-top:10px">
+      <div class="muted">
+        Worker read endpoint: <code id="workerReadEp">/inbox?limit=50</code>
       </div>
-      <div class="muted" style="margin-top:10px">
-        Fallback file: <code>ACACIA_LOGS/aquila_inbox_log.json</code>
+      <div class="muted">
+        Repo fallback file: <code>ACACIA_LOGS/aquila_inbox_log.json</code>
       </div>
     </div>
+  </div>
 
-    <div id="status" class="muted">Loading…</div>
-    <div id="list"></div>
-  </main>
+  <div id="status" class="muted">Loading…</div>
+  <div id="list"></div>
+</main>
 
 <script>
   const FALLBACK_JSON = "/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/aquila_inbox_log.json";
+  const DEFAULT_LIMIT = 50;
 
   const els = {
     workerUrl: document.getElementById("workerUrl"),
     saveBtn: document.getElementById("saveBtn"),
+    clearWorkerBtn: document.getElementById("clearWorkerBtn"),
     refreshBtn: document.getElementById("refreshBtn"),
+    testBtn: document.getElementById("testBtn"),
     status: document.getElementById("status"),
     list: document.getElementById("list"),
     srcPill: document.getElementById("srcPill"),
+    workerReadEp: document.getElementById("workerReadEp"),
   };
 
   function nowBust(url){
@@ -190,41 +178,20 @@
 
   async function fetchJson(url){
     const res = await fetch(nowBust(url), { cache: "no-store" });
-    if(!res.ok) throw new Error("HTTP " + res.status + " for " + url);
-    return await res.json();
+    const txt = await res.text();
+    let data = {};
+    try { data = txt ? JSON.parse(txt) : {}; } catch { data = { raw: txt }; }
+    if(!res.ok) throw new Error("HTTP " + res.status + " for " + url + " :: " + (data.error || txt || ""));
+    return data;
   }
 
   function normalizeEntries(payload){
-    // Accept: {entries:[]} or [] or {items:[]}
+    // Accept: {entries:[]} or [] or {items:[]} or {messages:[]}
     if(Array.isArray(payload)) return payload;
     if(payload && Array.isArray(payload.entries)) return payload.entries;
     if(payload && Array.isArray(payload.items)) return payload.items;
+    if(payload && Array.isArray(payload.messages)) return payload.messages;
     return [];
-  }
-
-  function render(entries){
-    els.list.innerHTML = "";
-    if(!entries.length){
-      els.list.innerHTML = `<div class="card"><div class="muted">No transmissions yet, Keeper.</div></div>`;
-      return;
-    }
-    for(const e of entries){
-      const src = (e.source || e.src || "AQUILA").toString();
-      const t = e.t || e.ts || e.timestamp || e.time || e.generated_at || e.generated_utc || "";
-      const msg = e.message || e.text || e.body || JSON.stringify(e);
-      const sev = (e.severity || e.level || "info").toString();
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <div class="row">
-          <span class="pill">${src}</span>
-          <span class="pill">${sev}</span>
-          <span class="muted">${t}</span>
-        </div>
-        <div style="margin-top:10px;white-space:pre-wrap">${escapeHtml(msg)}</div>
-      `;
-      els.list.appendChild(card);
-    }
   }
 
   function escapeHtml(s){
@@ -234,17 +201,80 @@
       .replaceAll("'","&#039;");
   }
 
+  function render(entries){
+    els.list.innerHTML = "";
+    if(!entries.length){
+      els.list.innerHTML = `<div class="card"><div class="muted">No transmissions yet, Keeper.</div></div>`;
+      return;
+    }
+
+    for(const e of entries){
+      const src = (e.source || e.src || "AQUILA").toString();
+      const t = e.ts || e.t || e.timestamp || e.time || e.generated_at || e.generated_utc || "";
+      const sev = (e.severity || e.level || "info").toString();
+      const tags = Array.isArray(e.tags) ? e.tags.join(", ") : (e.tags || "");
+      const msg = e.message || e.text || e.body || JSON.stringify(e);
+
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="row">
+          <span class="pill">${escapeHtml(src)}</span>
+          <span class="pill">${escapeHtml(sev)}</span>
+          ${tags ? `<span class="pill">${escapeHtml(tags)}</span>` : ``}
+          <span class="muted">${escapeHtml(t)}</span>
+        </div>
+        <div style="margin-top:10px;white-space:pre-wrap">${escapeHtml(msg)}</div>
+      `;
+      els.list.appendChild(card);
+    }
+  }
+
+  function getWorkerBase(){
+    const saved = localStorage.getItem("acacia_worker_base") || "";
+    return saved.trim().replace(/\/+$/,"");
+  }
+
+  function setWorkerBase(v){
+    localStorage.setItem("acacia_worker_base", (v || "").trim());
+  }
+
+  function workerInboxUrl(base){
+    return base.replace(/\/+$/,"") + "/inbox?limit=" + DEFAULT_LIMIT;
+  }
+
+  async function testWorker(){
+    const base = getWorkerBase();
+    if(!base){
+      els.status.className = "err";
+      els.status.textContent = "No Worker URL saved yet.";
+      return;
+    }
+    els.status.className = "muted";
+    els.status.textContent = "Testing Worker /health…";
+    try{
+      const payload = await fetchJson(base + "/health");
+      els.status.className = "muted";
+      els.status.textContent = "✓ Worker healthy.";
+      els.list.innerHTML = `<div class="card"><div class="muted">/health</div><pre style="white-space:pre-wrap;margin:0">${escapeHtml(JSON.stringify(payload,null,2))}</pre></div>`;
+    }catch(e){
+      els.status.className = "err";
+      els.status.textContent = "Worker test failed: " + e.message;
+    }
+  }
+
   async function load(){
     els.status.textContent = "Loading…";
     els.status.className = "muted";
+    els.list.innerHTML = "";
 
-    const saved = localStorage.getItem("acacia_worker_base") || "";
+    const saved = getWorkerBase();
     els.workerUrl.value = saved;
+    els.workerReadEp.textContent = saved ? workerInboxUrl(saved) : "/inbox?limit=50 (set Worker URL)";
 
-    const workerBase = saved.trim().replace(/\/+$/,"");
-    if(workerBase){
+    if(saved){
       try{
-        const payload = await fetchJson(workerBase + "/inbox-log");
+        const payload = await fetchJson(workerInboxUrl(saved));
         els.srcPill.textContent = "source: worker";
         els.status.textContent = "Loaded from Worker.";
         render(normalizeEntries(payload));
@@ -263,18 +293,25 @@
       els.srcPill.textContent = "source: none";
       els.status.className = "err";
       els.status.textContent = "Inbox failed: " + e.message;
-      els.list.innerHTML = "";
     }
   }
 
   els.saveBtn.addEventListener("click", ()=>{
-    localStorage.setItem("acacia_worker_base", els.workerUrl.value.trim());
+    setWorkerBase(els.workerUrl.value);
+    load();
+  });
+
+  els.clearWorkerBtn.addEventListener("click", ()=>{
+    setWorkerBase("");
+    els.workerUrl.value = "";
     load();
   });
 
   els.refreshBtn.addEventListener("click", load);
+  els.testBtn.addEventListener("click", testWorker);
 
   load();
 </script>
+
 </body>
 </html>
