@@ -38,25 +38,37 @@ jobs:
       - name: Fix Archives base href
         run: python .github/scripts/fix_archives_base.py
 
-      - name: Commit and push updated artifacts
+      - name: Commit and push updated artifacts (rebase-safe)
+        shell: bash
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "acacia-auton"
-            git config user.email "actions@github.com"
+          set -euo pipefail
 
-            git add \
-              STATUS.json \
-              docs/Novellas/garden_index.json \
-              machine-index.json \
-              tools/garden_scan_report.json \
-              docs/Chambers/index.html \
-              docs/Vaults/index.html \
-              docs/Echoes/index.html \
-              docs/GardenOS/index.html \
-              docs/Archives/*.html || true
-
-            git commit -m "chore: refresh Garden indexes [auton]"
-            git push
-          else
+          if git diff --quiet; then
             echo "No changes to commit"
+            exit 0
           fi
+
+          git config user.name "acacia-auton"
+          git config user.email "actions@github.com"
+
+          git add \
+            STATUS.json \
+            docs/Novellas/garden_index.json \
+            machine-index.json \
+            tools/garden_scan_report.json \
+            docs/Chambers/index.html \
+            docs/Vaults/index.html \
+            docs/Echoes/index.html \
+            docs/GardenOS/index.html \
+            docs/Archives/*.html || true
+
+          if git diff --cached --quiet; then
+            echo "Nothing staged to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh Garden indexes [auton]" || true
+
+          # Heal push races
+          git pull --rebase origin main
+          git push
