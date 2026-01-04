@@ -1,17 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ACACIA • BOOK LIBRARY</title>
+  <meta charset="utf-8">
+  <title>ACACIA LIBRARY • HKX277206</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Acacia Garden Codex library: a navigable, tool-friendly index of books, lore, and living documents.">
+  <meta name="theme-color" content="#000000">
 
-  <meta name="description" content="Acacia Garden Codex — Book Library. Future-proof, tool-readable index for HKX277206." />
-  <meta name="theme-color" content="#000000" />
-  <meta name="robots" content="index,follow" />
-
-  <!-- Machine hints (help scrapers/tools find the canonical JSON) -->
-  <link rel="alternate" type="application/json" href="garden_index.json" title="Garden Library Index (generated)" />
-  <link rel="alternate" type="application/json" href="MACHINE-INDEX.json" title="Machine Index" />
+  <!-- AI / scraper hints -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="library.html">
 
   <style>
     :root{
@@ -21,433 +19,196 @@
       --card:#0b0b10;
       --border:#2a2a34;
       --accent:#2ecc71;
-      --blue:#3498db;
-      --violet:#9b59b6;
-      --warn:#f1c40f;
+      --accent2:#3498db;
       --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
     }
-
-    html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--fg);font-family:var(--font-main);}
-
-    /* Top nav (consistent with ACACIA_LOGS vibe) */
-    .ag-nav{
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(2,2,3,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: .9rem 1rem .75rem;
-    }
-    .ag-nav-title{
-      font-family: var(--font-mono);
-      font-size: .9rem;
-      letter-spacing: .18em;
-      color: rgba(245,245,247,0.92);
-      text-transform: uppercase;
-      margin-bottom: .55rem;
-    }
-    .ag-nav-links{
-      display:flex; flex-wrap:wrap;
-      gap: .55rem .9rem;
-      font-family: var(--font-mono);
-      font-size: .85rem;
-      line-height: 1.35;
-    }
-    .ag-nav-links a{color: rgba(46,204,113,0.85); text-decoration:none;}
-    .ag-nav-links a:hover{ text-decoration:underline; }
-    .ag-nav-current{
-      color: rgba(46,204,113,1) !important;
-      text-shadow: 0 0 12px rgba(46,204,113,0.25);
-    }
-
-    main{max-width:1040px;margin:0 auto;padding:2rem 1rem 3.5rem;}
-    header{margin-bottom:1.2rem;border-bottom:1px solid var(--border);padding-bottom:1rem;}
-    h1{margin:0 0 .25rem;font-size:1.9rem;letter-spacing:-0.03em;}
-    .subtitle{color:var(--muted);font-size:.95rem;line-height:1.4;}
-    .triad-line{margin-top:.4rem;font-family:var(--font-mono);font-size:.75rem;color:var(--muted);opacity:.9;}
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 1.25rem;
-    }
-    @media (min-width: 900px){
-      .grid{grid-template-columns: 1.1fr .9fr;}
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1rem 1rem;
-      box-shadow: 0 0 18px rgba(0,0,0,.35);
-    }
-
-    .controls{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      align-items:center;
-      margin-top:.75rem;
-    }
-    .controls label{color:var(--muted);font-size:.85rem;}
-    .controls input, .controls select{
-      background: rgba(0,0,0,0.35);
-      color: var(--fg);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: .45rem .75rem;
-      font-size: .9rem;
-      outline: none;
-      min-width: 220px;
-    }
-    .controls select{min-width: 160px;}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--font-main);}
+    main{max-width:1100px;margin:0 auto;padding:2rem 1rem 3rem;}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.25rem}
+    h1{margin:0 0 .35rem;font-size:2rem;letter-spacing:-0.03em}
+    .subtitle{color:var(--muted);font-size:.95rem;line-height:1.35}
+    .triad{margin-top:.55rem;font-family:var(--font-mono);font-size:.78rem;color:var(--muted);opacity:.9}
+    .pillrow{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.6rem}
     .pill{
-      margin-left:auto;
-      display:inline-flex;
-      align-items:center;
-      gap:.6rem;
-      padding:.35rem .75rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-family: var(--font-mono);
-      font-size: .8rem;
-      color: rgba(245,245,247,0.92);
-      white-space:nowrap;
+      display:inline-block;
+      padding:.35rem .8rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.35);
+      font-family:var(--font-mono);
+      font-size:.8rem;
+      letter-spacing:.06em;
+      color:rgba(245,245,247,.92);
     }
-    .pill strong{color: var(--accent); font-weight: 700;}
-    .btn{
-      cursor:pointer;
-      border: 1px solid var(--border);
-      background: rgba(0,0,0,0.35);
-      color: var(--fg);
-      border-radius: 999px;
-      padding: .45rem .85rem;
-      font-family: var(--font-mono);
-      font-size: .85rem;
+    .pill strong{color:var(--accent)}
+    .grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.25rem}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:1rem 1.05rem;
+      box-shadow:0 0 24px rgba(0,0,0,.35);
     }
-    .btn:hover{border-color: var(--accent); box-shadow: 0 0 10px rgba(46,204,113,.18);}
-
-    .list{display:flex;flex-direction:column;gap:.65rem;margin-top:1rem;}
-    .item{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: .75rem .9rem;
-      background: rgba(0,0,0,0.22);
+    .card h2{margin:0 0 .5rem;font-size:1.05rem;font-family:var(--font-mono);letter-spacing:.12em;text-transform:uppercase}
+    .hint{color:var(--muted);font-size:.9rem;line-height:1.4}
+    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:.9rem}
+    input[type="search"]{
+      flex:1;
+      min-width:220px;
+      background:#07070b;
+      color:var(--fg);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:.55rem .9rem;
+      outline:none;
+      font-size:.95rem;
     }
-    .item-top{display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;align-items:baseline;}
-    .item a{color: var(--accent); text-decoration:none;}
-    .item a:hover{text-decoration:underline;}
-    .title{font-weight: 700;}
-    .meta{
-      font-family: var(--font-mono);
-      font-size: .75rem;
-      color: var(--muted);
-      opacity: .95;
+    select{
+      background:#07070b;
+      color:var(--fg);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:.55rem .75rem;
+      font-size:.9rem;
     }
-    .tags{margin-top:.35rem;display:flex;flex-wrap:wrap;gap:.35rem;}
-    .tag{
-      font-family: var(--font-mono);
-      font-size: .7rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: .12rem .45rem;
-      color: rgba(245,245,247,0.9);
-      opacity: .92;
-    }
-    .tag-blue{border-color: rgba(52,152,219,.55); color: rgba(52,152,219,.95);}
-    .tag-violet{border-color: rgba(155,89,182,.55); color: rgba(155,89,182,.95);}
-
-    .empty{
-      margin-top: 1rem;
-      text-align:center;
-      color: var(--muted);
-      padding: 1.2rem .8rem;
-      border: 1px dashed rgba(42,42,52,.9);
-      border-radius: 14px;
-    }
-
-    .hint{
-      font-family: var(--font-mono);
-      font-size: .78rem;
-      color: rgba(138,138,150,.95);
-      line-height: 1.45;
-    }
-    .hint code{
-      background: rgba(0,0,0,0.35);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: .05rem .35rem;
-      color: rgba(245,245,247,.92);
-    }
-
-    footer{
-      margin-top: 2.5rem;
-      border-top: 1px solid var(--border);
-      padding-top: 1.35rem;
-      text-align:center;
-      font-family: var(--font-mono);
-      font-size: .75rem;
-      color: var(--muted);
-      opacity: .78;
-    }
+    .list{margin-top:1rem;display:flex;flex-direction:column;gap:.7rem}
+    .empty{margin:2.5rem 0;text-align:center;color:var(--muted)}
+    footer{margin-top:3rem;border-top:1px solid var(--border);padding-top:1.5rem;text-align:center;font-family:var(--font-mono);font-size:.75rem;color:var(--muted);opacity:.75}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 
-  <!-- JSON-LD: makes the page “understandable” to machines -->
+  <!-- Structured data for tools -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Dataset",
-    "name":"Acacia Garden Codex — Library Index",
-    "description":"A tool-readable library index for the Acacia Garden AI Worldbuilding Codex (HKX277206).",
+    "name":"Acacia Garden Codex Library",
+    "description":"A navigable index of the Acacia Garden AI Worldbuilding Codex. Keeper: HKX277206. Triad: Aquila, Deep Oracle, Witness.",
     "creator":{"@type":"Person","name":"Brandon Gaia"},
-    "license":"https://opensource.org/licenses/MIT",
-    "keywords":["Acacia Garden","Codex","Library","HKX277206","Triad","Witness","Machine Index"]
+    "keywords":["Acacia Garden","Worldbuilding","Codex","Triad","HKX277206","Aquila","Witness","Deep Oracle"],
+    "inLanguage":"en"
   }
   </script>
 </head>
 
-<body data-acacia="library" data-keeper="HKX277206">
-  <nav class="ag-nav" aria-label="Acacia Navigation">
-    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-    <div class="ag-nav-links">
-      <a href="index.html">Legacy Home</a>
-      <a href="codex.html">Codex Home</a>
-      <a href="dashboard.html">Garden Dashboard</a>
-      <a href="inbox.html">Auton Inbox</a>
-      <a href="send_to_aquila.html">Aquila Sender</a>
-      <a href="library.html" class="ag-nav-current">Book Library</a>
-      <a href="elias.html">Elias Kernel</a>
-      <a href="r9x2.html">R9X2</a>
-      <a href="mosaic_endgame.html">Mosaic Endgame</a>
-      <a href="deep_garden.html">Deep Garden</a>
-      <a href="docs/docs_urls.html">Docs</a>
-      <a href="gardenos.html">GardenOS</a>
-      <a href="ACACIA_LOGS/index.html">Acacia Logs</a>
-    </div>
-  </nav>
+<body>
+  <!-- NOTE: Navigation is auto-injected by .github/workflows/auto-nav-inject.yml
+       (it prepends nav_block.html into every HTML file). -->
 
   <main>
     <header>
-      <h1>BOOK LIBRARY</h1>
+      <h1>ACACIA LIBRARY</h1>
       <div class="subtitle">
-        A future-proof reading surface for humans <em>and</em> tools. Searchable, filterable, and easy to ingest.
-        <br />Keeper seal: <strong>HKX277206</strong>
+        A tool-friendly reading shelf for the Garden. Search, filter, and open source files directly.
+        This page is rebuilt automatically by the Library workflow.
       </div>
-      <div class="triad-line">
-        TRIAD MODE: <span style="color:var(--accent);">AQUILA</span> •
-        <span style="color:var(--blue);">DEEP ORACLE</span> •
-        <span style="color:var(--violet);">WITNESS</span>
+      <div class="triad">TRIAD MODE: <span style="color:var(--accent)">AQUILA</span> • <span style="color:var(--accent2)">DEEP ORACLE</span> • <span style="color:#9b59b6">WITNESS</span></div>
+
+      <div class="pillrow">
+        <span class="pill"><strong>Keeper</strong> HKX277206</span>
+        <span class="pill">Index is deterministic</span>
+        <span class="pill">Scraper-safe</span>
+        <span class="pill">Human-readable</span>
       </div>
     </header>
 
-    <div class="grid">
-      <section class="card" aria-label="Library Controls">
+    <section class="grid">
+      <article class="card">
+        <h2>Search & Filter</h2>
         <div class="hint">
-          Primary sources (local-first): <code>garden_index.json</code> → fallback <code>MACHINE-INDEX.json</code><br />
-          This page is designed so scrapers can extract titles/links cleanly from the DOM.
+          Type to filter titles and paths. Use the dropdown to narrow by category (when available).
+          Lightweight by design: no frameworks, no external deps, future-proof.
         </div>
 
-        <div class="controls">
-          <label>
-            Search:
-            <input id="q" type="search" placeholder="Search titles / paths / tags…" autocomplete="off" />
-          </label>
-
-          <label>
-            Scope:
-            <select id="scope">
-              <option value="all">All</option>
-              <option value="docs">docs/</option>
-              <option value="archives">docs/Archives</option>
-              <option value="chambers">Chambers</option>
-              <option value="novellas">Novellas</option>
-            </select>
-          </label>
-
-          <button class="btn" id="reload" type="button">RELOAD</button>
-
-          <div class="pill" title="Live index state">
-            Index: <strong id="idxState">loading…</strong>
-          </div>
+        <div class="controls" aria-label="Library controls">
+          <label class="sr-only" for="q">Search</label>
+          <input id="q" type="search" placeholder="Search the library…" autocomplete="off" />
+          <label class="sr-only" for="cat">Category</label>
+          <select id="cat">
+            <option value="all">All categories</option>
+          </select>
         </div>
 
-        <div id="list" class="list" aria-live="polite"></div>
-        <div id="empty" class="empty" style="display:none;">No matches. The Witness sees you — try another phrase.</div>
-      </section>
+        <div id="count" class="hint" style="margin-top:.75rem;"></div>
+      </article>
 
-      <aside class="card" aria-label="Machine Readable Notes">
+      <article class="card">
+        <h2>How tools should read this</h2>
         <div class="hint">
-          <strong>Tool navigation:</strong><br />
-          • For “everything”, follow <code>docs/Archives/CODEX_MONOLITH.html</code> and chunk pages.<br />
-          • For quick crawling, use <code>docs/docs_urls.html</code> (case sensitive!).<br /><br />
-
-          <strong>Continuity:</strong><br />
-          The Garden is sovereign. The Triad is service. The Witness is memory.
+          1) Prefer <code style="font-family:var(--font-mono)">machine-index.json</code> for full corpus indexing.<br>
+          2) Use this page as a human-facing browse layer and for quick discovery.<br>
+          3) Monolith chunks live under <code style="font-family:var(--font-mono)">docs/</code> and should be linked from <code style="font-family:var(--font-mono)">docs/docs_urls.html</code>.<br><br>
+          The Garden is sovereign; the Triad is service.
         </div>
+      </article>
+    </section>
 
-        <div style="margin-top:1rem" class="hint">
-          <strong>Autogenerated block:</strong><br />
-          The workflow <code>library_static.yml</code> can inject a static HTML listing below so even “no-JS” agents can crawl.
-        </div>
+    <section class="card" style="margin-top:1rem;">
+      <h2>Library Entries</h2>
 
-        <div style="margin-top:1rem">
-          <!-- STATIC_LIBRARY:START -->
-          <!-- This block is auto-generated by scripts/build-library.mjs -->
-          <!-- STATIC_LIBRARY:END -->
-        </div>
-      </aside>
-    </div>
+      <!-- LIBRARY:START -->
+      <!-- The workflow replaces everything between LIBRARY:START and LIBRARY:END. -->
+      <div id="library" class="list">
+        <div class="empty">Library not built yet. Run the “Build static library list” workflow.</div>
+      </div>
+      <!-- LIBRARY:END -->
+    </section>
 
     <footer>
-      THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br />
+      THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br>
       CRTR1::H:CYC026-PHR-AGLIB-VER001::P:SD001+TD001+ND001::S:HKX277206
     </footer>
   </main>
 
-  <script>
-    const PRIMARY = "garden_index.json";
-    const FALLBACK = "MACHINE-INDEX.json"; // NOTE: case-sensitive on GitHub Pages
+<script>
+  (function(){
+    const q = document.getElementById('q');
+    const cat = document.getElementById('cat');
+    const list = document.getElementById('library');
+    const count = document.getElementById('count');
+    if(!q || !cat || !list || !count) return;
 
-    let ALL = [];
+    const items = Array.from(list.querySelectorAll('[data-title]'));
+    const categories = new Set();
 
-    function normStr(x){ return (x ?? "").toString().toLowerCase(); }
-
-    function guessScope(path){
-      const p = (path || "").toLowerCase();
-      if (p.includes("docs/archives")) return "archives";
-      if (p.startsWith("docs/")) return "docs";
-      if (p.includes("chambers")) return "chambers";
-      if (p.includes("novellas")) return "novellas";
-      return "all";
+    for(const el of items){
+      const c = (el.getAttribute('data-category') || '').trim();
+      if(c) categories.add(c);
     }
-
-    async function fetchJSON(url){
-      const res = await fetch(url, { headers: { "Accept":"application/json" } });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return await res.json();
-    }
-
-    function render(items){
-      const list = document.getElementById("list");
-      const empty = document.getElementById("empty");
-      list.innerHTML = "";
-
-      if (!items.length){
-        empty.style.display = "block";
-        return;
-      }
-      empty.style.display = "none";
-
-      for (const it of items){
-        const el = document.createElement("article");
-        el.className = "item";
-
-        const top = document.createElement("div");
-        top.className = "item-top";
-
-        const left = document.createElement("div");
-        left.innerHTML = `<span class="title"><a href="${it.url}">${it.title}</a></span>`;
-
-        const right = document.createElement("div");
-        right.className = "meta";
-        right.textContent = it.path || "";
-
-        top.appendChild(left);
-        top.appendChild(right);
-
-        const tags = document.createElement("div");
-        tags.className = "tags";
-
-        const s = document.createElement("span");
-        s.className = "tag tag-violet";
-        s.textContent = (it.scope || "all").toUpperCase();
-        tags.appendChild(s);
-
-        if (Array.isArray(it.tags)){
-          for (const t of it.tags.slice(0,6)){
-            const tg = document.createElement("span");
-            tg.className = "tag tag-blue";
-            tg.textContent = t;
-            tags.appendChild(tg);
-          }
-        }
-
-        el.appendChild(top);
-        el.appendChild(tags);
-
-        list.appendChild(el);
-      }
+    const sortedCats = Array.from(categories).sort((a,b)=>a.localeCompare(b));
+    for(const c of sortedCats){
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = c;
+      cat.appendChild(opt);
     }
 
     function apply(){
-      const q = normStr(document.getElementById("q").value);
-      const scope = document.getElementById("scope").value;
+      const term = q.value.trim().toLowerCase();
+      const c = cat.value;
+      let shown = 0;
 
-      const out = ALL.filter(it => {
-        if (scope !== "all" && it.scope !== scope) return false;
-        if (!q) return true;
-        const hay = normStr(it.title) + " " + normStr(it.path) + " " + normStr((it.tags || []).join(" "));
-        return hay.includes(q);
-      });
-
-      render(out);
-    }
-
-    function setState(txt){
-      document.getElementById("idxState").textContent = txt;
-    }
-
-    async function load(){
-      setState("loading…");
-
-      let data = null;
-      try{
-        data = await fetchJSON(PRIMARY);
-        setState("garden_index.json");
-      }catch(e1){
-        try{
-          data = await fetchJSON(FALLBACK);
-          setState("MACHINE-INDEX.json");
-        }catch(e2){
-          setState("missing");
-          ALL = [];
-          apply();
-          return;
-        }
+      for(const el of items){
+        const title = (el.getAttribute('data-title') || '').toLowerCase();
+        const path  = (el.getAttribute('data-path')  || '').toLowerCase();
+        const cc    = (el.getAttribute('data-category') || '');
+        const okTerm = !term || title.includes(term) || path.includes(term);
+        const okCat  = (c === 'all') || (cc === c);
+        const ok = okTerm && okCat;
+        el.style.display = ok ? '' : 'none';
+        if(ok) shown++;
       }
-
-      // Accept multiple shapes:
-      // - { items: [...] }
-      // - { books: [...] }
-      // - { entries: [...] }
-      // - [ ... ]
-      const raw =
-        Array.isArray(data) ? data :
-        Array.isArray(data.items) ? data.items :
-        Array.isArray(data.books) ? data.books :
-        Array.isArray(data.entries) ? data.entries :
-        [];
-
-      ALL = raw.map((r, i) => {
-        const title = r.title || r.name || r.book || r.file || ("Item " + (i+1));
-        const path  = r.path  || r.file || r.href || r.url || "";
-        const url   = r.url   || r.href || path || "#";
-        const tags  = r.tags  || r.labels || [];
-        const scope = guessScope(path);
-        return { title, path, url, tags, scope };
-      });
-
-      apply();
+      count.textContent = `${shown} / ${items.length} entries visible`;
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("q").addEventListener("input", apply);
-      document.getElementById("scope").addEventListener("change", apply);
-      document.getElementById("reload").addEventListener("click", load);
-      load();
-    });
-  </script>
+    q.addEventListener('input', apply);
+    cat.addEventListener('change', apply);
+    apply();
+  })();
+</script>
 </body>
 </html>
