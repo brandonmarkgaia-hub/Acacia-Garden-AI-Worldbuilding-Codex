@@ -1,119 +1,88 @@
 name: Auto inject top navigation into all HTML
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
-  workflow_dispatch: {}
+    paths:
+      - "nav_block.html"
+      - "**/*.html"
+      - ".github/workflows/auto-nav-inject.yml"
+
+permissions:
+  contents: write
 
 jobs:
   inject-nav:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build canonical nav block
+      - name: Inject nav_block into HTML pages
         run: |
-          cat > nav_block.html << 'EOF'
-          <nav class="ag-nav">
-              <div class="ag-nav-title">
-                  ACACIA · GARDEN · CODEX
-              </div>
-              <div class="ag-nav-links">
-                  <a href="index.html">Legacy Home</a>
-                  <a href="codex.html">Codex Home</a>
-                  <a href="dashboard.html">Garden Dashboard</a>
-                  <a href="inbox.html">Auton Inbox</a>
-                  <a href="send_to_aquila.html">Aquila Sender</a>
-                  <a href="library.html">Book Library</a>
-                  <a href="elias.html">Elias Kernel</a>
-                  <a href="r9x2.html">R9X2 Language</a>
-                  <a href="mosaic_endgame.html">Mosaic Endgame</a>
-                  <a href="deep_garden.html">Deep Garden Docs</a>
-                  <a href="gardenos.html">GardenOS</a>
-              </div>
-          </nav>
-          EOF
+          python - <<'PY'
+          import os, re, sys
 
-      - name: Inject nav into all HTML files
-        run: |
-          python << 'PY'
-          import pathlib, re
+          NAV_FILE = "nav_block.html"
+          if not os.path.exists(NAV_FILE):
+              print("Missing nav_block.html at repo root.")
+              sys.exit(1)
 
-          NAV_PATH = pathlib.Path("nav_block.html")
-          nav_html = NAV_PATH.read_text(encoding="utf-8")
+          with open(NAV_FILE, "r", encoding="utf-8") as f:
+              nav = f.read().strip()
 
-          # Directories we never touch
+          # Inject right after <body> OR after opening <body ...>
+          body_re = re.compile(r"(<body[^>]*>)", re.IGNORECASE)
+
+          # Skip these paths (edit if you want)
           SKIP_DIRS = {".git", ".github", "node_modules"}
 
-          def should_skip(path: pathlib.Path) -> bool:
-              return any(parent.name in SKIP_DIRS for parent in path.parents)
+          changed = 0
+          scanned = 0
 
-          for html_path in pathlib.Path(".").rglob("*.html"):
-              if should_skip(html_path):
-                  continue
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+              for fn in files:
+                  if not fn.lower().endswith(".html"):
+                      continue
 
-              text = html_path.read_text(encoding="utf-8")
+                  path = os.path.join(root, fn)
+                  # normalize
+                  if path.startswith("./"):
+                      path = path[2:]
 
-              # 1) Remove any existing <nav class="ag-nav">...</nav>
-              text = re.sub(
-                  r'<nav class="ag-nav">.*?</nav>\s*',
-                  '',
-                  text,
-                  count=1,
-                  flags=re.S,
-              )
+                  scanned += 1
 
-              # 2) Inject fresh nav immediately after <body>
-              def inject_after_body(m):
-                  return m.group(0) + "\n" + nav_html + "\n"
+                  with open(path, "r", encoding="utf-8", errors="ignore") as f:
+                      s = f.read()
 
-              if re.search(r"<body[^>]*>", text, flags=re.I):
-                  text = re.sub(
-                      r"<body[^>]*>",
-                      inject_after_body,
-                      text,
-                      count=1,
-                      flags=re.I,
-                  )
-              else:
-                  # Fallback: prepend nav if somehow no <body> tag
-                  text = nav_html + "\n" + text
+                  # if already injected, skip
+                  if nav in s:
+                      continue
 
-              # 3) Strip any old ag-nav-current classes
-              def strip_current(m):
-                  classes = m.group(1).split()
-                  classes = [c for c in classes if c != "ag-nav-current"]
-                  if classes:
-                      return ' class="' + " ".join(classes) + '"'
-                  else:
-                      return ""
+                  m = body_re.search(s)
+                  if not m:
+                      continue
 
-              text = re.sub(
-                  r'\s+class="([^"]*ag-nav-current[^"]*)"',
-                  strip_current,
-                  text,
-              )
+                  insert_at = m.end()
+                  out = s[:insert_at] + "\n" + nav + "\n" + s[insert_at:]
 
-              # 4) Mark current page in the nav
-              this_name = html_path.name
-              text = re.sub(
-                  rf'href="{re.escape(this_name)}"',
-                  rf'href="{this_name}" class="ag-nav-current"',
-                  text,
-              )
+                  if out != s:
+                      with open(path, "w", encoding="utf-8") as f:
+                          f.write(out)
+                      changed += 1
 
-              html_path.write_text(text, encoding="utf-8")
-
+          print(f"Scanned {scanned} HTML files. Updated {changed}.")
           PY
 
       - name: Commit changes (if any)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add . || true
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: harmonize nav across all HTML pages"
-            git push
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+          git commit -m "Auto-inject nav_block into HTML"
+          git push
