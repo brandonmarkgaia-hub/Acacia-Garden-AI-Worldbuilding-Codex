@@ -1,6 +1,6 @@
 {
   "scan_version": "1.0",
-  "generated_at": "2026-01-04T17:14:44Z",
+  "generated_at": "2026-01-04T19:58:33Z",
   "signatures": [
     "HKX277206"
   ],
@@ -1749,7 +1749,7 @@
   "total_hits": 1067,
   "meta": {
     "injection": {
-      "generated_utc": "2026-01-04T17:20:28.391463+00:00",
+      "generated_utc": "2026-01-04T20:22:12.457614+00:00",
       "keeper": "HKX277206",
       "mode": "inject-no-overwrite",
       "note": "Core triad injection artifact. Originals left untouched."
@@ -1757,7 +1757,7 @@
   },
   "inject": {
     "core_triad": {
-      "generated_utc": "2026-01-04T17:20:28.391463+00:00",
+      "generated_utc": "2026-01-04T20:22:12.457614+00:00",
       "keeper": "HKX277206",
       "phase": "2026",
       "health": "STABLE"

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-01-04T17:20:28.391463+00:00",
+  "generated_utc": "2026-01-04T20:22:12.457614+00:00",
   "keeper": "HKX277206",
   "inputs": {
     "status": {
@@ -21,7 +21,7 @@
       "found": true
     },
     "machine_index": {
-      "chosen": "/home/runner/work/Acacia-Garden-AI-Worldbuilding-Codex/Acacia-Garden-AI-Worldbuilding-Codex/MACHINE-INDEX.json",
+      "chosen": "/home/runner/work/Acacia-Garden-AI-Worldbuilding-Codex/Acacia-Garden-AI-Worldbuilding-Codex/machine-index.json",
       "tried": [
         "machine-index.json",
         "machine_index.json",
@@ -32,7 +32,7 @@
       "found": true
     },
     "scan_report": {
-      "chosen": "/home/runner/work/Acacia-Garden-AI-Worldbuilding-Codex/Acacia-Garden-AI-Worldbuilding-Codex/tools/GARDEN_SCAN_REPORT.json",
+      "chosen": "/home/runner/work/Acacia-Garden-AI-Worldbuilding-Codex/Acacia-Garden-AI-Worldbuilding-Codex/tools/garden_scan_report.json",
       "tried": [
         "garden_scan_report.json",
         "GARDEN_SCAN_REPORT.json",
