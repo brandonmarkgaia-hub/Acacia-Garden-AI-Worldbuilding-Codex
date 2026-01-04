@@ -1,0 +1,58 @@
+name: Fix Nav Links (prefix depth)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Patch nav prefix in all HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Searching for nav prefix bug..."
+          MATCHES=$(grep -RIl --include="*.html" "parts.length - 1" . || true)
+
+          if [ -z "${MATCHES}" ]; then
+            echo "No matches found. Nothing to patch."
+            exit 0
+          fi
+
+          echo "Found matches:"
+          echo "${MATCHES}"
+
+          # Replace everywhere (safe)
+          while IFS= read -r f; do
+            sed -i 's/parts\.length - 1/parts.length - 2/g' "$f"
+          done <<< "${MATCHES}"
+
+          echo "Patch complete. Changed files:"
+          git status --porcelain || true
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "acacia-nav-fix"
+          git config user.email "actions@github.com"
+
+          git add -A
+          git commit -m "chore(nav): fix relative prefix depth (parts.length - 2)"
+          git push
