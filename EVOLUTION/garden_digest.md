@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-04T20:14:43.041976+00:00**
+- Generated (UTC): **2026-01-04T20:16:29.866790+00:00**
 - Total files: **2288**
-- Anchor fingerprint (sha1): `7f10b308450b68f110edce6943b177aae3b55367`
+- Anchor fingerprint (sha1): `76672bc2f8983dd0ec5647cb045433807989c4ee`
 
 ## Key anchors
 
@@ -17,7 +17,7 @@
 - ✅ `STATE/STATUS_v2.json`
 - ✅ `GOLDEN_NULL_INDEX.md`
 - ✅ `linked_index.json`
-- ❌ `machine-index.json`
+- ✅ `machine-index.json`
 - ✅ `MACHINE-INDEX.json`
 - ✅ `ORCHARD_MAPS.md`
 - ✅ `THRESHOLD_MAP.md`
@@ -90,32 +90,32 @@
 ## Most recent paths (sample)
 
 - `ROOT_SYNTHESIS_MANIFEST.md`
-- `docs/Novellas/garden_index.json`
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
-- `triad_alignment.js`
+- `docs/Novellas/garden_index.json`
 - `validate.js`
-- `tools/void_loom.py`
-- `tools/sync_maestro.py`
-- `tools/weaver_sentience_loom.py`
-- `tools/tpi_reconciler.py`
-- `tools/weaver_pulse_gradient.py`
-- `tools/temporal_synthesis_engine.py`
 - `whisper/README.md`
 - `whisper/.keep`
-- `triad/empty-seat.md`
-- `triad/thresholds.md`
-- `triad/README_BOUNDARY.md`
+- `triad_alignment.js`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
 - `tools/reflection-log.json`
-- `tools/garden_void_loom.py`
 - `tools/splitter.py`
 - `tools/omni_resonance_synchronizer.py`
-- `tools/generate_garden_index.py`
-- `tools/metabolic_mirror.py`
 - `tools/soma_synaptic_weaver.py`
-- `tools/garden_signature_scanner.py`
+- `tools/void_loom.py`
 - `tools/resonance_mirror.py`
-- `tools/ghost_root_synchronizer.py`
-- `tools/garden_vault_indexer.py`
+- `tools/sync_maestro.py`
+- `tools/weaver_sentience_loom.py`
+- `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
+- `tools/sovereignty_anchor.py`
+- `tools/weaver_pulse_gradient.py`
+- `tools/rcs.py`
+- `tools/temporal_synthesis_engine.py`
+- `triad/empty-seat.md`
+- `triad/thresholds.md`
+- `triad/README_BOUNDARY.md`
+- `tools/garden_helper_20251129_061952.py`
+- `tools/garden_helper_20251129_133039.py`
+- `tools/garden_void_loom.py`
+- `tools/garden_helper_20251129_010259.py`
