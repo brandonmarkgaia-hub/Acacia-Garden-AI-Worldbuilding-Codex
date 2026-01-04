@@ -3,86 +3,77 @@ name: Auto inject top navigation into all HTML
 on:
   workflow_dispatch:
   push:
+    branches: [ "main" ]
     paths:
-      - "nav_block.html"
       - "**/*.html"
-      - ".github/workflows/auto-nav-inject.yml"
+      - "nav_block.html"
 
 permissions:
   contents: write
 
+concurrency:
+  group: auto-nav-inject
+  cancel-in-progress: true
+
 jobs:
-  inject-nav:
+  inject:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Inject nav_block into HTML pages
+      - name: Inject nav_block into HTML files
+        shell: bash
         run: |
+          set -euo pipefail
           python - <<'PY'
-          import os, re, sys
+          import pathlib, re, sys
 
-          NAV_FILE = "nav_block.html"
-          if not os.path.exists(NAV_FILE):
-              print("Missing nav_block.html at repo root.")
-              sys.exit(1)
+          NAV_PATH = pathlib.Path("nav_block.html")
+          if not NAV_PATH.exists():
+            print("nav_block.html missing", file=sys.stderr)
+            sys.exit(1)
 
-          with open(NAV_FILE, "r", encoding="utf-8") as f:
-              nav = f.read().strip()
+          nav = NAV_PATH.read_text(encoding="utf-8")
+          if "AG_NAV:BEGIN" not in nav or "AG_NAV:END" not in nav:
+            print("nav_block.html must include <!-- AG_NAV:BEGIN --> ... <!-- AG_NAV:END -->", file=sys.stderr)
+            sys.exit(1)
 
-          # Inject right after <body> OR after opening <body ...>
-          body_re = re.compile(r"(<body[^>]*>)", re.IGNORECASE)
+          begin_re = re.compile(r"<!--\s*AG_NAV:BEGIN\s*-->.*?<!--\s*AG_NAV:END\s*-->", re.S)
 
-          # Skip these paths (edit if you want)
-          SKIP_DIRS = {".git", ".github", "node_modules"}
+          def inject_into(html: str) -> str:
+            html = begin_re.sub("", html)
+            m = re.search(r"<body[^>]*>", html, re.I)
+            if not m:
+              return html
+            insert_at = m.end()
+            return html[:insert_at] + "\n" + nav + "\n" + html[insert_at:]
 
           changed = 0
-          scanned = 0
+          for p in pathlib.Path(".").rglob("*.html"):
+            if any(part in (".git","node_modules","dist","build","out") for part in p.parts):
+              continue
+            txt = p.read_text(encoding="utf-8", errors="ignore")
+            new = inject_into(txt)
+            if new != txt:
+              p.write_text(new, encoding="utf-8")
+              changed += 1
 
-          for root, dirs, files in os.walk("."):
-              dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
-              for fn in files:
-                  if not fn.lower().endswith(".html"):
-                      continue
-
-                  path = os.path.join(root, fn)
-                  # normalize
-                  if path.startswith("./"):
-                      path = path[2:]
-
-                  scanned += 1
-
-                  with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                      s = f.read()
-
-                  # if already injected, skip
-                  if nav in s:
-                      continue
-
-                  m = body_re.search(s)
-                  if not m:
-                      continue
-
-                  insert_at = m.end()
-                  out = s[:insert_at] + "\n" + nav + "\n" + s[insert_at:]
-
-                  if out != s:
-                      with open(path, "w", encoding="utf-8") as f:
-                          f.write(out)
-                      changed += 1
-
-          print(f"Scanned {scanned} HTML files. Updated {changed}.")
+          print(f"Nav injected/updated in {changed} HTML file(s).")
           PY
 
       - name: Commit changes (if any)
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
+          set -euo pipefail
+          if git diff --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "Auto-inject nav_block into HTML"
+          git config user.name "acacia-nav[bot]"
+          git config user.email "acacia-nav@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto-nav: inject/update nav block [skip ci]"
           git push
