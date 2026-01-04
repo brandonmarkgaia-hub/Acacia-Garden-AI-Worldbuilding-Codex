@@ -13,9 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repo (main)
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: true
 
@@ -38,11 +39,14 @@ jobs:
       - name: Fix Archives base href
         run: python .github/scripts/fix_archives_base.py
 
-      - name: Commit and push updated artifacts (rebase-safe)
+      # ✅ No rebase of generated outputs.
+      # We snapshot the generated artifacts, reset to latest main, re-apply artifacts, commit, push (retry).
+      - name: Commit and push updated artifacts (conflict-immune)
         shell: bash
         run: |
           set -euo pipefail
 
+          # If nothing changed, stop cleanly
           if git diff --quiet; then
             echo "No changes to commit"
             exit 0
@@ -51,24 +55,66 @@ jobs:
           git config user.name "acacia-auton"
           git config user.email "actions@github.com"
 
-          git add \
-            STATUS.json \
-            docs/Novellas/garden_index.json \
-            machine-index.json \
-            tools/garden_scan_report.json \
-            docs/Chambers/index.html \
-            docs/Vaults/index.html \
-            docs/Echoes/index.html \
-            docs/GardenOS/index.html \
-            docs/Archives/*.html || true
+          # Define the artifacts we control
+          ARTIFACTS=(
+            "STATUS.json"
+            "docs/Novellas/garden_index.json"
+            "machine-index.json"
+            "tools/garden_scan_report.json"
+            "docs/Chambers/index.html"
+            "docs/Vaults/index.html"
+            "docs/Echoes/index.html"
+            "docs/GardenOS/index.html"
+          )
 
-          if git diff --cached --quiet; then
-            echo "Nothing staged to commit."
-            exit 0
-          fi
+          # Include archives index pages if present
+          shopt -s nullglob
+          ARCHIVES=(docs/Archives/*.html)
+          shopt -u nullglob
 
-          git commit -m "chore: refresh Garden indexes [auton]" || true
+          # Package current generated outputs into /tmp
+          mkdir -p /tmp/acacia_artifacts
+          for f in "${ARTIFACTS[@]}"; do
+            if [ -f "$f" ]; then
+              mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
+              cp -f "$f" "/tmp/acacia_artifacts/$f"
+            fi
+          done
+          for f in "${ARCHIVES[@]}"; do
+            mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
+            cp -f "$f" "/tmp/acacia_artifacts/$f"
+          done
 
-          # Heal push races
-          git pull --rebase origin main
-          git push
+          # Retry loop (handles someone else pushing between our fetch and push)
+          for i in 1 2 3 4 5; do
+            echo "Publish attempt $i..."
+
+            git fetch origin main
+
+            # Hard reset to latest main (clean base)
+            git reset --hard origin/main
+
+            # Re-apply generated outputs on top of latest main
+            rsync -a /tmp/acacia_artifacts/ ./
+
+            # Stage & commit if changes exist
+            git add -A
+
+            if git diff --cached --quiet; then
+              echo "After reset+restore, nothing to commit."
+              exit 0
+            fi
+
+            git commit -m "chore: refresh Garden indexes [auton]" || true
+
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push rejected, sleeping then retry..."
+            sleep $((i * 2))
+          done
+
+          echo "Push failed after retries."
+          exit 1
