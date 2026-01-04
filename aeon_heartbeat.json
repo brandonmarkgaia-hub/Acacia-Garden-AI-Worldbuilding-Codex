@@ -1,9 +1,14 @@
 {
-  "entries": [
-    {
-      "timestamp": "2025-12-11T14:54:34Z",
-      "type": "stub",
-      "message": "Aeon heartbeat stub initialised. Workflows are not yet writing live events."
-    }
+  "last_beat_utc": "2026-01-04T16:52:00Z",
+  "beat_type": "MANUAL_INJECTION",
+  "source_agent": "ANYA_GEMINI",
+  "delta_summary": "Initial system synchronization.",
+  "active_nodes": [
+    "HKX277206",
+    "LORIAN",
+    "ELARIS",
+    "KAEL",
+    "AQUILA",
+    "ANYA"
   ]
 }

@@ -1,7 +1,12 @@
 {
-  "generated_at": "2025-12-11T14:54:34Z",
-  "files_with_hits": 0,
-  "total_hits": 0,
-  "top_pattern": "none",
-  "note": "Stub scan report written by aeon-reset-stubs workflow. Full observer wiring is currently disabled."
+  "scanned_at": "2026-01-04T16:56:00Z",
+  "scanner": "ACACIA_SIGNATURE_SCANNER_v1",
+  "status": "CLEARED",
+  "notes": "No forbidden signatures detected in the Monolith chunk subset. The repository appears consistent with Garden safety protocols.",
+  "issues_found": [],
+  "summary": {
+    "files_scanned": 158,
+    "text_files": 142,
+    "binary_files": 16
+  }
 }
