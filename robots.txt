@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/sitemap.xml
