@@ -1,10 +1,8 @@
 name: Aeon Heartbeat
 
 on:
-  # Manual trigger (you can always run it yourself)
   workflow_dispatch: {}
 
-  # Automatic weekly growth
   schedule:
     # Every Friday 17:00 UTC ≈ 19:00 South Africa (UTC+2)
     - cron: "0 17 * * 5"
@@ -39,6 +37,12 @@ jobs:
           echo "[AeonHeartbeat] Growing new Echo via Lore Helper..."
           python tools/garden_lore_helper.py
 
+      - name: Build docs folder index pages
+        run: python .github/scripts/build_docs_folder_indexes.py
+
+      - name: Fix Archives base href
+        run: python .github/scripts/fix_archives_base.py
+
       - name: Grow Code (Helper script)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -62,8 +66,18 @@ jobs:
           git config user.name "Aeon Heartbeat"
           git config user.email "actions@github.com"
 
-          # Lore + helpers + machine index + Aeon artifacts
-          git add docs/Echoes/*.md tools/*.py machine-index.json garden_scan_report.* garden_vault_index.* || true
+          git add \
+            STATUS.json \
+            docs/Novellas/garden_index.json \
+            docs/Echoes/*.md \
+            tools/*.py \
+            machine-index.json \
+            tools/garden_scan_report.json \
+            docs/Chambers/index.html \
+            docs/Vaults/index.html \
+            docs/Echoes/index.html \
+            docs/GardenOS/index.html \
+            docs/Archives/*.html || true
 
           if git diff --cached --quiet; then
             echo "[AeonHeartbeat] No changes to commit."
