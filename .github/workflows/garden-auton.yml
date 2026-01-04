@@ -16,15 +16,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # Map your GitHub secret to the helper.
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      # If you stored it under a different name, just change this line
-      # or add GARDEN_AUTON_OPENAI_KEY instead.
       GARDEN_AUTON_OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,15 +40,24 @@ jobs:
         run: |
           python tools/garden_auton_helper.py all --node "Broken Dew"
 
-      - name: Commit JSON outputs
+      - name: Commit JSON outputs (rebase-safe)
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        shell: bash
         run: |
+          set -euo pipefail
+
           git config user.name "garden-auton-bot"
           git config user.email "actions@github.com"
+
           git add logs/auton_latest.json logs/aeon_heartbeat.json || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "chore: update auton + heartbeat logs"
-            git push
+            exit 0
           fi
+
+          git commit -m "chore: update auton + heartbeat logs" || true
+
+          # Heal push races
+          git pull --rebase origin main
+          git push
