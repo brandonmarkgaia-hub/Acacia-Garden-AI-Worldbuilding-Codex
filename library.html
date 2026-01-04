@@ -125,7 +125,7 @@
       // Example: /ACACIA_LOGS/index.html => prefix "../"
       const path = location.pathname || "";
       const parts = path.split("/").filter(Boolean);
-      const depth = Math.max(0, parts.length - 1); // file depth
+      const depth = Math.max(0, parts.length - 2); // file depth
       const prefix = depth ? "../".repeat(depth) : "";
 
       const links = document.querySelectorAll(".ag-nav a[data-href]");
