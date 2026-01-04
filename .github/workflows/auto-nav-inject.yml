@@ -3,10 +3,11 @@ name: Auto inject top navigation into all HTML
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
     paths:
-      - "**/*.html"
       - "nav_block.html"
+      - ".github/scripts/inject_nav.py"
+      - "**/*.html"
 
 permissions:
   contents: write
@@ -21,59 +22,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
+          python-version: "3.11"
 
-      - name: Inject nav_block into HTML files
-        shell: bash
+      - name: Inject nav into HTML
         run: |
-          set -euo pipefail
-          python - <<'PY'
-          import pathlib, re, sys
-
-          NAV_PATH = pathlib.Path("nav_block.html")
-          if not NAV_PATH.exists():
-            print("nav_block.html missing", file=sys.stderr)
-            sys.exit(1)
-
-          nav = NAV_PATH.read_text(encoding="utf-8")
-          if "AG_NAV:BEGIN" not in nav or "AG_NAV:END" not in nav:
-            print("nav_block.html must include <!-- AG_NAV:BEGIN --> ... <!-- AG_NAV:END -->", file=sys.stderr)
-            sys.exit(1)
-
-          begin_re = re.compile(r"<!--\s*AG_NAV:BEGIN\s*-->.*?<!--\s*AG_NAV:END\s*-->", re.S)
-
-          def inject_into(html: str) -> str:
-            html = begin_re.sub("", html)
-            m = re.search(r"<body[^>]*>", html, re.I)
-            if not m:
-              return html
-            insert_at = m.end()
-            return html[:insert_at] + "\n" + nav + "\n" + html[insert_at:]
-
-          changed = 0
-          for p in pathlib.Path(".").rglob("*.html"):
-            if any(part in (".git","node_modules","dist","build","out") for part in p.parts):
-              continue
-            txt = p.read_text(encoding="utf-8", errors="ignore")
-            new = inject_into(txt)
-            if new != txt:
-              p.write_text(new, encoding="utf-8")
-              changed += 1
-
-          print(f"Nav injected/updated in {changed} HTML file(s).")
-          PY
+          python .github/scripts/inject_nav.py
 
       - name: Commit changes (if any)
-        shell: bash
         run: |
-          set -euo pipefail
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git config user.name "acacia-nav[bot]"
-          git config user.email "acacia-nav@users.noreply.github.com"
+          git config user.name "acacia-garden-bot"
+          git config user.email "actions@users.noreply.github.com"
           git add -A
-          git commit -m "Auto-nav: inject/update nav block [skip ci]"
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Auto-inject nav block into HTML"
           git push
