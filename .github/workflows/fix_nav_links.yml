@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: garden-writer-main
+  cancel-in-progress: false
+
 jobs:
   patch:
     runs-on: ubuntu-latest
@@ -32,7 +36,6 @@ jobs:
           echo "Found matches:"
           echo "${MATCHES}"
 
-          # Replace everywhere (safe)
           while IFS= read -r f; do
             sed -i 's/parts\.length - 1/parts.length - 2/g' "$f"
           done <<< "${MATCHES}"
@@ -40,7 +43,7 @@ jobs:
           echo "Patch complete. Changed files:"
           git status --porcelain || true
 
-      - name: Commit and push
+      - name: Commit and push (with rebase + retry)
         shell: bash
         run: |
           set -euo pipefail
@@ -55,4 +58,20 @@ jobs:
 
           git add -A
           git commit -m "chore(nav): fix relative prefix depth (parts.length - 2)"
-          git push
+
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+            git fetch origin main
+            git rebase origin/main || (git rebase --abort && exit 1)
+
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push rejected, sleeping then retry..."
+            sleep $((i * 3))
+          done
+
+          echo "Push failed after retries."
+          exit 1
