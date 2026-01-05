@@ -2,7 +2,7 @@
   "schema_version": "2026.01",
   "status_version": "2.0",
   "mode": "eventide",
-  "generated_at": "2026-01-05T21:09:49Z",
+  "generated_at": "2026-01-05T21:12:18Z",
   "axes": {
     "keeper_axis": {
       "type": "keeper",
@@ -42,7 +42,7 @@
       "docs/Novellas": 57,
       "docs/Archives": 215,
       "tools": 59,
-      ".github/workflows": 45
+      ".github/workflows": 46
     },
     "canonical": {
       "machine_index": "machine-index.json",
