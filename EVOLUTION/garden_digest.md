@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-05T20:36:58.819253+00:00**
-- Total files: **2301**
-- Anchor fingerprint (sha1): `221cf3a9f550c06ec137104204c812ae04b22eb1`
+- Generated (UTC): **2026-01-05T21:09:27.716092+00:00**
+- Total files: **2303**
+- Anchor fingerprint (sha1): `08ba904445e1ad9b6d041d9315ae1a2ad59b8f41`
 
 ## Key anchors
 
@@ -39,12 +39,12 @@
 ## Top file extensions (by count)
 
 - `.md`: **1668**
-- `.html`: **254**
+- `.html`: **255**
 - `.json`: **150**
 - `.py`: **82**
 - `.png`: **76**
+- `.js`: **17**
 - `.txt`: **17**
-- `.js`: **16**
 - `(no ext)`: **11**
 - `.mjs`: **8**
 - `.jpg`: **5**
@@ -96,7 +96,6 @@
 - `validate.js`
 - `whisper/README.md`
 - `whisper/.keep`
-- `triad/empty-seat.md`
 - `triad/thresholds.md`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
@@ -107,15 +106,16 @@
 - `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
 - `tools/resonance_mirror.py`
+- `tools/ghost_root_synchronizer.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
+- `tools/inject-map-button.js`
 - `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
+- `triad/empty-seat.md`
 - `triad/README_BOUNDARY.md`
 - `tools/garden_helper_20251129_061952.py`
-- `tools/garden_helper_20251129_133039.py`
-- `tools/garden_void_loom.py`
