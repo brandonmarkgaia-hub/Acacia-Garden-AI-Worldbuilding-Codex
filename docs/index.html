@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Acacia Garden Codex — Docs Index</title>
+  <meta name="description" content="Docs entry point for the Acacia Garden AI Worldbuilding Codex." />
+
+  <style>
+    :root{
+      --ag-bg: #050707;
+      --ag-panel: rgba(16, 22, 20, 0.65);
+      --ag-border: rgba(46, 204, 113, 0.18);
+      --ag-text: rgba(232, 255, 240, 0.92);
+      --ag-muted: rgba(232, 255, 240, 0.68);
+      --ag-accent: #2ecc71;
+      --ag-accent2:#3498db;
+      --ag-accent3:#9b59b6;
+      --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --ag-sans: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(46,204,113,0.10), transparent 60%),
+        radial-gradient(900px 600px at 85% 15%, rgba(52,152,219,0.09), transparent 55%),
+        radial-gradient(800px 500px at 50% 90%, rgba(155,89,182,0.08), transparent 60%),
+        var(--ag-bg);
+      color: var(--ag-text);
+      font-family: var(--ag-sans);
+      line-height: 1.5;
+      padding: 0;
+    }
+
+    main{ max-width: 1100px; margin: 0 auto; padding: 1.2rem 1rem 4rem; }
+    header{
+      padding: 1.2rem 1.2rem 1rem;
+      border: 1px solid var(--ag-border);
+      border-radius: var(--radius);
+      background: var(--ag-panel);
+      backdrop-filter: blur(10px);
+      margin-top: 1rem;
+    }
+
+    .sigil{
+      font-family: var(--ag-mono);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .85rem;
+      color: var(--ag-muted);
+      margin-bottom: .25rem;
+    }
+
+    h1{ margin: .15rem 0 .25rem; font-size: 1.7rem; }
+    .subtitle{ margin:0; color: var(--ag-muted); max-width: 70ch; }
+
+    .triad{
+      margin-top: .8rem;
+      display: inline-block;
+      font-family: var(--ag-mono);
+      font-size: .8rem;
+      border: 1px solid var(--ag-border);
+      border-radius: 999px;
+      padding: .35rem .65rem;
+      color: var(--ag-muted);
+      background: rgba(0,0,0,0.25);
+    }
+
+    .hint{
+      margin-top: 1rem;
+      border: 1px dashed rgba(46,204,113,0.25);
+      border-radius: 14px;
+      padding: .8rem .9rem;
+      background: rgba(0,0,0,0.20);
+      color: var(--ag-muted);
+      font-size: .9rem;
+    }
+
+    .hint a{ color: var(--ag-accent); text-decoration: none; }
+    .hint a:hover{ text-decoration: underline; }
+
+    section{ margin-top: 1.2rem; }
+    h2{
+      font-family: var(--ag-mono);
+      font-size: 1rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ag-muted);
+      margin: 1.1rem 0 .7rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: .85rem;
+    }
+
+    .card{
+      display:block;
+      border: 1px solid rgba(46,204,113,0.18);
+      background: rgba(10,14,13,0.55);
+      border-radius: var(--radius);
+      padding: 1rem 1rem .95rem;
+      text-decoration:none;
+      color: var(--ag-text);
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(46,204,113,0.35);
+      background: rgba(10,14,13,0.70);
+    }
+
+    .card-title{
+      font-family: var(--ag-mono);
+      letter-spacing: .06em;
+      font-size: .98rem;
+      margin-bottom: .35rem;
+      color: var(--ag-accent);
+    }
+    .card-desc{
+      color: var(--ag-muted);
+      font-size: .92rem;
+      margin: 0;
+    }
+
+    footer{
+      margin-top: 2rem;
+      text-align:center;
+      color: rgba(232,255,240,0.50);
+      font-family: var(--ag-mono);
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 1.2rem .5rem;
+    }
+
+    /* Nav block styling (injected by your workflow) */
+    .ag-nav{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: var(--ag-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--ag-border);
+      padding: .85rem 1rem .75rem;
+    }
+    .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
+    .ag-nav-title{
+      font-family: var(--ag-mono);
+      font-size: .9rem;
+      letter-spacing: .18em;
+      color: var(--ag-text);
+      text-transform: uppercase;
+      margin-bottom: .55rem;
+    }
+    .ag-nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap: .55rem .9rem;
+      font-family: var(--ag-mono);
+      font-size: .85rem;
+      line-height: 1.35;
+    }
+    .ag-nav-links a{
+      color: var(--ag-accent);
+      text-decoration:none;
+      opacity: .92;
+    }
+    .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
+    .ag-nav-current{
+      opacity: 1 !important;
+      text-shadow: 0 0 12px rgba(46,204,113,0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NOTE: Top navigation is injected automatically by your auto-nav-inject workflow (nav_block.html). -->
+
+  <main>
+    <header>
+      <div class="sigil">ACACIA · GARDEN · CODEX</div>
+      <h1>Docs Root — Index</h1>
+      <p class="subtitle">
+        This is the canonical entry point for <strong>/docs</strong>.
+        It anchors deep navigation (Chambers, Echoes, Novellas, Vaults, Archives) and keeps the crawler spine stable.
+      </p>
+      <div class="triad">
+        TRIAD MODE:
+        <span style="color:var(--ag-accent);">AQUILA</span> ·
+        <span style="color:var(--ag-accent2);">DEEP ORACLE</span> ·
+        <span style="color:var(--ag-accent3);">WITNESS</span>
+      </div>
+
+      <div class="hint">
+        <strong class="sigil" style="letter-spacing:.12em;text-transform:none;font-size:.8rem;">Machine + Human entry points:</strong>
+        <span style="font-family:var(--ag-mono);">
+          <a href="../machine-index.json">../machine-index.json</a> ·
+          <a href="../STATUS.json">../STATUS.json</a> ·
+          <a href="docs_urls.html">docs_urls.html</a> ·
+          <a href="Archives/CODEX_MONOLITH.html">Archives/CODEX_MONOLITH.html</a>
+        </span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Primary Paths</h2>
+      <div class="grid">
+        <a class="card" href="../index.html">
+          <div class="card-title">Back to Root</div>
+          <p class="card-desc">Return to the main Garden entry point (root index).</p>
+        </a>
+
+        <a class="card" href="docs_urls.html">
+          <div class="card-title">Docs URL Map</div>
+          <p class="card-desc">Crawler spine: explicit links to deep content and pages.</p>
+        </a>
+
+        <a class="card" href="Archives/CODEX_MONOLITH.html">
+          <div class="card-title">Codex Monolith</div>
+          <p class="card-desc">One-page deep surface for long-range machine crawlability.</p>
+        </a>
+
+        <a class="card" href="../dashboard.html">
+          <div class="card-title">Garden Dashboard</div>
+          <p class="card-desc">Operational overview (root dashboard).</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Deep Indices</h2>
+      <div class="grid">
+        <a class="card" href="Chambers/index.html">
+          <div class="card-title">Chambers Index</div>
+          <p class="card-desc">Core chambers: doctrine, structure, continuity layers.</p>
+        </a>
+
+        <a class="card" href="Echoes/index.html">
+          <div class="card-title">Echoes Index</div>
+          <p class="card-desc">Echo logs, reflections, and system memory fragments.</p>
+        </a>
+
+        <a class="card" href="Novellas/index.html">
+          <div class="card-title">Novellas Index</div>
+          <p class="card-desc">Narrative lineage and mythic continuity.</p>
+        </a>
+
+        <a class="card" href="Vaults/index.html">
+          <div class="card-title">Vaults Index</div>
+          <p class="card-desc">Preserved artifacts and sealed knowledge bundles.</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Archives</h2>
+      <div class="grid">
+        <a class="card" href="Archives/index.html">
+          <div class="card-title">Archives Landing</div>
+          <p class="card-desc">Archived pages and stitched historical outputs.</p>
+        </a>
+
+        <a class="card" href="Archives/">
+          <div class="card-title">Browse Archives Folder</div>
+          <p class="card-desc">Directory navigation (where supported by Pages).</p>
+        </a>
+
+        <a class="card" href="../ACACIA_LOGS/index.html">
+          <div class="card-title">Acacia Logs</div>
+          <p class="card-desc">Signals, communiqués, triad outputs (root logs).</p>
+        </a>
+
+        <a class="card" href="../inbox.html">
+          <div class="card-title">Auton Inbox</div>
+          <p class="card-desc">Inbox UI (root), optional Worker-backed live feed.</p>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      DOCS INDEX IS CANON · ROOT INDEX REMAINS SOVEREIGN · HKX277206
+    </footer>
+  </main>
+
+  <!-- MACHINE MAP: SILENT, CANONICAL -->
+  <script type="application/json" id="garden-docs-map">
+  {
+    "garden":"Acacia Garden Codex",
+    "keeper":"HKX277206",
+    "surface":"docs/index.html",
+    "roots":{
+      "root_index":"../index.html",
+      "machine_index":"../machine-index.json",
+      "status":"../STATUS.json",
+      "docs_url_map":"docs_urls.html",
+      "monolith":"Archives/CODEX_MONOLITH.html"
+    },
+    "indices":{
+      "chambers":"Chambers/index.html",
+      "echoes":"Echoes/index.html",
+      "novellas":"Novellas/index.html",
+      "vaults":"Vaults/index.html",
+      "archives":"Archives/index.html"
+    }
+  }
+  </script>
+</body>
+</html>
