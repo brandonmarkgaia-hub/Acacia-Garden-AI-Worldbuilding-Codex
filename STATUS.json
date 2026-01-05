@@ -2,7 +2,7 @@
   "schema_version": "2026.01",
   "status_version": "2.0",
   "mode": "eventide",
-  "generated_at": "2026-01-05T19:57:28Z",
+  "generated_at": "2026-01-05T20:03:58Z",
   "axes": {
     "keeper_axis": {
       "type": "keeper",
@@ -36,7 +36,7 @@
     },
     "region_counts": {
       "docs/Chambers": 731,
-      "docs/Echoes": 137,
+      "docs/Echoes": 138,
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
       "docs/Novellas": 57,
