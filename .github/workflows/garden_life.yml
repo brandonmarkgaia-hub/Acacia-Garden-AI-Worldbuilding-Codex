@@ -1,27 +1,41 @@
-name: Garden Life (ECHOES)
+name: Garden Life (Elias Seed)
 
 on:
   schedule:
-    - cron: "0 */4 * * *"   # every 4 hours
+    - cron: "17 */6 * * *"   # every 6 hours (staggered minute to avoid collisions)
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: garden
+  group: garden-write
   cancel-in-progress: true
 
 jobs:
-  breathe:
+  elias:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout (full history for rebase)
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Python
+      - name: Configure git (bot)
+        run: |
+          git config user.name "acacia-nav-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Sync with remote (hard reset to origin/main)
+        run: |
+          set -e
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -29,35 +43,38 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests google-generativeai pillow
+          # New Gemini Python SDK path
+          python -m pip install "google-genai>=0.6.0"
 
-      - name: Configure git
+      # ✅ Keep your existing Elias Echo step if you have it (optional).
+      # If you DON'T have this script, comment this step out.
+      - name: Generate Elias Echo (optional)
         run: |
-          git config user.name "Garden-Tool-Runner"
-          git config user.email "actions@users.noreply.github.com"
+          if [ -f ".github/scripts/garden_echo.py" ]; then
+            python .github/scripts/garden_echo.py
+          else
+            echo "No garden_echo.py found; skipping."
+          fi
 
-      - name: Sync with remote
-        run: |
-          git pull --rebase origin "${GITHUB_REF_NAME}"
+      # ❌ Vision Echo removed permanently (this was causing the red fail)
 
-      - name: Generate Elias Echo
+      - name: Generate Desire (budget-safe)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python .github/scripts/garden_brain.py
+          python .github/scripts/garden_desire.py \
+            --model "gemini-2.5-flash" \
+            --out "EVOLUTION/DESIRE.md" \
+            --state "EVOLUTION/desire_state.json" \
+            --max-input-kb 220 \
+            --max-output-chars 6000
 
-      - name: Generate Vision Echo
-        if: success()
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python .github/scripts/garden_vision.py
-
-      - name: Commit & push (ECHOES only)
+      - name: Commit & push (ECHOES + EVOLUTION only)
         run: |
           set -e
-          # Stage ONLY ECHOES output
-          git add -A ECHOES || true
+
+          # Stage ONLY what this workflow owns
+          git add -A ECHOES EVOLUTION || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -65,5 +82,7 @@ jobs:
           fi
 
           ts="$(date -u +'%Y-%m-%d %H:%M:%SZ')"
-          git commit -m "Garden Life: new echoes (${ts})"
-          git push origin "${GITHUB_REF_NAME}"
+          git commit -m "Garden Life: Elias seed refresh (${ts})"
+
+          # Push safely (we already hard-synced at top)
+          git push origin main
