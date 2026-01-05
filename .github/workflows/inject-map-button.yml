@@ -1,0 +1,25 @@
+name: Inject Global Map Button
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run injector
+        run: node tools/inject-map-button.js
+
+      - name: Commit if changed
+        run: |
+          if git status --porcelain | grep .; then
+            git config user.name "acacia-bot"
+            git config user.email "bot@acacia.garden"
+            git add .
+            git commit -m "Inject global map button"
+            git push
+          else
+            echo "No changes to commit"
+          fi
