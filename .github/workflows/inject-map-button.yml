@@ -1,4 +1,4 @@
-name: Inject Global Map Button
+name: Inject Map Button
 
 on:
   workflow_dispatch:
@@ -6,14 +6,9 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: inject-global-map-button
-  cancel-in-progress: false
-
 jobs:
   inject:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,25 +20,22 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run injector
+      - name: Inject map button script tag into HTML
         run: node tools/inject-map-button.js
 
-      - name: Commit and push safely
+      - name: Commit & push if changed
         run: |
-          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git status --porcelain | grep .; then
-            git config user.name "acacia-bot"
-            git config user.email "bot@acacia.garden"
-
-            git add .
-            git commit -m "Inject global map button"
-
-            # Pull latest remote changes, rebase our commit on top
-            git pull --rebase origin main
-
-            # Push back to main
-            git push origin main
-          else
-            echo "No changes to commit"
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+
+          git add -A
+          git commit -m "Inject global map button"
+
+          # If remote moved, rebase then push
+          git pull --rebase origin main
+          git push origin main
