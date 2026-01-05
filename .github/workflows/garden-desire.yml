@@ -1,40 +1,25 @@
 name: Garden Desire (Gemini)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
   schedule:
-    - cron: "15 */6 * * *"   # every 6 hours, offset from other jobs
-  push:
-    paths:
-      - "STATUS.json"
-      - "machine-index.json"
-      - "system_map.html"
-      - "tools/garden_desire.py"
-      - ".github/workflows/garden-desire.yml"
-      - "docs/**"
+    - cron: "17 */6 * * *"   # every 6 hours (UTC) - change if you want
 
 permissions:
   contents: write
-
-concurrency:
-  group: garden-writes-main
-  cancel-in-progress: false
+  pull-requests: write
 
 jobs:
   desire:
     runs-on: ubuntu-latest
-    env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      KEEPERS_SEAL: "HKX277206"
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -42,38 +27,24 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install google-generativeai
+          pip install google-genai
 
       - name: Generate Desire
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash
         run: |
           python tools/garden_desire.py
 
-      - name: Commit + push (rebase-safe)
-        if: github.ref == 'refs/heads/main'
-        run: |
-          set -e
-          git config user.name "garden-desire-bot"
-          git config user.email "actions@github.com"
-
-          git add EVOLUTION/DESIRE.md EVOLUTION/desires/*.md || true
-
-          if git diff --cached --quiet; then
-            echo "No desire changes to commit."
-            exit 0
-          fi
-
-          git commit -m "chore: update Garden Desire [gemini]" || true
-
-          # Rebase-safe push with retry
-          for i in 1 2 3; do
-            git pull --rebase origin main || true
-            if git push; then
-              echo "Pushed successfully."
-              exit 0
-            fi
-            echo "Push failed, retry $i/3..."
-            sleep 2
-          done
-
-          echo "Push failed after retries."
-          exit 1
+      - name: Create PR (rebasesafe)
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(desire): update EVOLUTION/DESIRE.md"
+          title: "chore(desire): update EVOLUTION/DESIRE.md"
+          body: |
+            Automated Desire update generated via Gemini.
+            - Source: tools/garden_desire.py
+            - Output: EVOLUTION/DESIRE.md
+            Keeper: HKX277206
+          branch: "auton/desire"
+          delete-branch: true
