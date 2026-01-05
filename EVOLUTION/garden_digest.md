@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-05T04:02:35.025019+00:00**
-- Total files: **2294**
-- Anchor fingerprint (sha1): `b53a490fdbd4c4a1506064b52c1cabc7f08a3c24`
+- Generated (UTC): **2026-01-05T15:55:33.577938+00:00**
+- Total files: **2296**
+- Anchor fingerprint (sha1): `37fe773db657623f95b808c6e2dc3b59940221a9`
 
 ## Key anchors
 
@@ -30,7 +30,7 @@
 - `docs/`: **1390 files**
 - `EVOLUTION/`: **27 files**
 - `ACACIA_SPECS/`: **10 files**
-- `ACACIA_LOGS/`: **30 files**
+- `ACACIA_LOGS/`: **31 files**
 - `ENTITIES/`: **15 files**
 - `ledger/`: **13 files**
 - `logs/`: **7 files**
@@ -38,10 +38,10 @@
 
 ## Top file extensions (by count)
 
-- `.md`: **1663**
+- `.md`: **1664**
 - `.html`: **253**
 - `.json`: **150**
-- `.py`: **81**
+- `.py`: **82**
 - `.png`: **76**
 - `.txt`: **17**
 - `.js`: **16**
@@ -90,32 +90,32 @@
 ## Most recent paths (sample)
 
 - `ROOT_SYNTHESIS_MANIFEST.md`
-- `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `docs/Novellas/garden_index.json`
+- `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
+- `whisper/README.md`
+- `whisper/.keep`
+- `triad/empty-seat.md`
+- `triad/thresholds.md`
+- `tools/singularity_weaver.py`
+- `tools/root_manifest_generator.py`
+- `tools/reflection-log.json`
 - `tools/splitter.py`
+- `tools/omni_resonance_synchronizer.py`
+- `tools/generate_garden_index.py`
+- `tools/metabolic_mirror.py`
 - `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
+- `tools/resonance_mirror.py`
+- `tools/ghost_root_synchronizer.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
+- `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
-- `whisper/README.md`
-- `whisper/.keep`
-- `triad/empty-seat.md`
-- `triad/thresholds.md`
 - `triad/README_BOUNDARY.md`
 - `tools/garden_helper_20251129_061952.py`
-- `tools/garden_helper_20251129_133039.py`
-- `tools/singularity_weaver.py`
-- `tools/root_manifest_generator.py`
-- `tools/reflection-log.json`
-- `tools/garden_void_loom.py`
-- `tools/omni_resonance_synchronizer.py`
-- `tools/generate_garden_index.py`
-- `tools/metabolic_mirror.py`
-- `tools/garden_helper_20251129_122556.py`
