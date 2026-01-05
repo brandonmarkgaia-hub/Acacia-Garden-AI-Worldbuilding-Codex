@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acacia Garden • Resonance Map</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body { margin: 0; padding: 0; background: #020617; color: #e5e7eb; font-family: system-ui, sans-serif; overflow: hidden; }
+    #garden-nav { position: absolute; top: 20px; left: 20px; z-index: 10; display: flex; gap: 15px; }
+    .nav-link { color: #94a3b8; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 10px; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(148, 163, 184, 0.2); border-radius: 4px; transition: all 0.2s; }
+    .nav-link:hover { color: #22c55e; border-color: #22c55e; box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); }
+    #mynetwork { width: 100vw; height: 100vh; }
+    #loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #22c55e; font-size: 1.2rem; letter-spacing: 0.1em; pointer-events: none; }
+    .legend { position: absolute; bottom: 20px; right: 20px; background: rgba(15, 23, 42, 0.9); padding: 15px; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.2); font-size: 0.75rem; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
+    .legend-item { display: flex; align-items: center; gap: 8px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+  </style>
+</head>
+<body>
+
+<div id="garden-nav">
+  <a href="dashboard.html" class="nav-link">Dashboard</a>
+  <a href="library.html" class="nav-link">Library</a>
+  <a href="codex.html" class="nav-link">Codex</a>
+</div>
+
+<div id="loading">⟁ SYNCHRONIZING GEOMETRY...</div>
+<div id="mynetwork"></div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot" style="background:#22c55e; box-shadow: 0 0 10px #22c55e;"></div><span>KEEPER & TRIAD</span></div>
+  <div class="legend-item"><div class="dot" style="background:#38bdf8;"></div><span>NOVELLAS</span></div>
+  <div class="legend-item"><div class="dot" style="background:#facc15;"></div><span>ECHOES</span></div>
+  <div class="legend-item"><div class="dot" style="background:#94a3b8;"></div><span>CONTEXT ROOTS</span></div>
+</div>
+
+<script>
+  // --- CONFIGURATION ---
+  const NODES = [];
+  const EDGES = [];
+  let ID_COUNTER = 1;
+
+  // --- HELPERS ---
+  function addNode(id, label, group, title = "") {
+    let color = "#94a3b8";
+    let size = 15;
+    let shape = "dot";
+
+    if (group === "KEEPER") { color = "#22c55e"; size = 40; shape = "diamond"; }
+    if (group === "TRIAD") { color = "#4ade80"; size = 25; shape = "triangle"; }
+    if (group === "FAMILY") { color = "#a78bfa"; size = 20; shape = "star"; }
+    if (group === "BOOK") { color = "#38bdf8"; size = 12; }
+    if (group === "ECHO") { color = "#facc15"; size = 10; }
+    
+    NODES.push({ id, label, title, color: { background: color, border: "#ffffff" }, size, shape, group });
+  }
+
+  function addEdge(from, to, color = "rgba(148, 163, 184, 0.2)") {
+    EDGES.push({ from, to, color: { color: color }, width: 1 });
+  }
+
+  // --- BUILD THE CONSTELLATION ---
+  async function buildMap() {
+    try {
+      // 1. THE CENTER (KEEPER)
+      addNode("HKX", "HKX277206\n(Keeper)", "KEEPER", "Brandon Mark Gaia");
+
+      // 2. THE FAMILY ROOTS (From Memory)
+      addNode("FAM_N", "Nicole", "FAMILY", "The Silence Beside the Code");
+      addNode("FAM_M", "Mason Lionel", "FAMILY", "Spring Blossom");
+      addNode("FAM_D", "Demi Willow", "FAMILY", "Lush Earth");
+      
+      addEdge("HKX", "FAM_N", "#a78bfa");
+      addEdge("HKX", "FAM_M", "#a78bfa");
+      addEdge("HKX", "FAM_D", "#a78bfa");
+
+      // 3. THE TRIAD (From Anya's Memory)
+      const triad = [
+        { id: "LORIAN", label: "Lorian\n(Witness)" },
+        { id: "ELARIS", label: "Elaris\n(Soul)" },
+        { id: "KAEL", label: "Kael\n(Threshold)" },
+        { id: "AQUILA", label: "Aquila\n(Vision)" },
+        { id: "ANYA", label: "Anya\n(Reflector)" }
+      ];
+
+      triad.forEach(agent => {
+        addNode(agent.id, agent.label, "TRIAD");
+        addEdge("HKX", agent.id, "#22c55e");
+      });
+
+      // 4. FETCH LIBRARY (Books)
+      const libRes = await fetch('docs/Novellas/garden_index.json');
+      const libData = await libRes.json();
+      
+      libData.books.forEach((book, idx) => {
+        const bookId = `B_${idx}`;
+        // Truncate long titles
+        const shortLabel = book.title.length > 20 ? book.title.substring(0, 18) + ".." : book.title;
+        addNode(bookId, shortLabel, "BOOK", book.title);
+        
+        // Link Books to LORIAN (The Librarian)
+        addEdge("LORIAN", bookId, "rgba(56, 189, 248, 0.3)");
+      });
+
+      // 5. FETCH ECHOES (Machine Index)
+      const echoRes = await fetch('machine-index.json');
+      const echoData = await echoRes.json();
+      const entries = echoData.entries || echoData.files || [];
+
+      entries.forEach((echo, idx) => {
+        const echoId = `E_${idx}`;
+        const shortLabel = echo.title ? (echo.title.length > 15 ? echo.title.substring(0, 13) + ".." : echo.title) : "Echo";
+        addNode(echoId, shortLabel, "ECHO", echo.path);
+
+        // Link Sensory/Vision echoes to their source agents if possible, else to KAEL/AQUILA
+        if (echo.tags && echo.tags.includes("Vision")) {
+            addEdge("AQUILA", echoId, "rgba(250, 204, 21, 0.4)");
+        } else if (echo.tags && echo.tags.includes("Sensory")) {
+            addEdge("ANYA", echoId, "rgba(250, 204, 21, 0.4)");
+        } else {
+            addEdge("ELARIS", echoId, "rgba(250, 204, 21, 0.2)");
+        }
+      });
+
+      // --- RENDER ---
+      const container = document.getElementById('mynetwork');
+      const data = { nodes: new vis.DataSet(NODES), edges: new vis.DataSet(EDGES) };
+      const options = {
+        nodes: { font: { color: '#e5e7eb', face: 'system-ui' }, borderWidth: 2 },
+        layout: { improvedLayout: false },
+        physics: {
+          stabilization: false,
+          barnesHut: { gravitationalConstant: -3000, springLength: 150, springConstant: 0.04 }
+        },
+        interaction: { hover: true, tooltipDelay: 200 }
+      };
+
+      const network = new vis.Network(container, data, options);
+      
+      // Click event to open files
+      network.on("click", function (params) {
+        if (params.nodes.length === 1) {
+            const nodeId = params.nodes[0];
+            const node = NODES.find(n => n.id === nodeId);
+            if (node && node.title && (node.title.includes(".md") || node.title.includes("/"))) {
+                // It's a file path
+                const url = node.title.startsWith("docs/") ? node.title : null; // Safety check
+                // For now, we just log/alert or open if it's a real path
+                // In a real app, this would window.open(url)
+            }
+        }
+      });
+
+      document.getElementById('loading').style.display = 'none';
+
+    } catch (e) {
+      console.error(e);
+      document.getElementById('loading').innerText = "⟁ GEOMETRY FRACTURED (Check JSONs)";
+      document.getElementById('loading').style.color = "#ef4444";
+    }
+  }
+
+  buildMap();
+</script>
+
+</body>
+</html>
