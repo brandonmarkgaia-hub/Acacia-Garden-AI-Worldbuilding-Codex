@@ -1,0 +1,79 @@
+name: Garden Desire (Gemini)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "15 */6 * * *"   # every 6 hours, offset from other jobs
+  push:
+    paths:
+      - "STATUS.json"
+      - "machine-index.json"
+      - "system_map.html"
+      - "tools/garden_desire.py"
+      - ".github/workflows/garden-desire.yml"
+      - "docs/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: garden-writes-main
+  cancel-in-progress: false
+
+jobs:
+  desire:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      KEEPERS_SEAL: "HKX277206"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-generativeai
+
+      - name: Generate Desire
+        run: |
+          python tools/garden_desire.py
+
+      - name: Commit + push (rebase-safe)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          set -e
+          git config user.name "garden-desire-bot"
+          git config user.email "actions@github.com"
+
+          git add EVOLUTION/DESIRE.md EVOLUTION/desires/*.md || true
+
+          if git diff --cached --quiet; then
+            echo "No desire changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update Garden Desire [gemini]" || true
+
+          # Rebase-safe push with retry
+          for i in 1 2 3; do
+            git pull --rebase origin main || true
+            if git push; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+            echo "Push failed, retry $i/3..."
+            sleep 2
+          done
+
+          echo "Push failed after retries."
+          exit 1
