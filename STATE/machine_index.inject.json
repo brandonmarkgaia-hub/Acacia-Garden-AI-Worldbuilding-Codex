@@ -815,7 +815,7 @@
   ],
   "meta": {
     "injection": {
-      "generated_utc": "2026-01-04T20:22:12.457614+00:00",
+      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
       "keeper": "HKX277206",
       "mode": "inject-no-overwrite",
       "note": "Core triad injection artifact. Originals left untouched."
@@ -823,7 +823,7 @@
   },
   "inject": {
     "core_triad": {
-      "generated_utc": "2026-01-04T20:22:12.457614+00:00",
+      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
       "keeper": "HKX277206",
       "phase": "2026",
       "health": "STABLE"
