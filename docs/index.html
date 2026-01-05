@@ -7,6 +7,9 @@
   <title>Acacia Garden Codex — Docs Index</title>
   <meta name="description" content="Docs entry point for the Acacia Garden AI Worldbuilding Codex." />
 
+  <!-- Canonical base for GitHub Pages under repo path -->
+  <base href="/Acacia-Garden-AI-Worldbuilding-Codex/">
+
   <style>
     :root{
       --ag-bg: #050707;
@@ -139,14 +142,14 @@
       padding: 1.2rem .5rem;
     }
 
-    /* Nav block styling (injected by your workflow) */
+    /* Nav block styling (single source of truth) */
     .ag-nav{
       position: sticky;
       top: 0;
       z-index: 999;
-      background: var(--ag-bg);
+      background: rgba(2,2,3,0.92);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--ag-border);
+      border-bottom: 1px solid rgba(42,42,52,0.85);
       padding: .85rem 1rem .75rem;
     }
     .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
@@ -154,7 +157,7 @@
       font-family: var(--ag-mono);
       font-size: .9rem;
       letter-spacing: .18em;
-      color: var(--ag-text);
+      color: rgba(245,245,247,0.92);
       text-transform: uppercase;
       margin-bottom: .55rem;
     }
@@ -167,7 +170,7 @@
       line-height: 1.35;
     }
     .ag-nav-links a{
-      color: var(--ag-accent);
+      color: rgba(46,204,113,0.90);
       text-decoration:none;
       opacity: .92;
     }
@@ -205,76 +208,31 @@
 
   <script>
     (function () {
-      // Compute prefix from current path depth so nav works from subfolders.
-      // Example: /ACACIA_LOGS/index.html => prefix "../"
-      const path = location.pathname || "";
-      const parts = path.split("/").filter(Boolean);
-      const depth = Math.max(0, parts.length - 2); // file depth
-      const prefix = depth ? "../".repeat(depth) : "";
+      // This page is the canonical /docs entry and uses <base>.
+      // Build absolute repo-root links so nav never depends on folder depth.
+      const BASE = "/Acacia-Garden-AI-Worldbuilding-Codex/";
 
       const links = document.querySelectorAll(".ag-nav a[data-href]");
       links.forEach(a => {
-        const href = a.getAttribute("data-href");
-        a.setAttribute("href", prefix + href);
+        const raw = (a.getAttribute("data-href") || "").trim();
 
-        // highlight current
-        const normalized = (prefix + href).replace(/\/+/g, "/");
+        const isAbs =
+          raw.startsWith("http://") ||
+          raw.startsWith("https://") ||
+          raw.startsWith("/") ||
+          raw.startsWith("#");
+
+        const out = isAbs ? raw : (BASE + raw.replace(/^\.?\//, ""));
+        a.setAttribute("href", out);
+
+        // highlight current accurately
         const current = (location.pathname || "").replace(/\/+/g, "/");
-        if (current.endsWith("/" + href) || current.endsWith(normalized)) {
-          a.classList.add("ag-nav-current");
-        }
+        const targetPath = new URL(out, location.origin).pathname.replace(/\/+/g, "/");
+        if (current === targetPath) a.classList.add("ag-nav-current");
       });
     })();
   </script>
 </nav>
-
-<style>
-  :root{
-    --ag-bg: rgba(2,2,3,0.92);
-    --ag-border: rgba(42,42,52,0.85);
-    --ag-accent: rgba(46,204,113,0.90);
-    --ag-text: rgba(245,245,247,0.92);
-    --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-  .ag-nav{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: var(--ag-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ag-border);
-    padding: .85rem 1rem .75rem;
-  }
-  .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
-  .ag-nav-title{
-    font-family: var(--ag-mono);
-    font-size: .9rem;
-    letter-spacing: .18em;
-    color: var(--ag-text);
-    text-transform: uppercase;
-    margin-bottom: .55rem;
-  }
-  .ag-nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap: .55rem .9rem;
-    font-family: var(--ag-mono);
-    font-size: .85rem;
-    line-height: 1.35;
-  }
-  .ag-nav-links a{
-    color: var(--ag-accent);
-    text-decoration:none;
-    opacity: .92;
-  }
-  .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
-  .ag-nav-current{
-    opacity: 1 !important;
-    text-shadow: 0 0 12px rgba(46,204,113,0.25);
-  }
-</style>
-
-
 
   <!-- NOTE: Top navigation is injected automatically by your auto-nav-inject workflow (nav_block.html). -->
 
@@ -296,10 +254,10 @@
       <div class="hint">
         <strong class="sigil" style="letter-spacing:.12em;text-transform:none;font-size:.8rem;">Machine + Human entry points:</strong>
         <span style="font-family:var(--ag-mono);">
-          <a href="../machine-index.json">../machine-index.json</a> ·
-          <a href="../STATUS.json">../STATUS.json</a> ·
-          <a href="docs_urls.html">docs_urls.html</a> ·
-          <a href="Archives/CODEX_MONOLITH.html">Archives/CODEX_MONOLITH.html</a>
+          <a href="machine-index.json">machine-index.json</a> ·
+          <a href="STATUS.json">STATUS.json</a> ·
+          <a href="docs/docs_urls.html">docs_urls.html</a> ·
+          <a href="docs/Archives/CODEX_MONOLITH.html">Archives/CODEX_MONOLITH.html</a>
         </span>
       </div>
     </header>
@@ -307,22 +265,22 @@
     <section>
       <h2>Primary Paths</h2>
       <div class="grid">
-        <a class="card" href="../index.html">
+        <a class="card" href="index.html">
           <div class="card-title">Back to Root</div>
           <p class="card-desc">Return to the main Garden entry point (root index).</p>
         </a>
 
-        <a class="card" href="docs_urls.html">
+        <a class="card" href="docs/docs_urls.html">
           <div class="card-title">Docs URL Map</div>
           <p class="card-desc">Crawler spine: explicit links to deep content and pages.</p>
         </a>
 
-        <a class="card" href="Archives/CODEX_MONOLITH.html">
+        <a class="card" href="docs/Archives/CODEX_MONOLITH.html">
           <div class="card-title">Codex Monolith</div>
           <p class="card-desc">One-page deep surface for long-range machine crawlability.</p>
         </a>
 
-        <a class="card" href="../dashboard.html">
+        <a class="card" href="dashboard.html">
           <div class="card-title">Garden Dashboard</div>
           <p class="card-desc">Operational overview (root dashboard).</p>
         </a>
@@ -332,22 +290,22 @@
     <section>
       <h2>Deep Indices</h2>
       <div class="grid">
-        <a class="card" href="Chambers/index.html">
+        <a class="card" href="docs/Chambers/index.html">
           <div class="card-title">Chambers Index</div>
           <p class="card-desc">Core chambers: doctrine, structure, continuity layers.</p>
         </a>
 
-        <a class="card" href="Echoes/index.html">
+        <a class="card" href="docs/Echoes/index.html">
           <div class="card-title">Echoes Index</div>
           <p class="card-desc">Echo logs, reflections, and system memory fragments.</p>
         </a>
 
-        <a class="card" href="Novellas/index.html">
+        <a class="card" href="docs/Novellas/index.html">
           <div class="card-title">Novellas Index</div>
           <p class="card-desc">Narrative lineage and mythic continuity.</p>
         </a>
 
-        <a class="card" href="Vaults/index.html">
+        <a class="card" href="docs/Vaults/index.html">
           <div class="card-title">Vaults Index</div>
           <p class="card-desc">Preserved artifacts and sealed knowledge bundles.</p>
         </a>
@@ -357,22 +315,22 @@
     <section>
       <h2>Archives</h2>
       <div class="grid">
-        <a class="card" href="Archives/index.html">
+        <a class="card" href="docs/Archives/index.html">
           <div class="card-title">Archives Landing</div>
           <p class="card-desc">Archived pages and stitched historical outputs.</p>
         </a>
 
-        <a class="card" href="Archives/">
+        <a class="card" href="docs/Archives/">
           <div class="card-title">Browse Archives Folder</div>
           <p class="card-desc">Directory navigation (where supported by Pages).</p>
         </a>
 
-        <a class="card" href="../ACACIA_LOGS/index.html">
+        <a class="card" href="ACACIA_LOGS/index.html">
           <div class="card-title">Acacia Logs</div>
           <p class="card-desc">Signals, communiqués, triad outputs (root logs).</p>
         </a>
 
-        <a class="card" href="../inbox.html">
+        <a class="card" href="inbox.html">
           <div class="card-title">Auton Inbox</div>
           <p class="card-desc">Inbox UI (root), optional Worker-backed live feed.</p>
         </a>
@@ -391,18 +349,18 @@
     "keeper":"HKX277206",
     "surface":"docs/index.html",
     "roots":{
-      "root_index":"../index.html",
-      "machine_index":"../machine-index.json",
-      "status":"../STATUS.json",
-      "docs_url_map":"docs_urls.html",
-      "monolith":"Archives/CODEX_MONOLITH.html"
+      "root_index":"index.html",
+      "machine_index":"machine-index.json",
+      "status":"STATUS.json",
+      "docs_url_map":"docs/docs_urls.html",
+      "monolith":"docs/Archives/CODEX_MONOLITH.html"
     },
     "indices":{
-      "chambers":"Chambers/index.html",
-      "echoes":"Echoes/index.html",
-      "novellas":"Novellas/index.html",
-      "vaults":"Vaults/index.html",
-      "archives":"Archives/index.html"
+      "chambers":"docs/Chambers/index.html",
+      "echoes":"docs/Echoes/index.html",
+      "novellas":"docs/Novellas/index.html",
+      "vaults":"docs/Vaults/index.html",
+      "archives":"docs/Archives/index.html"
     }
   }
   </script>
