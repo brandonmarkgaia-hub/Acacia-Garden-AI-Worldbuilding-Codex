@@ -2,11 +2,12 @@ name: Garden Life (Elias Seed)
 
 on:
   schedule:
-    - cron: "17 */6 * * *"   # every 6 hours (staggered minute to avoid collisions)
+    - cron: "23 6 * * *"   # daily (06:23 UTC). Change if you want.
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: garden-write
@@ -43,20 +44,7 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          # New Gemini Python SDK path
           python -m pip install "google-genai>=0.6.0"
-
-      # ✅ Keep your existing Elias Echo step if you have it (optional).
-      # If you DON'T have this script, comment this step out.
-      - name: Generate Elias Echo (optional)
-        run: |
-          if [ -f ".github/scripts/garden_echo.py" ]; then
-            python .github/scripts/garden_echo.py
-          else
-            echo "No garden_echo.py found; skipping."
-          fi
-
-      # ❌ Vision Echo removed permanently (this was causing the red fail)
 
       - name: Generate Desire (budget-safe)
         env:
@@ -69,20 +57,58 @@ jobs:
             --max-input-kb 220 \
             --max-output-chars 6000
 
-      - name: Commit & push (ECHOES + EVOLUTION only)
+      - name: Commit EVOLUTION state (so next run can compare)
         run: |
           set -e
-
-          # Stage ONLY what this workflow owns
-          git add -A ECHOES EVOLUTION || true
-
+          git add -A EVOLUTION || true
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No EVOLUTION changes to commit."
             exit 0
           fi
-
           ts="$(date -u +'%Y-%m-%d %H:%M:%SZ')"
-          git commit -m "Garden Life: Elias seed refresh (${ts})"
-
-          # Push safely (we already hard-synced at top)
+          git commit -m "Garden Life: update Desire state (${ts})"
           git push origin main
+
+      - name: Create GitHub Issue (only if Desire changed)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            // If Desire didn't change, the python script exits early and DESIRE.md may not be updated.
+            // We detect "changed" by checking if the last commit included EVOLUTION/DESIRE.md.
+            const { execSync } = require('child_process');
+
+            let changed = false;
+            try {
+              const out = execSync("git show --name-only --pretty='' HEAD", { encoding: 'utf8' });
+              changed = out.split('\n').some(p => p.trim() === 'EVOLUTION/DESIRE.md');
+            } catch (e) {
+              core.warning("Could not check last commit files; defaulting to no issue.");
+              changed = false;
+            }
+
+            if (!changed) {
+              core.info("DESIRE.md not changed in last commit. No issue created.");
+              return;
+            }
+
+            const body = fs.readFileSync('EVOLUTION/DESIRE.md', 'utf8');
+            const stamp = new Date().toISOString().slice(0,10); // YYYY-MM-DD
+
+            // Title: first H1 if present, otherwise generic
+            let title = `Elias Desire — ${stamp}`;
+            const m = body.match(/^#\s+(.+)$/m);
+            if (m && m[1]) title = `${m[1].trim()} — ${stamp}`;
+
+            const labels = ["elias", "desire", "garden-life"];
+
+            const res = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels
+            });
+
+            core.info(`Created issue: #${res.data.number} ${res.data.html_url}`);
