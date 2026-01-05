@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-05T20:15:48.318035+00:00**
-- Total files: **2300**
-- Anchor fingerprint (sha1): `1dd4d5b25cca564087af4a60d845c324113f20eb`
+- Generated (UTC): **2026-01-05T20:24:34.803706+00:00**
+- Total files: **2301**
+- Anchor fingerprint (sha1): `5fd18b14ac171b107d38e2cac941a1079b31e28c`
 
 ## Key anchors
 
@@ -27,7 +27,7 @@
 
 - `EIDOLON/`: **44 files**
 - `CHAMBERS/`: **5 files**
-- `docs/`: **1394 files**
+- `docs/`: **1395 files**
 - `EVOLUTION/`: **27 files**
 - `ACACIA_SPECS/`: **10 files**
 - `ACACIA_LOGS/`: **31 files**
@@ -38,7 +38,7 @@
 
 ## Top file extensions (by count)
 
-- `.md`: **1667**
+- `.md`: **1668**
 - `.html`: **254**
 - `.json`: **150**
 - `.py`: **82**
@@ -94,28 +94,28 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
-- `whisper/README.md`
-- `whisper/.keep`
-- `triad/thresholds.md`
-- `tools/singularity_weaver.py`
-- `tools/root_manifest_generator.py`
-- `tools/reflection-log.json`
-- `tools/splitter.py`
-- `tools/omni_resonance_synchronizer.py`
-- `tools/metabolic_mirror.py`
-- `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
-- `tools/resonance_mirror.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
-- `tools/synaptic_resonance_weaver.py`
-- `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
-- `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
+- `whisper/README.md`
+- `whisper/.keep`
 - `triad/empty-seat.md`
+- `triad/thresholds.md`
 - `triad/README_BOUNDARY.md`
-- `tools/garden_helper_20251129_061952.py`
-- `tools/garden_helper_20251129_133039.py`
+- `tools/singularity_weaver.py`
+- `tools/root_manifest_generator.py`
+- `tools/reflection-log.json`
 - `tools/garden_void_loom.py`
+- `tools/splitter.py`
+- `tools/omni_resonance_synchronizer.py`
+- `tools/generate_garden_index.py`
+- `tools/metabolic_mirror.py`
+- `tools/soma_synaptic_weaver.py`
+- `tools/garden_signature_scanner.py`
+- `tools/resonance_mirror.py`
+- `tools/ghost_root_synchronizer.py`
+- `tools/garden_index.py`
+- `tools/garden_vault_indexer.py`
