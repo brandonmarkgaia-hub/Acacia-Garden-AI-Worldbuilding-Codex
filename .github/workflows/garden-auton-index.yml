@@ -64,7 +64,7 @@ jobs:
       - name: Generate Codex indices (Chambers + Echoes)
         run: node scripts/generate_codex_indices.mjs
 
-        - name: Build machine index (recursive Echoes)
+      - name: Build machine index (recursive Echoes)
         run: python .github/scripts/build_machine_index.py
 
       # --- Proof layer (Platinum) ---
