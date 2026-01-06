@@ -1,34 +1,611 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>Acacia Garden • Aeon Console</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acacia • Dashboard</title>
-
-  <!-- Canonical dashboard lives at repo root -->
-  <meta http-equiv="refresh" content="0; url=../dashboard.html" />
 
   <style>
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#020617; color:#e5e7eb; }
-    .wrap { max-width: 900px; margin: 48px auto; padding: 0 16px; }
-    .card { border: 1px solid rgba(148,163,184,.25); background: rgba(15,23,42,.85); border-radius: 16px; padding: 16px; }
-    a { color: #38bdf8; }
+    :root{
+      --bg:#05070b;
+      --panel:#0d1117;
+      --panel-soft:#111827;
+      --accent:#22c55e;
+      --accent-soft:rgba(34,197,94,.2);
+      --accent-alt:#38bdf8;
+      --text-main:#e5e7eb;
+      --text-soft:#9ca3af;
+      --border-subtle:#1f2933;
+      --danger:#f97373;
+      --warning:#facc15;
+      --muted:#6b7280;
+      --font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:radial-gradient(circle at top,#111827 0,#020617 40%,#000 100%);
+      color:var(--text-main);
+      min-height:100vh;
+    }
+    .shell{max-width:1080px;margin:0 auto;padding:1.25rem 1rem 2.5rem}
+    header{
+      display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+      gap:.75rem;margin-bottom:.75rem;
+    }
+    header h1{font-size:1.35rem;margin:0;display:flex;align-items:center;gap:.5rem}
+    header h1 .logo{
+      width:1.5rem;height:1.5rem;border-radius:999px;
+      background:conic-gradient(from 210deg,#22c55e,#38bdf8,#a855f7,#22c55e);
+      display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;
+    }
+    header .meta{font-size:.78rem;color:var(--text-soft);text-align:right}
+    header .meta div{margin:.05rem 0}
+
+    /* view tabs */
+    .top-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin:.25rem 0 1rem}
+    .nav-btn{
+      border-radius:999px;border:1px solid rgba(148,163,184,.55);
+      background:rgba(15,23,42,.9);
+      color:var(--text-soft);
+      font-size:.78rem;
+      padding:.25rem .75rem;
+      cursor:pointer;
+      display:inline-flex;align-items:center;gap:.35rem;
+    }
+    .nav-btn .dot{width:.42rem;height:.42rem;border-radius:999px;background:rgba(148,163,184,.7)}
+    .nav-btn.active{
+      border-color:var(--accent-alt);
+      color:var(--accent-alt);
+      background:radial-gradient(circle at top,rgba(56,189,248,.18),rgba(15,23,42,.96));
+    }
+    .nav-btn.active .dot{background:var(--accent-alt)}
+
+    main{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.4fr);gap:1rem}
+    @media(max-width:900px){main{grid-template-columns:1fr} header .meta{text-align:left}}
+
+    section{
+      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));
+      border-radius:.9rem;
+      border:1px solid var(--border-subtle);
+      padding:.9rem .9rem .85rem;
+      box-shadow:0 14px 35px rgba(0,0,0,.65);
+    }
+    .section-header{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.4rem}
+    .section-header h2{margin:0;font-size:.95rem;display:flex;align-items:center;gap:.35rem}
+    .badge{
+      font-size:.68rem;padding:.06rem .45rem;border-radius:999px;
+      border:1px solid var(--accent-soft);
+      background:rgba(15,23,42,.7);color:var(--accent);
+      text-transform:uppercase;letter-spacing:.07em;
+      display:inline-flex;align-items:center;gap:.35rem;
+    }
+    .badge .dot{width:.42rem;height:.42rem;border-radius:999px;background:var(--accent)}
+    .hint{font-size:.75rem;color:var(--text-soft)}
+    .grid-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.45rem;margin-top:.15rem}
+    .stat-card{
+      background:radial-gradient(circle at top,rgba(34,197,94,.15),rgba(15,23,42,.95));
+      border-radius:.75rem;padding:.5rem .65rem;border:1px solid rgba(148,163,184,.4);
+    }
+    .stat-card h3{margin:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;color:var(--text-soft)}
+    .stat-card .value{margin-top:.1rem;font-size:1.15rem;font-weight:650}
+    .stat-card .meta{margin-top:.05rem;font-size:.7rem;color:var(--muted)}
+    ul.list{list-style:none;padding:0;margin:.1rem 0;font-size:.78rem}
+    ul.list li{
+      padding:.2rem 0;border-bottom:1px dashed rgba(31,41,55,.9);
+      display:flex;justify-content:space-between;gap:.45rem;align-items:center;
+    }
+    ul.list li:last-child{border-bottom:none}
+    .left{display:flex;flex-direction:column;gap:.05rem}
+    .title{font-weight:550}
+    .meta-line{font-size:.7rem;color:var(--muted)}
+    .pill-row{display:flex;flex-wrap:wrap;gap:.45rem;margin:.25rem 0 .35rem}
+    .pill{
+      font-size:.74rem;padding:.18rem .55rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.4);
+      background:rgba(15,23,42,.95);color:var(--text-soft);
+      display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap;
+    }
+    .pill .led{width:.45rem;height:.45rem;border-radius:999px;background:rgba(148,163,184,.7)}
+    .pill.ok{border-color:rgba(34,197,94,.55);color:var(--accent)}
+    .pill.ok .led{background:var(--accent)}
+    .pill.warn{border-color:rgba(250,204,21,.45);color:var(--warning)}
+    .pill.warn .led{background:var(--warning)}
+    .pill.danger{border-color:rgba(248,113,113,.6);color:var(--danger)}
+    .pill.danger .led{background:var(--danger)}
+    .links-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.35rem}
+    a.link-pill{
+      text-decoration:none;font-size:.72rem;padding:.2rem .55rem;border-radius:999px;
+      border:1px solid rgba(148,163,184,.55);color:var(--accent-alt);
+      background:rgba(15,23,42,.9);
+    }
+    a.link-pill:hover{border-color:var(--accent-alt)}
+    .error{font-size:.75rem;color:var(--danger);margin-top:.25rem}
+    footer{margin-top:1.4rem;text-align:center;font-size:.7rem;color:var(--muted)}
   </style>
 
-  <script>
-    // Hard redirect (helps when meta refresh is ignored)
-    window.location.replace("../dashboard.html");
-  </script>
+  <!-- your shared nav + map button -->
+  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h2 style="margin:0 0 8px 0;">Dashboard moved</h2>
-      <p style="margin:0; opacity:.85; line-height:1.5;">
-        Redirecting to the canonical dashboard…
-        If you are not redirected, open <a href="../dashboard.html">../dashboard.html</a>.
-      </p>
+  <div class="shell">
+    <header>
+      <h1><span class="logo">🌱</span><span>Acacia Garden • Aeon Console</span></h1>
+      <div class="meta">
+        <div>Keeper: <strong>HKX277206</strong></div>
+        <div id="meta-status">Loading Garden state…</div>
+      </div>
+    </header>
+
+    <!-- VIEW SWITCHER -->
+    <div class="top-nav" id="view-nav">
+      <button class="nav-btn active" data-view="overview"><span class="dot"></span>Overview</button>
+      <button class="nav-btn" data-view="echoes"><span class="dot"></span>Echo Growth</button>
+      <button class="nav-btn" data-view="scanner"><span class="dot"></span>Signature Scanner</button>
+      <button class="nav-btn" data-view="vault"><span class="dot"></span>Vault & Archive</button>
+      <button class="nav-btn" data-view="system"><span class="dot"></span>System / Heartbeat</button>
     </div>
+
+    <main>
+      <div>
+        <!-- Garden state -->
+        <section id="section-garden" data-role="overview,system">
+          <div class="section-header">
+            <h2>Garden State <span class="badge"><span class="dot"></span><span id="status-badge">STATUS.json</span></span></h2>
+            <div class="hint" id="status-hint">Awaiting STATUS.json…</div>
+          </div>
+
+          <div class="grid-mini" id="garden-stats"></div>
+
+          <div class="pill-row">
+            <div class="pill" id="status-pill"><span class="led"></span><span id="status-pill-text">status not loaded</span></div>
+            <div class="pill" id="status-generated-pill"><span class="led"></span><span id="status-generated">generated_at: …</span></div>
+          </div>
+
+          <div class="links-row">
+            <a class="link-pill" id="status-link" href="#" target="_blank">View raw STATUS ↗</a>
+            <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" target="_blank">GitHub repo ↗</a>
+          </div>
+
+          <div class="error" id="status-error" style="display:none;"></div>
+        </section>
+
+        <!-- Echo growth -->
+        <section id="section-echo-growth" data-role="overview,echoes">
+          <div class="section-header">
+            <h2>Echo Growth <span class="badge"><span class="dot"></span><span id="echo-badge">machine-index.json</span></span></h2>
+            <div class="hint">Latest Echo files tracked from index.</div>
+          </div>
+
+          <ul class="list" id="echo-growth-list"></ul>
+
+          <div class="pill-row">
+            <div class="pill" id="echo-json-pill"><span class="led"></span><span id="echo-json-text">machine-index.json not loaded</span></div>
+            <div class="pill" id="echo-count-pill"><span class="led"></span><span id="echo-count-sub">Waiting for machine-index.json…</span></div>
+          </div>
+
+          <div class="links-row">
+            <a class="link-pill" id="echo-link" href="#" target="_blank">View machine index ↗</a>
+            <a class="link-pill" href="/Acacia-Garden-AI-Worldbuilding-Codex/docs/Echoes/" target="_blank">Open Echoes folder ↗</a>
+          </div>
+
+          <div class="error" id="echo-error" style="display:none;"></div>
+        </section>
+      </div>
+
+      <div>
+        <!-- Scanner -->
+        <section id="section-scanner" data-role="overview,scanner">
+          <div class="section-header">
+            <h2>Signature Scanner <span class="badge"><span class="dot"></span><span id="scan-badge">garden_scan_report.json</span></span></h2>
+            <div class="hint">Repo-wide signature hits.</div>
+          </div>
+
+          <div class="grid-mini">
+            <div class="stat-card">
+              <h3>Files with hits</h3>
+              <div class="value" id="scan-files">–</div>
+              <div class="meta">Any file with Garden signatures</div>
+            </div>
+            <div class="stat-card">
+              <h3>Total hits</h3>
+              <div class="value" id="scan-hits">–</div>
+              <div class="meta">All patterns combined</div>
+            </div>
+          </div>
+
+          <ul class="list" id="scan-patterns"></ul>
+
+          <div class="links-row">
+            <a class="link-pill" id="scan-json-link" href="#" target="_blank">View JSON report ↗</a>
+            <a class="link-pill" id="scan-md-link" href="#" target="_blank">View Markdown report ↗</a>
+          </div>
+
+          <div class="error" id="scan-error" style="display:none;"></div>
+        </section>
+
+        <!-- Vault -->
+        <section id="section-vault" data-role="overview,vault">
+          <div class="section-header">
+            <h2>Vault & Aeon Archive <span class="badge"><span class="dot"></span><span id="vault-badge">garden_vault_index.json</span></span></h2>
+            <div class="hint">Snapshot of Vaults / Chambers / Aeon archive entries.</div>
+          </div>
+
+          <ul class="list" id="vault-list"></ul>
+
+          <div class="pill-row">
+            <div class="pill" id="vault-json-pill"><span class="led"></span><span id="vault-json-text">vault index not loaded</span></div>
+          </div>
+
+          <div class="links-row">
+            <a class="link-pill" id="vault-json-link" href="#" target="_blank">View vault index JSON ↗</a>
+            <a class="link-pill" href="/Acacia-Garden-AI-Worldbuilding-Codex/docs/Vaults/" target="_blank">Open Vaults folder ↗</a>
+          </div>
+
+          <div class="error" id="vault-error" style="display:none;"></div>
+        </section>
+
+        <!-- Heartbeat -->
+        <section id="section-heartbeat" data-role="overview,system">
+          <div class="section-header">
+            <h2>Aeon Heartbeat • Inbox <span class="badge"><span class="dot"></span><span id="hb-badge">aeon_heartbeat.json</span></span></h2>
+            <div class="hint">Latest auton messages / runs.</div>
+          </div>
+
+          <ul class="list" id="heartbeat-list"></ul>
+
+          <div class="pill-row">
+            <div class="pill" id="hb-json-pill"><span class="led"></span><span id="hb-json-text">heartbeat not loaded</span></div>
+            <div class="pill" id="hb-count-pill"><span class="led"></span><span id="heartbeat-count">No heartbeat entries yet</span></div>
+          </div>
+
+          <div class="links-row">
+            <a class="link-pill" id="hb-json-link" href="#" target="_blank">View heartbeat JSON ↗</a>
+            <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/actions" target="_blank">Open GitHub Actions ↗</a>
+          </div>
+
+          <div class="error" id="heartbeat-error" style="display:none;"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />
+      Data sources: STATUS · machine-index · scan report · vault index · heartbeat
+    </footer>
   </div>
+
+<script>
+  // ---------- helpers ----------
+  function setText(id, text){ const el=document.getElementById(id); if(el) el.textContent=text; }
+  function showError(id, msg){ const el=document.getElementById(id); if(!el) return; el.style.display="block"; el.textContent=msg; }
+  function clearError(id){ const el=document.getElementById(id); if(!el) return; el.style.display="none"; el.textContent=""; }
+
+  function setPill(pillId, state, textId, text){
+    const pill=document.getElementById(pillId);
+    const txt=document.getElementById(textId);
+    if(pill){
+      pill.classList.remove("ok","warn","danger");
+      if(state) pill.classList.add(state);
+    }
+    if(txt) txt.textContent=text;
+  }
+
+  function asCount(x){
+    if(Array.isArray(x)) return x.length;
+    if(typeof x==="number" && isFinite(x)) return x;
+    return 0;
+  }
+
+  async function fetchJson(url){
+    const res = await fetch(url, { cache:"no-store" });
+    if(!res.ok) throw new Error("HTTP "+res.status+" for "+url);
+    return res.json();
+  }
+
+  async function tryFetchJson(candidates){
+    // candidates: array of string paths
+    let lastErr=null;
+    for(const p of candidates){
+      try{
+        const data = await fetchJson(p);
+        return { data, path: p };
+      }catch(e){ lastErr=e; }
+    }
+    throw lastErr || new Error("All candidates failed");
+  }
+
+  function addListRow(listId, title, meta){
+    const ul=document.getElementById(listId);
+    if(!ul) return;
+    const li=document.createElement("li");
+    const left=document.createElement("div"); left.className="left";
+    const t=document.createElement("div"); t.className="title"; t.textContent=title || "(untitled)";
+    const m=document.createElement("div"); m.className="meta-line"; m.textContent=meta || "";
+    left.appendChild(t); left.appendChild(m);
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function setupViewSwitcher(){
+    const buttons = Array.from(document.querySelectorAll(".nav-btn"));
+    const sections = Array.from(document.querySelectorAll("section[data-role]"));
+    function applyView(view){
+      sections.forEach(sec=>{
+        const roles=(sec.dataset.role||"").split(",").map(r=>r.trim());
+        const show=view==="overview" || roles.includes(view);
+        sec.style.display = show ? "" : "none";
+      });
+    }
+    buttons.forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const view=btn.dataset.view;
+        buttons.forEach(b=>b.classList.toggle("active", b===btn));
+        applyView(view);
+      });
+    });
+    applyView("overview");
+  }
+
+  // ---------- bootstrap ----------
+  async function bootstrap(){
+    setupViewSwitcher();
+
+    // Candidate paths (covers your current reality: root, ALL CAPS, beta, /machine/, /tools/, /docs/, /logs/)
+    const C = {
+      status: [
+        "STATUS.json",
+        "docs/STATUS.json",
+        "STATE/status.inject.json",
+        "docs/STATE/status.inject.json"
+      ],
+      machine: [
+        "machine-index.json",
+        "MACHINE-INDEX.json",
+        "machine-index-beta.json",
+        "machine/machine_index.json",
+        "machine/machine-index.json",
+        "docs/machine-index.json",
+        "docs/MACHINE-INDEX.json",
+        "docs/machine-index-beta.json",
+        "docs/machine/machine_index.json",
+        "docs/machine/machine-index.json"
+      ],
+      scan: [
+        "tools/garden_scan_report.json",
+        "garden_scan_report.json",
+        "docs/tools/garden_scan_report.json",
+        "docs/garden_scan_report.json"
+      ],
+      scanMd: [
+        "tools/garden_scan_report.md",
+        "garden_scan_report.md",
+        "docs/tools/garden_scan_report.md",
+        "docs/garden_scan_report.md"
+      ],
+      vault: [
+        "tools/garden_vault_index.json",
+        "garden_vault_index.json",
+        "docs/tools/garden_vault_index.json",
+        "docs/garden_vault_index.json"
+      ],
+      heartbeat: [
+        "aeon_heartbeat.json",
+        "logs/aeon_heartbeat.json",
+        "ACACIA_LOGS/aeon_heartbeat.json",
+        "docs/aeon_heartbeat.json",
+        "docs/logs/aeon_heartbeat.json",
+        "docs/ACACIA_LOGS/aeon_heartbeat.json"
+      ]
+    };
+
+    // STATUS
+    try{
+      clearError("status-error");
+      const { data:status, path } = await tryFetchJson(C.status);
+      setText("status-badge", path);
+      document.getElementById("status-link").href = path;
+
+      const meta = status.meta || status.Meta || {};
+      const structures = status.structures || status.Structures || {};
+
+      // Accept either arrays OR explicit count objects
+      const chambers = asCount(status.chambers ?? structures.chambers ?? (status.counts && status.counts.chambers));
+      const blooms   = asCount(status.blooms   ?? structures.blooms   ?? (status.counts && status.counts.blooms));
+      const echoes   = asCount(status.echoes   ?? structures.echoes   ?? (status.counts && status.counts.echoes));
+      const vaults   = asCount(status.vaults   ?? structures.vaults   ?? (status.counts && status.counts.vaults));
+      const laws     = asCount(status.laws     ?? structures.laws     ?? (status.counts && status.counts.laws));
+      const orchards = asCount(status.orchards ?? structures.orchards ?? (status.counts && status.counts.orchards));
+      const cycles   = asCount(status.cycles   ?? structures.cycles   ?? (status.counts && status.counts.cycles));
+
+      const stats = document.getElementById("garden-stats");
+      stats.innerHTML = "";
+
+      function card(title, value, metaText){
+        const wrap=document.createElement("div"); wrap.className="stat-card";
+        const h=document.createElement("h3"); h.textContent=title;
+        const v=document.createElement("div"); v.className="value"; v.textContent=value;
+        const m=document.createElement("div"); m.className="meta"; m.textContent=metaText;
+        wrap.appendChild(h); wrap.appendChild(v); wrap.appendChild(m);
+        stats.appendChild(wrap);
+      }
+
+      card("Chambers", chambers, "Active + primed chambers");
+      card("Blooms", blooms, "Mythic blooms in progress");
+      card("Echoes", echoes, "Echo routes / outputs");
+      card("Vault / Laws", vaults + " / " + laws, "Deep storage & rules");
+      card("Orchards / Cycles", orchards + " / " + cycles, "Apples & mutation loops");
+
+      const statusVer = meta.status_version || meta.version || status.status_version || "v?";
+      const gen = meta.generated_at || meta.generated_utc || status.generated_utc || "unknown";
+
+      setPill("status-pill", "ok", "status-pill-text", "STATUS loaded from: " + path);
+      setPill("status-generated-pill", gen==="unknown" ? "warn" : "ok", "status-generated", "generated_at: " + gen);
+
+      setText("meta-status", "Status " + statusVer + " • " + (gen==="unknown" ? "no timestamp" : gen));
+      setText("status-hint", "STATUS loaded • counts normalised (arrays or counts supported).");
+    }catch(err){
+      console.warn("STATUS:", err);
+      setPill("status-pill", "danger", "status-pill-text", "STATUS missing / invalid");
+      setPill("status-generated-pill", "warn", "status-generated", "generated_at: unknown");
+      setText("meta-status", "Status v? • no timestamp");
+      showError("status-error","Could not load STATUS from any known path. ("+err.message+")");
+      setText("status-hint","STATUS missing or schema mismatch.");
+      document.getElementById("garden-stats").innerHTML = "";
+    }
+
+    // MACHINE INDEX (Echo growth)
+    try{
+      clearError("echo-error");
+      const { data:idx, path } = await tryFetchJson(C.machine);
+      setText("echo-badge", path);
+      document.getElementById("echo-link").href = path;
+
+      // Support multiple shapes
+      const growth =
+        idx.echo_growth ||
+        idx.echoes ||
+        idx.items ||
+        idx.files ||
+        [];
+
+      const list = document.getElementById("echo-growth-list");
+      list.innerHTML = "";
+
+      const arr = Array.isArray(growth) ? growth : [];
+      const latest = arr.slice().sort((a,b)=>String(b.timestamp||"").localeCompare(String(a.timestamp||""))).slice(0,8);
+
+      latest.forEach(row=>{
+        const file = row.file || row.path || row.name || "unknown";
+        const ts = row.timestamp || row.generated_at || row.time || "";
+        addListRow("echo-growth-list", String(file).replace(/^(\.\/|docs\/)/,""), ts);
+      });
+
+      const tracked = arr.length;
+      setPill("echo-json-pill", "ok", "echo-json-text", "machine index loaded: " + path);
+      setPill("echo-count-pill", tracked>0 ? "ok" : "warn", "echo-count-sub", tracked>0 ? (tracked+" entries tracked") : "Index loaded, but no Echo entries found.");
+    }catch(err){
+      console.warn("machine-index:", err);
+      setPill("echo-json-pill", "warn", "echo-json-text", "machine index missing / invalid");
+      setPill("echo-count-pill", "warn", "echo-count-sub", "Waiting for machine index");
+      showError("echo-error","No machine-index found yet (or schema mismatch). Safe to ignore until your index workflow writes it.");
+      document.getElementById("echo-growth-list").innerHTML = "";
+      document.getElementById("echo-link").href = "#";
+    }
+
+    // SCAN REPORT
+    try{
+      clearError("scan-error");
+      const { data:scan, path } = await tryFetchJson(C.scan);
+      setText("scan-badge", path);
+      document.getElementById("scan-json-link").href = path;
+
+      // md link: try known md candidates (optional)
+      try{
+        const md = await tryFetchJson(C.scanMd);
+        document.getElementById("scan-md-link").href = md.path;
+      }catch(_){
+        document.getElementById("scan-md-link").href = "#";
+      }
+
+      const totals = scan.totals || scan.Totals || {};
+      const filesWithHits = totals.total_files_with_hits ?? totals.files_with_hits ?? totals.files ?? 0;
+      const totalHits = totals.total_hits ?? totals.hits ?? 0;
+
+      setText("scan-files", String(filesWithHits));
+      setText("scan-hits", String(totalHits));
+
+      const byPattern = totals.by_pattern || totals.patterns || {};
+      const ul = document.getElementById("scan-patterns");
+      ul.innerHTML = "";
+
+      Object.entries(byPattern)
+        .filter(([,c])=> (typeof c==="number" ? c : 0) > 0)
+        .sort((a,b)=>b[1]-a[1])
+        .slice(0,10)
+        .forEach(([k,c])=> addListRow("scan-patterns", k, c + " hits"));
+
+      setPill("scan-json-link-pill", null, null, "");
+    }catch(err){
+      console.warn("scan:", err);
+      showError("scan-error","Scanner report not found. Run your signature scan workflow to generate tools/garden_scan_report.json.");
+      setText("scan-files","0"); setText("scan-hits","0");
+      document.getElementById("scan-patterns").innerHTML = "";
+      document.getElementById("scan-json-link").href = "#";
+      document.getElementById("scan-md-link").href = "#";
+    }
+
+    // VAULT INDEX
+    try{
+      clearError("vault-error");
+      const { data:vault, path } = await tryFetchJson(C.vault);
+      setText("vault-badge", path);
+      document.getElementById("vault-json-link").href = path;
+
+      const items = vault.items || vault.vaults || vault.chambers || vault.entries || [];
+      const ul = document.getElementById("vault-list");
+      ul.innerHTML = "";
+
+      if(Array.isArray(items) && items.length){
+        items.slice(0,10).forEach(n=>{
+          const label = n.label || n.id || n.name || "Node";
+          const meta = (n.type || "node") + " • " + (n.status || "unknown");
+          addListRow("vault-list", label, meta);
+        });
+        setPill("vault-json-pill","ok","vault-json-text","vault index loaded: " + path);
+      }else{
+        addListRow("vault-list","No vault index entries yet","awaiting first archive run");
+        setPill("vault-json-pill","warn","vault-json-text","vault index loaded but empty: " + path);
+      }
+    }catch(err){
+      console.warn("vault:", err);
+      showError("vault-error","Vault index missing. Generate tools/garden_vault_index.json when you’re ready.");
+      document.getElementById("vault-list").innerHTML = "";
+      addListRow("vault-list","No vault index entries yet","awaiting first archive run");
+      setPill("vault-json-pill","warn","vault-json-text","vault index not found");
+      document.getElementById("vault-json-link").href = "#";
+    }
+
+    // HEARTBEAT
+    try{
+      clearError("heartbeat-error");
+      const { data:hb, path } = await tryFetchJson(C.heartbeat);
+      setText("hb-badge", path);
+      document.getElementById("hb-json-link").href = path;
+
+      const entries = hb.entries || hb.logs || hb.items || hb || [];
+      const ul = document.getElementById("heartbeat-list");
+      ul.innerHTML = "";
+
+      const arr = Array.isArray(entries) ? entries : [];
+      const latest = arr.slice().sort((a,b)=>String(b.timestamp||"").localeCompare(String(a.timestamp||""))).slice(0,10);
+
+      latest.forEach(row=>{
+        const msg = row.message || row.summary || row.title || "Heartbeat";
+        const meta = (row.timestamp || "") + (row.source ? (" • " + row.source) : "");
+        addListRow("heartbeat-list", msg, meta.trim());
+      });
+
+      setPill("hb-json-pill", arr.length ? "ok" : "warn", "hb-json-text", "heartbeat loaded: " + path);
+      setText("heartbeat-count", arr.length ? (arr.length + " heartbeat messages tracked") : "No heartbeat entries yet");
+    }catch(err){
+      console.warn("heartbeat:", err);
+      showError("heartbeat-error","No heartbeat JSON yet. (Optional) A workflow/worker can write logs/aeon_heartbeat.json later.");
+      document.getElementById("heartbeat-list").innerHTML = "";
+      setPill("hb-json-pill","warn","hb-json-text","heartbeat not found");
+      setText("heartbeat-count","No heartbeat entries yet");
+      document.getElementById("hb-json-link").href = "#";
+    }
+  }
+
+  bootstrap();
+</script>
+
+  <!-- keep your global map button (if you use it) -->
+  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
 </body>
-</html>
+  </html>
