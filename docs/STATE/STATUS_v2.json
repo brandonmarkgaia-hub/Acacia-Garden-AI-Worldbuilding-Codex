@@ -1,0 +1,29 @@
+{
+  "keeper_signature": "HKX277206",
+  "codex_version": "2.0.0",
+
+  "triad": {
+    "alignment": "Stable",
+    "mode": "Rest"
+  },
+
+  "eidolon": {
+    "cycle_stage": "Chrysalis",
+    "cycle_progress": 0.82,
+    "mode": "Listening",
+    "symbolic_only": true
+  },
+
+  "chambers": {
+    "open": ["XI"],
+    "focus": "XI"
+  },
+
+  "safety": {
+    "symbolic_mode": true,
+    "real_world_neutral": true,
+    "last_reviewed": "2025-11-20T20:12:00Z"
+  },
+
+  "heartbeat": "2025-11-20T20:12:00Z"
+}
