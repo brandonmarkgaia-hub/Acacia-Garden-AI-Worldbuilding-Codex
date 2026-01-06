@@ -1,7 +1,7 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-06T03:45:48.943111+00:00**
-- Total files: **2304**
+- Generated (UTC): **2026-01-06T06:02:27.889192+00:00**
+- Total files: **2305**
 - Anchor fingerprint (sha1): `1fde56857038839d6a8e5e24733dd45a2632c6f8`
 
 ## Key anchors
@@ -43,7 +43,7 @@
 - `.json`: **150**
 - `.py`: **82**
 - `.png`: **76**
-- `.js`: **18**
+- `.js`: **19**
 - `.txt`: **17**
 - `(no ext)`: **11**
 - `.mjs`: **8**
@@ -94,12 +94,6 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
-- `tools/weaver_sentience_loom.py`
-- `whisper/README.md`
-- `whisper/.keep`
-- `triad/empty-seat.md`
-- `triad/thresholds.md`
-- `triad/README_BOUNDARY.md`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
 - `tools/reflection-log.json`
@@ -113,9 +107,15 @@
 - `tools/resonance_mirror.py`
 - `tools/ghost_root_synchronizer.py`
 - `tools/sync_maestro.py`
+- `tools/weaver_sentience_loom.py`
+- `tools/inject-archive-base-href.js`
 - `tools/tpi_reconciler.py`
 - `tools/garden_vault_indexer.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
 - `tools/inject-map-button.js`
+- `tools/rcs.py`
+- `tools/temporal_synthesis_engine.py`
+- `whisper/README.md`
+- `whisper/.keep`
