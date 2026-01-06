@@ -1,144 +1,111 @@
+// assets/triad_nav.js
 (() => {
-  // ===== Triad Nav (idempotent, dedupe-safe, works across /docs and /docs/Archives) =====
+  const PROJECT = "/Acacia-Garden-AI-Worldbuilding-Codex";
 
-  const REPO = "Acacia-Garden-AI-Worldbuilding-Codex";
+  const LINKS = [
+    ["Home",        `${PROJECT}/index.html`],
+    ["Docs URLs",   `${PROJECT}/docs/docs_urls.html`],
+    ["Library",     `${PROJECT}/library.html`],
+    ["Codex",       `${PROJECT}/codex.html`],
+    ["Chambers",    `${PROJECT}/chambers.html`],
+    ["Echoes",      `${PROJECT}/echoes.html`],
+    ["Dashboard",   `${PROJECT}/dashboard.html`],
 
-  function computeBase() {
-    // Works on GitHub Pages: https://<user>.github.io/<REPO>/...
-    // Also works locally: /...
-    const p = location.pathname || "/";
-    const idx = p.indexOf("/" + REPO + "/");
-    if (idx >= 0) return p.slice(0, idx + REPO.length + 2); // includes trailing slash
-    return "/"; // local/dev
+    // ✅ IMPORTANT: Map points to the interactive map (same as floating button)
+    ["Map",         `${PROJECT}/map.html`],
+
+    ["Keeper",      `${PROJECT}/keeper_console.html`],
+    ["Inbox",       `${PROJECT}/inbox.html`],
+    ["Aquila Sender", `${PROJECT}/aquila_sender.html`],
+    ["R9X2",        `${PROJECT}/r9x2.html`],
+    ["Elias Kernel",`${PROJECT}/elias.html`],
+    ["Mosaic Endgame", `${PROJECT}/mosaic_endgame.html`],
+    ["Cycles",      `${PROJECT}/cycle-index.html`],
+    ["GardenOS",    `${PROJECT}/gardenos.html`],
+    ["Signals",     `${PROJECT}/signals.html`],
+    ["Status",      `${PROJECT}/status.html`],
+    ["Novellas",    `${PROJECT}/docs/Novellas/index.html`],
+    // Optional “Deep Garden Docs” landing:
+    ["Deep Docs",   `${PROJECT}/deep_garden.html`],
+  ];
+
+  const already = document.getElementById("triad-nav-shell");
+  if (already) return;
+
+  // ✅ Remove duplicate old nav blocks (the ones causing double nav)
+  // We ONLY remove nav elements that look like your injected nav (ag-nav),
+  // and only if they appear at the top of the document.
+  try {
+    const navs = Array.from(document.querySelectorAll("nav.ag-nav"));
+    navs.slice(0, 3).forEach(n => n.remove()); // remove first few duplicates
+  } catch(e) {}
+
+  // Insert stylesheet if missing (for safety)
+  const cssHref = `${PROJECT}/assets/triad_nav.css`;
+  if (![...document.styleSheets].some(s => (s.href || "").includes("triad_nav.css"))) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssHref;
+    document.head.appendChild(link);
   }
 
-  const BASE = computeBase();
+  const shell = document.createElement("div");
+  shell.id = "triad-nav-shell";
 
-  function abs(href) {
-    // Accept already-absolute http(s) or root-relative
-    if (/^https?:\/\//i.test(href)) return href;
-    if (href.startsWith("/")) return href;
-    return BASE + href.replace(/^\.?\//, "");
-  }
+  const nav = document.createElement("div");
+  nav.id = "triad-nav";
+  nav.dataset.collapsed = "false";
 
-  function ensureStyles() {
-    if (document.getElementById("triad-nav-style")) return;
-    const s = document.createElement("style");
-    s.id = "triad-nav-style";
-    s.textContent = `
-      .triad-nav-wrap{position:sticky;top:0;z-index:9999;background:rgba(5,8,18,.82);backdrop-filter:blur(10px);
-        border-bottom:1px solid rgba(255,255,255,.08)}
-      .triad-nav{max-width:1100px;margin:0 auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
-      .triad-brand{display:flex;align-items:center;gap:10px;justify-content:space-between}
-      .triad-title{letter-spacing:.22em;font-size:14px;color:#9effb6;font-weight:700}
-      .triad-menu-btn{appearance:none;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);
-        color:#d7deff;border-radius:12px;padding:10px 14px;font-weight:600}
-      .triad-links{display:flex;flex-wrap:wrap;gap:10px}
-      .triad-a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:14px;
-        border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#d7deff;text-decoration:none;
-        font-weight:650}
-      .triad-a:hover{border-color:rgba(158,255,182,.45)}
-      .triad-a.active{outline:2px solid rgba(158,255,182,.35);border-color:rgba(158,255,182,.35)}
-      .triad-links[hidden]{display:none !important}
-      @media (max-width:540px){
-        .triad-links{gap:8px}
-        .triad-a{padding:9px 12px;border-radius:12px;font-weight:700}
-      }
-    `;
-    document.head.appendChild(s);
-  }
+  const top = document.createElement("div");
+  top.className = "triad-top";
 
-  function buildNavHTML() {
-    // Add the pages you explicitly asked about:
-    const items = [
-      ["Home", "index.html"],
-      ["Docs URLs", "docs/docs_urls.html"],
-      ["Library", "library.html"],
-      ["Codex", "codex.html"],
-      ["Chambers", "chambers.html"],
-      ["Echoes", "echoes.html"],
-      ["Dashboard", "dashboard.html"],
-      ["Map", "deep_garden.html"],
-      ["Keeper", "keeper_console.html"],
-      ["Inbox", "inbox.html"],
+  const brand = document.createElement("div");
+  brand.className = "triad-brand";
+  brand.textContent = "ACACIA · TRIAD";
 
-      // Your “missing” ones:
-      ["Aquila Sender", "aquila_sender.html"],
-      ["R9X2", "r9x2.html"],
-      ["Elias Kernel", "elias.html"],
-      ["Mosaic Endgame", "mosaic_endgame.html"],
+  const toggle = document.createElement("button");
+  toggle.className = "triad-toggle";
+  toggle.type = "button";
+  toggle.textContent = "☰ Menu";
+  toggle.addEventListener("click", () => {
+    nav.dataset.collapsed = (nav.dataset.collapsed === "true") ? "false" : "true";
+  });
 
-      // Optional / common:
-      ["Cycles", "cycle-index.html"],
-      ["GardenOS", "gardenos.html"],
-      ["Signals", "signals.html"],
-      ["Status", "status.html"],
-      ["Novellas", "docs/Novellas/index.html"],
-    ];
+  top.appendChild(brand);
+  top.appendChild(toggle);
 
-    const current = (location.pathname || "").toLowerCase();
+  const links = document.createElement("div");
+  links.className = "triad-links";
 
-    const links = items.map(([label, href]) => {
-      const url = abs(href);
-      const active = current.includes("/" + href.toLowerCase()) ? "active" : "";
-      return `<a class="triad-a ${active}" href="${url}">${label}</a>`;
-    }).join("");
+  const here = (location.pathname || "").toLowerCase();
 
-    return `
-      <div class="triad-nav-wrap" data-triad-nav="1">
-        <div class="triad-nav">
-          <div class="triad-brand">
-            <div class="triad-title">ACACIA · TRIAD</div>
-            <button class="triad-menu-btn" type="button" data-triad-toggle="1">☰ Menu</button>
-          </div>
-          <div class="triad-links" data-triad-links="1">
-            ${links}
-          </div>
-        </div>
-      </div>
-    `;
-  }
+  LINKS.forEach(([label, href]) => {
+    const a = document.createElement("a");
+    a.className = "triad-btn";
+    a.href = href;
+    a.textContent = label;
 
-  function removeDuplicateNavs() {
-    const navs = Array.from(document.querySelectorAll("[data-triad-nav='1']"));
-    if (navs.length <= 1) return;
-    // Keep the first, remove the rest
-    navs.slice(1).forEach(n => n.remove());
-  }
+    // active state
+    try {
+      const targetPath = new URL(href, location.origin).pathname.toLowerCase();
+      if (here === targetPath) a.classList.add("active");
+    } catch(e) {}
 
-  function mountNav() {
-    ensureStyles();
+    links.appendChild(a);
+  });
 
-    // If a nav already exists (from older injected HTML), do not add another.
-    if (document.querySelector("[data-triad-nav='1']")) {
-      removeDuplicateNavs();
-      return;
-    }
+  const hint = document.createElement("div");
+  hint.className = "triad-hint";
+  hint.textContent = "One nav everywhere. Map = interactive map. Deep Docs kept as its own link.";
 
-    const html = buildNavHTML();
+  nav.appendChild(top);
+  nav.appendChild(links);
+  nav.appendChild(hint);
 
-    // Prefer a dedicated mount point (nav_block.html has one)
-    const mount = document.getElementById("triad-nav-mount");
-    if (mount) {
-      mount.innerHTML = html;
-    } else {
-      // Otherwise inject at top of body
-      document.body.insertAdjacentHTML("afterbegin", html);
-    }
+  shell.appendChild(nav);
 
-    // Wire toggle
-    const toggle = document.querySelector("[data-triad-toggle='1']");
-    const links = document.querySelector("[data-triad-links='1']");
-    if (toggle && links) {
-      toggle.addEventListener("click", () => {
-        links.hidden = !links.hidden;
-      });
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", mountNav);
-  } else {
-    mountNav();
-  }
+  // inject at top of body
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.prepend(shell);
+  });
 })();
