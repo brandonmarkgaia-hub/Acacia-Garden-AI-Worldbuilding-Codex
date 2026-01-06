@@ -1,12 +1,24 @@
-name: Garden Auton Index
+name: Garden Auton Index (Crowned Builder)
 
 on:
   push:
     branches: ["main"]
+    paths:
+      - "tools/**"
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+      - "docs/**"
+      - "STATUS.json"
+      - "STATUS.schema.json"
+      - "machine-index.json"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: garden-auton-index
+  cancel-in-progress: false
 
 jobs:
   build-index:
@@ -30,7 +42,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai
 
-      - name: Generate Garden lore + STATUS + Novellas index
+      # --- Deterministic builders ---
+      - name: Generate Garden lore + STATUS + Novellas index + machine index + scan report
         run: python tools/garden_lore_helper.py
 
       - name: Build docs folder index pages
@@ -39,8 +52,12 @@ jobs:
       - name: Fix Archives base href
         run: python .github/scripts/fix_archives_base.py
 
-      # ✅ No rebase of generated outputs.
-      # We snapshot the generated artifacts, reset to latest main, re-apply artifacts, commit, push (retry).
+      # --- Proof layer (Platinum) ---
+      - name: Verify Garden (write proof metrics into STATUS.json)
+        run: python tools/garden_verify.py
+
+      # --- Publish (conflict-immune) ---
+      # We snapshot generated artifacts, reset to latest main, re-apply artifacts, commit, push (retry).
       - name: Commit and push updated artifacts (conflict-immune)
         shell: bash
         run: |
@@ -65,6 +82,8 @@ jobs:
             "docs/Vaults/index.html"
             "docs/Echoes/index.html"
             "docs/GardenOS/index.html"
+            "docs/docs_urls.html"
+            "docs/docs_urls.json"
           )
 
           # Include archives index pages if present
@@ -105,7 +124,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m "chore: refresh Garden indexes [auton]" || true
+            git commit -m "chore: refresh Garden artifacts [auton]" || true
 
             if git push origin HEAD:main; then
               echo "Push succeeded."
