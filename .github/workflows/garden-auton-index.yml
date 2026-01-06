@@ -52,6 +52,9 @@ jobs:
       - name: Fix Archives base href
         run: python .github/scripts/fix_archives_base.py
 
+      - name: Build docs URLs dump (HTML + JSON)
+        run: python .github/scripts/build_docs_url_dump.py
+
       # --- Proof layer (Platinum) ---
       - name: Verify Garden (write proof metrics into STATUS.json)
         run: python tools/garden_verify.py
