@@ -1,23 +1,14 @@
-name: Core Triad Inject (Non-Destructive)
+name: Core Triad Inject (Non-Destructive) — Manual + Conflict-Immune
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-    paths:
-      - "tools/**"
-      - "STATE/**"
-      - "STATUS.json"
-      - "aeon_heartbeat.json"
-      - "machine-index.json"
-      - "garden_scan_report.json"
-      - ".github/workflows/core-triad-inject.yml"
 
 permissions:
   contents: write
 
+# Prevent two injects colliding with each other
 concurrency:
-  group: core-triad-inject-main
+  group: core-triad-inject
   cancel-in-progress: true
 
 jobs:
@@ -25,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -46,7 +37,7 @@ jobs:
             exit 1
           fi
 
-          echo "== Ensure STATE directory exists =="
+          echo "== Ensure output dirs exist =="
           mkdir -p STATE
           mkdir -p ACACIA_LOGS
 
@@ -58,7 +49,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          # These are your canonical files that must NOT be overwritten by "inject".
+          # Canon files must NEVER be modified by this injector
           CANON_FILES=(
             "STATUS.json"
             "status.json"
@@ -68,6 +59,8 @@ jobs:
             "machine_index.json"
             "garden_scan_report.json"
             "Garden_scan_report.json"
+            "docs/docs_urls.html"
+            "docs/docs_urls.json"
           )
 
           echo "== Checking for forbidden modifications to canon files =="
@@ -84,22 +77,15 @@ jobs:
 
           echo "OK: No canonical files changed."
 
-      - name: Commit injected outputs (STATE + logs) if changed
+      - name: Commit injected outputs (STATE + logs) if changed — conflict-immune
         shell: bash
         run: |
           set -euo pipefail
 
-          # Only commit if there are changes at all.
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No changes to commit."
-            exit 0
-          fi
+          # Stage only safe outputs
+          git add -A STATE/ ACACIA_LOGS/ || true
 
-          # Stage only safe generated outputs
-          git add STATE/ ACACIA_LOGS/ || true
-
-          # If staging resulted in nothing, exit cleanly
-          if [ -z "$(git diff --cached --name-only)" ]; then
+          if git diff --cached --quiet; then
             echo "Nothing staged (no STATE/ or ACACIA_LOGS/ changes)."
             exit 0
           fi
@@ -107,5 +93,44 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git commit -m "core-triad: non-destructive injection (STATE/)"
-          git push
+          # Snapshot staged files so we can rebase/reset safely
+          mkdir -p /tmp/core_triad_out
+          git diff --name-only --cached > /tmp/core_triad_files.txt
+
+          while IFS= read -r f; do
+            if [ -f "$f" ]; then
+              mkdir -p "/tmp/core_triad_out/$(dirname "$f")"
+              cp -f "$f" "/tmp/core_triad_out/$f"
+            fi
+          done < /tmp/core_triad_files.txt
+
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+
+            git fetch origin main
+            git reset --hard origin/main
+
+            # Restore snapshot outputs
+            rsync -a /tmp/core_triad_out/ ./
+
+            # Re-stage safe outputs only
+            git add -A STATE/ ACACIA_LOGS/ || true
+
+            if git diff --cached --quiet; then
+              echo "After reset+restore, nothing to commit."
+              exit 0
+            fi
+
+            git commit -m "core-triad: non-destructive injection (STATE/)" || true
+
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push rejected, sleeping then retry..."
+            sleep $((i * 2))
+          done
+
+          echo "Push failed after retries."
+          exit 1
