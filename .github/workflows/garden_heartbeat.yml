@@ -1,87 +1,66 @@
-name: Aeon Heartbeat
+name: Aeon Heartbeat (Ritual, Read-Only)
 
 on:
-  workflow_dispatch: {}
-
-  schedule:
-    # Every Friday 17:00 UTC ≈ 19:00 South Africa (UTC+2)
-    - cron: "0 17 * * 5"
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: aeon-heartbeat
+  cancel-in-progress: true
 
 jobs:
-  grow-and-archive:
+  heartbeat:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Verify Garden (proof stamp only)
         run: |
-          python -m pip install --upgrade pip
-          pip install openai
+          python tools/garden_verify.py
 
-      - name: Grow Lore (Echo)
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Print Verification Summary
         run: |
-          echo "[AeonHeartbeat] Growing new Echo via Lore Helper..."
-          python tools/garden_lore_helper.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
 
-      - name: Build docs folder index pages
-        run: python .github/scripts/build_docs_folder_indexes.py
+          s = json.loads(Path("STATUS.json").read_text(encoding="utf-8"))
+          v = s.get("verification", {})
+          a = v.get("archives", {})
+          n = v.get("navigation", {})
+          i = v.get("indexes", {})
 
-      - name: Fix Archives base href
-        run: python .github/scripts/fix_archives_base.py
-
-      - name: Grow Code (Helper script)
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          echo "[AeonHeartbeat] Growing new Garden helper script..."
-          python tools/garden_code_helper.py
-
-      - name: Run Aquila / Aeon Archivist
-        run: |
-          echo "[AeonHeartbeat] Running Garden Signature Scanner..."
-          python tools/garden_signature_scanner.py
-
-          echo "[AeonHeartbeat] Rebuilding Vault Index..."
-          python tools/garden_vault_indexer.py
-
-          echo "[AeonHeartbeat] Validating Codex..."
-          python scripts/validate_codex.py
-
-      - name: Commit changes
-        run: |
-          git config user.name "Aeon Heartbeat"
-          git config user.email "actions@github.com"
-
-          git add \
-            STATUS.json \
-            docs/Novellas/garden_index.json \
-            docs/Echoes/*.md \
-            tools/*.py \
-            machine-index.json \
-            tools/garden_scan_report.json \
-            docs/Chambers/index.html \
-            docs/Vaults/index.html \
-            docs/Echoes/index.html \
-            docs/GardenOS/index.html \
-            docs/Archives/*.html || true
-
-          if git diff --cached --quiet; then
-            echo "[AeonHeartbeat] No changes to commit."
-          else
-            git commit -m "Aeon Heartbeat: weekly Garden growth"
-            git push
-          fi
+          print("=== AEON HEARTBEAT (READ-ONLY) ===")
+          print("last_verified_utc:", v.get("last_verified_utc"))
+          print("")
+          print("[Archives]")
+          print(" total_html:", a.get("total_html"))
+          print(" missing_base_href:", a.get("missing_base_href"))
+          print(" verified:", a.get("verified"))
+          print("")
+          print("[Navigation]")
+          print(" total_html_scanned:", n.get("total_html_scanned"))
+          print(" missing_map_loader_count:", n.get("missing_map_loader_count"))
+          print(" verified:", n.get("verified"))
+          if n.get("missing_map_loader_count"):
+            for p in n.get("missing_map_loader_paths", [])[:25]:
+              print("  -", p)
+          print("")
+          print("[Indexes]")
+          print(" docs_urls_count:", i.get("docs_urls_count"))
+          print(" machine_index_present:", i.get("machine_index_present"))
+          print(" status_schema_present:", i.get("status_schema_present"))
+          print("")
+          print("NOTE: This workflow is intentionally non-destructive (no commits/push).")
+          PY
