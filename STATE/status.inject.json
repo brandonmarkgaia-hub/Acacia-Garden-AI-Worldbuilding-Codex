@@ -1,20 +1,20 @@
 {
-  "generated_utc": "2026-01-06T20:03:32.582199+00:00",
+  "generated_utc": "2026-01-06T20:13:40.259702+00:00",
   "meta": {
     "keeper": "HKX277206",
     "status_version": "unknown",
     "generated_at": "unknown",
-    "source": "STATUS.json (normalized)"
+    "source": "STATUS.json + filesystem scan (normalized)"
   },
   "counts": {
-    "chambers": 729,
-    "blooms": 0,
-    "echoes": 138,
+    "chambers": 728,
+    "blooms": 3,
+    "echoes": 137,
     "vaults": 2,
-    "laws": 0,
-    "orchards": 0,
-    "cycles": 0,
+    "laws": 4,
+    "orchards": 1,
+    "cycles": 4,
     "novellas": 57,
-    "archives": 220
+    "archives": 5
   }
 }
