@@ -1,0 +1,63 @@
+name: "📨 Request an Echo (Handshake)"
+description: "Request an improvement, expansion, or report a broken signal. Cooperative bots welcome."
+labels: ["handshake"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "Request title"
+      description: "Short + specific."
+      placeholder: "e.g. Add Map link to X / Broken links in Y / New Chamber proposal"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: "Request type"
+      options:
+        - broken-link-report
+        - missing-index
+        - navigation-suggestion
+        - map-request
+        - new-chamber-proposal
+        - lore-expansion
+        - tooling-improvement
+        - game-idea
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: "What do you want?"
+      description: "Describe the desired output."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why does it matter?"
+      description: "Explain the value: continuity, accessibility, future readers, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: "Where (paths/URLs)?"
+      description: "List relevant pages, docs paths, or URLs."
+      placeholder: |
+        - docs/Chambers/...
+        - https://.../docs_urls.html
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: "Constraints / notes"
+      description: "Anything Garden Life should respect?"
+    validations:
+      required: false
