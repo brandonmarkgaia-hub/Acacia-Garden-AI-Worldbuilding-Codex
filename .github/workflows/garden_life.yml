@@ -35,9 +35,11 @@ jobs:
         run: |
           python tools/garden_verify.py
 
-      - name: Generate Desire (Elias)
+      - name: Generate Desire (Elias) — includes handshake issues
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python .github/scripts/garden_desire.py
 
@@ -53,7 +55,6 @@ jobs:
           git config user.name "garden-life"
           git config user.email "actions@github.com"
 
-          # Stage only EVOLUTION outputs
           git add -A EVOLUTION || true
 
           if git diff --cached --quiet; then
