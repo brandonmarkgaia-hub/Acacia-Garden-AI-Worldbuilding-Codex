@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-06T07:55:26.167371+00:00**
+- Generated (UTC): **2026-01-06T08:16:51.060629+00:00**
 - Total files: **2309**
-- Anchor fingerprint (sha1): `7b34692e2a4379dde9a2265d1f0120aae9b0fe94`
+- Anchor fingerprint (sha1): `5ec9552e4a16a797381980ff5f3d7a96ffa802e3`
 
 ## Key anchors
 
@@ -94,28 +94,28 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
+- `whisper/README.md`
+- `whisper/.keep`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
+- `tools/reflection-log.json`
 - `tools/splitter.py`
+- `tools/omni_resonance_synchronizer.py`
 - `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
+- `tools/resonance_mirror.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
+- `tools/rcs.py`
 - `tools/temporal_synthesis_engine.py`
-- `whisper/README.md`
-- `whisper/.keep`
 - `triad/empty-seat.md`
 - `triad/thresholds.md`
 - `triad/README_BOUNDARY.md`
+- `tools/garden_helper_20251129_061952.py`
 - `tools/garden_helper_20251129_133039.py`
-- `tools/reflection-log.json`
 - `tools/garden_void_loom.py`
-- `tools/omni_resonance_synchronizer.py`
-- `tools/generate_garden_index.py`
-- `tools/garden_verify.py`
-- `tools/metabolic_mirror.py`
-- `tools/garden_signature_scanner.py`
+- `tools/garden_helper_20251129_010259.py`
