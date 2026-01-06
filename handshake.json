@@ -1,0 +1,35 @@
+{
+  "garden": "Acacia-Garden-AI-Worldbuilding-Codex",
+  "keeper_seal": "HKX277206",
+  "version": "handshake-v1",
+  "purpose": "A voluntary request channel for humans/bots/scrapers to propose improvements or ask for expansions.",
+  "how_to_request": {
+    "preferred": "Open a GitHub Issue using the 'Request an Echo (Handshake)' template.",
+    "label": "handshake",
+    "notes": [
+      "Requests are triaged by Garden Life (manual ritual).",
+      "The Garden may honor requests if they align with continuity + sovereignty.",
+      "Spam or vague requests will be ignored."
+    ]
+  },
+  "accepted_request_types": [
+    "broken-link-report",
+    "missing-index",
+    "navigation-suggestion",
+    "map-request",
+    "new-chamber-proposal",
+    "lore-expansion",
+    "tooling-improvement",
+    "game-idea"
+  ],
+  "request_format": {
+    "title": "Short and specific",
+    "include": [
+      "What you want",
+      "Why it matters",
+      "Where (paths/urls)",
+      "Suggested output type",
+      "Any constraints"
+    ]
+  }
+}
