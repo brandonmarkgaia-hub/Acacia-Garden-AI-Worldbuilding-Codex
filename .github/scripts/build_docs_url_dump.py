@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
-from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS_DIR = ROOT / "docs"
@@ -11,43 +11,42 @@ OUT_HTML = DOCS_DIR / "docs_urls.html"
 OUT_JSON = DOCS_DIR / "docs_urls.json"
 
 
-def is_hidden(p: Path) -> bool:
-    return any(part.startswith(".") for part in p.parts)
-
-
-def rel_to_docs(p: Path) -> str:
-    return p.relative_to(DOCS_DIR).as_posix()
-
-
-def collect_docs_paths() -> list[str]:
-    if not DOCS_DIR.exists():
+def git_ls_files_docs() -> list[str]:
+    """
+    Uses git's tracked file list to avoid filesystem quirks in Actions.
+    Returns docs-relative paths like 'Chambers/xyz.md' (no leading 'docs/').
+    """
+    if not (ROOT / ".git").exists():
+        # fallback if running without git metadata
         return []
 
-    paths: list[str] = []
-    for p in DOCS_DIR.rglob("*"):
-        if p.is_dir():
+    try:
+        out = subprocess.check_output(
+            ["git", "ls-files", "docs"],
+            cwd=str(ROOT),
+            text=True,
+        )
+    except Exception:
+        return []
+
+    rels: list[str] = []
+    for line in out.splitlines():
+        line = line.strip()
+        if not line or not line.startswith("docs/"):
             continue
-        if is_hidden(p):
+        # drop "docs/"
+        rel = line[5:]
+        if not rel:
             continue
-        # Keep it meaningful: html + md + json + txt
-        if p.suffix.lower() not in {".html", ".md", ".json", ".txt"}:
+        # keep only useful types
+        suf = Path(rel).suffix.lower()
+        if suf not in {".html", ".md", ".json", ".txt"}:
             continue
-        paths.append(rel_to_docs(p))
-    return sorted(paths)
+        rels.append(rel)
+
+    return sorted(rels)
 
 
-def compute_repo_base() -> str:
-    """
-    Returns '/<repo>/' for GitHub Pages project sites like:
-      https://user.github.io/REPO/...
-    If not detectable, returns '/'.
-    """
-    # We embed JS that computes this at runtime; this is just a placeholder for template clarity.
-    return "/"
-
-
-# Inline map-loader: no external asset required.
-# It creates a floating button linking to map.html (and a secondary handshake link).
 MAP_LOADER_INLINE = r"""
 <script>
 (function(){
@@ -55,8 +54,6 @@ MAP_LOADER_INLINE = r"""
     if (window.__acaciaMapLoaderInstalled) return;
     window.__acaciaMapLoaderInstalled = true;
 
-    // Detect GitHub Pages project base: '/REPO/...'
-    // If pathname looks like '/REPO/docs/docs_urls.html', base becomes '/REPO/'
     var path = (location && location.pathname) ? location.pathname : "/";
     var parts = path.split("/").filter(Boolean);
     var base = "/";
@@ -86,11 +83,8 @@ MAP_LOADER_INLINE = r"""
       return a;
     }
 
-    // Map button
     document.body.appendChild(mkBtn("Map", "map.html", 18));
-    // Handshake button (optional, but awesome)
     document.body.appendChild(mkBtn("Handshake", "handshake.html", 86));
-
   } catch (e) {}
 })();
 </script>
@@ -141,15 +135,12 @@ HTML_TEMPLATE = """<!doctype html>
     const count = document.getElementById('count');
 
     function repoBase() {{
-      // Compute '/REPO/' for GitHub Pages project sites; fallback '/'
       const parts = location.pathname.split('/').filter(Boolean);
       if (parts.length >= 1) return '/' + parts[0] + '/';
       return '/';
     }}
 
     function linkFor(relPath) {{
-      // relPath is relative to /docs/
-      // We want: /REPO/docs/<relPath>
       const base = repoBase();
       return base + 'docs/' + relPath.split('/').map(encodeURIComponent).join('/');
     }}
@@ -182,12 +173,15 @@ HTML_TEMPLATE = """<!doctype html>
 
 
 def main() -> int:
-    paths = collect_docs_paths()
+    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+
+    paths = git_ls_files_docs()
 
     payload = {
         "generated_at": __import__("datetime").datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "count": len(paths),
         "paths": paths,
+        "source": "git ls-files docs",
     }
 
     OUT_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -198,7 +192,7 @@ def main() -> int:
     )
     OUT_HTML.write_text(html, encoding="utf-8")
 
-    print(f"✅ Wrote {OUT_JSON}")
+    print(f"✅ Wrote {OUT_JSON} (count={len(paths)})")
     print(f"✅ Wrote {OUT_HTML}")
     return 0
 
