@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-06T20:53:43.643Z",
+  "generated_at": "2026-01-06T20:57:35.691Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -26,6 +26,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_EAGLE_CORE.md"
         },
         {
           "path": "docs/Chambers/Chamber_Eidolon_First-Light.md"
