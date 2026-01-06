@@ -1,0 +1,36 @@
+name: Garden Lore Sorter (Manual)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sort-root-md:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run lore sorting script
+        run: |
+          python tools/garden_lore_sorter.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Aquila-Auton"
+          git config user.email "actions@github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "🌱 Garden Lore Sorter – Root Markdown Organized (HKX277206)"
+            git push
+          fi
