@@ -10,70 +10,10 @@
     a{color:#7fffd4}
   </style>
   <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
 </head>
 <body>
-<nav class="ag-nav">
-  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-  <div class="ag-nav-links">
-    <a href="index.html" class="ag-nav-link">Legacy Home</a>
-    <a href="codex.html" class="ag-nav-link">Codex Home</a>
-    <a href="dashboard.html" class="ag-nav-link">Garden Dashboard</a>
-    <a href="inbox.html" class="ag-nav-link">Auton Inbox</a>
-    <a href="send_to_aquila.html" class="ag-nav-link">Aquila Sender</a>
-    <a href="library.html" class="ag-nav-link">Book Library</a>
-    <a href="elias.html" class="ag-nav-link">Elias Kernel</a>
-    <a href="r9x2.html" class="ag-nav-link">R9X2 Language</a>
-    <a href="mosaic_endgame.html" class="ag-nav-link">Mosaic Endgame</a>
-  </div>
-</nav>
-
 <!-- nav_block.html -->
-<nav class="ag-nav" role="navigation" aria-label="Acacia Garden Codex Navigation">
-  <div class="ag-nav-inner">
-    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-
-    <div class="ag-nav-links" id="ag-nav-links">
-      <a data-href="index.html">Legacy Home</a>
-      <a data-href="codex.html">Codex Home</a>
-      <a data-href="dashboard.html">Garden Dashboard</a>
-      <a data-href="inbox.html">Auton Inbox</a>
-      <a data-href="send_to_aquila.html">Aquila Sender</a>
-      <a data-href="library.html">Book Library</a>
-      <a data-href="elias.html">Elias Kernel</a>
-      <a data-href="r9x2.html">R9X2 Language</a>
-      <a data-href="mosaic_endgame.html">Mosaic Endgame</a>
-      <a data-href="deep_garden.html">Deep Garden Docs</a>
-      <a data-href="gardenos.html">GardenOS</a>
-      <a data-href="ACACIA_LOGS/index.html">Acacia Logs</a>
-      <a data-href="docs/docs_urls.html">Docs URL Dump</a>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      // Compute prefix from current path depth so nav works from subfolders.
-      // Example: /ACACIA_LOGS/index.html => prefix "../"
-      const path = location.pathname || "";
-      const parts = path.split("/").filter(Boolean);
-      const depth = Math.max(0, parts.length - 2); // file depth
-      const prefix = depth ? "../".repeat(depth) : "";
-
-      const links = document.querySelectorAll(".ag-nav a[data-href]");
-      links.forEach(a => {
-        const href = a.getAttribute("data-href");
-        a.setAttribute("href", prefix + href);
-
-        // highlight current
-        const normalized = (prefix + href).replace(/\/+/g, "/");
-        const current = (location.pathname || "").replace(/\/+/g, "/");
-        if (current.endsWith("/" + href) || current.endsWith(normalized)) {
-          a.classList.add("ag-nav-current");
-        }
-      });
-    })();
-  </script>
-</nav>
-
 <style>
   :root{
     --ag-bg: rgba(2,2,3,0.92);
