@@ -1,0 +1,96 @@
+/* assets/triad_nav.css */
+:root{
+  --triad-bg: rgba(10,14,20,.78);
+  --triad-border: rgba(255,255,255,.08);
+  --triad-text: rgba(235,245,255,.92);
+  --triad-muted: rgba(235,245,255,.62);
+  --triad-accent: rgba(127, 255, 167, .95);
+  --triad-pill: rgba(255,255,255,.06);
+  --triad-pill-hover: rgba(255,255,255,.10);
+}
+
+#triad-nav-shell{
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  background: var(--triad-bg);
+  border-bottom: 1px solid var(--triad-border);
+}
+
+#triad-nav{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 12px;
+  color: var(--triad-text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+}
+
+#triad-nav .triad-top{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#triad-nav .triad-brand{
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--triad-accent);
+}
+
+#triad-nav .triad-toggle{
+  border: 1px solid var(--triad-border);
+  background: rgba(255,255,255,.05);
+  color: var(--triad-text);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+#triad-nav .triad-links{
+  margin-top: 10px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#triad-nav a.triad-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color: var(--triad-text);
+  border: 1px solid var(--triad-border);
+  background: var(--triad-pill);
+  border-radius: 999px;
+
+  /* 👇 slim pill buttons */
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+#triad-nav a.triad-btn:hover{
+  background: var(--triad-pill-hover);
+}
+
+#triad-nav a.triad-btn.active{
+  outline: 2px solid rgba(127,255,167,.25);
+  border-color: rgba(127,255,167,.28);
+}
+
+#triad-nav .triad-hint{
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--triad-muted);
+}
+
+#triad-nav[data-collapsed="true"] .triad-links,
+#triad-nav[data-collapsed="true"] .triad-hint{
+  display:none;
+}
