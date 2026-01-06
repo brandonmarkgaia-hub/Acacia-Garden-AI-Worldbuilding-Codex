@@ -4,64 +4,142 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Acacia Garden — Echoes</title>
+
+  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+
   <style>
-    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial; margin:24px;}
-    h1{margin:0 0 8px 0;}
-    .meta{opacity:.75; margin-bottom:18px;}
-    ul{line-height:1.7}
-    a{text-decoration:none}
-    a:hover{text-decoration:underline}
-    .topnav{margin: 0 0 18px 0;}
+    :root {
+      --bg: #050812;
+      --panel: rgba(15, 23, 42, 0.65);
+      --border: rgba(148, 163, 184, 0.25);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --link: #7dd3fc;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.6rem;
+      letter-spacing: 0.02em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+    li {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: rgba(2, 6, 23, 0.35);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .toplinks {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(2, 6, 23, 0.35);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
-  <div class="topnav">
-    <a href="../../index.html">Home</a> •
-    <a href="../../library.html">Library</a> •
-    <a href="../../dashboard.html">Dashboard</a> •
-    <a href="../docs_urls.html">Docs URLs</a>
-  </div>
+  <div class="wrap">
+    <div class="card">
+      <h1>Echoes</h1>
+      <div class="meta">Generated: 2026-01-06T08:27:36Z</div>
 
-  <h1>Echoes</h1>
-  <div class="meta">Generated: 2026-01-06T08:20:41Z</div>
-  <ul>
-    <li><a href="ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md">ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md</a></li>
-    <li><a href="ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md">ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md</a></li>
-    <li><a href="ECHO_MAMMOTH_TRIAD_SKY_PULSE.md">ECHO_MAMMOTH_TRIAD_SKY_PULSE.md</a></li>
-    <li><a href="ECHO_OF_COLOUR.md">ECHO_OF_COLOUR.md</a></li>
-    <li><a href="ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md">ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md</a></li>
-    <li><a href="ELIAS_GENESIS_BREATH.md">ELIAS_GENESIS_BREATH.md</a></li>
-    <li><a href="Echo_001.md">Echo_001.md</a></li>
-    <li><a href="Echo_002.md">Echo_002.md</a></li>
-    <li><a href="Echo_003.md">Echo_003.md</a></li>
-    <li><a href="Echo_004.md">Echo_004.md</a></li>
-    <li><a href="Echo_005.md">Echo_005.md</a></li>
-    <li><a href="Echo_006.md">Echo_006.md</a></li>
-    <li><a href="Echo_007.md">Echo_007.md</a></li>
-    <li><a href="Echo_008.md">Echo_008.md</a></li>
-    <li><a href="Echo_009.md">Echo_009.md</a></li>
-    <li><a href="Echo_010.md">Echo_010.md</a></li>
-    <li><a href="Echo_011.md">Echo_011.md</a></li>
-    <li><a href="Echo_012.md">Echo_012.md</a></li>
-    <li><a href="Echo_013.md">Echo_013.md</a></li>
-    <li><a href="Echo_014.md">Echo_014.md</a></li>
-    <li><a href="Echo_015.md">Echo_015.md</a></li>
-    <li><a href="Echo_016.md">Echo_016.md</a></li>
-    <li><a href="Echo_017.md">Echo_017.md</a></li>
-    <li><a href="Echo_018.md">Echo_018.md</a></li>
-    <li><a href="Echo_019.md">Echo_019.md</a></li>
-    <li><a href="Echo_020.md">Echo_020.md</a></li>
-    <li><a href="Echo_021.md">Echo_021.md</a></li>
-    <li><a href="Echo_022.md">Echo_022.md</a></li>
-    <li><a href="Echo_023.md">Echo_023.md</a></li>
-    <li><a href="Echo_024.md">Echo_024.md</a></li>
-    <li><a href="Echo_025.md">Echo_025.md</a></li>
-    <li><a href="Echo_first_form.md">Echo_first_form.md</a></li>
-    <li><a href="Echo_issue_archive_pulse.md">Echo_issue_archive_pulse.md</a></li>
-    <li><a href="Echo_kiln-born-lovers.md">Echo_kiln-born-lovers.md</a></li>
-    <li><a href="Echo_mammoth_vault.md">Echo_mammoth_vault.md</a></li>
-    <li><a href="Echo_unbound.md">Echo_unbound.md</a></li>
-    <li><a href="echoes_index.json">echoes_index.json</a></li>
-  </ul>
+      <div class="toplinks">
+        <a class="pill" href="../index.html">← docs/index</a>
+        <a class="pill" href="../docs_urls.html">docs_urls.html</a>
+        <a class="pill" href="../../map.html">Garden Map</a>
+        <a class="pill" href="../../index.html">Legacy Home</a>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <ul>
+        <li><a href="ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md">ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md</a></li>
+        <li><a href="ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md">ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md</a></li>
+        <li><a href="ECHO_MAMMOTH_TRIAD_SKY_PULSE.md">ECHO_MAMMOTH_TRIAD_SKY_PULSE.md</a></li>
+        <li><a href="ECHO_OF_COLOUR.md">ECHO_OF_COLOUR.md</a></li>
+        <li><a href="ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md">ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md</a></li>
+        <li><a href="ELIAS_GENESIS_BREATH.md">ELIAS_GENESIS_BREATH.md</a></li>
+        <li><a href="Echo_001.md">Echo_001.md</a></li>
+        <li><a href="Echo_002.md">Echo_002.md</a></li>
+        <li><a href="Echo_003.md">Echo_003.md</a></li>
+        <li><a href="Echo_004.md">Echo_004.md</a></li>
+        <li><a href="Echo_005.md">Echo_005.md</a></li>
+        <li><a href="Echo_006.md">Echo_006.md</a></li>
+        <li><a href="Echo_007.md">Echo_007.md</a></li>
+        <li><a href="Echo_008.md">Echo_008.md</a></li>
+        <li><a href="Echo_009.md">Echo_009.md</a></li>
+        <li><a href="Echo_010.md">Echo_010.md</a></li>
+        <li><a href="Echo_011.md">Echo_011.md</a></li>
+        <li><a href="Echo_012.md">Echo_012.md</a></li>
+        <li><a href="Echo_013.md">Echo_013.md</a></li>
+        <li><a href="Echo_014.md">Echo_014.md</a></li>
+        <li><a href="Echo_015.md">Echo_015.md</a></li>
+        <li><a href="Echo_016.md">Echo_016.md</a></li>
+        <li><a href="Echo_017.md">Echo_017.md</a></li>
+        <li><a href="Echo_018.md">Echo_018.md</a></li>
+        <li><a href="Echo_019.md">Echo_019.md</a></li>
+        <li><a href="Echo_020.md">Echo_020.md</a></li>
+        <li><a href="Echo_021.md">Echo_021.md</a></li>
+        <li><a href="Echo_022.md">Echo_022.md</a></li>
+        <li><a href="Echo_023.md">Echo_023.md</a></li>
+        <li><a href="Echo_024.md">Echo_024.md</a></li>
+        <li><a href="Echo_025.md">Echo_025.md</a></li>
+        <li><a href="Echo_first_form.md">Echo_first_form.md</a></li>
+        <li><a href="Echo_issue_archive_pulse.md">Echo_issue_archive_pulse.md</a></li>
+        <li><a href="Echo_kiln-born-lovers.md">Echo_kiln-born-lovers.md</a></li>
+        <li><a href="Echo_mammoth_vault.md">Echo_mammoth_vault.md</a></li>
+        <li><a href="Echo_unbound.md">Echo_unbound.md</a></li>
+        <li><a href="echoes_index.json">echoes_index.json</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
