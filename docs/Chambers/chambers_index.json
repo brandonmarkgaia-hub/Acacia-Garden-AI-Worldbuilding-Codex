@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-06T20:58:51.300Z",
+  "generated_at": "2026-01-06T21:00:02.951Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -35,6 +35,12 @@
         },
         {
           "path": "docs/Chambers/Chamber_Eidolon_First-Light.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_GAIASEEDS_ORCHARD.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_GAIASEEDS.md"
         },
         {
           "path": "docs/Chambers/Chamber_Omega_Singularity-Core.md"
