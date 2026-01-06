@@ -1,51 +1,30 @@
-<script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<!-- nav_block.html -->
-<style>
-  :root{
-    --ag-bg: rgba(2,2,3,0.92);
-    --ag-border: rgba(42,42,52,0.85);
-    --ag-accent: rgba(46,204,113,0.90);
-    --ag-text: rgba(245,245,247,0.92);
-    --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-  .ag-nav{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: var(--ag-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ag-border);
-    padding: .85rem 1rem .75rem;
-  }
-  .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
-  .ag-nav-title{
-    font-family: var(--ag-mono);
-    font-size: .9rem;
-    letter-spacing: .18em;
-    color: var(--ag-text);
-    text-transform: uppercase;
-    margin-bottom: .55rem;
-  }
-  .ag-nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap: .55rem .9rem;
-    font-family: var(--ag-mono);
-    font-size: .85rem;
-    line-height: 1.35;
-  }
-  .ag-nav-links a{
-    color: var(--ag-accent);
-    text-decoration:none;
-    opacity: .92;
-  }
-  .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
-  .ag-nav-current{
-    opacity: 1 !important;
-    text-shadow: 0 0 12px rgba(46,204,113,0.25);
-  }
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ACACIA · TRIAD · NAV BLOCK</title>
+  <style>
+    :root{color-scheme:dark}
+    body{margin:0;background:#050812;color:#d7deff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 10px 0;letter-spacing:.2em;font-size:16px;color:#9effb6}
+    p{opacity:.85;line-height:1.5}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>ACACIA · TRIAD</h1>
+      <p>This page is a standalone preview of the Triad navigation block. Most pages should load it via <code>assets/triad_nav.js</code>.</p>
+    </div>
 
-<script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
+    <div style="height:14px"></div>
 
-<script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+    <div id="triad-nav-mount"></div>
+  </div>
+
+  <script src="assets/triad_nav.js" defer></script>
+</body>
+</html>
