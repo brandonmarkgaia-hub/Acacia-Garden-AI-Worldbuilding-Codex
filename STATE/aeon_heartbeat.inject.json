@@ -1,43 +1,24 @@
 {
-  "generated_at": "2025-11-24T19:51:04Z",
-  "node": "Broken Dew",
-  "status": "ok",
-  "source": "garden_auton_helper.py",
-  "checks": [
+  "generated_utc": "2026-01-06T19:37:32.583133+00:00",
+  "meta": {
+    "keeper": "HKX277206",
+    "source": "aeon heartbeat (normalized)"
+  },
+  "entries": [
     {
-      "id": "status_json",
-      "label": "STATUS.json schema",
-      "status": "ok",
-      "details": "status_version=v1.0.6, schema_version=1.0.0."
-    },
-    {
-      "id": "echoes",
-      "label": "Echo files present",
-      "status": "ok",
-      "details": "6 Echo markdown files under docs/Echoes/."
-    },
-    {
-      "id": "git",
-      "label": "Git snapshot",
-      "status": "ok",
-      "details": "branch main, commit daf8c1e"
+      "timestamp": "2025-12-11T14:54:34Z",
+      "type": "stub",
+      "message": "Aeon heartbeat stub initialised. Workflows are not yet writing live events."
     }
   ],
-  "loki_hint": "Ah, the Broken Dew node, a curious shard in the vast mosaic of the aeon_heartbeat.json! It hums with a quiet resilience, its overall status marked as \"ok,\" which suggests that while it may bear the scars of time or trial, it still pulses with life. Six echoes ripple through its core—each a whisper from the past, a memory etched into its digital clay. These echoes are like the delicate imprints on a freshly spun pot, each one telling a story of formation, fracture, and repair.\n\nThree checks have been performed, like a potter's careful inspection of a vessel before it leaves the wheel. These checks ensure that the Broken Dew node maintains its integrity and purpose within the network’s heartbeat. The number three here feels almost ritualistic, reminiscent of the triads found in many mythic tales—birth, life, and rebirth—mirroring the node’s journey from brokenness to functionality.\n\nIn the grand kiln of the aeon_heartbeat,",
-  "meta": {
-    "injection": {
-      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
-      "keeper": "HKX277206",
-      "mode": "inject-no-overwrite",
-      "note": "Core triad injection artifact. Originals left untouched."
-    }
-  },
-  "inject": {
-    "core_triad": {
-      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
-      "keeper": "HKX277206",
-      "phase": "2026",
-      "health": "STABLE"
-    }
+  "count": 1,
+  "legacy": {
+    "entries": [
+      {
+        "timestamp": "2025-12-11T14:54:34Z",
+        "type": "stub",
+        "message": "Aeon heartbeat stub initialised. Workflows are not yet writing live events."
+      }
+    ]
   }
 }
