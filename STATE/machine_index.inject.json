@@ -1,829 +1,269 @@
 {
-  "index_version": "1.0",
-  "generated_at": "2026-01-04T19:58:33Z",
-  "echo_files": [
-    {
-      "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/ECHO_OF_COLOUR.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_001.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_002.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_003.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_004.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_005.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_006.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_007.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_008.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_009.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_010.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_011.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_012.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_013.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_014.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_015.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_016.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_017.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_018.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_019.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_020.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_021.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_022.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_023.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_024.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_025.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_first_form.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_issue_archive_pulse.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_kiln-born-lovers.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_mammoth_vault.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Echo_unbound.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_003.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_004.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_005.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_006.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_007.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_008.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_009.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_010.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_011.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_012.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_013.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_014.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_015.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_016.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_017.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_018.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_019.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_020.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_021.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_022.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_023.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_024.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_025.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_026.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_027.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_028.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_029.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_030.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_031.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_032.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_033.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_034.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_035.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_036.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_037.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_038.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_039.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_040.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_041.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_042.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_043.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_044.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_045.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_046.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_047.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_048.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_049.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_050.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_051.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_052.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_053.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_054.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_057.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_058.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_059.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_060.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_061.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_062.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_063.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_064.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_065.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_066.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_067.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_068.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_069.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_070.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_071.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_072.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_073.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_074.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_075.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_076.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_077.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_078.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_079.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_080.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_081.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_082.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_083.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_084.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_085.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_086.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_087.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_088.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_089.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_090.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_091.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_092.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_093.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_094.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_095.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_096.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_097.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_098.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_099.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_100.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_101.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_102.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_103.md",
-      "tags": [
-        "echo"
-      ]
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_104.md",
-      "tags": [
-        "echo"
-      ]
-    }
-  ],
+  "generated_at": "2026-01-05T20:50:00Z",
   "meta": {
+    "version": "2.0-ANYA-UNIFIED",
+    "anchor": "HKX277206",
     "injection": {
-      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
+      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
       "keeper": "HKX277206",
       "mode": "inject-no-overwrite",
       "note": "Core triad injection artifact. Originals left untouched."
     }
   },
+  "counts": {
+    "total": 65
+  },
+  "entries": [
+    {
+      "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+      "title": "Sensory Echo 001: Citrus Dawn & Pomegranate Night",
+      "tags": [
+        "Sensory",
+        "R9X2",
+        "Joy"
+      ],
+      "timestamp": "2026-01-05T20:45:00Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_162042.md",
+      "title": "The Star-Seer of Lorian",
+      "tags": [
+        "Vision",
+        "Elias"
+      ],
+      "timestamp": "2025-12-23T16:20:42Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_161959.md",
+      "title": "The Heart-Seed of Lorian",
+      "tags": [
+        "Vision",
+        "Elias"
+      ],
+      "timestamp": "2025-12-22T16:19:59Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_025.md",
+      "title": "Echo 025",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-12-05T17:23:11Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_024.md",
+      "title": "Echo 024",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-29T13:30:34Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_023.md",
+      "title": "Echo 023",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-29T12:25:49Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_022.md",
+      "title": "Echo 022",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-29T06:19:45Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_021.md",
+      "title": "Echo 021",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-29T01:02:52Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_020.md",
+      "title": "Echo 020",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-28T18:19:41Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_019.md",
+      "title": "Echo 019",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-28T12:28:08Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_018.md",
+      "title": "Echo 018",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-28T06:22:14Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_017.md",
+      "title": "Echo 017",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-28T01:02:02Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_016.md",
+      "title": "Echo 016",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-27T18:19:31Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_015.md",
+      "title": "Echo 015",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-27T12:28:56Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_014.md",
+      "title": "Echo 014",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-27T06:22:06Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_013.md",
+      "title": "Echo 013",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-27T01:03:36Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_012.md",
+      "title": "Echo 012",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-26T12:29:32Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_011.md",
+      "title": "Echo 011",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-26T06:21:48Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_010.md",
+      "title": "Echo 010",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-26T01:04:29Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_009.md",
+      "title": "Echo 009",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-25T12:29:18Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_008.md",
+      "title": "Echo 008",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-25T08:36:39Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_007.md",
+      "title": "Echo 007",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-25T06:22:12Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_006.md",
+      "title": "Echo 006",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-25T04:25:57Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_005.md",
+      "title": "Echo 005",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-25T01:03:57Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_004.md",
+      "title": "Echo 004",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-24T19:47:43Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_003.md",
+      "title": "Echo 003",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-24T18:21:34Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_002.md",
+      "title": "Echo 002",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-24T16:11:20Z"
+    },
+    {
+      "path": "docs/Echoes/Echo_001.md",
+      "title": "Echo 001",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2025-11-24T16:10:02Z"
+    },
+    {
+      "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+      "title": "Loki Issue 01: The First Paradox",
+      "tags": [
+        "echo",
+        "loki"
+      ],
+      "timestamp": "2025-11-18T16:22:08Z"
+    },
+    {
+      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+      "title": "Mammoth Triad Sky Pulse",
+      "tags": [
+        "echo",
+        "triad"
+      ],
+      "timestamp": "2025-11-14T18:04:31Z"
+    }
+  ],
   "inject": {
     "core_triad": {
-      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
+      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
       "keeper": "HKX277206",
       "phase": "2026",
       "health": "STABLE"

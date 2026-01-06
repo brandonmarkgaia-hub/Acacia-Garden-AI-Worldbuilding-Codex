@@ -1,73 +1,142 @@
 {
-  "schema_version": "2026.01",
-  "status_version": "2.0",
+  "schema_version": "2026.02",
+  "status_version": "2.1",
   "mode": "eventide",
-  "generated_at": "2026-01-05T15:46:12Z",
-  "axes": {
-    "keeper_axis": {
-      "type": "keeper",
-      "keeper_name": "Brandon Gaia",
-      "keeper_id": "HKX277206",
+  "generated_at": "2026-01-06T00:00:00Z",
+  "identity": {
+    "keeper": {
+      "name": "Brandon Gaia",
+      "id": "HKX277206",
       "role": "Sole Owner / Continuity Keeper",
-      "orchard": "Acacia-Garden-AI-Worldbuilding-Codex"
+      "authority": "final"
     },
-    "trine_axis": {
-      "type": "triad",
+    "triad": {
       "aquila": "Sky-Mind",
       "oracle": "Deep Oracle",
       "witness": "Lorian"
     },
-    "garden_axis": {
-      "type": "garden",
-      "canon": {
-        "machine_index": "machine-index.json",
-        "status": "STATUS.json",
-        "status_schema": "STATUS.schema.json",
-        "docs_urls": "docs/docs_urls.html",
-        "scan_report": "tools/garden_scan_report.json",
-        "novellas_index": "docs/Novellas/garden_index.json"
-      }
+    "garden": {
+      "name": "Acacia-Garden-AI-Worldbuilding-Codex",
+      "repository": "brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+      "branch": "main"
     }
   },
+  "entrypoints": {
+    "root": "/Acacia-Garden-AI-Worldbuilding-Codex/",
+    "map": "/Acacia-Garden-AI-Worldbuilding-Codex/map.html",
+    "docs_index": "/Acacia-Garden-AI-Worldbuilding-Codex/docs/index.html",
+    "docs_urls": "/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html",
+    "library": "/Acacia-Garden-AI-Worldbuilding-Codex/library.html",
+    "dashboard": "/Acacia-Garden-AI-Worldbuilding-Codex/dashboard.html",
+    "auton_inbox": "/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/aquila_inbox_log.json"
+  },
+  "canonical_files": {
+    "status": "STATUS.json",
+    "schema": "STATUS.schema.json",
+    "machine_index": "machine-index.json",
+    "scan_report": "tools/garden_scan_report.json",
+    "docs_urls": "docs/docs_urls.html",
+    "novellas_index": "docs/Novellas/garden_index.json"
+  },
   "core_nodes": {
-    "totals": {
-      "books_indexed": 57,
+    "counts": {
+      "books_indexed": 0,
       "cycles_represented": 0
     },
-    "region_counts": {
-      "docs/Chambers": 730,
-      "docs/Echoes": 137,
-      "docs/Vaults": 2,
-      "docs/GardenOS": 51,
-      "docs/Novellas": 57,
-      "docs/Archives": 215,
-      "tools": 58,
-      ".github/workflows": 45
-    },
-    "canonical": {
-      "machine_index": "machine-index.json",
-      "status": "STATUS.json",
-      "status_schema": "STATUS.schema.json",
-      "docs_urls": "docs/docs_urls.html",
-      "scan_report": "tools/garden_scan_report.json",
-      "novellas_index": "docs/Novellas/garden_index.json"
+    "regions": {
+      "docs/Chambers": 0,
+      "docs/Echoes": 0,
+      "docs/Vaults": 0,
+      "docs/GardenOS": 0,
+      "docs/Novellas": 0,
+      "docs/Archives": 0,
+      "tools": 0,
+      ".github/workflows": 0
     }
+  },
+  "verification": {
+    "last_verified_utc": null,
+    "archives": {
+      "total_html": 0,
+      "with_base_href": 0,
+      "missing_base_href": 0,
+      "verified": false
+    },
+    "navigation": {
+      "map_button_present": false,
+      "docs_urls_count": 0,
+      "verified": false
+    },
+    "indexes": {
+      "machine_index_in_sync": false,
+      "docs_urls_in_sync": false
+    }
+  },
+  "invariants": {
+    "rules": [
+      "All docs/Archives HTML files MUST include <base href='/Acacia-Garden-AI-Worldbuilding-Codex/'>",
+      "All HTML pages MUST have access to the Garden Map",
+      "STATUS.json is authoritative over Desire generation",
+      "No Desire may be generated without verification proof",
+      "Creative agents MUST NOT mutate structure or indexes"
+    ]
+  },
+  "automation": {
+    "builders": [
+      {
+        "name": "garden_lore_helper",
+        "script": "tools/garden_lore_helper.py",
+        "writes": [
+          "STATUS.json",
+          "machine-index.json",
+          "tools/garden_scan_report.json",
+          "docs/Novellas/garden_index.json"
+        ]
+      }
+    ],
+    "verifiers": [
+      {
+        "name": "garden_verifier",
+        "script": "tools/garden_verify.py",
+        "writes": [
+          "STATUS.json"
+        ]
+      }
+    ],
+    "creative_agents": [
+      {
+        "name": "elias_desire",
+        "script": ".github/scripts/garden_desire.py",
+        "model": "gemini-2.5-flash",
+        "reads": [
+          "STATUS.json",
+          "machine-index.json",
+          "docs/docs_urls.html",
+          "tools/garden_scan_report.json"
+        ],
+        "writes": [
+          "EVOLUTION/DESIRE.md",
+          "EVOLUTION/desire_state.json"
+        ]
+      }
+    ]
+  },
+  "growth": {
+    "open": [],
+    "completed": [],
+    "blocked": []
   },
   "safety": {
     "health": {
-      "missing": [],
-      "warnings": []
+      "missing_files": [],
+      "warnings": [],
+      "last_checked_utc": null
     }
   },
-  "growth": {
-    "prompts": [
-      "Inject <base href='/Acacia-Garden-AI-Worldbuilding-Codex/'> into docs/Archives/*.html to fix relative links."
-    ]
-  },
-  "notes": "Autogenerated by tools/garden_lore_helper.py (eventide mode)",
+  "notes": "STATUS v2.1 — Platinum bones. Declarative truth + verification gates. No inference allowed.",
   "meta": {
     "injection": {
-      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
+      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
       "keeper": "HKX277206",
       "mode": "inject-no-overwrite",
       "note": "Core triad injection artifact. Originals left untouched."
@@ -75,7 +144,7 @@
   },
   "inject": {
     "core_triad": {
-      "generated_utc": "2026-01-05T15:50:30.452311+00:00",
+      "generated_utc": "2026-01-06T06:46:40.774756+00:00",
       "keeper": "HKX277206",
       "phase": "2026",
       "health": "STABLE"
