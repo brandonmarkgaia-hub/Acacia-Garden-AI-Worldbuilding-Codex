@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-06T07:48:01.817519+00:00**
+- Generated (UTC): **2026-01-06T07:53:42.119864+00:00**
 - Total files: **2309**
-- Anchor fingerprint (sha1): `b2f43ad381ffd22f6fad75e18fee13477b57dded`
+- Anchor fingerprint (sha1): `6df5caf2a4f2ef43ac531e09edc18a35d08d3e7c`
 
 ## Key anchors
 
@@ -94,11 +94,13 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
+- `tools/splitter.py`
 - `tools/void_loom.py`
 - `tools/sync_maestro.py`
 - `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
 - `tools/synaptic_resonance_weaver.py`
+- `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
 - `tools/temporal_synthesis_engine.py`
 - `whisper/README.md`
@@ -110,7 +112,6 @@
 - `tools/root_manifest_generator.py`
 - `tools/reflection-log.json`
 - `tools/garden_void_loom.py`
-- `tools/splitter.py`
 - `tools/omni_resonance_synchronizer.py`
 - `tools/generate_garden_index.py`
 - `tools/garden_verify.py`
@@ -118,4 +119,3 @@
 - `tools/soma_synaptic_weaver.py`
 - `tools/garden_signature_scanner.py`
 - `tools/resonance_mirror.py`
-- `tools/ghost_root_synchronizer.py`
