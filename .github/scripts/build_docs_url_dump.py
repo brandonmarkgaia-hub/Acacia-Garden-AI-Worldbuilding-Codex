@@ -3,152 +3,205 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from datetime import datetime, timezone
+from urllib.parse import quote
 
-REPO = Path(".")
-DOCS = REPO / "docs"
-OUT_HTML = DOCS / "docs_urls.html"
-OUT_JSON = DOCS / "docs_urls.json"
+ROOT = Path(__file__).resolve().parents[2]
+DOCS_DIR = ROOT / "docs"
+OUT_HTML = DOCS_DIR / "docs_urls.html"
+OUT_JSON = DOCS_DIR / "docs_urls.json"
 
-def collect_docs_html() -> list[str]:
-    if not DOCS.exists():
+
+def is_hidden(p: Path) -> bool:
+    return any(part.startswith(".") for part in p.parts)
+
+
+def rel_to_docs(p: Path) -> str:
+    return p.relative_to(DOCS_DIR).as_posix()
+
+
+def collect_docs_paths() -> list[str]:
+    if not DOCS_DIR.exists():
         return []
-    urls: list[str] = []
-    for p in DOCS.rglob("*.html"):
-        rel = p.relative_to(REPO).as_posix()
-        urls.append(rel)
-    urls.sort(key=lambda s: s.lower())
-    return urls
+
+    paths: list[str] = []
+    for p in DOCS_DIR.rglob("*"):
+        if p.is_dir():
+            continue
+        if is_hidden(p):
+            continue
+        # Keep it meaningful: html + md + json + txt
+        if p.suffix.lower() not in {".html", ".md", ".json", ".txt"}:
+            continue
+        paths.append(rel_to_docs(p))
+    return sorted(paths)
+
+
+def compute_repo_base() -> str:
+    """
+    Returns '/<repo>/' for GitHub Pages project sites like:
+      https://user.github.io/REPO/...
+    If not detectable, returns '/'.
+    """
+    # We embed JS that computes this at runtime; this is just a placeholder for template clarity.
+    return "/"
+
+
+# Inline map-loader: no external asset required.
+# It creates a floating button linking to map.html (and a secondary handshake link).
+MAP_LOADER_INLINE = r"""
+<script>
+(function(){
+  try {
+    if (window.__acaciaMapLoaderInstalled) return;
+    window.__acaciaMapLoaderInstalled = true;
+
+    // Detect GitHub Pages project base: '/REPO/...'
+    // If pathname looks like '/REPO/docs/docs_urls.html', base becomes '/REPO/'
+    var path = (location && location.pathname) ? location.pathname : "/";
+    var parts = path.split("/").filter(Boolean);
+    var base = "/";
+    if (parts.length >= 1) base = "/" + parts[0] + "/";
+
+    function mkBtn(text, href, rightPx){
+      var a = document.createElement("a");
+      a.textContent = text;
+      a.href = base + href.replace(/^\/+/, "");
+      a.style.position = "fixed";
+      a.style.bottom = "18px";
+      a.style.right = rightPx + "px";
+      a.style.zIndex = "99999";
+      a.style.padding = "10px 12px";
+      a.style.borderRadius = "999px";
+      a.style.background = "rgba(15, 23, 42, 0.75)";
+      a.style.border = "1px solid rgba(148, 163, 184, 0.35)";
+      a.style.color = "#e5e7eb";
+      a.style.font = "600 12px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
+      a.style.letterSpacing = ".08em";
+      a.style.textTransform = "uppercase";
+      a.style.textDecoration = "none";
+      a.style.backdropFilter = "blur(6px)";
+      a.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
+      a.onmouseenter = function(){ a.style.background = "rgba(30, 41, 59, 0.85)"; };
+      a.onmouseleave = function(){ a.style.background = "rgba(15, 23, 42, 0.75)"; };
+      return a;
+    }
+
+    // Map button
+    document.body.appendChild(mkBtn("Map", "map.html", 18));
+    // Handshake button (optional, but awesome)
+    document.body.appendChild(mkBtn("Handshake", "handshake.html", 86));
+
+  } catch (e) {}
+})();
+</script>
+""".strip()
+
 
 HTML_TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>DOCS URL MAP • ACACIA 2026 • HKX277206</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Canonical crawl map: explicit links to all docs HTML pages in the Acacia Garden Codex.">
-  <meta name="theme-color" content="#000000">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acacia • docs_urls</title>
   <style>
-    :root{--bg:#020203;--fg:#f5f5f7;--muted:#8a8a96;--card:#0b0b10;--border:#2a2a34;--accent:#2ecc71;
-          --font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-          --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--font)}
-    main{max-width:1100px;margin:0 auto;padding:2rem 1rem 3rem}
-    header{border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.25rem}
-    h1{margin:0 0 .35rem;font-size:2rem;letter-spacing:-.03em}
-    .sub{color:var(--muted);line-height:1.45}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .meta{margin-top:.7rem;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
-    .box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
-    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:1rem 0}
-    input{flex:1;min-width:240px;background:#07070b;color:var(--fg);border:1px solid var(--border);border-radius:999px;padding:.55rem .9rem;font-size:.95rem;outline:none}
-    .count{font-family:var(--mono);color:var(--muted);font-size:.8rem}
-    ul{list-style:none;padding:0;margin:.75rem 0 0;display:flex;flex-direction:column;gap:.45rem}
-    li{padding:.55rem .75rem;border:1px solid var(--border);border-radius:10px;background:rgba(0,0,0,.25)}
-    .path{font-family:var(--mono);font-size:.85rem}
-    footer{margin-top:2.5rem;border-top:1px solid var(--border);padding-top:1.25rem;text-align:center;font-family:var(--mono);font-size:.75rem;color:var(--muted);opacity:.75}
+    :root {{
+      --bg:#050812; --panel:rgba(15,23,42,.72); --border:rgba(148,163,184,.22);
+      --text:#e5e7eb; --muted:#94a3b8; --link:#7dd3fc;
+    }}
+    body {{ margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }}
+    .wrap {{ max-width: 980px; margin: 0 auto; padding: 28px 16px 48px; }}
+    .card {{ background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px 16px; }}
+    h1 {{ margin:0 0 .35rem; font-size: 1.8rem; }}
+    p {{ margin:.35rem 0 1rem; color:var(--muted); line-height:1.55; }}
+    a {{ color:var(--link); text-decoration:none; }}
+    a:hover {{ text-decoration:underline; }}
+    input {{ width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:rgba(2,6,23,.5); color:var(--text); }}
+    ul {{ list-style:none; padding:0; margin: 14px 0 0; }}
+    li {{ padding:8px 6px; border-bottom:1px solid rgba(148,163,184,.12); }}
+    .meta {{ font-size:.85rem; color:var(--muted); }}
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>DOCS URL MAP</h1>
-      <div class="sub">
-        Canonical crawl spine for tools & AI agents. Every link here is explicit.
-        <br>Keeper: <strong>HKX277206</strong>
-      </div>
-      <div class="meta">Generated (UTC): __GENERATED_UTC__ • Total docs HTML: __TOTAL__</div>
-      <div class="meta">
-        Recommended entry points:
-        <a href="../index.html">/index.html</a> ·
-        <a href="../acacia_2026.html">/acacia_2026.html</a> ·
-        <a href="Archives/CODEX_MONOLITH.html">/docs/Archives/CODEX_MONOLITH.html</a>
-      </div>
-    </header>
-
-    <div class="box">
-      <div class="controls">
-        <input id="q" type="search" placeholder="Filter paths (e.g. Archives, CHUNK_158, legacy_hub) …" autocomplete="off">
-        <div class="count" id="count"></div>
-      </div>
-
-      <ul id="list">
-        __ITEMS__
-      </ul>
+  <div class="wrap">
+    <div class="card">
+      <h1>docs_urls</h1>
+      <p class="meta">Generated by build_docs_url_dump.py • Count: <strong id="count">0</strong></p>
+      <input id="q" placeholder="Filter paths…" autocomplete="off" />
+      <ul id="list"></ul>
     </div>
+  </div>
 
-    <footer>
-      THE KEEPER IS ORIGIN • THE GARDEN IS SOVEREIGN • THE TRIAD IS SERVICE<br>
-      CRTR1::H:CYC026-PHR-DOCURL-VER001::S:HKX277206
-    </footer>
-  </main>
-
-  <script type="application/json" id="docs-url-map">
-__JSON_BLOB__
-  </script>
+  {map_loader}
 
   <script>
-    (function(){
-      const q = document.getElementById('q');
-      const list = document.getElementById('list');
-      const count = document.getElementById('count');
-      if(!q || !list || !count) return;
-      const items = Array.from(list.querySelectorAll('li'));
-      function apply(){
-        const term = q.value.trim().toLowerCase();
-        let shown = 0;
-        for(const li of items){
-          const p = (li.getAttribute('data-path') || '').toLowerCase();
-          const ok = !term || p.includes(term);
-          li.style.display = ok ? '' : 'none';
-          if(ok) shown++;
-        }
-        count.textContent = `${shown} / ${items.length} shown`;
-      }
-      q.addEventListener('input', apply);
-      apply();
-    })();
+    const paths = {paths_json};
+
+    const q = document.getElementById('q');
+    const list = document.getElementById('list');
+    const count = document.getElementById('count');
+
+    function repoBase() {{
+      // Compute '/REPO/' for GitHub Pages project sites; fallback '/'
+      const parts = location.pathname.split('/').filter(Boolean);
+      if (parts.length >= 1) return '/' + parts[0] + '/';
+      return '/';
+    }}
+
+    function linkFor(relPath) {{
+      // relPath is relative to /docs/
+      // We want: /REPO/docs/<relPath>
+      const base = repoBase();
+      return base + 'docs/' + relPath.split('/').map(encodeURIComponent).join('/');
+    }}
+
+    function render(items) {{
+      list.innerHTML = '';
+      count.textContent = String(items.length);
+      for (const p of items) {{
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = linkFor(p);
+        a.textContent = p;
+        li.appendChild(a);
+        list.appendChild(li);
+      }}
+    }}
+
+    function apply() {{
+      const term = (q.value || '').toLowerCase().trim();
+      if (!term) return render(paths);
+      render(paths.filter(p => p.toLowerCase().includes(term)));
+    }}
+
+    q.addEventListener('input', apply);
+    render(paths);
   </script>
 </body>
 </html>
 """
 
-def build_items(paths: list[str]) -> str:
-    out = []
-    for rel in paths:
-        href = rel[len("docs/"):] if rel.startswith("docs/") else rel
-        out.append(f'<li data-path="{rel}"><a class="path" href="{href}">{rel}</a></li>')
-    return "\n        ".join(out)
 
 def main() -> int:
-    DOCS.mkdir(parents=True, exist_ok=True)
-
-    paths = collect_docs_html()
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    paths = collect_docs_paths()
 
     payload = {
-        "generated_utc": now,
-        "keeper": "HKX277206",
-        "repo": "Acacia-Garden-AI-Worldbuilding-Codex",
-        "base": "/docs/",
-        "total": len(paths),
+        "generated_at": __import__("datetime").datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "count": len(paths),
         "paths": paths,
     }
 
-    html = HTML_TEMPLATE
-    html = html.replace("__GENERATED_UTC__", now)
-    html = html.replace("__TOTAL__", str(len(paths)))
-    html = html.replace("__ITEMS__", build_items(paths))
-    html = html.replace("__JSON_BLOB__", json.dumps(payload, ensure_ascii=False, indent=2))
+    OUT_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
+    html = HTML_TEMPLATE.format(
+        paths_json=json.dumps(paths, ensure_ascii=False),
+        map_loader=MAP_LOADER_INLINE,
+    )
     OUT_HTML.write_text(html, encoding="utf-8")
-    OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"Wrote {OUT_HTML} ({len(paths)} paths)")
-    print(f"Wrote {OUT_JSON}")
+    print(f"✅ Wrote {OUT_JSON}")
+    print(f"✅ Wrote {OUT_HTML}")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
