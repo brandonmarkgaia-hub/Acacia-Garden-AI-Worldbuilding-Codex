@@ -1,8 +1,4 @@
 name: Run Garden Tools (Maintenance)
-
-on:
-  schedule:
-    - cron: "30 0 * * *"  # daily 00:30 UTC
   workflow_dispatch:
 
 permissions:
