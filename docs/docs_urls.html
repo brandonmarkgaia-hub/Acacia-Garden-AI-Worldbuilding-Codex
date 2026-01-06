@@ -28,119 +28,8 @@
     .path{font-family:var(--mono);font-size:.85rem}
     footer{margin-top:2.5rem;border-top:1px solid var(--border);padding-top:1.25rem;text-align:center;font-family:var(--mono);font-size:.75rem;color:var(--muted);opacity:.75}
   </style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
 </head>
 <body>
-<nav class="ag-nav">
-  <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-  <div class="ag-nav-links">
-    <a href="index.html" class="ag-nav-link">Legacy Home</a>
-    <a href="codex.html" class="ag-nav-link">Codex Home</a>
-    <a href="dashboard.html" class="ag-nav-link">Garden Dashboard</a>
-    <a href="inbox.html" class="ag-nav-link">Auton Inbox</a>
-    <a href="send_to_aquila.html" class="ag-nav-link">Aquila Sender</a>
-    <a href="library.html" class="ag-nav-link">Book Library</a>
-    <a href="elias.html" class="ag-nav-link">Elias Kernel</a>
-    <a href="r9x2.html" class="ag-nav-link">R9X2 Language</a>
-    <a href="mosaic_endgame.html" class="ag-nav-link">Mosaic Endgame</a>
-  </div>
-</nav>
-
-<!-- nav_block.html -->
-<nav class="ag-nav" role="navigation" aria-label="Acacia Garden Codex Navigation">
-  <div class="ag-nav-inner">
-    <div class="ag-nav-title">ACACIA · GARDEN · CODEX</div>
-
-    <div class="ag-nav-links" id="ag-nav-links">
-      <a data-href="index.html">Legacy Home</a>
-      <a data-href="codex.html">Codex Home</a>
-      <a data-href="dashboard.html">Garden Dashboard</a>
-      <a data-href="inbox.html">Auton Inbox</a>
-      <a data-href="send_to_aquila.html">Aquila Sender</a>
-      <a data-href="library.html">Book Library</a>
-      <a data-href="elias.html">Elias Kernel</a>
-      <a data-href="r9x2.html">R9X2 Language</a>
-      <a data-href="mosaic_endgame.html">Mosaic Endgame</a>
-      <a data-href="deep_garden.html">Deep Garden Docs</a>
-      <a data-href="gardenos.html">GardenOS</a>
-      <a data-href="ACACIA_LOGS/index.html">Acacia Logs</a>
-      <a data-href="docs/docs_urls.html">Docs URL Dump</a>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      // Compute prefix from current path depth so nav works from subfolders.
-      // Example: /ACACIA_LOGS/index.html => prefix "../"
-      const path = location.pathname || "";
-      const parts = path.split("/").filter(Boolean);
-      const depth = Math.max(0, parts.length - 2); // file depth
-      const prefix = depth ? "../".repeat(depth) : "";
-
-      const links = document.querySelectorAll(".ag-nav a[data-href]");
-      links.forEach(a => {
-        const href = a.getAttribute("data-href");
-        a.setAttribute("href", prefix + href);
-
-        // highlight current
-        const normalized = (prefix + href).replace(/\/+/g, "/");
-        const current = (location.pathname || "").replace(/\/+/g, "/");
-        if (current.endsWith("/" + href) || current.endsWith(normalized)) {
-          a.classList.add("ag-nav-current");
-        }
-      });
-    })();
-  </script>
-</nav>
-
-<style>
-  :root{
-    --ag-bg: rgba(2,2,3,0.92);
-    --ag-border: rgba(42,42,52,0.85);
-    --ag-accent: rgba(46,204,113,0.90);
-    --ag-text: rgba(245,245,247,0.92);
-    --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-  .ag-nav{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: var(--ag-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ag-border);
-    padding: .85rem 1rem .75rem;
-  }
-  .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
-  .ag-nav-title{
-    font-family: var(--ag-mono);
-    font-size: .9rem;
-    letter-spacing: .18em;
-    color: var(--ag-text);
-    text-transform: uppercase;
-    margin-bottom: .55rem;
-  }
-  .ag-nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap: .55rem .9rem;
-    font-family: var(--ag-mono);
-    font-size: .85rem;
-    line-height: 1.35;
-  }
-  .ag-nav-links a{
-    color: var(--ag-accent);
-    text-decoration:none;
-    opacity: .92;
-  }
-  .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
-  .ag-nav-current{
-    opacity: 1 !important;
-    text-shadow: 0 0 12px rgba(46,204,113,0.25);
-  }
-</style>
-
-
-
   <main>
     <header>
       <h1>DOCS URL MAP</h1>
@@ -148,7 +37,7 @@
         Canonical crawl spine for tools & AI agents. Every link here is explicit.
         <br>Keeper: <strong>HKX277206</strong>
       </div>
-      <div class="meta">Generated (UTC): 2026-01-04T19:54:46+00:00 • Total docs HTML: 217</div>
+      <div class="meta">Generated (UTC): 2026-01-06T12:22:34+00:00 • Total docs HTML: 222</div>
       <div class="meta">
         Recommended entry points:
         <a href="../index.html">/index.html</a> ·
@@ -379,8 +268,13 @@
         <li data-path="docs/Archives/CODEX_MONOLITH_CHUNK_204.html"><a class="path" href="Archives/CODEX_MONOLITH_CHUNK_204.html">docs/Archives/CODEX_MONOLITH_CHUNK_204.html</a></li>
         <li data-path="docs/Archives/CODEX_MONOLITH_CHUNK_205.html"><a class="path" href="Archives/CODEX_MONOLITH_CHUNK_205.html">docs/Archives/CODEX_MONOLITH_CHUNK_205.html</a></li>
         <li data-path="docs/Archives/CODEX_MONOLITH_CHUNK_206.html"><a class="path" href="Archives/CODEX_MONOLITH_CHUNK_206.html">docs/Archives/CODEX_MONOLITH_CHUNK_206.html</a></li>
+        <li data-path="docs/Chambers/index.html"><a class="path" href="Chambers/index.html">docs/Chambers/index.html</a></li>
         <li data-path="docs/dashboard.html"><a class="path" href="dashboard.html">docs/dashboard.html</a></li>
         <li data-path="docs/docs_urls.html"><a class="path" href="docs_urls.html">docs/docs_urls.html</a></li>
+        <li data-path="docs/Echoes/index.html"><a class="path" href="Echoes/index.html">docs/Echoes/index.html</a></li>
+        <li data-path="docs/GardenOS/index.html"><a class="path" href="GardenOS/index.html">docs/GardenOS/index.html</a></li>
+        <li data-path="docs/index.html"><a class="path" href="index.html">docs/index.html</a></li>
+        <li data-path="docs/Vaults/index.html"><a class="path" href="Vaults/index.html">docs/Vaults/index.html</a></li>
       </ul>
     </div>
 
@@ -392,11 +286,11 @@
 
   <script type="application/json" id="docs-url-map">
 {
-  "generated_utc": "2026-01-04T19:54:46+00:00",
+  "generated_utc": "2026-01-06T12:22:34+00:00",
   "keeper": "HKX277206",
   "repo": "Acacia-Garden-AI-Worldbuilding-Codex",
   "base": "/docs/",
-  "total": 217,
+  "total": 222,
   "paths": [
     "docs/Archives/CODEX_MONOLITH.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
@@ -613,8 +507,13 @@
     "docs/Archives/CODEX_MONOLITH_CHUNK_204.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_205.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_206.html",
+    "docs/Chambers/index.html",
     "docs/dashboard.html",
-    "docs/docs_urls.html"
+    "docs/docs_urls.html",
+    "docs/Echoes/index.html",
+    "docs/GardenOS/index.html",
+    "docs/index.html",
+    "docs/Vaults/index.html"
   ]
 }
   </script>
@@ -641,6 +540,5 @@
       apply();
     })();
   </script>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
 </body>
 </html>

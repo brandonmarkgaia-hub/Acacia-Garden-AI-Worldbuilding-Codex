@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-01-04T19:54:46+00:00",
+  "generated_utc": "2026-01-06T12:22:34+00:00",
   "keeper": "HKX277206",
   "repo": "Acacia-Garden-AI-Worldbuilding-Codex",
   "base": "/docs/",
-  "total": 217,
+  "total": 222,
   "paths": [
     "docs/Archives/CODEX_MONOLITH.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_001.html",
@@ -220,7 +220,12 @@
     "docs/Archives/CODEX_MONOLITH_CHUNK_204.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_205.html",
     "docs/Archives/CODEX_MONOLITH_CHUNK_206.html",
+    "docs/Chambers/index.html",
     "docs/dashboard.html",
-    "docs/docs_urls.html"
+    "docs/docs_urls.html",
+    "docs/Echoes/index.html",
+    "docs/GardenOS/index.html",
+    "docs/index.html",
+    "docs/Vaults/index.html"
   ]
 }
