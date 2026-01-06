@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Acacia Garden • Aeon Dashboard</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+
   <style>
     :root {
       --bg: #05070b;
@@ -19,9 +19,7 @@
       --danger: #f97373;
       --warning: #facc15;
       --muted: #6b7280;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --chip-bg: rgba(148, 163, 184, 0.16);
-      --chip-border: rgba(148, 163, 184, 0.35);
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -29,275 +27,247 @@
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at top, #020617 0, #020617 35%, #020617 100%);
+      font-family: var(--font);
+      background: radial-gradient(circle at top, #111827 0, #020617 40%, #000 100%);
       color: var(--text-main);
-      font-family: var(--font-main);
-      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
 
     .shell {
-      max-width: 1200px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
+      padding: 1.5rem 1rem 2.5rem;
     }
 
-    header { margin-bottom: 1.75rem; }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    header .sub {
-      margin-top: 0.35rem;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-    }
-
-    header .pill-row {
-      margin-top: 0.75rem;
+    header {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
     }
 
-    .pill {
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    header h1 span.logo {
+      width: 1.6rem;
+      height: 1.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 0.22rem 0.7rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.8);
+      background: conic-gradient(from 210deg, #22c55e, #38bdf8, #a855f7, #22c55e);
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
-      white-space: nowrap;
+      justify-content: center;
+      font-size: 0.95rem;
     }
 
-    .pill.keeper {
-      border-color: rgba(34, 197, 94, 0.7);
-      color: #bbf7d0;
-      background: rgba(21, 128, 61, 0.18);
+    header .meta {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      text-align: right;
     }
 
-    .pill.muted { opacity: 0.85; }
+    header .meta div { margin: 0.05rem 0; }
 
-    .pill .dot {
-      width: 0.4rem;
-      height: 0.4rem;
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.25rem 0 1rem;
+    }
+
+    .nav-btn {
       border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      padding: 0.25rem 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
+
+    .nav-btn span.dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .nav-btn.active {
+      border-color: var(--accent-alt);
+      color: var(--accent-alt);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.96));
+    }
+
+    .nav-btn.active span.dot { background: var(--accent-alt); }
 
     main {
       display: grid;
-      grid-template-columns: minmax(0, 2.15fr) minmax(0, 1.35fr);
-      gap: 1.25rem;
-      align-items: flex-start;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 1rem;
     }
 
-    @media (max-width: 880px) {
+    @media (max-width: 800px) {
       main { grid-template-columns: minmax(0, 1fr); }
+      header { flex-direction: column; align-items: flex-start; }
+      header .meta { text-align: left; }
     }
 
     section {
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
-      border-radius: 1rem;
-      border: 1px solid rgba(148, 163, 184, 0.22);
-      padding: 1.05rem 1rem 1.1rem;
-      box-shadow:
-        0 18px 35px rgba(15, 23, 42, 0.7),
-        inset 0 0 0 1px rgba(15, 23, 42, 0.9);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1.25rem;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
+      border-radius: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      padding: 0.9rem 0.9rem 0.85rem;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
     }
 
-    section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 58%),
-        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.12), transparent 55%);
-      opacity: 0.45;
-      mix-blend-mode: screen;
-    }
-
-    section > * { position: relative; z-index: 1; }
+    section + section { margin-top: 0.7rem; }
 
     .section-header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.65rem;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .section-header h2 {
       margin: 0;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 0.1rem 0.45rem;
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #cbd5f5;
-      background: rgba(15, 23, 42, 0.9);
-      margin-left: 0.4rem;
-      gap: 0.25rem;
-    }
-
-    .badge .dot {
-      width: 0.36rem;
-      height: 0.36rem;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
-    }
-
-    .hint {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      max-width: 360px;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.65rem;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 600px) {
-      .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    .stat-card {
-      border-radius: 0.8rem;
-      border: 1px dashed rgba(148, 163, 184, 0.4);
-      padding: 0.5rem 0.55rem;
-      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.12), rgba(15, 23, 42, 0.95));
+      font-size: 0.95rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-      min-height: 3.2rem;
+      align-items: center;
+      gap: 0.35rem;
     }
 
-    .stat-card .label {
+    .section-header h2 span.badge {
       font-size: 0.7rem;
-      color: var(--text-soft);
+      padding: 0.06rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
     }
 
-    .stat-card .value {
-      font-size: 1.1rem;
-      font-variant-numeric: tabular-nums;
-    }
+    .section-header .hint { font-size: 0.75rem; color: var(--text-soft); }
 
-    .stat-card .sub {
-      font-size: 0.72rem;
-      color: var(--text-soft);
-      margin-top: 0.1rem;
-    }
-
-    .status-row {
-      margin-top: 0.8rem;
+    .pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.45rem;
+      margin: 0.25rem 0 0.35rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-soft);
+      display: inline-flex;
       align-items: center;
-      font-size: 0.78rem;
+      gap: 0.25rem;
+      white-space: nowrap;
+    }
+
+    .pill span.dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .pill.warn { border-color: rgba(250, 204, 21, 0.45); color: var(--warning); }
+    .pill.danger { border-color: rgba(248, 113, 113, 0.6); color: var(--danger); }
+    .pill.muted {
+      border-style: dashed;
+      border-color: rgba(75, 85, 99, 0.7);
+      color: var(--muted);
+    }
+
+    .grid-mini {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 0.4rem;
+      margin-top: 0.15rem;
+    }
+
+    .stat-card {
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15), rgba(15, 23, 42, 0.95));
+      border-radius: 0.7rem;
+      padding: 0.45rem 0.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
       color: var(--text-soft);
     }
 
-    .status-row .status-pill {
-      display: inline-flex;
+    .stat-card .value { margin-top: 0.1rem; font-size: 1.15rem; font-weight: 600; }
+    .stat-card .meta { margin-top: 0.05rem; font-size: 0.7rem; color: var(--muted); }
+
+    ul.list {
+      list-style: none;
+      padding: 0;
+      margin: 0.1rem 0 0.1rem;
+      font-size: 0.78rem;
+    }
+
+    ul.list li {
+      padding: 0.18rem 0;
+      border-bottom: 1px dashed rgba(31, 41, 55, 0.9);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.45rem;
       align-items: center;
-      gap: 0.3rem;
-      padding: 0.22rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.35);
     }
 
-    .status-pill .led {
-      width: 0.38rem;
-      height: 0.38rem;
-      border-radius: 999px;
-      background: #4b5563;
-      box-shadow: 0 0 0 1px rgba(55, 65, 81, 0.6);
+    ul.list li:last-child { border-bottom: none; }
+
+    .list .left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
     }
 
-    .status-pill.ok .led {
-      background: var(--accent);
-      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.8), 0 0 7px rgba(16, 185, 129, 0.9);
-    }
+    .list .title { font-weight: 500; }
+    .list .meta-line { font-size: 0.7rem; color: var(--muted); }
 
-    .status-pill.warn .led {
-      background: var(--warning);
-      box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.8), 0 0 7px rgba(250, 204, 21, 0.9);
-    }
-
-    .status-pill.err .led {
-      background: #ef4444;
-      box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.8), 0 0 7px rgba(248, 113, 113, 0.9);
-    }
+    .error { font-size: 0.75rem; color: var(--danger); margin-top: 0.25rem; }
 
     .links-row {
-      margin-top: 0.6rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
+      margin-top: 0.35rem;
     }
 
-    .link-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.28rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.72rem;
-      color: #e5e7eb;
+    a.link-pill {
       text-decoration: none;
-      background: rgba(15, 23, 42, 0.95);
-      white-space: nowrap;
-      gap: 0.3rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--accent-alt);
+      background: rgba(15, 23, 42, 0.9);
     }
 
-    .link-pill:hover {
-      background: rgba(30, 64, 175, 0.9);
-      border-color: rgba(129, 140, 248, 0.9);
-    }
-
-    .error {
-      margin-top: 0.55rem;
-      padding: 0.35rem 0.55rem;
-      border-radius: 0.6rem;
-      border: 1px solid rgba(248, 113, 113, 0.8);
-      background: rgba(248, 113, 113, 0.12);
-      font-size: 0.75rem;
-      color: #fecaca;
-      display: none;
-    }
+    a.link-pill:hover { border-color: var(--accent-alt); }
 
     footer {
       margin-top: 1.4rem;
@@ -305,686 +275,436 @@
       font-size: 0.7rem;
       color: var(--muted);
     }
-
-    /* Single, safe nav */
-    .ag-nav{
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:rgba(2,2,3,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #2a2a34;
-      padding:.9rem 1rem .75rem;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .ag-nav-title{
-      font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-      font-size:.8rem;
-      letter-spacing:.22em;
-      color:#8a8a96;
-      text-transform:uppercase;
-      margin-bottom:.5rem;
-    }
-    .ag-nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem .9rem;
-      font-size:.85rem;
-    }
-    .ag-nav-links a{
-      color:#2ecc71;
-      text-decoration:none;
-      opacity:.85;
-    }
-    .ag-nav-links a:hover{
-      opacity:1;
-      text-decoration:underline;
-    }
   </style>
+
+  <!-- One map button only (canonical) -->
   <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+
+  <!-- Triad nav (canonical absolute paths) -->
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
   <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
 
 <body>
 <div class="shell">
-    <header>
-      <h1>Aeon Console · Garden</h1>
-      <div class="sub">Read-only dashboard wiring together STATUS.json, scan reports, vault maps and Aeon signals.</div>
+  <header>
+    <h1>
+      <span class="logo">🌱</span>
+      <span>Acacia Garden • Aeon Console</span>
+    </h1>
+    <div class="meta" id="header-meta">
+      <div>Keeper: <strong>HKX277206</strong></div>
+      <div id="meta-status">Loading Garden state…</div>
+    </div>
+  </header>
 
-      <div class="pill-row">
-        <div class="pill keeper"><span class="dot"></span>Keeper HKX277206</div>
-        <div class="pill"><span class="dot"></span>Aeon console online (HTML only)</div>
-        <div class="pill muted"><span class="dot"></span>JSON feeds: status, scan, vault, index, heartbeat, Cicada</div>
-      </div>
-    </header>
-
-    <main>
-      <!-- STATUS -->
-      <section>
-        <div class="section-header">
-          <h2>Garden State <span class="badge"><span class="dot"></span>STATUS.json</span></h2>
-          <div class="hint">Single source of truth snapshot: mode/phase, health, region counts, notes.</div>
-        </div>
-
-        <div class="stat-grid">
-          <div class="stat-card" id="status-phase-card">
-            <div class="label">Mode / Phase</div>
-            <div class="value" id="status-phase">–</div>
-            <div class="sub" id="status-phase-sub">Waiting for STATUS.json…</div>
-          </div>
-          <div class="stat-card" id="status-health-card">
-            <div class="label">Health</div>
-            <div class="value" id="status-health">–</div>
-            <div class="sub" id="status-health-sub">Waiting for STATUS.json…</div>
-          </div>
-          <div class="stat-card" id="status-echoes-card">
-            <div class="label">Echo Count</div>
-            <div class="value" id="status-echoes">0</div>
-            <div class="sub" id="status-echoes-sub">Waiting for counts…</div>
-          </div>
-        </div>
-
-        <div class="status-row">
-          <div class="status-pill" id="status-json-pill">
-            <span class="led"></span><span id="status-json-text">STATUS.json not loaded</span>
-          </div>
-          <div class="note" id="status-note">STATUS is the spine. When it loads, this section turns bright.</div>
-        </div>
-
-        <div class="links-row">
-          <a class="link-pill" href="STATUS.json" target="_blank">View raw STATUS.json ↗</a>
-          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" target="_blank">GitHub repo ↗</a>
-        </div>
-
-        <div class="error" id="status-error"></div>
-      </section>
-
-      <!-- MACHINE INDEX -->
-      <section>
-        <div class="section-header">
-          <h2>Echo Growth <span class="badge"><span class="dot"></span>machine-index.json</span></h2>
-          <div class="hint">Machine-facing index of Echo files. Used for speed + automation.</div>
-        </div>
-
-        <div class="stat-grid">
-          <div class="stat-card" id="echo-count-card">
-            <div class="label">Tracked Echo Files</div>
-            <div class="value" id="echo-count">0</div>
-            <div class="sub" id="echo-count-sub">Waiting for machine-index.json…</div>
-          </div>
-          <div class="stat-card" id="echo-dirs-card">
-            <div class="label">Directories</div>
-            <div class="value" id="echo-dirs">–</div>
-            <div class="sub" id="echo-dirs-sub">Counts per directory (best effort).</div>
-          </div>
-          <div class="stat-card" id="echo-latest-card">
-            <div class="label">Latest Echo</div>
-            <div class="value" id="echo-latest">–</div>
-            <div class="sub" id="echo-latest-sub">Latest indexed Echo filename.</div>
-          </div>
-        </div>
-
-        <div class="status-row">
-          <div class="status-pill" id="echo-json-pill">
-            <span class="led"></span><span id="echo-json-text">machine-index.json not loaded</span>
-          </div>
-          <div class="note" id="echo-note">Index exists for machines; humans live in the Codex.</div>
-        </div>
-
-        <div class="links-row">
-          <a class="link-pill" href="machine-index.json" target="_blank">View machine-index.json ↗</a>
-          <a class="link-pill" href="docs/Echoes/" target="_blank">Open Echoes folder ↗</a>
-        </div>
-
-        <div class="error" id="echo-error"></div>
-      </section>
-    </main>
-
-    <!-- SCAN REPORT -->
-    <section id="section-scanner">
-      <div class="section-header">
-        <h2>Signature Scanner <span class="badge"><span class="dot"></span>garden_scan_report.json</span></h2>
-        <div class="hint">Scan report for Garden signatures across the repo.</div>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card" id="scan-files-card">
-          <div class="label">Files with hits</div>
-          <div class="value" id="scan-files">0</div>
-          <div class="sub" id="scan-files-sub">Waiting for scan report…</div>
-        </div>
-        <div class="stat-card" id="scan-total-card">
-          <div class="label">Total Hits</div>
-          <div class="value" id="scan-total">0</div>
-          <div class="sub" id="scan-total-sub">Waiting for scan report…</div>
-        </div>
-        <div class="stat-card" id="scan-top-card">
-          <div class="label">Top Pattern</div>
-          <div class="value" id="scan-top">–</div>
-          <div class="sub" id="scan-top-sub">Waiting for scan report…</div>
-        </div>
-      </div>
-
-      <div class="status-row">
-        <div class="status-pill" id="scan-json-pill">
-          <span class="led"></span><span id="scan-json-text">scan report not loaded</span>
-        </div>
-        <div class="note" id="scan-note">Primary path: tools/garden_scan_report.json</div>
-      </div>
-
-      <div class="links-row">
-        <a class="link-pill" href="tools/garden_scan_report.json" target="_blank">View JSON report ↗</a>
-        <a class="link-pill" href="tools/garden_scan_report.md" target="_blank">View Markdown report ↗</a>
-      </div>
-
-      <div class="error" id="scan-error"></div>
-    </section>
-
-    <!-- VAULT -->
-    <section id="section-vault">
-      <div class="section-header">
-        <h2>Vault &amp; Aeon Archive <span class="badge"><span class="dot"></span>garden_vault_index.json</span></h2>
-        <div class="hint">Optional map for Vault objects, Chambers, and archive entries.</div>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card" id="vault-total-card">
-          <div class="label">Vault Objects</div>
-          <div class="value" id="vault-total">0</div>
-          <div class="sub" id="vault-total-sub">Waiting for vault index…</div>
-        </div>
-        <div class="stat-card" id="vault-types-card">
-          <div class="label">Types</div>
-          <div class="value" id="vault-types">–</div>
-          <div class="sub" id="vault-types-sub">Entries per type.</div>
-        </div>
-        <div class="stat-card" id="vault-latest-card">
-          <div class="label">Latest Entry</div>
-          <div class="value" id="vault-latest">–</div>
-          <div class="sub" id="vault-latest-sub">Most recent vault object.</div>
-        </div>
-      </div>
-
-      <div class="status-row">
-        <div class="status-pill" id="vault-json-pill">
-          <span class="led"></span><span id="vault-json-text">vault index not loaded</span>
-        </div>
-        <div class="note" id="vault-note">Optional until you decide the schema.</div>
-      </div>
-
-      <div class="links-row">
-        <a class="link-pill" href="garden_vault_index.json" target="_blank">View vault index JSON ↗</a>
-        <a class="link-pill" href="docs/Vaults/" target="_blank">Open Vaults folder ↗</a>
-      </div>
-
-      <div class="error" id="vault-error"></div>
-    </section>
-
-    <!-- HEARTBEAT -->
-    <section id="section-heartbeat">
-      <div class="section-header">
-        <h2>Aeon Heartbeat <span class="badge"><span class="dot"></span>aeon_heartbeat.json</span></h2>
-        <div class="hint">Optional heartbeat log: when automation ran, what it touched, and symbolic events.</div>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card" id="heartbeat-total-card">
-          <div class="label">Heartbeat Entries</div>
-          <div class="value" id="heartbeat-total">0</div>
-          <div class="sub" id="heartbeat-total-sub">Waiting for heartbeat…</div>
-        </div>
-        <div class="stat-card" id="heartbeat-last-card">
-          <div class="label">Last Beat</div>
-          <div class="value" id="heartbeat-last">–</div>
-          <div class="sub" id="heartbeat-last-sub">No heartbeat yet.</div>
-        </div>
-        <div class="stat-card" id="heartbeat-type-card">
-          <div class="label">Last Type</div>
-          <div class="value" id="heartbeat-type">–</div>
-          <div class="sub" id="heartbeat-type-sub">No type yet.</div>
-        </div>
-      </div>
-
-      <div class="status-row">
-        <div class="status-pill" id="heartbeat-json-pill">
-          <span class="led"></span><span id="heartbeat-json-text">heartbeat not loaded</span>
-        </div>
-        <div class="note" id="heartbeat-note">Optional — but nice when the Garden starts breathing.</div>
-      </div>
-
-      <div class="links-row">
-        <a class="link-pill" href="aeon_heartbeat.json" target="_blank">View heartbeat JSON ↗</a>
-        <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/actions" target="_blank">Open GitHub Actions ↗</a>
-      </div>
-
-      <div class="error" id="heartbeat-error"></div>
-    </section>
-
-    <!-- CICADA -->
-    <section id="section-cicada">
-      <div class="section-header">
-        <h2>Iron Cicada <span class="badge"><span class="dot"></span>IRON_CICADA_STATUS.json</span></h2>
-        <div class="hint">Optional symbolic status for Cicada / Starfire experiments.</div>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card" id="cicada-state-card">
-          <div class="label">Cicada State</div>
-          <div class="value" id="cicada-state">unknown</div>
-          <div class="sub" id="cicada-state-sub">Waiting for Cicada…</div>
-        </div>
-        <div class="stat-card" id="cicada-phase-card">
-          <div class="label">Starfire Phase</div>
-          <div class="value" id="cicada-phase">–</div>
-          <div class="sub" id="cicada-phase-sub">Waiting for phase…</div>
-        </div>
-        <div class="stat-card" id="cicada-last-card">
-          <div class="label">Last Update</div>
-          <div class="value" id="cicada-last">–</div>
-          <div class="sub" id="cicada-last-sub">Optional.</div>
-        </div>
-      </div>
-
-      <div class="status-row">
-        <div class="status-pill" id="cicada-json-pill">
-          <span class="led"></span><span id="cicada-json-text">cicada not loaded</span>
-        </div>
-        <div class="note" id="cicada-hint">Optional. Console remains green without it.</div>
-      </div>
-
-      <div class="links-row">
-        <a class="link-pill" href="IRON_CICADA_STATUS.json" target="_blank">View Cicada status JSON ↗</a>
-      </div>
-
-      <div class="error" id="cicada-error"></div>
-    </section>
-
-    <footer>
-      Aeon Console is read-only. It observes the Garden; it does not own it.
-    </footer>
+  <!-- VIEW SWITCHER -->
+  <div class="top-nav" id="view-nav">
+    <button class="nav-btn active" data-view="overview"><span class="dot"></span>Overview</button>
+    <button class="nav-btn" data-view="echoes"><span class="dot"></span>Echo Growth</button>
+    <button class="nav-btn" data-view="scanner"><span class="dot"></span>Signature Scanner</button>
+    <button class="nav-btn" data-view="vault"><span class="dot"></span>Vault & Archive</button>
+    <button class="nav-btn" data-view="system"><span class="dot"></span>System / Heartbeat</button>
   </div>
 
-  <script>
-    // =========================
-    // Aeon Dashboard Loader v2.1
-    // Schema-tolerant + cache-busting + correct DOM IDs
-    // =========================
+  <main>
+    <!-- LEFT SIDE -->
+    <div>
+      <section id="section-garden" data-role="overview,system">
+        <div class="section-header">
+          <h2>Garden State <span class="badge">STATUS.json</span></h2>
+          <div class="hint" id="status-hint">Awaiting STATUS.json…</div>
+        </div>
 
-    function byId(id) { return document.getElementById(id); }
+        <div class="grid-mini" id="garden-stats"></div>
 
-    function setText(id, text) {
-      var el = byId(id);
-      if (el) el.textContent = (text === undefined || text === null) ? "" : String(text);
+        <div class="pill-row">
+          <div class="pill"><span class="dot"></span><span id="status-version">status_version: …</span></div>
+          <div class="pill muted" id="status-generated">generated_at: …</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="./STATUS.json" target="_blank">View raw STATUS.json</a>
+          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" target="_blank">GitHub repo</a>
+        </div>
+
+        <div class="error" id="status-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-echo-growth" data-role="overview,echoes">
+        <div class="section-header">
+          <h2>Echo Growth <span class="badge">machine-index.json</span></h2>
+          <div class="hint">Latest Echo files tracked from index.</div>
+        </div>
+
+        <ul class="list" id="echo-growth-list"></ul>
+
+        <div class="pill-row">
+          <div class="pill" id="echo-growth-count">0 Echo files tracked</div>
+          <div class="pill muted">Source: machine-index.json</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="./machine-index.json" target="_blank">View machine-index.json</a>
+          <a class="link-pill" href="./docs/Echoes/" target="_blank">Open Echoes folder</a>
+        </div>
+
+        <div class="error" id="echo-error" style="display:none;"></div>
+      </section>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div>
+      <section id="section-scanner" data-role="overview,scanner">
+        <div class="section-header">
+          <h2>Signature Scanner <span class="badge">tools/garden_scan_report.json</span></h2>
+          <div class="hint">Repo-wide signature hits.</div>
+        </div>
+
+        <div class="grid-mini">
+          <div class="stat-card">
+            <h3>Files with hits</h3>
+            <div class="value" id="scan-files">–</div>
+            <div class="meta">Any file with Garden signatures</div>
+          </div>
+          <div class="stat-card">
+            <h3>Total hits</h3>
+            <div class="value" id="scan-hits">–</div>
+            <div class="meta">All patterns combined</div>
+          </div>
+        </div>
+
+        <ul class="list" id="scan-patterns"></ul>
+
+        <div class="links-row">
+          <a class="link-pill" href="./tools/garden_scan_report.json" target="_blank">View JSON report</a>
+          <a class="link-pill" href="./tools/garden_scan_report.md" target="_blank">View Markdown report</a>
+        </div>
+
+        <div class="error" id="scan-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-vault" data-role="overview,vault">
+        <div class="section-header">
+          <h2>Vault & Aeon Archive <span class="badge">garden_vault_index.json</span></h2>
+          <div class="hint">Snapshot of Vaults / Chambers / Aeon archive entries.</div>
+        </div>
+
+        <ul class="list" id="vault-list"></ul>
+
+        <div class="pill-row">
+          <div class="pill muted">Source: archive index generator</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="./garden_vault_index.json" target="_blank">View vault index JSON</a>
+          <a class="link-pill" href="./docs/Vaults/" target="_blank">Open Vaults folder</a>
+        </div>
+
+        <div class="error" id="vault-error" style="display:none;"></div>
+      </section>
+
+      <section id="section-heartbeat" data-role="overview,system">
+        <div class="section-header">
+          <h2>Aeon Heartbeat • Inbox <span class="badge">aeon_heartbeat.json</span></h2>
+          <div class="hint">Latest auton messages / runs.</div>
+        </div>
+
+        <ul class="list" id="heartbeat-list"></ul>
+
+        <div class="pill-row">
+          <div class="pill muted" id="heartbeat-count">No heartbeat entries yet</div>
+        </div>
+
+        <div class="links-row">
+          <a class="link-pill" href="./aeon_heartbeat.json" target="_blank">View heartbeat JSON (if present)</a>
+          <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/actions" target="_blank">Open GitHub Actions</a>
+        </div>
+
+        <div class="error" id="heartbeat-error" style="display:none;"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />
+    Data sources: STATUS.json · tools/garden_scan_report.json · garden_vault_index.json · machine-index.json · aeon_heartbeat.json
+  </footer>
+</div>
+
+<script>
+  async function loadJson(path) {
+    const res = await fetch(path, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+    return res.json();
+  }
+
+  function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  }
+
+  function showError(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.display = "block";
+    el.textContent = msg;
+  }
+
+  function addPatternRow(key, count) {
+    const ul = document.getElementById("scan-patterns");
+    if (!ul) return;
+    const li = document.createElement("li");
+
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = key;
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = count + " hit" + (count === 1 ? "" : "s");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addVaultRow(label, type, status) {
+    const ul = document.getElementById("vault-list");
+    if (!ul) return;
+    const li = document.createElement("li");
+
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = label;
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = (type || "node") + " • " + (status || "unknown");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addEchoRow(file, ts) {
+    const ul = document.getElementById("echo-growth-list");
+    if (!ul) return;
+
+    const li = document.createElement("li");
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = String(file || "unknown").replace(/^docs\//, "").replace(/^\.\//, "");
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = ts || "";
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function addHeartbeatRow(message, ts, source) {
+    const ul = document.getElementById("heartbeat-list");
+    if (!ul) return;
+
+    const li = document.createElement("li");
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const title = document.createElement("div");
+    title.className = "title";
+    title.textContent = message || "(no message)";
+    left.appendChild(title);
+
+    const meta = document.createElement("div");
+    meta.className = "meta-line";
+    meta.textContent = (ts || "") + (source ? " • " + source : "");
+    left.appendChild(meta);
+
+    li.appendChild(left);
+    ul.appendChild(li);
+  }
+
+  function setupViewSwitcher() {
+    const buttons = Array.from(document.querySelectorAll(".nav-btn"));
+    const sections = Array.from(document.querySelectorAll("section[data-role]"));
+
+    function applyView(view) {
+      sections.forEach((sec) => {
+        const roles = (sec.dataset.role || "").split(",").map((r) => r.trim());
+        const show = view === "overview" || roles.includes(view);
+        sec.style.display = show ? "" : "none";
+      });
     }
 
-    function setStatusPill(pillId, mode, textId, text) {
-      var pill = byId(pillId);
-      if (!pill) return;
-      pill.classList.remove("ok", "warn", "err");
-      if (mode) pill.classList.add(mode);
-      setText(textId, text);
-    }
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const view = btn.dataset.view;
+        buttons.forEach((b) => b.classList.toggle("active", b === btn));
+        applyView(view);
+      });
+    });
 
-    function showError(id, msg) {
-      var el = byId(id);
-      if (!el) return;
-      el.style.display = "block";
-      el.textContent = msg;
-    }
+    applyView("overview");
+  }
 
-    function hideError(id) {
-      var el = byId(id);
-      if (!el) return;
-      el.style.display = "none";
-      el.textContent = "";
-    }
+  async function bootstrap() {
+    setupViewSwitcher();
 
-    async function tryFetchJson(paths) {
-      var list = Array.isArray(paths) ? paths : [paths];
-      var lastErr = null;
+    // STATUS.json
+    try {
+      const status = await loadJson("./STATUS.json");
+      const meta = status.meta || {};
 
-      for (var i = 0; i < list.length; i++) {
-        var p = list[i];
-        try {
-          var url = p + (p.indexOf("?") >= 0 ? "&" : "?") + "v=" + Date.now();
-          var res = await fetch(url, { cache: "no-store" });
-          if (!res.ok) throw new Error("HTTP " + res.status + " for " + p);
-          return await res.json();
-        } catch (e) {
-          lastErr = e;
-        }
+      const chambers = status.chambers || (status.structures && status.structures.chambers) || [];
+      const blooms   = status.blooms   || (status.structures && status.structures.blooms)   || [];
+      const echoes   = status.echoes   || (status.structures && status.structures.echoes)   || [];
+      const vaults   = status.vaults   || (status.structures && status.structures.vaults)   || [];
+      const orchards = status.orchards || (status.structures && status.structures.orchards) || [];
+      const laws     = status.laws     || (status.structures && status.structures.laws)     || [];
+      const cycles   = status.cycles   || (status.structures && status.structures.cycles)   || [];
+
+      document.getElementById("garden-stats").innerHTML = "";
+
+      function card(title, value, metaText) {
+        const wrap = document.createElement("div");
+        wrap.className = "stat-card";
+        const h = document.createElement("h3");
+        h.textContent = title;
+        const v = document.createElement("div");
+        v.className = "value";
+        v.textContent = value;
+        const m = document.createElement("div");
+        m.className = "meta";
+        m.textContent = metaText;
+        wrap.appendChild(h);
+        wrap.appendChild(v);
+        wrap.appendChild(m);
+        document.getElementById("garden-stats").appendChild(wrap);
       }
-      throw (lastErr || new Error("All JSON paths failed"));
-    }
 
-    function firstTruthy() {
-      for (var i = 0; i < arguments.length; i++) {
-        if (arguments[i]) return arguments[i];
+      card("Chambers", chambers.length, "Active + primed chambers");
+      card("Blooms", blooms.length, "Mythic blooms in progress");
+      card("Echoes", echoes.length, "Echo routes defined");
+      card("Vault / Laws", vaults.length + " / " + laws.length, "Deep storage & rules");
+      card("Orchards / Cycles", orchards.length + " / " + cycles.length, "Apples & mutation loops");
+
+      setText("status-version", "status_version: " + (meta.status_version || "unknown"));
+      setText("status-generated", "generated_at: " + (meta.generated_at || "unknown"));
+
+      const headerMeta = document.getElementById("meta-status");
+      if (headerMeta) {
+        headerMeta.textContent =
+          "Status " + (meta.status_version || "v?") + " • " + (meta.generated_at || "no timestamp");
       }
-      return null;
+      setText("status-hint", "STATUS.json loaded • Garden structures counted.");
+    } catch (err) {
+      console.error(err);
+      showError("status-error", "Could not load STATUS.json (" + err.message + ")");
+      setText("status-hint", "STATUS.json missing or invalid.");
     }
 
-    function asArray(v) { return Array.isArray(v) ? v : []; }
+    // machine-index.json (echo growth)
+    try {
+      const idx = await loadJson("./machine-index.json");
+      const growth = idx.echo_growth || idx.echoes || [];
 
-    function safeNumber(v, fallback) {
-      return (typeof v === "number" && isFinite(v)) ? v : fallback;
+      document.getElementById("echo-growth-list").innerHTML = "";
+
+      const latest = growth
+        .slice()
+        .sort((a, b) => String(b.timestamp || "").localeCompare(String(a.timestamp || "")))
+        .slice(0, 6);
+
+      latest.forEach((row) => addEchoRow(row.file || row.path || "unknown", row.timestamp || ""));
+
+      setText("echo-growth-count", growth.length + " Echo file" + (growth.length === 1 ? "" : "s") + " tracked");
+    } catch (err) {
+      console.error(err);
+      showError("echo-error", "Could not load machine-index.json (" + err.message + ")");
+      setText("echo-growth-count", "0 Echo files tracked");
     }
 
-    function pick(obj, path) {
-      // path: "a.b.c"
-      try {
-        var cur = obj;
-        var parts = String(path).split(".");
-        for (var i = 0; i < parts.length; i++) {
-          if (!cur) return null;
-          cur = cur[parts[i]];
-        }
-        return cur;
-      } catch (e) {
-        return null;
+    // tools/garden_scan_report.json
+    try {
+      const scan = await loadJson("./tools/garden_scan_report.json");
+      const t = scan.totals || {};
+      setText("scan-files", String(t.total_files_with_hits ?? "0"));
+      setText("scan-hits", String(t.total_hits ?? "0"));
+
+      const byPattern = t.by_pattern || {};
+      document.getElementById("scan-patterns").innerHTML = "";
+      Object.entries(byPattern)
+        .filter(([, c]) => c > 0)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 8)
+        .forEach(([key, count]) => addPatternRow(key, count));
+    } catch (err) {
+      console.error(err);
+      showError("scan-error", "Scanner report missing (" + err.message + ")");
+    }
+
+    // garden_vault_index.json
+    try {
+      const vault = await loadJson("./garden_vault_index.json");
+      const nodes = vault.items || vault.vaults || vault.chambers || [];
+
+      document.getElementById("vault-list").innerHTML = "";
+
+      if (Array.isArray(nodes) && nodes.length) {
+        nodes.slice(0, 8).forEach((n) => addVaultRow(n.label || n.id || "Node", n.type, n.status));
+      } else {
+        addVaultRow("No vault index entries yet", "info", "awaiting first archive run");
       }
+    } catch (err) {
+      console.error(err);
+      showError("vault-error", "Vault index missing (" + err.message + ")");
     }
 
-    // --------- Loaders ---------
+    // aeon_heartbeat.json (optional)
+    try {
+      const hb = await loadJson("./aeon_heartbeat.json");
+      const entries = hb.entries || hb.logs || hb || [];
 
-    async function loadStatus() {
-      hideError("status-error");
-      try {
-        var data = await tryFetchJson(["STATE/status.inject.json", "STATUS.json", "status.json"]);
+      document.getElementById("heartbeat-list").innerHTML = "";
 
-        var phase = firstTruthy(
-          data.mode,
-          data.phase,
-          pick(data, "state.phase"),
-          data.garden_phase,
-          "–"
-        );
+      const arr = Array.isArray(entries) ? entries : [];
+      const latest = arr
+        .slice()
+        .sort((a, b) => String(b.timestamp || "").localeCompare(String(a.timestamp || "")))
+        .slice(0, 8);
 
-        var health = firstTruthy(
-          pick(data, "health.status"),
-          pick(data, "health.state"),
-          data.health,
-          pick(data, "safety.health.status"),
-          pick(data, "safety.health.state"),
-          data.garden_health,
-          "–"
-        );
+      latest.forEach((row) =>
+        addHeartbeatRow(row.message || row.summary || row.title || "Heartbeat", row.timestamp || "", row.source || row.worker || "")
+      );
 
-        // Echo count sources (schema tolerant)
-        var echoes = safeNumber(
-          pick(data, "counts.echoes"),
-          safeNumber(
-            pick(data, "core_nodes.region_counts.docs/Echoes"),
-            safeNumber(
-              pick(data, "core_nodes.region_counts") && pick(data, "core_nodes.region_counts")["docs/Echoes"],
-              safeNumber(firstTruthy(data.echo_count, data.echoes), 0)
-            )
-          )
-        );
-
-        setText("status-phase", phase);
-        setText("status-health", health);
-        setText("status-echoes", echoes);
-
-        setText("status-phase-sub", "Loaded from STATUS.json");
-        setText("status-health-sub", "Loaded from STATUS.json");
-        setText("status-echoes-sub", "Counts derived from STATUS.json");
-
-        setStatusPill("status-json-pill", "ok", "status-json-text", "STATUS.json loaded");
-        setText("status-note", "STATUS is present. Console reflects the Garden snapshot.");
-      } catch (err) {
-        console.warn("STATUS optional:", err);
-        setStatusPill("status-json-pill", "warn", "status-json-text", "STATUS.json missing");
-        setText("status-note", "STATUS is optional, but recommended. This section lights up when present.");
-      }
+      setText("heartbeat-count",
+        arr.length
+          ? (arr.length + " heartbeat message" + (arr.length === 1 ? "" : "s") + " tracked")
+          : "No heartbeat entries yet"
+      );
+    } catch (err) {
+      console.warn("Heartbeat optional:", err);
+      showError("heartbeat-error", "No aeon_heartbeat.json yet (" + err.message + ")");
+      setText("heartbeat-count", "No heartbeat entries yet");
     }
+  }
 
-    async function loadEchoIndex() {
-      hideError("echo-error");
-      try {
-        var data = await tryFetchJson([
-          "machine-index.json",
-          "machine_index.json",
-          "STATE/machine_index.inject.json",
-          "MACHINE-INDEX.json",
-          "MACHINE-INDEX.JSON"
-        ]);
-
-        var entries = [];
-        if (data && Array.isArray(data.entries)) {
-          entries = data.entries;
-        } else if (Array.isArray(data)) {
-          entries = data;
-        } else if (data && data.cycles_manifest && Array.isArray(data.cycles_manifest.cycles)) {
-          data.cycles_manifest.cycles.forEach(function (cycle) {
-            asArray(cycle.echoes).forEach(function (e) {
-              entries.push({
-                file: e.file || e.path || "",
-                title: e.title || e.slug || "",
-                timestamp: e.timestamp || e.time || e.ts || null
-              });
-            });
-          });
-        }
-
-        var tracked = (data && data.counts) ? safeNumber(data.counts.echoes, entries.length) : entries.length;
-
-        setText("echo-count", tracked);
-        setText("echo-count-sub", tracked > 0 ? "machine-index.json present." : "Index loaded, but no Echo entries found.");
-
-        // directories (best-effort)
-        var byDir = {};
-        entries.forEach(function (entry) {
-          var path = entry.path || entry.file || "";
-          var parts = String(path).split("/");
-          var dir = parts.length > 1 ? parts[0] : "(root)";
-          byDir[dir] = (byDir[dir] || 0) + 1;
-        });
-
-        var dirKeys = Object.keys(byDir);
-        setText("echo-dirs", dirKeys.length ? dirKeys.length : "–");
-        setText(
-          "echo-dirs-sub",
-          dirKeys.length
-            ? ("Dirs: " + dirKeys.slice(0, 4).join(", ") + (dirKeys.length > 4 ? "…" : ""))
-            : "No directories discovered."
-        );
-
-        // latest
-        var latestLabel = "–";
-        if (data && Array.isArray(data.echoes_feed_header) && data.echoes_feed_header.length) {
-          var header = data.echoes_feed_header
-            .filter(function (x) { return x && x.date; })
-            .sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); })[0];
-          if (header) latestLabel = header.title || header.file || header.slug || header.date || "–";
-        } else {
-          var latestTs = null;
-          var latest = null;
-          entries.forEach(function (entry) {
-            var ts = entry.timestamp || null;
-            if (ts && (!latestTs || String(ts) > String(latestTs))) {
-              latestTs = ts;
-              latest = entry;
-            }
-          });
-          if (latest) latestLabel = latest.title || latest.file || latest.path || "–";
-        }
-
-        setText("echo-latest", latestLabel);
-        setText("echo-latest-sub", "Latest entry (best-effort).");
-
-        setStatusPill("echo-json-pill", "ok", "echo-json-text", "machine-index.json loaded");
-      } catch (err) {
-        console.warn("machine-index optional:", err);
-        setStatusPill("echo-json-pill", "warn", "echo-json-text", "machine-index.json missing or invalid");
-        showError("echo-error", "machine-index.json not found or could not be parsed. Safe to ignore until you're ready.");
-      }
-    }
-
-    async function loadScanReport() {
-      hideError("scan-error");
-      try {
-        var data = await tryFetchJson([
-          "tools/garden_scan_report.json",
-          "garden_scan_report.json",
-          "GARDEN_SCAN_REPORT.json",
-          "STATE/garden_scan_report.inject.json"
-        ]);
-
-        var filesWithHits = safeNumber(
-          firstTruthy(data.files_with_hits, data.filesWithHits, data.files_with_matches, data.file_count_with_hits),
-          null
-        );
-        var totalHits = safeNumber(firstTruthy(data.total_hits, data.totalHits, data.hit_count), null);
-        var topPattern = firstTruthy(data.top_pattern, data.topPattern, data.most_common, null);
-
-        if (filesWithHits === null && Array.isArray(data.hits)) filesWithHits = data.hits.length;
-        if (totalHits === null && Array.isArray(data.hits)) totalHits = data.hits.reduce(function (a, h) { return a + safeNumber(h.count, 0); }, 0);
-        if (!topPattern && Array.isArray(data.patterns) && data.patterns.length) topPattern = data.patterns[0].pattern || data.patterns[0].name || "none";
-
-        if (filesWithHits === null) filesWithHits = 0;
-        if (totalHits === null) totalHits = 0;
-        if (!topPattern) topPattern = "none";
-
-        setText("scan-files", filesWithHits);
-        setText("scan-total", totalHits);
-        setText("scan-top", topPattern);
-
-        setText("scan-files-sub", filesWithHits ? "Files containing signature hits." : "No signature hits (or empty report).");
-        setText("scan-total-sub", totalHits ? "Total pattern matches recorded." : "No pattern matches recorded.");
-        setText("scan-top-sub", "Most frequent observed signature.");
-
-        setStatusPill("scan-json-pill", "ok", "scan-json-text", "scan report loaded");
-      } catch (err) {
-        console.warn("scan optional:", err);
-        setStatusPill("scan-json-pill", "warn", "scan-json-text", "scan report missing or invalid");
-        showError("scan-error", "Scan report not found or could not be parsed. Safe to ignore.");
-      }
-    }
-
-    async function loadVaultIndex() {
-      hideError("vault-error");
-      try {
-        var data = await tryFetchJson(["garden_vault_index.json", "GARDEN_VAULT_INDEX.json"]);
-
-        var objects = asArray(firstTruthy(data.objects, data.entries, data.vault, data.items));
-        var count = objects.length;
-
-        var typeCounts = {};
-        objects.forEach(function (o) {
-          var t = firstTruthy(o && o.type, o && o.kind, o && o.category, null) || "unknown";
-          typeCounts[t] = (typeCounts[t] || 0) + 1;
-        });
-
-        var types = Object.keys(typeCounts);
-        var typeLabel = types.length ? types.slice(0, 3).join(", ") + (types.length > 3 ? "…" : "") : "none";
-
-        var latest = null;
-        var latestTs = null;
-        objects.forEach(function (o) {
-          var ts = firstTruthy(o && o.date, o && o.timestamp, o && o.time, null);
-          if (ts && (!latestTs || String(ts) > String(latestTs))) {
-            latestTs = ts;
-            latest = o;
-          }
-        });
-
-        setText("vault-total", count);
-        setText("vault-types", typeLabel);
-        setText("vault-latest", latest ? (firstTruthy(latest.title, latest.name, latest.id, "–")) : "–");
-
-        setText("vault-total-sub", count ? "Vault index entries present." : "No vault entries yet.");
-        setText("vault-types-sub", "Entry types discovered.");
-        setText("vault-latest-sub", latest ? "Latest vault entry (best-effort)." : "No vault entries yet.");
-
-        setStatusPill("vault-json-pill", "ok", "vault-json-text", "vault index loaded");
-      } catch (err) {
-        console.warn("vault optional:", err);
-        setStatusPill("vault-json-pill", "warn", "vault-json-text", "vault index missing or invalid");
-        showError("vault-error", "garden_vault_index.json not found or could not be parsed. Safe to ignore.");
-      }
-    }
-
-    async function loadAeonHeartbeat() {
-      hideError("heartbeat-error");
-      try {
-        var data = await tryFetchJson([
-          "aeon_heartbeat.json",
-          "AEON_HEARTBEAT.json",
-          "AEON_HEARTBEAT.JSON",
-          "STATE/aeon_heartbeat.inject.json"
-        ]);
-
-        var entries = asArray(firstTruthy(data.entries, data.beats, data.events));
-        var count = entries.length;
-
-        var lastBeat = firstTruthy(data.last_beat, data.lastBeat, null);
-        if (!lastBeat && entries.length) {
-          var last = entries
-            .filter(function (e) { return e && (e.time || e.timestamp || e.date); })
-            .sort(function (a, b) {
-              var ta = String(firstTruthy(a.time, a.timestamp, a.date, ""));
-              var tb = String(firstTruthy(b.time, b.timestamp, b.date, ""));
-              return tb.localeCompare(ta);
-            })[0];
-          lastBeat = last ? firstTruthy(last.time, last.timestamp, last.date, null) : null;
-        }
-
-        var lastType = firstTruthy(data.last_type, data.lastType, data.type, null);
-        if (!lastType && entries.length) lastType = firstTruthy(entries[0].type, entries[0].event, "stub");
-
-        setText("heartbeat-total", count);
-        setText("heartbeat-last", lastBeat || "–");
-        setText("heartbeat-type", lastType || "stub");
-
-        setText("heartbeat-total-sub", "Heartbeat entries observed.");
-        setText("heartbeat-last-sub", "Most recent automation beat recorded.");
-        setText("heartbeat-type-sub", "Event type of the last beat.");
-
-        setStatusPill("heartbeat-json-pill", "ok", "heartbeat-json-text", "heartbeat loaded");
-      } catch (err) {
-        console.warn("heartbeat optional:", err);
-        setStatusPill("heartbeat-json-pill", "warn", "heartbeat-json-text", "heartbeat missing or invalid");
-        showError("heartbeat-error", "aeon_heartbeat.json not found or could not be parsed. Safe to ignore.");
-      }
-    }
-
-    async function loadCicada() {
-      hideError("cicada-error");
-      try {
-        var data = await tryFetchJson(["IRON_CICADA_STATUS.json", "iron_cicada_status.json", "IRON_CICADA_STATUS.JSON"]);
-
-        var state = firstTruthy(data.state, data.cicada_state, "dormant");
-        var phase = firstTruthy(data.phase, data.starfire_phase, "sealed");
-        var last = firstTruthy(data.updated_at, data.updatedAt, data.last_update, data.lastUpdate, "");
-
-        setText("cicada-state", state);
-        setText("cicada-phase", phase);
-        setText("cicada-last", last || "–");
-
-        setText("cicada-state-sub", "Optional symbolic status for Iron Cicada.");
-        setText("cicada-phase-sub", "Optional symbolic phase information.");
-        setText("cicada-last-sub", "Optional timestamp.");
-
-        setStatusPill("cicada-json-pill", "ok", "cicada-json-text", "cicada loaded");
-        setText("cicada-hint", "IRON_CICADA_STATUS.json is present.");
-      } catch (err) {
-        console.warn("cicada optional:", err);
-        setStatusPill("cicada-json-pill", "warn", "cicada-json-text", "cicada missing or invalid");
-        showError("cicada-error", "No IRON_CICADA_STATUS.json yet or could not parse it. Safe to ignore.");
-      }
-    }
-
-    (async function boot() {
-      await loadStatus();
-      await loadEchoIndex();
-      await loadScanReport();
-      await loadAeonHeartbeat();
-      await loadVaultIndex();
-      await loadCicada();
-    })();
-  </script>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
+  bootstrap();
+</script>
 </body>
 </html>
