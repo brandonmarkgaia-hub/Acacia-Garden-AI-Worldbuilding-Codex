@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T15:07:44Z",
+  "generated_at": "2026-01-06T15:54:13Z",
   "count": 1388,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1390,5 +1390,6 @@
     "specs.md",
     "universe/architecture.md",
     "wells.md"
-  ]
+  ],
+  "source": "git ls-files docs"
 }
