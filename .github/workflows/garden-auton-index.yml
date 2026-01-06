@@ -8,6 +8,7 @@ on:
       - ".github/scripts/**"
       - ".github/workflows/**"
       - "docs/**"
+      - "scripts/**"
       - "STATUS.json"
       - "STATUS.schema.json"
       - "machine-index.json"
@@ -37,7 +38,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
           pip install openai
@@ -55,18 +61,19 @@ jobs:
       - name: Build docs URLs dump (HTML + JSON)
         run: python .github/scripts/build_docs_url_dump.py
 
+      - name: Generate Codex indices (Chambers + Echoes)
+        run: node scripts/generate_codex_indices.mjs
+
       # --- Proof layer (Platinum) ---
       - name: Verify Garden (write proof metrics into STATUS.json)
         run: python tools/garden_verify.py
 
       # --- Publish (conflict-immune) ---
-      # We snapshot generated artifacts, reset to latest main, re-apply artifacts, commit, push (retry).
       - name: Commit and push updated artifacts (conflict-immune)
         shell: bash
         run: |
           set -euo pipefail
 
-          # If nothing changed, stop cleanly
           if git diff --quiet; then
             echo "No changes to commit"
             exit 0
@@ -75,26 +82,29 @@ jobs:
           git config user.name "acacia-auton"
           git config user.email "actions@github.com"
 
-          # Define the artifacts we control
           ARTIFACTS=(
             "STATUS.json"
             "docs/Novellas/garden_index.json"
             "machine-index.json"
             "tools/garden_scan_report.json"
+            "docs/docs_urls.html"
+            "docs/docs_urls.json"
+
+            # Folder index pages we generate
             "docs/Chambers/index.html"
             "docs/Vaults/index.html"
             "docs/Echoes/index.html"
             "docs/GardenOS/index.html"
-            "docs/docs_urls.html"
-            "docs/docs_urls.json"
+
+            # Node-generated indices (replacing update-codex-indices.yml)
+            "docs/Chambers/chambers_index.json"
+            "docs/Echoes/echoes_index.json"
           )
 
-          # Include archives index pages if present
           shopt -s nullglob
           ARCHIVES=(docs/Archives/*.html)
           shopt -u nullglob
 
-          # Package current generated outputs into /tmp
           mkdir -p /tmp/acacia_artifacts
           for f in "${ARTIFACTS[@]}"; do
             if [ -f "$f" ]; then
@@ -107,19 +117,14 @@ jobs:
             cp -f "$f" "/tmp/acacia_artifacts/$f"
           done
 
-          # Retry loop (handles someone else pushing between our fetch and push)
           for i in 1 2 3 4 5; do
             echo "Publish attempt $i..."
 
             git fetch origin main
-
-            # Hard reset to latest main (clean base)
             git reset --hard origin/main
 
-            # Re-apply generated outputs on top of latest main
             rsync -a /tmp/acacia_artifacts/ ./
 
-            # Stage & commit if changes exist
             git add -A
 
             if git diff --cached --quiet; then
