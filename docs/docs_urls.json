@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-06T21:06:28Z",
-  "count": 1413,
+  "generated_at": "2026-01-06T21:07:47Z",
+  "count": 1414,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1350,6 +1350,7 @@
     "Orchard/IMMORTAL_ORCHARD.md",
     "Orchards/Last-Orchard.md",
     "Outer_Registry/OUTER_WORLD_REGISTRY.md",
+    "PROTOCOLS/keeper_protocol.v2.md",
     "Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
     "Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
     "Realms/Eagle-Realm_Sky-Mind-Citadel.md",
