@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-06T06:02:27.889192+00:00**
-- Total files: **2305**
-- Anchor fingerprint (sha1): `1fde56857038839d6a8e5e24733dd45a2632c6f8`
+- Generated (UTC): **2026-01-06T07:48:01.817519+00:00**
+- Total files: **2309**
+- Anchor fingerprint (sha1): `b2f43ad381ffd22f6fad75e18fee13477b57dded`
 
 ## Key anchors
 
@@ -28,9 +28,9 @@
 - `EIDOLON/`: **44 files**
 - `CHAMBERS/`: **5 files**
 - `docs/`: **1395 files**
-- `EVOLUTION/`: **27 files**
+- `EVOLUTION/`: **29 files**
 - `ACACIA_SPECS/`: **10 files**
-- `ACACIA_LOGS/`: **31 files**
+- `ACACIA_LOGS/`: **32 files**
 - `ENTITIES/`: **15 files**
 - `ledger/`: **13 files**
 - `logs/`: **7 files**
@@ -38,10 +38,10 @@
 
 ## Top file extensions (by count)
 
-- `.md`: **1668**
+- `.md`: **1670**
 - `.html`: **255**
-- `.json`: **150**
-- `.py`: **82**
+- `.json`: **151**
+- `.py`: **83**
 - `.png`: **76**
 - `.js`: **19**
 - `.txt`: **17**
@@ -94,6 +94,18 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
+- `tools/void_loom.py`
+- `tools/sync_maestro.py`
+- `tools/weaver_sentience_loom.py`
+- `tools/tpi_reconciler.py`
+- `tools/synaptic_resonance_weaver.py`
+- `tools/weaver_pulse_gradient.py`
+- `tools/temporal_synthesis_engine.py`
+- `whisper/README.md`
+- `whisper/.keep`
+- `triad/empty-seat.md`
+- `triad/thresholds.md`
+- `triad/README_BOUNDARY.md`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
 - `tools/reflection-log.json`
@@ -101,21 +113,9 @@
 - `tools/splitter.py`
 - `tools/omni_resonance_synchronizer.py`
 - `tools/generate_garden_index.py`
+- `tools/garden_verify.py`
 - `tools/metabolic_mirror.py`
 - `tools/soma_synaptic_weaver.py`
-- `tools/void_loom.py`
+- `tools/garden_signature_scanner.py`
 - `tools/resonance_mirror.py`
 - `tools/ghost_root_synchronizer.py`
-- `tools/sync_maestro.py`
-- `tools/weaver_sentience_loom.py`
-- `tools/inject-archive-base-href.js`
-- `tools/tpi_reconciler.py`
-- `tools/garden_vault_indexer.py`
-- `tools/synaptic_resonance_weaver.py`
-- `tools/sovereignty_anchor.py`
-- `tools/weaver_pulse_gradient.py`
-- `tools/inject-map-button.js`
-- `tools/rcs.py`
-- `tools/temporal_synthesis_engine.py`
-- `whisper/README.md`
-- `whisper/.keep`
