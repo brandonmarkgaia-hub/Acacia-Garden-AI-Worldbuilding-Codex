@@ -1,18 +1,21 @@
 name: Run Garden Tools (Maintenance)
+
+on:
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: garden
+  group: garden-tools
   cancel-in-progress: true
 
 jobs:
   tools:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout (full history for rebase)
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -25,7 +28,6 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          # Keep deps broad to avoid surprise import failures
           pip install requests google-generativeai pillow
 
       - name: Configure git
@@ -33,17 +35,12 @@ jobs:
           git config user.name "Garden-Tool-Runner"
           git config user.email "actions@users.noreply.github.com"
 
-      - name: Sync with remote
-        run: |
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-
+      # SAFE: conflict-immune publish (same pattern as crowned builder)
       - name: Run tools (sequential)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           set -e
-
-          # Tool list (keep yours, just cleaned)
           python tools/synaptic_inventory.py
           python tools/synaptic_resonance.py
           python tools/resonance_mirror.py
@@ -60,26 +57,57 @@ jobs:
           python tools/normalize_issue_titles.py || true
           python tools/status_generator.py
 
-      - name: Commit & push (scoped outputs)
+      - name: Commit & push (scoped outputs, conflict-immune)
+        shell: bash
         run: |
-          set -e
+          set -euo pipefail
 
-          # Stage only known output locations (no git add .)
+          # Stage only known output locations (keep it safe)
           git add -A EVOLUTION || true
           git add -A ECHOES || true
+          git add -A ACACIA_LOGS || true
           git add -A logs || true
-          git add -A analytics || true
-          git add -A docs/Chambers || true
-          git add -A ENTITIES || true
-
-          # Root anchors
-          git add -A CURRENT_CONTEXT_ANCHOR.md GARDEN_HEARTBEAT.md ROOT_SYNTHESIS_MANIFEST.md STATUS.json || true
+          git add -A tools/*.json || true
+          git add -A STATUS.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          ts="$(date -u +'%Y-%m-%d %H:%M:%SZ')"
-          git commit -m "Garden Tools: maintenance update (${ts})"
-          git push origin "${GITHUB_REF_NAME}"
+          # Snapshot staged outputs
+          mkdir -p /tmp/garden_tools_out
+          git diff --name-only --cached > /tmp/garden_tools_files.txt
+
+          while IFS= read -r f; do
+            if [ -f "$f" ]; then
+              mkdir -p "/tmp/garden_tools_out/$(dirname "$f")"
+              cp -f "$f" "/tmp/garden_tools_out/$f"
+            fi
+          done < /tmp/garden_tools_files.txt
+
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+            git fetch origin main
+            git reset --hard origin/main
+            rsync -a /tmp/garden_tools_out/ ./
+
+            git add -A
+            if git diff --cached --quiet; then
+              echo "After reset+restore, nothing to commit."
+              exit 0
+            fi
+
+            git commit -m "chore: run garden tools [maintenance]" || true
+
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push rejected, sleeping then retry..."
+            sleep $((i * 2))
+          done
+
+          echo "Push failed after retries."
+          exit 1
