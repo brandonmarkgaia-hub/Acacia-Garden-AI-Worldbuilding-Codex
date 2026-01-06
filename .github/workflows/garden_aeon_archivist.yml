@@ -2,8 +2,6 @@ name: Garden Aeon Archivist
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "13 2 * * *" # daily ~02:13 UTC (quiet hours)
   push:
     branches: [ "main" ]
     paths:
