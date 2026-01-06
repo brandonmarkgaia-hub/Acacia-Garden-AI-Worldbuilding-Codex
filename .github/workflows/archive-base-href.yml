@@ -1,0 +1,46 @@
+name: Archive Base Href Injection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-base-href
+  cancel-in-progress: false
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Inject base href into Archives
+        run: node tools/inject-archive-base-href.js
+
+      - name: Commit and push safely
+        run: |
+          set -e
+
+          if git status --porcelain | grep .; then
+            git config user.name "acacia-bot"
+            git config user.email "bot@acacia.garden"
+
+            git add docs/Archives
+            git commit -m "Inject base href into Archive HTML files"
+
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
