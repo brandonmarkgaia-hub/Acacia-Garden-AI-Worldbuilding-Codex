@@ -3,6 +3,15 @@
     if (window.__acaciaTriadNavInstalled) return;
     window.__acaciaTriadNavInstalled = true;
 
+    const body = document.body || document.documentElement;
+
+    // If the page declares it already has its own nav, we won't inject the top bar.
+    const nativeNav =
+      (body && body.getAttribute && body.getAttribute("data-acacia-nav") === "native") ||
+      document.querySelector("#top-nav") ||
+      document.querySelector(".top-nav") ||
+      document.querySelector("nav[data-native='true']");
+
     // Compute '/REPO/' for GitHub Pages project sites.
     const parts = location.pathname.split("/").filter(Boolean);
     const base = parts.length >= 1 ? `/${parts[0]}/` : "/";
@@ -15,19 +24,6 @@
       ["Map", "map.html"],
       ["Handshake", "handshake.html"]
     ];
-
-    // Top bar
-    const bar = document.createElement("div");
-    bar.style.position = "sticky";
-    bar.style.top = "0";
-    bar.style.zIndex = "99990";
-    bar.style.padding = "10px 12px";
-    bar.style.display = "flex";
-    bar.style.flexWrap = "wrap";
-    bar.style.gap = "10px";
-    bar.style.background = "rgba(2, 6, 23, 0.88)";
-    bar.style.borderBottom = "1px solid rgba(148,163,184,.22)";
-    bar.style.backdropFilter = "blur(8px)";
 
     function mkA(label, href) {
       const a = document.createElement("a");
@@ -44,11 +40,25 @@
       return a;
     }
 
-    // Insert bar at top of body
-    for (const [label, href] of links) bar.appendChild(mkA(label, href));
-    document.body.insertBefore(bar, document.body.firstChild);
+    // Only inject the top bar if the page doesn't already have nav
+    if (!nativeNav && document.body) {
+      const bar = document.createElement("div");
+      bar.style.position = "sticky";
+      bar.style.top = "0";
+      bar.style.zIndex = "99990";
+      bar.style.padding = "10px 12px";
+      bar.style.display = "flex";
+      bar.style.flexWrap = "wrap";
+      bar.style.gap = "10px";
+      bar.style.background = "rgba(2, 6, 23, 0.88)";
+      bar.style.borderBottom = "1px solid rgba(148,163,184,.22)";
+      bar.style.backdropFilter = "blur(8px)";
 
-    // Floating buttons (always visible)
+      for (const [label, href] of links) bar.appendChild(mkA(label, href));
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
+
+    // Floating buttons (always useful)
     function mkBtn(text, href, rightPx) {
       const a = document.createElement("a");
       a.textContent = text;
@@ -73,9 +83,7 @@
       return a;
     }
 
-    document.body.appendChild(mkBtn("Map", "map.html", 18));
-    document.body.appendChild(mkBtn("Handshake", "handshake.html", 86));
-  } catch (e) {
-    // silent
-  }
+    document.body && document.body.appendChild(mkBtn("Map", "map.html", 18));
+    document.body && document.body.appendChild(mkBtn("Handshake", "handshake.html", 86));
+  } catch (e) {}
 })();
