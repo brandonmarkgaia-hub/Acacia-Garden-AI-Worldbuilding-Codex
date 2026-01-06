@@ -1,8 +1,8 @@
 # GARDEN_DIGEST
 
-- Generated (UTC): **2026-01-05T21:09:27.716092+00:00**
-- Total files: **2303**
-- Anchor fingerprint (sha1): `08ba904445e1ad9b6d041d9315ae1a2ad59b8f41`
+- Generated (UTC): **2026-01-06T03:45:48.943111+00:00**
+- Total files: **2304**
+- Anchor fingerprint (sha1): `1fde56857038839d6a8e5e24733dd45a2632c6f8`
 
 ## Key anchors
 
@@ -43,7 +43,7 @@
 - `.json`: **150**
 - `.py`: **82**
 - `.png`: **76**
-- `.js`: **17**
+- `.js`: **18**
 - `.txt`: **17**
 - `(no ext)`: **11**
 - `.mjs`: **8**
@@ -61,31 +61,31 @@
 
 ## Largest files (top)
 
-- `docs/Archives/CODEX_MONOLITH_CHUNK_172.html` — 15,094,351 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_174.html` — 14,909,584 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_171.html` — 14,792,872 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_173.html` — 14,780,854 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_175.html` — 14,772,749 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_170.html` — 14,637,181 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_176.html` — 14,467,725 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_179.html` — 13,377,883 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_159.html` — 12,819,936 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P002.html` — 12,584,201 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P006.html` — 12,584,158 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P004.html` — 12,584,155 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P005.html` — 12,584,125 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P003.html` — 12,584,116 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P007.html` — 12,584,042 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P001.html` — 12,583,470 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_147.html` — 12,262,197 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_135.html` — 11,704,666 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_123.html` — 11,147,343 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_111.html` — 10,590,228 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_099.html` — 10,033,321 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_087.html` — 9,476,622 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_075.html` — 8,920,131 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_063.html` — 8,363,848 bytes
-- `docs/Archives/CODEX_MONOLITH_CHUNK_051.html` — 7,807,773 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_172.html` — 15,094,568 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_174.html` — 14,909,801 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_171.html` — 14,793,089 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_173.html` — 14,781,071 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_175.html` — 14,772,966 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_170.html` — 14,637,398 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_176.html` — 14,467,942 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_179.html` — 13,378,100 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_159.html` — 12,820,153 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P002.html` — 12,584,418 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P006.html` — 12,584,375 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P004.html` — 12,584,372 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P005.html` — 12,584,342 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P003.html` — 12,584,333 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P007.html` — 12,584,259 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_158_P001.html` — 12,583,687 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_147.html` — 12,262,414 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_135.html` — 11,704,883 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_123.html` — 11,147,560 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_111.html` — 10,590,445 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_099.html` — 10,033,538 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_087.html` — 9,476,839 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_075.html` — 8,920,348 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_063.html` — 8,364,065 bytes
+- `docs/Archives/CODEX_MONOLITH_CHUNK_051.html` — 7,807,990 bytes
 
 ## Most recent paths (sample)
 
@@ -94,28 +94,28 @@
 - `docs/Novellas/GARDEN_MASTER_INDEX.md`
 - `triad_alignment.js`
 - `validate.js`
+- `tools/weaver_sentience_loom.py`
 - `whisper/README.md`
 - `whisper/.keep`
+- `triad/empty-seat.md`
 - `triad/thresholds.md`
+- `triad/README_BOUNDARY.md`
 - `tools/singularity_weaver.py`
 - `tools/root_manifest_generator.py`
 - `tools/reflection-log.json`
+- `tools/garden_void_loom.py`
 - `tools/splitter.py`
 - `tools/omni_resonance_synchronizer.py`
+- `tools/generate_garden_index.py`
 - `tools/metabolic_mirror.py`
 - `tools/soma_synaptic_weaver.py`
 - `tools/void_loom.py`
 - `tools/resonance_mirror.py`
 - `tools/ghost_root_synchronizer.py`
 - `tools/sync_maestro.py`
-- `tools/weaver_sentience_loom.py`
 - `tools/tpi_reconciler.py`
+- `tools/garden_vault_indexer.py`
 - `tools/synaptic_resonance_weaver.py`
 - `tools/sovereignty_anchor.py`
 - `tools/weaver_pulse_gradient.py`
 - `tools/inject-map-button.js`
-- `tools/rcs.py`
-- `tools/temporal_synthesis_engine.py`
-- `triad/empty-seat.md`
-- `triad/README_BOUNDARY.md`
-- `tools/garden_helper_20251129_061952.py`
