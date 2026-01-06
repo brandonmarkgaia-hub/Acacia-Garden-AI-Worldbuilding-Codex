@@ -6,8 +6,9 @@ Deterministic verifier for the Acacia Garden control plane.
 
 Writes proof metrics into STATUS.json:
 - Archives: base href coverage
-- Navigation: map button loader coverage
-- Indexes: docs_urls count (from docs/docs_urls.json)
+- Navigation: map loader coverage + list missing pages
+- Indexes: docs_urls count (supports multiple formats)
+- Presence flags: machine-index.json and STATUS.schema.json (always overwritten with truth)
 - last_verified_utc stamp
 
 No external deps.
@@ -27,15 +28,19 @@ STATUS_PATH = ROOT / "STATUS.json"
 ARCHIVES_DIR = ROOT / "docs" / "Archives"
 DOCS_URLS_JSON = ROOT / "docs" / "docs_urls.json"
 
+MACHINE_INDEX = ROOT / "machine-index.json"
+STATUS_SCHEMA = ROOT / "STATUS.schema.json"
+
 # Canonical base href we want in Archives HTML
 BASE_HREF = "/Acacia-Garden-AI-Worldbuilding-Codex/"
 BASE_TAG_NEEDLE = f'<base href="{BASE_HREF}"'
 
-# Accept either of your map-loader systems as "map button present"
+# Accept any of these as "map access exists"
 MAP_LOADER_NEEDLES = [
-    'data-acacia-map-button',                   # injected loader marker
-    "/assets/map-button.js",                    # canonical runtime button file
-    "/docs/assets/global-map-button.js",        # legacy global loader (still acceptable)
+    'data-acacia-map-button',                 # injected loader marker
+    "/assets/map-button.js",                  # canonical runtime file
+    "/docs/assets/global-map-button.js",      # legacy acceptable loader
+    "map.html",                               # fallback: direct link (still counts as map access)
 ]
 
 
@@ -51,10 +56,16 @@ def write_json(path: Path, data: Dict[str, Any]) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def ensure_dict(d: Dict[str, Any], key: str) -> Dict[str, Any]:
+    v = d.get(key)
+    if isinstance(v, dict):
+        return v
+    d[key] = {}
+    return d[key]
+
+
 def scan_archives_base_href() -> Tuple[int, int, int]:
-    """
-    Returns (total_html, with_base, missing_base)
-    """
+    """Returns (total_html, with_base, missing_base)"""
     if not ARCHIVES_DIR.exists():
         return (0, 0, 0)
 
@@ -78,16 +89,11 @@ def scan_archives_base_href() -> Tuple[int, int, int]:
 
 
 def iter_html_files() -> List[Path]:
-    """
-    Enumerate html files for nav checks.
-    Avoid scanning huge irrelevant dirs if present.
-    """
+    """Enumerate html files for nav checks."""
     skip_dirs = {".git", "node_modules", "__pycache__", ".venv", "venv"}
     html_files: List[Path] = []
 
-    # scan repo for .html files
     for p in ROOT.rglob("*.html"):
-        # skip if any parent dir is in skip set
         if any(part in skip_dirs for part in p.parts):
             continue
         if p.is_file():
@@ -96,48 +102,58 @@ def iter_html_files() -> List[Path]:
     return html_files
 
 
-def scan_map_loader_coverage() -> Tuple[int, int]:
+def scan_map_loader_coverage() -> Tuple[int, int, List[str]]:
     """
-    Returns (total_html, with_map_loader)
-    We consider the map accessible if page includes one of known loader markers.
+    Returns (total_html, with_map_loader, missing_paths_rel)
+    missing_paths are repo-relative POSIX paths.
     """
     html_files = iter_html_files()
     total = 0
     with_map = 0
+    missing: List[str] = []
 
     for p in html_files:
         total += 1
         try:
             txt = p.read_text(encoding="utf-8", errors="ignore")
         except Exception:
+            missing.append(p.relative_to(ROOT).as_posix())
             continue
 
         if any(needle in txt for needle in MAP_LOADER_NEEDLES):
             with_map += 1
+        else:
+            missing.append(p.relative_to(ROOT).as_posix())
 
-    return (total, with_map)
+    return (total, with_map, missing)
 
 
 def docs_urls_count() -> int:
+    """
+    Supports common formats:
+    - list: ["/docs/x.html", ...]
+    - dict: { "urls": [...] }
+    - dict: { "paths": [...] }   <-- your current format
+    """
     if not DOCS_URLS_JSON.exists():
         return 0
     try:
         data = read_json(DOCS_URLS_JSON)
+
         if isinstance(data, list):
             return len(data)
-        if isinstance(data, dict) and "urls" in data and isinstance(data["urls"], list):
-            return len(data["urls"])
+
+        if isinstance(data, dict):
+            if isinstance(data.get("urls"), list):
+                return len(data["urls"])
+            if isinstance(data.get("paths"), list):
+                return len(data["paths"])
+            if isinstance(data.get("pages"), list):
+                return len(data["pages"])
+
         return 0
     except Exception:
         return 0
-
-
-def ensure_dict(d: Dict[str, Any], key: str) -> Dict[str, Any]:
-    v = d.get(key)
-    if isinstance(v, dict):
-        return v
-    d[key] = {}
-    return d[key]
 
 
 def main() -> None:
@@ -146,12 +162,12 @@ def main() -> None:
 
     status = read_json(STATUS_PATH)
 
-    # Compute proofs
+    # --- Compute proofs ---
     a_total, a_with, a_missing = scan_archives_base_href()
-    html_total, html_with_map = scan_map_loader_coverage()
+    html_total, html_with_map, missing_map = scan_map_loader_coverage()
     urls_ct = docs_urls_count()
 
-    # Write into STATUS.verification (create if missing)
+    # --- Write into STATUS.verification ---
     verification = ensure_dict(status, "verification")
     verification["last_verified_utc"] = utc_now_iso()
 
@@ -166,26 +182,27 @@ def main() -> None:
     nav = ensure_dict(verification, "navigation")
     nav["total_html_scanned"] = html_total
     nav["with_map_loader"] = html_with_map
+    nav["missing_map_loader_count"] = len(missing_map)
+    nav["missing_map_loader_paths"] = missing_map
     nav["map_button_present"] = (html_total > 0 and html_with_map > 0)
-    nav["verified"] = (html_total > 0 and html_with_map == html_total)
+    nav["verified"] = (html_total > 0 and len(missing_map) == 0)
 
-    # Index proof
+    # Index proof (always overwrite with truth)
     indexes = ensure_dict(verification, "indexes")
     indexes["docs_urls_count"] = urls_ct
     indexes["docs_urls_present"] = DOCS_URLS_JSON.exists()
-
-    # Keep existing flags if present; otherwise set conservative defaults
-    if "machine_index_present" not in indexes:
-        indexes["machine_index_present"] = (ROOT / "machine-index.json").exists()
-    if "status_schema_present" not in indexes:
-        indexes["status_schema_present"] = (ROOT / "STATUS.schema.json").exists()
+    indexes["machine_index_present"] = MACHINE_INDEX.exists()
+    indexes["status_schema_present"] = STATUS_SCHEMA.exists()
 
     write_json(STATUS_PATH, status)
 
     print("✅ Garden verification updated in STATUS.json")
     print(f"   - Archives HTML: {a_total} total, {a_missing} missing base href")
     print(f"   - HTML scanned: {html_total} total, {html_with_map} with map-loader markers")
+    print(f"   - Missing map-loader pages: {len(missing_map)}")
     print(f"   - docs_urls.json count: {urls_ct}")
+    print(f"   - machine-index.json present: {MACHINE_INDEX.exists()}")
+    print(f"   - STATUS.schema.json present: {STATUS_SCHEMA.exists()}")
 
 
 if __name__ == "__main__":
