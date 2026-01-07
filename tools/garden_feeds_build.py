@@ -132,13 +132,24 @@ def count_echoes() -> int:
 
 def count_generic(category_names: List[str]) -> int:
     """
-    Try multiple folder names for a category under docs/.
-    Example: ["Blooms","Bloom","blooms","bloom"]
+    Try multiple folder names for a category under BOTH docs/ and repo root.
+
+    Example:
+        ["Blooms", "Bloom", "blooms", "bloom"]
+        ["Cycles", "Cycle", "cycles", "cycle"]
+        ["Orchards", "Orchard", "orchards", "orchard"]
     """
     found = 0
+
     for name in category_names:
-        d = DOCS_ROOT / name
-        found = max(found, count_markdown_files(d))
+        # Look under docs/NAME
+        d_docs = DOCS_ROOT / name
+        found = max(found, count_markdown_files(d_docs))
+
+        # Also look under root/NAME
+        d_root = REPO_ROOT / name
+        found = max(found, count_markdown_files(d_root))
+
     return found
 
 def build_status_inject(status_obj: Optional[Dict[str, Any]]) -> Dict[str, Any]:
