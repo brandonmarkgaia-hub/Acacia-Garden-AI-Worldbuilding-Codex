@@ -1,0 +1,44 @@
+name: Build Aeon State
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "STATUS.json"
+      - "machine-index.json"
+      - "STATE/**"
+      - ".github/scripts/build_aeon_state.py"
+      - ".github/workflows/build-aeon-state.yml"
+
+jobs:
+  build-aeon-state:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build Aeon console state feeds
+        run: |
+          python .github/scripts/build_aeon_state.py
+
+      - name: Commit and push aeon_state.json (if changed)
+        run: |
+          git config user.name "Aeon Console Bot"
+          git config user.email "aeon-console@users.noreply.github.com"
+
+          if git status --porcelain | grep -q "STATE/aeon_state.json"; then
+            git add STATE/aeon_state.json
+            git commit -m "chore: update Aeon state snapshot"
+            git push
+          else
+            echo "No changes to Aeon state snapshot."
+          fi
