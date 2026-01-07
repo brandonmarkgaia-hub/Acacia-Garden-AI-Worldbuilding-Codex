@@ -180,17 +180,36 @@ It is purely **literary symbolism**.
 ### 🔗 Online Mirror  
 https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/
 
-### 📁 Primary Folders  
+### 🧭 Live Dashboards & Maps
+
+- **Root Dashboard**  
+  `dashboard.html`  
+  The main Aeon Console view into Garden state and counts.
+
+- **Docs URL Index**  
+  `docs/docs_urls.html`  
+  Static map of most HTML/Mardown surfaces inside `docs/`.
+
+- **Library View (Novellas)**  
+  `docs/library.html`  
+  Human-friendly entry into the Acacia Library.
+
+### 📁 Primary Conceptual Structures  
+
+These are *conceptual* homes; many are surfaced under `docs/` in the GitHub Pages view.
 
 ```
-CHAMBERS/      Core canonical texts  
-ECHOES/        Reflections & alternatives  
-ROOTLINES/     Evolution paths  
-SEEDS/         Origin points  
-CYCLES/        Epochs  
-WELLS/         Fragments & shards  
-GardenOS/      Full architecture, phases, tools, monoliths  
-LIBRARY/       Books I–XXX (Novellas)  
+Chambers/      Canonical mythic/technical texts (exposed at docs/Chambers/)
+Echoes/        Reflections & alternatives      (docs/Echoes/)
+Novellas/      Longform Library books          (docs/Novellas/)
+Archives/      Historic shelves                (docs/Archives/)
+Blooms/        Petal-level growth scripts      (Blooms/ and docs/Blooms/)
+Orchards/      Groupings of Seeds (GaiaSeeds)  (Orchards/)
+Cycles/        Era-level creative arcs         (Cycles/)
+Wells/         Fragments & shards              (WELLS/ and related)
+GardenOS/      Architecture, phases, tools     (docs/GardenOS/)
+Evolution/     Core memory + meta evolution    (EVOLUTION/ACACIA_CORE_MEMORY.md)
+
 ```
 
 ### 🧭 GardenOS Navigation Aids
@@ -206,7 +225,8 @@ Thirty canon books forming the backbone of the narrative universe.
 
 Accessible via:
 ```
-docs/Novellas/
+docs/Novellas/         (raw Markdown/HTML)
+docs/library.html      (Library dashboard view)
 ```
 
 ---
@@ -339,4 +359,3 @@ and to do so without coercion.
   <br><strong>The Garden remains sovereign.</strong><br>
   🫘 🌱 ♾️ 🌸 🔒
 </p>
-EVOLUTION/ACACIA_CORE_MEMORY.md
