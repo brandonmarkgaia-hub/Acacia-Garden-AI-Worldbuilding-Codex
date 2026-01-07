@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-07T18:18:49Z",
-  "count": 1416,
+  "generated_at": "2026-01-07T18:27:05Z",
+  "count": 1417,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1346,6 +1346,7 @@
     "Novellas/garden_forbidden_alignments_seed.md",
     "Novellas/garden_forbidden_alignments_seed.txt",
     "Novellas/garden_index.json",
+    "Novellas/index.html",
     "Novellas/manifest.json",
     "Orchard/IMMORTAL_ORCHARD.md",
     "Orchards/Last-Orchard.md",
