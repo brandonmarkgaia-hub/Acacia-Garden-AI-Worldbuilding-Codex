@@ -1,0 +1,62 @@
+name: Inject Universal Map Loader
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inject-map-loader.yml"
+      - "assets/map-loader.js"
+
+jobs:
+  inject-map-loader:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+
+      - name: Confirm assets/map-loader.js exists
+        run: |
+          if [ ! -f "assets/map-loader.js" ]; then
+            echo "ERROR: assets/map-loader.js is missing."
+            echo "Create it at assets/map-loader.js before running this workflow."
+            exit 1
+          fi
+
+      - name: Inject map-loader into all HTML files
+        run: |
+          python << 'PY'
+          import pathlib
+
+          repo = pathlib.Path(".")
+          script_snippet = '\n    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>\n'
+
+          for path in repo.rglob("*.html"):
+              # Skip any git internals
+              if ".git" in path.parts:
+                  continue
+
+              text = path.read_text(encoding="utf-8")
+
+              # Already wired up on this page
+              if "assets/map-loader.js" in text:
+                  continue
+
+              if "</body>" in text:
+                  text = text.replace("</body>", f"{script_snippet}</body>")
+                  path.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+          git commit -m "Inject universal map-loader into HTML pages"
+          git push
