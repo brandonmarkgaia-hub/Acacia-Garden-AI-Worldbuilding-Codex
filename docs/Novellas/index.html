@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Garden Novellas · Acacia Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Instant redirect to the Library view where Novellas are curated -->
+  <meta http-equiv="refresh" content="0; url=../library.html#novellas" />
+
+  <style>
+    :root {
+      color-scheme: dark light;
+      --bg: #050608;
+      --card: #11131a;
+      --accent: #35c686;
+      --accent-soft: rgba(53, 198, 134, 0.16);
+      --text-main: #f5f5f5;
+      --text-muted: #9fa4b8;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #101320 0, #050608 55%, #000 100%);
+      color: var(--text-main);
+      padding: 2rem 1.5rem;
+    }
+
+    .shell {
+      max-width: 720px;
+      width: 100%;
+      border-radius: 24px;
+      padding: 1.75rem 1.75rem 1.5rem;
+      background:
+        radial-gradient(circle at 0% 0%, var(--accent-soft) 0, transparent 55%),
+        linear-gradient(145deg, #050608 0, #0c1018 45%, #050608 100%);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+      text-align: left;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.5);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(53, 198, 134, 0.75);
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 1.9rem);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+    }
+
+    .hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    a.primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(53, 198, 134, 0.2);
+      background: radial-gradient(circle at 0 0, rgba(53, 198, 134, 0.25), rgba(53, 198, 134, 0.05));
+      color: var(--text-main);
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        border-color 0.12s ease, background 0.12s ease;
+      box-shadow: 0 0 0 1px rgba(53, 198, 134, 0.3),
+                  0 14px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    a.primary:hover {
+      transform: translateY(-1px);
+      background: radial-gradient(circle at 0 0, rgba(53, 198, 134, 0.3), rgba(53, 198, 134, 0.06));
+      border-color: rgba(53, 198, 134, 0.5);
+      box-shadow: 0 0 0 1px rgba(53, 198, 134, 0.45),
+                  0 16px 36px rgba(0, 0, 0, 0.85);
+    }
+
+    a.primary:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.8);
+    }
+
+    .kbd {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.85;
+    }
+
+    .kbd code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 0.76rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.55);
+      color: var(--text-main);
+    }
+
+    @media (max-width: 480px) {
+      .shell {
+        padding: 1.4rem 1.2rem 1.1rem;
+        border-radius: 20px;
+      }
+    }
+  </style>
+
+  <script>
+    // JS fallback in case meta-refresh is blocked
+    (function () {
+      var target = "../library.html#novellas";
+      try {
+        window.location.replace(target);
+      } catch (e) {
+        window.location.href = target;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <div class="pill">
+      <span class="dot"></span>
+      <span>Novellas · Library Redirect</span>
+    </div>
+
+    <h1>Following the Orchard Path…</h1>
+    <p class="sub">
+      The Garden no longer keeps its Novellas in a single chamber.
+      They’re shelved in the central <strong>Library</strong>, alongside Chambers,
+      Echoes, and other long-form blooms. You’re being guided there now.
+    </p>
+
+    <p class="hint">
+      If your browser doesn’t move automatically, use the path below to step into
+      the Novella stacks.
+    </p>
+
+    <div class="actions">
+      <a class="primary" href="../library.html#novellas">
+        Enter the Novella Library
+      </a>
+    </div>
+
+    <div class="kbd">
+      <span>Manual path:</span>
+      <code>/docs/library.html#novellas</code>
+    </div>
+  </div>
+</body>
+</html>
