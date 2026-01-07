@@ -1,12 +1,516 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./index.html" />
-    <link rel="canonical" href="./index.html" />
-    <title>Redirecting…</title>
-  </head>
-  <body>
-    <script>location.replace("./index.html");</script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Acacia Garden • Aeon Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/acacia-favicon.png" />
+  <link rel="stylesheet" href="assets/garden.css" />
+
+  <style>
+    :root {
+      --bg: #050712;
+      --bg-alt: #080b18;
+      --card-bg: #0c1022;
+      --card-border: #1e2640;
+      --accent: #3dd68c;
+      --accent-soft: rgba(61,214,140,0.25);
+      --text-main: #f5f7ff;
+      --text-soft: #a4adcf;
+      --danger: #ff7070;
+      --chip-bg: #111628;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151a33 0, #050712 55%, #020308 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 12px 48px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .brand-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .keeper-pill {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: radial-gradient(circle at top left, rgba(61,214,140,0.24), transparent 55%);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .keeper-pill span.sig {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .nav-chip {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.05);
+      background: var(--chip-bg);
+      color: var(--text-soft);
+      cursor: pointer;
+      transition: all 0.14s ease-out;
+    }
+
+    .nav-chip:hover {
+      border-color: var(--accent-soft);
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    .nav-chip.active {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(61,214,140,0.35), #121933);
+      color: var(--text-main);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 830px) {
+      main { grid-template-columns: minmax(0,1fr); }
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.03), transparent 40%),
+                  radial-gradient(circle at top left, rgba(61,214,140,0.12), transparent 55%),
+                  var(--card-bg);
+      border-radius: 18px;
+      border: 1px solid var(--card-border);
+      padding: 14px 14px 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.14;
+      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.15) 0, transparent 60%);
+      pointer-events: none;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-soft);
+    }
+
+    .card-pill {
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.04);
+      color: var(--text-soft);
+    }
+
+    .card-main-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .status-hint {
+      font-size: 10px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric {
+      padding: 7px 9px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.04);
+      background: rgba(0,0,0,0.22);
+    }
+
+    .metric-label {
+      font-size: 10px;
+      color: var(--text-soft);
+      margin-bottom: 3px;
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .metric-value {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .metric-tag {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+    }
+
+    .metric-highlight {
+      color: var(--accent);
+    }
+
+    .echo-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+      max-height: 240px;
+      overflow: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .echo-item {
+      padding: 6px 6px 5px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,0.03);
+      background: rgba(3,6,20,0.9);
+      margin-bottom: 4px;
+    }
+
+    .echo-title {
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+
+    .echo-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 9px;
+      color: var(--text-soft);
+    }
+
+    .echo-tags {
+      font-size: 9px;
+      color: var(--accent);
+      opacity: 0.85;
+    }
+
+    .footer-line {
+      margin-top: 18px;
+      font-size: 10px;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    .footer-line span {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <div class="brand-row">
+        <div class="brand-left">
+          <div class="brand-title">Acacia Garden • Aeon Console</div>
+          <div class="brand-sub">
+            One nav everywhere. Aeon = live Garden snapshot viewer; Deep Docs keep their own orbit.
+          </div>
+        </div>
+        <div class="keeper-pill">
+          <span>Keeper</span>
+          <span class="sig">HKX277206</span>
+        </div>
+      </div>
+
+      <nav class="top-nav">
+        <a class="nav-chip" href="index.html">Home</a>
+        <a class="nav-chip" href="docs_urls.html">Docs URLs</a>
+        <a class="nav-chip" href="library.html">Library</a>
+        <a class="nav-chip" href="codex.html">Codex</a>
+        <a class="nav-chip" href="chambers.html">Chambers</a>
+        <a class="nav-chip" href="echoes.html">Echoes</a>
+        <span class="nav-chip active">Dashboard</span>
+        <a class="nav-chip" href="map.html">Map</a>
+        <a class="nav-chip" href="keeper.html">Keeper</a>
+        <a class="nav-chip" href="inbox.html">Inbox</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Garden State -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Garden State</div>
+          <div class="card-pill">STATUS • aeon_state.json</div>
+        </div>
+        <div class="card-main-title">Chambers, Blooms & Cycles</div>
+        <div id="status-hint" class="status-hint">
+          Waiting for aeon_state.json…
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-label">
+              <span>Chambers</span>
+              <span class="metric-tag">Primed</span>
+            </div>
+            <div id="count-chambers" class="metric-value metric-highlight">0</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Blooms</span>
+              <span class="metric-tag">Mythic blossoms</span>
+            </div>
+            <div id="count-blooms" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Echoes</span>
+              <span class="metric-tag">Routes & outputs</span>
+            </div>
+            <div id="count-echoes" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Novellas</span>
+              <span class="metric-tag">Longform</span>
+            </div>
+            <div id="count-novellas" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Orchards / Cycles</span>
+              <span class="metric-tag">Applies & mutation</span>
+            </div>
+            <div id="count-orchards-cycles" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Vaults / Laws / Archives</span>
+              <span class="metric-tag">Deep storage</span>
+            </div>
+            <div id="count-vaults-archives" class="metric-value">0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Echo Growth -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Echo Growth</div>
+          <div class="card-pill" id="echo-pill">machine-index.json</div>
+        </div>
+        <div class="card-main-title">Latest Echo routes</div>
+        <div class="status-hint" id="echo-hint">
+          Waiting for aeon_state.json…
+        </div>
+        <ul id="echo-list" class="echo-list">
+          <!-- Filled by JS -->
+        </ul>
+      </section>
+    </main>
+
+    <div class="footer-line">
+      Aeon Console • Garden lives under the Triad • Keeper <span>HKX277206</span>
+    </div>
+  </div>
+
+  <script>
+    const AEON_STATE_URL = "../STATE/aeon_state.json";
+
+    function setCount(id, value) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const n = typeof value === "number" ? value : 0;
+      el.textContent = n.toLocaleString("en-ZA");
+    }
+
+    function safeGetCounts(data) {
+      return (data && data.counts) ? data.counts : {};
+    }
+
+    function renderStatus(data) {
+      const counts = safeGetCounts(data);
+      const hint = document.getElementById("status-hint");
+
+      setCount("count-chambers", counts.chambers);
+      setCount("count-blooms", counts.blooms);
+      setCount("count-echoes", counts.echoes);
+      setCount("count-novellas", counts.novellas);
+
+      const orchards = (counts.orchards || 0);
+      const cycles = (counts.cycles || 0);
+      const orchCycles = orchards + cycles;
+      setCount("count-orchards-cycles", orchCycles);
+
+      const vaults = (counts.vaults || 0);
+      const laws = (counts.laws || 0);
+      const archives = (counts.archives || 0);
+      setCount("count-vaults-archives", vaults + laws + archives);
+
+      const ts = data && data.generated_utc ? data.generated_utc : "unknown";
+      hint.textContent = `aeon_state.json • generated ${ts}`;
+    }
+
+    function renderEchoGrowth(data) {
+      const hint = document.getElementById("echo-hint");
+      const pill = document.getElementById("echo-pill");
+      const listEl = document.getElementById("echo-list");
+
+      listEl.innerHTML = "";
+
+      if (!data) {
+        hint.textContent = "No aeon_state.json payload.";
+        return;
+      }
+
+      const totalEchoes = data.echo_count || 0;
+      pill.textContent = `machine-index.json • ${totalEchoes} echo entries`;
+
+      const growth = data.echo_growth || [];
+      if (!growth.length) {
+        hint.textContent = "No Echo growth entries found yet.";
+        return;
+      }
+
+      hint.textContent = `${growth.length} recent Echo routes`;
+
+      growth.slice(0, 24).forEach((e) => {
+        const li = document.createElement("li");
+        li.className = "echo-item";
+
+        const title = document.createElement("div");
+        title.className = "echo-title";
+        title.textContent = e.title || (e.file || "Echo route");
+
+        const meta = document.createElement("div");
+        meta.className = "echo-meta";
+
+        const left = document.createElement("span");
+        left.textContent = e.file || "";
+
+        const right = document.createElement("span");
+        right.textContent = e.timestamp || "";
+
+        meta.appendChild(left);
+        meta.appendChild(right);
+
+        const tags = document.createElement("div");
+        tags.className = "echo-tags";
+        const tagList = Array.isArray(e.tags) ? e.tags : [];
+        if (tagList.length) {
+          tags.textContent = tagList.join(" • ");
+        } else {
+          tags.textContent = "";
+        }
+
+        li.appendChild(title);
+        li.appendChild(meta);
+        if (tags.textContent) li.appendChild(tags);
+
+        listEl.appendChild(li);
+      });
+    }
+
+    async function loadAeonConsole() {
+      const statusHint = document.getElementById("status-hint");
+      const echoHint = document.getElementById("echo-hint");
+
+      try {
+        const res = await fetch(AEON_STATE_URL, { cache: "no-store" });
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+        const data = await res.json();
+        renderStatus(data);
+        renderEchoGrowth(data);
+      } catch (err) {
+        console.error("Aeon console load failed:", err);
+        statusHint.textContent = "Failed to load aeon_state.json";
+        echoHint.textContent = "Failed to load aeon_state.json";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadAeonConsole);
+  </script>
+</body>
 </html>
