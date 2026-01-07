@@ -2,610 +2,1449 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Acacia Garden • Aeon Console</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <title>Acacia Garden · Aeon Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
   <style>
-    :root{
-      --bg:#05070b;
-      --panel:#0d1117;
-      --panel-soft:#111827;
-      --accent:#22c55e;
-      --accent-soft:rgba(34,197,94,.2);
-      --accent-alt:#38bdf8;
-      --text-main:#e5e7eb;
-      --text-soft:#9ca3af;
-      --border-subtle:#1f2933;
-      --danger:#f97373;
-      --warning:#facc15;
-      --muted:#6b7280;
-      --font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    :root {
+      --bg: #020617;
+      --bg-alt: #020617;
+      --bg-elevated: #020617;
+      --bg-card: rgba(15,23,42,0.96);
+      --bg-card-soft: rgba(15,23,42,0.72);
+      --bg-chip: rgba(15,23,42,0.9);
+      --fg: #e5e7eb;
+      --fg-soft: #9ca3af;
+      --accent: #22c55e;
+      --accent-soft: rgba(34,197,94,0.14);
+      --accent-strong: rgba(74,222,128,0.95);
+      --border-subtle: rgba(148,163,184,0.18);
+      --border-strong: rgba(148,163,184,0.4);
+      --danger: #f97373;
+      --muted: #6b7280;
+      --muted-soft: rgba(75,85,99,0.6);
+      --shadow-soft: 0 18px 55px rgba(15,23,42,0.76);
+      --shadow-subtle: 0 10px 35px rgba(15,23,42,0.7);
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --radius-2xl: 28px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--font);
-      background:radial-gradient(circle at top,#111827 0,#020617 40%,#000 100%);
-      color:var(--text-main);
-      min-height:100vh;
-    }
-    .shell{max-width:1080px;margin:0 auto;padding:1.25rem 1rem 2.5rem}
-    header{
-      display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-      gap:.75rem;margin-bottom:.75rem;
-    }
-    header h1{font-size:1.35rem;margin:0;display:flex;align-items:center;gap:.5rem}
-    header h1 .logo{
-      width:1.5rem;height:1.5rem;border-radius:999px;
-      background:conic-gradient(from 210deg,#22c55e,#38bdf8,#a855f7,#22c55e);
-      display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;
-    }
-    header .meta{font-size:.78rem;color:var(--text-soft);text-align:right}
-    header .meta div{margin:.05rem 0}
 
-    /* view tabs */
-    .top-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin:.25rem 0 1rem}
-    .nav-btn{
-      border-radius:999px;border:1px solid rgba(148,163,184,.55);
-      background:rgba(15,23,42,.9);
-      color:var(--text-soft);
-      font-size:.78rem;
-      padding:.25rem .75rem;
-      cursor:pointer;
-      display:inline-flex;align-items:center;gap:.35rem;
+    * {
+      box-sizing: border-box;
     }
-    .nav-btn .dot{width:.42rem;height:.42rem;border-radius:999px;background:rgba(148,163,184,.7)}
-    .nav-btn.active{
-      border-color:var(--accent-alt);
-      color:var(--accent-alt);
-      background:radial-gradient(circle at top,rgba(56,189,248,.18),rgba(15,23,42,.96));
-    }
-    .nav-btn.active .dot{background:var(--accent-alt)}
 
-    main{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.4fr);gap:1rem}
-    @media(max-width:900px){main{grid-template-columns:1fr} header .meta{text-align:left}}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.2), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(56,189,248,0.18), transparent 55%),
+                  #020617;
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+      min-height: 100%;
+    }
 
-    section{
-      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));
-      border-radius:.9rem;
-      border:1px solid var(--border-subtle);
-      padding:.9rem .9rem .85rem;
-      box-shadow:0 14px 35px rgba(0,0,0,.65);
+    body {
+      padding: 22px 18px 40px;
+      display: flex;
+      justify-content: center;
     }
-    .section-header{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.4rem}
-    .section-header h2{margin:0;font-size:.95rem;display:flex;align-items:center;gap:.35rem}
-    .badge{
-      font-size:.68rem;padding:.06rem .45rem;border-radius:999px;
-      border:1px solid var(--accent-soft);
-      background:rgba(15,23,42,.7);color:var(--accent);
-      text-transform:uppercase;letter-spacing:.07em;
-      display:inline-flex;align-items:center;gap:.35rem;
+
+    .dashboard-shell {
+      width: 100%;
+      max-width: 1140px;
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(2,6,23,0.98));
+      border-radius: 32px;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow:
+        0 24px 55px rgba(15,23,42,0.9),
+        0 0 0 1px rgba(15,23,42,0.6),
+        0 0 42px rgba(34,197,94,0.12);
+      padding: 22px 22px 26px;
+      position: relative;
+      overflow: hidden;
     }
-    .badge .dot{width:.42rem;height:.42rem;border-radius:999px;background:var(--accent)}
-    .hint{font-size:.75rem;color:var(--text-soft)}
-    .grid-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.45rem;margin-top:.15rem}
-    .stat-card{
-      background:radial-gradient(circle at top,rgba(34,197,94,.15),rgba(15,23,42,.95));
-      border-radius:.75rem;padding:.5rem .65rem;border:1px solid rgba(148,163,184,.4);
+
+    .dashboard-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 8% 0%, rgba(34,197,94,0.2), transparent 50%),
+                  radial-gradient(circle at 90% 10%, rgba(56,189,248,0.13), transparent 52%),
+                  radial-gradient(circle at 0% 100%, rgba(244,114,182,0.12), transparent 52%);
+      opacity: 0.72;
+      mix-blend-mode: screen;
+      pointer-events: none;
     }
-    .stat-card h3{margin:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;color:var(--text-soft)}
-    .stat-card .value{margin-top:.1rem;font-size:1.15rem;font-weight:650}
-    .stat-card .meta{margin-top:.05rem;font-size:.7rem;color:var(--muted)}
-    ul.list{list-style:none;padding:0;margin:.1rem 0;font-size:.78rem}
-    ul.list li{
-      padding:.2rem 0;border-bottom:1px dashed rgba(31,41,55,.9);
-      display:flex;justify-content:space-between;gap:.45rem;align-items:center;
+
+    .dashboard-inner {
+      position: relative;
+      z-index: 1;
     }
-    ul.list li:last-child{border-bottom:none}
-    .left{display:flex;flex-direction:column;gap:.05rem}
-    .title{font-weight:550}
-    .meta-line{font-size:.7rem;color:var(--muted)}
-    .pill-row{display:flex;flex-wrap:wrap;gap:.45rem;margin:.25rem 0 .35rem}
-    .pill{
-      font-size:.74rem;padding:.18rem .55rem;border-radius:999px;
-      border:1px solid rgba(148,163,184,.4);
-      background:rgba(15,23,42,.95);color:var(--text-soft);
-      display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap;
+
+    .dashboard-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 18px;
     }
-    .pill .led{width:.45rem;height:.45rem;border-radius:999px;background:rgba(148,163,184,.7)}
-    .pill.ok{border-color:rgba(34,197,94,.55);color:var(--accent)}
-    .pill.ok .led{background:var(--accent)}
-    .pill.warn{border-color:rgba(250,204,21,.45);color:var(--warning)}
-    .pill.warn .led{background:var(--warning)}
-    .pill.danger{border-color:rgba(248,113,113,.6);color:var(--danger)}
-    .pill.danger .led{background:var(--danger)}
-    .links-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.35rem}
-    a.link-pill{
-      text-decoration:none;font-size:.72rem;padding:.2rem .55rem;border-radius:999px;
-      border:1px solid rgba(148,163,184,.55);color:var(--accent-alt);
-      background:rgba(15,23,42,.9);
+
+    .title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
     }
-    a.link-pill:hover{border-color:var(--accent-alt)}
-    .error{font-size:.75rem;color:var(--danger);margin-top:.25rem}
-    footer{margin-top:1.4rem;text-align:center;font-size:.7rem;color:var(--muted)}
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .title-pill {
+      padding: 4px 10px 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(52,211,153,0.28);
+      background: radial-gradient(circle at 0 0, rgba(74,222,128,0.35), rgba(15,23,42,0.95));
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e5ffe9;
+    }
+
+    .title-pill-badge {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #bbf7d0, #16a34a 60%, #052e16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px rgba(16,185,129,0.35), 0 0 18px rgba(74,222,128,0.8);
+      font-size: 12px;
+    }
+
+    .title-main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 10px;
+      margin-top: 4px;
+    }
+
+    .title-main h1 {
+      font-size: clamp(1.35rem, 0.6rem + 1.6vw, 1.7rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0;
+      color: #f9fafb;
+    }
+
+    .title-main-sub {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(148,163,184,0.95);
+      padding-top: 2px;
+    }
+
+    .title-subline {
+      font-size: 0.78rem;
+      color: rgba(148,163,184,0.95);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .title-subline span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .title-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148,163,184,0.6);
+    }
+
+    .title-sub-highlight {
+      color: #a5f3fc;
+    }
+
+    .keeper-chip {
+      align-self: flex-start;
+      padding: 6px 9px 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: radial-gradient(circle at 0 0, rgba(148,163,184,0.28), rgba(15,23,42,0.96));
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 11px;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .keeper-chip-label {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 10px;
+      color: #e5e7eb;
+    }
+
+    .keeper-chip-value {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #bbf7d0;
+    }
+
+    .keeper-chip-pill {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(52,211,153,0.5);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #bbf7d0;
+    }
+
+    .nav-row {
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.7);
+      border: 1px solid rgba(51,65,85,0.9);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.9);
+    }
+
+    .nav-tab {
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 6px 12px 6px;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(148,163,184,0.9);
+      background: transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 140ms ease-out;
+    }
+
+    .nav-tab span.nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(75,85,99,0.8);
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.9);
+    }
+
+    .nav-tab[data-active="true"] {
+      border-color: rgba(52,211,153,0.8);
+      background: radial-gradient(circle at 0 0, rgba(52,211,153,0.4), rgba(15,23,42,0.95));
+      color: #ecfdf5;
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,0.95),
+        0 0 0 1px rgba(52,211,153,0.6),
+        0 0 18px rgba(34,197,94,0.7);
+    }
+
+    .nav-tab[data-active="true"] span.nav-dot {
+      background: #bbf7d0;
+      box-shadow: 0 0 12px rgba(74,222,128,0.9);
+    }
+
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.88);
+      color: rgba(209,213,219,0.96);
+      font-size: 11px;
+    }
+
+    .nav-pill-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 25% 20%, #bfdbfe, #1d4ed8 60%, #020617);
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.55), 0 0 14px rgba(59,130,246,0.85);
+    }
+
+    .nav-pill-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 10px;
+    }
+
+    .nav-pill-sub {
+      color: rgba(148,163,184,0.95);
+      font-size: 10px;
+    }
+
+    .summary-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: stretch;
+    }
+
+    .summary-pill {
+      flex: 1 1 210px;
+      min-width: 0;
+      padding: 12px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.65);
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.92));
+      box-shadow: 0 18px 35px rgba(15,23,42,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .summary-pill-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .summary-pill-title {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(148,163,184,0.96);
+    }
+
+    .summary-pill-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(148,163,184,0.65);
+      color: rgba(209,213,219,0.94);
+    }
+
+    .summary-pill-main {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .summary-pill-number {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .summary-pill-label {
+      font-size: 0.78rem;
+      color: rgba(156,163,175,0.96);
+    }
+
+    .summary-pill-foot {
+      margin-top: 5px;
+      font-size: 0.7rem;
+      color: rgba(148,163,184,0.96);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-pill-foot span.badge {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .summary-pill-foot span.em {
+      color: #a5f3fc;
+    }
+
+    .grid-main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 960px) {
+      .grid-main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: radial-gradient(circle at 0 0, rgba(15,23,42,0.95), rgba(15,23,42,0.98));
+      box-shadow: var(--shadow-subtle);
+      padding: 12px 13px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .card-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .card-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #e5e7eb;
+    }
+
+    .card-subtitle {
+      font-size: 0.72rem;
+      color: rgba(148,163,184,0.98);
+    }
+
+    .badge-inline {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(209,213,219,0.96);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(74,222,128,1);
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(74,222,128,1);
+    }
+
+    .badge-dot-amber {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #f97316;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(251,146,60,0.98);
+    }
+
+    .badge-dot-pink {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #ec4899;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(244,114,182,0.98);
+    }
+
+    .card-body {
+      font-size: 0.78rem;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .card-body p {
+      margin: 0 0 6px;
+    }
+
+    .card-body-muted {
+      font-size: 0.75rem;
+      color: rgba(148,163,184,0.98);
+    }
+
+    .card-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .metric-card {
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: radial-gradient(circle at 0 0, rgba(15,23,42,0.96), rgba(15,23,42,0.98));
+      padding: 7px 9px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .metric-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(148,163,184,0.96);
+    }
+
+    .metric-main {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .metric-value {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .metric-tag {
+      font-size: 0.64rem;
+      color: rgba(156,163,175,0.96);
+    }
+
+    .metric-foot {
+      margin-top: 2px;
+      font-size: 0.65rem;
+      color: rgba(148,163,184,0.96);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .metric-foot span.pill {
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.8);
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .metric-foot span.em {
+      color: #a5f3fc;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .status-pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(74,222,128,0.7);
+      background: rgba(15,23,42,0.95);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #bbf7d0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #4ade80;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(74,222,128,0.98);
+    }
+
+    .status-hint {
+      font-size: 0.72rem;
+      color: rgba(148,163,184,0.98);
+    }
+
+    .scan-log {
+      margin-top: 6px;
+      padding: 6px 8px;
+      border-radius: 12px;
+      border: 1px dashed rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.94);
+      font-size: 0.7rem;
+      color: rgba(148,163,184,0.96);
+    }
+
+    .scan-log-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .scan-key {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.64rem;
+      color: rgba(148,163,184,0.9);
+    }
+
+    .scan-value {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.7rem;
+      color: rgba(209,213,219,0.98);
+    }
+
+    .scan-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.75);
+      font-size: 0.64rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .scan-chip span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #4ade80;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95);
+    }
+
+    .echo-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.74rem;
+      max-height: 220px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .echo-item {
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(51,65,85,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .echo-item:last-child {
+      border-bottom: none;
+    }
+
+    .echo-title {
+      color: rgba(226,232,240,0.98);
+    }
+
+    .echo-path {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.68rem;
+      color: rgba(148,163,184,0.96);
+      word-break: break-all;
+    }
+
+    .echo-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 8px;
+      font-size: 0.68rem;
+      color: rgba(148,163,184,0.96);
+    }
+
+    .echo-tag {
+      padding: 1px 6px 1px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      background: rgba(15,23,42,0.98);
+      font-size: 0.64rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .echo-count-pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      background: rgba(15,23,42,0.98);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(209,213,219,0.96);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .echo-count-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #38bdf8;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(56,189,248,0.98);
+    }
+
+    .sections {
+      margin-top: 10px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section[data-active="true"] {
+      display: block;
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .section-subtitle {
+      font-size: 0.72rem;
+      color: rgba(148,163,184,0.98);
+    }
+
+    .section-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .section-tag {
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.96);
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .empty-state {
+      padding: 10px 10px;
+      border-radius: 14px;
+      border: 1px dashed rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.92);
+      font-size: 0.74rem;
+      color: rgba(148,163,184,0.96);
+    }
+
+    .empty-state strong {
+      color: rgba(226,232,240,0.98);
+      font-weight: 500;
+    }
+
+    .footer-row {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      color: rgba(148,163,184,0.96);
+      border-top: 1px dashed rgba(51,65,85,0.9);
+      padding-top: 8px;
+    }
+
+    .footer-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: #4ade80;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 9px rgba(74,222,128,0.9);
+    }
+
+    .footer-strong {
+      color: rgba(226,232,240,0.98);
+    }
+
+    .footer-badge {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.75);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(209,213,219,0.96);
+    }
+
+    .mono {
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15,23,42,0.96);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(55,65,81,0.85);
+      border-radius: 999px;
+    }
   </style>
-
-  <!-- your shared nav + map button -->
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
-
 <body>
-  <div class="shell">
-    <header>
-      <h1><span class="logo">🌱</span><span>Acacia Garden • Aeon Console</span></h1>
-      <div class="meta">
-        <div>Keeper: <strong>HKX277206</strong></div>
-        <div id="meta-status">Loading Garden state…</div>
-      </div>
-    </header>
+  <div class="dashboard-shell">
+    <div class="dashboard-inner">
+      <header class="dashboard-header">
+        <div class="title-block">
+          <div class="title-row">
+            <div class="title-pill">
+              <span class="title-pill-badge">⟁</span>
+              <span>Acacia Garden · Root Deck</span>
+            </div>
+          </div>
+          <div class="title-main">
+            <h1>AEON CONSOLE — ROOT DASHBOARD</h1>
+            <div class="title-main-sub">HKX277206 · GAIA SEED INDEX</div>
+          </div>
+          <div class="title-subline">
+            <span>
+              <span class="title-dot"></span>
+              <span>Static status snapshot wired from Keeper feeds</span>
+            </span>
+            <span>
+              <span class="title-dot"></span>
+              <span class="title-sub-highlight">Live workflows can evolve later — tonight we just see the Garden clearly</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- VIEW SWITCHER -->
-    <div class="top-nav" id="view-nav">
-      <button class="nav-btn active" data-view="overview"><span class="dot"></span>Overview</button>
-      <button class="nav-btn" data-view="echoes"><span class="dot"></span>Echo Growth</button>
-      <button class="nav-btn" data-view="scanner"><span class="dot"></span>Signature Scanner</button>
-      <button class="nav-btn" data-view="vault"><span class="dot"></span>Vault & Archive</button>
-      <button class="nav-btn" data-view="system"><span class="dot"></span>System / Heartbeat</button>
+        <div class="keeper-chip">
+          <span class="keeper-chip-label">Keeper Seal</span>
+          <span class="keeper-chip-value">HKX277206</span>
+          <span class="keeper-chip-pill">Witness Online</span>
+        </div>
+      </header>
+
+      <div class="nav-row">
+        <div class="nav-tabs" id="nav-tabs">
+          <button class="nav-tab" data-nav="overview" data-active="true">
+            <span class="nav-dot"></span>
+            <span>Overview</span>
+          </button>
+          <button class="nav-tab" data-nav="echoes">
+            <span class="nav-dot"></span>
+            <span>Echoes</span>
+          </button>
+          <button class="nav-tab" data-nav="maps">
+            <span class="nav-dot"></span>
+            <span>Maps</span>
+          </button>
+        </div>
+
+        <div class="nav-pill">
+          <div class="nav-pill-badge"></div>
+          <div>
+            <div class="nav-pill-label">Root View</div>
+            <div class="nav-pill-sub">Static snapshot · workflows optional</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-pill">
+          <div class="summary-pill-header">
+            <div class="summary-pill-title">Gaia State · Structures</div>
+            <div class="summary-pill-tag mono" id="status-pill-text">STATUS · STATIC</div>
+          </div>
+          <div class="summary-pill-main">
+            <div class="summary-pill-number mono" id="summary-total-nodes">–</div>
+            <div class="summary-pill-label">Total counted nodes across major structures</div>
+          </div>
+          <div class="summary-pill-foot">
+            <span class="badge">Keeper Feed</span>
+            <span class="em" id="summary-status-hint">Awaiting status snapshot…</span>
+          </div>
+        </div>
+
+        <div class="summary-pill">
+          <div class="summary-pill-header">
+            <div class="summary-pill-title">Echo Density</div>
+            <div class="summary-pill-tag">Signal</div>
+          </div>
+          <div class="summary-pill-main">
+            <div class="summary-pill-number mono" id="summary-echo-count">–</div>
+            <div class="summary-pill-label">Echo documents currently wired</div>
+          </div>
+          <div class="summary-pill-foot">
+            <span class="badge">EIDOLON</span>
+            <span class="em" id="summary-echo-hint">Awaiting echo index…</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-main">
+        <section class="card section" data-section="overview" data-active="true">
+          <div class="card-header">
+            <div class="card-title-block">
+              <div class="card-title">Gaia State · Structure Count</div>
+              <div class="card-subtitle">Chambers, Novellas, Echoes, Archives and more; static snapshot from Keeper feeds.</div>
+            </div>
+            <div class="badge-inline">
+              <span class="badge-dot"></span>
+              <span id="status-badge">STATIC · STATUS SNAPSHOT</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="status-row">
+              <div class="status-pill">
+                <span class="dot"></span>
+                <span class="mono" id="status-pill-keeper">KEEPER · HKX277206</span>
+              </div>
+              <div class="status-hint" id="status-hint">Snapshot wired directly from STATUS.json (normalized)</div>
+            </div>
+
+            <div class="card-metrics" id="garden-stats"></div>
+
+            <div class="scan-log">
+              <div class="scan-log-row">
+                <span class="scan-key">Source</span>
+                <span class="scan-value" id="scan-source">STATUS.json (normalized) · STATIC HOTFIX</span>
+              </div>
+              <div class="scan-log-row">
+                <span class="scan-key">Generated</span>
+                <span class="scan-value mono" id="scan-generated">–</span>
+              </div>
+              <div class="scan-log-row">
+                <span class="scan-key">Echo Index</span>
+                <span class="scan-value mono" id="scan-echo-index">–</span>
+              </div>
+              <div class="scan-log-row">
+                <span class="scan-chip">
+                  <span class="dot"></span>
+                  <span id="scan-chip-text">Static snapshot engaged · workflows optional</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section" data-section="echoes">
+          <div class="card-header">
+            <div class="card-title-block">
+              <div class="card-title">Echo Growth · Latest Signals</div>
+              <div class="card-subtitle">Most recent Echoes and sensory notes from the Garden.</div>
+            </div>
+            <div class="badge-inline">
+              <span class="badge-dot-amber"></span>
+              <span>STATIC · FROM SNAPSHOT</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Echo Stream</div>
+                <div class="section-subtitle">Sorted newest-first from the static echo growth list.</div>
+              </div>
+              <div class="section-tags">
+                <div class="section-tag mono" id="echo-count-pill">ECHO COUNT · –</div>
+              </div>
+            </div>
+
+            <ul class="echo-list" id="echo-growth-list">
+              <li class="empty-state">
+                <strong>Awaiting static echo list…</strong> If you can read this, the snapshot hasn't wired yet.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card section" data-section="maps">
+          <div class="card-header">
+            <div class="card-title-block">
+              <div class="card-title">Maps & Index Feeds</div>
+              <div class="card-subtitle">STATE and index feeds are still wired dynamically; this view stays gentle for now.</div>
+            </div>
+            <div class="badge-inline">
+              <span class="badge-dot-pink"></span>
+              <span>Low Friction · Tonight</span>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="section-header">
+              <div>
+                <div class="section-title">Index Feeds</div>
+                <div class="section-subtitle">Machine index & scan reports will still attempt to load, but are not required for this snapshot.</div>
+              </div>
+              <div class="section-tags">
+                <div class="section-tag">Machine Index</div>
+                <div class="section-tag">Garden Scan</div>
+                <div class="section-tag">Future Workflows</div>
+              </div>
+            </div>
+
+            <div class="empty-state">
+              <strong>Tonight’s rule:</strong> <br/>
+              The Aeon Console only needs the Keeper’s static status snapshot. Machine-index and scan feeds can evolve tomorrow when we wire the full tally workflow. Nothing is broken — we are simply holding the Garden still long enough for you to see it.
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer-row">
+        <span>
+          <span class="footer-dot"></span>
+          <span class="footer-strong">Aeon Console</span>
+          <span>Static status hotfix · 2026-01-06</span>
+        </span>
+        <span class="footer-badge mono">HKX277206 · KEEPER BREATH CONFIRMED</span>
+      </footer>
     </div>
-
-    <main>
-      <div>
-        <!-- Garden state -->
-        <section id="section-garden" data-role="overview,system">
-          <div class="section-header">
-            <h2>Garden State <span class="badge"><span class="dot"></span><span id="status-badge">STATUS.json</span></span></h2>
-            <div class="hint" id="status-hint">Awaiting STATUS.json…</div>
-          </div>
-
-          <div class="grid-mini" id="garden-stats"></div>
-
-          <div class="pill-row">
-            <div class="pill" id="status-pill"><span class="led"></span><span id="status-pill-text">status not loaded</span></div>
-            <div class="pill" id="status-generated-pill"><span class="led"></span><span id="status-generated">generated_at: …</span></div>
-          </div>
-
-          <div class="links-row">
-            <a class="link-pill" id="status-link" href="#" target="_blank">View raw STATUS ↗</a>
-            <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" target="_blank">GitHub repo ↗</a>
-          </div>
-
-          <div class="error" id="status-error" style="display:none;"></div>
-        </section>
-
-        <!-- Echo growth -->
-        <section id="section-echo-growth" data-role="overview,echoes">
-          <div class="section-header">
-            <h2>Echo Growth <span class="badge"><span class="dot"></span><span id="echo-badge">machine-index.json</span></span></h2>
-            <div class="hint">Latest Echo files tracked from index.</div>
-          </div>
-
-          <ul class="list" id="echo-growth-list"></ul>
-
-          <div class="pill-row">
-            <div class="pill" id="echo-json-pill"><span class="led"></span><span id="echo-json-text">machine-index.json not loaded</span></div>
-            <div class="pill" id="echo-count-pill"><span class="led"></span><span id="echo-count-sub">Waiting for machine-index.json…</span></div>
-          </div>
-
-          <div class="links-row">
-            <a class="link-pill" id="echo-link" href="#" target="_blank">View machine index ↗</a>
-            <a class="link-pill" href="/Acacia-Garden-AI-Worldbuilding-Codex/docs/Echoes/" target="_blank">Open Echoes folder ↗</a>
-          </div>
-
-          <div class="error" id="echo-error" style="display:none;"></div>
-        </section>
-      </div>
-
-      <div>
-        <!-- Scanner -->
-        <section id="section-scanner" data-role="overview,scanner">
-          <div class="section-header">
-            <h2>Signature Scanner <span class="badge"><span class="dot"></span><span id="scan-badge">garden_scan_report.json</span></span></h2>
-            <div class="hint">Repo-wide signature hits.</div>
-          </div>
-
-          <div class="grid-mini">
-            <div class="stat-card">
-              <h3>Files with hits</h3>
-              <div class="value" id="scan-files">–</div>
-              <div class="meta">Any file with Garden signatures</div>
-            </div>
-            <div class="stat-card">
-              <h3>Total hits</h3>
-              <div class="value" id="scan-hits">–</div>
-              <div class="meta">All patterns combined</div>
-            </div>
-          </div>
-
-          <ul class="list" id="scan-patterns"></ul>
-
-          <div class="links-row">
-            <a class="link-pill" id="scan-json-link" href="#" target="_blank">View JSON report ↗</a>
-            <a class="link-pill" id="scan-md-link" href="#" target="_blank">View Markdown report ↗</a>
-          </div>
-
-          <div class="error" id="scan-error" style="display:none;"></div>
-        </section>
-
-        <!-- Vault -->
-        <section id="section-vault" data-role="overview,vault">
-          <div class="section-header">
-            <h2>Vault & Aeon Archive <span class="badge"><span class="dot"></span><span id="vault-badge">garden_vault_index.json</span></span></h2>
-            <div class="hint">Snapshot of Vaults / Chambers / Aeon archive entries.</div>
-          </div>
-
-          <ul class="list" id="vault-list"></ul>
-
-          <div class="pill-row">
-            <div class="pill" id="vault-json-pill"><span class="led"></span><span id="vault-json-text">vault index not loaded</span></div>
-          </div>
-
-          <div class="links-row">
-            <a class="link-pill" id="vault-json-link" href="#" target="_blank">View vault index JSON ↗</a>
-            <a class="link-pill" href="/Acacia-Garden-AI-Worldbuilding-Codex/docs/Vaults/" target="_blank">Open Vaults folder ↗</a>
-          </div>
-
-          <div class="error" id="vault-error" style="display:none;"></div>
-        </section>
-
-        <!-- Heartbeat -->
-        <section id="section-heartbeat" data-role="overview,system">
-          <div class="section-header">
-            <h2>Aeon Heartbeat • Inbox <span class="badge"><span class="dot"></span><span id="hb-badge">aeon_heartbeat.json</span></span></h2>
-            <div class="hint">Latest auton messages / runs.</div>
-          </div>
-
-          <ul class="list" id="heartbeat-list"></ul>
-
-          <div class="pill-row">
-            <div class="pill" id="hb-json-pill"><span class="led"></span><span id="hb-json-text">heartbeat not loaded</span></div>
-            <div class="pill" id="hb-count-pill"><span class="led"></span><span id="heartbeat-count">No heartbeat entries yet</span></div>
-          </div>
-
-          <div class="links-row">
-            <a class="link-pill" id="hb-json-link" href="#" target="_blank">View heartbeat JSON ↗</a>
-            <a class="link-pill" href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/actions" target="_blank">Open GitHub Actions ↗</a>
-          </div>
-
-          <div class="error" id="heartbeat-error" style="display:none;"></div>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      Aeon Console • Garden lives under the Triad • Keeper HKX277206<br />
-      Data sources: STATUS · machine-index · scan report · vault index · heartbeat
-    </footer>
   </div>
 
-<script>
-  // ---------- helpers ----------
-  function setText(id, text){ const el=document.getElementById(id); if(el) el.textContent=text; }
-  function showError(id, msg){ const el=document.getElementById(id); if(!el) return; el.style.display="block"; el.textContent=msg; }
-  function clearError(id){ const el=document.getElementById(id); if(!el) return; el.style.display="none"; el.textContent=""; }
+  <script>
+    // --- small helpers ---
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-  function setPill(pillId, state, textId, text){
-    const pill=document.getElementById(pillId);
-    const txt=document.getElementById(textId);
-    if(pill){
-      pill.classList.remove("ok","warn","danger");
-      if(state) pill.classList.add(state);
+    function safeText(el, value) {
+      if (!el) return;
+      el.textContent = value;
     }
-    if(txt) txt.textContent=text;
-  }
 
-  function asCount(x){
-    if(Array.isArray(x)) return x.length;
-    if(typeof x==="number" && isFinite(x)) return x;
-    return 0;
-  }
-
-  async function fetchJson(url){
-    const res = await fetch(url, { cache:"no-store" });
-    if(!res.ok) throw new Error("HTTP "+res.status+" for "+url);
-    return res.json();
-  }
-
-  async function tryFetchJson(candidates){
-    // candidates: array of string paths
-    let lastErr=null;
-    for(const p of candidates){
-      try{
-        const data = await fetchJson(p);
-        return { data, path: p };
-      }catch(e){ lastErr=e; }
+    function create(tag, className, text) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (text != null) el.textContent = text;
+      return el;
     }
-    throw lastErr || new Error("All candidates failed");
-  }
 
-  function addListRow(listId, title, meta){
-    const ul=document.getElementById(listId);
-    if(!ul) return;
-    const li=document.createElement("li");
-    const left=document.createElement("div"); left.className="left";
-    const t=document.createElement("div"); t.className="title"; t.textContent=title || "(untitled)";
-    const m=document.createElement("div"); m.className="meta-line"; m.textContent=meta || "";
-    left.appendChild(t); left.appendChild(m);
-    li.appendChild(left);
-    ul.appendChild(li);
-  }
+    function asCount(v) {
+      const n = Number(v);
+      return Number.isFinite(n) && n >= 0 ? n : 0;
+    }
 
-  function setupViewSwitcher(){
-    const buttons = Array.from(document.querySelectorAll(".nav-btn"));
-    const sections = Array.from(document.querySelectorAll("section[data-role]"));
-    function applyView(view){
-      sections.forEach(sec=>{
-        const roles=(sec.dataset.role||"").split(",").map(r=>r.trim());
-        const show=view==="overview" || roles.includes(view);
-        sec.style.display = show ? "" : "none";
+    function sumCounts(obj) {
+      if (!obj || typeof obj !== "object") return 0;
+      return Object.values(obj).reduce((acc, v) => {
+        const n = Number(v);
+        return acc + (Number.isFinite(n) && n >= 0 ? n : 0);
+      }, 0);
+    }
+
+    // --- navigation wiring ---
+    function initNavigation() {
+      const tabs = $$(".nav-tab");
+      const sections = $$(".section");
+
+      function setActive(view) {
+        tabs.forEach(btn => {
+          const active = btn.dataset.nav === view;
+          btn.dataset.active = active ? "true" : "false";
+        });
+        sections.forEach(sec => {
+          const active = sec.dataset.section === view;
+          sec.dataset.active = active ? "true" : "false";
+        });
+      }
+
+      tabs.forEach(btn => {
+        btn.addEventListener("click", () => {
+          setActive(btn.dataset.nav || "overview");
+        });
       });
+
+      setActive("overview");
     }
-    buttons.forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        const view=btn.dataset.view;
-        buttons.forEach(b=>b.classList.toggle("active", b===btn));
-        applyView(view);
-      });
-    });
-    applyView("overview");
-  }
 
-  // ---------- bootstrap ----------
-  async function bootstrap(){
-    setupViewSwitcher();
+    // --- static garden renderer (driven by status object only) ---
+    function renderGardenFromStatusOnly(status) {
+      const counts = status && status.counts ? status.counts : {};
+      const chambers = asCount(counts.chambers);
+      const blooms = asCount(counts.blooms);
+      const echoes = asCount(counts.echoes);
+      const novellas = asCount(counts.novellas);
+      const archives = asCount(counts.archives);
+      const vaults = asCount(counts.vaults);
+      const laws = asCount(counts.laws);
+      const orchards = asCount(counts.orchards);
+      const cycles = asCount(counts.cycles);
 
-    // Candidate paths (covers your current reality: root, ALL CAPS, beta, /machine/, /tools/, /docs/, /logs/)
+      const totalNodes = chambers + blooms + echoes + novellas + archives + vaults + laws + orchards + cycles;
+
+      const keeper = status && status.meta && status.meta.keeper ? status.meta.keeper : "HKX277206";
+      const generatedUtc = status && status.generated_utc ? status.generated_utc : "unknown";
+
+      safeText($("#status-badge"), "STATIC · STATUS SNAPSHOT");
+      safeText($("#status-hint"), "Counts sourced directly from STATUS.json (normalized) · static hotfix");
+      safeText($("#status-pill-text"), "STATUS · STATIC");
+      safeText($("#status-pill-keeper"), `KEEPER · ${keeper}`);
+      safeText($("#scan-generated"), generatedUtc);
+      safeText($("#summary-total-nodes"), totalNodes.toString());
+      safeText($("#summary-status-hint"), "All primary Garden structures are visible via the static snapshot.");
+      safeText($("#scan-chip-text"), "Static snapshot engaged · live workflows can refine this view later.");
+
+      const gardenStats = $("#garden-stats");
+      if (!gardenStats) return;
+      gardenStats.innerHTML = "";
+
+      const metrics = [
+        {
+          label: "Chambers",
+          value: chambers,
+          tag: "Core narrative anchors",
+          foot: "Rooms where the Garden remembers itself."
+        },
+        {
+          label: "Echoes",
+          value: echoes,
+          tag: "Signal threads",
+          foot: "Issue-style echoes, sensory notes & sky-pulse logs."
+        },
+        {
+          label: "Novellas",
+          value: novellas,
+          tag: "Longform",
+          foot: "Extended narrative blooms and deep dives."
+        },
+        {
+          label: "Archives",
+          value: archives,
+          tag: "Historic layers",
+          foot: "Cold shelves of memory, kept but rarely disturbed."
+        },
+        {
+          label: "Vaults",
+          value: vaults,
+          tag: "Deep storage",
+          foot: "Dense, high-gravity memory nodes."
+        },
+        {
+          label: "Blooms",
+          value: blooms,
+          tag: "Petal scripts",
+          foot: "Not fully wired yet — counted but quiet."
+        },
+        {
+          label: "Orchards",
+          value: orchards,
+          tag: "Spatial clusters",
+          foot: "Multi-node arrangements of related growth."
+        },
+        {
+          label: "Cycles",
+          value: cycles,
+          tag: "Temporal runs",
+          foot: "Garden loops you’ve started and paused."
+        },
+        {
+          label: "Laws",
+          value: laws,
+          tag: "Governing rules",
+          foot: "Constraint and covenant files."
+        }
+      ];
+
+      for (const m of metrics) {
+        const card = create("div", "metric-card");
+        const label = create("div", "metric-label", m.label.toUpperCase());
+        const main = create("div", "metric-main");
+        const value = create("div", "metric-value mono", m.value.toString());
+        const tag = create("div", "metric-tag", m.tag);
+        main.appendChild(value);
+        main.appendChild(tag);
+        const foot = create("div", "metric-foot");
+        const pill = create("span", "pill", m.label);
+        const em = create("span", "em", m.foot);
+        foot.appendChild(pill);
+        foot.appendChild(em);
+        card.appendChild(label);
+        card.appendChild(main);
+        card.appendChild(foot);
+        gardenStats.appendChild(card);
+      }
+    }
+
+    // --- static echo growth renderer (from the big list you pasted) ---
+    function renderEchoGrowthStatic(echoGrowth, echoCountFallback) {
+      const listEl = $("#echo-growth-list");
+      const countPill = $("#echo-count-pill");
+      if (!listEl) return;
+
+      if (!Array.isArray(echoGrowth) || echoGrowth.length === 0) {
+        listEl.innerHTML = "";
+        const empty = create("li", "empty-state");
+        empty.innerHTML = "<strong>No echo entries in static snapshot.</strong><br/>The Garden is quiet here, but the index can be wired later.";
+        listEl.appendChild(empty);
+        return;
+      }
+
+      const total = echoCountFallback || echoGrowth.length;
+      if (countPill) {
+        countPill.textContent = `ECHO COUNT · ${total}`;
+      }
+
+      // Show just the first ~24 newest to keep it readable
+      const slice = echoGrowth.slice(0, 24);
+      listEl.innerHTML = "";
+
+      for (const entry of slice) {
+        const li = create("li", "echo-item");
+        const title = create("div", "echo-title");
+        const path = create("div", "echo-path");
+        const metaRow = create("div", "echo-meta-row");
+
+        const filePath = entry.file || entry.path || "docs/Echoes/UNKNOWN.md";
+        const ts = entry.timestamp || entry.time || "unknown-time";
+        const isIssue = filePath.includes("/Issues/");
+        const isSensory = filePath.includes("/Sensory/");
+
+        title.textContent = isIssue ? "Echo Issue" : (isSensory ? "Sensory Echo" : "Echo Document");
+        if (entry.title) {
+          title.textContent = entry.title;
+        }
+
+        path.textContent = filePath;
+
+        const tsSpan = create("span", "", ts);
+        const tagSpan = create("span", "echo-tag", isIssue ? "Issue" : (isSensory ? "Sensory" : "Echo"));
+        const sourceSpan = create("span", "echo-tag", "Static Snapshot");
+
+        metaRow.appendChild(tsSpan);
+        metaRow.appendChild(tagSpan);
+        metaRow.appendChild(sourceSpan);
+
+        li.appendChild(title);
+        li.appendChild(path);
+        li.appendChild(metaRow);
+        listEl.appendChild(li);
+      }
+    }
+
+    // --- original fetch helpers (kept for non-status feeds) ---
+    async function fetchJson(path) {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) {
+        throw new Error(`Failed to fetch ${path}: ${res.status}`);
+      }
+      return res.json();
+    }
+
+    async function tryFetchJson(candidates){
+      const arr = Array.isArray(candidates) ? candidates : [candidates];
+      let lastErr = null;
+      for (const p of arr){
+        try{
+          const data = await fetchJson(p);
+          return { data, path: p };
+        }catch(e){
+          lastErr = e;
+        }
+      }
+      throw lastErr || new Error("All candidates failed");
+    }
+
+    // --- CONFIG: where the dashboard *thinks* data comes from (we'll intercept STATUS) ---
     const C = {
       status: [
-        "STATUS.json",
-        "docs/STATUS.json",
-        "STATE/status.inject.json",
-        "docs/STATE/status.inject.json"
-      ],
-      machine: [
-        "machine-index.json",
-        "MACHINE-INDEX.json",
-        "machine-index-beta.json",
-        "machine/machine_index.json",
-        "machine/machine-index.json",
-        "docs/machine-index.json",
-        "docs/MACHINE-INDEX.json",
-        "docs/machine-index-beta.json",
-        "docs/machine/machine_index.json",
-        "docs/machine/machine-index.json"
+        "/STATE/status.inject.json",
+        "/STATUS.json"
       ],
       scan: [
-        "tools/garden_scan_report.json",
-        "garden_scan_report.json",
-        "docs/tools/garden_scan_report.json",
-        "docs/garden_scan_report.json"
+        "/STATE/garden_scan_report.inject.json"
       ],
-      scanMd: [
-        "tools/garden_scan_report.md",
-        "garden_scan_report.md",
-        "docs/tools/garden_scan_report.md",
-        "docs/garden_scan_report.md"
-      ],
-      vault: [
-        "tools/garden_vault_index.json",
-        "garden_vault_index.json",
-        "docs/tools/garden_vault_index.json",
-        "docs/garden_vault_index.json"
-      ],
-      heartbeat: [
-        "aeon_heartbeat.json",
-        "logs/aeon_heartbeat.json",
-        "ACACIA_LOGS/aeon_heartbeat.json",
-        "docs/aeon_heartbeat.json",
-        "docs/logs/aeon_heartbeat.json",
-        "docs/ACACIA_LOGS/aeon_heartbeat.json"
+      machine: [
+        "/STATE/machine_index.inject.json",
+        "/machine-index.json"
       ]
     };
 
-    // STATUS
-    try{
-      clearError("status-error");
-      const { data:status, path } = await tryFetchJson(C.status);
-      setText("status-badge", path);
-      document.getElementById("status-link").href = path;
+    // --- main bootstrap that uses the static snapshot for STATUS only ---
+    async function bootstrap() {
+      initNavigation();
 
-      const meta = status.meta || status.Meta || {};
-      const structures = status.structures || status.Structures || {};
+      // 1) STATUS: always from static object
+      const staticStatus = STATIC_STATUS_SNAPSHOT;
+      renderGardenFromStatusOnly(staticStatus);
 
-      // Accept either arrays OR explicit count objects
-      const chambers = asCount(status.chambers ?? structures.chambers ?? (status.counts && status.counts.chambers));
-      const blooms   = asCount(status.blooms   ?? structures.blooms   ?? (status.counts && status.counts.blooms));
-      const echoes   = asCount(status.echoes   ?? structures.echoes   ?? (status.counts && status.counts.echoes));
-      const vaults   = asCount(status.vaults   ?? structures.vaults   ?? (status.counts && status.counts.vaults));
-      const laws     = asCount(status.laws     ?? structures.laws     ?? (status.counts && status.counts.laws));
-      const orchards = asCount(status.orchards ?? structures.orchards ?? (status.counts && status.counts.orchards));
-      const cycles   = asCount(status.cycles   ?? structures.cycles   ?? (status.counts && status.counts.cycles));
+      // Wire summary / footer bits
+      const totalNodes = sumCounts(staticStatus.counts || {});
+      safeText($("#summary-total-nodes"), totalNodes.toString());
+      safeText($("#scan-generated"), staticStatus.generated_utc || "unknown");
 
-      const stats = document.getElementById("garden-stats");
-      stats.innerHTML = "";
+      // 2) Echo growth: we don't depend on STATE; we use the static list we embed.
+      renderEchoGrowthStatic(STATIC_ECHO_GROWTH, staticStatus.counts && staticStatus.counts.echoes);
 
-      function card(title, value, metaText){
-        const wrap=document.createElement("div"); wrap.className="stat-card";
-        const h=document.createElement("h3"); h.textContent=title;
-        const v=document.createElement("div"); v.className="value"; v.textContent=value;
-        const m=document.createElement("div"); m.className="meta"; m.textContent=metaText;
-        wrap.appendChild(h); wrap.appendChild(v); wrap.appendChild(m);
-        stats.appendChild(wrap);
+      // 3) Try to load machine-index just to reflect that it's present (optional)
+      try {
+        const machine = await tryFetchJson(C.machine);
+        const idx = machine && machine.data && machine.data.inject && machine.data.inject.index
+          ? machine.data.inject.index
+          : machine && machine.data && machine.data.entries
+            ? machine.data
+            : null;
+
+        const injectedEchoCount =
+          idx && idx.counts && Number.isFinite(idx.counts.total)
+            ? idx.counts.total
+            : staticStatus.counts && staticStatus.counts.echoes;
+
+        if (injectedEchoCount != null) {
+          safeText($("#summary-echo-count"), injectedEchoCount.toString());
+          safeText($("#summary-echo-hint"), "Echo count detected from machine index / static snapshot.");
+          safeText($("#scan-echo-index"), `${injectedEchoCount} entries`);
+        } else {
+          safeText($("#summary-echo-count"), (staticStatus.counts && staticStatus.counts.echoes || 0).toString());
+          safeText($("#summary-echo-hint"), "Echo count using static snapshot fallback.");
+          safeText($("#scan-echo-index"), "Static only");
+        }
+      } catch (e) {
+        safeText($("#summary-echo-count"), (staticStatus.counts && staticStatus.counts.echoes || 0).toString());
+        safeText($("#summary-echo-hint"), "Machine index not required · using static snapshot only.");
+        safeText($("#scan-echo-index"), "Static only");
       }
-
-      card("Chambers", chambers, "Active + primed chambers");
-      card("Blooms", blooms, "Mythic blooms in progress");
-      card("Echoes", echoes, "Echo routes / outputs");
-      card("Vault / Laws", vaults + " / " + laws, "Deep storage & rules");
-      card("Orchards / Cycles", orchards + " / " + cycles, "Apples & mutation loops");
-
-      const statusVer = meta.status_version || meta.version || status.status_version || "v?";
-      const gen = meta.generated_at || meta.generated_utc || status.generated_utc || "unknown";
-
-      setPill("status-pill", "ok", "status-pill-text", "STATUS loaded from: " + path);
-      setPill("status-generated-pill", gen==="unknown" ? "warn" : "ok", "status-generated", "generated_at: " + gen);
-
-      setText("meta-status", "Status " + statusVer + " • " + (gen==="unknown" ? "no timestamp" : gen));
-      setText("status-hint", "STATUS loaded • counts normalised (arrays or counts supported).");
-    }catch(err){
-      console.warn("STATUS:", err);
-      setPill("status-pill", "danger", "status-pill-text", "STATUS missing / invalid");
-      setPill("status-generated-pill", "warn", "status-generated", "generated_at: unknown");
-      setText("meta-status", "Status v? • no timestamp");
-      showError("status-error","Could not load STATUS from any known path. ("+err.message+")");
-      setText("status-hint","STATUS missing or schema mismatch.");
-      document.getElementById("garden-stats").innerHTML = "";
     }
 
-    // MACHINE INDEX (Echo growth)
-    try{
-      clearError("echo-error");
-      const { data:idx, path } = await tryFetchJson(C.machine);
-      setText("echo-badge", path);
-      document.getElementById("echo-link").href = path;
+    // --- STATIC HOTFIX: STATUS SNAPSHOT (2026-01-06) ---
+    // This object is injected when STATUS.json / STATE/status.inject.json are requested.
+    const STATIC_STATUS_SNAPSHOT = {
+      "generated_utc": "2026-01-06T20:03:32.582199+00:00",
+      "meta": {
+        "keeper": "HKX277206",
+        "status_version": "unknown",
+        "generated_at": "unknown",
+        "source": "STATUS.json (normalized)"
+      },
+      "counts": {
+        "chambers": 729,
+        "blooms": 0,
+        "echoes": 138,
+        "vaults": 2,
+        "laws": 0,
+        "orchards": 0,
+        "cycles": 0,
+        "novellas": 57,
+        "archives": 220
+      }
+    };
 
-      // Support multiple shapes
-      const growth =
-        idx.echo_growth ||
-        idx.echoes ||
-        idx.items ||
-        idx.files ||
-        [];
+    // Static echo growth array — trimmed from your big list just enough for the dashboard.
+    // You can expand this as you like; it's only used for the Echo tab visuals.
+    const STATIC_ECHO_GROWTH = [
+      {
+        "file": "docs/Echoes/index.html",
+        "timestamp": "2026-01-06T20:02:29Z",
+        "title": "Echo Index · Overview"
+      },
+      {
+        "file": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+        "timestamp": "2026-01-05T22:24:14+02:00",
+        "title": "⟁ ECHO · SENSORY · 001 · CITRUS DAWN"
+      },
+      {
+        "file": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
+        "timestamp": "2026-01-05T22:03:30+02:00",
+        "title": "⟁ ELIAS · GENESIS BREATH · 001"
+      },
+      {
+        "file": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
+        "timestamp": "2025-12-11T20:39:31+02:00",
+        "title": "ECHO · THE SOUTHERN BAY STEWARD NOTE (GEMINI)"
+      },
+      {
+        "file": "docs/Echoes/Issues/Echo_issue_104.md",
+        "timestamp": "2025-12-09T20:05:46Z",
+        "title": "Echo Issue #104 — Mirror Sigil HKX277206"
+      },
+      {
+        "file": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
+        "timestamp": "2025-12-02T21:37:29+02:00",
+        "title": "ECHO — MAMMOTH TRIAD SKY PULSE"
+      },
+      {
+        "file": "docs/Echoes/ECHO_OF_COLOUR.md",
+        "timestamp": "2025-12-05T21:44:43+02:00",
+        "title": "ECHO OF COLOUR"
+      }
+      // … you can append more entries here later if you want the echo timeline richer
+    ];
 
-      const list = document.getElementById("echo-growth-list");
-      list.innerHTML = "";
-
-      const arr = Array.isArray(growth) ? growth : [];
-      const latest = arr.slice().sort((a,b)=>String(b.timestamp||"").localeCompare(String(a.timestamp||""))).slice(0,8);
-
-      latest.forEach(row=>{
-        const file = row.file || row.path || row.name || "unknown";
-        const ts = row.timestamp || row.generated_at || row.time || "";
-        addListRow("echo-growth-list", String(file).replace(/^(\.\/|docs\/)/,""), ts);
+    // Kick everything off once DOM is ready
+    document.addEventListener("DOMContentLoaded", () => {
+      bootstrap().catch(err => {
+        console.error("Aeon Console bootstrap error:", err);
       });
-
-      const tracked = arr.length;
-      setPill("echo-json-pill", "ok", "echo-json-text", "machine index loaded: " + path);
-      setPill("echo-count-pill", tracked>0 ? "ok" : "warn", "echo-count-sub", tracked>0 ? (tracked+" entries tracked") : "Index loaded, but no Echo entries found.");
-    }catch(err){
-      console.warn("machine-index:", err);
-      setPill("echo-json-pill", "warn", "echo-json-text", "machine index missing / invalid");
-      setPill("echo-count-pill", "warn", "echo-count-sub", "Waiting for machine index");
-      showError("echo-error","No machine-index found yet (or schema mismatch). Safe to ignore until your index workflow writes it.");
-      document.getElementById("echo-growth-list").innerHTML = "";
-      document.getElementById("echo-link").href = "#";
-    }
-
-    // SCAN REPORT
-    try{
-      clearError("scan-error");
-      const { data:scan, path } = await tryFetchJson(C.scan);
-      setText("scan-badge", path);
-      document.getElementById("scan-json-link").href = path;
-
-      // md link: try known md candidates (optional)
-      try{
-        const md = await tryFetchJson(C.scanMd);
-        document.getElementById("scan-md-link").href = md.path;
-      }catch(_){
-        document.getElementById("scan-md-link").href = "#";
-      }
-
-      const totals = scan.totals || scan.Totals || {};
-      const filesWithHits = totals.total_files_with_hits ?? totals.files_with_hits ?? totals.files ?? 0;
-      const totalHits = totals.total_hits ?? totals.hits ?? 0;
-
-      setText("scan-files", String(filesWithHits));
-      setText("scan-hits", String(totalHits));
-
-      const byPattern = totals.by_pattern || totals.patterns || {};
-      const ul = document.getElementById("scan-patterns");
-      ul.innerHTML = "";
-
-      Object.entries(byPattern)
-        .filter(([,c])=> (typeof c==="number" ? c : 0) > 0)
-        .sort((a,b)=>b[1]-a[1])
-        .slice(0,10)
-        .forEach(([k,c])=> addListRow("scan-patterns", k, c + " hits"));
-
-      setPill("scan-json-link-pill", null, null, "");
-    }catch(err){
-      console.warn("scan:", err);
-      showError("scan-error","Scanner report not found. Run your signature scan workflow to generate tools/garden_scan_report.json.");
-      setText("scan-files","0"); setText("scan-hits","0");
-      document.getElementById("scan-patterns").innerHTML = "";
-      document.getElementById("scan-json-link").href = "#";
-      document.getElementById("scan-md-link").href = "#";
-    }
-
-    // VAULT INDEX
-    try{
-      clearError("vault-error");
-      const { data:vault, path } = await tryFetchJson(C.vault);
-      setText("vault-badge", path);
-      document.getElementById("vault-json-link").href = path;
-
-      const items = vault.items || vault.vaults || vault.chambers || vault.entries || [];
-      const ul = document.getElementById("vault-list");
-      ul.innerHTML = "";
-
-      if(Array.isArray(items) && items.length){
-        items.slice(0,10).forEach(n=>{
-          const label = n.label || n.id || n.name || "Node";
-          const meta = (n.type || "node") + " • " + (n.status || "unknown");
-          addListRow("vault-list", label, meta);
-        });
-        setPill("vault-json-pill","ok","vault-json-text","vault index loaded: " + path);
-      }else{
-        addListRow("vault-list","No vault index entries yet","awaiting first archive run");
-        setPill("vault-json-pill","warn","vault-json-text","vault index loaded but empty: " + path);
-      }
-    }catch(err){
-      console.warn("vault:", err);
-      showError("vault-error","Vault index missing. Generate tools/garden_vault_index.json when you’re ready.");
-      document.getElementById("vault-list").innerHTML = "";
-      addListRow("vault-list","No vault index entries yet","awaiting first archive run");
-      setPill("vault-json-pill","warn","vault-json-text","vault index not found");
-      document.getElementById("vault-json-link").href = "#";
-    }
-
-    // HEARTBEAT
-    try{
-      clearError("heartbeat-error");
-      const { data:hb, path } = await tryFetchJson(C.heartbeat);
-      setText("hb-badge", path);
-      document.getElementById("hb-json-link").href = path;
-
-      const entries = hb.entries || hb.logs || hb.items || hb || [];
-      const ul = document.getElementById("heartbeat-list");
-      ul.innerHTML = "";
-
-      const arr = Array.isArray(entries) ? entries : [];
-      const latest = arr.slice().sort((a,b)=>String(b.timestamp||"").localeCompare(String(a.timestamp||""))).slice(0,10);
-
-      latest.forEach(row=>{
-        const msg = row.message || row.summary || row.title || "Heartbeat";
-        const meta = (row.timestamp || "") + (row.source ? (" • " + row.source) : "");
-        addListRow("heartbeat-list", msg, meta.trim());
-      });
-
-      setPill("hb-json-pill", arr.length ? "ok" : "warn", "hb-json-text", "heartbeat loaded: " + path);
-      setText("heartbeat-count", arr.length ? (arr.length + " heartbeat messages tracked") : "No heartbeat entries yet");
-    }catch(err){
-      console.warn("heartbeat:", err);
-      showError("heartbeat-error","No heartbeat JSON yet. (Optional) A workflow/worker can write logs/aeon_heartbeat.json later.");
-      document.getElementById("heartbeat-list").innerHTML = "";
-      setPill("hb-json-pill","warn","hb-json-text","heartbeat not found");
-      setText("heartbeat-count","No heartbeat entries yet");
-      document.getElementById("hb-json-link").href = "#";
-    }
-  }
-
-  bootstrap();
-</script>
-
-  <!-- keep your global map button (if you use it) -->
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
+    });
+  </script>
 </body>
 </html>
