@@ -2,13 +2,13 @@
 """
 tools/garden_lore_helper.py
 
-Platinum-safe STATUS writer.
+Platinum-safe STATUS writer & Garden tally helper.
 
 Goals:
 - Preserve Platinum STATUS constitution (identity/entrypoints/invariants/automation).
 - Update only dynamic facts (counts, health checks, generated timestamps).
-- Generate docs/Novellas/garden_index.json (books index) as before.
-- Generate tools/echo_index.json (optional) as before.
+- Generate docs/Novellas/garden_index.json (books index).
+- Generate tools/echo_index.json (optional Echo index).
 - Never reintroduce legacy "growth.prompts" or overwrite STATUS into old schema.
 
 No external dependencies.
@@ -23,7 +23,8 @@ import datetime as dt
 from typing import Any, Dict, List, Optional, Tuple
 
 
-ROOT = Path(__file__).resolve().parent.parent
+# Repository root (script expected to live under tools/ or similar one-level child)
+ROOT = Path(__file__).resolve().parents[1]
 
 NOVELLAS_DIR = ROOT / "docs" / "Novellas"
 DOCS_ROOT = ROOT / "docs"
@@ -42,7 +43,13 @@ BASE_TAG_NEEDLE = f'<base href="{BASE_HREF}"'
 
 
 def utc_now_iso() -> str:
-    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    """Return a UTC timestamp with second precision and trailing Z."""
+    return (
+        dt.datetime.now(dt.timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
 
 
 def read_json(path: Path) -> Dict[str, Any]:
@@ -50,10 +57,14 @@ def read_json(path: Path) -> Dict[str, Any]:
 
 
 def write_json(path: Path, data: Dict[str, Any]) -> None:
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
 
 def load_title(path: Path) -> str:
+    """Best-effort title loader from first markdown H1; falls back to stem."""
     text = path.read_text(encoding="utf-8", errors="ignore")
     m = re.search(r"^#\s+(.*)$", text, re.MULTILINE)
     if m:
@@ -71,8 +82,8 @@ def parse_cycle_volume(title: str) -> Tuple[Optional[int], Optional[int]]:
     """
     t = title.lower()
 
-    cycle = None
-    volume = None
+    cycle: Optional[int] = None
+    volume: Optional[int] = None
 
     m = re.search(r"cycle\s*(\d+)", t)
     if m:
@@ -96,6 +107,7 @@ def parse_cycle_volume(title: str) -> Tuple[Optional[int], Optional[int]]:
 
 
 def build_books() -> List[Dict[str, Any]]:
+    """Return structured list of all Novellas under docs/Novellas."""
     books: List[Dict[str, Any]] = []
     if NOVELLAS_DIR.is_dir():
         for md in sorted(NOVELLAS_DIR.glob("*.md")):
@@ -116,9 +128,10 @@ def build_books() -> List[Dict[str, Any]]:
 def build_echo_index(now_iso: str) -> None:
     """
     Optional Echo folder index. Safe if empty.
+    Writes tools/echo_index.json.
     """
     echo_root = ROOT / "docs" / "Echoes"
-    echo_files = []
+    echo_files: List[Dict[str, Any]] = []
 
     if echo_root.is_dir():
         for md in sorted(echo_root.glob("*.md")):
@@ -128,18 +141,29 @@ def build_echo_index(now_iso: str) -> None:
 
     out = TOOLS_DIR / "echo_index.json"
     out.write_text(
-        json.dumps({"generated_at": now_iso, "echoes": echo_files}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps(
+            {"generated_at": now_iso, "echoes": echo_files},
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
         encoding="utf-8",
     )
 
 
-def count_files_in_dir(dir_path: Path, exts=None) -> int:
+def count_files_in_dir(dir_path: Path, exts: Optional[List[str]] = None) -> int:
+    """Count files under dir_path, optionally filtered by extension list."""
     if not dir_path.exists():
         return 0
     if exts is None:
         return sum(1 for p in dir_path.rglob("*") if p.is_file())
-    exts = {e.lower() for e in exts}
-    return sum(1 for p in dir_path.rglob("*") if p.is_file() and p.suffix.lower() in exts)
+
+    ext_set = {e.lower() for e in exts}
+    return sum(
+        1
+        for p in dir_path.rglob("*")
+        if p.is_file() and p.suffix.lower() in ext_set
+    )
 
 
 def expected_paths_health(now_iso: str) -> Dict[str, Any]:
@@ -163,13 +187,15 @@ def expected_paths_health(now_iso: str) -> Dict[str, Any]:
         ROOT / "docs" / "Vaults" / "index.html",
         ROOT / "docs" / "Echoes" / "index.html",
         ROOT / "docs" / "GardenOS" / "index.html",
+        ROOT / "docs" / "Novellas" / "index.html",
     ]
     folder_missing = [p.relative_to(ROOT).as_posix() for p in folder_indexes if not p.exists()]
 
     warnings: List[str] = []
     if folder_missing:
         warnings.append(
-            "Missing docs folder index pages (GH Pages cannot list folders): " + ", ".join(folder_missing)
+            "Missing docs folder index pages (GH Pages cannot list folders): "
+            + ", ".join(folder_missing)
         )
 
     # docs_urls.json optional but nice to have
@@ -185,7 +211,8 @@ def expected_paths_health(now_iso: str) -> Dict[str, Any]:
 
 def scan_archives_base_href_missing() -> Tuple[int, int, int]:
     """
-    Returns (total_html, with_base, missing_base)
+    Scan docs/Archives for HTML files and check for base href.
+    Returns (total_html, with_base, missing_base).
     """
     if not ARCHIVES_DIR.exists():
         return (0, 0, 0)
@@ -267,14 +294,25 @@ def make_platinum_minimal(now_iso: str) -> Dict[str, Any]:
             "novellas_index": "docs/Novellas/garden_index.json",
         },
         "core_nodes": {
-            "counts": {"books_indexed": 0, "cycles_represented": 0},
+            "counts": {"books_indexed": 0, "cycles_represented": 0, "total_nodes": 0},
             "regions": {},
         },
         "verification": {
             "last_verified_utc": None,
-            "archives": {"total_html": 0, "with_base_href": 0, "missing_base_href": 0, "verified": False},
-            "navigation": {"map_button_present": False, "docs_urls_count": 0, "verified": False},
-            "indexes": {"machine_index_in_sync": False, "docs_urls_in_sync": False},
+            "archives": {
+                "total_html": 0,
+                "with_base_href": 0,
+                "missing_base_href": 0,
+                "verified": False,
+            },
+            "navigation": {
+                "folder_indexes_missing": [],
+                "verified": False,
+            },
+            "indexes": {
+                "machine_index_in_sync": False,
+                "docs_urls_in_sync": False,
+            },
         },
         "growth": {"open": [], "completed": [], "blocked": []},
         "safety": {"health": {"missing_files": [], "warnings": [], "last_checked_utc": None}},
@@ -282,7 +320,12 @@ def make_platinum_minimal(now_iso: str) -> Dict[str, Any]:
     }
 
 
-def upsert_growth_archives_prompt(status: Dict[str, Any], missing_base: int, total_archives: int, now_iso: str) -> None:
+def upsert_growth_archives_prompt(
+    status: Dict[str, Any],
+    missing_base: int,
+    total_archives: int,
+    now_iso: str,
+) -> None:
     """
     If Archives exist AND missing base href > 0, ensure a structured growth.open item exists.
     If missing_base == 0, remove any matching open item (stale prompt cleanup).
@@ -291,6 +334,7 @@ def upsert_growth_archives_prompt(status: Dict[str, Any], missing_base: int, tot
     open_list = ensure_list(growth, "open")
 
     prompt_id = "archives_base_href"
+
     # normalize open entries into list of dicts; ignore strings
     normalized: List[Dict[str, Any]] = [x for x in open_list if isinstance(x, dict)]
     others: List[Any] = [x for x in open_list if not isinstance(x, dict)]
@@ -298,6 +342,7 @@ def upsert_growth_archives_prompt(status: Dict[str, Any], missing_base: int, tot
     def is_match(item: Dict[str, Any]) -> bool:
         return item.get("id") == prompt_id
 
+    # drop existing instances
     normalized = [x for x in normalized if not is_match(x)]
 
     if total_archives > 0 and missing_base > 0:
@@ -317,17 +362,51 @@ def upsert_growth_archives_prompt(status: Dict[str, Any], missing_base: int, tot
     growth["open"] = normalized + others
 
 
+def update_verification_block(
+    status: Dict[str, Any],
+    *,
+    archives_total: int,
+    archives_with_base: int,
+    archives_missing: int,
+    health_info: Dict[str, Any],
+    now_iso: str,
+) -> None:
+    """Update STATUS.verification with fresh snapshot-style facts."""
+    verification = ensure_dict(status, "verification")
+
+    # Archives verification
+    archives_block = ensure_dict(verification, "archives")
+    archives_block["total_html"] = archives_total
+    archives_block["with_base_href"] = archives_with_base
+    archives_block["missing_base_href"] = archives_missing
+    archives_block["verified"] = archives_total > 0
+    archives_block["last_checked_utc"] = now_iso
+
+    # Navigation verification – just echo health warnings that relate to folder indexes
+    navigation_block = ensure_dict(verification, "navigation")
+    folder_warnings = [
+        w for w in health_info.get("warnings", []) if "folder index pages" in w.lower()
+    ]
+    navigation_block["folder_indexes_missing"] = folder_warnings
+    navigation_block["verified"] = True
+    navigation_block["last_checked_utc"] = health_info.get("last_checked_utc", now_iso)
+
+    # Indexes: we can't fully verify in this helper, so we just keep booleans stable
+    indexes_block = ensure_dict(verification, "indexes")
+    indexes_block.setdefault("machine_index_in_sync", False)
+    indexes_block.setdefault("docs_urls_in_sync", False)
+
+
 def main() -> None:
     now_iso = utc_now_iso()
 
-    # Build books
+    # Build books & Novellas index
     books = build_books()
-
-    # Write Novellas index used by the site
     NOVELLAS_DIR.mkdir(parents=True, exist_ok=True)
     out_index = NOVELLAS_DIR / "garden_index.json"
     out_index.write_text(
-        json.dumps({"generated_at": now_iso, "books": books}, indent=2, ensure_ascii=False) + "\n",
+        json.dumps({"generated_at": now_iso, "books": books}, indent=2, ensure_ascii=False)
+        + "\n",
         encoding="utf-8",
     )
 
@@ -364,16 +443,43 @@ def main() -> None:
     counts["books_indexed"] = len(books)
     counts["cycles_represented"] = len(cycles)
 
-    # Region counts (your “meat”)
     regions = ensure_dict(core_nodes, "regions")
-    regions["docs/Chambers"] = count_files_in_dir(ROOT / "docs" / "Chambers", exts=[".md", ".html", ".json"])
-    regions["docs/Echoes"] = count_files_in_dir(ROOT / "docs" / "Echoes", exts=[".md", ".html", ".json"])
-    regions["docs/Vaults"] = count_files_in_dir(ROOT / "docs" / "Vaults", exts=[".md", ".html", ".json"])
-    regions["docs/GardenOS"] = count_files_in_dir(ROOT / "docs" / "GardenOS", exts=[".md", ".html", ".json"])
+    # Major docs regions (what the dashboard cares about most)
+    regions["docs/Chambers"] = count_files_in_dir(
+        DOCS_ROOT / "Chambers", exts=[".md", ".html", ".json"]
+    )
+    regions["docs/Echoes"] = count_files_in_dir(
+        DOCS_ROOT / "Echoes", exts=[".md", ".html", ".json"]
+    )
+    regions["docs/Vaults"] = count_files_in_dir(
+        DOCS_ROOT / "Vaults", exts=[".md", ".html", ".json"]
+    )
+    regions["docs/GardenOS"] = count_files_in_dir(
+        DOCS_ROOT / "GardenOS", exts=[".md", ".html", ".json"]
+    )
     regions["docs/Novellas"] = len(books)
-    regions["docs/Archives"] = count_files_in_dir(ROOT / "docs" / "Archives", exts=[".html"])
-    regions["tools"] = count_files_in_dir(ROOT / "tools", exts=[".py", ".json", ".html", ".md"])
-    regions[".github/workflows"] = count_files_in_dir(ROOT / ".github" / "workflows", exts=[".yml", ".yaml"])
+    regions["docs/Archives"] = count_files_in_dir(
+        DOCS_ROOT / "Archives", exts=[".html"]
+    )
+
+    # Root-level growth structures (optional but nice for future dashboards)
+    regions["BLOOMS"] = count_files_in_dir(ROOT / "BLOOMS", exts=[".md", ".json"])
+    regions["ORCHARDS"] = count_files_in_dir(ROOT / "ORCHARDS", exts=[".md", ".json"])
+    regions["CYCLES"] = count_files_in_dir(ROOT / "cycles", exts=[".md", ".json"])
+    regions["WELLS"] = count_files_in_dir(ROOT / "WELLS", exts=[".md", ".json"])
+
+    # Tooling + workflows (for meta-view of the Garden)
+    regions["tools"] = count_files_in_dir(
+        ROOT / "tools", exts=[".py", ".json", ".html", ".md"]
+    )
+    regions[".github/workflows"] = count_files_in_dir(
+        ROOT / ".github" / "workflows", exts=[".yml", ".yaml"]
+    )
+
+    # Derived total for "All counted nodes" style views
+    counts["total_nodes"] = sum(
+        v for v in regions.values() if isinstance(v, int)
+    )
 
     # Safety health
     safety = ensure_dict(status, "safety")
@@ -383,19 +489,36 @@ def main() -> None:
     health["warnings"] = fresh_health["warnings"]
     health["last_checked_utc"] = fresh_health["last_checked_utc"]
 
+    # Verification block mirrors some of that info in a more structured way
+    total_archives, with_base, missing_base = scan_archives_base_href_missing()
+    update_verification_block(
+        status,
+        archives_total=total_archives,
+        archives_with_base=with_base,
+        archives_missing=missing_base,
+        health_info=fresh_health,
+        now_iso=now_iso,
+    )
+
     # Growth: structured prompt only if actually needed (no more stale prompts)
-    total_archives, _, missing_base = scan_archives_base_href_missing()
-    upsert_growth_archives_prompt(status, missing_base=missing_base, total_archives=total_archives, now_iso=now_iso)
+    upsert_growth_archives_prompt(
+        status,
+        missing_base=missing_base,
+        total_archives=total_archives,
+        now_iso=now_iso,
+    )
 
     # Remove legacy "growth.prompts" if it exists (this is how stale desires are born)
     if isinstance(status.get("growth"), dict) and "prompts" in status["growth"]:
         status["growth"].pop("prompts", None)
 
     # Ensure notes mention platinum-safe mode
-    status["notes"] = "Autogenerated by tools/garden_lore_helper.py (platinum-safe eventide mode)"
+    status["notes"] = (
+        "Autogenerated by tools/garden_lore_helper.py (platinum-safe eventide mode)"
+    )
 
     write_json(STATUS_PATH, status)
-    print("✅ STATUS.json updated (platinum-safe) + Novellas index written.")
+    print("✅ STATUS.json updated (platinum-safe) + Novellas & Echo indexes written.")
 
 
 if __name__ == "__main__":
