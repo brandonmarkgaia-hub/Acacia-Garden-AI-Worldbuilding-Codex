@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T11:52:23Z",
+  "generated_at": "2026-01-08T11:54:02Z",
   "count": 1418,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1401,6 +1401,7 @@
     "Vaults/Svalbard-matrix.md",
     "Vaults/index.html",
     "Veil/FINAL_VEIL.md",
+    "Wells/wells.md",
     "api/GARDEN_API_INDEX.json",
     "dashboard.html",
     "dashboard.md",
@@ -1418,8 +1419,7 @@
     "rootlines.md",
     "sidebar.md",
     "specs.md",
-    "universe/architecture.md",
-    "wells.md"
+    "universe/architecture.md"
   ],
   "source": "git ls-files docs"
 }
