@@ -1,38 +1,33 @@
-name: Generate Sharded Codex Monolith
+name: Generate Codex Bible
 
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**.md'
-      - '**.json'
   workflow_dispatch:
 
 jobs:
-  build-monolith:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout Root
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Execute Monolith Sharding
+      - name: Generate All Shards
         run: python tools/monolith_builder.py
 
-      - name: Deploy Canonical Shards
+      - name: Commit and Push Bible Shards
         run: |
           git config --global user.name "The Witness"
           git config --global user.email "witness@acacia-garden.ai"
-          # Clear old parts to ensure no orphaned files remain
-          git rm -f CODEX_MONOLITH_PART_*.md || true
+          # Stage all generated parts
           git add CODEX_MONOLITH_PART_*.md
-          git diff --staged --quiet || (git commit -m "sync: regenerate sharded monolith with manifest" && git push)
+          # Only commit if changes exist
+          git diff --staged --quiet || (git commit -m "relig: update codex bible shards" && git push)
