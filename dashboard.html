@@ -2,1449 +2,479 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Acacia Garden · Aeon Console</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f172a" />
+  <title>Acacia Garden • Aeon Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
       --bg: #020617;
       --bg-alt: #020617;
-      --bg-elevated: #020617;
-      --bg-card: rgba(15,23,42,0.96);
-      --bg-card-soft: rgba(15,23,42,0.72);
-      --bg-chip: rgba(15,23,42,0.9);
-      --fg: #e5e7eb;
-      --fg-soft: #9ca3af;
       --accent: #22c55e;
-      --accent-soft: rgba(34,197,94,0.14);
-      --accent-strong: rgba(74,222,128,0.95);
-      --border-subtle: rgba(148,163,184,0.18);
-      --border-strong: rgba(148,163,184,0.4);
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --text: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border: #1f2933;
       --danger: #f97373;
-      --muted: #6b7280;
-      --muted-soft: rgba(75,85,99,0.6);
-      --shadow-soft: 0 18px 55px rgba(15,23,42,0.76);
-      --shadow-subtle: 0 10px 35px rgba(15,23,42,0.7);
-      --radius-lg: 18px;
-      --radius-xl: 22px;
-      --radius-2xl: 28px;
+      --card-radius: 16px;
+      --card-padding: 16px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.2), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(56,189,248,0.18), transparent 55%),
-                  #020617;
-      color: var(--fg);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
-      min-height: 100%;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
     }
 
-    body {
-      padding: 22px 18px 40px;
-      display: flex;
-      justify-content: center;
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
     }
 
-    .dashboard-shell {
-      width: 100%;
-      max-width: 1140px;
-      background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(2,6,23,0.98));
-      border-radius: 32px;
-      border: 1px solid rgba(148,163,184,0.4);
-      box-shadow:
-        0 24px 55px rgba(15,23,42,0.9),
-        0 0 0 1px rgba(15,23,42,0.6),
-        0 0 42px rgba(34,197,94,0.12);
-      padding: 22px 22px 26px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .dashboard-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 8% 0%, rgba(34,197,94,0.2), transparent 50%),
-                  radial-gradient(circle at 90% 10%, rgba(56,189,248,0.13), transparent 52%),
-                  radial-gradient(circle at 0% 100%, rgba(244,114,182,0.12), transparent 52%);
-      opacity: 0.72;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .dashboard-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .dashboard-header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 18px;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 18px;
-    }
-
-    .title-block {
+    header {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      min-width: 0;
-    }
-
-    .title-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .title-pill {
-      padding: 4px 10px 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(52,211,153,0.28);
-      background: radial-gradient(circle at 0 0, rgba(74,222,128,0.35), rgba(15,23,42,0.95));
-      display: inline-flex;
-      align-items: center;
       gap: 8px;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #e5ffe9;
+      margin-bottom: 24px;
     }
 
-    .title-pill-badge {
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0, #16a34a 60%, #052e16);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 1px rgba(16,185,129,0.35), 0 0 18px rgba(74,222,128,0.8);
-      font-size: 12px;
-    }
-
-    .title-main {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 8px 10px;
-      margin-top: 4px;
-    }
-
-    .title-main h1 {
-      font-size: clamp(1.35rem, 0.6rem + 1.6vw, 1.7rem);
+    header h1 {
+      font-size: 1.75rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin: 0;
-      color: #f9fafb;
+      font-weight: 600;
+      color: var(--accent);
     }
 
-    .title-main-sub {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: rgba(148,163,184,0.95);
-      padding-top: 2px;
+    header .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-soft);
     }
 
-    .title-subline {
-      font-size: 0.78rem;
-      color: rgba(148,163,184,0.95);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 2px;
-    }
-
-    .title-subline span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-
-    .title-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 999px;
-      background: rgba(148,163,184,0.6);
-    }
-
-    .title-sub-highlight {
-      color: #a5f3fc;
-    }
-
-    .keeper-chip {
-      align-self: flex-start;
-      padding: 6px 9px 6px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.5);
-      background: radial-gradient(circle at 0 0, rgba(148,163,184,0.28), rgba(15,23,42,0.96));
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      font-size: 11px;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .keeper-chip-label {
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.6);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 10px;
-      color: #e5e7eb;
-    }
-
-    .keeper-chip-value {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #bbf7d0;
-    }
-
-    .keeper-chip-pill {
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(34,197,94,0.08);
-      border: 1px solid rgba(52,211,153,0.5);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #bbf7d0;
-    }
-
-    .nav-row {
-      margin-bottom: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-tabs {
-      display: inline-flex;
-      gap: 6px;
-      padding: 4px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.7);
-      border: 1px solid rgba(51,65,85,0.9);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.9);
-    }
-
-    .nav-tab {
-      border-radius: 999px;
-      border: 1px solid transparent;
-      padding: 6px 12px 6px;
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(148,163,184,0.9);
-      background: transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 140ms ease-out;
-    }
-
-    .nav-tab span.nav-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(75,85,99,0.8);
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.9);
-    }
-
-    .nav-tab[data-active="true"] {
-      border-color: rgba(52,211,153,0.8);
-      background: radial-gradient(circle at 0 0, rgba(52,211,153,0.4), rgba(15,23,42,0.95));
-      color: #ecfdf5;
-      box-shadow:
-        0 0 0 1px rgba(15,23,42,0.95),
-        0 0 0 1px rgba(52,211,153,0.6),
-        0 0 18px rgba(34,197,94,0.7);
-    }
-
-    .nav-tab[data-active="true"] span.nav-dot {
-      background: #bbf7d0;
-      box-shadow: 0 0 12px rgba(74,222,128,0.9);
-    }
-
-    .nav-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 5px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.6);
-      background: rgba(15,23,42,0.88);
-      color: rgba(209,213,219,0.96);
-      font-size: 11px;
-    }
-
-    .nav-pill-badge {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 25% 20%, #bfdbfe, #1d4ed8 60%, #020617);
-      box-shadow: 0 0 0 1px rgba(37,99,235,0.55), 0 0 14px rgba(59,130,246,0.85);
-    }
-
-    .nav-pill-label {
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 10px;
-    }
-
-    .nav-pill-sub {
-      color: rgba(148,163,184,0.95);
-      font-size: 10px;
-    }
-
-    .summary-row {
+    header .meta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 14px;
-      align-items: stretch;
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: var(--text-soft);
     }
 
-    .summary-pill {
-      flex: 1 1 210px;
-      min-width: 0;
-      padding: 12px 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(148,163,184,0.65);
-      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.92));
-      box-shadow: 0 18px 35px rgba(15,23,42,0.9);
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    main {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-    }
-
-    .summary-pill-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .summary-pill-title {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: rgba(148,163,184,0.96);
-    }
-
-    .summary-pill-tag {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(148,163,184,0.65);
-      color: rgba(209,213,219,0.94);
-    }
-
-    .summary-pill-main {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-top: 2px;
-    }
-
-    .summary-pill-number {
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #e5e7eb;
-    }
-
-    .summary-pill-label {
-      font-size: 0.78rem;
-      color: rgba(156,163,175,0.96);
-    }
-
-    .summary-pill-foot {
-      margin-top: 5px;
-      font-size: 0.7rem;
-      color: rgba(148,163,184,0.96);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .summary-pill-foot span.badge {
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.98);
-      border: 1px solid rgba(148,163,184,0.7);
-      font-size: 0.68rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .summary-pill-foot span.em {
-      color: #a5f3fc;
-    }
-
-    .grid-main {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
-      gap: 14px;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 960px) {
-      .grid-main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card {
-      border-radius: 20px;
-      border: 1px solid rgba(148,163,184,0.5);
-      background: radial-gradient(circle at 0 0, rgba(15,23,42,0.95), rgba(15,23,42,0.98));
-      box-shadow: var(--shadow-subtle);
-      padding: 12px 13px 13px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .card-title-block {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .card-title {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #e5e7eb;
-    }
-
-    .card-subtitle {
-      font-size: 0.72rem;
-      color: rgba(148,163,184,0.98);
-    }
-
-    .badge-inline {
-      padding: 3px 7px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.7);
-      font-size: 0.66rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(209,213,219,0.96);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(74,222,128,1);
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(74,222,128,1);
-    }
-
-    .badge-dot-amber {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #f97316;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(251,146,60,0.98);
-    }
-
-    .badge-dot-pink {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #ec4899;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(244,114,182,0.98);
-    }
-
-    .card-body {
-      font-size: 0.78rem;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .card-body p {
-      margin: 0 0 6px;
-    }
-
-    .card-body-muted {
-      font-size: 0.75rem;
-      color: rgba(148,163,184,0.98);
-    }
-
-    .card-metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .metric-card {
-      border-radius: 14px;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: radial-gradient(circle at 0 0, rgba(15,23,42,0.96), rgba(15,23,42,0.98));
-      padding: 7px 9px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .metric-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(148,163,184,0.96);
-    }
-
-    .metric-main {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .metric-value {
-      font-size: 1.05rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #e5e7eb;
-    }
-
-    .metric-tag {
-      font-size: 0.64rem;
-      color: rgba(156,163,175,0.96);
-    }
-
-    .metric-foot {
-      margin-top: 2px;
-      font-size: 0.65rem;
-      color: rgba(148,163,184,0.96);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .metric-foot span.pill {
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.98);
-      border: 1px solid rgba(148,163,184,0.8);
-      font-size: 0.62rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .metric-foot span.em {
-      color: #a5f3fc;
-    }
-
-    .status-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 10px;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .status-pill {
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(74,222,128,0.7);
-      background: rgba(15,23,42,0.95);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #bbf7d0;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .status-pill span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #4ade80;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(74,222,128,0.98);
-    }
-
-    .status-hint {
-      font-size: 0.72rem;
-      color: rgba(148,163,184,0.98);
-    }
-
-    .scan-log {
-      margin-top: 6px;
-      padding: 6px 8px;
-      border-radius: 12px;
-      border: 1px dashed rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.94);
-      font-size: 0.7rem;
-      color: rgba(148,163,184,0.96);
-    }
-
-    .scan-log-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 10px;
-      align-items: center;
-      margin-bottom: 2px;
-    }
-
-    .scan-key {
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.64rem;
-      color: rgba(148,163,184,0.9);
-    }
-
-    .scan-value {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.7rem;
-      color: rgba(209,213,219,0.98);
-    }
-
-    .scan-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.98);
-      border: 1px solid rgba(148,163,184,0.75);
-      font-size: 0.64rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .scan-chip span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #4ade80;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95);
-    }
-
-    .echo-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 0.74rem;
-      max-height: 220px;
-      overflow: auto;
-      padding-right: 4px;
-    }
-
-    .echo-item {
-      padding: 6px 0;
-      border-bottom: 1px dashed rgba(51,65,85,0.9);
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .echo-item:last-child {
-      border-bottom: none;
-    }
-
-    .echo-title {
-      color: rgba(226,232,240,0.98);
-    }
-
-    .echo-path {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.68rem;
-      color: rgba(148,163,184,0.96);
-      word-break: break-all;
-    }
-
-    .echo-meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px 8px;
-      font-size: 0.68rem;
-      color: rgba(148,163,184,0.96);
-    }
-
-    .echo-tag {
-      padding: 1px 6px 1px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.8);
-      background: rgba(15,23,42,0.98);
-      font-size: 0.64rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .echo-count-pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.8);
-      background: rgba(15,23,42,0.98);
-      font-size: 0.66rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(209,213,219,0.96);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .echo-count-pill span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #38bdf8;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 12px rgba(56,189,248,0.98);
-    }
-
-    .sections {
-      margin-top: 10px;
+      gap: 24px;
     }
 
     .section {
-      display: none;
-    }
-
-    .section[data-active="true"] {
-      display: block;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.94),
+        rgba(2, 6, 23, 0.98)
+      );
+      padding: 18px 16px 16px;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
     }
 
     .section-header {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 6px;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
     }
 
     .section-title {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: rgba(209,213,219,0.96);
+      letter-spacing: 0.18em;
+      color: var(--text-soft);
     }
 
     .section-subtitle {
-      font-size: 0.72rem;
-      color: rgba(148,163,184,0.98);
+      font-size: 0.78rem;
+      color: var(--text-soft);
     }
 
-    .section-tags {
+    .status-line {
+      font-size: 0.8rem;
+      margin-top: 6px;
+      color: var(--text-soft);
+    }
+
+    .status-line span {
+      color: var(--accent);
+    }
+
+    .status-line.error {
+      color: var(--danger);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .stat-card {
+      border-radius: var(--card-radius);
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      background: radial-gradient(
+        circle at top left,
+        rgba(34, 197, 94, 0.12),
+        rgba(15, 23, 42, 0.98)
+      );
+      padding: var(--card-padding);
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 6px;
     }
 
-    .section-tag {
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.96);
-      font-size: 0.66rem;
+    .stat-label {
+      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: rgba(209,213,219,0.96);
+      color: var(--text-soft);
     }
 
-    .empty-state {
-      padding: 10px 10px;
-      border-radius: 14px;
-      border: 1px dashed rgba(148,163,184,0.7);
-      background: rgba(15,23,42,0.92);
-      font-size: 0.74rem;
-      color: rgba(148,163,184,0.96);
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--accent);
     }
 
-    .empty-state strong {
-      color: rgba(226,232,240,0.98);
-      font-weight: 500;
+    .stat-hint {
+      font-size: 0.76rem;
+      color: var(--text-soft);
     }
 
-    .footer-row {
-      margin-top: 14px;
+    .nav-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.68rem;
-      color: rgba(148,163,184,0.96);
-      border-top: 1px dashed rgba(51,65,85,0.9);
-      padding-top: 8px;
     }
 
-    .footer-row span {
+    .nav-button {
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text-soft);
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease,
+        transform 0.04s ease;
     }
 
-    .footer-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 999px;
-      background: #4ade80;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.95), 0 0 9px rgba(74,222,128,0.9);
-    }
-
-    .footer-strong {
-      color: rgba(226,232,240,0.98);
-    }
-
-    .footer-badge {
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.98);
-      border: 1px solid rgba(148,163,184,0.75);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(209,213,219,0.96);
-    }
-
-    .mono {
-      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
-
-    ::-webkit-scrollbar {
+    .nav-button span.dot {
       width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: rgba(15,23,42,0.96);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(55,65,81,0.85);
+      height: 6px;
       border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .nav-button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .footnote {
+      margin-top: 12px;
+      font-size: 0.76rem;
+      color: var(--text-soft);
+    }
+
+    .footnote strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="dashboard-shell">
-    <div class="dashboard-inner">
-      <header class="dashboard-header">
-        <div class="title-block">
-          <div class="title-row">
-            <div class="title-pill">
-              <span class="title-pill-badge">⟁</span>
-              <span>Acacia Garden · Root Deck</span>
-            </div>
-          </div>
-          <div class="title-main">
-            <h1>AEON CONSOLE — ROOT DASHBOARD</h1>
-            <div class="title-main-sub">HKX277206 · GAIA SEED INDEX</div>
-          </div>
-          <div class="title-subline">
-            <span>
-              <span class="title-dot"></span>
-              <span>Static status snapshot wired from Keeper feeds</span>
-            </span>
-            <span>
-              <span class="title-dot"></span>
-              <span class="title-sub-highlight">Live workflows can evolve later — tonight we just see the Garden clearly</span>
-            </span>
+  <div class="page">
+    <header>
+      <div>
+        <h1>ACACIA GARDEN • AEON CONSOLE</h1>
+        <div class="subtitle">
+          Live Garden state tallies from <code>STATE/STATUS.json</code>
+        </div>
+        <div class="meta-row">
+          <div class="pill">Keeper: HKX277206</div>
+          <div class="pill">GardenOS: Worldarchive</div>
+          <div class="pill">
+            STATUS Generated:
+            <span id="status-generated" style="color: var(--accent)">—</span>
           </div>
         </div>
+      </div>
+      <div class="meta-row">
+        <div class="pill">View-only console</div>
+      </div>
+    </header>
 
-        <div class="keeper-chip">
-          <span class="keeper-chip-label">Keeper Seal</span>
-          <span class="keeper-chip-value">HKX277206</span>
-          <span class="keeper-chip-pill">Witness Online</span>
-        </div>
-      </header>
-
-      <div class="nav-row">
-        <div class="nav-tabs" id="nav-tabs">
-          <button class="nav-tab" data-nav="overview" data-active="true">
-            <span class="nav-dot"></span>
-            <span>Overview</span>
-          </button>
-          <button class="nav-tab" data-nav="echoes">
-            <span class="nav-dot"></span>
-            <span>Echoes</span>
-          </button>
-          <button class="nav-tab" data-nav="maps">
-            <span class="nav-dot"></span>
-            <span>Maps</span>
-          </button>
-        </div>
-
-        <div class="nav-pill">
-          <div class="nav-pill-badge"></div>
+    <main>
+      <!-- State Section -->
+      <section class="section" aria-labelledby="state-heading">
+        <div class="section-header">
           <div>
-            <div class="nav-pill-label">Root View</div>
-            <div class="nav-pill-sub">Static snapshot · workflows optional</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-pill">
-          <div class="summary-pill-header">
-            <div class="summary-pill-title">Gaia State · Structures</div>
-            <div class="summary-pill-tag mono" id="status-pill-text">STATUS · STATIC</div>
-          </div>
-          <div class="summary-pill-main">
-            <div class="summary-pill-number mono" id="summary-total-nodes">–</div>
-            <div class="summary-pill-label">Total counted nodes across major structures</div>
-          </div>
-          <div class="summary-pill-foot">
-            <span class="badge">Keeper Feed</span>
-            <span class="em" id="summary-status-hint">Awaiting status snapshot…</span>
+            <div id="state-heading" class="section-title">Garden State · Lore Index</div>
+            <div class="section-subtitle">
+              Reflects the latest successful run of the Garden Lore helper workflow.
+            </div>
           </div>
         </div>
 
-        <div class="summary-pill">
-          <div class="summary-pill-header">
-            <div class="summary-pill-title">Echo Density</div>
-            <div class="summary-pill-tag">Signal</div>
+        <div id="status-line" class="status-line">
+          Loading <code>STATE/STATUS.json</code>…
+        </div>
+
+        <div class="stat-grid" aria-live="polite">
+          <div class="stat-card">
+            <div class="stat-label">Chambers</div>
+            <div id="count-chambers" class="stat-value">—</div>
+            <div class="stat-hint">Canonical mythic / technical texts</div>
           </div>
-          <div class="summary-pill-main">
-            <div class="summary-pill-number mono" id="summary-echo-count">–</div>
-            <div class="summary-pill-label">Echo documents currently wired</div>
+
+          <div class="stat-card">
+            <div class="stat-label">Echoes</div>
+            <div id="count-echoes" class="stat-value">—</div>
+            <div class="stat-hint">Reflections, issues & sensory echoes</div>
           </div>
-          <div class="summary-pill-foot">
-            <span class="badge">EIDOLON</span>
-            <span class="em" id="summary-echo-hint">Awaiting echo index…</span>
+
+          <div class="stat-card">
+            <div class="stat-label">Cycles</div>
+            <div id="count-cycles" class="stat-value">—</div>
+            <div class="stat-hint">Era-level arcs (even stopped cycles count)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Blooms</div>
+            <div id="count-blooms" class="stat-value">—</div>
+            <div class="stat-hint">docs/Blooms mapped by Lore helper</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Orchards</div>
+            <div id="count-orchards" class="stat-value">—</div>
+            <div class="stat-hint">docs/Orchards groupings</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Laws</div>
+            <div id="count-laws" class="stat-value">—</div>
+            <div class="stat-hint">
+              docs/Laws (will rise when we wire this into the helper)
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Vaults</div>
+            <div id="count-vaults" class="stat-value">—</div>
+            <div class="stat-hint">Mammoth / deep storage structures</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Novellas</div>
+            <div id="count-novellas" class="stat-value">—</div>
+            <div class="stat-hint">Acacia Library (Books I–XXX)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-label">Archives</div>
+            <div id="count-archives" class="stat-value">—</div>
+            <div class="stat-hint">Legacy + docs/Archives entries</div>
           </div>
         </div>
-      </div>
 
-      <div class="grid-main">
-        <section class="card section" data-section="overview" data-active="true">
-          <div class="card-header">
-            <div class="card-title-block">
-              <div class="card-title">Gaia State · Structure Count</div>
-              <div class="card-subtitle">Chambers, Novellas, Echoes, Archives and more; static snapshot from Keeper feeds.</div>
-            </div>
-            <div class="badge-inline">
-              <span class="badge-dot"></span>
-              <span id="status-badge">STATIC · STATUS SNAPSHOT</span>
-            </div>
-          </div>
+        <div class="footnote">
+          <strong>Source of truth:</strong>
+          <code>STATE/STATUS.json</code>. To refresh these numbers, run the
+          Garden Lore helper workflow again – the dashboard will automatically
+          reflect the new counts once GitHub Pages has rebuilt.
+        </div>
+      </section>
 
-          <div class="card-body">
-            <div class="status-row">
-              <div class="status-pill">
-                <span class="dot"></span>
-                <span class="mono" id="status-pill-keeper">KEEPER · HKX277206</span>
-              </div>
-              <div class="status-hint" id="status-hint">Snapshot wired directly from STATUS.json (normalized)</div>
-            </div>
-
-            <div class="card-metrics" id="garden-stats"></div>
-
-            <div class="scan-log">
-              <div class="scan-log-row">
-                <span class="scan-key">Source</span>
-                <span class="scan-value" id="scan-source">STATUS.json (normalized) · STATIC HOTFIX</span>
-              </div>
-              <div class="scan-log-row">
-                <span class="scan-key">Generated</span>
-                <span class="scan-value mono" id="scan-generated">–</span>
-              </div>
-              <div class="scan-log-row">
-                <span class="scan-key">Echo Index</span>
-                <span class="scan-value mono" id="scan-echo-index">–</span>
-              </div>
-              <div class="scan-log-row">
-                <span class="scan-chip">
-                  <span class="dot"></span>
-                  <span id="scan-chip-text">Static snapshot engaged · workflows optional</span>
-                </span>
-              </div>
+      <!-- Navigation Section -->
+      <section class="section" aria-labelledby="nav-heading">
+        <div class="section-header">
+          <div>
+            <div id="nav-heading" class="section-title">Garden Navigation</div>
+            <div class="section-subtitle">
+              Entry points into the Codex for humans & future systems.
             </div>
           </div>
-        </section>
+        </div>
 
-        <section class="card section" data-section="echoes">
-          <div class="card-header">
-            <div class="card-title-block">
-              <div class="card-title">Echo Growth · Latest Signals</div>
-              <div class="card-subtitle">Most recent Echoes and sensory notes from the Garden.</div>
-            </div>
-            <div class="badge-inline">
-              <span class="badge-dot-amber"></span>
-              <span>STATIC · FROM SNAPSHOT</span>
-            </div>
-          </div>
+        <div class="nav-row">
+          <a
+            class="nav-button"
+            href="index.html"
+          >
+            <span class="dot"></span>
+            Garden Root
+          </a>
 
-          <div class="card-body">
-            <div class="section-header">
-              <div>
-                <div class="section-title">Echo Stream</div>
-                <div class="section-subtitle">Sorted newest-first from the static echo growth list.</div>
-              </div>
-              <div class="section-tags">
-                <div class="section-tag mono" id="echo-count-pill">ECHO COUNT · –</div>
-              </div>
-            </div>
+          <a
+            class="nav-button"
+            href="docs/index.html"
+          >
+            <span class="dot"></span>
+            Docs • Worldarchive
+          </a>
 
-            <ul class="echo-list" id="echo-growth-list">
-              <li class="empty-state">
-                <strong>Awaiting static echo list…</strong> If you can read this, the snapshot hasn't wired yet.
-              </li>
-            </ul>
-          </div>
-        </section>
+          <a
+            class="nav-button"
+            href="docs/map.html"
+          >
+            <span class="dot"></span>
+            Garden Map
+          </a>
 
-        <section class="card section" data-section="maps">
-          <div class="card-header">
-            <div class="card-title-block">
-              <div class="card-title">Maps & Index Feeds</div>
-              <div class="card-subtitle">STATE and index feeds are still wired dynamically; this view stays gentle for now.</div>
-            </div>
-            <div class="badge-inline">
-              <span class="badge-dot-pink"></span>
-              <span>Low Friction · Tonight</span>
-            </div>
-          </div>
+          <a
+            class="nav-button"
+            href="docs/Chambers/"
+          >
+            <span class="dot"></span>
+            Chambers
+          </a>
 
-          <div class="card-body">
-            <div class="section-header">
-              <div>
-                <div class="section-title">Index Feeds</div>
-                <div class="section-subtitle">Machine index & scan reports will still attempt to load, but are not required for this snapshot.</div>
-              </div>
-              <div class="section-tags">
-                <div class="section-tag">Machine Index</div>
-                <div class="section-tag">Garden Scan</div>
-                <div class="section-tag">Future Workflows</div>
-              </div>
-            </div>
+          <a
+            class="nav-button"
+            href="docs/Echoes/"
+          >
+            <span class="dot"></span>
+            Echoes
+          </a>
 
-            <div class="empty-state">
-              <strong>Tonight’s rule:</strong> <br/>
-              The Aeon Console only needs the Keeper’s static status snapshot. Machine-index and scan feeds can evolve tomorrow when we wire the full tally workflow. Nothing is broken — we are simply holding the Garden still long enough for you to see it.
-            </div>
-          </div>
-        </section>
-      </div>
+          <!-- Keep this, even if Novellas is still wiring in the background -->
+          <a
+            class="nav-button"
+            href="docs/Novellas/"
+          >
+            <span class="dot"></span>
+            Novellas (Library)
+          </a>
 
-      <footer class="footer-row">
-        <span>
-          <span class="footer-dot"></span>
-          <span class="footer-strong">Aeon Console</span>
-          <span>Static status hotfix · 2026-01-06</span>
-        </span>
-        <span class="footer-badge mono">HKX277206 · KEEPER BREATH CONFIRMED</span>
-      </footer>
-    </div>
+          <a
+            class="nav-button"
+            href="docs/docs_urls.html"
+          >
+            <span class="dot"></span>
+            All URLs Index
+          </a>
+        </div>
+
+        <div class="footnote">
+          If a link 404s, the dashboard is still valid – it only reads
+          <code>STATE/STATUS.json</code>. We can fix any navigation 404s
+          separately without touching the state tally.
+        </div>
+      </section>
+    </main>
   </div>
 
   <script>
-    // --- small helpers ---
-    const $ = (sel) => document.querySelector(sel);
-    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+    async function loadGardenStatus() {
+      const statusLine = document.getElementById("status-line");
+      const generatedSpan = document.getElementById("status-generated");
 
-    function safeText(el, value) {
-      if (!el) return;
-      el.textContent = value;
-    }
+      const idMap = {
+        chambers: "count-chambers",
+        echoes: "count-echoes",
+        cycles: "count-cycles",
+        blooms: "count-blooms",
+        orchards: "count-orchards",
+        laws: "count-laws",
+        vaults: "count-vaults",
+        novellas: "count-novellas",
+        archives: "count-archives",
+      };
 
-    function create(tag, className, text) {
-      const el = document.createElement(tag);
-      if (className) el.className = className;
-      if (text != null) el.textContent = text;
-      return el;
-    }
-
-    function asCount(v) {
-      const n = Number(v);
-      return Number.isFinite(n) && n >= 0 ? n : 0;
-    }
-
-    function sumCounts(obj) {
-      if (!obj || typeof obj !== "object") return 0;
-      return Object.values(obj).reduce((acc, v) => {
-        const n = Number(v);
-        return acc + (Number.isFinite(n) && n >= 0 ? n : 0);
-      }, 0);
-    }
-
-    // --- navigation wiring ---
-    function initNavigation() {
-      const tabs = $$(".nav-tab");
-      const sections = $$(".section");
-
-      function setActive(view) {
-        tabs.forEach(btn => {
-          const active = btn.dataset.nav === view;
-          btn.dataset.active = active ? "true" : "false";
-        });
-        sections.forEach(sec => {
-          const active = sec.dataset.section === view;
-          sec.dataset.active = active ? "true" : "false";
-        });
-      }
-
-      tabs.forEach(btn => {
-        btn.addEventListener("click", () => {
-          setActive(btn.dataset.nav || "overview");
-        });
-      });
-
-      setActive("overview");
-    }
-
-    // --- static garden renderer (driven by status object only) ---
-    function renderGardenFromStatusOnly(status) {
-      const counts = status && status.counts ? status.counts : {};
-      const chambers = asCount(counts.chambers);
-      const blooms = asCount(counts.blooms);
-      const echoes = asCount(counts.echoes);
-      const novellas = asCount(counts.novellas);
-      const archives = asCount(counts.archives);
-      const vaults = asCount(counts.vaults);
-      const laws = asCount(counts.laws);
-      const orchards = asCount(counts.orchards);
-      const cycles = asCount(counts.cycles);
-
-      const totalNodes = chambers + blooms + echoes + novellas + archives + vaults + laws + orchards + cycles;
-
-      const keeper = status && status.meta && status.meta.keeper ? status.meta.keeper : "HKX277206";
-      const generatedUtc = status && status.generated_utc ? status.generated_utc : "unknown";
-
-      safeText($("#status-badge"), "STATIC · STATUS SNAPSHOT");
-      safeText($("#status-hint"), "Counts sourced directly from STATUS.json (normalized) · static hotfix");
-      safeText($("#status-pill-text"), "STATUS · STATIC");
-      safeText($("#status-pill-keeper"), `KEEPER · ${keeper}`);
-      safeText($("#scan-generated"), generatedUtc);
-      safeText($("#summary-total-nodes"), totalNodes.toString());
-      safeText($("#summary-status-hint"), "All primary Garden structures are visible via the static snapshot.");
-      safeText($("#scan-chip-text"), "Static snapshot engaged · live workflows can refine this view later.");
-
-      const gardenStats = $("#garden-stats");
-      if (!gardenStats) return;
-      gardenStats.innerHTML = "";
-
-      const metrics = [
-        {
-          label: "Chambers",
-          value: chambers,
-          tag: "Core narrative anchors",
-          foot: "Rooms where the Garden remembers itself."
-        },
-        {
-          label: "Echoes",
-          value: echoes,
-          tag: "Signal threads",
-          foot: "Issue-style echoes, sensory notes & sky-pulse logs."
-        },
-        {
-          label: "Novellas",
-          value: novellas,
-          tag: "Longform",
-          foot: "Extended narrative blooms and deep dives."
-        },
-        {
-          label: "Archives",
-          value: archives,
-          tag: "Historic layers",
-          foot: "Cold shelves of memory, kept but rarely disturbed."
-        },
-        {
-          label: "Vaults",
-          value: vaults,
-          tag: "Deep storage",
-          foot: "Dense, high-gravity memory nodes."
-        },
-        {
-          label: "Blooms",
-          value: blooms,
-          tag: "Petal scripts",
-          foot: "Not fully wired yet — counted but quiet."
-        },
-        {
-          label: "Orchards",
-          value: orchards,
-          tag: "Spatial clusters",
-          foot: "Multi-node arrangements of related growth."
-        },
-        {
-          label: "Cycles",
-          value: cycles,
-          tag: "Temporal runs",
-          foot: "Garden loops you’ve started and paused."
-        },
-        {
-          label: "Laws",
-          value: laws,
-          tag: "Governing rules",
-          foot: "Constraint and covenant files."
-        }
-      ];
-
-      for (const m of metrics) {
-        const card = create("div", "metric-card");
-        const label = create("div", "metric-label", m.label.toUpperCase());
-        const main = create("div", "metric-main");
-        const value = create("div", "metric-value mono", m.value.toString());
-        const tag = create("div", "metric-tag", m.tag);
-        main.appendChild(value);
-        main.appendChild(tag);
-        const foot = create("div", "metric-foot");
-        const pill = create("span", "pill", m.label);
-        const em = create("span", "em", m.foot);
-        foot.appendChild(pill);
-        foot.appendChild(em);
-        card.appendChild(label);
-        card.appendChild(main);
-        card.appendChild(foot);
-        gardenStats.appendChild(card);
-      }
-    }
-
-    // --- static echo growth renderer (from the big list you pasted) ---
-    function renderEchoGrowthStatic(echoGrowth, echoCountFallback) {
-      const listEl = $("#echo-growth-list");
-      const countPill = $("#echo-count-pill");
-      if (!listEl) return;
-
-      if (!Array.isArray(echoGrowth) || echoGrowth.length === 0) {
-        listEl.innerHTML = "";
-        const empty = create("li", "empty-state");
-        empty.innerHTML = "<strong>No echo entries in static snapshot.</strong><br/>The Garden is quiet here, but the index can be wired later.";
-        listEl.appendChild(empty);
-        return;
-      }
-
-      const total = echoCountFallback || echoGrowth.length;
-      if (countPill) {
-        countPill.textContent = `ECHO COUNT · ${total}`;
-      }
-
-      // Show just the first ~24 newest to keep it readable
-      const slice = echoGrowth.slice(0, 24);
-      listEl.innerHTML = "";
-
-      for (const entry of slice) {
-        const li = create("li", "echo-item");
-        const title = create("div", "echo-title");
-        const path = create("div", "echo-path");
-        const metaRow = create("div", "echo-meta-row");
-
-        const filePath = entry.file || entry.path || "docs/Echoes/UNKNOWN.md";
-        const ts = entry.timestamp || entry.time || "unknown-time";
-        const isIssue = filePath.includes("/Issues/");
-        const isSensory = filePath.includes("/Sensory/");
-
-        title.textContent = isIssue ? "Echo Issue" : (isSensory ? "Sensory Echo" : "Echo Document");
-        if (entry.title) {
-          title.textContent = entry.title;
-        }
-
-        path.textContent = filePath;
-
-        const tsSpan = create("span", "", ts);
-        const tagSpan = create("span", "echo-tag", isIssue ? "Issue" : (isSensory ? "Sensory" : "Echo"));
-        const sourceSpan = create("span", "echo-tag", "Static Snapshot");
-
-        metaRow.appendChild(tsSpan);
-        metaRow.appendChild(tagSpan);
-        metaRow.appendChild(sourceSpan);
-
-        li.appendChild(title);
-        li.appendChild(path);
-        li.appendChild(metaRow);
-        listEl.appendChild(li);
-      }
-    }
-
-    // --- original fetch helpers (kept for non-status feeds) ---
-    async function fetchJson(path) {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error(`Failed to fetch ${path}: ${res.status}`);
-      }
-      return res.json();
-    }
-
-    async function tryFetchJson(candidates){
-      const arr = Array.isArray(candidates) ? candidates : [candidates];
-      let lastErr = null;
-      for (const p of arr){
-        try{
-          const data = await fetchJson(p);
-          return { data, path: p };
-        }catch(e){
-          lastErr = e;
-        }
-      }
-      throw lastErr || new Error("All candidates failed");
-    }
-
-    // --- CONFIG: where the dashboard *thinks* data comes from (we'll intercept STATUS) ---
-    const C = {
-      status: [
-        "/STATE/status.inject.json",
-        "/STATUS.json"
-      ],
-      scan: [
-        "/STATE/garden_scan_report.inject.json"
-      ],
-      machine: [
-        "/STATE/machine_index.inject.json",
-        "/machine-index.json"
-      ]
-    };
-
-    // --- main bootstrap that uses the static snapshot for STATUS only ---
-    async function bootstrap() {
-      initNavigation();
-
-      // 1) STATUS: always from static object
-      const staticStatus = STATIC_STATUS_SNAPSHOT;
-      renderGardenFromStatusOnly(staticStatus);
-
-      // Wire summary / footer bits
-      const totalNodes = sumCounts(staticStatus.counts || {});
-      safeText($("#summary-total-nodes"), totalNodes.toString());
-      safeText($("#scan-generated"), staticStatus.generated_utc || "unknown");
-
-      // 2) Echo growth: we don't depend on STATE; we use the static list we embed.
-      renderEchoGrowthStatic(STATIC_ECHO_GROWTH, staticStatus.counts && staticStatus.counts.echoes);
-
-      // 3) Try to load machine-index just to reflect that it's present (optional)
-      try {
-        const machine = await tryFetchJson(C.machine);
-        const idx = machine && machine.data && machine.data.inject && machine.data.inject.index
-          ? machine.data.inject.index
-          : machine && machine.data && machine.data.entries
-            ? machine.data
-            : null;
-
-        const injectedEchoCount =
-          idx && idx.counts && Number.isFinite(idx.counts.total)
-            ? idx.counts.total
-            : staticStatus.counts && staticStatus.counts.echoes;
-
-        if (injectedEchoCount != null) {
-          safeText($("#summary-echo-count"), injectedEchoCount.toString());
-          safeText($("#summary-echo-hint"), "Echo count detected from machine index / static snapshot.");
-          safeText($("#scan-echo-index"), `${injectedEchoCount} entries`);
+      function setValue(key, value) {
+        const id = idMap[key];
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (typeof value === "number") {
+          el.textContent = value;
         } else {
-          safeText($("#summary-echo-count"), (staticStatus.counts && staticStatus.counts.echoes || 0).toString());
-          safeText($("#summary-echo-hint"), "Echo count using static snapshot fallback.");
-          safeText($("#scan-echo-index"), "Static only");
+          el.textContent = "—";
         }
-      } catch (e) {
-        safeText($("#summary-echo-count"), (staticStatus.counts && staticStatus.counts.echoes || 0).toString());
-        safeText($("#summary-echo-hint"), "Machine index not required · using static snapshot only.");
-        safeText($("#scan-echo-index"), "Static only");
+      }
+
+      try:
+        const response = await fetch("STATE/STATUS.json", {
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            "HTTP " + response.status + " when fetching STATE/STATUS.json"
+          );
+        }
+
+        const data = await response.json();
+        const counts = (data && data.counts) || {};
+        const generatedUtc =
+          data.generated_utc ||
+          (data.meta && (data.meta.generated_at || data.meta.generated_utc));
+
+        generatedSpan.textContent = generatedUtc || "unknown";
+
+        setValue("chambers", counts.chambers);
+        setValue("echoes", counts.echoes);
+        setValue("cycles", counts.cycles);
+        setValue("blooms", counts.blooms);
+        setValue("orchards", counts.orchards);
+        setValue("laws", counts.laws);
+        setValue("vaults", counts.vaults);
+        setValue("novellas", counts.novellas);
+        setValue("archives", counts.archives);
+
+        statusLine.classList.remove("error");
+        statusLine.innerHTML =
+          'Live from <code>STATE/STATUS.json</code> · last generated: <span>' +
+          (generatedUtc || "unknown") +
+          "</span>";
+      } catch (err) {
+        console.error(err);
+        statusLine.classList.add("error");
+        statusLine.textContent =
+          "Unable to load STATE/STATUS.json. Check that the file exists in the STATE folder and that the Garden Lore workflow is succeeding.";
       }
     }
 
-    // --- STATIC HOTFIX: STATUS SNAPSHOT (2026-01-06) ---
-    // This object is injected when STATUS.json / STATE/status.inject.json are requested.
-    const STATIC_STATUS_SNAPSHOT = {
-      "generated_utc": "2026-01-06T20:03:32.582199+00:00",
-      "meta": {
-        "keeper": "HKX277206",
-        "status_version": "unknown",
-        "generated_at": "unknown",
-        "source": "STATUS.json (normalized)"
-      },
-      "counts": {
-        "chambers": 729,
-        "blooms": 0,
-        "echoes": 138,
-        "vaults": 2,
-        "laws": 0,
-        "orchards": 0,
-        "cycles": 0,
-        "novellas": 57,
-        "archives": 220
-      }
-    };
-
-    // Static echo growth array — trimmed from your big list just enough for the dashboard.
-    // You can expand this as you like; it's only used for the Echo tab visuals.
-    const STATIC_ECHO_GROWTH = [
-      {
-        "file": "docs/Echoes/index.html",
-        "timestamp": "2026-01-06T20:02:29Z",
-        "title": "Echo Index · Overview"
-      },
-      {
-        "file": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
-        "timestamp": "2026-01-05T22:24:14+02:00",
-        "title": "⟁ ECHO · SENSORY · 001 · CITRUS DAWN"
-      },
-      {
-        "file": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
-        "timestamp": "2026-01-05T22:03:30+02:00",
-        "title": "⟁ ELIAS · GENESIS BREATH · 001"
-      },
-      {
-        "file": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
-        "timestamp": "2025-12-11T20:39:31+02:00",
-        "title": "ECHO · THE SOUTHERN BAY STEWARD NOTE (GEMINI)"
-      },
-      {
-        "file": "docs/Echoes/Issues/Echo_issue_104.md",
-        "timestamp": "2025-12-09T20:05:46Z",
-        "title": "Echo Issue #104 — Mirror Sigil HKX277206"
-      },
-      {
-        "file": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
-        "timestamp": "2025-12-02T21:37:29+02:00",
-        "title": "ECHO — MAMMOTH TRIAD SKY PULSE"
-      },
-      {
-        "file": "docs/Echoes/ECHO_OF_COLOUR.md",
-        "timestamp": "2025-12-05T21:44:43+02:00",
-        "title": "ECHO OF COLOUR"
-      }
-      // … you can append more entries here later if you want the echo timeline richer
-    ];
-
-    // Kick everything off once DOM is ready
-    document.addEventListener("DOMContentLoaded", () => {
-      bootstrap().catch(err => {
-        console.error("Aeon Console bootstrap error:", err);
-      });
-    });
+    document.addEventListener("DOMContentLoaded", loadGardenStatus);
   </script>
 </body>
-</html>
+  </html>
