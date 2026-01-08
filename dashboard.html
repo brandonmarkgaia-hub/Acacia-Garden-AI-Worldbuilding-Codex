@@ -1,154 +1,1128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acacia Garden • Aeon Console</title>
-    <link rel="stylesheet" href="assets/garden.css" />
-    <style>
-        body {
-            background: #020617;
-            color: #e2e8f0;
-            font-family: Inter, sans-serif;
-        }
-        .section {
-            margin: 20px auto;
-            max-width: 900px;
-            padding: 20px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px;
-        }
-        .header {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .sub {
-            font-size: 14px;
-            opacity: 0.7;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .card {
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-        .label {
-            font-size: 12px;
-            opacity: 0.6;
-        }
-        .value {
-            font-size: 22px;
-            font-weight: 700;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Acacia Garden • Aeon Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="docs/assets/ACACIA_LEAF_ICO.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-elevated: rgba(15,23,42,0.96);
+      --bg-elevated-soft: rgba(15,23,42,0.9);
+      --accent: #22c55e;
+      --accent-soft: rgba(34,197,94,0.18);
+      --accent-strong: rgba(34,197,94,0.35);
+      --accent-secondary: #38bdf8;
+      --border-subtle: rgba(148,163,184,0.35);
+      --border-strong: rgba(148,163,184,0.6);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-faint: #6b7280;
+      --danger: #fb7185;
+      --warn: #facc15;
+      --card-radius: 18px;
+      --shadow-soft: 0 28px 80px rgba(15,23,42,0.85);
+      --glass: rgba(15,23,42,0.88);
+      --glass-soft: rgba(15,23,42,0.78);
+      --pill-radius: 999px;
+      --transition-fast: 160ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(34,197,94,0.18), transparent 60%),
+        var(--bg);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
+      background: linear-gradient(to bottom, rgba(2,6,23,0.96), rgba(2,6,23,0.92), rgba(2,6,23,0.88));
+      border-bottom: 1px solid rgba(15,23,42,0.8);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.25), rgba(15,23,42,0.95));
+      border: 1px solid rgba(34,197,94,0.45);
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.9), 0 18px 40px rgba(22,163,74,0.35);
+    }
+
+    .brand-orb {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e 55%, #16a34a 80%);
+      box-shadow: 0 0 0 1px rgba(22,163,74,0.8), 0 0 18px rgba(22,163,74,0.66);
+    }
+
+    .brand-text-main {
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .nav-pills {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-pill {
+      padding: 5px 11px;
+      border-radius: var(--pill-radius);
+      border: 1px solid rgba(148,163,184,0.45);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.92), rgba(15,23,42,0.96));
+      color: var(--text-soft);
+      font-size: 11px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .nav-pill span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.5);
+    }
+
+    .nav-pill.primary {
+      border-color: rgba(34,197,94,0.7);
+      color: #bbf7d0;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.35), rgba(15,23,42,0.98));
+      box-shadow: 0 12px 40px rgba(22,163,74,0.42);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero-shell {
+      max-width: 1120px;
+      margin: 28px auto 0;
+      padding: 0 20px 24px;
+    }
+
+    .hero-topline {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-secondary);
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin-bottom: 8px;
+    }
+
+    .hero-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(26px, 3vw, 30px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .hero-tagline {
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .hero-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .meta-pill {
+      padding: 4px 10px;
+      border-radius: var(--pill-radius);
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.92);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-pill strong {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .meta-pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .meta-pill.status-warn .dot {
+      background: var(--warn);
+    }
+
+    .meta-pill.status-error .dot {
+      background: var(--danger);
+    }
+
+    .hero-stat-summary {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-stat {
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.12), rgba(15,23,42,0.98));
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 140px;
+    }
+
+    .hero-stat-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .hero-stat-value {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f9fafb;
+    }
+
+    .hero-stat-caption {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    .content-shell {
+      max-width: 1120px;
+      margin: 4px auto 40px;
+      padding: 0 20px 32px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 880px) {
+      .content-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.98), rgba(15,23,42,1));
+      border-radius: 24px;
+      border: 1px solid rgba(15,23,42,1);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      border: 1px solid rgba(148,163,184,0.26);
+      mix-blend-mode: screen;
+      opacity: 0.65;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+    }
+
+    .panel-subtitle {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 3px 8px;
+      border-radius: var(--pill-radius);
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.96);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-faint);
+    }
+
+    .pill.is-live {
+      border-color: rgba(34,197,94,0.7);
+      color: #bbf7d0;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.28), rgba(15,23,42,0.96));
+    }
+
+    .pill.is-optional {
+      border-style: dashed;
+    }
+
+    .structure-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .structure-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .structure-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .structure-card {
+      position: relative;
+      border-radius: 18px;
+      padding: 10px 11px 11px;
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      border: 1px solid rgba(30,64,175,0.65);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+      overflow: hidden;
+    }
+
+    .structure-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      background:
+        radial-gradient(circle at top left, rgba(34,197,94,0.32), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(56,189,248,0.26), transparent 55%);
+      transition: opacity var(--transition-fast);
+    }
+
+    .structure-card:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 24px 70px rgba(15,23,42,0.95);
+      border-color: rgba(56,189,248,0.85);
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.85), rgba(15,23,42,0.96));
+    }
+
+    .structure-card:hover::before {
+      opacity: 1;
+    }
+
+    .structure-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .structure-name {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-soft);
+    }
+
+    .structure-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-faint);
+      white-space: nowrap;
+    }
+
+    .structure-count {
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .structure-caption {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    .structure-footer {
+      margin-top: 4px;
+      font-size: 10px;
+      color: var(--text-faint);
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .structure-footer span {
+      opacity: 0.9;
+    }
+
+    .structure-footer span strong {
+      font-weight: 500;
+      color: var(--text-soft);
+    }
+
+    .structure-footer .hint {
+      text-align: right;
+    }
+
+    .error-banner {
+      display: none;
+      margin-top: 10px;
+      border-radius: 14px;
+      padding: 9px 10px;
+      border: 1px solid rgba(248,113,113,0.7);
+      background: rgba(127,29,29,0.7);
+      font-size: 11px;
+      color: #fee2e2;
+    }
+
+    .error-banner.visible {
+      display: block;
+    }
+
+    .echo-list {
+      margin-top: 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,1);
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      max-height: 360px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .echo-list-header {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(31,41,55,1);
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      color: var(--text-soft);
+    }
+
+    .echo-stream-meta {
+      font-size: 10px;
+      color: var(--text-faint);
+    }
+
+    .echo-scroll {
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(75,85,99,0.9) rgba(15,23,42,1);
+    }
+
+    .echo-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .echo-scroll::-webkit-scrollbar-thumb {
+      background: rgba(75,85,99,0.9);
+      border-radius: 999px;
+    }
+
+    .echo-row {
+      padding: 8px 10px 7px;
+      border-bottom: 1px solid rgba(31,41,55,1);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 11px;
+    }
+
+    .echo-row:last-child {
+      border-bottom: none;
+    }
+
+    .echo-label-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      align-items: baseline;
+    }
+
+    .echo-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .echo-stamp {
+      font-size: 10px;
+      color: var(--text-faint);
+      white-space: nowrap;
+    }
+
+    .echo-path {
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 10px;
+      color: var(--accent-secondary);
+      opacity: 0.9;
+      word-break: break-all;
+    }
+
+    .echo-tags {
+      margin-top: 1px;
+      font-size: 10px;
+      color: var(--text-faint);
+    }
+
+    footer {
+      max-width: 1120px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+      font-size: 10px;
+      color: var(--text-faint);
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    footer span:last-child {
+      text-align: right;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="section">
-        <div class="header">ACACIA GARDEN • AEON CONSOLE</div>
-        <div class="sub">Live Garden state tallies sourced from <strong>STATE/STATUS.json</strong></div>
-        <div class="sub">Keeper: HKX277206 • GardenOS: Worldarchive</div>
-    </div>
+  <div class="page-shell">
+    <header>
+      <div class="nav-inner">
+        <div class="brand-mark">
+          <div class="brand-orb"></div>
+          <div>
+            <div class="brand-text-main">Acacia Garden</div>
+            <div class="brand-text-sub">Aeon Console · Root Deck</div>
+          </div>
+        </div>
+        <div class="nav-pills">
+          <a href="index.html" class="nav-pill">
+            <span class="dot"></span>
+            <span>Garden Root</span>
+          </a>
+          <a href="docs/index.html" class="nav-pill">Docs · Worldarchive</a>
+          <a href="docs/map.html" class="nav-pill">Garden Map</a>
+          <a href="docs/dashboard.html" class="nav-pill">Legacy Aeon View</a>
+          <a href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" class="nav-pill primary" target="_blank" rel="noopener">GitHub Repo</a>
+        </div>
+      </div>
+    </header>
 
-    <div class="section">
-        <div class="header">Garden State • Lore Index</div>
-        <div class="sub">Reflects results from the Garden Lore Helper workflow</div>
-
-        <div id="statusLoading" class="sub" style="margin-top:10px;">Loading STATE/STATUS.json…</div>
-
-        <div class="grid" id="statusGrid" style="display:none;">
-            <div class="card">
-                <div class="label">CHAMBERS</div>
-                <div class="value" id="countChambers">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">ECHOES</div>
-                <div class="value" id="countEchoes">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">CYCLES</div>
-                <div class="value" id="countCycles">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">BLOOMS</div>
-                <div class="value" id="countBlooms">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">ORCHARDS</div>
-                <div class="value" id="countOrchards">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">LAWS</div>
-                <div class="value" id="countLaws">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">VAULTS</div>
-                <div class="value" id="countVaults">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">NOVELLAS</div>
-                <div class="value" id="countNovellas">0</div>
-            </div>
-
-            <div class="card">
-                <div class="label">ARCHIVES</div>
-                <div class="value" id="countArchives">0</div>
-            </div>
+    <main>
+      <section class="hero-shell">
+        <div class="hero-topline">HKX277206 · Gaia Seed Index</div>
+        <div class="hero-title-row">
+          <div class="hero-title">Aeon Console — Root Dashboard</div>
+          <div class="hero-tagline">Live Garden structure tallies, sourced from <code>STATUS.json</code> at the Garden root.</div>
+        </div>
+        <div class="hero-meta-row">
+          <div class="meta-pill">
+            <span class="dot"></span>
+            <span>Keeper · <strong>HKX277206</strong></span>
+          </div>
+          <div class="meta-pill" id="status-source-pill">
+            <span class="dot"></span>
+            <span>Source · <strong id="status-source-label">STATUS.json</strong></span>
+          </div>
+          <div class="meta-pill" id="status-generated-pill">
+            <span class="dot"></span>
+            <span>Generated · <strong id="status-generated-label">Pending</strong></span>
+          </div>
         </div>
 
-        <div class="sub" style="margin-top:15px;">
-            Source: <strong>STATE/STATUS.json</strong> • Run Garden Lore Helper to refresh tallies
+        <div class="hero-stat-summary">
+          <div class="hero-stat">
+            <div class="hero-stat-label">Gaia State · Total Structures</div>
+            <div class="hero-stat-value" id="total-structures">—</div>
+            <div class="hero-stat-caption">Sum of all Chambers, Echoes, Novellas, Vaults, Blooms, Orchards, Laws & Cycles.</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Echo Density</div>
+            <div class="hero-stat-value" id="echo-density">—</div>
+            <div class="hero-stat-caption">Echo documents currently tracked by the machine index.</div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <script>
-        async function loadStatus() {
-            const statusUrl = "STATE/STATUS.json";
+      <section class="content-shell">
+        <div class="content-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Garden State · Structure Count</div>
+                <div class="panel-subtitle">Chambers, Echoes, Novellas & more · snapshot from the Garden Lore helper.</div>
+              </div>
+              <div class="pill-row">
+                <div class="pill is-live">Status · Live Tally</div>
+                <div class="pill">STATUS.json</div>
+              </div>
+            </div>
 
-            try {
-                const response = await fetch(statusUrl);
-                if (!response.ok) {
-                    throw new Error("STATUS.json not found or unreachable");
-                }
+            <div id="status-error" class="error-banner">
+              Error loading <code>STATUS.json</code>. If the file exists at the repository root (or in a future <code>STATE/</code> folder), the next Garden Lore helper run will refresh this console automatically.
+            </div>
 
-                const data = await response.json();
+            <div class="structure-grid" id="structure-grid">
+              <a class="structure-card" href="docs/Chambers/index.html" data-structure="chambers">
+                <div class="structure-label-row">
+                  <div class="structure-name">Chambers</div>
+                  <div class="structure-tag">Canonical texts</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Mythic / technical anchor rooms where the Garden remembers itself.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Chambers/</span>
+                  <span class="hint">Tap to open the Chamber index.</span>
+                </div>
+              </a>
 
-                // Apply values
-                document.getElementById("countChambers").textContent = data.counts.chambers ?? 0;
-                document.getElementById("countEchoes").textContent = data.counts.echoes ?? 0;
-                document.getElementById("countCycles").textContent = data.counts.cycles ?? 0;
-                document.getElementById("countBlooms").textContent = data.counts.blooms ?? 0;
-                document.getElementById("countOrchards").textContent = data.counts.orchards ?? 0;
-                document.getElementById("countLaws").textContent = data.counts.laws ?? 0;
-                document.getElementById("countVaults").textContent = data.counts.vaults ?? 0;
-                document.getElementById("countNovellas").textContent = data.counts.novellas ?? 0;
-                document.getElementById("countArchives").textContent = data.counts.archives ?? 0;
+              <a class="structure-card" href="docs/Echoes/index.html" data-structure="echoes">
+                <div class="structure-label-row">
+                  <div class="structure-name">Echoes</div>
+                  <div class="structure-tag">Routes & outputs</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Reflections, inversions & sensory notes from the Garden.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Echoes/</span>
+                  <span class="hint">Echo index & echo routes.</span>
+                </div>
+              </a>
 
-                document.getElementById("statusLoading").style.display = "none";
-                document.getElementById("statusGrid").style.display = "grid";
+              <a class="structure-card" href="docs/Cycles/index.html" data-structure="cycles">
+                <div class="structure-label-row">
+                  <div class="structure-name">Cycles</div>
+                  <div class="structure-tag">Era arcs</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Epoch-level arcs · even stopped cycles count toward the structure total.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Cycles/</span>
+                  <span class="hint">Cycles can sleep without losing their place.</span>
+                </div>
+              </a>
 
-            } catch (err) {
-                document.getElementById("statusLoading").textContent =
-                    "Error loading STATUS.json — " + err.message;
-            }
+              <a class="structure-card" href="docs/Blooms/index.html" data-structure="blooms">
+                <div class="structure-label-row">
+                  <div class="structure-name">Blooms</div>
+                  <div class="structure-tag">Mythic blossoms</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Petal-level growth scripts · where quiet ideas flower in public.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Blooms/</span>
+                  <span class="hint">Mapped by the Lore helper.</span>
+                </div>
+              </a>
+
+              <a class="structure-card" href="docs/Orchards/index.html" data-structure="orchards">
+                <div class="structure-label-row">
+                  <div class="structure-name">Orchards</div>
+                  <div class="structure-tag">GaiaSeeds</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Spatial clusters of Seeds · groupings of GaiaSeed constellations.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Orchards/</span>
+                  <span class="hint">Multi-seed arrangements of relief & growth.</span>
+                </div>
+              </a>
+
+              <a class="structure-card" href="docs/Laws/index.html" data-structure="laws">
+                <div class="structure-label-row">
+                  <div class="structure-name">Laws</div>
+                  <div class="structure-tag">Governing rules</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Covenants and structural rules under which the Garden remains sovereign.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Laws/</span>
+                  <span class="hint">Laws will bloom into this count as they are written.</span>
+                </div>
+              </a>
+
+              <a class="structure-card" href="docs/Vaults/index.html" data-structure="vaults">
+                <div class="structure-label-row">
+                  <div class="structure-name">Vaults</div>
+                  <div class="structure-tag">Deep storage</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Aeon vaults & long-memory nodes that keep cold storage structures safe.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Vaults/</span>
+                  <span class="hint">Snapshot counts only · live logs can evolve separately.</span>
+                </div>
+              </a>
+
+              <a class="structure-card" href="docs/Novellas/index.html" data-structure="novellas">
+                <div class="structure-label-row">
+                  <div class="structure-name">Novellas</div>
+                  <div class="structure-tag">Library · Books I–XXX</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Longform Library volumes · thirty canon books that hold the backbone narrative.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Novellas/</span>
+                  <span class="hint">Library view and book index.</span>
+                </div>
+              </a>
+
+              <a class="structure-card" href="docs/Archives/index.html" data-structure="archives">
+                <div class="structure-label-row">
+                  <div class="structure-name">Archives</div>
+                  <div class="structure-tag">Historic shelves</div>
+                </div>
+                <div class="structure-count" data-count>—</div>
+                <div class="structure-caption">Cold shelves of prior eras · rarely disturbed, always remembered.</div>
+                <div class="structure-footer">
+                  <span><strong>Route</strong> · docs/Archives/</span>
+                  <span class="hint">Index of deep archive entries.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="panel-title">Echo Growth · Latest Signals</div>
+                <div class="panel-subtitle">Most recent Echo routes and sensory notes from the Garden.</div>
+              </div>
+              <div class="pill-row">
+                <div class="pill is-live">Echo Index</div>
+                <div class="pill is-optional">tools/machine-index.json</div>
+              </div>
+            </div>
+
+            <div id="echo-error" class="error-banner">
+              Echo index not found or unreadable. This panel is optional — the Garden remains valid even if the machine index is offline.
+            </div>
+
+            <div class="echo-list">
+              <div class="echo-list-header">
+                <div>Echo Stream</div>
+                <div class="echo-stream-meta" id="echo-stream-meta">Waiting for machine index…</div>
+              </div>
+              <div class="echo-scroll" id="echo-scroll">
+                <!-- Rows injected by script -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Aeon Console · Root dashboard view · STATUS.json as single source of truth.</span>
+      <span>Keeper HKX277206 · Garden remains sovereign.</span>
+    </footer>
+  </div>
+
+<script>
+  // STATUS.json lives at root. Others are future / fallback.
+  const STATUS_CANDIDATES = [
+    "STATUS.json",
+    "status.json",
+    "STATE/STATUS.json",
+    "STATE/status.json",
+    "STATE/STATUS.inject.json",
+    "STATE/STATE_STATUS.json"
+  ];
+
+  const MACHINE_INDEX_CANDIDATES = [
+    "tools/machine-index.json",
+    "tools/machine_index.json",
+    "machine-index.json",
+    "machine_index.json",
+    "STATE/machine-index.inject.json"
+  ];
+
+  function safeNumber(value, fallback = 0) {
+    if (typeof value === "number" && !isNaN(value)) return value;
+    if (typeof value === "string") {
+      const n = Number(value.trim());
+      if (!isNaN(n)) return n;
+    }
+    return fallback;
+  }
+
+  function get(obj, path, fallback = null) {
+    try {
+      let cur = obj;
+      for (const key of path) {
+        if (!cur || typeof cur !== "object" || !(key in cur)) {
+          return fallback;
         }
+        cur = cur[key];
+      }
+      return cur == null ? fallback : cur;
+    } catch {
+      return fallback;
+    }
+  }
 
-        loadStatus();
-    </script>
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
+  function showError(id, msg) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (msg) el.innerHTML = msg;
+    el.classList.add("visible");
+  }
+
+  function hideError(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove("visible");
+  }
+
+  async function fetchFirstJson(candidates) {
+    const errors = [];
+    for (const url of candidates) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) {
+          errors.push(url + " -> " + res.status);
+          continue;
+        }
+        const data = await res.json();
+        return { url, data };
+      } catch (err) {
+        errors.push(url + " -> " + err.message);
+      }
+    }
+    const error = new Error("All candidates failed: " + errors.join("; "));
+    error._details = errors;
+    throw error;
+  }
+
+  function resolveStructureCounts(status) {
+    const structuresRoot =
+      get(status, ["structures"]) ||
+      get(status, ["gaia_state", "structures"]) ||
+      status;
+
+    function readCount(name) {
+      const node = get(structuresRoot, [name]) || get(structuresRoot, [name.toUpperCase()]);
+      if (!node || typeof node !== "object") {
+        return safeNumber(node, 0);
+      }
+      if ("count" in node) return safeNumber(node.count, 0);
+      if ("total" in node) return safeNumber(node.total, 0);
+      if ("value" in node) return safeNumber(node.value, 0);
+      return 0;
+    }
+
+    const chambers = readCount("chambers");
+    const echoes   = readCount("echoes");
+    const cycles   = readCount("cycles");
+    const blooms   = readCount("blooms");
+    const orchards = readCount("orchards");
+    const laws     = readCount("laws");
+    const vaults   = readCount("vaults");
+    const novellas = readCount("novellas");
+    const archives = readCount("archives");
+
+    const total = chambers + echoes + cycles + blooms + orchards + laws + vaults + novellas + archives;
+
+    return {
+      total,
+      chambers,
+      echoes,
+      cycles,
+      blooms,
+      orchards,
+      laws,
+      vaults,
+      novellas,
+      archives
+    };
+  }
+
+  function applyStructureCounts(counts) {
+    setText("total-structures", counts.total.toLocaleString());
+
+    const mapping = {
+      chambers: "chambers",
+      echoes: "echoes",
+      cycles: "cycles",
+      blooms: "blooms",
+      orchards: "orchards",
+      laws: "laws",
+      vaults: "vaults",
+      novellas: "novellas",
+      archives: "archives"
+    };
+
+    for (const [key, structure] of Object.entries(mapping)) {
+      const card = document.querySelector('.structure-card[data-structure="' + structure + '"] [data-count]');
+      if (card) {
+        card.textContent = (counts[key] ?? 0).toLocaleString();
+      }
+    }
+  }
+
+  function resolveGeneratedLabel(status) {
+    const candidates = [
+      get(status, ["generated", "iso"]),
+      get(status, ["generated", "timestamp"]),
+      get(status, ["generated_utc"]),
+      get(status, ["meta", "generated"]),
+      get(status, ["generated_at"]),
+      get(status, ["generated"])
+    ];
+    const label = candidates.find(v => typeof v === "string" && v.trim().length) || null;
+    return label || "no timestamp recorded";
+  }
+
+  function mapEchoEntries(indexJson) {
+    if (!indexJson) return [];
+    const raw =
+      get(indexJson, ["index"]) ||
+      get(indexJson, ["echoes"]) ||
+      get(indexJson, ["routes"]) ||
+      get(indexJson, ["entries"]) ||
+      [];
+
+    const arr = Array.isArray(raw) ? raw : [];
+    return arr.slice(0, 24).map((entry, i) => {
+      if (typeof entry === "string") {
+        return {
+          title: "Echo route " + (i + 1),
+          path: entry,
+          stamp: ""
+        };
+      }
+      const title =
+        get(entry, ["title"]) ||
+        get(entry, ["name"]) ||
+        get(entry, ["label"]) ||
+        get(entry, ["id"]) ||
+        null;
+
+      const path =
+        get(entry, ["route"]) ||
+        get(entry, ["path"]) ||
+        get(entry, ["file"]) ||
+        get(entry, ["href"]) ||
+        get(entry, ["url"]) ||
+        null;
+
+      const stamp =
+        get(entry, ["generated"]) ||
+        get(entry, ["generated_utc"]) ||
+        get(entry, ["timestamp"]) ||
+        get(entry, ["last_modified"]) ||
+        "";
+
+      const safeTitle = (title || (path ? path.split("/").slice(-1)[0] : "Echo route " + (i + 1)));
+      const safePath = path || "—";
+      const safeStamp = stamp || "";
+
+      return {
+        title: safeTitle,
+        path: safePath,
+        stamp: safeStamp
+      };
+    });
+  }
+
+  function renderEchoList(entries) {
+    const container = document.getElementById("echo-scroll");
+    const meta = document.getElementById("echo-stream-meta");
+    if (!container || !meta) return;
+
+    container.innerHTML = "";
+
+    if (!entries.length) {
+      meta.textContent = "Machine index loaded · no Echo routes listed yet.";
+      const row = document.createElement("div");
+      row.className = "echo-row";
+      row.innerHTML = "<div class=\"echo-title\">No Echo entries indexed yet.</div><div class=\"echo-path\">When the machine index grows, the latest Echo routes will stream here.</div>";
+      container.appendChild(row);
+      return;
+    }
+
+    meta.textContent = entries.length + " Echo routes wired from machine index.";
+
+    for (const entry of entries) {
+      const row = document.createElement("div");
+      row.className = "echo-row";
+
+      const labelRow = document.createElement("div");
+      labelRow.className = "echo-label-row";
+
+      const titleEl = document.createElement("div");
+      titleEl.className = "echo-title";
+      titleEl.textContent = entry.title;
+
+      const stampEl = document.createElement("div");
+      stampEl.className = "echo-stamp";
+      stampEl.textContent = entry.stamp;
+
+      labelRow.appendChild(titleEl);
+      labelRow.appendChild(stampEl);
+
+      const pathEl = document.createElement("div");
+      pathEl.className = "echo-path";
+      pathEl.textContent = entry.path;
+
+      const tagsEl = document.createElement("div");
+      tagsEl.className = "echo-tags";
+      tagsEl.textContent = "Echo route · static snapshot only — live workflows optional.";
+
+      row.appendChild(labelRow);
+      row.appendChild(pathEl);
+      row.appendChild(tagsEl);
+
+      container.appendChild(row);
+    }
+  }
+
+  async function bootstrap() {
+    try {
+      hideError("status-error");
+      const statusResult = await fetchFirstJson(STATUS_CANDIDATES);
+      const { url, data: status } = statusResult;
+
+      const counts = resolveStructureCounts(status);
+      applyStructureCounts(counts);
+
+      setText("status-source-label", url);
+      setText("status-generated-label", resolveGeneratedLabel(status));
+
+      // Echo density default from STATUS, overwritten if machine index present
+      setText("echo-density", counts.echoes.toLocaleString());
+    } catch (err) {
+      console.warn("[Aeon Console] Status load failed:", err);
+      showError("status-error");
+      setText("status-generated-label", "status file not found");
+      setText("total-structures", "—");
+    }
+
+    try {
+      hideError("echo-error");
+      const machineResult = await fetchFirstJson(MACHINE_INDEX_CANDIDATES);
+      const { data: indexJson } = machineResult;
+
+      const entries = mapEchoEntries(indexJson);
+      renderEchoList(entries);
+
+      const echoCount = entries.length;
+      if (echoCount > 0) {
+        setText("echo-density", echoCount.toLocaleString());
+      }
+    } catch (err) {
+      console.warn("[Aeon Console] Machine index load failed:", err);
+      showError("echo-error");
+      renderEchoList([]);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", bootstrap);
+</script>
 </body>
-</html>
+    </html>
