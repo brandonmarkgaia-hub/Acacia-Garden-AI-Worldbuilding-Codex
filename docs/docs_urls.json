@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T11:43:17Z",
+  "generated_at": "2026-01-08T11:52:23Z",
   "count": 1418,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1348,7 +1348,7 @@
     "Novellas/garden_index.json",
     "Novellas/index.html",
     "Novellas/manifest.json",
-    "Orchard/IMMORTAL_ORCHARD.md",
+    "Orchards/IMMORTAL_ORCHARD.md",
     "Orchards/Last-Orchard.md",
     "Outer_Registry/OUTER_WORLD_REGISTRY.md",
     "PROTOCOLS/keeper_protocol.v2.md",
