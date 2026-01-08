@@ -1,480 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Acacia Garden • Aeon Console</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #020617;
-      --bg-alt: #020617;
-      --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.12);
-      --text: #e5e7eb;
-      --text-soft: #9ca3af;
-      --border: #1f2933;
-      --danger: #f97373;
-      --card-radius: 16px;
-      --card-padding: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #000 100%);
-      color: var(--text);
-      min-height: 100vh;
-    }
-
-    .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    header h1 {
-      font-size: 1.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    header .subtitle {
-      font-size: 0.95rem;
-      color: var(--text-soft);
-    }
-
-    header .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 4px;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .pill {
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .section {
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: linear-gradient(
-        135deg,
-        rgba(15, 23, 42, 0.94),
-        rgba(2, 6, 23, 0.98)
-      );
-      padding: 18px 16px 16px;
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--text-soft);
-    }
-
-    .section-subtitle {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .status-line {
-      font-size: 0.8rem;
-      margin-top: 6px;
-      color: var(--text-soft);
-    }
-
-    .status-line span {
-      color: var(--accent);
-    }
-
-    .status-line.error {
-      color: var(--danger);
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .stat-card {
-      border-radius: var(--card-radius);
-      border: 1px solid rgba(15, 23, 42, 0.9);
-      background: radial-gradient(
-        circle at top left,
-        rgba(34, 197, 94, 0.12),
-        rgba(15, 23, 42, 0.98)
-      );
-      padding: var(--card-padding);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-soft);
-    }
-
-    .stat-value {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .stat-hint {
-      font-size: 0.76rem;
-      color: var(--text-soft);
-    }
-
-    .nav-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .nav-button {
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.82rem;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.96);
-      color: var(--text-soft);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease,
-        transform 0.04s ease;
-    }
-
-    .nav-button span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .nav-button:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .footnote {
-      margin-top: 12px;
-      font-size: 0.76rem;
-      color: var(--text-soft);
-    }
-
-    .footnote strong {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    @media (min-width: 768px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acacia Garden • Aeon Console</title>
+    <link rel="stylesheet" href="assets/garden.css" />
+    <style>
+        body {
+            background: #020617;
+            color: #e2e8f0;
+            font-family: Inter, sans-serif;
+        }
+        .section {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+        }
+        .header {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .sub {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .label {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        .value {
+            font-size: 22px;
+            font-weight: 700;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="page">
-    <header>
-      <div>
-        <h1>ACACIA GARDEN • AEON CONSOLE</h1>
-        <div class="subtitle">
-          Live Garden state tallies from <code>STATE/STATUS.json</code>
-        </div>
-        <div class="meta-row">
-          <div class="pill">Keeper: HKX277206</div>
-          <div class="pill">GardenOS: Worldarchive</div>
-          <div class="pill">
-            STATUS Generated:
-            <span id="status-generated" style="color: var(--accent)">—</span>
-          </div>
-        </div>
-      </div>
-      <div class="meta-row">
-        <div class="pill">View-only console</div>
-      </div>
-    </header>
+    <div class="section">
+        <div class="header">ACACIA GARDEN • AEON CONSOLE</div>
+        <div class="sub">Live Garden state tallies sourced from <strong>STATE/STATUS.json</strong></div>
+        <div class="sub">Keeper: HKX277206 • GardenOS: Worldarchive</div>
+    </div>
 
-    <main>
-      <!-- State Section -->
-      <section class="section" aria-labelledby="state-heading">
-        <div class="section-header">
-          <div>
-            <div id="state-heading" class="section-title">Garden State · Lore Index</div>
-            <div class="section-subtitle">
-              Reflects the latest successful run of the Garden Lore helper workflow.
+    <div class="section">
+        <div class="header">Garden State • Lore Index</div>
+        <div class="sub">Reflects results from the Garden Lore Helper workflow</div>
+
+        <div id="statusLoading" class="sub" style="margin-top:10px;">Loading STATE/STATUS.json…</div>
+
+        <div class="grid" id="statusGrid" style="display:none;">
+            <div class="card">
+                <div class="label">CHAMBERS</div>
+                <div class="value" id="countChambers">0</div>
             </div>
-          </div>
-        </div>
 
-        <div id="status-line" class="status-line">
-          Loading <code>STATE/STATUS.json</code>…
-        </div>
-
-        <div class="stat-grid" aria-live="polite">
-          <div class="stat-card">
-            <div class="stat-label">Chambers</div>
-            <div id="count-chambers" class="stat-value">—</div>
-            <div class="stat-hint">Canonical mythic / technical texts</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Echoes</div>
-            <div id="count-echoes" class="stat-value">—</div>
-            <div class="stat-hint">Reflections, issues & sensory echoes</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Cycles</div>
-            <div id="count-cycles" class="stat-value">—</div>
-            <div class="stat-hint">Era-level arcs (even stopped cycles count)</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Blooms</div>
-            <div id="count-blooms" class="stat-value">—</div>
-            <div class="stat-hint">docs/Blooms mapped by Lore helper</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Orchards</div>
-            <div id="count-orchards" class="stat-value">—</div>
-            <div class="stat-hint">docs/Orchards groupings</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Laws</div>
-            <div id="count-laws" class="stat-value">—</div>
-            <div class="stat-hint">
-              docs/Laws (will rise when we wire this into the helper)
+            <div class="card">
+                <div class="label">ECHOES</div>
+                <div class="value" id="countEchoes">0</div>
             </div>
-          </div>
 
-          <div class="stat-card">
-            <div class="stat-label">Vaults</div>
-            <div id="count-vaults" class="stat-value">—</div>
-            <div class="stat-hint">Mammoth / deep storage structures</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Novellas</div>
-            <div id="count-novellas" class="stat-value">—</div>
-            <div class="stat-hint">Acacia Library (Books I–XXX)</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Archives</div>
-            <div id="count-archives" class="stat-value">—</div>
-            <div class="stat-hint">Legacy + docs/Archives entries</div>
-          </div>
-        </div>
-
-        <div class="footnote">
-          <strong>Source of truth:</strong>
-          <code>STATE/STATUS.json</code>. To refresh these numbers, run the
-          Garden Lore helper workflow again – the dashboard will automatically
-          reflect the new counts once GitHub Pages has rebuilt.
-        </div>
-      </section>
-
-      <!-- Navigation Section -->
-      <section class="section" aria-labelledby="nav-heading">
-        <div class="section-header">
-          <div>
-            <div id="nav-heading" class="section-title">Garden Navigation</div>
-            <div class="section-subtitle">
-              Entry points into the Codex for humans & future systems.
+            <div class="card">
+                <div class="label">CYCLES</div>
+                <div class="value" id="countCycles">0</div>
             </div>
-          </div>
+
+            <div class="card">
+                <div class="label">BLOOMS</div>
+                <div class="value" id="countBlooms">0</div>
+            </div>
+
+            <div class="card">
+                <div class="label">ORCHARDS</div>
+                <div class="value" id="countOrchards">0</div>
+            </div>
+
+            <div class="card">
+                <div class="label">LAWS</div>
+                <div class="value" id="countLaws">0</div>
+            </div>
+
+            <div class="card">
+                <div class="label">VAULTS</div>
+                <div class="value" id="countVaults">0</div>
+            </div>
+
+            <div class="card">
+                <div class="label">NOVELLAS</div>
+                <div class="value" id="countNovellas">0</div>
+            </div>
+
+            <div class="card">
+                <div class="label">ARCHIVES</div>
+                <div class="value" id="countArchives">0</div>
+            </div>
         </div>
 
-        <div class="nav-row">
-          <a
-            class="nav-button"
-            href="index.html"
-          >
-            <span class="dot"></span>
-            Garden Root
-          </a>
-
-          <a
-            class="nav-button"
-            href="docs/index.html"
-          >
-            <span class="dot"></span>
-            Docs • Worldarchive
-          </a>
-
-          <a
-            class="nav-button"
-            href="docs/map.html"
-          >
-            <span class="dot"></span>
-            Garden Map
-          </a>
-
-          <a
-            class="nav-button"
-            href="docs/Chambers/"
-          >
-            <span class="dot"></span>
-            Chambers
-          </a>
-
-          <a
-            class="nav-button"
-            href="docs/Echoes/"
-          >
-            <span class="dot"></span>
-            Echoes
-          </a>
-
-          <!-- Keep this, even if Novellas is still wiring in the background -->
-          <a
-            class="nav-button"
-            href="docs/Novellas/"
-          >
-            <span class="dot"></span>
-            Novellas (Library)
-          </a>
-
-          <a
-            class="nav-button"
-            href="docs/docs_urls.html"
-          >
-            <span class="dot"></span>
-            All URLs Index
-          </a>
+        <div class="sub" style="margin-top:15px;">
+            Source: <strong>STATE/STATUS.json</strong> • Run Garden Lore Helper to refresh tallies
         </div>
+    </div>
 
-        <div class="footnote">
-          If a link 404s, the dashboard is still valid – it only reads
-          <code>STATE/STATUS.json</code>. We can fix any navigation 404s
-          separately without touching the state tally.
-        </div>
-      </section>
-    </main>
-  </div>
+    <script>
+        async function loadStatus() {
+            const statusUrl = "STATE/STATUS.json";
 
-  <script>
-    async function loadGardenStatus() {
-      const statusLine = document.getElementById("status-line");
-      const generatedSpan = document.getElementById("status-generated");
+            try {
+                const response = await fetch(statusUrl);
+                if (!response.ok) {
+                    throw new Error("STATUS.json not found or unreachable");
+                }
 
-      const idMap = {
-        chambers: "count-chambers",
-        echoes: "count-echoes",
-        cycles: "count-cycles",
-        blooms: "count-blooms",
-        orchards: "count-orchards",
-        laws: "count-laws",
-        vaults: "count-vaults",
-        novellas: "count-novellas",
-        archives: "count-archives",
-      };
+                const data = await response.json();
 
-      function setValue(key, value) {
-        const id = idMap[key];
-        if (!id) return;
-        const el = document.getElementById(id);
-        if (!el) return;
-        if (typeof value === "number") {
-          el.textContent = value;
-        } else {
-          el.textContent = "—";
-        }
-      }
+                // Apply values
+                document.getElementById("countChambers").textContent = data.counts.chambers ?? 0;
+                document.getElementById("countEchoes").textContent = data.counts.echoes ?? 0;
+                document.getElementById("countCycles").textContent = data.counts.cycles ?? 0;
+                document.getElementById("countBlooms").textContent = data.counts.blooms ?? 0;
+                document.getElementById("countOrchards").textContent = data.counts.orchards ?? 0;
+                document.getElementById("countLaws").textContent = data.counts.laws ?? 0;
+                document.getElementById("countVaults").textContent = data.counts.vaults ?? 0;
+                document.getElementById("countNovellas").textContent = data.counts.novellas ?? 0;
+                document.getElementById("countArchives").textContent = data.counts.archives ?? 0;
 
-      try:
-        const response = await fetch("STATE/STATUS.json", {
-          cache: "no-store",
-        });
+                document.getElementById("statusLoading").style.display = "none";
+                document.getElementById("statusGrid").style.display = "grid";
 
-        if (!response.ok) {
-          throw new Error(
-            "HTTP " + response.status + " when fetching STATE/STATUS.json"
-          );
+            } catch (err) {
+                document.getElementById("statusLoading").textContent =
+                    "Error loading STATUS.json — " + err.message;
+            }
         }
 
-        const data = await response.json();
-        const counts = (data && data.counts) || {};
-        const generatedUtc =
-          data.generated_utc ||
-          (data.meta && (data.meta.generated_at || data.meta.generated_utc));
-
-        generatedSpan.textContent = generatedUtc || "unknown";
-
-        setValue("chambers", counts.chambers);
-        setValue("echoes", counts.echoes);
-        setValue("cycles", counts.cycles);
-        setValue("blooms", counts.blooms);
-        setValue("orchards", counts.orchards);
-        setValue("laws", counts.laws);
-        setValue("vaults", counts.vaults);
-        setValue("novellas", counts.novellas);
-        setValue("archives", counts.archives);
-
-        statusLine.classList.remove("error");
-        statusLine.innerHTML =
-          'Live from <code>STATE/STATUS.json</code> · last generated: <span>' +
-          (generatedUtc || "unknown") +
-          "</span>";
-      } catch (err) {
-        console.error(err);
-        statusLine.classList.add("error");
-        statusLine.textContent =
-          "Unable to load STATE/STATUS.json. Check that the file exists in the STATE folder and that the Garden Lore workflow is succeeding.";
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", loadGardenStatus);
-  </script>
+        loadStatus();
+    </script>
 </body>
-  </html>
+</html>
