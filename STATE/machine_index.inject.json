@@ -1,109 +1,109 @@
 {
-  "generated_utc": "2026-01-08T11:52:08.589357+00:00",
+  "generated_utc": "2026-01-08T11:53:52.997031+00:00",
   "meta": {
     "keeper": "HKX277206",
     "source": "Echoes folder scan (markdown only)"
   },
   "echo_growth": [
     {
+      "file": "docs/Echoes/Issues/Echo_issue_096.md",
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
       "file": "docs/Echoes/Issues/Echo_issue_102.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_104.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_103.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_096.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_094.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_099.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_097.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_100.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_098.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_095.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "file": "docs/Echoes/Issues/Echo_issue_103.md",
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_101.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
+      "file": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
+      "file": "docs/Echoes/Issues/Echo_issue_070.md",
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_090.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
+      "file": "docs/Echoes/Issues/Echo_issue_094.md",
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_079.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
+      "file": "docs/Echoes/Issues/Echo_issue_074.md",
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_086.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_093.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_092.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
+    },
+    {
+      "file": "docs/Echoes/Issues/Echo_issue_072.md",
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_078.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_088.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_085.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_082.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_087.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     },
     {
       "file": "docs/Echoes/Issues/Echo_issue_075.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_091.md",
-      "timestamp": "2026-01-08T11:52:08Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_083.md",
-      "timestamp": "2026-01-08T11:52:08Z"
+      "timestamp": "2026-01-08T11:53:52Z"
     }
   ],
   "echo_count": 137
