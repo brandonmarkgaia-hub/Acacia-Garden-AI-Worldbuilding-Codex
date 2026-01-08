@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-07T18:50:45Z",
-  "count": 1417,
+  "generated_at": "2026-01-08T11:43:17Z",
+  "count": 1418,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1373,6 +1373,7 @@
     "STATE/STATUS_v20251230_0340.json",
     "STATE/STATUS_v20251230_0656.json",
     "STATE/aeon_heartbeat.inject.json",
+    "STATE/aeon_state.json",
     "STATE/cadence_anchors.json",
     "STATE/core_triad_injection.json",
     "STATE/feeds.manifest.json",
