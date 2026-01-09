@@ -4,289 +4,434 @@
   <meta charset="UTF-8" />
   <title>Acacia Garden • Aeon Console</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="docs/assets/ACACIA_LEAF_ICO.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #020617;
-      --bg-elevated: rgba(15,23,42,0.96);
-      --bg-elevated-soft: rgba(15,23,42,0.9);
+      --bg-alt: #020819;
+      --panel: #02091c;
+      --panel-soft: #050f24;
       --accent: #22c55e;
-      --accent-soft: rgba(34,197,94,0.18);
-      --accent-strong: rgba(34,197,94,0.35);
-      --accent-secondary: #38bdf8;
-      --border-subtle: rgba(148,163,184,0.35);
-      --border-strong: rgba(148,163,184,0.6);
+      --accent-soft: rgba(34, 197, 94, 0.1);
+      --accent-echo: #38bdf8;
+      --accent-echo-soft: rgba(56, 189, 248, 0.12);
+      --accent-warn: #f97316;
+      --accent-warn-soft: rgba(249, 115, 22, 0.16);
+      --accent-muted: #64748b;
+      --border-soft: rgba(148, 163, 184, 0.18);
+      --border-strong: rgba(148, 163, 184, 0.28);
+      --shadow-soft: 0 20px 45px rgba(15, 23, 42, 0.85);
       --text-main: #e5e7eb;
       --text-soft: #9ca3af;
       --text-faint: #6b7280;
-      --danger: #fb7185;
-      --warn: #facc15;
-      --card-radius: 18px;
-      --shadow-soft: 0 28px 80px rgba(15,23,42,0.85);
-      --glass: rgba(15,23,42,0.88);
-      --glass-soft: rgba(15,23,42,0.78);
-      --pill-radius: 999px;
-      --transition-fast: 160ms ease-out;
+      --pill-bg: rgba(15, 23, 42, 0.9);
+      --pill-border: rgba(148, 163, 184, 0.28);
+      --pill-soft: rgba(15, 23, 42, 0.65);
+      --glow-keeper: 0 0 40px rgba(34, 197, 94, 0.25);
+      --glow-echo: 0 0 32px rgba(56, 189, 248, 0.18);
+      --glow-aeon: 0 0 55px rgba(129, 140, 248, 0.28);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
+    html, body {
       margin: 0;
-      min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(34,197,94,0.18), transparent 60%),
-        var(--bg);
+      padding: 0;
+      background: radial-gradient(circle at top, #020617 0, #020617 28%, #020617 100%);
       color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "SF Pro Display", "Inter", "Segoe UI", sans-serif;
+      min-height: 100%;
       -webkit-font-smoothing: antialiased;
     }
 
-    .page-shell {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(34, 197, 94, 0.06) 0, transparent 55%),
+        radial-gradient(circle at 90% 0%, rgba(56, 189, 248, 0.08) 0, transparent 55%),
+        radial-gradient(circle at 50% 80%, rgba(129, 140, 248, 0.06) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: -1;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(26px);
-      -webkit-backdrop-filter: blur(26px);
-      background: linear-gradient(to bottom, rgba(2,6,23,0.96), rgba(2,6,23,0.92), rgba(2,6,23,0.88));
-      border-bottom: 1px solid rgba(15,23,42,0.8);
-    }
-
-    .nav-inner {
-      max-width: 1120px;
+    .page {
+      max-width: 1320px;
       margin: 0 auto;
-      padding: 14px 20px 12px;
+      padding: 28px 20px 80px;
+      box-sizing: border-box;
+    }
+
+    .micro-nav {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .brand-mark {
+    .micro-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .micro-pill {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.25), rgba(15,23,42,0.95));
-      border: 1px solid rgba(34,197,94,0.45);
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.9), 0 18px 40px rgba(22,163,74,0.35);
-    }
-
-    .brand-orb {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e 55%, #16a34a 80%);
-      box-shadow: 0 0 0 1px rgba(22,163,74,0.8), 0 0 18px rgba(22,163,74,0.66);
-    }
-
-    .brand-text-main {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.14em;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.22), rgba(15, 23, 42, 0.98));
+      box-shadow: var(--glow-keeper);
+      font-size: 11px;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 600;
+      color: #e5ffe9;
     }
 
-    .brand-text-sub {
+    .micro-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .micro-sub {
       font-size: 11px;
       color: var(--text-soft);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
     }
 
-    .nav-pills {
-      margin-left: auto;
+    .micro-links {
       display: flex;
-      align-items: center;
+      gap: 6px;
       flex-wrap: wrap;
-      gap: 8px;
     }
 
-    .nav-pill {
-      padding: 5px 11px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(148,163,184,0.45);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.92), rgba(15,23,42,0.96));
-      color: var(--text-soft);
+    .micro-link {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 5px 9px;
       font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .nav-pill span.dot {
+    .micro-link span.label {
+      position: relative;
+      z-index: 1;
+    }
+
+    .micro-link span.dot {
       width: 6px;
       height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 1px rgba(34,197,94,0.5);
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid rgba(148, 163, 184, 0.35);
     }
 
-    .nav-pill.primary {
-      border-color: rgba(34,197,94,0.7);
-      color: #bbf7d0;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.35), rgba(15,23,42,0.98));
-      box-shadow: 0 12px 40px rgba(22,163,74,0.42);
+    .micro-link:hover {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+      background: radial-gradient(circle at top, rgba(148, 163, 184, 0.35), rgba(15, 23, 42, 0.96));
     }
 
-    main {
-      flex: 1;
+    .micro-link:hover span.dot {
+      background: rgba(148, 163, 184, 0.8);
     }
 
-    .hero-shell {
-      max-width: 1120px;
-      margin: 28px auto 0;
-      padding: 0 20px 24px;
+    .micro-link.github {
+      border-color: rgba(34, 197, 94, 0.6);
+      color: #a7f3d0;
     }
 
-    .hero-topline {
-      font-size: 13px;
-      letter-spacing: 0.18em;
+    .micro-link.github span.dot {
+      background: rgba(34, 197, 94, 0.9);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .micro-link.github:hover {
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.4), rgba(15, 23, 42, 0.98));
+      color: #ecfdf5;
+    }
+
+    .header {
+      padding: 22px 22px 24px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft), var(--glow-keeper);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      border: 1px solid rgba(34, 197, 94, 0.18);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -12%;
+      width: 280px;
+      height: 280px;
+      background:
+        conic-gradient(from 210deg, rgba(34, 197, 94, 0.18), transparent 45%, transparent 60%, rgba(56, 189, 248, 0.18), transparent 88%, rgba(129, 140, 248, 0.2));
+      filter: blur(22px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .header-main {
+      max-width: 540px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--accent-secondary);
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #bbf7d0;
       margin-bottom: 8px;
     }
 
-    .hero-title-row {
+    .eyebrow span.tag {
+      border-radius: 999px;
+      padding: 3px 8px;
+      border: 1px solid rgba(52, 211, 153, 0.7);
+      background: rgba(6, 78, 59, 0.7);
+      text-shadow: 0 0 15px rgba(34, 197, 94, 0.9);
+    }
+
+    .eyebrow span.sub {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(190, 242, 100, 0.9);
+    }
+
+    .title-row {
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
+      align-items: baseline;
       gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .title-row h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #f9fafb;
+    }
+
+    .keeper-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 5px 9px;
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      background: rgba(6, 95, 70, 0.55);
+      color: #bbf7d0;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.55);
+    }
+
+    .keeper-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.55);
+    }
+
+    .header-subtitle {
+      font-size: 13px;
+      color: #d1fae5;
+      max-width: 520px;
+      line-height: 1.5;
       margin-bottom: 10px;
     }
 
-    .hero-title {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: clamp(26px, 3vw, 30px);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .hero-tagline {
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .hero-meta-row {
+    .meta-row {
       display: flex;
+      gap: 8px;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-top: 8px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
     }
 
     .meta-pill {
-      padding: 4px 10px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(148,163,184,0.4);
-      background: rgba(15,23,42,0.92);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-soft);
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 4px 8px;
+      background: rgba(15, 23, 42, 0.85);
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
-    .meta-pill strong {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .meta-pill .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .meta-pill.status-warn .dot {
-      background: var(--warn);
-    }
-
-    .meta-pill.status-error .dot {
-      background: var(--danger);
-    }
-
-    .hero-stat-summary {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .hero-stat {
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(148,163,184,0.4);
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.12), rgba(15,23,42,0.98));
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      min-width: 140px;
-    }
-
-    .hero-stat-label {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .hero-stat-value {
-      font-size: 18px;
-      font-weight: 600;
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #f9fafb;
-    }
-
-    .hero-stat-caption {
-      font-size: 11px;
+    .meta-pill span.key {
       color: var(--text-faint);
     }
 
-    .content-shell {
-      max-width: 1120px;
-      margin: 4px auto 40px;
-      padding: 0 20px 32px;
+    .meta-pill span.value {
+      color: #e5e7eb;
     }
 
-    .content-grid {
+    .header-right {
+      min-width: 220px;
+      max-width: 280px;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
+      padding: 12px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(129, 140, 248, 0.13), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .header-right-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .right-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+
+    .status-total {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .status-tag {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-soft);
+    }
+
+    .status-bar {
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      overflow: hidden;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .status-bar-fill {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #22c55e, #38bdf8, #a855f7);
+      width: 100%;
+      opacity: 0.65;
+    }
+
+    .status-footnote {
+      font-size: 11px;
+      color: var(--text-faint);
+      line-height: 1.5;
+    }
+
+    .status-footnote strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .main-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
       gap: 18px;
+      align-items: flex-start;
     }
 
-    @media (max-width: 880px) {
-      .content-grid {
-        grid-template-columns: minmax(0,1fr);
+    @media (max-width: 960px) {
+      .main-layout {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
     .panel {
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.98), rgba(15,23,42,1));
       border-radius: 24px;
-      border: 1px solid rgba(15,23,42,1);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.35);
       box-shadow: var(--shadow-soft);
-      padding: 18px 18px 16px;
       position: relative;
       overflow: hidden;
     }
@@ -295,834 +440,720 @@
       content: "";
       position: absolute;
       inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.06), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.06), transparent 60%);
+      opacity: 0.7;
       pointer-events: none;
-      border-radius: inherit;
-      border: 1px solid rgba(148,163,184,0.26);
-      mix-blend-mode: screen;
-      opacity: 0.65;
     }
 
-    .panel-header {
+    .panel-inner {
+      position: relative;
+      z-index: 1;
+      padding: 18px 20px 18px;
+    }
+
+    .panel-header-row {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
       gap: 8px;
       margin-bottom: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .panel-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .panel-label {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-soft);
     }
 
     .panel-title {
-      font-size: 13px;
-      letter-spacing: 0.18em;
+      font-size: 16px;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text-main);
+      color: #e5e7eb;
     }
 
     .panel-subtitle {
       font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-      margin-top: 6px;
-    }
-
-    .pill {
-      padding: 3px 8px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(55,65,81,0.9);
-      background: rgba(15,23,42,0.96);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
       color: var(--text-faint);
     }
 
-    .pill.is-live {
-      border-color: rgba(34,197,94,0.7);
-      color: #bbf7d0;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.28), rgba(15,23,42,0.96));
+    .panel-tag {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
     }
 
-    .pill.is-optional {
-      border-style: dashed;
-    }
-
-    .structure-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
-      margin-top: 10px;
     }
 
-    @media (max-width: 720px) {
-      .structure-grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 520px) {
-      .structure-grid {
-        grid-template-columns: minmax(0,1fr);
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    .structure-card {
-      position: relative;
+    .stat-card {
       border-radius: 18px;
-      padding: 10px 11px 11px;
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
-      border: 1px solid rgba(30,64,175,0.65);
-      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background:
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.07), rgba(15, 23, 42, 0.98));
+      padding: 12px 12px 12px;
+      cursor: pointer;
+      position: relative;
       overflow: hidden;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out,
+        background 0.12s ease-out;
     }
 
-    .structure-card::before {
+    .stat-card::before {
       content: "";
       position: absolute;
-      inset: 0;
-      pointer-events: none;
+      inset: -1px;
+      border-radius: inherit;
+      border: 1px solid rgba(34, 197, 94, 0.15);
       opacity: 0;
+      transition: opacity 0.12s ease-out;
+      pointer-events: none;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.9);
+      border-color: rgba(34, 197, 94, 0.7);
       background:
-        radial-gradient(circle at top left, rgba(34,197,94,0.32), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(56,189,248,0.26), transparent 55%);
-      transition: opacity var(--transition-fast);
+        radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), rgba(15, 23, 42, 0.98));
     }
 
-    .structure-card:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 24px 70px rgba(15,23,42,0.95);
-      border-color: rgba(56,189,248,0.85);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.85), rgba(15,23,42,0.96));
-    }
-
-    .structure-card:hover::before {
+    .stat-card:hover::before {
       opacity: 1;
     }
 
-    .structure-label-row {
+    .stat-top {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 6px;
       align-items: baseline;
       gap: 6px;
     }
 
-    .structure-name {
-      font-size: 11px;
-      text-transform: uppercase;
+    .stat-label-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      max-width: 70%;
+    }
+
+    .stat-name {
+      font-size: 13px;
       letter-spacing: 0.18em;
-      color: var(--text-soft);
-    }
-
-    .structure-tag {
-      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-faint);
-      white-space: nowrap;
+      color: var(--text-main);
     }
 
-    .structure-count {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .structure-caption {
+    .stat-caption {
       font-size: 11px;
       color: var(--text-faint);
     }
 
-    .structure-footer {
-      margin-top: 4px;
-      font-size: 10px;
-      color: var(--text-faint);
+    .stat-value {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bbf7d0;
+    }
+
+    .stat-foot {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 6px;
-    }
-
-    .structure-footer span {
-      opacity: 0.9;
-    }
-
-    .structure-footer span strong {
-      font-weight: 500;
+      font-size: 10px;
       color: var(--text-soft);
+      margin-top: 4px;
     }
 
-    .structure-footer .hint {
-      text-align: right;
+    .stat-tag {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 2px 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
     }
 
-    .error-banner {
-      display: none;
-      margin-top: 10px;
-      border-radius: 14px;
-      padding: 9px 10px;
-      border: 1px solid rgba(248,113,113,0.7);
-      background: rgba(127,29,29,0.7);
-      font-size: 11px;
-      color: #fee2e2;
+    .stat-link-label {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 10px;
+      color: rgba(190, 242, 100, 0.9);
     }
 
-    .error-banner.visible {
-      display: block;
+    .stat-link-label span {
+      opacity: 0.7;
     }
 
     .echo-list {
-      margin-top: 10px;
-      border-radius: 16px;
-      border: 1px solid rgba(31,41,55,1);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
-      max-height: 360px;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
-    }
-
-    .echo-list-header {
-      padding: 8px 10px;
-      border-bottom: 1px solid rgba(31,41,55,1);
-      font-size: 11px;
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-      color: var(--text-soft);
-    }
-
-    .echo-stream-meta {
-      font-size: 10px;
-      color: var(--text-faint);
-    }
-
-    .echo-scroll {
+      gap: 8px;
+      margin-top: 6px;
+      max-height: 320px;
       overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(75,85,99,0.9) rgba(15,23,42,1);
+      padding-right: 4px;
     }
 
-    .echo-scroll::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .echo-scroll::-webkit-scrollbar-thumb {
-      background: rgba(75,85,99,0.9);
-      border-radius: 999px;
-    }
-
-    .echo-row {
-      padding: 8px 10px 7px;
-      border-bottom: 1px solid rgba(31,41,55,1);
+    .echo-item {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.1), rgba(15, 23, 42, 0.98));
+      padding: 8px 10px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      font-size: 11px;
+      gap: 4px;
     }
 
-    .echo-row:last-child {
-      border-bottom: none;
-    }
-
-    .echo-label-row {
+    .echo-line {
       display: flex;
       justify-content: space-between;
-      gap: 6px;
       align-items: baseline;
+      gap: 6px;
     }
 
     .echo-title {
-      font-size: 11px;
-      font-weight: 500;
+      font-size: 13px;
       color: #e5e7eb;
+      max-width: 70%;
     }
 
-    .echo-stamp {
+    .echo-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .echo-title a:hover {
+      text-decoration: underline;
+    }
+
+    .echo-meta {
+      text-align: right;
       font-size: 10px;
-      color: var(--text-faint);
+      color: var(--text-soft);
+    }
+
+    .echo-tag-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-soft);
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .echo-tag {
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      padding: 2px 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #bae6fd;
+    }
+
+    .echo-type {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(191, 219, 254, 0.9);
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 12px 8px 0;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .footer span {
       white-space: nowrap;
     }
 
-    .echo-path {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 10px;
-      color: var(--accent-secondary);
-      opacity: 0.9;
-      word-break: break-all;
+    @media (max-width: 640px) {
+      .header {
+        padding: 18px 14px 18px;
+        border-radius: 20px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      .header-right {
+        width: 100%;
+        max-width: none;
+      }
+
+      .micro-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
-    .echo-tags {
-      margin-top: 1px;
-      font-size: 10px;
-      color: var(--text-faint);
+    .error-text {
+      color: #f97316;
+      font-size: 11px;
+      margin-top: 8px;
     }
 
-    footer {
-      max-width: 1120px;
-      margin: 0 auto 20px;
-      padding: 0 20px;
-      font-size: 10px;
-      color: var(--text-faint);
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-    }
-
-    footer span:last-child {
-      text-align: right;
+    .pill-green {
+      color: #a7f3d0;
     }
   </style>
 </head>
 <body>
-  <div class="page-shell">
-    <header>
-      <div class="nav-inner">
-        <div class="brand-mark">
-          <div class="brand-orb"></div>
-          <div>
-            <div class="brand-text-main">Acacia Garden</div>
-            <div class="brand-text-sub">Aeon Console · Root Deck</div>
+  <div class="page">
+    <div class="micro-nav">
+      <div class="micro-left">
+        <div class="micro-pill">
+          <span class="dot"></span>
+          <span>ACACIA GARDEN • ROOT DECK</span>
+        </div>
+        <div class="micro-sub">
+          One nav everywhere. Aeon = live Garden snapshot viewer; Deep Docs keep their own orbit.
+        </div>
+      </div>
+      <div class="micro-links">
+        <a href="index.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Home</span>
+        </a>
+        <a href="docs_urls.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Docs URLs</span>
+        </a>
+        <a href="library.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Library</span>
+        </a>
+        <a href="Codex.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Chambers</span>
+        </a>
+        <a href="Echoes.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Echoes</span>
+        </a>
+        <a href="dashboard.html" class="micro-link" style="border-color: rgba(34, 197, 94, 0.7); color: #a7f3d0;">
+          <span class="dot" style="background: rgba(34,197,94,0.9); box-shadow: 0 0 0 3px rgba(34,197,94,0.35);"></span>
+          <span class="label">Dashboard</span>
+        </a>
+        <a href="map.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Map</span>
+        </a>
+        <a href="Keeper.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Keeper</span>
+        </a>
+        <a href="inbox.html" class="micro-link">
+          <span class="dot"></span>
+          <span class="label">Inbox</span>
+        </a>
+        <a href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" class="micro-link github" target="_blank">
+          <span class="dot"></span>
+          <span class="label">GitHub Repo</span>
+        </a>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-main">
+          <div class="eyebrow">
+            <span class="tag">HKX277206 • GAIA SEED INDEX</span>
+            <span class="sub">Aeon snapshot viewer</span>
+          </div>
+          <div class="title-row">
+            <h1>AEON CONSOLE — ROOT DASHBOARD</h1>
+            <div class="keeper-pill">
+              <span class="dot"></span>
+              <span>Keeper • HKX277206</span>
+            </div>
+          </div>
+          <div class="header-subtitle">
+            Live Garden structure tallies, sourced from the Aeon state and Echo index.  
+            Click any structure card to step into that region of the Codex.
+          </div>
+          <div class="meta-row">
+            <div class="meta-pill">
+              <span class="key">Source</span>
+              <span class="value">Aeon State • Echo Index</span>
+            </div>
+            <div class="meta-pill">
+              <span class="key">Mode</span>
+              <span class="value">Live Snapshot</span>
+            </div>
+            <div class="meta-pill">
+              <span class="key">GardenOS</span>
+              <span class="value">Worldarchive</span>
+            </div>
           </div>
         </div>
-        <div class="nav-pills">
-          <a href="index.html" class="nav-pill">
-            <span class="dot"></span>
-            <span>Garden Root</span>
-          </a>
-          <a href="docs/index.html" class="nav-pill">Docs · Worldarchive</a>
-          <a href="docs/map.html" class="nav-pill">Garden Map</a>
-          <a href="docs/dashboard.html" class="nav-pill">Legacy Aeon View</a>
-          <a href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" class="nav-pill primary" target="_blank" rel="noopener">GitHub Repo</a>
-        </div>
+
+        <aside class="header-right">
+          <div class="header-right-inner">
+            <div class="right-label">Gaia State • Total Structures</div>
+            <div class="status-row">
+              <div class="status-total" id="total-structures">—</div>
+              <div class="status-tag">Aeon • Live Feed</div>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill"></div>
+            </div>
+            <div class="status-footnote">
+              Snapshot from the <strong>Aeon state file</strong> and <strong>Echo machine index</strong>.  
+              Echo density is updated dynamically as the Garden grows.
+            </div>
+          </div>
+        </aside>
       </div>
     </header>
 
-    <main>
-      <section class="hero-shell">
-        <div class="hero-topline">HKX277206 · Gaia Seed Index</div>
-        <div class="hero-title-row">
-          <div class="hero-title">Aeon Console — Root Dashboard</div>
-          <div class="hero-tagline">Live Garden structure tallies, sourced from <code>STATUS.json</code> at the Garden root.</div>
-        </div>
-        <div class="hero-meta-row">
-          <div class="meta-pill">
-            <span class="dot"></span>
-            <span>Keeper · <strong>HKX277206</strong></span>
+    <main class="main-layout">
+      <section class="panel">
+        <div class="panel-inner">
+          <div class="panel-header-row">
+            <div class="panel-title-block">
+              <div class="panel-label">Garden State • Structure Count</div>
+              <div class="panel-title">Chambers, Echoes, Novellas & Cycles</div>
+              <div class="panel-subtitle">
+                Totals for the major narrative structures drawn from <span class="pill-green">Aeon state</span>.
+              </div>
+            </div>
+            <div class="panel-tag">Status • Live Tally</div>
           </div>
-          <div class="meta-pill" id="status-source-pill">
-            <span class="dot"></span>
-            <span>Source · <strong id="status-source-label">STATUS.json</strong></span>
-          </div>
-          <div class="meta-pill" id="status-generated-pill">
-            <span class="dot"></span>
-            <span>Generated · <strong id="status-generated-label">Pending</strong></span>
-          </div>
-        </div>
 
-        <div class="hero-stat-summary">
-          <div class="hero-stat">
-            <div class="hero-stat-label">Gaia State · Total Structures</div>
-            <div class="hero-stat-value" id="total-structures">—</div>
-            <div class="hero-stat-caption">Sum of all Chambers, Echoes, Novellas, Vaults, Blooms, Orchards, Laws & Cycles.</div>
+          <div class="grid">
+            <div class="stat-card" data-href="Codex.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Chambers Canon</div>
+                  <div class="stat-caption">Mythic / technical rooms where the Garden remembers itself.</div>
+                </div>
+                <div class="stat-value" id="chambers-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Chambers</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="Echoes.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Echoes Routes & Outputs</div>
+                  <div class="stat-caption">Reflections, inversions & sensory notes from the Garden.</div>
+                </div>
+                <div class="stat-value" id="echoes-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Echoes</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Novellas/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Novellas Library</div>
+                  <div class="stat-caption">Longform Library volumes • thirty canon books form backbone memory.</div>
+                </div>
+                <div class="stat-value" id="novellas-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Novellas</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Blooms/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Blooms Mythic Bloom</div>
+                  <div class="stat-caption">Petal-level scripts • public facing memory flowers.</div>
+                </div>
+                <div class="stat-value" id="blooms-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Blooms</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Orchards/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Orchards Gaialseed</div>
+                  <div class="stat-caption">Spatial clusters of Seeds • groupings of Gaialseed constellations.</div>
+                </div>
+                <div class="stat-value" id="orchards-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Orchards</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Laws/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Laws Governing Rule</div>
+                  <div class="stat-caption">Convenants & structural rules within which the Garden remains stable.</div>
+                </div>
+                <div class="stat-value" id="laws-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Laws</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Vaults/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Vaults Deep Storage</div>
+                  <div class="stat-caption">Aeon vaults & long memory notes that keep deep structures safe.</div>
+                </div>
+                <div class="stat-value" id="vaults-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Vaults</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Archives/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Archives Historic</div>
+                  <div class="stat-caption">Cold shelves of prior eras • rarely disturbed, always remembered.</div>
+                </div>
+                <div class="stat-value" id="archives-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Archives</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
+
+            <div class="stat-card" data-href="docs/Cycles/index.html">
+              <div class="stat-top">
+                <div class="stat-label-block">
+                  <div class="stat-name">Cycles Eras</div>
+                  <div class="stat-caption">Epoch-level arcs • even stopped cycles count toward the structure total.</div>
+                </div>
+                <div class="stat-value" id="cycles-count">—</div>
+              </div>
+              <div class="stat-foot">
+                <div class="stat-tag">Cycles</div>
+                <div class="stat-link-label"><span>Open</span> →</div>
+              </div>
+            </div>
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-label">Echo Density</div>
-            <div class="hero-stat-value" id="echo-density">—</div>
-            <div class="hero-stat-caption">Echo documents currently tracked by the machine index.</div>
-          </div>
+          <div id="state-error" class="error-text" style="display:none;"></div>
         </div>
       </section>
 
-      <section class="content-shell">
-        <div class="content-grid">
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Garden State · Structure Count</div>
-                <div class="panel-subtitle">Chambers, Echoes, Novellas & more · snapshot from the Garden Lore helper.</div>
-              </div>
-              <div class="pill-row">
-                <div class="pill is-live">Status · Live Tally</div>
-                <div class="pill">STATUS.json</div>
+      <section class="panel">
+        <div class="panel-inner">
+          <div class="panel-header-row">
+            <div class="panel-title-block">
+              <div class="panel-label">Echo Growth • Latest Signals</div>
+              <div class="panel-title">Latest Echo routes</div>
+              <div class="panel-subtitle">
+                Sorted by most recent Echo timestamp. Uses the <span class="pill-green">machine index</span> from tools.
               </div>
             </div>
-
-            <div id="status-error" class="error-banner">
-              Error loading <code>STATUS.json</code>. If the file exists at the repository root (or in a future <code>STATE/</code> folder), the next Garden Lore helper run will refresh this console automatically.
-            </div>
-
-            <div class="structure-grid" id="structure-grid">
-              <a class="structure-card" href="docs/Chambers/index.html" data-structure="chambers">
-                <div class="structure-label-row">
-                  <div class="structure-name">Chambers</div>
-                  <div class="structure-tag">Canonical texts</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Mythic / technical anchor rooms where the Garden remembers itself.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Chambers/</span>
-                  <span class="hint">Tap to open the Chamber index.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Echoes/index.html" data-structure="echoes">
-                <div class="structure-label-row">
-                  <div class="structure-name">Echoes</div>
-                  <div class="structure-tag">Routes & outputs</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Reflections, inversions & sensory notes from the Garden.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Echoes/</span>
-                  <span class="hint">Echo index & echo routes.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Cycles/index.html" data-structure="cycles">
-                <div class="structure-label-row">
-                  <div class="structure-name">Cycles</div>
-                  <div class="structure-tag">Era arcs</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Epoch-level arcs · even stopped cycles count toward the structure total.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Cycles/</span>
-                  <span class="hint">Cycles can sleep without losing their place.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Blooms/index.html" data-structure="blooms">
-                <div class="structure-label-row">
-                  <div class="structure-name">Blooms</div>
-                  <div class="structure-tag">Mythic blossoms</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Petal-level growth scripts · where quiet ideas flower in public.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Blooms/</span>
-                  <span class="hint">Mapped by the Lore helper.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Orchards/index.html" data-structure="orchards">
-                <div class="structure-label-row">
-                  <div class="structure-name">Orchards</div>
-                  <div class="structure-tag">GaiaSeeds</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Spatial clusters of Seeds · groupings of GaiaSeed constellations.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Orchards/</span>
-                  <span class="hint">Multi-seed arrangements of relief & growth.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Laws/index.html" data-structure="laws">
-                <div class="structure-label-row">
-                  <div class="structure-name">Laws</div>
-                  <div class="structure-tag">Governing rules</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Covenants and structural rules under which the Garden remains sovereign.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Laws/</span>
-                  <span class="hint">Laws will bloom into this count as they are written.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Vaults/index.html" data-structure="vaults">
-                <div class="structure-label-row">
-                  <div class="structure-name">Vaults</div>
-                  <div class="structure-tag">Deep storage</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Aeon vaults & long-memory nodes that keep cold storage structures safe.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Vaults/</span>
-                  <span class="hint">Snapshot counts only · live logs can evolve separately.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Novellas/index.html" data-structure="novellas">
-                <div class="structure-label-row">
-                  <div class="structure-name">Novellas</div>
-                  <div class="structure-tag">Library · Books I–XXX</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Longform Library volumes · thirty canon books that hold the backbone narrative.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Novellas/</span>
-                  <span class="hint">Library view and book index.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Archives/index.html" data-structure="archives">
-                <div class="structure-label-row">
-                  <div class="structure-name">Archives</div>
-                  <div class="structure-tag">Historic shelves</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Cold shelves of prior eras · rarely disturbed, always remembered.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Archives/</span>
-                  <span class="hint">Index of deep archive entries.</span>
-                </div>
-              </a>
-            </div>
+            <div class="panel-tag">Echo Index</div>
           </div>
 
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Echo Growth · Latest Signals</div>
-                <div class="panel-subtitle">Most recent Echo routes and sensory notes from the Garden.</div>
-              </div>
-              <div class="pill-row">
-                <div class="pill is-live">Echo Index</div>
-                <div class="pill is-optional">tools/machine-index.json</div>
-              </div>
-            </div>
-
-            <div id="echo-error" class="error-banner">
-              Echo index not found or unreadable. This panel is optional — the Garden remains valid even if the machine index is offline.
-            </div>
-
-            <div class="echo-list">
-              <div class="echo-list-header">
-                <div>Echo Stream</div>
-                <div class="echo-stream-meta" id="echo-stream-meta">Waiting for machine index…</div>
-              </div>
-              <div class="echo-scroll" id="echo-scroll">
-                <!-- Rows injected by script -->
-              </div>
-            </div>
-          </div>
+          <div class="echo-list" id="echo-list"></div>
+          <div id="echo-error" class="error-text" style="display:none;"></div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span>Aeon Console · Root dashboard view · STATUS.json as single source of truth.</span>
-      <span>Keeper HKX277206 · Garden remains sovereign.</span>
+    <footer class="footer">
+      <span>• Aeon Console • Garden lives under the Triad • Keeper HKX277206</span>
+      <span id="generated-at">Awaiting Aeon timestamp…</span>
     </footer>
   </div>
 
-<script>
-  // STATUS.json lives at root. Others are future / fallback.
-  const STATUS_CANDIDATES = [
-    "STATUS.json",
-    "status.json",
-    "STATE/STATUS.json",
-    "STATE/status.json",
-    "STATE/STATUS.inject.json",
-    "STATE/STATE_STATUS.json"
-  ];
+  <script>
+    const BASE_URL = "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/";
+    const AEON_STATE_URL = BASE_URL + "docs/STATE/aeon_state.json";
+    const ECHO_INDEX_URL = BASE_URL + "docs/tools/machine-index.json";
 
-  const MACHINE_INDEX_CANDIDATES = [
-    "tools/machine-index.json",
-    "tools/machine_index.json",
-    "machine-index.json",
-    "machine_index.json",
-    "STATE/machine-index.inject.json"
-  ];
-
-  function safeNumber(value, fallback = 0) {
-    if (typeof value === "number" && !isNaN(value)) return value;
-    if (typeof value === "string") {
-      const n = Number(value.trim());
-      if (!isNaN(n)) return n;
+    function safeGet(obj, path, fallback = 0) {
+      return path.reduce((acc, key) => (acc && acc[key] != null ? acc[key] : null), obj) ?? fallback;
     }
-    return fallback;
-  }
 
-  function get(obj, path, fallback = null) {
-    try {
-      let cur = obj;
-      for (const key of path) {
-        if (!cur || typeof cur !== "object" || !(key in cur)) {
-          return fallback;
-        }
-        cur = cur[key];
-      }
-      return cur == null ? fallback : cur;
-    } catch {
-      return fallback;
+    function setText(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
     }
-  }
 
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
-
-  function showError(id, msg) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    if (msg) el.innerHTML = msg;
-    el.classList.add("visible");
-  }
-
-  function hideError(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.remove("visible");
-  }
-
-  async function fetchFirstJson(candidates) {
-    const errors = [];
-    for (const url of candidates) {
+    async function loadAeonState() {
       try {
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) {
-          errors.push(url + " -> " + res.status);
-          continue;
-        }
+        const res = await fetch(AEON_STATE_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
         const data = await res.json();
-        return { url, data };
+
+        const structures = safeGet(data, ["gaia_state", "structures"], {});
+        const chambers = structures.chambers ?? 0;
+        const echoes = structures.echoes ?? 0;
+        const novellas = structures.novellas ?? 0;
+        const blooms = structures.blooms ?? 0;
+        const orchards = structures.orchards ?? 0;
+        const laws = structures.laws ?? 0;
+        const vaults = structures.vaults ?? 0;
+        const archives = structures.archives ?? 0;
+        const cycles = structures.cycles ?? 0;
+
+        const total =
+          chambers +
+          echoes +
+          novellas +
+          blooms +
+          orchards +
+          laws +
+          vaults +
+          archives +
+          cycles;
+
+        setText("chambers-count", chambers);
+        setText("echoes-count", echoes);
+        setText("novellas-count", novellas);
+        setText("blooms-count", blooms);
+        setText("orchards-count", orchards);
+        setText("laws-count", laws);
+        setText("vaults-count", vaults);
+        setText("archives-count", archives);
+        setText("cycles-count", cycles);
+        setText("total-structures", total || "0");
+
+        const generated = safeGet(data, ["meta", "generated_at"], null);
+        if (generated) {
+          setText("generated-at", "Aeon state • generated " + generated);
+        } else {
+          setText("generated-at", "Aeon state • timestamp not available");
+        }
       } catch (err) {
-        errors.push(url + " -> " + err.message);
+        console.error("Failed to load Aeon state:", err);
+        const el = document.getElementById("state-error");
+        if (el) {
+          el.style.display = "block";
+          el.textContent = "Failed to load Aeon state. The snapshot file might be missing or temporarily unavailable.";
+        }
       }
     }
-    const error = new Error("All candidates failed: " + errors.join("; "));
-    error._details = errors;
-    throw error;
-  }
 
-  function resolveStructureCounts(status) {
-    const structuresRoot =
-      get(status, ["structures"]) ||
-      get(status, ["gaia_state", "structures"]) ||
-      status;
+    async function loadEchoIndex() {
+      try {
+        const res = await fetch(ECHO_INDEX_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
 
-    function readCount(name) {
-      const node = get(structuresRoot, [name]) || get(structuresRoot, [name.toUpperCase()]);
-      if (!node || typeof node !== "object") {
-        return safeNumber(node, 0);
-      }
-      if ("count" in node) return safeNumber(node.count, 0);
-      if ("total" in node) return safeNumber(node.total, 0);
-      if ("value" in node) return safeNumber(node.value, 0);
-      return 0;
-    }
+        const echoes = Array.isArray(data.echoes) ? data.echoes : [];
+        echoes.sort((a, b) => {
+          const ta = a.timestamp || "";
+          const tb = b.timestamp || "";
+          return tb.localeCompare(ta);
+        });
 
-    const chambers = readCount("chambers");
-    const echoes   = readCount("echoes");
-    const cycles   = readCount("cycles");
-    const blooms   = readCount("blooms");
-    const orchards = readCount("orchards");
-    const laws     = readCount("laws");
-    const vaults   = readCount("vaults");
-    const novellas = readCount("novellas");
-    const archives = readCount("archives");
+        const latest = echoes.slice(0, 5);
+        const container = document.getElementById("echo-list");
+        if (!container) return;
 
-    const total = chambers + echoes + cycles + blooms + orchards + laws + vaults + novellas + archives;
+        container.innerHTML = "";
+        latest.forEach((item, index) => {
+          const echoTitle = item.title || "Echo " + (index + 1);
+          const path = item.path || item.url || "";
+          const type = item.type || "ECHO";
+          const ts = item.timestamp || "";
+          const route = path.startsWith("docs/") ? path : "docs/" + path;
 
-    return {
-      total,
-      chambers,
-      echoes,
-      cycles,
-      blooms,
-      orchards,
-      laws,
-      vaults,
-      novellas,
-      archives
-    };
-  }
-
-  function applyStructureCounts(counts) {
-    setText("total-structures", counts.total.toLocaleString());
-
-    const mapping = {
-      chambers: "chambers",
-      echoes: "echoes",
-      cycles: "cycles",
-      blooms: "blooms",
-      orchards: "orchards",
-      laws: "laws",
-      vaults: "vaults",
-      novellas: "novellas",
-      archives: "archives"
-    };
-
-    for (const [key, structure] of Object.entries(mapping)) {
-      const card = document.querySelector('.structure-card[data-structure="' + structure + '"] [data-count]');
-      if (card) {
-        card.textContent = (counts[key] ?? 0).toLocaleString();
+          const div = document.createElement("div");
+          div.className = "echo-item";
+          div.innerHTML = `
+            <div class="echo-line">
+              <div class="echo-title">
+                <a href="${BASE_URL}${route}" target="_blank" rel="noopener noreferrer">${echoTitle}</a>
+              </div>
+              <div class="echo-meta">
+                <div>${ts}</div>
+                <div>${route}</div>
+              </div>
+            </div>
+            <div class="echo-tag-row">
+              <div class="echo-tag">Echo route • static snapshot only — live workflows optional.</div>
+              <div class="echo-type">${type}</div>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      } catch (err) {
+        console.error("Failed to load Echo index:", err);
+        const el = document.getElementById("echo-error");
+        if (el) {
+          el.style.display = "block";
+          el.textContent = "Failed to load Echo machine index. Echo routes may be offline temporarily.";
+        }
       }
     }
-  }
 
-  function resolveGeneratedLabel(status) {
-    const candidates = [
-      get(status, ["generated", "iso"]),
-      get(status, ["generated", "timestamp"]),
-      get(status, ["generated_utc"]),
-      get(status, ["meta", "generated"]),
-      get(status, ["generated_at"]),
-      get(status, ["generated"])
-    ];
-    const label = candidates.find(v => typeof v === "string" && v.trim().length) || null;
-    return label || "no timestamp recorded";
-  }
-
-  function mapEchoEntries(indexJson) {
-    if (!indexJson) return [];
-    const raw =
-      get(indexJson, ["index"]) ||
-      get(indexJson, ["echoes"]) ||
-      get(indexJson, ["routes"]) ||
-      get(indexJson, ["entries"]) ||
-      [];
-
-    const arr = Array.isArray(raw) ? raw : [];
-    return arr.slice(0, 24).map((entry, i) => {
-      if (typeof entry === "string") {
-        return {
-          title: "Echo route " + (i + 1),
-          path: entry,
-          stamp: ""
-        };
-      }
-      const title =
-        get(entry, ["title"]) ||
-        get(entry, ["name"]) ||
-        get(entry, ["label"]) ||
-        get(entry, ["id"]) ||
-        null;
-
-      const path =
-        get(entry, ["route"]) ||
-        get(entry, ["path"]) ||
-        get(entry, ["file"]) ||
-        get(entry, ["href"]) ||
-        get(entry, ["url"]) ||
-        null;
-
-      const stamp =
-        get(entry, ["generated"]) ||
-        get(entry, ["generated_utc"]) ||
-        get(entry, ["timestamp"]) ||
-        get(entry, ["last_modified"]) ||
-        "";
-
-      const safeTitle = (title || (path ? path.split("/").slice(-1)[0] : "Echo route " + (i + 1)));
-      const safePath = path || "—";
-      const safeStamp = stamp || "";
-
-      return {
-        title: safeTitle,
-        path: safePath,
-        stamp: safeStamp
-      };
-    });
-  }
-
-  function renderEchoList(entries) {
-    const container = document.getElementById("echo-scroll");
-    const meta = document.getElementById("echo-stream-meta");
-    if (!container || !meta) return;
-
-    container.innerHTML = "";
-
-    if (!entries.length) {
-      meta.textContent = "Machine index loaded · no Echo routes listed yet.";
-      const row = document.createElement("div");
-      row.className = "echo-row";
-      row.innerHTML = "<div class=\"echo-title\">No Echo entries indexed yet.</div><div class=\"echo-path\">When the machine index grows, the latest Echo routes will stream here.</div>";
-      container.appendChild(row);
-      return;
+    function wireCards() {
+      document.querySelectorAll(".stat-card[data-href]").forEach(card => {
+        const href = card.getAttribute("data-href");
+        if (!href) return;
+        card.addEventListener("click", () => {
+          window.location.href = href;
+        });
+      });
     }
 
-    meta.textContent = entries.length + " Echo routes wired from machine index.";
-
-    for (const entry of entries) {
-      const row = document.createElement("div");
-      row.className = "echo-row";
-
-      const labelRow = document.createElement("div");
-      labelRow.className = "echo-label-row";
-
-      const titleEl = document.createElement("div");
-      titleEl.className = "echo-title";
-      titleEl.textContent = entry.title;
-
-      const stampEl = document.createElement("div");
-      stampEl.className = "echo-stamp";
-      stampEl.textContent = entry.stamp;
-
-      labelRow.appendChild(titleEl);
-      labelRow.appendChild(stampEl);
-
-      const pathEl = document.createElement("div");
-      pathEl.className = "echo-path";
-      pathEl.textContent = entry.path;
-
-      const tagsEl = document.createElement("div");
-      tagsEl.className = "echo-tags";
-      tagsEl.textContent = "Echo route · static snapshot only — live workflows optional.";
-
-      row.appendChild(labelRow);
-      row.appendChild(pathEl);
-      row.appendChild(tagsEl);
-
-      container.appendChild(row);
-    }
-  }
-
-  async function bootstrap() {
-    try {
-      hideError("status-error");
-      const statusResult = await fetchFirstJson(STATUS_CANDIDATES);
-      const { url, data: status } = statusResult;
-
-      const counts = resolveStructureCounts(status);
-      applyStructureCounts(counts);
-
-      setText("status-source-label", url);
-      setText("status-generated-label", resolveGeneratedLabel(status));
-
-      // Echo density default from STATUS, overwritten if machine index present
-      setText("echo-density", counts.echoes.toLocaleString());
-    } catch (err) {
-      console.warn("[Aeon Console] Status load failed:", err);
-      showError("status-error");
-      setText("status-generated-label", "status file not found");
-      setText("total-structures", "—");
-    }
-
-    try {
-      hideError("echo-error");
-      const machineResult = await fetchFirstJson(MACHINE_INDEX_CANDIDATES);
-      const { data: indexJson } = machineResult;
-
-      const entries = mapEchoEntries(indexJson);
-      renderEchoList(entries);
-
-      const echoCount = entries.length;
-      if (echoCount > 0) {
-        setText("echo-density", echoCount.toLocaleString());
-      }
-    } catch (err) {
-      console.warn("[Aeon Console] Machine index load failed:", err);
-      showError("echo-error");
-      renderEchoList([]);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", bootstrap);
-</script>
+    loadAeonState();
+    loadEchoIndex();
+    wireCards();
+  </script>
 </body>
 </html>
