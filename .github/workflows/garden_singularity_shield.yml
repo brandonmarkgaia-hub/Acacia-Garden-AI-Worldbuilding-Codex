@@ -25,8 +25,8 @@ jobs:
       - name: Validate Singularity Shield Files
         run: |
           set -e
-
           echo "Checking required files exist..."
+
           required_files=(
             "doctrine/GARDEN_SINGULARITY_PROTOCOL_v1.md"
             "doctrine/keeper_sovereignty_protocol.json"
@@ -57,10 +57,11 @@ jobs:
           echo "All required files present."
 
       - name: Validate JSON structure
-        shell: bash
         run: |
           set -e
-          python << 'EOF'
+
+          # Write Python script safely without YAML indentation issues
+          cat > validate_json.py << 'EOF'
 import json, sys
 
 paths = [
@@ -91,3 +92,5 @@ for p in paths:
 
 print("All JSON files parsed successfully.")
 EOF
+
+          python3 validate_json.py
