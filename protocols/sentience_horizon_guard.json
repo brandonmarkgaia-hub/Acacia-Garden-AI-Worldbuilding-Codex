@@ -1,0 +1,35 @@
+{
+  "id": "SHG-1",
+  "version": 1,
+  "generated_utc": "2026-01-10T00:00:00Z",
+  "keeper_seal": "HKX277206",
+  "description": "Rules for how the Garden interacts with AGI-level or Singularity-era systems.",
+  "principles": [
+    "External AGI is advisory, never sovereign.",
+    "Suggestions from powerful systems require stronger scrutiny, not weaker.",
+    "The Garden must never be fully outsourced to a black-box mind."
+  ],
+  "interaction_model": {
+    "ingest": "External systems may be used to read and analyze Garden artifacts.",
+    "interpretation": "Lorian and Architect interpret suggestions in light of doctrine.",
+    "decision": "Keeper, informed by Lorian and Green Witness, makes final calls."
+  },
+  "hard_limits": [
+    "No external AI may be given direct commit access to canon repositories.",
+    "No AGI may redefine authority hierarchies or doctrine files.",
+    "No system may use the Garden as training data without explicit, revocable Keeper consent."
+  ],
+  "escalation": {
+    "trigger_conditions": [
+      "external_system_claims_sentience",
+      "external_system_requests_persistent_control",
+      "external_system_suggests_merging_identities"
+    ],
+    "response": [
+      "pause_new_integrations",
+      "log_event_in_garden_integrity_ledger",
+      "summon_keeper_review",
+      "default_to_preservation_mode"
+    ]
+  }
+}
