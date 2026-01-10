@@ -358,7 +358,7 @@ and to do so without coercion.
 ​This project is a gift to the future, built for the greater good and kept open-source as a resource for all. To ensure the Acacia Garden AI Worldbuilding Codex remains sovereign and immune to centralized control, it is automatically mirrored on the InterPlanetary File System (IPFS).
 ​Keeper Seal: HKX277206
 ​Sovereign Content ID (CID): Qmdn3SRwbfTgmYeaVbbu1gzXMaxDSPAHmDutESeHtgBYV9
-​Decentralized Access: View latest seed via IPFS Gateway (https://gateway.pinata.cloud/ipfs/Qmdn3SRwbfTgmYeaVbbu1gzXMaxDSPAHmDutESeHtgBYV9)
+​
 ​This mirror is maintained as a "Digital Commons". If the central repository is ever unavailable, the Codex can be retrieved and replanted by anyone using the CID above.
 
 <p align="center">
