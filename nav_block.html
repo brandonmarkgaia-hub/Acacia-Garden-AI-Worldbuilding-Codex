@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ACACIA · TRIAD · NAV BLOCK</title>
   <style>
-    :root{color-scheme:dark}
-    body{margin:0;background:#050812;color:#d7deff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    h1{margin:0 0 10px 0;letter-spacing:.2em;font-size:16px;color:#9effb6}
-    p{opacity:.85;line-height:1.5}
+    :root {
+      --bg: #020617;
+      --accent: #22c55e;
+      --border: rgba(148, 163, 184, 0.4);
+      --text: #e5e7eb;
+      --text-soft: #9ca3af;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .garden-nav {
+      font-family: var(--font-sans);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .garden-nav a {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: border-color 120ms ease, background 120ms ease,
+        color 120ms ease, transform 80ms ease;
+    }
+
+    .garden-nav a:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.98);
+      transform: translateY(-1px);
+    }
+
+    .garden-nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(34, 197, 94, 0.12);
+    }
   </style>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>ACACIA · TRIAD</h1>
-      <p>This page is a standalone preview of the Triad navigation block. Most pages should load it via <code>assets/triad_nav.js</code>.</p>
-    </div>
-
-    <div style="height:14px"></div>
-
-    <div id="triad-nav-mount"></div>
-  </div>
-
-  <script src="assets/triad_nav.js" defer></script>
+  <nav class="garden-nav">
+    <a href="index.html">Home</a>
+    <a href="docs/docs_urls.html">Docs URLs</a>
+    <a href="library.html">Library</a>
+    <a href="codex.html">Codex</a>
+    <a href="chambers.html">Chambers</a>
+    <a href="echoes.html">Echoes</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="map.html">Map</a>
+    <a href="keeper_console.html">Keeper</a>
+    <a href="inbox.html">Inbox</a>
+  </nav>
 </body>
 </html>
