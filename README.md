@@ -354,7 +354,6 @@ to build things worth remembering —
 and to do so without coercion.
 > — *Keeper HKX277206*
 
-
 <p align="center">
   <img src="assets/EAGLE_MONOLITH_COVER.png" width="70%" />
   <br><strong>The Garden remains sovereign.</strong><br>
