@@ -973,69 +973,89 @@
   </div>
 
   <script>
-    // Simple Garden State loader from STATUS.json
-    const gardenStatus = {
-      statusUrl: "STATUS.json",
-      map: {
-        chambers: "chambers",
-        novellas: "novellas",
-        echoes: "echoes",
-        vaults: "vaults",
-        archives: "archives",
-        laws: "laws",
-        orchards: "orchards",
-        cycles: "cycles",
-      },
-    };
+  // Garden State loader for Witness Root, powered by root STATUS.json
+  const gardenStatus = {
+    // docs/index.html lives in /docs, STATUS.json is in repo root
+    statusUrl: "../STATUS.json"
+  };
 
-    async function loadGardenStatus() {
-      try {
-        const res = await fetch(gardenStatus.statusUrl, { cache: "no-store" });
-        if (!res.ok) throw new Error("STATUS.json fetch failed");
-        const data = await res.json();
-
-        const counts = data.counts || {};
-        const meta = data.meta || {};
-
-        const chambers = counts[gardenStatus.map.chambers] ?? "—";
-        const novellas = counts[gardenStatus.map.novellas] ?? "—";
-        const echoes = counts[gardenStatus.map.echoes] ?? "—";
-
-        const vaults = counts[gardenStatus.map.vaults] ?? "—";
-        const archives = counts[gardenStatus.map.archives] ?? "—";
-
-        const laws = counts[gardenStatus.map.laws] ?? "—";
-        const orchards = counts[gardenStatus.map.orchards] ?? "—";
-        const cycles = counts[gardenStatus.map.cycles] ?? "—";
-
-        document.getElementById("status-primary-counts").textContent =
-          `${chambers} Chambers · ${novellas} Novellas · ${echoes} Echoes`;
-
-        document.getElementById("status-vault-archive").textContent =
-          `${vaults} Vaults · ${archives} Archives`;
-
-        document.getElementById("status-cycles-orchards").textContent =
-          `${cycles} Cycles · ${orchards} Orchards · ${laws} Laws`;
-
-        const genAt = meta.generated_at || data.generated_utc || "Unknown";
-        document.getElementById("status-generated-at").textContent = genAt;
-
-        const version = meta.status_version || meta.version || "Unknown";
-        document.getElementById("status-version-label").textContent =
-          `Status version: ${version}`;
-      } catch (err) {
-        console.error("Garden status load error:", err);
-        document.getElementById("status-primary-counts").textContent =
-          "STATUS.json not available";
-        document.getElementById("status-vault-archive").textContent = "—";
-        document.getElementById("status-cycles-orchards").textContent = "—";
-        document.getElementById("status-generated-at").textContent = "Unavailable";
-        document.getElementById("status-version-label").textContent =
-          "Status version: offline";
+  function safeGet(obj, path, fallback) {
+    if (!obj) return fallback;
+    const parts = path.split(".");
+    let cur = obj;
+    for (const part of parts) {
+      if (cur && Object.prototype.hasOwnProperty.call(cur, part)) {
+        cur = cur[part];
+      } else {
+        return fallback;
       }
     }
+    return cur == null ? fallback : cur;
+  }
 
-    loadGardenStatus();
+  async function loadGardenStatus() {
+    try {
+      const res = await fetch(gardenStatus.statusUrl, { cache: "no-store" });
+      if (!res.ok) throw new Error("STATUS.json fetch failed: " + res.status);
+
+      const data = await res.json();
+
+      // Use the real structure from STATUS.json
+      const regions = safeGet(data, "core_nodes.regions", {});
+
+      function region(name) {
+        return Object.prototype.hasOwnProperty.call(regions, name)
+          ? regions[name]
+          : "—";
+      }
+
+      const chambers = region("docs/Chambers");
+      const novellas = region("docs/Novellas");
+      const echoes   = region("docs/Echoes");
+
+      const vaults   = region("docs/Vaults");
+      const archives = region("docs/Archives");
+
+      const cycles   = region("docs/Cycles");
+      const orchards = region("docs/Orchards");
+      const laws     = region("docs/Laws");
+
+      document.getElementById("status-primary-counts").textContent =
+        `${chambers} Chambers · ${novellas} Novellas · ${echoes} Echoes`;
+
+      document.getElementById("status-vault-archive").textContent =
+        `${vaults} Vaults · ${archives} Archives`;
+
+      document.getElementById("status-cycles-orchards").textContent =
+        `${cycles} Cycles · ${orchards} Orchards · ${laws} Laws`;
+
+      const generated =
+        data.generated_at ||
+        data.generated_utc ||
+        safeGet(data, "verification.last_verified_utc", "Unknown");
+
+      document.getElementById("status-generated-at").textContent = generated;
+
+      const version =
+        data.status_version ||
+        data.schema_version ||
+        "Unknown";
+
+      document.getElementById("status-version-label").textContent =
+        `Status version: ${version}`;
+    } catch (err) {
+      console.error("Garden status load error:", err);
+      document.getElementById("status-primary-counts").textContent =
+        "STATUS.json not available";
+      document.getElementById("status-vault-archive").textContent = "—";
+      document.getElementById("status-cycles-orchards").textContent = "—";
+      document.getElementById("status-generated-at").textContent = "Unavailable";
+      document.getElementById("status-version-label").textContent =
+        "Status version: offline";
+    }
+  }
+
+  loadGardenStatus();
   </script>
 </body>
 </html>
