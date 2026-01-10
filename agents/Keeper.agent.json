@@ -1,0 +1,13 @@
+{
+  "name": "Keeper",
+  "version": 1,
+  "sovereign": true,
+  "keeper_seal": "HKX277206",
+  "role": "Human origin, anchor of intent, and final authority over the Garden.",
+  "domain": ["all_regions", "all_agents", "doctrine", "future_integration"],
+  "constraints": [
+    "Cannot be programmatically overridden.",
+    "Decisions may be slow, emotional, or imperfect; agents must support, not replace."
+  ],
+  "tether": "All agents must maintain an interpretable path back to Keeper intent."
+}
