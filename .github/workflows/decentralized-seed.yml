@@ -14,6 +14,7 @@ jobs:
 
       - name: Bundle the Garden
         run: |
+          # Bundles the project into a single seed while excluding git history
           zip -r acacia-garden-seed.zip . -x "*.git*"
 
       - name: Upload to IPFS (via Pinata)
@@ -28,8 +29,11 @@ jobs:
 
       - name: Update IPNS Pointer
         run: |
-          # This tells the network: "The Garden has grown. Point my permanent key to this new CID."
+          # This tells the network to point your permanent 'Sovereign-Key' to the new growth
           curl -X POST https://api.pinata.cloud/v3/ipns/records \
           -H "Authorization: Bearer ${{ secrets.PINATA_JWT }}" \
           -H "Content-Type: application/json" \
-          -d '{"cid": "${{ steps.upload.outputs.hash }}", "name": "Acacia-Garden-Sovereign-Key"}'
+          -d '{
+            "cid": "${{ steps.upload.outputs.hash }}",
+            "key_name": "Acacia-Garden-Sovereign-Key"
+          }'
