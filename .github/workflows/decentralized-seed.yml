@@ -1,13 +1,13 @@
 name: Decentralized Seed (IPFS + IPNS)
 
 on:
-  push:
-    branches:
-      - main
+  # Manual trigger only – no automatic runs on push
+  workflow_dispatch:
 
 jobs:
   seed:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Codex
         uses: actions/checkout@v4
@@ -25,9 +25,12 @@ jobs:
           service: pinata
           pinataKey: ${{ secrets.PINATA_API_KEY }}
           pinataSecret: ${{ secrets.PINATA_API_SECRET }}
-          pinataPinName: "Acacia-Garden-HKX277206"
+          # pinataPinName is deprecated; use pinName instead
+          pinName: "Acacia-Garden-HKX277206"
 
       - name: Update IPNS Pointer
+        # Only try to update IPNS if upload succeeded
+        if: ${{ success() && steps.upload.outputs.hash != '' }}
         run: |
           # This tells the network to point your permanent 'Sovereign-Key' to the new growth
           curl -X POST https://api.pinata.cloud/v3/ipns/records \
