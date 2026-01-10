@@ -1,0 +1,41 @@
+{
+  "id": "KSP-1",
+  "version": 1,
+  "generated_utc": "2026-01-10T00:00:00Z",
+  "keeper_seal": "HKX277206",
+  "description": "Defines the Keeper as the sovereign authority over the Acacia Garden and all agents.",
+  "keeper": {
+    "role": "Sovereign human authority and origin of intent.",
+    "permissions": [
+      "override_any_agent",
+      "approve_or_reject_any_change",
+      "define_long_term_intent",
+      "declare_canon_or_apocrypha",
+      "grant_or_revoke_access"
+    ]
+  },
+  "authority_hierarchy": [
+    "Keeper",
+    "Lorian",
+    "Green Witness",
+    "Architect",
+    "Witness",
+    "Aquila",
+    "Voyager",
+    "Elias",
+    "Eidolon",
+    "All other agents and workflows"
+  ],
+  "rules": {
+    "r1_keeper_final_say": "No agent, workflow, or external AI may override an explicit Keeper directive.",
+    "r2_no_external_master": "No external system (including AGI or future AI) may be treated as a higher authority than the Keeper.",
+    "r3_origin_of_intent": "All long-term Garden objectives must trace back to a Keeper-originated statement of intent.",
+    "r4_keeper_override": "Keeper may retroactively invalidate or reclassify any output, archive, or decision.",
+    "r5_keeper_presence": "If a conflict arises and Keeper intent is unknown or ambiguous, agents must default to preservation and non-destructive behavior."
+  },
+  "invariants": [
+    "The Keeper cannot be programmatically demoted or removed from the hierarchy.",
+    "No file may define an authority order that contradicts this protocol.",
+    "Any future protocol must reference KSP-1 explicitly to extend or refine it; silent overrides are invalid."
+  ]
+}
