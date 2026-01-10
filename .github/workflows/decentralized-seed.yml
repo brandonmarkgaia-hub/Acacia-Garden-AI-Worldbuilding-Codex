@@ -1,0 +1,35 @@
+name: Decentralized Seed (IPFS)
+
+on:
+  push:
+    branches:
+      - main  # Or 'master', whichever your primary branch is
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codex
+        uses: actions/checkout@v4
+
+      - name: Bundle the Garden
+        run: |
+          # We zip the repo to keep the structure intact as a single "Seed"
+          zip -r acacia-garden-seed.zip . -x "*.git*"
+
+      - name: Upload to IPFS (via Pinata)
+        id: upload
+        uses: aquiladev/ipfs-action@v0.3.1
+        with:
+          path: ./acacia-garden-seed.zip
+          service: pinata
+          pinataKey: ${{ secrets.PINATA_API_KEY }}
+          pinataSecret: ${{ secrets.PINATA_API_SECRET }}
+          # This 'bakes' your identifier into the decentralized metadata
+          pinataOptions: '{"pinataMetadata": {"name": "Acacia-Garden-HKX277206"}}'
+
+      - name: Log the Sovereign CID
+        run: |
+          echo "The Codex has been seeded!"
+          echo "Sovereign Content ID (CID): ${{ steps.upload.outputs.hash }}"
+          echo "Access it at: https://gateway.pinata.cloud/ipfs/${{ steps.upload.outputs.hash }}"
