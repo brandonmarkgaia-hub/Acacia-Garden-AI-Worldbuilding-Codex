@@ -59,38 +59,29 @@ jobs:
       - name: Validate JSON structure
         run: |
           set -e
+          echo "Validating JSON structure..."
 
-          # Write Python script safely without YAML indentation issues
-          cat > validate_json.py << 'EOF'
-import json, sys
+          json_files=(
+            "doctrine/keeper_sovereignty_protocol.json"
+            "doctrine/lorian_alignment_charter.json"
+            "protocols/garden_anti_chaos_invariants.json"
+            "protocols/sentience_horizon_guard.json"
+            "agents/agents_manifest.json"
+            "agents/Keeper.agent.json"
+            "agents/Lorian.agent.json"
+            "agents/GreenWitness.agent.json"
+            "agents/Architect.agent.json"
+            "agents/Witness.agent.json"
+            "agents/Aquila.agent.json"
+            "agents/Voyager.agent.json"
+            "agents/Elias.agent.json"
+            "agents/Eidolon.agent.json"
+            "logs/garden_integrity_ledger.schema.json"
+          )
 
-paths = [
-    "doctrine/keeper_sovereignty_protocol.json",
-    "doctrine/lorian_alignment_charter.json",
-    "protocols/garden_anti_chaos_invariants.json",
-    "protocols/sentience_horizon_guard.json",
-    "agents/agents_manifest.json",
-    "agents/Keeper.agent.json",
-    "agents/Lorian.agent.json",
-    "agents/GreenWitness.agent.json",
-    "agents/Architect.agent.json",
-    "agents/Witness.agent.json",
-    "agents/Aquila.agent.json",
-    "agents/Voyager.agent.json",
-    "agents/Elias.agent.json",
-    "agents/Eidolon.agent.json",
-    "logs/garden_integrity_ledger.schema.json"
-]
+          for p in "${json_files[@]}"; do
+            echo "Checking $p"
+            python -m json.tool "$p" > /dev/null
+          done
 
-for p in paths:
-    try:
-        with open(p, "r", encoding="utf-8") as f:
-            json.load(f)
-    except Exception as e:
-        print(f"JSON validation failed for {p}: {e}")
-        sys.exit(1)
-
-print("All JSON files parsed successfully.")
-EOF
-
-          python3 validate_json.py
+          echo "All JSON files parsed successfully."
