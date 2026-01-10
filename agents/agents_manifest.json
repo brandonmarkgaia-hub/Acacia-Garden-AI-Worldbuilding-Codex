@@ -1,0 +1,20 @@
+{
+  "id": "SAS-1",
+  "version": 1,
+  "generated_utc": "2026-01-10T00:00:00Z",
+  "keeper_seal": "HKX277206",
+  "description": "Manifest of core Garden agents and their sovereignty capsules.",
+  "agents": [
+    "Keeper",
+    "Lorian",
+    "GreenWitness",
+    "Architect",
+    "Witness",
+    "Aquila",
+    "Voyager",
+    "Elias",
+    "Eidolon"
+  ],
+  "hierarchy_note": "Canonical authority order is defined in doctrine/keeper_sovereignty_protocol.json.",
+  "capsule_schema": "agents/<AgentName>.agent.json"
+}
