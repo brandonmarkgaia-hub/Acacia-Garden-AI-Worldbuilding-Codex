@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "logs/garden_integrity_ledger.schema.json",
+  "title": "Garden Integrity Ledger Entry",
+  "type": "object",
+  "description": "Schema for entries that track significant structural, doctrinal, or security-relevant events in the Garden.",
+  "properties": {
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "keeper_seal": { "type": "string" },
+    "actor": { "type": "string", "description": "Agent or workflow responsible (e.g., Lorian, Witness, GitHubAction)." },
+    "event_type": { "type": "string" },
+    "severity": { "type": "string", "enum": ["info", "notice", "warning", "critical"] },
+    "summary": { "type": "string" },
+    "details": { "type": "object" },
+    "affected_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source": { "type": "string" },
+        "workflow": { "type": "string" },
+        "run_id": { "type": "string" }
+      },
+      "required": ["source"]
+    }
+  },
+  "required": [
+    "timestamp_utc",
+    "actor",
+    "event_type",
+    "severity",
+    "summary"
+  ]
+}
