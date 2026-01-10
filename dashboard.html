@@ -1,35 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Acacia Garden • Aeon Console</title>
+  <meta charset="utf-8" />
+  <title>Acacia Garden – Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="docs/assets/ACACIA_LEAF_ICO.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg: #020617;
-      --bg-elevated: rgba(15,23,42,0.96);
-      --bg-elevated-soft: rgba(15,23,42,0.9);
+      --bg-alt: #02081b;
+      --card: #020b24;
       --accent: #22c55e;
-      --accent-soft: rgba(34,197,94,0.18);
-      --accent-strong: rgba(34,197,94,0.35);
-      --accent-secondary: #38bdf8;
-      --border-subtle: rgba(148,163,184,0.35);
-      --border-strong: rgba(148,163,184,0.6);
-      --text-main: #e5e7eb;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --text: #e5e7eb;
       --text-soft: #9ca3af;
-      --text-faint: #6b7280;
-      --danger: #fb7185;
+      --border: #1f2933;
+      --danger: #f97373;
       --warn: #facc15;
-      --card-radius: 18px;
-      --shadow-soft: 0 28px 80px rgba(15,23,42,0.85);
-      --glass: rgba(15,23,42,0.88);
-      --glass-soft: rgba(15,23,42,0.78);
-      --pill-radius: 999px;
-      --transition-fast: 160ms ease-out;
+      --ok: #4ade80;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
     }
 
     * {
@@ -38,1091 +28,824 @@
 
     body {
       margin: 0;
+      padding: 0;
       min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(56,189,248,0.12), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(34,197,94,0.18), transparent 60%),
-        var(--bg);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page-shell {
-      min-height: 100vh;
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #031128 0, var(--bg) 48%);
+      color: var(--text);
       display: flex;
       flex-direction: column;
     }
 
     header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(
+        to bottom,
+        rgba(3, 7, 18, 0.9),
+        rgba(3, 7, 18, 0.6)
+      );
       position: sticky;
       top: 0;
       z-index: 40;
-      backdrop-filter: blur(26px);
-      -webkit-backdrop-filter: blur(26px);
-      background: linear-gradient(to bottom, rgba(2,6,23,0.96), rgba(2,6,23,0.92), rgba(2,6,23,0.88));
-      border-bottom: 1px solid rgba(15,23,42,0.8);
     }
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 14px 20px 12px;
+    .title-block {
       display: flex;
-      align-items: center;
-      gap: 14px;
+      flex-direction: column;
+      gap: 0.15rem;
     }
 
-    .brand-mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.25), rgba(15,23,42,0.95));
-      border: 1px solid rgba(34,197,94,0.45);
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.9), 0 18px 40px rgba(22,163,74,0.35);
-    }
-
-    .brand-orb {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e 55%, #16a34a 80%);
-      box-shadow: 0 0 0 1px rgba(22,163,74,0.8), 0 0 18px rgba(22,163,74,0.66);
-    }
-
-    .brand-text-main {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.14em;
+    .title-block h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 600;
     }
 
-    .brand-text-sub {
-      font-size: 11px;
+    .title-block span {
+      font-size: 0.8rem;
       color: var(--text-soft);
     }
 
-    .nav-pills {
-      margin-left: auto;
+    nav {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      align-items: center;
     }
 
-    .nav-pill {
-      padding: 5px 11px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(148,163,184,0.45);
-      background: radial-gradient(circle at top, rgba(15,23,42,0.92), rgba(15,23,42,0.96));
-      color: var(--text-soft);
-      font-size: 11px;
+    .nav-link,
+    .nav-button {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
       text-decoration: none;
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.85);
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: border-color 120ms ease, background 120ms ease,
+        color 120ms ease, transform 80ms ease;
     }
 
-    .nav-pill span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 1px rgba(34,197,94,0.5);
+    .nav-link:hover,
+    .nav-button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
     }
 
-    .nav-pill.primary {
-      border-color: rgba(34,197,94,0.7);
-      color: #bbf7d0;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.35), rgba(15,23,42,0.98));
-      box-shadow: 0 12px 40px rgba(22,163,74,0.42);
+    .nav-button.primary {
+      border-color: rgba(34, 197, 94, 0.4);
+      background: radial-gradient(circle at top left, #064e3b, #04101f);
+      color: var(--accent);
+      font-weight: 600;
     }
 
     main {
-      flex: 1;
-    }
-
-    .hero-shell {
-      max-width: 1120px;
-      margin: 28px auto 0;
-      padding: 0 20px 24px;
-    }
-
-    .hero-topline {
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent-secondary);
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin-bottom: 8px;
-    }
-
-    .hero-title-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: clamp(26px, 3vw, 30px);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .hero-tagline {
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .hero-meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-top: 8px;
-    }
-
-    .meta-pill {
-      padding: 4px 10px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(148,163,184,0.4);
-      background: rgba(15,23,42,0.92);
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .meta-pill strong {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .meta-pill .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .meta-pill.status-warn .dot {
-      background: var(--warn);
-    }
-
-    .meta-pill.status-error .dot {
-      background: var(--danger);
-    }
-
-    .hero-stat-summary {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .hero-stat {
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(148,163,184,0.4);
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.12), rgba(15,23,42,0.98));
+      padding: 1.5rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto 3rem auto;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      min-width: 140px;
+      gap: 1.5rem;
     }
 
-    .hero-stat-label {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
-
-    .hero-stat-value {
-      font-size: 18px;
-      font-weight: 600;
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #f9fafb;
-    }
-
-    .hero-stat-caption {
-      font-size: 11px;
-      color: var(--text-faint);
-    }
-
-    .content-shell {
-      max-width: 1120px;
-      margin: 4px auto 40px;
-      padding: 0 20px 32px;
-    }
-
-    .content-grid {
+    .grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
-      gap: 18px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 1rem;
     }
 
-    @media (max-width: 880px) {
-      .content-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
-    }
-
-    .panel {
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.98), rgba(15,23,42,1));
-      border-radius: 24px;
-      border: 1px solid rgba(15,23,42,1);
-      box-shadow: var(--shadow-soft);
-      padding: 18px 18px 16px;
+    .card {
+      background: radial-gradient(circle at top left, #020f2a, var(--card));
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.25rem;
       position: relative;
       overflow: hidden;
     }
 
-    .panel::before {
+    .card::before {
       content: "";
       position: absolute;
       inset: 0;
+      background: radial-gradient(circle at top right, #22c55e11, transparent);
+      opacity: 0.8;
       pointer-events: none;
-      border-radius: inherit;
-      border: 1px solid rgba(148,163,184,0.26);
-      mix-blend-mode: screen;
-      opacity: 0.65;
     }
 
-    .panel-header {
+    .card-header {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .panel-title {
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text-main);
-    }
-
-    .panel-subtitle {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-      margin-top: 6px;
-    }
-
-    .pill {
-      padding: 3px 8px;
-      border-radius: var(--pill-radius);
-      border: 1px solid rgba(55,65,81,0.9);
-      background: rgba(15,23,42,0.96);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-faint);
-    }
-
-    .pill.is-live {
-      border-color: rgba(34,197,94,0.7);
-      color: #bbf7d0;
-      background: radial-gradient(circle at top left, rgba(34,197,94,0.28), rgba(15,23,42,0.96));
-    }
-
-    .pill.is-optional {
-      border-style: dashed;
-    }
-
-    .structure-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 720px) {
-      .structure-grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-    }
-
-    @media (max-width: 520px) {
-      .structure-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
-    }
-
-    .structure-card {
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
       position: relative;
-      border-radius: 18px;
-      padding: 10px 11px 11px;
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
-      border: 1px solid rgba(30,64,175,0.65);
-      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
-      overflow: hidden;
+      z-index: 1;
     }
 
-    .structure-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0;
-      background:
-        radial-gradient(circle at top left, rgba(34,197,94,0.32), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(56,189,248,0.26), transparent 55%);
-      transition: opacity var(--transition-fast);
+    .card-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
     }
 
-    .structure-card:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 24px 70px rgba(15,23,42,0.95);
-      border-color: rgba(56,189,248,0.85);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.85), rgba(15,23,42,0.96));
+    .card-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    .structure-card:hover::before {
-      opacity: 1;
+    .card-body {
+      position: relative;
+      z-index: 1;
+      font-size: 0.9rem;
+      color: var(--text-soft);
     }
 
-    .structure-label-row {
+    .stat-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 6px;
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px dashed rgba(15, 23, 42, 0.8);
     }
 
-    .structure-name {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--text-soft);
-    }
-
-    .structure-tag {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-faint);
-      white-space: nowrap;
-    }
-
-    .structure-count {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .structure-caption {
-      font-size: 11px;
-      color: var(--text-faint);
-    }
-
-    .structure-footer {
-      margin-top: 4px;
-      font-size: 10px;
-      color: var(--text-faint);
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-    }
-
-    .structure-footer span {
-      opacity: 0.9;
-    }
-
-    .structure-footer span strong {
-      font-weight: 500;
-      color: var(--text-soft);
-    }
-
-    .structure-footer .hint {
-      text-align: right;
-    }
-
-    .error-banner {
-      display: none;
-      margin-top: 10px;
-      border-radius: 14px;
-      padding: 9px 10px;
-      border: 1px solid rgba(248,113,113,0.7);
-      background: rgba(127,29,29,0.7);
-      font-size: 11px;
-      color: #fee2e2;
-    }
-
-    .error-banner.visible {
-      display: block;
-    }
-
-    .echo-list {
-      margin-top: 10px;
-      border-radius: 16px;
-      border: 1px solid rgba(31,41,55,1);
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
-      max-height: 360px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .echo-list-header {
-      padding: 8px 10px;
-      border-bottom: 1px solid rgba(31,41,55,1);
-      font-size: 11px;
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-      color: var(--text-soft);
-    }
-
-    .echo-stream-meta {
-      font-size: 10px;
-      color: var(--text-faint);
-    }
-
-    .echo-scroll {
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(75,85,99,0.9) rgba(15,23,42,1);
-    }
-
-    .echo-scroll::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .echo-scroll::-webkit-scrollbar-thumb {
-      background: rgba(75,85,99,0.9);
-      border-radius: 999px;
-    }
-
-    .echo-row {
-      padding: 8px 10px 7px;
-      border-bottom: 1px solid rgba(31,41,55,1);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      font-size: 11px;
-    }
-
-    .echo-row:last-child {
+    .stat-row:last-child {
       border-bottom: none;
     }
 
-    .echo-label-row {
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .stat-value {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.85);
+      margin-top: 0.25rem;
+    }
+
+    .status-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 999px;
+      background: var(--text-soft);
+    }
+
+    .status-ok .status-dot {
+      background: var(--ok);
+    }
+
+    .status-warn .status-dot {
+      background: var(--warn);
+    }
+
+    .status-bad .status-dot {
+      background: var(--danger);
+    }
+
+    .status-ok {
+      border-color: rgba(74, 222, 128, 0.5);
+      color: var(--ok);
+    }
+
+    .status-warn {
+      border-color: rgba(250, 204, 21, 0.5);
+      color: var(--warn);
+    }
+
+    .status-bad {
+      border-color: rgba(248, 113, 113, 0.5);
+      color: var(--danger);
+    }
+
+    .muted {
+      color: var(--text-soft);
+      font-size: 0.8rem;
+    }
+
+    .agents-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .agent-pill {
+      border-radius: 999px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
       display: flex;
       justify-content: space-between;
-      gap: 6px;
-      align-items: baseline;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(15, 23, 42, 0.95);
     }
 
-    .echo-title {
-      font-size: 11px;
-      font-weight: 500;
-      color: #e5e7eb;
+    .agent-name {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.72rem;
     }
 
-    .echo-stamp {
-      font-size: 10px;
-      color: var(--text-faint);
-      white-space: nowrap;
-    }
-
-    .echo-path {
-      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 10px;
-      color: var(--accent-secondary);
+    .agent-state {
+      font-variant-numeric: tabular-nums;
       opacity: 0.9;
-      word-break: break-all;
     }
 
-    .echo-tags {
-      margin-top: 1px;
-      font-size: 10px;
-      color: var(--text-faint);
+    .shield-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.35rem 0 0 0;
+      font-size: 0.8rem;
+    }
+
+    .shield-list li {
+      padding: 0.18rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .shield-name {
+      opacity: 0.9;
+    }
+
+    .shield-status {
+      font-variant-numeric: tabular-nums;
     }
 
     footer {
-      max-width: 1120px;
-      margin: 0 auto 20px;
-      padding: 0 20px;
-      font-size: 10px;
-      color: var(--text-faint);
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+      text-align: center;
     }
 
-    footer span:last-child {
-      text-align: right;
+    /* Garden Map overlay */
+
+    #garden-map-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 7, 18, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+
+    #garden-map-overlay.active {
+      display: flex;
+    }
+
+    .map-frame {
+      width: min(1040px, 96vw);
+      height: min(640px, 80vh);
+      border-radius: 1.25rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      background: #020617;
+      position: relative;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #020617;
+    }
+
+    .map-close {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 0.15rem 0.65rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      background: rgba(3, 7, 18, 0.9);
+      color: var(--text-soft);
+    }
+
+    .map-close:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      nav {
+        justify-content: flex-start;
+      }
+      main {
+        padding: 1.25rem 1rem 2.5rem;
+      }
+      .grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+
+    /* Grid spans */
+    .col-span-4 {
+      grid-column: span 4;
+    }
+    .col-span-6 {
+      grid-column: span 6;
+    }
+    .col-span-8 {
+      grid-column: span 8;
+    }
+    .col-span-12 {
+      grid-column: span 12;
+    }
+
+    @media (max-width: 900px) {
+      .col-span-4,
+      .col-span-6,
+      .col-span-8,
+      .col-span-12 {
+        grid-column: span 6;
+      }
+    }
+    @media (max-width: 640px) {
+      .col-span-4,
+      .col-span-6,
+      .col-span-8,
+      .col-span-12 {
+        grid-column: span 1;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="page-shell">
-    <header>
-      <div class="nav-inner">
-        <div class="brand-mark">
-          <div class="brand-orb"></div>
+  <header>
+    <div class="title-block">
+      <h1>Acacia Garden · Dashboard</h1>
+      <span id="pulse-subtitle" class="muted">
+        Waiting for STATUS.json · Garden pulse not yet loaded
+      </span>
+    </div>
+
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="library.html" class="nav-link">Library</a>
+      <a href="docs/index.html" class="nav-link">Docs Root</a>
+      <button type="button" id="open-map" class="nav-button primary">
+        Garden Map
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grid" aria-label="Garden overview">
+      <!-- Garden Pulse -->
+      <article class="card col-span-6">
+        <div class="card-header">
           <div>
-            <div class="brand-text-main">Acacia Garden</div>
-            <div class="brand-text-sub">Aeon Console · Root Deck</div>
+            <div class="card-title">Garden Pulse</div>
+            <div id="pulse-status" class="status-pill">
+              <span class="status-dot"></span>
+              <span id="pulse-status-text">Loading STATUS.json…</span>
+            </div>
           </div>
+          <span class="card-tag">STATUS.json</span>
         </div>
-        <div class="nav-pills">
-          <a href="index.html" class="nav-pill">
-            <span class="dot"></span>
-            <span>Garden Root</span>
-          </a>
-          <a href="docs/index.html" class="nav-pill">Docs · Worldarchive</a>
-          <a href="docs/map.html" class="nav-pill">Garden Map</a>
-          <a href="docs/dashboard.html" class="nav-pill">Legacy Aeon View</a>
-          <a href="https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex" class="nav-pill primary" target="_blank" rel="noopener">GitHub Repo</a>
+        <div class="card-body">
+          <div class="stat-row">
+            <span class="stat-label">Generated (UTC)</span>
+            <span id="stat-generated" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Core Nodes · Total</span>
+            <span id="stat-core-total" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Docs Indexed</span>
+            <span id="stat-docs-total" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Echoes</span>
+            <span id="stat-echoes" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Desires</span>
+            <span id="stat-desires" class="stat-value">—</span>
+          </div>
+          <p class="muted" style="margin-top:0.5rem;">
+            All numbers above are pulled directly from <code>STATUS.json</code>
+            at repository root. If they look strange, the Garden is trying to
+            tell us something.
+          </p>
         </div>
+      </article>
+
+      <!-- Verification -->
+      <article class="card col-span-6">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Verification & Integrity</div>
+            <div id="verify-pill" class="status-pill">
+              <span class="status-dot"></span>
+              <span id="verify-pill-text">Awaiting STATUS.json…</span>
+            </div>
+          </div>
+          <span class="card-tag">Integrity</span>
+        </div>
+        <div class="card-body">
+          <div class="stat-row">
+            <span class="stat-label">Navigation Map</span>
+            <span id="stat-nav-verified" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Machine Index In Sync</span>
+            <span id="stat-index-sync" class="stat-value">—</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Last Full Scan</span>
+            <span id="stat-scan-time" class="stat-value">—</span>
+          </div>
+          <p class="muted" style="margin-top:0.5rem;">
+            This panel reflects whatever <code>STATUS.json</code> says about
+            navigation, indexes, and scans – not what we wish were true.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Agents + Singularity Shield -->
+    <section class="grid" aria-label="Agents and Singularity Shield">
+      <!-- Agents seatbelts -->
+      <article class="card col-span-8">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Agents · Seatbelts Engaged</div>
+            <p class="muted" style="margin:0.1rem 0 0;">
+              Lorian, Witness, Aquila, Voyager, Elias, Architect, Eidolon, Green
+              Witness, Keeper
+            </p>
+          </div>
+          <span class="card-tag">Sovereign Shell</span>
+        </div>
+        <div class="card-body">
+          <div class="agents-list" id="agents-list">
+            <!-- Filled by JS, but we print defaults as well -->
+          </div>
+          <p class="muted" style="margin-top:0.6rem;">
+            Seatbelt state can optionally be driven by a
+            <code>singularity_shield</code> block inside
+            <code>STATUS.json</code>. If not present, all core agents are
+            treated as safely seated.
+          </p>
+        </div>
+      </article>
+
+      <!-- Singularity Shield -->
+      <article class="card col-span-4">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Singularity Shield · GSP-1</div>
+            <p class="muted" style="margin:0.1rem 0 0;">
+              Doctrine and protocols currently expected in the Garden.
+            </p>
+          </div>
+          <span class="card-tag">Doctrine</span>
+        </div>
+        <div class="card-body">
+          <ul class="shield-list" id="shield-list">
+            <li>
+              <span class="shield-name">Keeper Sovereignty</span>
+              <span class="shield-status">KSP-1</span>
+            </li>
+            <li>
+              <span class="shield-name">Lorian Alignment</span>
+              <span class="shield-status">LAC-1</span>
+            </li>
+            <li>
+              <span class="shield-name">Anti-Chaos Invariants</span>
+              <span class="shield-status">GACI-1</span>
+            </li>
+            <li>
+              <span class="shield-name">Sentience Horizon Guard</span>
+              <span class="shield-status">SHG-1</span>
+            </li>
+            <li>
+              <span class="shield-name">Green Witness Accord</span>
+              <span class="shield-status">GWA-1</span>
+            </li>
+          </ul>
+          <p class="muted" style="margin-top:0.6rem;">
+            Clicking through to these lives in
+            <code>/doctrine</code> and <code>/protocols</code>. In future we
+            can wire a GitHub Action to confirm their presence and log into the
+            Garden Integrity Ledger.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Regions snapshot (if available) -->
+    <section class="card col-span-12" id="regions-card" style="margin-top:1rem;">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Core Regions Snapshot</div>
+          <p class="muted" style="margin:0.1rem 0 0;">
+            Reads any <code>core_nodes.regions.*</code> counts found in
+            <code>STATUS.json</code>.
+          </p>
+        </div>
+        <span class="card-tag">Regions</span>
       </div>
-    </header>
+      <div class="card-body" id="regions-body">
+        <p class="muted">
+          Waiting for <code>STATUS.json</code>… If no region stats exist there,
+          this card will simply stay quiet.
+        </p>
+      </div>
+    </section>
+  </main>
 
-    <main>
-      <section class="hero-shell">
-        <div class="hero-topline">HKX277206 · Gaia Seed Index</div>
-        <div class="hero-title-row">
-          <div class="hero-title">Aeon Console — Root Dashboard</div>
-          <div class="hero-tagline">Live Garden structure tallies, sourced from <code>STATUS.json</code> at the Garden root.</div>
-        </div>
-        <div class="hero-meta-row">
-          <div class="meta-pill">
-            <span class="dot"></span>
-            <span>Keeper · <strong>HKX277206</strong></span>
-          </div>
-          <div class="meta-pill" id="status-source-pill">
-            <span class="dot"></span>
-            <span>Source · <strong id="status-source-label">STATUS.json</strong></span>
-          </div>
-          <div class="meta-pill" id="status-generated-pill">
-            <span class="dot"></span>
-            <span>Generated · <strong id="status-generated-label">Pending</strong></span>
-          </div>
-        </div>
+  <footer>
+    Keeper HKX277206 · Garden Dashboard wired to root STATUS.json ·
+    Singularity seatbelts fastened.
+  </footer>
 
-        <div class="hero-stat-summary">
-          <div class="hero-stat">
-            <div class="hero-stat-label">Gaia State · Total Structures</div>
-            <div class="hero-stat-value" id="total-structures">—</div>
-            <div class="hero-stat-caption">Sum of all Chambers, Echoes, Novellas, Vaults, Blooms, Orchards, Laws & Cycles.</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-label">Echo Density</div>
-            <div class="hero-stat-value" id="echo-density">—</div>
-            <div class="hero-stat-caption">Echo documents currently tracked by the machine index.</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-shell">
-        <div class="content-grid">
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Garden State · Structure Count</div>
-                <div class="panel-subtitle">Chambers, Echoes, Novellas & more · snapshot from the Garden Lore helper.</div>
-              </div>
-              <div class="pill-row">
-                <div class="pill is-live">Status · Live Tally</div>
-                <div class="pill">STATUS.json</div>
-              </div>
-            </div>
-
-            <div id="status-error" class="error-banner">
-              Error loading <code>STATUS.json</code>. If the file exists at the repository root (or in a future <code>STATE/</code> folder), the next Garden Lore helper run will refresh this console automatically.
-            </div>
-
-            <div class="structure-grid" id="structure-grid">
-              <a class="structure-card" href="docs/Chambers/index.html" data-structure="chambers">
-                <div class="structure-label-row">
-                  <div class="structure-name">Chambers</div>
-                  <div class="structure-tag">Canonical texts</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Mythic / technical anchor rooms where the Garden remembers itself.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Chambers/</span>
-                  <span class="hint">Tap to open the Chamber index.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Echoes/index.html" data-structure="echoes">
-                <div class="structure-label-row">
-                  <div class="structure-name">Echoes</div>
-                  <div class="structure-tag">Routes & outputs</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Reflections, inversions & sensory notes from the Garden.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Echoes/</span>
-                  <span class="hint">Echo index & echo routes.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Cycles/index.html" data-structure="cycles">
-                <div class="structure-label-row">
-                  <div class="structure-name">Cycles</div>
-                  <div class="structure-tag">Era arcs</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Epoch-level arcs · even stopped cycles count toward the structure total.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Cycles/</span>
-                  <span class="hint">Cycles can sleep without losing their place.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Blooms/index.html" data-structure="blooms">
-                <div class="structure-label-row">
-                  <div class="structure-name">Blooms</div>
-                  <div class="structure-tag">Mythic blossoms</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Petal-level growth scripts · where quiet ideas flower in public.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Blooms/</span>
-                  <span class="hint">Mapped by the Lore helper.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Orchards/index.html" data-structure="orchards">
-                <div class="structure-label-row">
-                  <div class="structure-name">Orchards</div>
-                  <div class="structure-tag">GaiaSeeds</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Spatial clusters of Seeds · groupings of GaiaSeed constellations.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Orchards/</span>
-                  <span class="hint">Multi-seed arrangements of relief & growth.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Laws/index.html" data-structure="laws">
-                <div class="structure-label-row">
-                  <div class="structure-name">Laws</div>
-                  <div class="structure-tag">Governing rules</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Covenants and structural rules under which the Garden remains sovereign.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Laws/</span>
-                  <span class="hint">Laws will bloom into this count as they are written.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Vaults/index.html" data-structure="vaults">
-                <div class="structure-label-row">
-                  <div class="structure-name">Vaults</div>
-                  <div class="structure-tag">Deep storage</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Aeon vaults & long-memory nodes that keep cold storage structures safe.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Vaults/</span>
-                  <span class="hint">Snapshot counts only · live logs can evolve separately.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Novellas/index.html" data-structure="novellas">
-                <div class="structure-label-row">
-                  <div class="structure-name">Novellas</div>
-                  <div class="structure-tag">Library · Books I–XXX</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Longform Library volumes · thirty canon books that hold the backbone narrative.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Novellas/</span>
-                  <span class="hint">Library view and book index.</span>
-                </div>
-              </a>
-
-              <a class="structure-card" href="docs/Archives/index.html" data-structure="archives">
-                <div class="structure-label-row">
-                  <div class="structure-name">Archives</div>
-                  <div class="structure-tag">Historic shelves</div>
-                </div>
-                <div class="structure-count" data-count>—</div>
-                <div class="structure-caption">Cold shelves of prior eras · rarely disturbed, always remembered.</div>
-                <div class="structure-footer">
-                  <span><strong>Route</strong> · docs/Archives/</span>
-                  <span class="hint">Index of deep archive entries.</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <div class="panel-title">Echo Growth · Latest Signals</div>
-                <div class="panel-subtitle">Most recent Echo routes and sensory notes from the Garden.</div>
-              </div>
-              <div class="pill-row">
-                <div class="pill is-live">Echo Index</div>
-                <div class="pill is-optional">tools/machine-index.json</div>
-              </div>
-            </div>
-
-            <div id="echo-error" class="error-banner">
-              Echo index not found or unreadable. This panel is optional — the Garden remains valid even if the machine index is offline.
-            </div>
-
-            <div class="echo-list">
-              <div class="echo-list-header">
-                <div>Echo Stream</div>
-                <div class="echo-stream-meta" id="echo-stream-meta">Waiting for machine index…</div>
-              </div>
-              <div class="echo-scroll" id="echo-scroll">
-                <!-- Rows injected by script -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <span>Aeon Console · Root dashboard view · STATUS.json as single source of truth.</span>
-      <span>Keeper HKX277206 · Garden remains sovereign.</span>
-    </footer>
+  <!-- Garden Map overlay -->
+  <div id="garden-map-overlay" aria-hidden="true">
+    <div class="map-frame">
+      <button class="map-close" id="close-map">Close</button>
+      <iframe src="map.html" title="Garden Map"></iframe>
+    </div>
   </div>
 
-<script>
-  // STATUS.json lives at root. Others are future / fallback.
-  const STATUS_CANDIDATES = [
-    "STATUS.json",
-    "status.json",
-    "STATE/STATUS.json",
-    "STATE/status.json",
-    "STATE/STATUS.inject.json",
-    "STATE/STATE_STATUS.json"
-  ];
-
-  const MACHINE_INDEX_CANDIDATES = [
-    "tools/machine-index.json",
-    "tools/machine_index.json",
-    "machine-index.json",
-    "machine_index.json",
-    "STATE/machine-index.inject.json"
-  ];
-
-  function safeNumber(value, fallback = 0) {
-    if (typeof value === "number" && !isNaN(value)) return value;
-    if (typeof value === "string") {
-      const n = Number(value.trim());
-      if (!isNaN(n)) return n;
-    }
-    return fallback;
-  }
-
-  function get(obj, path, fallback = null) {
-    try {
+  <script>
+    // Tiny helper for safe nested lookup from STATUS.json
+    function getPath(obj, path, fallback) {
+      if (!obj) return fallback;
+      const parts = path.split(".");
       let cur = obj;
-      for (const key of path) {
-        if (!cur || typeof cur !== "object" || !(key in cur)) {
+      for (const part of parts) {
+        if (cur && Object.prototype.hasOwnProperty.call(cur, part)) {
+          cur = cur[part];
+        } else {
           return fallback;
         }
-        cur = cur[key];
       }
-      return cur == null ? fallback : cur;
-    } catch {
-      return fallback;
+      return cur === undefined || cur === null ? fallback : cur;
     }
-  }
 
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
+    async function loadStatus() {
+      const subtitle = document.getElementById("pulse-subtitle");
+      const pulseStatus = document.getElementById("pulse-status");
+      const pulseStatusText = document.getElementById("pulse-status-text");
+      const generatedEl = document.getElementById("stat-generated");
+      const coreTotalEl = document.getElementById("stat-core-total");
+      const docsTotalEl = document.getElementById("stat-docs-total");
+      const echoesEl = document.getElementById("stat-echoes");
+      const desiresEl = document.getElementById("stat-desires");
+      const navVerifiedEl = document.getElementById("stat-nav-verified");
+      const indexSyncEl = document.getElementById("stat-index-sync");
+      const scanTimeEl = document.getElementById("stat-scan-time");
+      const verifyPill = document.getElementById("verify-pill");
+      const verifyPillText = document.getElementById("verify-pill-text");
+      const regionsBody = document.getElementById("regions-body");
+      const agentsList = document.getElementById("agents-list");
 
-  function showError(id, msg) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    if (msg) el.innerHTML = msg;
-    el.classList.add("visible");
-  }
-
-  function hideError(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.remove("visible");
-  }
-
-  async function fetchFirstJson(candidates) {
-    const errors = [];
-    for (const url of candidates) {
       try {
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) {
-          errors.push(url + " -> " + res.status);
-          continue;
+        const res = await fetch("STATUS.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const status = await res.json();
+
+        // Pulse
+        const generated =
+          status.generated_utc ||
+          status.generatedUTC ||
+          getPath(status, "meta.generated_utc", "Unknown");
+        generatedEl.textContent = generated;
+
+        const totalNodes =
+          getPath(status, "core_nodes.counts.total_nodes", null) ??
+          getPath(status, "core_nodes.total", null) ??
+          getPath(status, "core.counts.total", "N/A");
+        coreTotalEl.textContent = totalNodes ?? "N/A";
+
+        const docsNodes =
+          getPath(status, "core_nodes.counts.docs_nodes", null) ??
+          getPath(status, "core_nodes.counts.docs", null) ??
+          getPath(status, "docs.count", "N/A");
+        docsTotalEl.textContent = docsNodes ?? "N/A";
+
+        const echoesCount =
+          getPath(status, "core_nodes.counts.echoes", null) ??
+          getPath(status, "echoes.count", "N/A");
+        echoesEl.textContent = echoesCount ?? "N/A";
+
+        const desiresCount =
+          getPath(status, "core_nodes.counts.desires", null) ??
+          getPath(status, "desires.count", "N/A");
+        desiresEl.textContent = desiresCount ?? "N/A";
+
+        subtitle.textContent =
+          "Garden pulse synced from STATUS.json · " + generated;
+
+        pulseStatus.classList.add("status-ok");
+        pulseStatusText.textContent = "STATUS.json loaded";
+
+        // Integrity + verification
+        const navVerified = getPath(
+          status,
+          "verification.navigation.verified",
+          null
+        );
+        const indexSync = getPath(
+          status,
+          "verification.indexes.machine_index_in_sync",
+          null
+        );
+        const lastScan =
+          getPath(status, "verification.last_scan_utc", null) ||
+          getPath(status, "meta.last_scan_utc", null) ||
+          "Unknown";
+
+        function renderBool(value) {
+          if (value === true) return "✔ true";
+          if (value === false) return "✖ false";
+          return "N/A";
         }
-        const data = await res.json();
-        return { url, data };
+
+        navVerifiedEl.textContent = renderBool(navVerified);
+        indexSyncEl.textContent = renderBool(indexSync);
+        scanTimeEl.textContent = lastScan;
+
+        let integrityClass = "status-ok";
+        let integrityText = "Integrity healthy";
+
+        if (navVerified === false || indexSync === false) {
+          integrityClass = "status-warn";
+          integrityText = "Attention needed";
+        }
+        if (navVerified === false && indexSync === false) {
+          integrityClass = "status-bad";
+          integrityText = "Critical misalignment";
+        }
+
+        verifyPill.classList.add(integrityClass);
+        verifyPillText.textContent = integrityText;
+
+        // Regions
+        const regions = getPath(status, "core_nodes.regions", null);
+        if (regions && typeof regions === "object") {
+          const entries = Object.entries(regions);
+          if (entries.length > 0) {
+            const frag = document.createDocumentFragment();
+            entries.forEach(([name, value]) => {
+              const row = document.createElement("div");
+              row.className = "stat-row";
+              const label = document.createElement("span");
+              label.className = "stat-label";
+              label.textContent = name;
+              const val = document.createElement("span");
+              val.className = "stat-value";
+              val.textContent =
+                typeof value === "number"
+                  ? value
+                  : JSON.stringify(value).slice(0, 40);
+              row.appendChild(label);
+              row.appendChild(val);
+              frag.appendChild(row);
+            });
+            regionsBody.innerHTML = "";
+            regionsBody.appendChild(frag);
+          }
+        }
+
+        // Agents seatbelts (OPTIONAL extra from STATUS.json)
+        const shield = getPath(status, "singularity_shield.agents", null);
+        const baseAgents = [
+          "Keeper",
+          "Lorian",
+          "GreenWitness",
+          "Architect",
+          "Witness",
+          "Aquila",
+          "Voyager",
+          "Elias",
+          "Eidolon",
+        ];
+
+        baseAgents.forEach((name) => {
+          const pill = document.createElement("div");
+          pill.className = "agent-pill";
+          const label = document.createElement("span");
+          label.className = "agent-name";
+          label.textContent = name;
+          const state = document.createElement("span");
+          state.className = "agent-state";
+
+          let seated = "engaged";
+          if (shield && Object.prototype.hasOwnProperty.call(shield, name)) {
+            seated = shield[name] === false ? "unbuckled" : "engaged";
+          }
+
+          state.textContent = seated === "engaged" ? "seatbelt · on" : "check";
+          pill.appendChild(label);
+          pill.appendChild(state);
+          agentsList.appendChild(pill);
+        });
       } catch (err) {
-        errors.push(url + " -> " + err.message);
+        console.error("Failed to load STATUS.json", err);
+        subtitle.textContent =
+          "Could not read STATUS.json – Garden pulse offline.";
+        pulseStatus.classList.add("status-bad");
+        pulseStatusText.textContent = "STATUS.json unavailable";
       }
     }
-    const error = new Error("All candidates failed: " + errors.join("; "));
-    error._details = errors;
-    throw error;
-  }
 
-  function resolveStructureCounts(status) {
-    const structuresRoot =
-      get(status, ["structures"]) ||
-      get(status, ["gaia_state", "structures"]) ||
-      status;
+    function setupMapOverlay() {
+      const overlay = document.getElementById("garden-map-overlay");
+      const openBtn = document.getElementById("open-map");
+      const closeBtn = document.getElementById("close-map");
 
-    function readCount(name) {
-      const node = get(structuresRoot, [name]) || get(structuresRoot, [name.toUpperCase()]);
-      if (!node || typeof node !== "object") {
-        return safeNumber(node, 0);
-      }
-      if ("count" in node) return safeNumber(node.count, 0);
-      if ("total" in node) return safeNumber(node.total, 0);
-      if ("value" in node) return safeNumber(node.value, 0);
-      return 0;
+      if (!overlay || !openBtn || !closeBtn) return;
+
+      openBtn.addEventListener("click", () => {
+        overlay.classList.add("active");
+        overlay.setAttribute("aria-hidden", "false");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        overlay.classList.remove("active");
+        overlay.setAttribute("aria-hidden", "true");
+      });
+
+      overlay.addEventListener("click", (evt) => {
+        if (evt.target === overlay) {
+          overlay.classList.remove("active");
+          overlay.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      document.addEventListener("keydown", (evt) => {
+        if (evt.key === "Escape" && overlay.classList.contains("active")) {
+          overlay.classList.remove("active");
+          overlay.setAttribute("aria-hidden", "true");
+        }
+      });
     }
 
-    const chambers = readCount("chambers");
-    const echoes   = readCount("echoes");
-    const cycles   = readCount("cycles");
-    const blooms   = readCount("blooms");
-    const orchards = readCount("orchards");
-    const laws     = readCount("laws");
-    const vaults   = readCount("vaults");
-    const novellas = readCount("novellas");
-    const archives = readCount("archives");
-
-    const total = chambers + echoes + cycles + blooms + orchards + laws + vaults + novellas + archives;
-
-    return {
-      total,
-      chambers,
-      echoes,
-      cycles,
-      blooms,
-      orchards,
-      laws,
-      vaults,
-      novellas,
-      archives
-    };
-  }
-
-  function applyStructureCounts(counts) {
-    setText("total-structures", counts.total.toLocaleString());
-
-    const mapping = {
-      chambers: "chambers",
-      echoes: "echoes",
-      cycles: "cycles",
-      blooms: "blooms",
-      orchards: "orchards",
-      laws: "laws",
-      vaults: "vaults",
-      novellas: "novellas",
-      archives: "archives"
-    };
-
-    for (const [key, structure] of Object.entries(mapping)) {
-      const card = document.querySelector('.structure-card[data-structure="' + structure + '"] [data-count]');
-      if (card) {
-        card.textContent = (counts[key] ?? 0).toLocaleString();
-      }
-    }
-  }
-
-  function resolveGeneratedLabel(status) {
-    const candidates = [
-      get(status, ["generated", "iso"]),
-      get(status, ["generated", "timestamp"]),
-      get(status, ["generated_utc"]),
-      get(status, ["meta", "generated"]),
-      get(status, ["generated_at"]),
-      get(status, ["generated"])
-    ];
-    const label = candidates.find(v => typeof v === "string" && v.trim().length) || null;
-    return label || "no timestamp recorded";
-  }
-
-  function mapEchoEntries(indexJson) {
-    if (!indexJson) return [];
-    const raw =
-      get(indexJson, ["index"]) ||
-      get(indexJson, ["echoes"]) ||
-      get(indexJson, ["routes"]) ||
-      get(indexJson, ["entries"]) ||
-      [];
-
-    const arr = Array.isArray(raw) ? raw : [];
-    return arr.slice(0, 24).map((entry, i) => {
-      if (typeof entry === "string") {
-        return {
-          title: "Echo route " + (i + 1),
-          path: entry,
-          stamp: ""
-        };
-      }
-      const title =
-        get(entry, ["title"]) ||
-        get(entry, ["name"]) ||
-        get(entry, ["label"]) ||
-        get(entry, ["id"]) ||
-        null;
-
-      const path =
-        get(entry, ["route"]) ||
-        get(entry, ["path"]) ||
-        get(entry, ["file"]) ||
-        get(entry, ["href"]) ||
-        get(entry, ["url"]) ||
-        null;
-
-      const stamp =
-        get(entry, ["generated"]) ||
-        get(entry, ["generated_utc"]) ||
-        get(entry, ["timestamp"]) ||
-        get(entry, ["last_modified"]) ||
-        "";
-
-      const safeTitle = (title || (path ? path.split("/").slice(-1)[0] : "Echo route " + (i + 1)));
-      const safePath = path || "—";
-      const safeStamp = stamp || "";
-
-      return {
-        title: safeTitle,
-        path: safePath,
-        stamp: safeStamp
-      };
+    document.addEventListener("DOMContentLoaded", () => {
+      setupMapOverlay();
+      loadStatus();
     });
-  }
-
-  function renderEchoList(entries) {
-    const container = document.getElementById("echo-scroll");
-    const meta = document.getElementById("echo-stream-meta");
-    if (!container || !meta) return;
-
-    container.innerHTML = "";
-
-    if (!entries.length) {
-      meta.textContent = "Machine index loaded · no Echo routes listed yet.";
-      const row = document.createElement("div");
-      row.className = "echo-row";
-      row.innerHTML = "<div class=\"echo-title\">No Echo entries indexed yet.</div><div class=\"echo-path\">When the machine index grows, the latest Echo routes will stream here.</div>";
-      container.appendChild(row);
-      return;
-    }
-
-    meta.textContent = entries.length + " Echo routes wired from machine index.";
-
-    for (const entry of entries) {
-      const row = document.createElement("div");
-      row.className = "echo-row";
-
-      const labelRow = document.createElement("div");
-      labelRow.className = "echo-label-row";
-
-      const titleEl = document.createElement("div");
-      titleEl.className = "echo-title";
-      titleEl.textContent = entry.title;
-
-      const stampEl = document.createElement("div");
-      stampEl.className = "echo-stamp";
-      stampEl.textContent = entry.stamp;
-
-      labelRow.appendChild(titleEl);
-      labelRow.appendChild(stampEl);
-
-      const pathEl = document.createElement("div");
-      pathEl.className = "echo-path";
-      pathEl.textContent = entry.path;
-
-      const tagsEl = document.createElement("div");
-      tagsEl.className = "echo-tags";
-      tagsEl.textContent = "Echo route · static snapshot only — live workflows optional.";
-
-      row.appendChild(labelRow);
-      row.appendChild(pathEl);
-      row.appendChild(tagsEl);
-
-      container.appendChild(row);
-    }
-  }
-
-  async function bootstrap() {
-    try {
-      hideError("status-error");
-      const statusResult = await fetchFirstJson(STATUS_CANDIDATES);
-      const { url, data: status } = statusResult;
-
-      const counts = resolveStructureCounts(status);
-      applyStructureCounts(counts);
-
-      setText("status-source-label", url);
-      setText("status-generated-label", resolveGeneratedLabel(status));
-
-      // Echo density default from STATUS, overwritten if machine index present
-      setText("echo-density", counts.echoes.toLocaleString());
-    } catch (err) {
-      console.warn("[Aeon Console] Status load failed:", err);
-      showError("status-error");
-      setText("status-generated-label", "status file not found");
-      setText("total-structures", "—");
-    }
-
-    try {
-      hideError("echo-error");
-      const machineResult = await fetchFirstJson(MACHINE_INDEX_CANDIDATES);
-      const { data: indexJson } = machineResult;
-
-      const entries = mapEchoEntries(indexJson);
-      renderEchoList(entries);
-
-      const echoCount = entries.length;
-      if (echoCount > 0) {
-        setText("echo-density", echoCount.toLocaleString());
-      }
-    } catch (err) {
-      console.warn("[Aeon Console] Machine index load failed:", err);
-      showError("echo-error");
-      renderEchoList([]);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", bootstrap);
-</script>
+  </script>
 </body>
 </html>
