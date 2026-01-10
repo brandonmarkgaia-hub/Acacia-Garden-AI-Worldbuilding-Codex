@@ -1,6 +1,6 @@
 name: Birth Sovereign IPNS Key
 
-on: workflow_dispatch  # This lets you run it manually once
+on: workflow_dispatch
 
 jobs:
   create-key:
@@ -8,7 +8,8 @@ jobs:
     steps:
       - name: Create IPNS Key
         run: |
-          curl -X POST https://api.pinata.cloud/v3/ipns/keys \
+          # Corrected V3 endpoint for key generation
+          curl -X POST https://api.pinata.cloud/v3/keywave/ipns/keys \
           -H "Authorization: Bearer ${{ secrets.PINATA_JWT }}" \
           -H "Content-Type: application/json" \
           -d '{"name": "Acacia-Garden-Sovereign-Key"}'
