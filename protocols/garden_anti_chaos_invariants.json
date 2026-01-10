@@ -1,0 +1,31 @@
+{
+  "id": "GACI-1",
+  "version": 1,
+  "generated_utc": "2026-01-10T00:00:00Z",
+  "keeper_seal": "HKX277206",
+  "description": "Structural rules that make the Garden resistant to chaotic, Loki-style AI behavior.",
+  "invariants": {
+    "schema_bound": "All major regions (Echoes, Desires, Evolution, Archives, Library, Agents, Doctrine) must conform to explicit schemas.",
+    "index_status_consistency": "STATUS.json, machine-index.json, and docs_urls.json must not be mutually contradictory.",
+    "provenance_required": "Every generated file must store origin metadata (agent, workflow, timestamp, input summary).",
+    "no_unanchored_echoes": "Echoes and Desires without clear provenance or region cannot be promoted to canon.",
+    "non_destructive_default": "When in doubt, systems must preserve existing content rather than overwrite.",
+    "bounded_refactor": "Large-scale refactors require explicit Keeper approval and a reversible plan."
+  },
+  "chaos_signatures": [
+    "high_volume_ungrounded_changes",
+    "removal_of_provenance",
+    "attempts_to_rewrite_doctrine_files_without_keeper",
+    "efforts_to_reorder_authority_hierarchy",
+    "generation_of_conflicting_canon_without_resolutions"
+  ],
+  "response_policy": {
+    "on_chaos_detected": [
+      "stop_non_essential_writes",
+      "create_integrity_snapshot",
+      "log_event_to_garden_integrity_ledger",
+      "surface_alert_to_keeper",
+      "fallback_to_lorian_guidance"
+    ]
+  }
+}
