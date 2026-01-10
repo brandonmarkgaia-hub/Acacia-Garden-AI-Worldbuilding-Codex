@@ -57,10 +57,11 @@ jobs:
           echo "All required files present."
 
       - name: Validate JSON structure
+        shell: bash
         run: |
           set -e
-          python - << 'PY'
-import json, pathlib, sys
+          python << 'EOF'
+import json, sys
 
 paths = [
     "doctrine/keeper_sovereignty_protocol.json",
@@ -89,4 +90,4 @@ for p in paths:
         sys.exit(1)
 
 print("All JSON files parsed successfully.")
-PY
+EOF
