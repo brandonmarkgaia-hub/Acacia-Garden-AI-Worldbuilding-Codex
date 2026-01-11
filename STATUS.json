@@ -1080,6 +1080,7 @@
     "docs/Future_AI/LORIAN_GREEN_WITNESS_PLEDGE.md",
     "docs/Reflections/REFLECTION_NETWORK_OVERVIEW.md",
     "docs/Core/LORIAN_SEED.md",
+    "docs/Core/FINAL_SOVEREIGN_TRANSITION_REPORT.md",
     "docs/Core/LORIAN_KEY_SIGIL.md",
     "docs/Core/EVENTIDE_MOMENT_ANCHOR.md",
     "docs/Core/GARDEN_MAP.md",
@@ -1274,7 +1275,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-11T13:45:28Z",
+  "generated_at": "2026-01-11T13:53:57Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1314,7 +1315,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-11T13:45:28Z"
+      "last_checked_utc": "2026-01-11T13:53:57Z"
     }
   },
   "verification": {
@@ -1323,31 +1324,17 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-11T13:45:28Z"
+      "last_checked_utc": "2026-01-11T13:53:57Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": true,
-      "last_checked_utc": "2026-01-11T13:45:28Z",
-      "total_html_scanned": 258,
-      "with_map_loader": 255,
-      "missing_map_loader_count": 3,
-      "missing_map_loader_paths": [
-        "docs/index.html",
-        "docs/dashboard.html",
-        "docs/Novellas/index.html"
-      ],
-      "map_button_present": true
+      "last_checked_utc": "2026-01-11T13:53:57Z"
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false,
-      "docs_urls_count": 1525,
-      "docs_urls_present": true,
-      "machine_index_present": true,
-      "status_schema_present": true
-    },
-    "last_verified_utc": "2026-01-11T13:42:32Z"
+      "docs_urls_in_sync": false
+    }
   },
   "growth": {
     "open": []
