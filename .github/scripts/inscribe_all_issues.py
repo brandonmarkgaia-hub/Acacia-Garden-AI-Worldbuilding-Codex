@@ -9,7 +9,6 @@ REPO = "brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex"
 KEEPER_SEAL = "HKX277206"
 BASE_DIR = "docs"
 
-# Exact Casing from MAINTAINERS_GUIDE.md
 CATEGORY_MAP = {
     "Chambers": ["chamber", "room", "well", "structure"],
     "Echoes": ["vision", "echo", "sight", "voice", "dream"],
@@ -19,11 +18,10 @@ CATEGORY_MAP = {
 }
 
 def clean_filename(text):
-    # Keeps it clean for the filesystem while preserving context
     return re.sub(r'[^a-zA-Z0-9_]', '', text.replace(" ", "_"))
 
 def get_target_folder(title, body):
-    content = (title + body).lower()
+    content = (title + (body or "")).lower()
     for folder, keywords in CATEGORY_MAP.items():
         if any(kw in content for kw in keywords):
             return folder
@@ -35,8 +33,12 @@ def inscribe():
     
     print(f"🌿 Witness Protocol: Auditing {REPO}...")
     response = requests.get(url, headers=headers)
-    issues = response.json()
+    
+    if response.status_code != 200:
+        print(f"❌ Error: Could not fetch issues. Status: {response.status_code}")
+        return
 
+    issues = response.json()
     for issue in issues:
         if 'pull_request' in issue: continue
         
@@ -64,10 +66,8 @@ def inscribe():
 * **Keeper Seal:** {KEEPER_SEAL}
 * **Integrity Check:** Paths aligned to docs/{folder}. No drift detected.
 """
-        
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
-        
         print(f"✅ Inscribed #{num} -> {filepath}")
 
 if __name__ == "__main__":
