@@ -194,10 +194,24 @@
     .col-8 { grid-column: span 8; }
     .col-12 { grid-column: span 12; }
 
-    @media (max-width: 1000px) {
+        @media (max-width: 1000px) {
       .col-4, .col-6, .col-8 { grid-column: span 12; }
-      .tree-stage { display: none; } /* Hide tree on mobile for performance */
+      
+      /* ENABLE TREE ON MOBILE, BUT TAME IT */
+      .tree-stage { 
+        display: block !important; 
+        opacity: 0.2;            /* Subtle ghost tree */
+        transform: translateX(-50%) scale(0.6); /* Shrink to fit screen */
+        bottom: -50px;           /* Push it down slightly */
+        width: 100%;             /* Ensure it doesn't overflow */
+      }
+      
+      /* MAKE RAIN VISIBLE ON MOBILE */
+      .rain-canvas {
+        opacity: 0.25;           /* Slightly brighter rain for small screens */
+      }
     }
+
 
     /* --- ANIMATIONS --- */
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
