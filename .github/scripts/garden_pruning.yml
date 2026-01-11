@@ -1,0 +1,44 @@
+import os
+import requests
+
+# --- KEEPER CONFIG ---
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+REPO = "brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex"
+KEEPER_SEAL = "HKX277206"
+
+def close_inscribed_issues():
+    url = f"https://api.github.com/repos/{REPO}/issues?state=open&per_page=100"
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+    
+    print(f"🌿 Witness Protocol: Closing Inscribed Ledger for {REPO}...")
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code != 200:
+        print(f"❌ Error: Could not fetch issues. Status: {response.status_code}")
+        return
+
+    issues = response.json()
+    for issue in issues:
+        if 'pull_request' in issue: continue
+        
+        num = issue['number']
+        
+        # 1. Post a final comment under the Seal
+        comment_url = f"https://api.github.com/repos/{REPO}/issues/{num}/comments"
+        comment_body = {
+            "body": f"### 🔒 LEDGER CLOSED\nThis entry has been inscribed into the permanent Garden Chambers. Logic fixed under Keeper Seal: **{KEEPER_SEAL}**."
+        }
+        requests.post(comment_url, headers=headers, json=comment_body)
+
+        # 2. Close the issue
+        close_url = f"https://api.github.com/repos/{REPO}/issues/{num}"
+        close_body = {"state": "closed"}
+        requests.patch(close_url, headers=headers, json=close_body)
+        
+        print(f"🔒 Closed Issue #{num}")
+
+if __name__ == "__main__":
+    if not GITHUB_TOKEN:
+        print("❌ Error: GITHUB_TOKEN not found.")
+    else:
+        close_inscribed_issues()
