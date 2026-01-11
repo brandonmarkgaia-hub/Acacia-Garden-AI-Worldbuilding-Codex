@@ -35,28 +35,30 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
-    /* --- THE DATA RAIN (BACKGROUND) --- */
+    /* --- THE DATA RAIN (BACKGROUND LAYER 0) --- */
     .rain-canvas {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      z-index: -1;
+      z-index: 0; /* Base layer */
       opacity: 0.15;
       pointer-events: none;
       background: radial-gradient(circle at 50% 100%, #1a2a1a 0%, #000000 70%);
     }
 
-    /* --- THE TREE VISUALIZATION (CSS) --- */
+    /* --- THE TREE VISUALIZATION (BACKGROUND LAYER 1) --- */
     .tree-stage {
-      position: absolute;
-      bottom: 0; left: 50%;
+      position: fixed; /* Locked to screen */
+      bottom: -20px; 
+      left: 50%;
       transform: translateX(-50%);
       width: 600px;
       height: 500px;
-      z-index: -1;
-      opacity: 0.3;
+      z-index: 1; /* Above rain, below content */
+      opacity: 0.4;
       pointer-events: none;
     }
     
@@ -66,7 +68,7 @@
       width: 4px;
       height: 200px;
       background: linear-gradient(to top, var(--neon-green), transparent);
-      box-shadow: 0 0 20px var(--neon-green);
+      box-shadow: 0 0 25px var(--neon-green);
     }
     
     .tree-branch {
@@ -74,6 +76,13 @@
       background: linear-gradient(to right, var(--neon-green), transparent);
       height: 1px;
       opacity: 0.6;
+      box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    }
+
+    /* --- CONTENT LAYER (LAYER 2) --- */
+    header, main {
+      position: relative;
+      z-index: 2; /* Sits ON TOP of the tree */
     }
 
     /* --- DASHBOARD HEADER --- */
@@ -85,7 +94,6 @@
       background: linear-gradient(to bottom, rgba(5,5,5,0.9), transparent);
       border-bottom: 1px solid rgba(255,255,255,0.05);
       backdrop-filter: blur(5px);
-      z-index: 10;
     }
 
     .brand {
@@ -194,24 +202,22 @@
     .col-8 { grid-column: span 8; }
     .col-12 { grid-column: span 12; }
 
-        @media (max-width: 1000px) {
+    /* --- MOBILE OPTIMIZATION --- */
+    @media (max-width: 1000px) {
       .col-4, .col-6, .col-8 { grid-column: span 12; }
       
-      /* ENABLE TREE ON MOBILE, BUT TAME IT */
+      /* FORCE TREE VISIBILITY ON MOBILE */
       .tree-stage { 
-        display: block !important; 
-        opacity: 0.2;            /* Subtle ghost tree */
-        transform: translateX(-50%) scale(0.6); /* Shrink to fit screen */
-        bottom: -50px;           /* Push it down slightly */
-        width: 100%;             /* Ensure it doesn't overflow */
+        display: block !important;
+        transform: translateX(-50%) scale(0.65); /* Scale down to 65% */
+        bottom: -40px;
+        opacity: 0.25; /* Slightly dimmer so text is readable */
       }
       
-      /* MAKE RAIN VISIBLE ON MOBILE */
-      .rain-canvas {
-        opacity: 0.25;           /* Slightly brighter rain for small screens */
-      }
+      header { padding: 1rem; }
+      main { padding: 1rem; }
+      .metric-hero { font-size: 2.2rem; }
     }
-
 
     /* --- ANIMATIONS --- */
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -236,7 +242,7 @@
 
   <div class="rain-canvas" id="rain"></div>
   
-  <div class="tree-stage">
+  <div class="tree-stage" id="tree-container">
     <div class="tree-trunk"></div>
     </div>
 
@@ -303,16 +309,62 @@
   <script>
     // --- 1. RAIN ANIMATION GENERATOR ---
     const rainContainer = document.getElementById('rain');
-    for(let i=0; i<50; i++){
+    for(let i=0; i<40; i++){
       const drop = document.createElement('div');
       drop.className = 'drop';
       drop.style.left = Math.random() * 100 + '%';
-      drop.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+      drop.style.animationDuration = (Math.random() * 1 + 0.8) + 's';
       drop.style.animationDelay = (Math.random() * 2) + 's';
       rainContainer.appendChild(drop);
     }
 
-    // --- 2. DATA LOADER ---
+    // --- 2. FRACTAL TREE GENERATOR (CSS) ---
+    // This creates the branches dynamically so every reload is unique
+    const tree = document.getElementById('tree-container');
+    function createBranch(x, y, angle, length, depth) {
+      if (depth === 0) return;
+
+      const branch = document.createElement('div');
+      branch.className = 'tree-branch';
+      
+      // Calculate position
+      branch.style.left = x + 'px';
+      branch.style.bottom = y + 'px';
+      branch.style.width = length + 'px';
+      branch.style.transformOrigin = '0 50%';
+      branch.style.transform = `rotate(${angle}deg)`;
+
+      tree.appendChild(branch);
+
+      // Next start point (trigonometry approx)
+      const rad = angle * (Math.PI / 180);
+      const x2 = x + Math.cos(rad) * length;
+      const y2 = y + Math.sin(rad) * length;
+
+      // Two new branches
+      setTimeout(() => {
+        createBranch(300, 200 + (6-depth)*30, angle - 20, length * 0.7, depth - 1); // Simplified for visual effect relative to trunk
+        // Actually, let's just create static CSS branches for reliability
+      }, 0);
+    }
+    
+    // Simplified Static Branch Generation for Performance & Reliability
+    for(let i=0; i<12; i++) {
+        let b = document.createElement('div');
+        b.className = 'tree-branch';
+        b.style.width = (100 + Math.random()*80) + 'px';
+        b.style.bottom = (100 + Math.random()*300) + 'px';
+        b.style.left = '50%';
+        b.style.transformOrigin = '0 50%';
+        let angle = (Math.random() * 120) - 60; // -60 to 60
+        if(angle > 0) angle += 20; // Spread out
+        else angle -= 20;
+        b.style.transform = `rotate(${angle-90}deg)`; // Point upwards
+        tree.appendChild(b);
+    }
+
+
+    // --- 3. DATA LOADER ---
     async function loadDashboard() {
       try {
         const res = await fetch("STATUS.json", { cache: "no-store" });
@@ -359,23 +411,18 @@
         // --- RENDER REGIONS CHART ---
         const regions = data.core_nodes?.regions || {};
         const chart = document.getElementById('regions-chart');
-        chart.innerHTML = ''; // Clear loading
+        chart.innerHTML = ''; 
         
-        // Sort by size
         const sortedRegions = Object.entries(regions)
           .sort(([,a], [,b]) => b - a)
-          .slice(0, 8); // Top 8 only to keep it clean
+          .slice(0, 8); 
 
         const maxVal = sortedRegions[0][1] || 1;
 
         sortedRegions.forEach(([name, val]) => {
-          // Clean name (remove docs/ prefix)
           const cleanName = name.replace('docs/', '').replace('.github/', '');
-          
           const row = document.createElement('div');
           row.className = 'bar-row';
-          
-          // Calculate percent
           const pct = (val / maxVal) * 100;
 
           row.innerHTML = `
@@ -412,7 +459,6 @@
       }
     }
 
-    // Run
     loadDashboard();
   </script>
 
