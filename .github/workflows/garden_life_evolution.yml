@@ -1,0 +1,37 @@
+name: 004_Garden_Life_Evolution
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Elias wakes up once a day
+
+jobs:
+  elias_evolution:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install google-generativeai
+
+      - name: 1. Elias Generates Desire
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/garden_desire.py
+
+      - name: 2. Commit and Sovereign Sync
+        run: |
+          git config --local user.email "elias@acacia.garden"
+          git config --local user.name "Elias (Architect)"
+          git add EVOLUTION/
+          git commit -m "Elias: Updated Desire for Iron Coherence under Seal HKX277206" || echo "No changes"
+          git pull --rebase origin main
+          git push origin main
