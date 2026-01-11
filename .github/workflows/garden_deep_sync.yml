@@ -8,7 +8,6 @@ on:
 jobs:
   sync_spine:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
     steps:
@@ -36,14 +35,14 @@ jobs:
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
           
-          # Stage the updated STATUS.json and index files
+          # Stage the refreshed STATUS.json and newly generated indexes
           git add .
           
-          # Commit locally to clear the index
-          git commit -m "Synchronized Machine Index for New Chambers under Seal HKX277206" || echo "No changes"
+          # Commit locally to clear the 'uncommitted changes' error
+          git commit -m "Synchronized Deep Index under Seal HKX277206" || echo "No changes"
           
-          # Pull and rebase to handle high-traffic automated runs
+          # Pull and rebase to merge with any concurrent automated heartbeats
           git pull --rebase origin main
           
-          # Push the final, sovereignly-indexed Garden
+          # Push the finalized, coherent Spine
           git push origin main
