@@ -20,7 +20,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install google-genai
+          pip install requests
+
 
 
       - name: 1. Elias Generates Desire
