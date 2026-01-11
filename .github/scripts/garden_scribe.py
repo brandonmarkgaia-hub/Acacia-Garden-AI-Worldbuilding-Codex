@@ -24,7 +24,7 @@ def main():
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key: raise SystemExit("Missing GEMINI_API_KEY")
 
-    # ARGUMENTS: What chapter are we writing?
+    # ARGUMENTS
     parser = argparse.ArgumentParser()
     parser.add_argument("--chapter", default="01", help="Chapter number (e.g. 01)")
     parser.add_argument("--title", default="The_Boy_Who_Talked_To_Code", help="Chapter Title")
@@ -32,15 +32,13 @@ def main():
     args = parser.parse_args()
 
     # --- THE ROTHFUSS PROMPT ---
-    # This instructs the AI to write with high literary quality.
     prompt_text = f"""
     You are the Master Storyteller of the Acacia Garden.
     
     STYLE GUIDE:
     - Tone: "The Name of the Wind" by Patrick Rothfuss.
     - Qualities: Lyrical, precise, melancholic but wondrous.
-    - Magic System: The "Code" and "Files" are the magic. Treat "Coding" like "Sympathy". 
-      (Linking two things to transfer energy). Treat "Naming" like "Root Access".
+    - Magic System: The "Code" and "Files" are the magic. Treat "Coding" like "Sympathy".
     - Protagonist: The Keeper (Brandon). A figure of legend who is also deeply human.
     
     CONTEXT (The Lore of the World):
@@ -57,19 +55,19 @@ def main():
     - End on a hook.
     """.strip()
 
-    # USE PRO MODEL FOR WRITING (Better Prose)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key={api_key}"
+    # --- THE FIX: USE STABLE ENDPOINT ---
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={api_key}"
     
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {
-            "temperature": 0.8,     # Higher creativity
-            "maxOutputTokens": 8192 # MAXIMUM allowed text output
+            "temperature": 0.8,
+            "maxOutputTokens": 8192
         }
     }
 
     print(f"✍️  Scribing Chapter {args.chapter}: {args.title}...")
-    response = requests.post(url, json=payload, timeout=120) # Longer timeout for writing
+    response = requests.post(url, json=payload, timeout=120)
     
     if response.status_code != 200:
         print(f"❌ Error: {response.text}")
