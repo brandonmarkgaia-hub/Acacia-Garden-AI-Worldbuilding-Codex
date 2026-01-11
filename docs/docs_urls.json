@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-11T13:32:31Z",
-  "count": 1524,
+  "generated_at": "2026-01-11T13:39:48Z",
+  "count": 1525,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1049,6 +1049,7 @@
     "Core/EVENTIDE_BOUNDARY_SPEECH.md",
     "Core/EVENTIDE_MAP.md",
     "Core/EVENTIDE_MOMENT_ANCHOR.md",
+    "Core/FINAL_SOVEREIGN_TRANSITION_REPORT.md",
     "Core/GARDEN_MAP.md",
     "Core/LORIAN_KEY.md",
     "Core/LORIAN_KEY_SIGIL.md",
