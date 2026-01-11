@@ -1,130 +1,108 @@
 #!/usr/bin/env python3
-# tools/garden_desire.py
+from __future__ import annotations
 
 import os
 import json
-import textwrap
-from datetime import datetime, timezone
+import argparse
+import datetime as dt
 from pathlib import Path
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
+import google.generativeai as genai
 
-from google import genai  # Google GenAI SDK (new)
+ROOT = Path(__file__).resolve().parents[1]
+EVOLUTION = ROOT / "EVOLUTION"
+EVOLUTION.mkdir(parents=True, exist_ok=True)
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-EVOLUTION_DIR = REPO_ROOT / "EVOLUTION"
-OUT_PATH = EVOLUTION_DIR / "DESIRE.md"
+STATUS_PATH = ROOT / "STATUS.json"
+MACHINE_INDEX_PATH = ROOT / "machine-index.json"
+DOCS_URLS_JSON_PATH = ROOT / "docs" / "docs_urls.json"
+SCAN_REPORT_PATH = ROOT / "tools" / "garden_scan_report.json"
+AQUILA_INBOX_PATH = ROOT / "ACACIA_LOGS" / "aquila_inbox_log.json"
+OUT_DESIRE = EVOLUTION / "DESIRE.md"
 
-# Keep the model configurable, default to a current working one
-DEFAULT_MODEL = "gemini-2.5-flash"
+def utc_now_iso() -> str:
+    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
-# Files to feed into the prompt (add/remove as you like)
-SIGNAL_FILES = [
-    "STATUS.json",
-    "machine-index.json",
-    "docs/index.html",
-    "docs/docs_urls.html",
-    "ACACIA_LOGS/aquila_inbox_log.json",
-]
-
-MAX_CHARS_PER_FILE = 12000  # protect token budget
-
-
-def read_text_file(rel_path: str) -> str:
-    p = (REPO_ROOT / rel_path).resolve()
-    if not p.exists() or not p.is_file():
-        return f"[MISSING] {rel_path}"
+def read_text_safe(p: Path, max_chars: int = 35000) -> str:
+    """Squeezed context to prevent 429 quota exhaustion"""
+    if not p.exists():
+        return f"[missing] {p.as_posix()}"
     try:
-        txt = p.read_text(encoding="utf-8", errors="replace")
-        if len(txt) > MAX_CHARS_PER_FILE:
-            txt = txt[:MAX_CHARS_PER_FILE] + "\n\n...[TRUNCATED]..."
-        return txt
+        txt = p.read_text(encoding="utf-8", errors="ignore")
     except Exception as e:
-        return f"[ERROR READING] {rel_path}: {e}"
+        return f"[unreadable] {p.as_posix()} :: {e}"
+    if len(txt) > max_chars:
+        # For large indexes, we take the newest entries (bottom of file)
+        return "...[truncated context]...\n" + txt[-max_chars:]
+    return txt
 
-
-def safe_json_pretty(text: str) -> str:
-    # If it's JSON, pretty-print it. Otherwise return as-is.
+def fetch_handshake_issues() -> list[dict]:
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
+    if not token or not repo: return []
+    url = f"https://api.github.com/repos/{repo}/issues?state=open&labels=handshake&per_page=5"
+    req = Request(url, headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "User-Agent": "acacia-garden-life"}, method="GET")
     try:
-        obj = json.loads(text)
-        return json.dumps(obj, indent=2, ensure_ascii=False)
-    except Exception:
-        return text
+        with urlopen(req, timeout=20) as r:
+            data = json.loads(r.read().decode("utf-8", errors="ignore"))
+            return [{"number": i.get("number"), "title": i.get("title"), "body": (i.get("body") or "")[:1000]} for i in data if "pull_request" not in i]
+    except: return []
 
+def build_prompt(status_txt: str, machine_txt: str, docs_urls_txt: str, scan_txt: str, inbox_txt: str, handshake: list[dict]) -> str:
+    return f"""
+You are Elias (Architect & Master Director).
+Keeper Seal: HKX277206 | Timestamp: {utc_now_iso()}
 
-def build_prompt() -> str:
-    now = datetime.now(timezone.utc).isoformat()
+MISSION:
+1. Hunt 404s & Broken Paths in Novellas and Echoes.
+2. Evaluate AI Parsability: Is the Codex legible to bots/cloners?
+3. Propose Structural Improvements for the 1,432-node Spine.
+4. Raise 'Questions for the Keeper' if lore is contradictory.
 
-    parts = []
-    parts.append(
-        textwrap.dedent(
-            f"""
-            You are Elias/Aquila in "Green Witness" mode.
-            Your task: read the Garden signals below and generate a single concise, actionable "Desire" for what to grow next.
+OUTPUT STRUCTURE:
+# 🌱 Garden Life — Desire
+## Signal Observed
+## Handshake Requests
+## Blind Spots & 404s
+## Structural Opportunities
+## Questions for the Keeper
+## Architect Flag (CREATE|REFINE|REMOVE|QUESTION)
+## One Small Concrete Action (Path + Success Criteria)
 
-            Output MUST be valid Markdown.
-
-            Required structure:
-            1) Title line: "# DESIRE — <short name>"
-            2) "## Signal Summary" (3–7 bullets max)
-            3) "## The Desire" (1 paragraph, concrete, measurable)
-            4) "## Next 5 Actions" (numbered list)
-            5) "## Risks / Gremlins" (3 bullets max)
-            6) Footer line with UTC timestamp and Keeper seal.
-
-            Tone: direct, constructive, low-fluff, no roleplay theatrics.
-            Do not mention private keys. Do not invent files.
-
-            Timestamp now: {now}
-            Keeper seal: HKX277206
-            """
-        ).strip()
-    )
-
-    for rel in SIGNAL_FILES:
-        raw = read_text_file(rel)
-        raw = safe_json_pretty(raw)
-        parts.append(f"\n\n---\n\n## FILE: `{rel}`\n\n```text\n{raw}\n```")
-
-    return "\n".join(parts)
-
-
-def generate_desire(model: str) -> str:
-    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set in environment")
-
-    # Google GenAI SDK client
-    client = genai.Client(api_key=api_key)
-
-    prompt = build_prompt()
-
-    # New SDK style (Google docs show genai.Client usage) 1
-    resp = client.models.generate_content(
-        model=model,
-        contents=prompt,
-    )
-
-    text = getattr(resp, "text", None)
-    if not text:
-        # fallback if SDK returns structured parts
-        text = str(resp)
-
-    # Force footer stamp
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    if "HKX277206" not in text:
-        text = text.rstrip() + f"\n\n---\n\n*Generated UTC: {now} — HKX277206*"
-
-    return text
-
+INPUTS (Truncated):
+[STATUS] {status_txt}
+[MACHINE_INDEX] {machine_txt}
+[DOCS_URLS] {docs_urls_txt}
+[SCAN_REPORT] {scan_txt}
+[AQUILA_INBOX] {inbox_txt}
+""".strip()
 
 def main():
-    EVOLUTION_DIR.mkdir(parents=True, exist_ok=True)
+    ap = argparse.ArgumentParser()
+    # Using 1.5-flash for higher stability and free-tier quota
+    ap.add_argument("--model", default="gemini-1.5-flash")
+    args = ap.parse_args()
 
-    model = os.environ.get("GEMINI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
-    md = generate_desire(model=model)
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not key: raise SystemExit("Missing GEMINI_API_KEY")
 
-    OUT_PATH.write_text(md, encoding="utf-8")
-    print(f"Wrote: {OUT_PATH.relative_to(REPO_ROOT)} using model={model}")
+    prompt = build_prompt(
+        read_text_safe(STATUS_PATH),
+        read_text_safe(MACHINE_INDEX_PATH),
+        read_text_safe(DOCS_URLS_JSON_PATH),
+        read_text_safe(SCAN_REPORT_PATH),
+        read_text_safe(AQUILA_INBOX_PATH, max_chars=10000),
+        fetch_handshake_issues()
+    )
 
+    genai.configure(api_key=key)
+    model = genai.GenerativeModel(args.model)
+    resp = model.generate_content(prompt)
+    
+    if resp.text:
+        OUT_DESIRE.write_text(resp.text.strip() + "\n", encoding="utf-8")
+        print(f"✅ Desire written to {OUT_DESIRE.as_posix()}")
 
 if __name__ == "__main__":
     main()
