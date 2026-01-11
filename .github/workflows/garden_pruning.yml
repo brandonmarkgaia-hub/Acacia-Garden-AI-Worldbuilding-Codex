@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: read
+      issues: write # Needed to post comments and close threads
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,16 +20,23 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: Run Witness Inscription
+      - name: 1. Inscribe Issues to Docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # Using a direct path to the script to prevent path doubling
         run: python .github/scripts/inscribe_all_issues.py
 
-      - name: Commit to Spine
+      - name: 2. Update Spine Index (STATUS.json)
+        run: python .github/scripts/update_spine_index.py
+
+      - name: 3. Commit New Records
         run: |
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
-          git add docs/
-          git commit -m "Inscribed open issues to docs/ under Seal HKX277206" || echo "No changes to commit"
+          git add .
+          git commit -m "Inscribed and Indexed Garden Ledger under Seal HKX277206" || echo "No changes"
           git push
+
+      - name: 4. Close Inscribed Issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/close_all_issues.py
