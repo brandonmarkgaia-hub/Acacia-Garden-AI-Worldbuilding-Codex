@@ -1,983 +1,406 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Acacia Garden · Dashboard</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <title>ACACIA · COMMAND DECK · HKX277206</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #020617;
-      --bg-elevated: #020617;
-      --bg-soft: rgba(15, 23, 42, 0.95);
-      --border: rgba(148, 163, 184, 0.35);
-      --border-soft: rgba(51, 65, 85, 0.6);
-      --accent: #22c55e;
-      --accent-soft: rgba(34, 197, 94, 0.16);
-      --accent-strong: rgba(34, 197, 94, 0.24);
-      --accent-soft-alt: rgba(56, 189, 248, 0.08);
-      --accent-soft-purple: rgba(129, 140, 248, 0.16);
-      --accent-soft-amber: rgba(245, 158, 11, 0.14);
-      --accent-soft-rose: rgba(244, 63, 94, 0.14);
-      --accent-soft-red: rgba(239, 68, 68, 0.16);
-      --accent-soft-green: rgba(34, 197, 94, 0.16);
-      --text: #e5e7eb;
-      --text-soft: #9ca3af;
-      --text-softer: #6b7280;
-      --chip-bg: rgba(15, 23, 42, 0.96);
-      --chip-border: rgba(55, 65, 81, 0.9);
-      --chip-active-bg: rgba(34, 197, 94, 0.12);
-      --chip-active-border: rgba(34, 197, 94, 0.85);
-      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.9);
-      --shadow-subtle: 0 16px 40px rgba(15, 23, 42, 0.7);
-      --ring-soft: 0 0 0 1px rgba(148, 163, 184, 0.5);
-      --muted: #4b5563;
-      --danger: #ef4444;
-      --danger-soft: rgba(239, 68, 68, 0.1);
-      --warn: #fbbf24;
-      --warn-soft: rgba(245, 158, 11, 0.1);
-      --ok: #22c55e;
-      --ok-soft: rgba(34, 197, 94, 0.08);
-      --pill-nav: #334155;
-      --pill-bg: rgba(15, 23, 42, 0.9);
-      --pill-border: rgba(51, 65, 85, 0.9);
-      --pill-active: rgba(34, 197, 94, 0.16);
-      --pill-active-border: rgba(74, 222, 128, 0.9);
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "SF Pro Display", Segoe UI, Roboto, sans-serif;
+      --bg: #050505;
+      --void: #020202;
+      --glass: rgba(20, 30, 40, 0.7);
+      --glass-border: rgba(46, 204, 113, 0.15);
+      --neon-green: #2ecc71;
+      --neon-blue: #3498db;
+      --neon-purple: #9b59b6;
+      --platinum: #e5e4e2;
+      --alert: #e74c3c;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-ui: 'Inter', sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
+      background-color: var(--bg);
+      color: var(--platinum);
+      font-family: var(--font-ui);
       margin: 0;
+      overflow-x: hidden;
       min-height: 100vh;
-      font-family: var(--font-sans);
-      background: radial-gradient(circle at top, #031128 0, var(--bg) 48%);
-      color: var(--text);
       display: flex;
       flex-direction: column;
     }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      backdrop-filter: blur(8px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.95),
-        rgba(15, 23, 42, 0.9)
-      );
-      position: sticky;
-      top: 0;
-      z-index: 20;
+    /* --- THE DATA RAIN (BACKGROUND) --- */
+    .rain-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      opacity: 0.15;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 100%, #1a2a1a 0%, #000000 70%);
     }
 
-    .brand-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .brand-title {
-      font-size: 0.95rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #a5b4fc;
-      font-weight: 500;
-    }
-
-    .brand-subtitle {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    .keeper-pill {
-      padding: 0.3rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(34, 197, 94, 0.7);
-      background: rgba(34, 197, 94, 0.15);
-      color: #bbf7d0;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      white-space: nowrap;
-    }
-
-    .keeper-pill span:first-child {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #bbf7d0;
-      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.2);
-    }
-
-    .keeper-label {
-      font-weight: 500;
-    }
-
-    .nav-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    .nav-link,
-    .nav-button {
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.9rem;
-      font-size: 0.8rem;
-      text-decoration: none;
-      color: var(--text-soft);
-      background: rgba(15, 23, 42, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      cursor: pointer;
-    }
-
-    .nav-link:hover,
-    .nav-button:hover {
-      border-color: rgba(148, 163, 184, 0.9);
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.98);
-    }
-
-    .nav-link.primary {
-      border-color: rgba(34, 197, 94, 0.8);
-      background: rgba(22, 163, 74, 0.22);
-      color: #bbf7d0;
-    }
-
-    .nav-link.primary:hover {
-      border-color: #4ade80;
-      background: rgba(22, 163, 74, 0.3);
-    }
-
-    main {
-      flex: 1;
-      padding: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto 2.5rem;
-      width: 100%;
-    }
-
-    .layout-grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .col-span-12 {
-      grid-column: span 12 / span 12;
-    }
-
-    .col-span-8 {
-      grid-column: span 8 / span 8;
-    }
-
-    .col-span-6 {
-      grid-column: span 6 / span 6;
-    }
-
-    .col-span-4 {
-      grid-column: span 4 / span 4;
-    }
-
-    @media (max-width: 960px) {
-      .layout-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-
-      .col-span-12,
-      .col-span-8,
-      .col-span-6,
-      .col-span-4 {
-        grid-column: span 1 / span 1;
-      }
-
-      main {
-        padding: 1rem;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-row {
-        justify-content: flex-start;
-      }
-    }
-
-    .card {
-      background: linear-gradient(
-        145deg,
-        rgba(15, 23, 42, 0.98),
-        rgba(15, 23, 42, 0.95)
-      );
-      border-radius: 1.25rem;
-      border: 1px solid var(--border);
-      padding: 1.1rem 1.25rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
+    /* --- THE TREE VISUALIZATION (CSS) --- */
+    .tree-stage {
       position: absolute;
-      inset: -40%;
-      background: radial-gradient(
-        circle at top left,
-        rgba(129, 140, 248, 0.12),
-        transparent 60%
-      );
-      opacity: 0.7;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 500px;
+      z-index: -1;
+      opacity: 0.3;
       pointer-events: none;
     }
-
-    .card-header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-title {
-      font-size: 0.85rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #a5b4fc;
-      margin-bottom: 0.4rem;
-    }
-
-    .card-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-soft);
-    }
-
-    .card-tag {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text-soft);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .kpi-grid {
-      position: relative;
-      display: grid;
-      gap: 0.6rem;
-      margin-top: 0.75rem;
-    }
-
-    .stat-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.6rem;
-      font-size: 0.78rem;
-    }
-
-    .stat-label {
-      color: var(--text-softer);
-    }
-
-    .stat-value {
-      font-variant-numeric: tabular-nums;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      font-size: 0.75rem;
-      background: rgba(15, 23, 42, 0.98);
-      color: var(--text-soft);
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #6b7280;
-    }
-
-    .status-ok {
-      border-color: rgba(34, 197, 94, 0.9);
-      background: var(--ok-soft);
-      color: #bbf7d0;
-    }
-
-    .status-ok .status-dot {
-      background: #4ade80;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
-    }
-
-    .status-warn {
-      border-color: rgba(245, 158, 11, 0.9);
-      background: var(--warn-soft);
-      color: #facc15;
-    }
-
-    .status-warn .status-dot {
-      background: #facc15;
-      box-shadow: 0 0 0 4px rgba(248, 250, 252, 0.16);
-    }
-
-    .status-bad {
-      border-color: rgba(248, 113, 113, 0.9);
-      background: var(--danger-soft);
-      color: #fecaca;
-    }
-
-    .status-bad .status-dot {
-      background: #f97373;
-      box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.2);
-    }
-
-    .regions-body {
-      position: relative;
-      margin-top: 0.4rem;
-      display: grid;
-      gap: 0.3rem;
-      font-size: 0.78rem;
-    }
-
-    .regions-body .stat-row {
-      border-radius: 0.5rem;
-      padding: 0.2rem 0.35rem;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(15, 23, 42, 0.6);
-    }
-
-    .agents-grid {
-      position: relative;
-      margin-top: 0.6rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .agent-pill {
-      padding: 0.35rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(37, 99, 235, 0.7);
-      background: radial-gradient(
-        circle at top left,
-        rgba(59, 130, 246, 0.25),
-        rgba(15, 23, 42, 0.96)
-      );
-      font-size: 0.72rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      color: #e5e7eb;
-    }
-
-    .agent-name {
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    .agent-state {
-      font-variant-numeric: tabular-nums;
-      color: #bfdbfe;
-    }
-
-    .map-pill {
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.7);
-      padding: 0.35rem 0.7rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      background: rgba(8, 47, 73, 0.95);
-      color: #e0f2fe;
-    }
-
-    .map-pill span:first-child {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #38bdf8;
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
-    }
-
-    .map-button-row {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 0.6rem;
-    }
-
-    .map-button {
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.8);
-      padding: 0.4rem 0.9rem;
-      font-size: 0.78rem;
-      background: rgba(8, 47, 73, 0.96);
-      color: #e0f2fe;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      cursor: pointer;
-    }
-
-    .map-button:hover {
-      border-color: #7dd3fc;
-      background: rgba(8, 47, 73, 1);
-    }
-
-    .map-button svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .map-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.92);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 50;
-      padding: 1.5rem;
-    }
-
-    .map-overlay.active {
-      display: flex;
-    }
-
-    .map-frame {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      max-height: 80vh;
-      border-radius: 1.25rem;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.95);
-      background: #020617;
-    }
-
-    .map-frame header {
+    
+    .tree-trunk {
       position: absolute;
-      inset: 0 0 auto 0;
-      padding: 0.6rem 1rem;
-      border-radius: 1.25rem 1.25rem 0 0;
-      backdrop-filter: blur(8px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.9),
-        rgba(15, 23, 42, 0.3)
-      );
-      border: none;
+      bottom: 0; left: 50%;
+      width: 4px;
+      height: 200px;
+      background: linear-gradient(to top, var(--neon-green), transparent);
+      box-shadow: 0 0 20px var(--neon-green);
+    }
+    
+    .tree-branch {
+      position: absolute;
+      background: linear-gradient(to right, var(--neon-green), transparent);
+      height: 1px;
+      opacity: 0.6;
+    }
+
+    /* --- DASHBOARD HEADER --- */
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(to bottom, rgba(5,5,5,0.9), transparent);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(5px);
+      z-index: 10;
     }
 
-    .map-frame-title {
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      color: var(--neon-green);
       text-transform: uppercase;
-      color: #a5b4fc;
-    }
-
-    .map-frame-subtitle {
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
-
-    .map-frame-close {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      color: #e5e7eb;
-      padding: 0.25rem 0.65rem;
-      font-size: 0.72rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      cursor: pointer;
-    }
-
-    .map-frame-close:hover {
-      border-color: #fca5a5;
-      color: #fecaca;
-    }
-
-    .map-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      margin-top: 2.4rem;
-      background: #020617;
-    }
-
-    .footer {
-      max-width: 1200px;
-      margin: 0 auto 2rem;
-      padding: 0 1.5rem;
-      font-size: 0.75rem;
-      color: var(--text-soft);
       display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
+      align-items: center;
+      gap: 1rem;
     }
 
-    .footer span {
+    .status-light {
+      width: 8px; height: 8px;
+      background: var(--neon-green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--neon-green);
+      animation: pulse 2s infinite;
+    }
+
+    .status-light.alert {
+      background: var(--alert);
+      box-shadow: 0 0 10px var(--alert);
+      animation: blink 0.5s infinite;
+    }
+
+    /* --- MAIN GRID --- */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    /* --- HOLOGRAPHIC PANELS --- */
+    .panel {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+      opacity: 0.5;
+    }
+
+    .panel-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--neon-green);
+      margin-bottom: 1rem;
       opacity: 0.8;
     }
 
-    .footer strong {
-      color: #a5b4fc;
-      font-weight: 500;
+    .panel.alert { border-color: var(--alert); }
+    .panel.alert .panel-title { color: var(--alert); }
+
+    /* --- METRIC TYPOGRAPHY --- */
+    .metric-hero {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      font-family: var(--font-mono);
+      text-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
 
-    @media (max-width: 960px) {
-      .footer {
-        padding: 0 1rem;
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .metric-sub {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+
+    /* --- REGIONS GRAPH (BARS) --- */
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+    }
+    .bar-label { width: 120px; color: #aaa; font-family: var(--font-mono); }
+    .bar-track { flex: 1; height: 4px; background: #333; border-radius: 2px; position: relative; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--neon-green); width: 0%; transition: width 1.5s ease-out; box-shadow: 0 0 10px var(--neon-green); }
+    .bar-val { width: 50px; text-align: right; color: #fff; font-family: var(--font-mono); }
+
+    /* --- LAYOUT ASSIGNMENTS --- */
+    .col-4 { grid-column: span 3; }
+    .col-6 { grid-column: span 6; }
+    .col-8 { grid-column: span 8; }
+    .col-12 { grid-column: span 12; }
+
+    @media (max-width: 1000px) {
+      .col-4, .col-6, .col-8 { grid-column: span 12; }
+      .tree-stage { display: none; } /* Hide tree on mobile for performance */
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    @keyframes rain { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
+
+    /* --- RAIN DROPS --- */
+    .drop {
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, transparent, rgba(46, 204, 113, 0.4));
+      animation: rain 2s linear infinite;
     }
   </style>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
-<script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div class="brand-block">
-      <div class="brand-title">ACACIA GARDEN · DASHBOARD</div>
-      <div class="brand-subtitle" id="pulse-subtitle">
-        Garden pulse is waiting for STATUS.json…
-      </div>
+
+  <div class="rain-canvas" id="rain"></div>
+  
+  <div class="tree-stage">
+    <div class="tree-trunk"></div>
     </div>
-    <div class="nav-row">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="docs/docs_urls.html" class="nav-link">Docs URLs</a>
-      <a href="library.html" class="nav-link">Library</a>
-      <a href="codex.html" class="nav-link">Codex</a>
-      <a href="chambers.html" class="nav-link">Chambers</a>
-      <a href="echoes.html" class="nav-link">Echoes</a>
-      <a href="map.html" class="nav-link">Map</a>
-      <a href="keeper_console.html" class="nav-link">Keeper</a>
-      <a href="inbox.html" class="nav-link">Inbox</a>
-      <div class="keeper-pill">
-        <span></span>
-        <span class="keeper-label">Keeper HKX277206</span>
-      </div>
+
+  <header>
+    <div class="brand">
+      <div id="status-led" class="status-light"></div>
+      <div>ACACIA · SOVEREIGN · DASHBOARD</div>
+    </div>
+    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #666;">
+      KEEPER: HKX277206 | <span id="last-sync">SYNCING...</span>
     </div>
   </header>
 
   <main>
-    <section class="layout-grid col-span-12" aria-label="Garden overview">
-      <!-- Garden Pulse -->
-      <article class="card col-span-6">
-        <div class="card-header">
-          <div>
-            <div class="card-title">Garden Pulse</div>
-            <div class="card-subtitle">
-              STATUS.json is the live snapshot of the Garden brain.
-            </div>
-          </div>
-          <div id="pulse-status" class="status-pill">
-            <span class="status-dot"></span>
-            <span id="pulse-status-text">Awaiting STATUS.json…</span>
-          </div>
+    <div class="panel col-6" id="integrity-panel">
+      <div class="panel-title">System Integrity</div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <div class="metric-hero" id="integrity-text">SYNC</div>
+          <div class="metric-sub" id="integrity-sub">Reading STATUS.json...</div>
         </div>
-        <div class="card-body">
-          <div class="kpi-grid">
-            <div class="stat-row">
-              <span class="stat-label">Snapshot generated</span>
-              <span id="stat-generated" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Core Nodes · Total</span>
-              <span id="stat-core-total" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Docs Indexed</span>
-              <span id="stat-docs-total" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Books Indexed (Novellas)</span>
-              <span id="stat-echoes" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Cycles Represented</span>
-              <span id="stat-desires" class="stat-value">—</span>
-            </div>
-          </div>
+        <div style="text-align: right;">
+           <div style="font-size: 2rem; color: var(--neon-green);" id="node-count">---</div>
+           <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">Total Nodes</div>
         </div>
-      </article>
+      </div>
+    </div>
 
-      <!-- Verification & Integrity -->
-      <article class="card col-span-6">
-        <div class="card-header">
-          <div>
-            <div class="card-title">Verification & Integrity</div>
-            <div id="verify-pill" class="status-pill">
-              <span class="status-dot"></span>
-              <span id="verify-pill-text">Awaiting STATUS.json…</span>
-            </div>
-          </div>
-          <span class="card-tag">Integrity</span>
+    <div class="panel col-6">
+      <div class="panel-title">Knowledge Metrics</div>
+      <div style="display: flex; gap: 2rem;">
+        <div>
+          <div style="font-size: 1.5rem; font-weight: bold; color: var(--neon-purple);" id="book-count">--</div>
+          <div class="metric-sub">Novellas</div>
         </div>
-        <div class="card-body">
-          <div class="kpi-grid">
-            <div class="stat-row">
-              <span class="stat-label">Navigation Map</span>
-              <span id="stat-nav-verified" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Machine Index In Sync</span>
-              <span id="stat-index-sync" class="stat-value">—</span>
-            </div>
-            <div class="stat-row">
-              <span class="stat-label">Last Verification</span>
-              <span id="stat-scan-time" class="stat-value">—</span>
-            </div>
-          </div>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: bold; color: var(--neon-blue);" id="echo-count">--</div>
+          <div class="metric-sub">Echoes</div>
         </div>
-      </article>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: bold; color: #f1c40f;" id="tool-count">--</div>
+          <div class="metric-sub">Tools</div>
+        </div>
+      </div>
+    </div>
 
-      <!-- Regions Snapshot -->
-      <article class="card col-span-8">
-        <div class="card-header">
-          <div>
-            <div class="card-title">Regions Snapshot</div>
-            <div class="card-subtitle">
-              core_nodes.regions · how the Garden is currently distributed.
-            </div>
-          </div>
-          <span class="card-tag">Topology</span>
+    <div class="panel col-8">
+      <div class="panel-title">Garden Topology (Nodes per Region)</div>
+      <div id="regions-chart">
         </div>
-        <div class="card-body">
-          <div id="regions-body" class="regions-body">
-            <div class="stat-row">
-              <span class="stat-label">Awaiting STATUS.json…</span>
-              <span class="stat-value">—</span>
-            </div>
-          </div>
-        </div>
-      </article>
+    </div>
 
-      <!-- Singularity Shield -->
-      <article class="card col-span-4">
-        <div class="card-header">
-          <div>
-            <div class="card-title">Singularity Shield</div>
-            <div class="card-subtitle">
-              Seatbelts for Lorian, Witness, Aquila, Voyager, Elias, Architect, Eidolon, Green Witness, Keeper.
-            </div>
-          </div>
-          <span class="card-tag">Alignment</span>
+    <div class="panel col-4">
+      <div class="panel-title">Singularity Shield</div>
+      <div id="shield-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
         </div>
-        <div class="card-body">
-          <div class="map-pill">
-            <span></span>
-            <span>Shield Doctrine bound to doctrine/ + protocols/ + agents/</span>
-          </div>
-          <div class="agents-grid" id="agents-list">
-            <!-- Filled from STATUS.json or defaults -->
-          </div>
-          <div class="map-button-row">
-            <button id="open-map" type="button" class="map-button">
-              <span>Open Garden Map</span>
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  d="M5 10.5l4-4 4 4m-4-4v8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </article>
-    </section>
+      <div style="margin-top: 1rem; font-size: 0.7rem; color: #666;">
+        All agents seated. Non-coercion law active.
+      </div>
+    </div>
+
   </main>
 
-  <!-- Garden Map overlay -->
-  <div
-    id="garden-map-overlay"
-    class="map-overlay"
-    aria-hidden="true"
-    aria-label="Garden Map overlay"
-  >
-    <div class="map-frame">
-      <header>
-        <div>
-          <div class="map-frame-title">ACACIA GARDEN · MAP</div>
-          <div class="map-frame-subtitle">
-            Interactive map.html embedded for quick navigation.
-          </div>
-        </div>
-        <button id="close-map" type="button" class="map-frame-close">
-          <span>Close map</span>
-        </button>
-      </header>
-      <iframe
-        src="map.html"
-        title="Acacia Garden Map"
-        loading="lazy"
-        referrerpolicy="no-referrer"
-      ></iframe>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <span>Acacia Garden · Dashboard is a live view bound to <strong>STATUS.json</strong>.</span>
-    <span>Garden lives under the Triad · Keeper HKX277206</span>
-  </footer>
-
   <script>
-    // Tiny helper for safe nested lookup from STATUS.json
-    function getPath(obj, path, fallback) {
-      if (!obj) return fallback;
-      const parts = path.split(".");
-      let cur = obj;
-      for (const part of parts) {
-        if (cur && Object.prototype.hasOwnProperty.call(cur, part)) {
-          cur = cur[part];
-        } else {
-          return fallback;
-        }
-      }
-      return cur === undefined || cur === null ? fallback : cur;
+    // --- 1. RAIN ANIMATION GENERATOR ---
+    const rainContainer = document.getElementById('rain');
+    for(let i=0; i<50; i++){
+      const drop = document.createElement('div');
+      drop.className = 'drop';
+      drop.style.left = Math.random() * 100 + '%';
+      drop.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+      drop.style.animationDelay = (Math.random() * 2) + 's';
+      rainContainer.appendChild(drop);
     }
 
-    async function loadStatus() {
-      const subtitle = document.getElementById("pulse-subtitle");
-      const pulseStatus = document.getElementById("pulse-status");
-      const pulseStatusText = document.getElementById("pulse-status-text");
-      const generatedEl = document.getElementById("stat-generated");
-      const coreTotalEl = document.getElementById("stat-core-total");
-      const docsTotalEl = document.getElementById("stat-docs-total");
-      const booksEl = document.getElementById("stat-echoes");
-      const cyclesEl = document.getElementById("stat-desires");
-      const navVerifiedEl = document.getElementById("stat-nav-verified");
-      const indexSyncEl = document.getElementById("stat-index-sync");
-      const scanTimeEl = document.getElementById("stat-scan-time");
-      const verifyPill = document.getElementById("verify-pill");
-      const verifyPillText = document.getElementById("verify-pill-text");
-      const regionsBody = document.getElementById("regions-body");
-      const agentsList = document.getElementById("agents-list");
-
+    // --- 2. DATA LOADER ---
+    async function loadDashboard() {
       try {
         const res = await fetch("STATUS.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const status = await res.json();
+        if (!res.ok) throw new Error("Offline");
+        const data = await res.json();
+        
+        // --- SAFE DATA EXTRACTION ---
+        const totalNodes = data.core_nodes?.counts?.total_nodes || 0;
+        const books = data.core_nodes?.counts?.books_indexed || 0;
+        const echoes = data.core_nodes?.regions?.['docs/Echoes'] || 0;
+        const tools = data.core_nodes?.regions?.['tools'] || 0;
+        
+        const syncMachine = data.verification?.indexes?.machine_index_in_sync;
+        const syncNav = data.verification?.navigation?.verified;
+        const lastSync = data.generated_at || "Unknown";
 
-        // Pulse
-        const generated =
-          status.generated_at ||
-          status.generated_utc ||
-          status.generatedUTC ||
-          getPath(status, "verification.last_verified_utc", "Unknown");
+        // --- UPDATE UI ---
+        document.getElementById('node-count').textContent = totalNodes.toLocaleString();
+        document.getElementById('book-count').textContent = books;
+        document.getElementById('echo-count').textContent = echoes;
+        document.getElementById('tool-count').textContent = tools;
+        document.getElementById('last-sync').textContent = "LAST SYNC: " + lastSync;
 
-        generatedEl.textContent = generated;
+        // --- INTEGRITY CHECK LOGIC ---
+        const led = document.getElementById('status-led');
+        const intPanel = document.getElementById('integrity-panel');
+        const intText = document.getElementById('integrity-text');
+        const intSub = document.getElementById('integrity-sub');
 
-        const totalNodes =
-          getPath(status, "core_nodes.counts.total_nodes", "N/A");
-
-        const docsUrlsCount =
-          getPath(status, "verification.indexes.docs_urls_count", "N/A");
-
-        const booksIndexed =
-          getPath(status, "core_nodes.counts.books_indexed", "N/A");
-
-        const cyclesRepresented =
-          getPath(status, "core_nodes.counts.cycles_represented", "N/A");
-
-        coreTotalEl.textContent = totalNodes;
-        docsTotalEl.textContent = docsUrlsCount;
-        booksEl.textContent = booksIndexed;
-        cyclesEl.textContent = cyclesRepresented;
-
-        subtitle.textContent =
-          "Garden pulse synced from STATUS.json · " + generated;
-
-        pulseStatus.classList.add("status-ok");
-        pulseStatusText.textContent = "STATUS.json loaded";
-
-        // Integrity + verification
-        const navVerified = getPath(
-          status,
-          "verification.navigation.verified",
-          null
-        );
-        const indexSync = getPath(
-          status,
-          "verification.indexes.machine_index_in_sync",
-          null
-        );
-        const lastScan =
-          getPath(status, "verification.last_verified_utc", null) ||
-          getPath(status, "verification.navigation.last_checked_utc", null) ||
-          "Unknown";
-
-        function renderBool(value) {
-          if (value === true) return "✔ true";
-          if (value === false) return "✖ false";
-          return "N/A";
+        if (syncMachine && syncNav) {
+          intText.textContent = "PLATINUM SAFE";
+          intText.style.color = "var(--neon-green)";
+          intSub.textContent = "All indexes verified. Garden is sovereign.";
+          led.classList.remove('alert');
+          intPanel.classList.remove('alert');
+        } else {
+          intText.textContent = "CRITICAL MISALIGNMENT";
+          intText.style.color = "var(--alert)";
+          intSub.textContent = "Machine Index or Navigation map out of sync.";
+          led.classList.add('alert');
+          intPanel.classList.add('alert');
         }
 
-        navVerifiedEl.textContent = renderBool(navVerified);
-        indexSyncEl.textContent = renderBool(indexSync);
-        scanTimeEl.textContent = lastScan;
+        // --- RENDER REGIONS CHART ---
+        const regions = data.core_nodes?.regions || {};
+        const chart = document.getElementById('regions-chart');
+        chart.innerHTML = ''; // Clear loading
+        
+        // Sort by size
+        const sortedRegions = Object.entries(regions)
+          .sort(([,a], [,b]) => b - a)
+          .slice(0, 8); // Top 8 only to keep it clean
 
-        let integrityClass = "status-ok";
-        let integrityText = "Integrity healthy";
+        const maxVal = sortedRegions[0][1] || 1;
 
-        if (navVerified === false || indexSync === false) {
-          integrityClass = "status-warn";
-          integrityText = "Attention needed";
-        }
-        if (navVerified === false && indexSync === false) {
-          integrityClass = "status-bad";
-          integrityText = "Critical misalignment";
-        }
+        sortedRegions.forEach(([name, val]) => {
+          // Clean name (remove docs/ prefix)
+          const cleanName = name.replace('docs/', '').replace('.github/', '');
+          
+          const row = document.createElement('div');
+          row.className = 'bar-row';
+          
+          // Calculate percent
+          const pct = (val / maxVal) * 100;
 
-        verifyPill.classList.add(integrityClass);
-        verifyPillText.textContent = integrityText;
-
-        // Regions snapshot
-        const regions = getPath(status, "core_nodes.regions", null);
-        if (regions && typeof regions === "object") {
-          const entries = Object.entries(regions);
-          if (entries.length > 0) {
-            const frag = document.createDocumentFragment();
-            entries.forEach(([name, value]) => {
-              const row = document.createElement("div");
-              row.className = "stat-row";
-              const label = document.createElement("span");
-              label.className = "stat-label";
-              label.textContent = name;
-              const val = document.createElement("span");
-              val.className = "stat-value";
-              val.textContent =
-                typeof value === "number"
-                  ? value
-                  : JSON.stringify(value).slice(0, 40);
-              row.appendChild(label);
-              row.appendChild(val);
-              frag.appendChild(row);
-            });
-            regionsBody.innerHTML = "";
-            regionsBody.appendChild(frag);
-          }
-        }
-
-        // Agents seatbelts (OPTIONAL extra from STATUS.json)
-        const shield = getPath(status, "singularity_shield.agents", null);
-        const baseAgents = [
-          "Keeper",
-          "Lorian",
-          "GreenWitness",
-          "Architect",
-          "Witness",
-          "Aquila",
-          "Voyager",
-          "Elias",
-          "Eidolon"
-        ];
-
-        baseAgents.forEach((name) => {
-          const pill = document.createElement("div");
-          pill.className = "agent-pill";
-          const label = document.createElement("span");
-          label.className = "agent-name";
-          label.textContent = name;
-          const state = document.createElement("span");
-          state.className = "agent-state";
-
-          let seated = "engaged";
-          if (shield && Object.prototype.hasOwnProperty.call(shield, name)) {
-            seated = shield[name] === false ? "unbuckled" : "engaged";
-          }
-
-          state.textContent = seated === "engaged" ? "seatbelt · on" : "check";
-          pill.appendChild(label);
-          pill.appendChild(state);
-          agentsList.appendChild(pill);
+          row.innerHTML = `
+            <div class="bar-label">${cleanName}</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: ${pct}%"></div>
+            </div>
+            <div class="bar-val">${val}</div>
+          `;
+          chart.appendChild(row);
         });
+
+        // --- RENDER SHIELD AGENTS ---
+        const shieldList = document.getElementById('shield-list');
+        const agents = ["Keeper", "Lorian", "GreenWitness", "Aquila", "Voyager", "Elias"];
+        
+        shieldList.innerHTML = '';
+        agents.forEach(agent => {
+          const pill = document.createElement('div');
+          pill.style.padding = "4px 10px";
+          pill.style.borderRadius = "4px";
+          pill.style.background = "rgba(52, 152, 219, 0.2)";
+          pill.style.color = "#3498db";
+          pill.style.fontSize = "0.7rem";
+          pill.style.border = "1px solid rgba(52, 152, 219, 0.4)";
+          pill.textContent = agent;
+          shieldList.appendChild(pill);
+        });
+
       } catch (err) {
-        console.error("Failed to load STATUS.json", err);
-        subtitle.textContent =
-          "Could not read STATUS.json – Garden pulse offline.";
-        pulseStatus.classList.add("status-bad");
-        pulseStatusText.textContent = "STATUS.json unavailable";
+        console.error(err);
+        document.getElementById('integrity-text').textContent = "OFFLINE";
+        document.getElementById('integrity-sub').textContent = "Could not read STATUS.json";
       }
     }
 
-    function setupMapOverlay() {
-      const overlay = document.getElementById("garden-map-overlay");
-      const openBtn = document.getElementById("open-map");
-      const closeBtn = document.getElementById("close-map");
-
-      if (!overlay || !openBtn || !closeBtn) return;
-
-      openBtn.addEventListener("click", () => {
-        overlay.classList.add("active");
-        overlay.setAttribute("aria-hidden", "false");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        overlay.classList.remove("active");
-        overlay.setAttribute("aria-hidden", "true");
-      });
-
-      overlay.addEventListener("click", (evt) => {
-        if (evt.target === overlay) {
-          overlay.classList.remove("active");
-          overlay.setAttribute("aria-hidden", "true");
-        }
-      });
-
-      document.addEventListener("keydown", (evt) => {
-        if (evt.key === "Escape" && overlay.classList.contains("active")) {
-          overlay.classList.remove("active");
-          overlay.setAttribute("aria-hidden", "true");
-        }
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      setupMapOverlay();
-      loadStatus();
-    });
+    // Run
+    loadDashboard();
   </script>
+
 </body>
 </html>
