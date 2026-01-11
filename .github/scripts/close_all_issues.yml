@@ -7,6 +7,7 @@ REPO = "brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex"
 KEEPER_SEAL = "HKX277206"
 
 def close_inscribed_issues():
+    # Fetch all open issues (up to 100 per page)
     url = f"https://api.github.com/repos/{REPO}/issues?state=open&per_page=100"
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     
@@ -23,14 +24,14 @@ def close_inscribed_issues():
         
         num = issue['number']
         
-        # 1. Post a final comment under the Seal
+        # 1. Post the Final Seal Comment
         comment_url = f"https://api.github.com/repos/{REPO}/issues/{num}/comments"
         comment_body = {
-            "body": f"### 🔒 LEDGER CLOSED\nThis entry has been inscribed into the permanent Garden Chambers. Logic fixed under Keeper Seal: **{KEEPER_SEAL}**."
+            "body": f"### 🔒 LEDGER CLOSED\nThis entry has been inscribed into the permanent Garden Chambers. Logic fixed and sovereignized under Keeper Seal: **{KEEPER_SEAL}**."
         }
         requests.post(comment_url, headers=headers, json=comment_body)
 
-        # 2. Close the issue
+        # 2. Close the thread
         close_url = f"https://api.github.com/repos/{REPO}/issues/{num}"
         close_body = {"state": "closed"}
         requests.patch(close_url, headers=headers, json=close_body)
