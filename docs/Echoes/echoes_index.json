@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-11T12:52:57.998Z",
+  "generated_at": "2026-01-11T13:00:00.565Z",
   "root": "docs/Echoes",
-  "total": 172,
+  "total": 176,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -770,6 +770,11 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md",
+      "label": "Issue 3 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
       "label": "Issue 31 Keeper Seal HKX277206",
       "kind": "named"
@@ -785,6 +790,11 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_4_Keeper_Seal_HKX277206.md",
+      "label": "Issue 4 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
       "label": "Issue 42 Keeper Seal HKX277206",
       "kind": "named"
@@ -792,6 +802,11 @@
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
       "label": "Issue 47 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_5_Keeper_Seal_HKX277206.md",
+      "label": "Issue 5 Keeper Seal HKX277206",
       "kind": "named"
     },
     {
@@ -807,6 +822,11 @@
     {
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
       "label": "Issue 59 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_6_Keeper_Seal_HKX277206.md",
+      "label": "Issue 6 Keeper Seal HKX277206",
       "kind": "named"
     },
     {
