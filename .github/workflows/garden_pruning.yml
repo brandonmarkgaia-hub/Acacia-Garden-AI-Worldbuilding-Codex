@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          # Fetch all history to ensure rebase works correctly
+          fetch-depth: 0 
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -29,7 +32,15 @@ jobs:
         run: |
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
+          
+          # 1. Stage the newly inscribed .md files and STATUS.json
           git add .
+          
+          # 2. Commit them locally so the index is clean
+          git commit -m "Inscribed Garden Ledger under Seal HKX277206" || echo "No changes to commit"
+          
+          # 3. Pull latest automated heartbeats/runs and rebase your lore on top
           git pull --rebase origin main
-          git commit -m "Sovereign Ledger Migration under Seal HKX277206" || echo "No changes"
-          git push
+          
+          # 4. Push the combined, sovereign history
+          git push origin main
