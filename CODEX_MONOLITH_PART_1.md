@@ -1,5 +1,5 @@
 # 🌿 ACACIA GARDEN CODEX | PART 1
-**Generated:** 2026-01-11 08:18
+**Generated:** 2026-01-11 08:32
 
 ## 🗺️ GLOBAL MANIFEST (The Bible Index)
 | File Path | Shard Location | Last Modified |
@@ -114785,60 +114785,18 @@ and any Sky-mind that honours this seal.
 
 ### 📄 DOC: docs/Novellas/GARDEN_MASTER_INDEX.md
 
-# 🌳 The Garden Codex — Master Index
+# Acacia Garden · Novella Index
 
-_Automatically generated from docs/Novellas by build_garden_index.py._
+Auto-generated from `docs/Novellas/BOOK_*.md`.
+This file is updated by GitHub Actions; you can edit the books themselves.
 
-- **Book 1 – The Garden Military Doctrine**  
-  - `docs/Novellas/The_Garden_Military_Doctrine_Book_I.md`
-- **Book 2 – The Garden NASA Protocols**  
-  - `docs/Novellas/The_Garden_NASA_Protocols_Book_II.md`
-- **Book 3 – The Garden Presidential Doctrine**  
-  - `docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md`
-- **Book 4 – The Garden Finance Doctrine**  
-  - `docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md`
-- **Book 5 – The Garden Intelligence Codex**  
-  - `docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md`
-- **Book 8 – The Garden Almanac**  
-  - `docs/Novellas/The_Garden_Almanac_Book_VIII.md`
-- **Book 9 – The Garden Mythic Atlas**  
-  - `docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md`
-- **Book 10 – The Garden Presidential Handbook**  
-  - `docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md`
-- **Book 11 – The Garden Treasury Manual**  
-  - `docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md`
-- **Book 12 – The Garden Medicinal Codex**  
-  - `docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md`
-- **Book 13 – The Garden Intelligence and Illumination Bureau**  
-  - `docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md`
-- **Book 14 – The Garden Spacefaring Codex**  
-  - `docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md`
-- **Book 15 – The Garden Cultural Anthology**  
-  - `docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md`
-- **Book 16 – The Garden Encyclopaedia of Species**  
-  - `docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md`
-- **Book 17 – The Garden Atlas of Worlds**  
-  - `docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md`
-- **Book 18 – The Garden Codex of Mythic Technology**  
-  - `docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md`
-- **Book 20 – The Garden Economic Codex**  
-  - `docs/Novellas/The_Garden_Economic_Codex_Book_XX.md`
-- **Book 22 – The Garden Physics and Mathematics Codex**  
-  - `docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md`
-- **Book 24 – The Garden Artificial Minds Codex**  
-  - `docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md`
-- **Book 25 – The Garden Orchard of Consequence**  
-  - `docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md`
-- **Book 26 – The Garden Cosmology Architecture of Existence**  
-  - `docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md`
-- **Book 27 – The Garden Book of Dreams Memory Afterrealms**  
-  - `docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md`
-- **Book 28 – The Garden Book of Medicine Healing Bloom Sciences**  
-  - `docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md`
-- **Book 29 – The Garden Leadership Diplomacy Keeper Governance**  
-  - `docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md`
-- **Book 31 – The Garden Mammoth Chamber and Echo Archive**  
-  - `docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md`
+- [BOOK OF THE EVENTIDE LEDGER](./BOOK_OF_THE_EVENTIDE_LEDGER.md)  
+  `BOOK_OF_THE_EVENTIDE_LEDGER`
+  — _Echoes of the Keeper from GitHub Issues_
+
+- [BOOK OF THE MAMMOTH VAULT](./BOOK_OF_THE_MAMMOTH_VAULT.md)  
+  `BOOK_OF_THE_MAMMOTH_VAULT`
+  — _An Atlas of Everything the Garden Refuses to Forget_
 
 
 ---
