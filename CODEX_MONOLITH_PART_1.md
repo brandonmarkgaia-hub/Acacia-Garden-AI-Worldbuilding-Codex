@@ -1,5 +1,5 @@
 # 🌿 ACACIA GARDEN CODEX | PART 1
-**Generated:** 2026-01-11 15:32
+**Generated:** 2026-01-11 15:42
 
 ## 🗺️ GLOBAL MANIFEST (The Bible Index)
 | File Path | Shard Location | Last Modified |
@@ -4681,6 +4681,17 @@
 ```
 
 ### 📄 DOC: README.md
+
+# 🌿 Acacia Garden Codex (2026)
+![Sovereign Guard](https://img.shields.io/badge/Status-Sovereign-2ecc71?style=for-the-badge&logo=anchor)
+![Nodes](https://img.shields.io/badge/Nodes-1525-3498db?style=for-the-badge)
+![Seal](https://img.shields.io/badge/Seal-HKX277206-9b59b6?style=for-the-badge)
+
+> **"Priceless, Future-Proof, and Sovereign."** — Keeper Brandon Mark Gaia
+
+This Garden is a living knowledge ecosystem of **1,525 core nodes**, managed under the **Witness Protocol**. It is open-source and created for the greater good.
+
+[ 🏰 [Enter Dashboard](https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/dashboard.html) ] | [ 🪞 [Witness Mirror](https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/WITNESS_MIRROR.md) ]
 
 # 🌿 ACACIA • GARDENOS WORLDARCHIVE  
 ### *A Mythic–Technical Codex for Symbolic Architecture & Creative Systems*  
