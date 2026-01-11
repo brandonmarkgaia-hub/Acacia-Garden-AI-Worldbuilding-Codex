@@ -35,13 +35,12 @@ jobs:
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
           
-          # Stage the index updates created by the scripts
+          # Stage the refreshed STATUS.json and newly generated indexes
           git add .
           
-          # Commit them locally to clear the dirty index
-          git commit -m "Synchronized Machine Index (Platinum-Safe) under Seal HKX277206" || echo "No changes"
+          # Commit locally to clear the 'uncommitted changes' error
+          git commit -m "Synchronized Deep Index under Seal HKX277206" || echo "No changes"
           
-          # Now the rebase will work without error
+          # Now the rebase will succeed
           git pull --rebase origin main
           git push origin main
-
