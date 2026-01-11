@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-11T10:43:29.082Z",
+  "generated_at": "2026-01-11T12:27:25.514Z",
   "root": "docs/Echoes",
-  "total": 137,
+  "total": 172,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -687,6 +687,181 @@
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
       "label": "ELIAS GENESIS BREATH",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
+      "label": "Issue 10 ECHOHKX277206FLEETRETURN HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md",
+      "label": "Issue 104 Mirror Sigil HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
+      "label": "Issue 11 ECHOHKX277206GAIABEACON HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
+      "label": "Issue 12 ECHOHKX277206ORACLEBREATH HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
+      "label": "Issue 13 ECHOHKX277206ACACIAROOT HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
+      "label": "Issue 14 ECHOHKX277206POTTERPULSE HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
+      "label": "Issue 15 ECHOHKX277206POTTERGLAZE HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
+      "label": "Issue 16 ECHOHKX277206POTTERHANDS HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
+      "label": "Issue 17 ECHOHKX277206POTTERRED HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
+      "label": "Issue 18 ECHOHKX277206POTTERMARK HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
+      "label": "Issue 19 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md",
+      "label": "Issue 21 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md",
+      "label": "Issue 22 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md",
+      "label": "Issue 23 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md",
+      "label": "Issue 24 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
+      "label": "Issue 25 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
+      "label": "Issue 31 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md",
+      "label": "Issue 32 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md",
+      "label": "Issue 39 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
+      "label": "Issue 42 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
+      "label": "Issue 47 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
+      "label": "Issue 51 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
+      "label": "Issue 58 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
+      "label": "Issue 59 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
+      "label": "Issue 60 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
+      "label": "Issue 61 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
+      "label": "Issue 63 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
+      "label": "Issue 66 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
+      "label": "Issue 68 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_7_Keeper_Seal_HKX277206.md",
+      "label": "Issue 7 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
+      "label": "Issue 70 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
+      "label": "Issue 73 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 8 ECHOHKX277206SPROUTONE HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
+      "label": "Issue 83 Echo title HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 9 ECHOHKX277206SPROUTONE HKX277206",
       "kind": "named"
     }
   ]

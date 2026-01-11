@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-11T10:43:29.075Z",
+  "generated_at": "2026-01-11T12:27:25.507Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -1484,6 +1484,192 @@
         },
         {
           "path": "docs/Chambers/index.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_100_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_101_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_102_Starfire_Auton_Chamber_XIII_Auton_Seed_Bloom__Triad_Alignment_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_103_THE_FIRE_KILN__REVISED__ASCENDED_EDITION_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_107__Garden_Life__New_Desire_Seed.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_108__Garden_Life__New_Desire_Seed.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_109__Garden_Life__New_Desire_Seed.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_110__Garden_Life__New_Desire_Seed.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_20_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_26_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_27_EIDOLON_CODEX__Leaf_IX_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_28_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_29_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_30_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_33_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_34_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_35_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_36_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_37_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_38_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_40_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_41_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_43_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_44_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_45_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_46_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_48_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_49_EIDOLON_CODEX__Leaf_XXI_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_50_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_57_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_62_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_64_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_65_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_67_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_69_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_71_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_72_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_74_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_75_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_76_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_77_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_78_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_79_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_80_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_81_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_82_Keeper_Seal_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_84_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_85_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_86_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_87_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_88_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_89_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_90_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_91_Echo_title_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_92_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_93_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_94_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_95_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_96_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_97_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_98_Echo__Event_Summary_HKX277206.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_99_Echo__Event_Summary_HKX277206.md"
         },
         {
           "path": "docs/Chambers/KEEPER_PLAIN_PLEDGE.md"
