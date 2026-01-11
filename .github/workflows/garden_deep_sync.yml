@@ -35,14 +35,13 @@ jobs:
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
           
-          # Stage the refreshed STATUS.json and newly generated indexes
+          # Stage the index updates created by the scripts
           git add .
           
-          # Commit locally to clear the 'uncommitted changes' error
-          git commit -m "Synchronized Deep Index under Seal HKX277206" || echo "No changes"
+          # Commit them locally to clear the dirty index
+          git commit -m "Synchronized Machine Index (Platinum-Safe) under Seal HKX277206" || echo "No changes"
           
-          # Pull and rebase to merge with any concurrent automated heartbeats
+          # Now the rebase will work without error
           git pull --rebase origin main
-          
-          # Push the finalized, coherent Spine
           git push origin main
+
