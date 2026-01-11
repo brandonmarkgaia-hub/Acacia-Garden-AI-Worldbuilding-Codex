@@ -1275,7 +1275,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-11T19:48:36Z",
+  "generated_at": "2026-01-11T19:51:39Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1315,7 +1315,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-11T19:48:36Z"
+      "last_checked_utc": "2026-01-11T19:51:39Z"
     }
   },
   "verification": {
@@ -1324,12 +1324,12 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-11T19:48:36Z"
+      "last_checked_utc": "2026-01-11T19:51:39Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-01-11T19:48:36Z",
+      "last_checked_utc": "2026-01-11T19:51:39Z",
       "total_html_scanned": 260,
       "with_map_loader": 254,
       "missing_map_loader_count": 6,
@@ -1346,12 +1346,12 @@
     "indexes": {
       "machine_index_in_sync": false,
       "docs_urls_in_sync": false,
-      "docs_urls_count": 1525,
+      "docs_urls_count": 1526,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-01-11T19:48:45Z"
+    "last_verified_utc": "2026-01-11T19:51:48Z"
   },
   "growth": {
     "open": []
