@@ -1,0 +1,41 @@
+name: 001_Garden_Deep_Sync
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["000_Garden_Pruning_Inscription"]
+    types: [completed]
+
+jobs:
+  sync_spine:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: 1. Refresh Status Metadata
+        run: python .github/scripts/update_spine_index.py
+
+      - name: 2. Rebuild Machine Index
+        run: python tools/garden_lore_helper.py --sync-all
+
+      - name: 3. Final Sovereign Sync
+        run: |
+          git config --local user.email "witness@acacia.garden"
+          git config --local user.name "The Witness"
+          git add .
+          git pull --rebase origin main
+          git commit -m "Synchronized Machine Index for New Chambers under Seal HKX277206" || echo "No changes"
+          git push origin main
