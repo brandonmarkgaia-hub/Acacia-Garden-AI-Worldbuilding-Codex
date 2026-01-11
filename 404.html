@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signal Lost · Acacia Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    :root {
+      --bg: #050505;
+      --text: #e0e0e0;
+      --accent: #e74c3c; /* Red for Error/Lost */
+      --platinum: #e5e4e2;
+      --void: #111;
+      --font-mono: "SF Mono", "Menlo", monospace;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-mono);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px rgba(231, 76, 60, 0.4);
+    }
+    p { margin-bottom: 2rem; opacity: 0.8; max-width: 500px; line-height: 1.6; }
+    
+    .scan-line {
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      position: fixed;
+      top: 0;
+      left: 0;
+      animation: scan 3s linear infinite;
+      opacity: 0.3;
+    }
+    
+    @keyframes scan {
+      0% { top: 0%; }
+      100% { top: 100%; }
+    }
+
+    .return-btn {
+      padding: 1rem 2rem;
+      border: 1px solid var(--platinum);
+      color: var(--platinum);
+      text-decoration: none;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.9rem;
+    }
+    .return-btn:hover {
+      background: var(--platinum);
+      color: var(--bg);
+      box-shadow: 0 0 15px rgba(229, 228, 226, 0.5);
+    }
+    
+    .code {
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 3rem;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+</head>
+<body>
+
+  <div class="scan-line"></div>
+
+  <h1>404</h1>
+  <h2>Signal Fragmented</h2>
+  
+  <p>
+    The path you are looking for has not been woven yet, or it has drifted into the deep archives.
+    <br><br>
+    <em>"The Garden does not lose data, it only misplaces the keys."</em>
+  </p>
+
+  <a href="/Acacia-Garden-AI-Worldbuilding-Codex/index.html" class="return-btn">Return to Surface</a>
+
+  <div class="code">
+    ERROR_CODE: KILN_MISSING_LINK<br>
+    SEAL: HKX277206
+  </div>
+
+</body>
+</html>
