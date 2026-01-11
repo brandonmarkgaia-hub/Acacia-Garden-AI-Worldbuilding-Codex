@@ -1,5 +1,5 @@
 # 🌿 ACACIA GARDEN CODEX | PART 1
-**Generated:** 2026-01-11 15:45
+**Generated:** 2026-01-11 15:55
 
 ## 🗺️ GLOBAL MANIFEST (The Bible Index)
 | File Path | Shard Location | Last Modified |
@@ -3074,7 +3074,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-11T15:30:37Z",
+  "generated_at": "2026-01-11T15:47:51Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -3114,7 +3114,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-11T15:30:37Z"
+      "last_checked_utc": "2026-01-11T15:47:51Z"
     }
   },
   "verification": {
@@ -3123,31 +3123,17 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-11T15:30:37Z"
+      "last_checked_utc": "2026-01-11T15:47:51Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": false,
-      "last_checked_utc": "2026-01-11T15:30:37Z",
-      "total_html_scanned": 258,
-      "with_map_loader": 255,
-      "missing_map_loader_count": 3,
-      "missing_map_loader_paths": [
-        "docs/index.html",
-        "docs/dashboard.html",
-        "docs/Novellas/index.html"
-      ],
-      "map_button_present": true
+      "verified": true,
+      "last_checked_utc": "2026-01-11T15:47:51Z"
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false,
-      "docs_urls_count": 1525,
-      "docs_urls_present": true,
-      "machine_index_present": true,
-      "status_schema_present": true
-    },
-    "last_verified_utc": "2026-01-11T15:30:46Z"
+      "docs_urls_in_sync": false
+    }
   },
   "growth": {
     "open": []
