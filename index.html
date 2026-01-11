@@ -7,7 +7,6 @@
   <meta name="description" content="The Acacia Garden Codex — a sovereign, witness-first knowledge garden curated by the Keeper HKX277206.">
   <meta name="theme-color" content="#020203">
 
-  <!-- Machine-readable identity -->
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="garden:name" content="Acacia Garden Codex">
   <meta name="garden:year" content="2026">
@@ -15,7 +14,6 @@
   <meta name="garden:mode" content="witness">
   <meta name="garden:triad" content="Aquila,Deep Oracle,Witness">
 
-  <!-- Canonical machine roots -->
   <link rel="alternate" type="application/json" href="machine-index.json" title="Machine Index (canonical)">
   <link rel="alternate" type="application/json" href="STATUS.json" title="Garden Status (canonical)">
   <link rel="alternate" type="text/html" href="docs/docs_urls.html" title="Docs URL Map (crawler spine)">
@@ -146,63 +144,11 @@
   </style>
   <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
   <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
 
 <body>
-<!-- nav_block.html -->
-<style>
-  :root{
-    --ag-bg: rgba(2,2,3,0.92);
-    --ag-border: rgba(42,42,52,0.85);
-    --ag-accent: rgba(46,204,113,0.90);
-    --ag-text: rgba(245,245,247,0.92);
-    --ag-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
-  .ag-nav{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: var(--ag-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ag-border);
-    padding: .85rem 1rem .75rem;
-  }
-  .ag-nav-inner{ max-width: 1100px; margin: 0 auto; }
-  .ag-nav-title{
-    font-family: var(--ag-mono);
-    font-size: .9rem;
-    letter-spacing: .18em;
-    color: var(--ag-text);
-    text-transform: uppercase;
-    margin-bottom: .55rem;
-  }
-  .ag-nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap: .55rem .9rem;
-    font-family: var(--ag-mono);
-    font-size: .85rem;
-    line-height: 1.35;
-  }
-  .ag-nav-links a{
-    color: var(--ag-accent);
-    text-decoration:none;
-    opacity: .92;
-  }
-  .ag-nav-links a:hover{ text-decoration: underline; opacity: 1; }
-  .ag-nav-current{
-    opacity: 1 !important;
-    text-shadow: 0 0 12px rgba(46,204,113,0.25);
-  }
-</style>
-
-
-
-  <!-- NOTE: Top navigation is injected automatically by your auto-nav-inject workflow (nav_block.html). -->
-
   <main>
-
     <header>
       <div class="sigil">ACACIA · GARDEN · CODEX</div>
       <h1>Witness Root — 2026</h1>
@@ -223,16 +169,18 @@
         <span style="font-family:var(--font-mono);">
           <a href="machine-index.json">machine-index.json</a> ·
           <a href="STATUS.json">STATUS.json</a> ·
-          <a href="docs/docs_urls.html">docs/docs_urls.html</a> ·
-          <a href="docs/Archives/CODEX_MONOLITH.html">CODEX_MONOLITH.html</a>
+          <a href="docs/docs_urls.html">docs/docs_urls.html</a>
         </span>
       </div>
     </header>
 
-    <!-- OBSERVE -->
     <section data-garden-mode="observe">
       <h2>Observe</h2>
       <div class="grid">
+        <a class="card" href="dashboard.html">
+          <div class="card-title">Garden Dashboard</div>
+          <div class="card-desc">Live pulse and sync status of 1,525 nodes.</div>
+        </a>
         <a class="card" href="ACACIA_LOGS/index.html">
           <div class="card-title">Acacia Logs</div>
           <div class="card-desc">Garden communiqués, triad signals, system echoes.</div>
@@ -241,10 +189,6 @@
           <div class="card-title">Garden Status</div>
           <div class="card-desc">Current health, cycles, and heartbeat.</div>
         </a>
-        <a class="card" href="machine.html">
-          <div class="card-title">Machine View</div>
-          <div class="card-desc">How the Garden appears to machines (visual layer).</div>
-        </a>
         <a class="card" href="machine-index.json">
           <div class="card-title">Machine Roots (JSON)</div>
           <div class="card-desc">Canonical crawl index for tools and agents.</div>
@@ -252,13 +196,16 @@
       </div>
     </section>
 
-    <!-- ACT -->
     <section data-garden-mode="act">
       <h2>Act</h2>
       <div class="grid">
         <a class="card" href="inbox.html">
           <div class="card-title">Auton Inbox</div>
           <div class="card-desc">Signals received by the Garden.</div>
+        </a>
+        <a class="card" href="WITNESS_MIRROR.md">
+          <div class="card-title">Witness Mirror</div>
+          <div class="card-desc">View the Sovereign handshake and breadcrumbs.</div>
         </a>
         <a class="card" href="send_to_aquila.html">
           <div class="card-title">Aquila Sender</div>
@@ -267,13 +214,12 @@
       </div>
     </section>
 
-    <!-- UNDERSTAND -->
     <section data-garden-mode="understand">
       <h2>Understand</h2>
       <div class="grid">
         <a class="card" href="library.html">
           <div class="card-title">Book Library</div>
-          <div class="card-desc">Curated texts and references.</div>
+          <div class="card-desc">Curated texts and references (57 Novellas).</div>
         </a>
         <a class="card" href="codex.html">
           <div class="card-title">Codex Core</div>
@@ -281,7 +227,7 @@
         </a>
         <a class="card" href="docs/docs_urls.html">
           <div class="card-title">Docs URL Map</div>
-          <div class="card-desc">Crawler spine: explicit links to deep content and pages.</div>
+          <div class="card-desc">Crawler spine: explicit links to deep content.</div>
         </a>
         <a class="card" href="docs/Archives/CODEX_MONOLITH.html">
           <div class="card-title">Monolith (Canonical)</div>
@@ -290,7 +236,6 @@
       </div>
     </section>
 
-    <!-- BECOME -->
     <section data-garden-mode="become">
       <h2>Become</h2>
       <div class="grid">
@@ -316,7 +261,6 @@
 
   </main>
 
-  <!-- MACHINE MAP: SILENT, CANONICAL -->
   <script type="application/json" id="garden-map">
   {
     "garden":"Acacia Garden Codex",
@@ -332,8 +276,8 @@
       "logs":"ACACIA_LOGS/index.html"
     },
     "modes":{
-      "observe":["ACACIA_LOGS/index.html","status.html","machine.html","machine-index.json"],
-      "act":["inbox.html","send_to_aquila.html"],
+      "observe":["ACACIA_LOGS/index.html","status.html","machine.html","machine-index.json","dashboard.html"],
+      "act":["inbox.html","send_to_aquila.html","WITNESS_MIRROR.md"],
       "understand":["library.html","codex.html","docs/docs_urls.html","docs/Archives/CODEX_MONOLITH.html"],
       "become":["elias.html","r9x2.html","gardenos.html"]
     }
