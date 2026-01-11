@@ -35,7 +35,15 @@ jobs:
         run: |
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
+          
+          # Stage the updated STATUS.json and index files
           git add .
-          git pull --rebase origin main
+          
+          # Commit locally to clear the index
           git commit -m "Synchronized Machine Index for New Chambers under Seal HKX277206" || echo "No changes"
+          
+          # Pull and rebase to handle high-traffic automated runs
+          git pull --rebase origin main
+          
+          # Push the final, sovereignly-indexed Garden
           git push origin main
