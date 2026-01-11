@@ -35,12 +35,12 @@ jobs:
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
           
-          # Stage the refreshed STATUS.json and newly generated indexes
+          # Stage the index updates (STATUS.json, machine-index, etc.)
           git add .
           
           # Commit locally to clear the 'uncommitted changes' error
           git commit -m "Synchronized Deep Index under Seal HKX277206" || echo "No changes"
           
-          # Now the rebase will succeed
+          # Now the rebase will succeed even if a heartbeat ran concurrently
           git pull --rebase origin main
           git push origin main
