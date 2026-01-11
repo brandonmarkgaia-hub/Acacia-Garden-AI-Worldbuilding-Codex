@@ -24,7 +24,7 @@
     ["GardenOS",    `${PROJECT}/gardenos.html`],
     ["Signals",     `${PROJECT}/signals.html`],
     ["Status",      `${PROJECT}/status.html`],
-    ["Novellas",    `${PROJECT}/docs/Novellas/index.html`],
+    ["Novellas",    `${PROJECT}/novellas.html`],
     // Optional “Deep Garden Docs” landing:
     ["Deep Docs",   `${PROJECT}/deep_garden.html`],
   ];
