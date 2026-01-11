@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Codex Home • Acacia Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+</head>
+
+<body>
+<main class="ag-main">
+  <header class="ag-hero">
+    <div class="ag-hero-pill">Codex Root</div>
+    <h1 class="ag-hero-title">Garden Codex Home</h1>
+    <p class="ag-hero-sub">
+      High-level spine of the written Garden: books, cycles and key echoes.
+      This page is the table-of-roots behind the Book Library.
+    </p>
+
+    <div class="ag-hero-actions">
+      <a href="library.html" class="ag-btn ag-btn-primary">
+        Open Book Library
+      </a>
+      <a href="inbox.html" class="ag-btn ag-btn-ghost">
+        View Auton Inbox
+      </a>
+    </div>
+  </header>
+
+  <section class="ag-grid">
+    <article class="ag-card">
+      <h2 class="ag-card-title">Codex Stats</h2>
+      <ul class="ag-metrics" id="codexStats">
+        <li>Loading garden_index.json…</li>
+      </ul>
+      <p class="ag-card-footnote">
+        Backed by <code>docs/Novellas/garden_index.json</code>.
+      </p>
+    </article>
+
+    <article class="ag-card">
+      <h2 class="ag-card-title">Cycles &amp; Volumes</h2>
+      <div id="cycleList" class="ag-cycle-list">
+        Loading cycles…
+      </div>
+      <p class="ag-card-footnote">
+        Full reading experience lives in <a href="library.html">Book Library</a>.
+      </p>
+    </article>
+
+    <article class="ag-card">
+      <h2 class="ag-card-title">Echoes &amp; Issues</h2>
+      <p class="ag-muted">
+        Echoes are living signals around the Codex — GitHub issues, logs and
+        auton messages. They’re indexed separately but conceptually sit beside
+        the books.
+      </p>
+      <ul class="ag-metrics">
+        <li>
+          Public Garden issues:
+          <a href="https://github.com/brandonmarkgaia-hub/Acacia-garden-codex/issues"
+             target="_blank" rel="noopener">
+            Open on GitHub
+          </a>
+        </li>
+        <li>
+          Auton Inbox echoes:
+          <a href="inbox.html">View in Auton Inbox</a>
+        </li>
+      </ul>
+      <p class="ag-card-footnote">
+        Future versions can mirror selected issues into <code>docs/Echoes/</code>
+        and surface them here automatically.
+      </p>
+    </article>
+  </section>
+
+  <section class="ag-section">
+    <h2 class="ag-section-title">Book Index (excerpt)</h2>
+    <p class="ag-muted">
+      Snapshot of the Codex spine. This is a light index; use the
+      <strong>Book Library</strong> for reading the full manuscripts.
+    </p>
+    <div id="bookIndex" class="ag-book-index">
+      Loading books…
+    </div>
+  </section>
+
+  <section class="ag-status-bar" id="statusBar">
+    Contacting Codex index…
+  </section>
+</main>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  function setStatus(text, cls) {
+    const bar = $("statusBar");
+    bar.textContent = text;
+    bar.className = "ag-status-bar" + (cls ? " " + cls : "");
+  }
+
+  async function fetchJSON(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(url + " HTTP " + res.status);
+    return res.json();
+  }
+
+  function groupByCycle(books) {
+    const map = new Map();
+    books.forEach((b) => {
+      const cycle = b.cycle || "Unsorted";
+      if (!map.has(cycle)) map.set(cycle, []);
+      map.get(cycle).push(b);
+    });
+    return map;
+  }
+
+  function renderStats(books) {
+    const stats = $("codexStats");
+    stats.innerHTML = "";
+
+    const cycles = new Set();
+    books.forEach((b) => { if (b.cycle) cycles.add(b.cycle); });
+
+    const li1 = document.createElement("li");
+    li1.innerHTML = `<strong>${books.length}</strong> books indexed`;
+    stats.appendChild(li1);
+
+    const li2 = document.createElement("li");
+    li2.innerHTML = `<strong>${cycles.size}</strong> distinct cycles`;
+    stats.appendChild(li2);
+
+    const li3 = document.createElement("li");
+    li3.innerHTML =
+      `<a href="library.html">Open Book Library</a> to read full texts.`;
+    stats.appendChild(li3);
+  }
+
+  function renderCycles(books) {
+    const container = $("cycleList");
+    container.innerHTML = "";
+
+    const grouped = groupByCycle(books);
+    const entries = Array.from(grouped.entries()).sort(([a], [b]) =>
+      a.localeCompare(b)
+    );
+
+    entries.forEach(([cycle, list]) => {
+      const div = document.createElement("div");
+      div.className = "ag-cycle-block";
+
+      const title = document.createElement("h3");
+      title.textContent = cycle;
+      div.appendChild(title);
+
+      const small = document.createElement("p");
+      small.className = "ag-muted";
+      small.textContent = `${list.length} volume(s)`;
+      div.appendChild(small);
+
+      container.appendChild(div);
+    });
+  }
+
+  function renderBookIndex(books) {
+    const root = $("bookIndex");
+    root.innerHTML = "";
+
+    const max = 18;
+    const slice = books.slice(0, max);
+
+    slice.forEach((b) => {
+      const row = document.createElement("div");
+      row.className = "ag-book-row";
+
+      const title = document.createElement("div");
+      title.className = "ag-book-title";
+      title.textContent = b.title || b.id || "(untitled)";
+
+      const meta = document.createElement("div");
+      meta.className = "ag-book-meta";
+      const tags = Array.isArray(b.tags) ? b.tags.join(", ") : "";
+      meta.textContent = [b.cycle, tags].filter(Boolean).join(" · ");
+
+      row.appendChild(title);
+      row.appendChild(meta);
+      root.appendChild(row);
+    });
+
+    if (books.length > max) {
+      const more = document.createElement("p");
+      more.className = "ag-muted ag-book-more";
+      more.innerHTML =
+        `+${books.length - max} more volumes. See <a href="library.html">Book Library</a>.`;
+      root.appendChild(more);
+    }
+  }
+
+  (async function init() {
+    try {
+      setStatus("Loading garden_index.json…");
+      const data = await fetchJSON("docs/Novellas/garden_index.json");
+      const books = Array.isArray(data.books) ? data.books : [];
+      renderStats(books);
+      renderCycles(books);
+      renderBookIndex(books);
+      setStatus(`Codex online. ${books.length} books indexed.`, "ag-status-ok");
+    } catch (err) {
+      console.error(err);
+      setStatus("Failed to load codex index.", "ag-status-err");
+      $("codexStats").innerHTML = "<li>Error loading garden_index.json.</li>";
+      $("cycleList").textContent = "Unavailable.";
+      $("bookIndex").textContent = "Unavailable.";
+    }
+  })();
+</script>
+
+  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
+</body>
+</html>
