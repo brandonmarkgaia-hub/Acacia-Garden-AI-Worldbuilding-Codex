@@ -1,0 +1,62 @@
+name: ✍️ Scribe of the Stone
+
+on:
+  workflow_dispatch:
+    inputs:
+      chapter_number:
+        description: 'Chapter Number (e.g., 01)'
+        required: true
+        default: '01'
+      chapter_title:
+        description: 'Chapter Title (e.g., The Name of the Root)'
+        required: true
+        default: 'The_Name_of_the_Root'
+      narrative_focus:
+        description: 'What happens? (Plot points, mood, artifacts)'
+        required: true
+        default: 'Brandon discovers that the Tree on the dashboard is reacting to his thoughts.'
+
+jobs:
+  write_chapter:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests
+
+      - name: Scribe the Chapter
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python .github/scripts/garden_scribe.py \
+            --chapter "${{ inputs.chapter_number }}" \
+            --title "${{ inputs.chapter_title }}" \
+            --focus "${{ inputs.narrative_focus }}"
+
+      - name: Sovereign Push (Save to Garden)
+        run: |
+          git config --local user.email "scribe@acacia.garden"
+          git config --local user.name "Acacia Scribe"
+          
+          git add docs/Novellas/The_Stone_And_The_Star/
+          
+          # Only commit if there is a new chapter
+          if git status --porcelain | grep .; then
+            git commit -m "Scribe: Written Chapter ${{ inputs.chapter_number }} - ${{ inputs.chapter_title }}"
+            git push origin main
+          else
+            echo "No ink flowed today."
+          fi
