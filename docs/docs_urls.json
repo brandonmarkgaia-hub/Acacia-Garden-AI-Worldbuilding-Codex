@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-11T16:38:55Z",
-  "count": 1525,
+  "generated_at": "2026-01-11T17:41:36Z",
+  "count": 1524,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1512,7 +1512,6 @@
     "api/GARDEN_API_INDEX.json",
     "dashboard.html",
     "dashboard.md",
-    "docs_urls.html",
     "docs_urls.json",
     "docs_urls.txt",
     "echoes.md",

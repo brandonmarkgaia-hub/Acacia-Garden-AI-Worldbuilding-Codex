@@ -1275,7 +1275,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-11T17:06:45Z",
+  "generated_at": "2026-01-11T17:41:30Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1313,9 +1313,11 @@
   },
   "safety": {
     "health": {
-      "missing_files": [],
+      "missing_files": [
+        "docs/docs_urls.html"
+      ],
       "warnings": [],
-      "last_checked_utc": "2026-01-11T17:06:45Z"
+      "last_checked_utc": "2026-01-11T17:41:30Z"
     }
   },
   "verification": {
@@ -1324,17 +1326,32 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-11T17:06:45Z"
+      "last_checked_utc": "2026-01-11T17:41:30Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": true,
-      "last_checked_utc": "2026-01-11T17:06:45Z"
+      "verified": false,
+      "last_checked_utc": "2026-01-11T17:41:30Z",
+      "total_html_scanned": 259,
+      "with_map_loader": 255,
+      "missing_map_loader_count": 4,
+      "missing_map_loader_paths": [
+        "deep_garden.html",
+        "docs/index.html",
+        "docs/dashboard.html",
+        "docs/Novellas/index.html"
+      ],
+      "map_button_present": true
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false
-    }
+      "docs_urls_in_sync": false,
+      "docs_urls_count": 1524,
+      "docs_urls_present": true,
+      "machine_index_present": true,
+      "status_schema_present": true
+    },
+    "last_verified_utc": "2026-01-11T17:41:39Z"
   },
   "growth": {
     "open": []
