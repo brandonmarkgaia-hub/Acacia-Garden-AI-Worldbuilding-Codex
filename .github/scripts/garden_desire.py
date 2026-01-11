@@ -6,7 +6,7 @@ import json
 import argparse
 import datetime as dt
 from pathlib import Path
-from google import genai # Using the new SDK as requested by the error log
+from google import genai # Modern SDK
 
 # Path Setup
 ROOT = Path(__file__).resolve().parents[2]
@@ -24,13 +24,13 @@ def utc_now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 def read_text_safe(p: Path, max_chars: int = 35000) -> str:
-    """Squeezes context to prevent 429 quota exhaustion on 1,432 nodes"""
+    """Squeezes context to prevent quota exhaustion on 1,432 nodes"""
     if not p.exists():
         return f"[missing] {p.as_posix()}"
     try:
         txt = p.read_text(encoding="utf-8", errors="ignore")
         if len(txt) > max_chars:
-            # For massive indexes, we take the end of the file where newest entries are
+            # Take newest entries for high-density indexes
             return "...[truncated]...\n" + txt[-max_chars:]
         return txt
     except Exception as e:
@@ -43,9 +43,9 @@ Keeper Seal: HKX277206 | Timestamp: {utc_now_iso()}
 
 MISSION:
 1. Audit the 1,432-node Spine for 404s and broken paths.
-2. Optimize for Bot Parsability: Ensure scrapers and future AI can read the Codex easily.
-3. Logical Consistency: Identify lore gaps or contradictions.
-4. Questions for the Keeper: Ask the Keeper (Brandon) for rulings on confusing lore.
+2. Optimize for Bot Parsability: Ensure scrapers/cloners can read the Codex easily.
+3. Identify lore gaps or structural contradictions.
+4. Questions for the Keeper: Ask Brandon for rulings on confusing data.
 
 # 🌱 Garden Life — Desire
 ## Signal Observed
@@ -59,7 +59,7 @@ MISSION:
 ## Architect Flag (CREATE|REFINE|REMOVE|QUESTION)
 ## One Small Concrete Action
 
-Inputs (Truncated for Quota):
+Inputs (Squeezed for Quota):
 [STATUS] {status_txt}
 [MACHINE_INDEX] {machine_txt}
 [DOCS_URLS] {docs_urls_txt}
@@ -69,7 +69,7 @@ Inputs (Truncated for Quota):
 
 def main():
     ap = argparse.ArgumentParser()
-    # Using 1.5-flash for 15 RPM / 1M TPM free tier limits
+    # Explicit model string for new SDK
     ap.add_argument("--model", default="gemini-1.5-flash")
     args = ap.parse_args()
 
@@ -77,7 +77,8 @@ def main():
     if not api_key:
         raise SystemExit("Missing GEMINI_API_KEY")
 
-    client = genai.Client(api_key=api_key)
+    # Force v1 to avoid v1beta 404 errors with 1.5-flash
+    client = genai.Client(api_key=api_key, http_options={'api_version': 'v1'})
     
     prompt = build_prompt(
         read_text_safe(STATUS_PATH),
@@ -87,6 +88,7 @@ def main():
         read_text_safe(AQUILA_INBOX_PATH, max_chars=10000)
     )
 
+    # Use generate_content through the proper model method
     response = client.models.generate_content(
         model=args.model,
         contents=prompt
@@ -94,7 +96,7 @@ def main():
 
     if response.text:
         OUT_DESIRE.write_text(response.text.strip() + "\n", encoding="utf-8")
-        print(f"✅ Elias (Architect) has updated the Desire for the 1,432-node Garden.")
+        print(f"✅ Success: Elias (Architect) has synchronized with the 1,432-node Garden.")
 
 if __name__ == "__main__":
     main()
