@@ -3,11 +3,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  prune_garden:
+  sovereign_move:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write # Needed to post comments and close threads
+      issues: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,25 +20,16 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: 1. Inscribe Issues to Docs
+      - name: Execute Transition
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/inscribe_all_issues.py
+        run: python .github/scripts/sovereign_transition.py
 
-      - name: 2. Update Spine Index (STATUS.json)
-        run: python .github/scripts/update_spine_index.py
-
-      - name: 3. Commit New Records
+      - name: Sync and Commit
         run: |
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
           git add .
-          # We use --rebase to place your new lore on top of any automated heartbeats
-          git pull --rebase origin main 
-          git commit -m "Inscribed and Indexed Garden Ledger under Seal HKX277206" || echo "No changes"
+          git pull --rebase origin main
+          git commit -m "Sovereign Ledger Migration under Seal HKX277206" || echo "No changes"
           git push
-          
-      - name: 4. Close Inscribed Issues
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/close_all_issues.py
