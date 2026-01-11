@@ -1274,7 +1274,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-11T13:42:23Z",
+  "generated_at": "2026-01-11T13:45:28Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1314,7 +1314,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-11T13:42:23Z"
+      "last_checked_utc": "2026-01-11T13:45:28Z"
     }
   },
   "verification": {
@@ -1323,12 +1323,12 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-11T13:42:23Z"
+      "last_checked_utc": "2026-01-11T13:45:28Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": false,
-      "last_checked_utc": "2026-01-11T13:42:23Z",
+      "verified": true,
+      "last_checked_utc": "2026-01-11T13:45:28Z",
       "total_html_scanned": 258,
       "with_map_loader": 255,
       "missing_map_loader_count": 3,
