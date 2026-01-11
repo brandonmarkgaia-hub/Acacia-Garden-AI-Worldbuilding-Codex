@@ -28,7 +28,7 @@ jobs:
       - name: 2. Update Spine Index (STATUS.json)
         run: python .github/scripts/update_spine_index.py
 
-            - name: 3. Commit New Records
+      - name: 3. Commit New Records
         run: |
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
@@ -37,8 +37,7 @@ jobs:
           git pull --rebase origin main 
           git commit -m "Inscribed and Indexed Garden Ledger under Seal HKX277206" || echo "No changes"
           git push
-7
-
+          
       - name: 4. Close Inscribed Issues
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
