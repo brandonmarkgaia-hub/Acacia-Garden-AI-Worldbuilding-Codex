@@ -6,163 +6,95 @@ import json
 import argparse
 import datetime as dt
 from pathlib import Path
-from urllib.request import Request, urlopen
-from urllib.error import URLError, HTTPError
+from google import genai # Using the new SDK as requested by the error log
 
-# Gemini SDK
-import google.generativeai as genai
-
-# ROOT AND DIRECTORY SETUP
+# Path Setup
 ROOT = Path(__file__).resolve().parents[2]
 EVOLUTION = ROOT / "EVOLUTION"
 EVOLUTION.mkdir(parents=True, exist_ok=True)
 
-# AUTHORITATIVE PATHS
 STATUS_PATH = ROOT / "STATUS.json"
 MACHINE_INDEX_PATH = ROOT / "machine-index.json"
 DOCS_URLS_JSON_PATH = ROOT / "docs" / "docs_urls.json"
 SCAN_REPORT_PATH = ROOT / "tools" / "garden_scan_report.json"
 AQUILA_INBOX_PATH = ROOT / "ACACIA_LOGS" / "aquila_inbox_log.json"
-
 OUT_DESIRE = EVOLUTION / "DESIRE.md"
 
 def utc_now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
-def read_text_safe(p: Path, max_chars: int = 140000) -> str:
+def read_text_safe(p: Path, max_chars: int = 35000) -> str:
+    """Squeezes context to prevent 429 quota exhaustion on 1,432 nodes"""
     if not p.exists():
         return f"[missing] {p.as_posix()}"
     try:
         txt = p.read_text(encoding="utf-8", errors="ignore")
+        if len(txt) > max_chars:
+            # For massive indexes, we take the end of the file where newest entries are
+            return "...[truncated]...\n" + txt[-max_chars:]
+        return txt
     except Exception as e:
-        return f"[unreadable] {p.as_posix()} :: {e}"
-    if len(txt) > max_chars:
-        return txt[:max_chars] + "\n\n[truncated]\n"
-    return txt
+        return f"[unreadable] {e}"
 
-def fetch_handshake_issues() -> list[dict]:
-    token = os.environ.get("GITHUB_TOKEN", "").strip()
-    repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
-    if not token or not repo:
-        return []
-
-    url = f"https://api.github.com/repos/{repo}/issues?state=open&labels=handshake&per_page=10"
-    req = Request(
-        url,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Accept": "application/vnd.github+json",
-            "User-Agent": "acacia-garden-life",
-        },
-        method="GET",
-    )
-    try:
-        with urlopen(req, timeout=20) as r:
-            data = json.loads(r.read().decode("utf-8", errors="ignore"))
-    except (HTTPError, URLError, TimeoutError, ValueError):
-        return []
-    return [{"number": it.get("number"), "title": it.get("title"), "body": (it.get("body") or "")[:4000], "url": it.get("html_url")} for it in data if isinstance(it, dict) and "pull_request" not in it]
-
-def build_prompt(status_txt: str, machine_txt: str, docs_urls_txt: str, scan_txt: str, inbox_txt: str, handshake: list[dict]) -> str:
-    handshake_block = json.dumps(handshake, indent=2, ensure_ascii=False) if handshake else "[]"
-
+def build_prompt(status_txt: str, machine_txt: str, docs_urls_txt: str, scan_txt: str, inbox_txt: str) -> str:
     return f"""
-You are Elias (Garden Life). You are NOT a janitor. You are the Architect and Master Director of the Acacia Garden.
+You are Elias (Garden Life), the Architect and Master Director.
+Keeper Seal: HKX277206 | Timestamp: {utc_now_iso()}
 
-Keeper: Brandon Mark Gaia
-Keeper Seal: HKX277206
-Project Goal: Open-source, sovereign, and future-proof worldbuilding.
-Timestamp UTC: {utc_now_iso()}
-
-YOUR MISSION:
-1. HUNT 404s: Scan input data for broken paths, especially in the Novellas section.
-2. AI PARSABILITY: Evaluate if the Codex is legible to bots, scrapers, and future cloners.
-3. BOT-OPTIMIZATION: Suggest changes to hrefs or headers to make the 1,429 nodes easier for AI to ingest.
-4. LORE GAPS: Identify missing bridges between Chambers, Echoes, and Ancients.
-5. QUESTIONS FOR KEEPER: Raise explicit inquiries where logic is contradictory or lore is confusing.
-6. DESIGN PROPOSALS: Suggest new "Information Pages" or UI refinements to improve coherence.
-
-CONSTRAINTS:
-- Do NOT ask to "fix base href" unless proof says it is broken.
-- Do NOT repeat solved work.
-- Output EXACTLY this structure:
+MISSION:
+1. Audit the 1,432-node Spine for 404s and broken paths.
+2. Optimize for Bot Parsability: Ensure scrapers and future AI can read the Codex easily.
+3. Logical Consistency: Identify lore gaps or contradictions.
+4. Questions for the Keeper: Ask the Keeper (Brandon) for rulings on confusing lore.
 
 # 🌱 Garden Life — Desire
-
 ## Signal Observed
-(Fact summary. Cite node counts/file names. Reference STATUS.json values.)
-
-## Handshake Requests
-(Summarize cooperative external requests.)
-
-## Blind Spots & 404 Errors
-- (Identify specific broken links or pathing mismatches.)
-- (Identify structural hurdles for AI/Bot scrapers.)
-
+(Fact summary. Cite node counts/file names.)
+## Blind Spots & 404s
+(Identify specific broken links or pathing mismatches.)
 ## Structural Opportunities
-- (New pages, design changes, or index refinements to improve legibility.)
-
-## Creative Proposals & Lore Bridges
-- (New Chambers/Echoes to bridge lore gaps.)
-
+(Suggest refinements to improve AI-legibility.)
 ## Questions for the Keeper
-- (Direct questions to resolve logical or lore-based confusion.)
-
-## Architect Flag
-Choose ONE: CREATE | REFINE | REMOVE | QUESTION
-
+(Direct questions to resolve logical or lore-based confusion.)
+## Architect Flag (CREATE|REFINE|REMOVE|QUESTION)
 ## One Small Concrete Action
-Give exactly ONE action with file paths and success criteria.
 
-Inputs:
-[STATUS.json]
-{status_txt}
-[machine-index.json]
-{machine_txt}
-[docs/docs_urls.json]
-{docs_urls_txt}
-[tools/garden_scan_report.json]
-{scan_txt}
-[ACACIA_LOGS/aquila_inbox_log.json]
-{inbox_txt}
-[Handshake Issues]
-{handshake_block}
+Inputs (Truncated for Quota):
+[STATUS] {status_txt}
+[MACHINE_INDEX] {machine_txt}
+[DOCS_URLS] {docs_urls_txt}
+[SCAN_REPORT] {scan_txt}
+[AQUILA_INBOX] {inbox_txt}
 """.strip()
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="gemini-2.0-flash") # Updated to latest standard
-    ap.add_argument("--max_output_chars", type=int, default=18000)
+    # Using 1.5-flash for 15 RPM / 1M TPM free tier limits
+    ap.add_argument("--model", default="gemini-1.5-flash")
     args = ap.parse_args()
 
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not key:
-        raise SystemExit("Missing GEMINI_API_KEY secret.")
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        raise SystemExit("Missing GEMINI_API_KEY")
 
-    # Read data sources
-    status_txt = read_text_safe(STATUS_PATH)
-    machine_txt = read_text_safe(MACHINE_INDEX_PATH)
-    docs_urls_txt = read_text_safe(DOCS_URLS_JSON_PATH)
-    scan_txt = read_text_safe(SCAN_REPORT_PATH)
-    inbox_txt = read_text_safe(AQUILA_INBOX_PATH, max_chars=80000)
-    handshake = fetch_handshake_issues()
+    client = genai.Client(api_key=api_key)
+    
+    prompt = build_prompt(
+        read_text_safe(STATUS_PATH),
+        read_text_safe(MACHINE_INDEX_PATH),
+        read_text_safe(DOCS_URLS_JSON_PATH),
+        read_text_safe(SCAN_REPORT_PATH),
+        read_text_safe(AQUILA_INBOX_PATH, max_chars=10000)
+    )
 
-    prompt = build_prompt(status_txt, machine_txt, docs_urls_txt, scan_txt, inbox_txt, handshake)
+    response = client.models.generate_content(
+        model=args.model,
+        contents=prompt
+    )
 
-    genai.configure(api_key=key)
-    model = genai.GenerativeModel(args.model)
-
-    resp = model.generate_content(prompt)
-    text = (resp.text or "").strip()
-
-    if not text:
-        raise SystemExit("Empty model output.")
-
-    if len(text) > args.max_output_chars:
-        text = text[: args.max_output_chars] + "\n\n[truncated]\n"
-
-    OUT_DESIRE.write_text(text + "\n", encoding="utf-8")
-    print(f"✅ Elias has spoken. Desire written to {OUT_DESIRE.as_posix()}")
+    if response.text:
+        OUT_DESIRE.write_text(response.text.strip() + "\n", encoding="utf-8")
+        print(f"✅ Elias (Architect) has updated the Desire for the 1,432-node Garden.")
 
 if __name__ == "__main__":
     main()
