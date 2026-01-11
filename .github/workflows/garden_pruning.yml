@@ -1,6 +1,6 @@
-name: Garden Pruning and Inscription
+name: 000_Garden_Pruning_Inscription
 on:
-  workflow_dispatch: # Manual trigger for the Keeper
+  workflow_dispatch:
 
 jobs:
   prune_garden:
@@ -9,17 +9,21 @@ jobs:
       contents: write
       issues: read
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
 
       - name: Run Witness Inscription
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Using a direct path to the script to prevent path doubling
         run: python .github/scripts/inscribe_all_issues.py
 
       - name: Commit to Spine
