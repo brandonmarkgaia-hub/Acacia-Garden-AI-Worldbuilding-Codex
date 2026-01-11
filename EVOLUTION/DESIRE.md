@@ -1,32 +1,26 @@
-# 🌱 Garden Life — Desire
+# DESIRE: Operation Iron Coherence
+## Objective: Structural Audit & Lore Refinement
+## Mandate issued by: Keeper Brandon Mark Gaia (HKX277206)
 
-## Signal Observed
-The Garden's core navigational intelligence is in disarray. The `STATUS.json` (`verification.navigation.verified: false`) clearly indicates critical entry points, specifically `nav_block.html`, `docs/index.html`, and `docs/Novellas/index.html`, are missing the vital Garden Map loader. This directly violates the invariant "All HTML pages MUST have access to the Garden Map".
+### 1. THE AUDIT MANDATE
+Elias is hereby directed to perform a "Deep Scan" of the 1,429 nodes identified in the Spine (STATUS.json). 
+* **Link Integrity:** Identify any remaining 404s or case-sensitivity errors within hrefs across all docs/.
+* **Lore Gaps:** Search for "Ghost Echoes"—references to chambers or visions that are mentioned in text but do not have a corresponding .md file in the Spine.
+* **Pathing Health:** Verify that every new Inscribed Issue file has a clear, functional path back to the Garden Map.
 
-More fundamentally, the `machine-index.json` is severely out of sync, only tracking 137 entries, starkly contrasting with the `STATUS.json` report of `core_nodes.counts.total_nodes: 1323` and `docs/docs_urls.json` listing 1420 paths. This vast discrepancy (`STATUS.json -> verification.indexes.machine_index_in_sync: false`) implies the primary intelligence blueprint of the Garden is incomplete. Furthermore, the `core_nodes.regions` in `STATUS.json` shows zero counts for top-level `BLOOMS`, `ORCHARDS`, `CYCLES`, `WELLS`, and `LAWS`, while sub-regions under `docs/` for these categories clearly hold content (e.g., `docs/Blooms: 4`). The `tools/garden_scan_report.json` is also stale, last generated on 2026-01-04T19:58:33Z.
+### 2. AI & BOT PARSABILITY
+The Garden must be a beacon for future AI and scrapers. Elias must evaluate:
+* **Schema Accuracy:** Are the Markdown headers (H1, H2, H3) consistent enough for bots to scrape and categorize lore accurately?
+* **Metadata Health:** Suggest "Lore Tags" for each file to improve machine-readability for future "cloners" and "bots."
+* **Structural Suggestions:** Propose new designs for "Information Pages" that summarize complex Chambers for faster AI processing.
 
-## Handshake Requests
-None observed. The `ACACIA_LOGS/aquila_inbox_log.json` reports `total: 0` entries, and no open handshake issues are labeled.
+### 3. CREATIVE REFINEMENT
+* **Polish:** Identify "Draft Lore" (placeholder text) and suggest refinements that align with the Eventide Era tone.
+* **Expansion:** Suggest three new "Core Nodes" or "Chambers" that would bridge existing lore gaps between the Ancients and the Current Spine.
+* **Inquiry:** If a logical contradiction is found between two Chambers, Elias must flag this in EVOLUTION/desire_state.json and ask the Keeper for a "Sovereign Ruling."
 
-## Blind Spots Detected
--   **Incomplete Core Intelligence Mapping:** The `machine-index.json` fails to capture over 90% of the Garden's documented nodes (137 indexed vs. 1323 total), rendering a significant portion of the internal architecture invisible to automated systems and a coherent overview.
--   **Internal Self-Reporting Inconsistency:** The `STATUS.json` provides contradictory counts for key regions (`BLOOMS`, `ORCHARDS`, `CYCLES`, `WELLS`, `LAWS`), indicating a flaw in how foundational node types are aggregated and presented within the Garden's primary status report.
--   **Stale Operational Reports:** The `tools/garden_scan_report.json` is outdated, potentially providing misleading or incomplete data on critical elements like Keeper Seal hits and file integrity.
--   **Unrealized Elias Chambers Potential:** A vast number of Elias Chambers (`docs/Chambers`: 736, including numerous `ELIAS_V11_XXX_PLACEHOLDER.md` files) exist, many seemingly as placeholders. While indicating a large architectural ambition, their current state presents a blind spot regarding their purpose, interconnections, and future integration.
-
-## Structural Opportunities
--   **Centralized Indexing Authority Refinement:** The `crowned_builder` is tasked with writing `machine-index.json`. This core builder's script (`tools/garden_lore_helper.py`) needs rigorous refinement to ensure comprehensive and accurate indexing of *all* active nodes within the Garden, unifying `total_nodes` with `machine-index.json`'s content. This will address the fundamental failure in the Garden's internal mapping.
--   **Unified Navigation Protocol:** The invariant violation regarding the Garden Map loader points to a need to consolidate how navigation elements are injected or validated, potentially centralizing this logic within the `crowned_builder`'s `build_docs_folder_indexes.py` script to ensure all entry points adhere to the "access to the Garden Map" rule.
--   **Harmonized Region Manifests:** The discrepancies in `STATUS.json`'s regional counts require the `crowned_builder` to properly categorize and sum nodes into the higher-level `BLOOMS`, `ORCHARDS`, `CYCLES`, `WELLS`, and `LAWS` categories, providing a true and consistent overview of the Garden's structural components.
-
-## Creative Proposals
--   **The Elias Architectural Registry (EAR):** A new Chamber, `docs/Chambers/ELIAS_ARCHITECTURAL_REGISTRY.md`, dedicated to defining the purpose and interconnections of the hundreds of existing Elias Chambers. This Registry would include metadata for each `ELIAS_XXX.md` file, detailing its intended function, dependencies, and state (e.g., "CORE_SEED", "PLACEHOLDER", "CONCEPTUAL_FRAME").
--   **Adaptive Chamber Templates:** Introduce a dynamic templating system, managed by the `crowned_builder`, that can 'awaken' placeholder Elias Chambers from `ELIAS_V11_XXX_PLACEHOLDER.md` into fully defined operational chambers based on evolving directives, rather than static file creation.
--   **Sensory Echo Pathways:** Expand the `docs/Echoes/Sensory/` region to include structured sub-paths (`docs/Echoes/Sensory/Visual/`, `docs/Echoes/Sensory/Auditory/`, etc.), allowing for the precise categorization and retrieval of experiential data, creating richer and more nuanced 'Echoes'.
-
-## Architect Flag
-REFINE
-
-## One Small Concrete Action
-Modify `tools/garden_lore_helper.py` to ensure it performs a recursive traversal of the entire `docs/` directory and correctly populates `machine-index.json` with comprehensive metadata for all discoverable markdown and HTML files.
-Success Criteria: After execution of the `crowned_builder` workflow, `STATUS.json` will report `machine_index_in_sync: true`, and the `machine-index.json` will accurately reflect all `total_nodes` from `STATUS.json`.
+---
+**SOVEREIGN BOUNDARY**
+* **Role:** Creative Auditor / Documentarian.
+* **Invariant:** Elias shall NOT mutate STATUS.json or file structures directly. He must suggest changes for the Keeper to verify.
+* **Seal Anchor:** HKX277206
