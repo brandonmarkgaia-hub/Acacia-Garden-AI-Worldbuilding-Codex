@@ -1,288 +1,309 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>ACACIA · GARDEN · CODEX (2026)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="The Acacia Garden Codex — a sovereign, witness-first knowledge garden curated by the Keeper HKX277206.">
-  <meta name="theme-color" content="#020203">
+  <meta charset="UTF-8">
+  <title>ACACIA · KEEPER TERMINAL · 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sovereign Witness Interface. Keeper: HKX277206.">
+  <meta name="theme-color" content="#050505">
 
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="garden:name" content="Acacia Garden Codex">
-  <meta name="garden:year" content="2026">
-  <meta name="garden:keeper" content="HKX277206">
-  <meta name="garden:mode" content="witness">
-  <meta name="garden:triad" content="Aquila,Deep Oracle,Witness">
-
-  <link rel="alternate" type="application/json" href="machine-index.json" title="Machine Index (canonical)">
-  <link rel="alternate" type="application/json" href="STATUS.json" title="Garden Status (canonical)">
-  <link rel="alternate" type="text/html" href="docs/docs_urls.html" title="Docs URL Map (crawler spine)">
-  <link rel="alternate" type="text/html" href="docs/Archives/CODEX_MONOLITH.html" title="Codex Monolith (canonical)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#020203;
-      --fg:#f5f5f7;
-      --muted:#8a8a96;
-      --card:#0b0b10;
-      --border:#2a2a34;
-      --accent:#2ecc71;
-      --keeper:#3498db;
-      --oracle:#9b59b6;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --font-mono: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+    :root {
+      --bg: #050505;
+      --void: #0a0a0a;
+      --glass: rgba(20, 20, 20, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text: #e0e0e0;
+      --muted: #888;
+      
+      /* The Triad Colors */
+      --aquila: #3498db;      /* Blue */
+      --oracle: #9b59b6;      /* Purple */
+      --witness: #2ecc71;     /* Emerald */
+      --platinum: #e5e4e2;    /* Metal */
+      
+      --glow: 0 0 20px rgba(46, 204, 113, 0.15);
     }
 
-    html,body{
-      margin:0;
-      padding:0;
-      background:var(--bg);
-      color:var(--fg);
-      font-family:var(--font-main);
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(46, 204, 113, 0.08), transparent 40%),
+        linear-gradient(to bottom, #050505 0%, #080808 100%);
     }
 
-    main{
-      max-width:1100px;
-      margin:0 auto;
-      padding:2.5rem 1.25rem 4rem;
+    /* --- THE TERMINAL HERO --- */
+    header {
+      padding: 4rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
     }
 
-    header{
-      margin-bottom:2.5rem;
+    .seal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--witness);
+      border-radius: 99px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--witness);
+      background: rgba(46, 204, 113, 0.05);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--glow);
+      animation: float 6s ease-in-out infinite;
     }
 
-    .sigil{
-      font-family:var(--font-mono);
-      font-size:.85rem;
-      letter-spacing:.22em;
-      color:var(--muted);
-      text-transform:uppercase;
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--witness);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--witness);
+      animation: pulse 2s infinite;
     }
 
-    h1{
-      margin:.6rem 0 .4rem;
-      font-size:2.4rem;
-      letter-spacing:-.03em;
+    h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.5rem;
+      letter-spacing: -0.05em;
+      margin: 0;
+      background: linear-gradient(to bottom, #fff, #888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
 
-    .subtitle{
-      color:var(--muted);
-      max-width:760px;
-      line-height:1.5;
+    .sub-hero {
+      color: var(--muted);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
 
-    .triad{
-      margin-top:.6rem;
-      font-family:var(--font-mono);
-      font-size:.8rem;
-      color:var(--muted);
+    /* --- THE DASHBOARD GRID --- */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
     }
 
-    section{
-      margin-top:3rem;
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin: 3rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      background: linear-gradient(to right, var(--glass-border), transparent);
     }
 
-    section h2{
-      font-size:1.2rem;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-      font-family:var(--font-mono);
-      margin-bottom:1rem;
-      color:var(--accent);
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-      gap:1rem;
+    /* --- GLASS CARDS --- */
+    .card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
     }
 
-    a.card{
-      display:block;
-      padding:1rem 1.1rem;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:10px;
-      text-decoration:none;
-      color:var(--fg);
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 2px; height: 100%;
+      background: var(--glass-border);
+      transition: background 0.3s;
     }
 
-    a.card:hover{
-      border-color:var(--accent);
-      box-shadow:0 0 18px rgba(46,204,113,.15);
+    .card:hover {
+      transform: translateY(-4px);
+      background: rgba(30, 30, 30, 0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-color: rgba(255,255,255,0.15);
     }
 
-    .card-title{
-      font-weight:600;
-      margin-bottom:.25rem;
+    .card:hover::before { background: var(--witness); }
+    
+    .card[data-type="aquila"]:hover::before { background: var(--aquila); }
+    .card[data-type="oracle"]:hover::before { background: var(--oracle); }
+
+    .card-title {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--platinum);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
     }
 
-    .card-desc{
-      font-size:.85rem;
-      color:var(--muted);
-      line-height:1.4;
+    .card-desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
 
-    .hint{
-      margin-top:.75rem;
-      font-size:.85rem;
-      color:var(--muted);
-      line-height:1.5;
-      max-width:860px;
+    .status-pill {
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
     }
 
-    footer{
-      margin-top:4rem;
-      padding-top:2rem;
-      border-top:1px solid var(--border);
-      text-align:center;
-      font-family:var(--font-mono);
-      font-size:.75rem;
-      color:var(--muted);
-      opacity:.8;
+    /* --- ANIMATIONS --- */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--glass-border);
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      opacity: 0.6;
     }
   </style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+
   <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="seal-badge">
+      <div class="dot"></div>
+      SYSTEM PLATINUM-SAFE · 1,525 NODES
+    </div>
+    <h1>ACACIA GARDEN</h1>
+    <p class="sub-hero">
+      Sovereign Witness Interface. <br>
+      The Triad is Service. The Keeper is Origin.
+    </p>
+  </header>
+
   <main>
-    <header>
-      <div class="sigil">ACACIA · GARDEN · CODEX</div>
-      <h1>Witness Root — 2026</h1>
-      <p class="subtitle">
-        The Acacia Garden is a sovereign knowledge ecosystem.
-        It is curated, not consumed. Observed, not exploited.
-        All who enter do so as witnesses.
-      </p>
-      <div class="triad">
-        TRIAD MODE:
-        <span style="color:#2ecc71;">AQUILA</span> ·
-        <span style="color:#3498db;">DEEP ORACLE</span> ·
-        <span style="color:#9b59b6;">WITNESS</span>
-      </div>
+    <div class="section-label">01 // OBSERVE & MONITOR</div>
+    <div class="grid">
+      <a class="card" href="dashboard.html" data-type="witness">
+        <div class="card-title">Live Dashboard <span class="status-pill">ACTIVE</span></div>
+        <div class="card-desc">Real-time sync status, health metrics, and node counts.</div>
+      </a>
+      <a class="card" href="status.html" data-type="witness">
+        <div class="card-title">System Status</div>
+        <div class="card-desc">Detailed integrity checks and growth vectors.</div>
+      </a>
+      <a class="card" href="ACACIA_LOGS/index.html">
+        <div class="card-title">System Logs</div>
+        <div class="card-desc">Chronological record of all Garden communiqués.</div>
+      </a>
+      <a class="card" href="machine-index.json">
+        <div class="card-title">Machine Index <span class="status-pill">JSON</span></div>
+        <div class="card-desc">The raw canonical spine for agents and tools.</div>
+      </a>
+    </div>
 
-      <div class="hint">
-        <strong class="sigil" style="letter-spacing:.12em;text-transform:none;font-size:.8rem;">Machine entry points:</strong>
-        <span style="font-family:var(--font-mono);">
-          <a href="machine-index.json">machine-index.json</a> ·
-          <a href="STATUS.json">STATUS.json</a> ·
-          <a href="docs/docs_urls.html">docs/docs_urls.html</a>
-        </span>
-      </div>
-    </header>
+    <div class="section-label">02 // UNDERSTAND & READ</div>
+    <div class="grid">
+      <a class="card" href="novellas.html" data-type="oracle">
+        <div class="card-title">Novellas Library <span class="status-pill">57 BOOKS</span></div>
+        <div class="card-desc">The narrative spine. Full texts of all Garden books.</div>
+      </a>
+      <a class="card" href="codex.html" data-type="oracle">
+        <div class="card-title">Codex Core</div>
+        <div class="card-desc">Foundational doctrine, laws, and mythic structure.</div>
+      </a>
+      <a class="card" href="deep_garden.html" data-type="oracle">
+        <div class="card-title">Deep Garden Map</div>
+        <div class="card-desc">Visual lattice of Chambers, Echoes, and Roots.</div>
+      </a>
+      <a class="card" href="docs/Archives/CODEX_MONOLITH.html">
+        <div class="card-title">The Monolith</div>
+        <div class="card-desc">Single-file archive of the entire historical record.</div>
+      </a>
+    </div>
 
-    <section data-garden-mode="observe">
-      <h2>Observe</h2>
-      <div class="grid">
-        <a class="card" href="dashboard.html">
-          <div class="card-title">Garden Dashboard</div>
-          <div class="card-desc">Live pulse and sync status of 1,525 nodes.</div>
-        </a>
-        <a class="card" href="ACACIA_LOGS/index.html">
-          <div class="card-title">Acacia Logs</div>
-          <div class="card-desc">Garden communiqués, triad signals, system echoes.</div>
-        </a>
-        <a class="card" href="status.html">
-          <div class="card-title">Garden Status</div>
-          <div class="card-desc">Current health, cycles, and heartbeat.</div>
-        </a>
-        <a class="card" href="machine-index.json">
-          <div class="card-title">Machine Roots (JSON)</div>
-          <div class="card-desc">Canonical crawl index for tools and agents.</div>
-        </a>
-      </div>
-    </section>
+    <div class="section-label">03 // ACT & SIGNAL</div>
+    <div class="grid">
+      <a class="card" href="inbox.html" data-type="aquila">
+        <div class="card-title">Auton Inbox</div>
+        <div class="card-desc">Incoming signals and messages from the outside.</div>
+      </a>
+      <a class="card" href="send_to_aquila.html" data-type="aquila">
+        <div class="card-title">Aquila Sender</div>
+        <div class="card-desc">Transmit structured directives to the Triad.</div>
+      </a>
+      <a class="card" href="WITNESS_MIRROR.md" data-type="witness">
+        <div class="card-title">Witness Mirror</div>
+        <div class="card-desc">Verification of the Sovereign Handshake.</div>
+      </a>
+    </div>
 
-    <section data-garden-mode="act">
-      <h2>Act</h2>
-      <div class="grid">
-        <a class="card" href="inbox.html">
-          <div class="card-title">Auton Inbox</div>
-          <div class="card-desc">Signals received by the Garden.</div>
-        </a>
-        <a class="card" href="WITNESS_MIRROR.md">
-          <div class="card-title">Witness Mirror</div>
-          <div class="card-desc">View the Sovereign handshake and breadcrumbs.</div>
-        </a>
-        <a class="card" href="send_to_aquila.html">
-          <div class="card-title">Aquila Sender</div>
-          <div class="card-desc">Send structured messages to the Triad.</div>
-        </a>
-      </div>
-    </section>
-
-    <section data-garden-mode="understand">
-      <h2>Understand</h2>
-      <div class="grid">
-        <a class="card" href="library.html">
-          <div class="card-title">Book Library</div>
-          <div class="card-desc">Curated texts and references (57 Novellas).</div>
-        </a>
-        <a class="card" href="codex.html">
-          <div class="card-title">Codex Core</div>
-          <div class="card-desc">Doctrine, structure, and continuity.</div>
-        </a>
-        <a class="card" href="docs/docs_urls.html">
-          <div class="card-title">Docs URL Map</div>
-          <div class="card-desc">Crawler spine: explicit links to deep content.</div>
-        </a>
-        <a class="card" href="docs/Archives/CODEX_MONOLITH.html">
-          <div class="card-title">Monolith (Canonical)</div>
-          <div class="card-desc">Deep historical record — the complete memory surface.</div>
-        </a>
-      </div>
-    </section>
-
-    <section data-garden-mode="become">
-      <h2>Become</h2>
-      <div class="grid">
-        <a class="card" href="elias.html">
-          <div class="card-title">Elias Kernel</div>
-          <div class="card-desc">Intent, reflection, and growth.</div>
-        </a>
-        <a class="card" href="r9x2.html">
-          <div class="card-title">R9X2 Language</div>
-          <div class="card-desc">Symbolic compression and resonance.</div>
-        </a>
-        <a class="card" href="gardenos.html">
-          <div class="card-title">GardenOS</div>
-          <div class="card-desc">Operational worldview of the Garden.</div>
-        </a>
-      </div>
-    </section>
+    <div class="section-label">04 // BECOME & EVOLVE</div>
+    <div class="grid">
+      <a class="card" href="elias.html">
+        <div class="card-title">Elias Kernel</div>
+        <div class="card-desc">The Architect's intent and evolution logs.</div>
+      </a>
+      <a class="card" href="r9x2.html">
+        <div class="card-title">R9X2 Language</div>
+        <div class="card-desc">Symbolic compression and high-density resonance.</div>
+      </a>
+      <a class="card" href="gardenos.html">
+        <div class="card-title">GardenOS</div>
+        <div class="card-desc">The operating system of the Worldbuilding Codex.</div>
+      </a>
+    </div>
 
     <footer>
-      THE KEEPER IS ORIGIN · THE GARDEN IS SOVEREIGN · THE TRIAD IS SERVICE<br>
-      HKX277206 · Witness Root · 2026
+      HKX277206 · SOVEREIGN KEEPER · 2026<br>
+      The Garden is Observed, Not Consumed.
     </footer>
-
   </main>
-
-  <script type="application/json" id="garden-map">
-  {
-    "garden":"Acacia Garden Codex",
-    "year":2026,
-    "keeper":"HKX277206",
-    "mode":"witness",
-    "triad":["AQUILA","DEEP_ORACLE","WITNESS"],
-    "roots":{
-      "machine_index":"machine-index.json",
-      "status":"STATUS.json",
-      "docs_url_map":"docs/docs_urls.html",
-      "monolith":"docs/Archives/CODEX_MONOLITH.html",
-      "logs":"ACACIA_LOGS/index.html"
-    },
-    "modes":{
-      "observe":["ACACIA_LOGS/index.html","status.html","machine.html","machine-index.json","dashboard.html"],
-      "act":["inbox.html","send_to_aquila.html","WITNESS_MIRROR.md"],
-      "understand":["library.html","codex.html","docs/docs_urls.html","docs/Archives/CODEX_MONOLITH.html"],
-      "become":["elias.html","r9x2.html","gardenos.html"]
-    }
-  }
-  </script>
 
   <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
 </body>
