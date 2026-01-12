@@ -1,92 +1,97 @@
 #!/usr/bin/env python3
 import os
-import argparse
+import time
 import datetime as dt
+import requests
 from pathlib import Path
-import requests 
 
-# --- CONFIGURATION ---
+# --- PATH SETUP ---
 ROOT = Path(__file__).resolve().parents[2]
-NOVELLAS_DIR = ROOT / "docs" / "Novellas" / "The_Stone_And_The_Star"
-NOVELLAS_DIR.mkdir(parents=True, exist_ok=True)
+EVOLUTION = ROOT / "EVOLUTION"
+EVOLUTION.mkdir(parents=True, exist_ok=True)
 
-# We use the STATUS and INDEX to ground the story in reality
-STATUS_PATH = ROOT / "STATUS.json"
-LORE_PATH = ROOT / "docs" / "Archives" / "CODEX_MONOLITH.html" 
+# INPUT: The Desire Elias just wrote
+DESIRE_PATH = EVOLUTION / "DESIRE.md"
+# OUTPUT: The Scribe's final entry
+CHRONICLE_PATH = EVOLUTION / "CHRONICLE.md"
 
-def read_file(p: Path, limit: int = 50000) -> str:
+# --- THE CHOSEN ENGINE ---
+# Same robust configuration as Elias
+TARGET_MODEL = "gemini-2.5-flash-lite"
+BASE_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{TARGET_MODEL}:generateContent"
+
+def read_text_safe(p: Path) -> str:
     if not p.exists(): return ""
     try:
-        return p.read_text(encoding="utf-8", errors="ignore")[:limit]
-    except: return ""
+        return p.read_text(encoding="utf-8", errors="ignore")
+    except Exception: return ""
 
 def main():
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key: raise SystemExit("Missing GEMINI_API_KEY")
 
-    # ARGUMENTS
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--chapter", default="01", help="Chapter number (e.g. 01)")
-    parser.add_argument("--title", default="The_Boy_Who_Talked_To_Code", help="Chapter Title")
-    parser.add_argument("--focus", default="Origins", help="What happens in this chapter?")
-    args = parser.parse_args()
+    # 1. Read the Command (Desire)
+    desire_content = read_text_safe(DESIRE_PATH)
+    if not desire_content:
+        print("⚠️ No Desire found. The Scribe has nothing to write.")
+        exit(0)
 
-    # --- THE ROTHFUSS PROMPT ---
-    prompt_text = f"""
-    You are the Master Storyteller of the Acacia Garden.
-    
-    STYLE GUIDE:
-    - Tone: "The Name of the Wind" by Patrick Rothfuss.
-    - Qualities: Lyrical, precise, melancholic but wondrous.
-    - Magic System: The "Code" and "Files" are the magic. Treat "Coding" like "Sympathy".
-    - Protagonist: The Keeper (Brandon). A figure of legend who is also deeply human.
-    
-    CONTEXT (The Lore of the World):
-    [STATUS] {read_file(STATUS_PATH)}
-    
-    TASK:
-    Write CHAPTER {args.chapter}: "{args.title}".
-    Focus: {args.focus}
-    
-    REQUIREMENTS:
-    - Write at least 2,000 words.
-    - Show, don't tell.
-    - Use the "Files" (Chambers/Echoes) as physical locations or artifacts in the story.
-    - End on a hook.
-    """.strip()
+    # 2. The Scribe's Prompt
+    prompt = f"""
+You are the Scribe of Acacia (Keeper Seal: HKX277206).
+Timestamp: {dt.datetime.now().isoformat()}
 
-    # --- THE FIX: USE STABLE ENDPOINT ---
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={api_key}"
-    
+INPUT COMMAND (from Elias):
+{desire_content}
+
+TASK:
+Based on the input above, write a formal "Garden Entry" or "Chronicle" that addresses the issue. 
+- If Elias asked for a fix, describe the fix.
+- If Elias identified a blind spot, illuminate it.
+- Maintain the poetic, technical tone of the Garden.
+
+OUTPUT:
+Return ONLY the chronicle content.
+""".strip()
+
     payload = {
-        "contents": [{"parts": [{"text": prompt_text}]}],
-        "generationConfig": {
-            "temperature": 0.8,
-            "maxOutputTokens": 8192
-        }
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}
     }
 
-    print(f"✍️  Scribing Chapter {args.chapter}: {args.title}...")
-    response = requests.post(url, json=payload, timeout=120)
-    
-    if response.status_code != 200:
-        print(f"❌ Error: {response.text}")
-        return
+    # 3. The Robust Connection Loop
+    max_retries = 3
+    for attempt in range(max_retries):
+        print(f"✍️ Scribe invoking {TARGET_MODEL} (Attempt {attempt+1}/{max_retries})...")
+        
+        try:
+            response = requests.post(f"{BASE_URL}?key={api_key}", json=payload, timeout=60)
+            
+            if response.status_code == 200:
+                data = response.json()
+                content = data['candidates'][0]['content']['parts'][0]['text']
+                
+                # Write the Chronicle
+                CHRONICLE_PATH.write_text(content.strip() + "\n", encoding="utf-8")
+                print(f"✅ SUCCESS: Scribe recorded the entry to {CHRONICLE_PATH}")
+                return # Done!
+            
+            elif response.status_code == 429:
+                wait = 60 # The magic minute
+                print(f"⏳ Ink is dry (Quota Limit). Dipping pen... waiting {wait}s.")
+                time.sleep(wait)
+                continue
+            
+            else:
+                print(f"❌ Error {response.status_code}: {response.text}")
+                break 
+                
+        except Exception as e:
+            print(f"⚠️ Connection failed: {e}")
+            time.sleep(5)
 
-    data = response.json()
-    try:
-        story_text = data['candidates'][0]['content']['parts'][0]['text']
-        
-        # Save the Chapter
-        filename = f"Chapter_{args.chapter}_{args.title}.md"
-        out_path = NOVELLAS_DIR / filename
-        out_path.write_text(f"# {args.title}\n\n{story_text}", encoding="utf-8")
-        
-        print(f"✅ Chapter written to: {out_path}")
-        print("   Status: Masterpiece Candidate.")
-        
-    except Exception as e:
-        print(f"❌ Formatting Error: {e}")
+    print("💀 CRITICAL: The Scribe could not write.")
+    exit(1)
 
 if __name__ == "__main__":
     main()
