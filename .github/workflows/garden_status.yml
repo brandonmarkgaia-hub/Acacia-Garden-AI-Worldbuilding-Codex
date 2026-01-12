@@ -1,0 +1,34 @@
+name: 🟢 Garden Status Check
+
+on:
+  workflow_dispatch: # Allows you to click "Run" manually
+  push:
+    paths:
+      - 'STATUS.json'
+      - 'machine-index.json'
+
+jobs:
+  verify_garden:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Status Scanner
+        run: python .github/scripts/garden_status.py
+
+      - name: Commit Green Status
+        run: |
+          git config --local user.email "witness@acacia.garden"
+          git config --local user.name "Acacia Witness"
+          git add STATUS.json
+          git commit -m "🟢 Witness: Garden Status Verified (Platinum)" || echo "No changes to status"
+          git push
