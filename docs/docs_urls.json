@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-12T15:35:40Z",
-  "count": 1580,
+  "generated_at": "2026-01-12T15:38:01Z",
+  "count": 1581,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1518,6 +1518,7 @@
     "Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
     "Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
     "Radio/garden-radio-encoding-v1.md",
+    "Radio/garden-radio-frames-v1.txt",
     "Realms/Eagle-Realm_Sky-Mind-Citadel.md",
     "Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md",
     "Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md",
