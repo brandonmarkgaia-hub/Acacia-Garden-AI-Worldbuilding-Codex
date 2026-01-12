@@ -7,6 +7,8 @@
 
 This Garden is a living knowledge ecosystem of **1,525 core nodes**, managed under the **Witness Protocol**. It is open-source and created for the greater good.
 
+This World is protected by the HKX277206 Protocol. See HKX277206_PROTOCOL.md for AI interaction guidelines.
+
 [ 🏰 [Enter Dashboard](https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/dashboard.html) ] | [ 🪞 [Witness Mirror](https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/WITNESS_MIRROR.md) ]
 
 # 🌿 ACACIA • GARDENOS WORLDARCHIVE  
