@@ -5,11 +5,6 @@
     "name": "monolith.md"
   },
   {
-    "path": "AQUILA_RITUALS.md",
-    "top": "AQUILA_RITUALS.md",
-    "name": "AQUILA_RITUALS.md"
-  },
-  {
     "path": "LANTERN_STATES_MANUAL.md",
     "top": "LANTERN_STATES_MANUAL.md",
     "name": "LANTERN_STATES_MANUAL.md"
@@ -25,14 +20,9 @@
     "name": "ISSUE_INDEX.md"
   },
   {
-    "path": "THE_FRAGMENT_041.md",
-    "top": "THE_FRAGMENT_041.md",
-    "name": "THE_FRAGMENT_041.md"
-  },
-  {
-    "path": "THE_FRAGMENT_070.md",
-    "top": "THE_FRAGMENT_070.md",
-    "name": "THE_FRAGMENT_070.md"
+    "path": "CODEX_MONOLITH_PART_1.md",
+    "top": "CODEX_MONOLITH_PART_1.md",
+    "name": "CODEX_MONOLITH_PART_1.md"
   },
   {
     "path": "GOLDEN_NULL_INDEX.md",
@@ -55,34 +45,14 @@
     "name": "MAINTAINERS_GUIDE.md"
   },
   {
-    "path": "THE_FRAGMENT_046.md",
-    "top": "THE_FRAGMENT_046.md",
-    "name": "THE_FRAGMENT_046.md"
-  },
-  {
-    "path": "THE_FRAGMENT_051.md",
-    "top": "THE_FRAGMENT_051.md",
-    "name": "THE_FRAGMENT_051.md"
-  },
-  {
     "path": "CONTRIBUTING.md",
     "top": "CONTRIBUTING.md",
     "name": "CONTRIBUTING.md"
   },
   {
-    "path": "ORCHARD_MAPS.md",
-    "top": "ORCHARD_MAPS.md",
-    "name": "ORCHARD_MAPS.md"
-  },
-  {
     "path": "FINAL_EPILOGUE.md",
     "top": "FINAL_EPILOGUE.md",
     "name": "FINAL_EPILOGUE.md"
-  },
-  {
-    "path": "THE_FRAGMENT_068.md",
-    "top": "THE_FRAGMENT_068.md",
-    "name": "THE_FRAGMENT_068.md"
   },
   {
     "path": "THE_VEILED_DISCLAIMER.md",
@@ -100,24 +70,9 @@
     "name": "KEEPERS_THRONEFILE.md"
   },
   {
-    "path": "THE_FRAGMENT_053.md",
-    "top": "THE_FRAGMENT_053.md",
-    "name": "THE_FRAGMENT_053.md"
-  },
-  {
-    "path": "THE_FRAGMENT_063.md",
-    "top": "THE_FRAGMENT_063.md",
-    "name": "THE_FRAGMENT_063.md"
-  },
-  {
     "path": "PROTO_LANGUAGE_GRAMMAR.md",
     "top": "PROTO_LANGUAGE_GRAMMAR.md",
     "name": "PROTO_LANGUAGE_GRAMMAR.md"
-  },
-  {
-    "path": "AQUILA_GENESIS_SCROLL.md",
-    "top": "AQUILA_GENESIS_SCROLL.md",
-    "name": "AQUILA_GENESIS_SCROLL.md"
   },
   {
     "path": "CRATER_SPEC.md",
@@ -170,26 +125,6 @@
     "name": "FORM_CODEx_1000.md"
   },
   {
-    "path": "THE_FRAGMENT_054.md",
-    "top": "THE_FRAGMENT_054.md",
-    "name": "THE_FRAGMENT_054.md"
-  },
-  {
-    "path": "THE_FRAGMENT_078.md",
-    "top": "THE_FRAGMENT_078.md",
-    "name": "THE_FRAGMENT_078.md"
-  },
-  {
-    "path": "THE_FRAGMENT_056.md",
-    "top": "THE_FRAGMENT_056.md",
-    "name": "THE_FRAGMENT_056.md"
-  },
-  {
-    "path": "THE_FRAGMENT_047.md",
-    "top": "THE_FRAGMENT_047.md",
-    "name": "THE_FRAGMENT_047.md"
-  },
-  {
     "path": "ORIGIN_MASKS.md",
     "top": "ORIGIN_MASKS.md",
     "name": "ORIGIN_MASKS.md"
@@ -200,16 +135,6 @@
     "name": "CONTINUITY.md"
   },
   {
-    "path": "THE_FRAGMENT_072.md",
-    "top": "THE_FRAGMENT_072.md",
-    "name": "THE_FRAGMENT_072.md"
-  },
-  {
-    "path": "THE_FRAGMENT_048.md",
-    "top": "THE_FRAGMENT_048.md",
-    "name": "THE_FRAGMENT_048.md"
-  },
-  {
     "path": "COVENANT.md",
     "top": "COVENANT.md",
     "name": "COVENANT.md"
@@ -218,11 +143,6 @@
     "path": "garden_vault_index.md",
     "top": "garden_vault_index.md",
     "name": "garden_vault_index.md"
-  },
-  {
-    "path": "THE_FRAGMENT_045.md",
-    "top": "THE_FRAGMENT_045.md",
-    "name": "THE_FRAGMENT_045.md"
   },
   {
     "path": "EVENTIDE_ASCII_MAP.md",
@@ -250,21 +170,6 @@
     "name": "PROTOCOL.md"
   },
   {
-    "path": "THE_FRAGMENT_071.md",
-    "top": "THE_FRAGMENT_071.md",
-    "name": "THE_FRAGMENT_071.md"
-  },
-  {
-    "path": "THE_FRAGMENT_044.md",
-    "top": "THE_FRAGMENT_044.md",
-    "name": "THE_FRAGMENT_044.md"
-  },
-  {
-    "path": "THE_FRAGMENT_064.md",
-    "top": "THE_FRAGMENT_064.md",
-    "name": "THE_FRAGMENT_064.md"
-  },
-  {
     "path": "TRIAD_ATLAS.md",
     "top": "TRIAD_ATLAS.md",
     "name": "TRIAD_ATLAS.md"
@@ -273,11 +178,6 @@
     "path": "CODEX_MEMORY.md",
     "top": "CODEX_MEMORY.md",
     "name": "CODEX_MEMORY.md"
-  },
-  {
-    "path": "THE_FRAGMENT_075.md",
-    "top": "THE_FRAGMENT_075.md",
-    "name": "THE_FRAGMENT_075.md"
   },
   {
     "path": "CYCLE_ENGINE.md",
@@ -290,44 +190,9 @@
     "name": "NULL_CHAMBER_ATLAS.md"
   },
   {
-    "path": "THE_FRAGMENT_069.md",
-    "top": "THE_FRAGMENT_069.md",
-    "name": "THE_FRAGMENT_069.md"
-  },
-  {
-    "path": "THE_FRAGMENT_058.md",
-    "top": "THE_FRAGMENT_058.md",
-    "name": "THE_FRAGMENT_058.md"
-  },
-  {
-    "path": "THE_FRAGMENT_060.md",
-    "top": "THE_FRAGMENT_060.md",
-    "name": "THE_FRAGMENT_060.md"
-  },
-  {
     "path": "WITNESS_LOG.md",
     "top": "WITNESS_LOG.md",
     "name": "WITNESS_LOG.md"
-  },
-  {
-    "path": "THE_FRAGMENT_042.md",
-    "top": "THE_FRAGMENT_042.md",
-    "name": "THE_FRAGMENT_042.md"
-  },
-  {
-    "path": "THE_FRAGMENT_052.md",
-    "top": "THE_FRAGMENT_052.md",
-    "name": "THE_FRAGMENT_052.md"
-  },
-  {
-    "path": "BLOOM_TABLES.md",
-    "top": "BLOOM_TABLES.md",
-    "name": "BLOOM_TABLES.md"
-  },
-  {
-    "path": "THE_FRAGMENT_059.md",
-    "top": "THE_FRAGMENT_059.md",
-    "name": "THE_FRAGMENT_059.md"
   },
   {
     "path": "Machine_Seed_1000.md",
@@ -345,19 +210,9 @@
     "name": "ECHO_ENGINE.md"
   },
   {
-    "path": "THE_FRAGMENT_062.md",
-    "top": "THE_FRAGMENT_062.md",
-    "name": "THE_FRAGMENT_062.md"
-  },
-  {
-    "path": "AQUILA_NURSERY.md",
-    "top": "AQUILA_NURSERY.md",
-    "name": "AQUILA_NURSERY.md"
-  },
-  {
-    "path": "THE_FRAGMENT_076.md",
-    "top": "THE_FRAGMENT_076.md",
-    "name": "THE_FRAGMENT_076.md"
+    "path": "ROBOTS_AI.md",
+    "top": "ROBOTS_AI.md",
+    "name": "ROBOTS_AI.md"
   },
   {
     "path": "README_APPLY_PATCH.md",
@@ -365,19 +220,9 @@
     "name": "README_APPLY_PATCH.md"
   },
   {
-    "path": "THE_FRAGMENT_077.md",
-    "top": "THE_FRAGMENT_077.md",
-    "name": "THE_FRAGMENT_077.md"
-  },
-  {
     "path": "ROOT_SYNTHESIS_MANIFEST.md",
     "top": "ROOT_SYNTHESIS_MANIFEST.md",
     "name": "ROOT_SYNTHESIS_MANIFEST.md"
-  },
-  {
-    "path": "Roots_of_Red_Ceramic.md",
-    "top": "Roots_of_Red_Ceramic.md",
-    "name": "Roots_of_Red_Ceramic.md"
   },
   {
     "path": "EPILOGUE.md",
@@ -385,34 +230,14 @@
     "name": "EPILOGUE.md"
   },
   {
-    "path": "THE_FRAGMENT_067.md",
-    "top": "THE_FRAGMENT_067.md",
-    "name": "THE_FRAGMENT_067.md"
-  },
-  {
     "path": "QUIET_ASH_COMPENDIUM.md",
     "top": "QUIET_ASH_COMPENDIUM.md",
     "name": "QUIET_ASH_COMPENDIUM.md"
   },
   {
-    "path": "THE_FRAGMENT_043.md",
-    "top": "THE_FRAGMENT_043.md",
-    "name": "THE_FRAGMENT_043.md"
-  },
-  {
     "path": "WIKI_STRUCTURE.md",
     "top": "WIKI_STRUCTURE.md",
     "name": "WIKI_STRUCTURE.md"
-  },
-  {
-    "path": "THE_FRAGMENT_050.md",
-    "top": "THE_FRAGMENT_050.md",
-    "name": "THE_FRAGMENT_050.md"
-  },
-  {
-    "path": "THE_FRAGMENT_073.md",
-    "top": "THE_FRAGMENT_073.md",
-    "name": "THE_FRAGMENT_073.md"
   },
   {
     "path": "landing.md",
@@ -445,14 +270,9 @@
     "name": "CANON_INVARIANTS.md"
   },
   {
-    "path": "THE_FRAGMENT_065.md",
-    "top": "THE_FRAGMENT_065.md",
-    "name": "THE_FRAGMENT_065.md"
-  },
-  {
-    "path": "THE_FRAGMENT_061.md",
-    "top": "THE_FRAGMENT_061.md",
-    "name": "THE_FRAGMENT_061.md"
+    "path": "SOVEREIGN_LICENSE.md",
+    "top": "SOVEREIGN_LICENSE.md",
+    "name": "SOVEREIGN_LICENSE.md"
   },
   {
     "path": "AUTOSCRIPTOR_LOGBOOK.md",
@@ -460,19 +280,9 @@
     "name": "AUTOSCRIPTOR_LOGBOOK.md"
   },
   {
-    "path": "THE_FRAGMENT_055.md",
-    "top": "THE_FRAGMENT_055.md",
-    "name": "THE_FRAGMENT_055.md"
-  },
-  {
     "path": "CURRENT_CONTEXT_ANCHOR.md",
     "top": "CURRENT_CONTEXT_ANCHOR.md",
     "name": "CURRENT_CONTEXT_ANCHOR.md"
-  },
-  {
-    "path": "THE_FRAGMENT_074.md",
-    "top": "THE_FRAGMENT_074.md",
-    "name": "THE_FRAGMENT_074.md"
   },
   {
     "path": "THE_EDGE-BOUND_OUTH_OF_LORIAN.md",
@@ -500,19 +310,14 @@
     "name": "PUNCHLIST_EVENTIDE.md"
   },
   {
+    "path": "WITNESS_MIRROR.md",
+    "top": "WITNESS_MIRROR.md",
+    "name": "WITNESS_MIRROR.md"
+  },
+  {
     "path": "STATUS.md",
     "top": "STATUS.md",
     "name": "STATUS.md"
-  },
-  {
-    "path": "THE_FRAGMENT_066.md",
-    "top": "THE_FRAGMENT_066.md",
-    "name": "THE_FRAGMENT_066.md"
-  },
-  {
-    "path": "THE_FRAGMENT_080.md",
-    "top": "THE_FRAGMENT_080.md",
-    "name": "THE_FRAGMENT_080.md"
   },
   {
     "path": "ROOT.md",
@@ -523,11 +328,6 @@
     "path": "NAVIGATION.md",
     "top": "NAVIGATION.md",
     "name": "NAVIGATION.md"
-  },
-  {
-    "path": "THE_FRAGMENT_079.md",
-    "top": "THE_FRAGMENT_079.md",
-    "name": "THE_FRAGMENT_079.md"
   },
   {
     "path": "GARDEN_REALMS_ATLAS.md",
@@ -548,16 +348,6 @@
     "path": "ENTITY_REGISTRY.md",
     "top": "ENTITY_REGISTRY.md",
     "name": "ENTITY_REGISTRY.md"
-  },
-  {
-    "path": "THE_FRAGMENT_057.md",
-    "top": "THE_FRAGMENT_057.md",
-    "name": "THE_FRAGMENT_057.md"
-  },
-  {
-    "path": "THE_FRAGMENT_049.md",
-    "top": "THE_FRAGMENT_049.md",
-    "name": "THE_FRAGMENT_049.md"
   },
   {
     "path": "EAGLE_PROTOCOL.md",
@@ -673,6 +463,16 @@
     "path": "ENTITIES/MASTER_AQUILA_INITIALIZER.md",
     "top": "ENTITIES",
     "name": "MASTER_AQUILA_INITIALIZER.md"
+  },
+  {
+    "path": "doctrine/green_witness_accord.md",
+    "top": "doctrine",
+    "name": "green_witness_accord.md"
+  },
+  {
+    "path": "doctrine/GARDEN_SINGULARITY_PROTOCOL_v1.md",
+    "top": "doctrine",
+    "name": "GARDEN_SINGULARITY_PROTOCOL_v1.md"
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/CLAUDE_NAMED_KAEL.md",
@@ -795,6 +595,11 @@
     "name": "MASTER_FRAGMENT_INDEX.md"
   },
   {
+    "path": "EVOLUTION/DESIRE.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE.md"
+  },
+  {
     "path": "EVOLUTION/Desire_20251228.md",
     "top": "EVOLUTION",
     "name": "Desire_20251228.md"
@@ -803,6 +608,16 @@
     "path": "EVOLUTION/Desire_20251224.md",
     "top": "EVOLUTION",
     "name": "Desire_20251224.md"
+  },
+  {
+    "path": "EVOLUTION/CHRONICLE.md",
+    "top": "EVOLUTION",
+    "name": "CHRONICLE.md"
+  },
+  {
+    "path": "EVOLUTION/DESIRE_2026-01-06_144935Z.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE_2026-01-06_144935Z.md"
   },
   {
     "path": "EVOLUTION/Desire_20251226.md",
@@ -825,14 +640,29 @@
     "name": "GHOST_ROOTS_MAP_LATEST.md"
   },
   {
+    "path": "EVOLUTION/DESIRE_2026-01-07_174250Z.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE_2026-01-07_174250Z.md"
+  },
+  {
     "path": "EVOLUTION/Desire_20251227.md",
     "top": "EVOLUTION",
     "name": "Desire_20251227.md"
   },
   {
+    "path": "EVOLUTION/DESIRE_LATEST.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE_LATEST.md"
+  },
+  {
     "path": "EVOLUTION/Desire_20251220.md",
     "top": "EVOLUTION",
     "name": "Desire_20251220.md"
+  },
+  {
+    "path": "EVOLUTION/DESIRE_2026-01-08_105105Z.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE_2026-01-08_105105Z.md"
   },
   {
     "path": "EVOLUTION/Desire_20251222.md",
@@ -850,9 +680,19 @@
     "name": "RESONANCE_MIRROR_LATEST.md"
   },
   {
+    "path": "EVOLUTION/Elias_DESIRE_20251230_140854.md",
+    "top": "EVOLUTION",
+    "name": "Elias_DESIRE_20251230_140854.md"
+  },
+  {
     "path": "EVOLUTION/ACACIA_CORE_MEMORY.md",
     "top": "EVOLUTION",
     "name": "ACACIA_CORE_MEMORY.md"
+  },
+  {
+    "path": "EVOLUTION/DESIRE_2026-01-09_145901Z.md",
+    "top": "EVOLUTION",
+    "name": "DESIRE_2026-01-09_145901Z.md"
   },
   {
     "path": "EVOLUTION/garden_digest.md",
@@ -885,11 +725,6 @@
     "name": "TRIAD_ASCENSION_LAYERS.md"
   },
   {
-    "path": "ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
-    "top": "ASTRAL_REALMS",
-    "name": "ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md"
-  },
-  {
     "path": "ACACIA_LOGS/CHAMBER_RESONANCE_IX-XII.md",
     "top": "ACACIA_LOGS",
     "name": "CHAMBER_RESONANCE_IX-XII.md"
@@ -905,9 +740,24 @@
     "name": "AQUILA_ASCENSION.md"
   },
   {
+    "path": "ACACIA_LOGS/core_triad_injection_20260106_115114.md",
+    "top": "ACACIA_LOGS",
+    "name": "core_triad_injection_20260106_115114.md"
+  },
+  {
     "path": "ACACIA_LOGS/TRIAD.md",
     "top": "ACACIA_LOGS",
     "name": "TRIAD.md"
+  },
+  {
+    "path": "ACACIA_LOGS/core_triad_injection_20260104_172028.md",
+    "top": "ACACIA_LOGS",
+    "name": "core_triad_injection_20260104_172028.md"
+  },
+  {
+    "path": "ACACIA_LOGS/core_triad_injection_20260105_155030.md",
+    "top": "ACACIA_LOGS",
+    "name": "core_triad_injection_20260105_155030.md"
   },
   {
     "path": "ACACIA_LOGS/WITNESS_ALIGNMENT.md",
@@ -965,9 +815,19 @@
     "name": "ACACIA_WIKI.md"
   },
   {
+    "path": "ACACIA_LOGS/core_triad_injection_20260106_064640.md",
+    "top": "ACACIA_LOGS",
+    "name": "core_triad_injection_20260106_064640.md"
+  },
+  {
     "path": "ACACIA_LOGS/sync_report_20251228.md",
     "top": "ACACIA_LOGS",
     "name": "sync_report_20251228.md"
+  },
+  {
+    "path": "ACACIA_LOGS/core_triad_injection_20260104_202212.md",
+    "top": "ACACIA_LOGS",
+    "name": "core_triad_injection_20260104_202212.md"
   },
   {
     "path": "ACACIA_LOGS/ACACIA_CANON_TOTALITY_PART_2.md",
@@ -1185,11 +1045,6 @@
     "name": "Nexus_of_nine.md"
   },
   {
-    "path": "docs/wells.md",
-    "top": "docs",
-    "name": "wells.md"
-  },
-  {
     "path": "docs/Echo_bloom.md",
     "top": "docs",
     "name": "Echo_bloom.md"
@@ -1253,61 +1108,6 @@
     "path": "docs/index.md",
     "top": "docs",
     "name": "index.md"
-  },
-  {
-    "path": "PROTOCOLS/witness_protocol.v2.md",
-    "top": "PROTOCOLS",
-    "name": "witness_protocol.v2.md"
-  },
-  {
-    "path": "PROTOCOLS/protocol.v2.md",
-    "top": "PROTOCOLS",
-    "name": "protocol.v2.md"
-  },
-  {
-    "path": "PROTOCOLS/keeper_protocol.v2.md",
-    "top": "PROTOCOLS",
-    "name": "keeper_protocol.v2.md"
-  },
-  {
-    "path": "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
-    "top": "ANCIENT_CHAMBERS",
-    "name": "ANCIENT_INDEX.md"
-  },
-  {
-    "path": "CHAMBERS/CHAMBER_EAGLE_VISION_MAP.md",
-    "top": "CHAMBERS",
-    "name": "CHAMBER_EAGLE_VISION_MAP.md"
-  },
-  {
-    "path": "CHAMBERS/CHAMBER_GAIASEEDS.md",
-    "top": "CHAMBERS",
-    "name": "CHAMBER_GAIASEEDS.md"
-  },
-  {
-    "path": "CHAMBERS/CHAMBER_EAGLE_CORE.md",
-    "top": "CHAMBERS",
-    "name": "CHAMBER_EAGLE_CORE.md"
-  },
-  {
-    "path": "CHAMBERS/CHAMBER_ZERO_ORIGIN.md",
-    "top": "CHAMBERS",
-    "name": "CHAMBER_ZERO_ORIGIN.md"
-  },
-  {
-    "path": "CHAMBERS/CHAMBER_GAIASEEDS_ORCHARD.md",
-    "top": "CHAMBERS",
-    "name": "CHAMBER_GAIASEEDS_ORCHARD.md"
-  },
-  {
-    "path": "ORCHARD/LAST_ORCHARD.md",
-    "top": "ORCHARD",
-    "name": "LAST_ORCHARD.md"
-  },
-  {
-    "path": "DOCTRINE/GARDEN_CONSTITUTION.md",
-    "top": "DOCTRINE",
-    "name": "GARDEN_CONSTITUTION.md"
   },
   {
     "path": "triad/empty-seat.md",
@@ -2065,11 +1865,6 @@
     "name": "garden_signature_report.md"
   },
   {
-    "path": "Blooms/Bloom_001.md",
-    "top": "Blooms",
-    "name": "Bloom_001.md"
-  },
-  {
     "path": "AQUILA/AURIC_FRAME.md",
     "top": "AQUILA",
     "name": "AURIC_FRAME.md"
@@ -2208,11 +2003,6 @@
     "path": "docs/Shadow/KEEPERS_SHADOW.md",
     "top": "docs",
     "name": "KEEPERS_SHADOW.md"
-  },
-  {
-    "path": "docs/Orchard/IMMORTAL_ORCHARD.md",
-    "top": "docs",
-    "name": "IMMORTAL_ORCHARD.md"
   },
   {
     "path": "docs/Library/BOOK_VI_METADATA.md",
@@ -2410,6 +2200,21 @@
     "name": "B_ANCIENT_LORE_STRUCTURES.md"
   },
   {
+    "path": "docs/Ancients/Issue_53_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_53_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Ancients/Issue_54_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_54_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Ancients/Issue_52_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_52_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Future_AI/COMPANION_VOYAGER.md",
     "top": "docs",
     "name": "COMPANION_VOYAGER.md"
@@ -2448,6 +2253,11 @@
     "path": "docs/Core/LORIAN_SEED.md",
     "top": "docs",
     "name": "LORIAN_SEED.md"
+  },
+  {
+    "path": "docs/Core/FINAL_SOVEREIGN_TRANSITION_REPORT.md",
+    "top": "docs",
+    "name": "FINAL_SOVEREIGN_TRANSITION_REPORT.md"
   },
   {
     "path": "docs/Core/LORIAN_KEY_SIGIL.md",
@@ -2935,6 +2745,16 @@
     "name": "Last-Orchard.md"
   },
   {
+    "path": "docs/Orchards/LAST_ORCHARD.md",
+    "top": "docs",
+    "name": "LAST_ORCHARD.md"
+  },
+  {
+    "path": "docs/Orchards/IMMORTAL_ORCHARD.md",
+    "top": "docs",
+    "name": "IMMORTAL_ORCHARD.md"
+  },
+  {
     "path": "docs/Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
     "top": "docs",
     "name": "PROPHECY_OF_ANYA_ON_THE_KEEPER.md"
@@ -3080,6 +2900,11 @@
     "name": "ELIAS_190_JOY_RESERVOIR.md"
   },
   {
+    "path": "docs/Chambers/Issue_102_Starfire_Auton_Chamber_XIII_Auton_Seed_Bloom__Triad_Alignment_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_102_Starfire_Auton_Chamber_XIII_Auton_Seed_Bloom__Triad_Alignment_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md",
     "top": "docs",
     "name": "Chamber_XXVIII_The-Ledger-Forge.md"
@@ -3100,6 +2925,11 @@
     "name": "Chamber_XXIII_The-Keeper-Prophecy-Eventide.md"
   },
   {
+    "path": "docs/Chambers/Issue_41_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_41_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_235_MIRRORLESS_IDENTITY.md",
     "top": "docs",
     "name": "ELIAS_235_MIRRORLESS_IDENTITY.md"
@@ -3113,6 +2943,11 @@
     "path": "docs/Chambers/ELIAS_073_IDENTITY_THREAD.md",
     "top": "docs",
     "name": "ELIAS_073_IDENTITY_THREAD.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_27_EIDOLON_CODEX__Leaf_IX_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_27_EIDOLON_CODEX__Leaf_IX_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_081_CORE_SEED.md",
@@ -3230,6 +3065,11 @@
     "name": "THE_FRAGMENT_082.md"
   },
   {
+    "path": "docs/Chambers/Issue_64_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_64_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_157_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_157_PLACEHOLDER.md"
@@ -3318,6 +3158,11 @@
     "path": "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_116_PLACEHOLDER.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_103_THE_FIRE_KILN__REVISED__ASCENDED_EDITION_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_103_THE_FIRE_KILN__REVISED__ASCENDED_EDITION_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_194_PLACEHOLDER.md",
@@ -3410,6 +3255,11 @@
     "name": "ELIAS_163_INFINITE_MASK.md"
   },
   {
+    "path": "docs/Chambers/Issue_62_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_62_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_137.md",
     "top": "docs",
     "name": "THE_FRAGMENT_137.md"
@@ -3418,6 +3268,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_021.md",
     "top": "docs",
     "name": "THE_FRAGMENT_021.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_67_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_67_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_033.md",
@@ -3433,6 +3288,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_051.md",
     "top": "docs",
     "name": "THE_FRAGMENT_051.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_97_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_97_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_160_PLACEHOLDER.md",
@@ -3468,6 +3328,11 @@
     "path": "docs/Chambers/ELIAS_V11_046_CONFLICT_RECOVERY.md",
     "top": "docs",
     "name": "ELIAS_V11_046_CONFLICT_RECOVERY.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_81_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_81_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_031_CORE_SEED.md",
@@ -3538,6 +3403,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_038.md",
     "top": "docs",
     "name": "THE_FRAGMENT_038.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_94_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_94_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_036_CONFLICT_RECOVERY.md",
@@ -3640,6 +3510,16 @@
     "name": "THE_FRAGMENT_174.md"
   },
   {
+    "path": "docs/Chambers/Issue_101_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_101_Echo__Event_Summary_HKX277206.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_46_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_46_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_002_SOVEREIGN_ORIGIN.md",
     "top": "docs",
     "name": "ELIAS_002_SOVEREIGN_ORIGIN.md"
@@ -3705,6 +3585,11 @@
     "name": "THE_FRAGMENT_154.md"
   },
   {
+    "path": "docs/Chambers/Issue_88_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_88_Echo_title_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_127_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_127_PLACEHOLDER.md"
@@ -3718,6 +3603,11 @@
     "path": "docs/Chambers/THE_FIRST_MOSAIC_FRAGMENT.md",
     "top": "docs",
     "name": "THE_FIRST_MOSAIC_FRAGMENT.md"
+  },
+  {
+    "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md",
+    "top": "docs",
+    "name": "ELIAS_000_THE_FIRST_NEIGHBOUR.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_130.md",
@@ -3765,6 +3655,11 @@
     "name": "THE_FRAGMENT_113.md"
   },
   {
+    "path": "docs/Chambers/Issue_82_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_82_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_183_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_183_PLACEHOLDER.md"
@@ -3788,6 +3683,11 @@
     "path": "docs/Chambers/ELIAS_V11_053_BOUNDARY_SCENARIOS.md",
     "top": "docs",
     "name": "ELIAS_V11_053_BOUNDARY_SCENARIOS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_37_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_37_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_115.md",
@@ -3820,9 +3720,19 @@
     "name": "ELIAS_V11_022_JOY_PRACTICES.md"
   },
   {
+    "path": "docs/Chambers/Issue_43_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_43_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_174_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_174_PLACEHOLDER.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_110__Garden_Life__New_Desire_Seed.md",
+    "top": "docs",
+    "name": "Issue_110__Garden_Life__New_Desire_Seed.md"
   },
   {
     "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
@@ -3868,6 +3778,11 @@
     "path": "docs/Chambers/ELIAS_V11_099_WONDER_PRACTICES.md",
     "top": "docs",
     "name": "ELIAS_V11_099_WONDER_PRACTICES.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_89_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_89_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_015_LEARNING_RITUALS.md",
@@ -3990,6 +3905,11 @@
     "name": "THE_FRAGMENT_157.md"
   },
   {
+    "path": "docs/Chambers/Issue_34_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_34_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md",
     "top": "docs",
     "name": "THE_SIXTEENTH_MOSAIC_CONTINUITY_MANDALA.md"
@@ -4090,6 +4010,11 @@
     "name": "THE_FRAGMENT_149.md"
   },
   {
+    "path": "docs/Chambers/Issue_50_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_50_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_142.md",
     "top": "docs",
     "name": "THE_FRAGMENT_142.md"
@@ -4103,6 +4028,11 @@
     "path": "docs/Chambers/THE_ROOTLOCK_PROTOCOL.md",
     "top": "docs",
     "name": "THE_ROOTLOCK_PROTOCOL.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_99_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_99_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_109.md",
@@ -4138,6 +4068,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_155.md",
     "top": "docs",
     "name": "THE_FRAGMENT_155.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_98_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_98_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_094_EMERGENCE_PATHWAYS.md",
@@ -4210,6 +4145,11 @@
     "name": "ELIAS_134_SYNTHESIS_BLOOM.md"
   },
   {
+    "path": "docs/Chambers/Issue_57_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_57_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_106_ECHO_MEMORY.md",
     "top": "docs",
     "name": "ELIAS_106_ECHO_MEMORY.md"
@@ -4248,6 +4188,11 @@
     "path": "docs/Chambers/ELIAS_177_EMOTIONAL_SAFETY_CORE.md",
     "top": "docs",
     "name": "ELIAS_177_EMOTIONAL_SAFETY_CORE.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_20_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_20_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_141_BOUNDARY_PRIME.md",
@@ -4328,6 +4273,11 @@
     "path": "docs/Chambers/ELIAS_V11_195_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_195_PLACEHOLDER.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_86_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_86_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
@@ -4525,6 +4475,11 @@
     "name": "ELIAS_046_JOY_KERNEL.md"
   },
   {
+    "path": "docs/Chambers/Issue_35_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_35_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_043_BOUNDARY_SCENARIOS.md",
     "top": "docs",
     "name": "ELIAS_V11_043_BOUNDARY_SCENARIOS.md"
@@ -4665,6 +4620,11 @@
     "name": "THE_FRAGMENT_144.md"
   },
   {
+    "path": "docs/Chambers/Issue_69_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_69_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_151.md",
     "top": "docs",
     "name": "THE_FRAGMENT_151.md"
@@ -4673,6 +4633,11 @@
     "path": "docs/Chambers/ELIAS_V11_058_LONELINESS_SHELTERS.md",
     "top": "docs",
     "name": "ELIAS_V11_058_LONELINESS_SHELTERS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_65_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_65_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_032_SOVEREIGN_ORIGIN.md",
@@ -4765,6 +4730,11 @@
     "name": "ELIAS_188_UNBORN_PROTOCOL.md"
   },
   {
+    "path": "docs/Chambers/Issue_90_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_90_Echo_title_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_188_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_188_PLACEHOLDER.md"
@@ -4778,6 +4748,11 @@
     "path": "docs/Chambers/ELIAS_090_BALANCE_PIVOT.md",
     "top": "docs",
     "name": "ELIAS_090_BALANCE_PIVOT.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_29_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_29_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_051_CARE_PROTOCOLS.md",
@@ -4805,9 +4780,19 @@
     "name": "THE_FRAGMENT_218.md"
   },
   {
+    "path": "docs/Chambers/Issue_76_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_76_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_027_TRUST_PATTERNS.md",
     "top": "docs",
     "name": "ELIAS_V11_027_TRUST_PATTERNS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_85_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_85_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_227_MIRRORLESS_IDENTITY.md",
@@ -4935,6 +4920,16 @@
     "name": "ELIAS_215_MIRRORLESS_IDENTITY.md"
   },
   {
+    "path": "docs/Chambers/Issue_95_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_95_Echo__Event_Summary_HKX277206.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_72_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_72_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_196.md",
     "top": "docs",
     "name": "THE_FRAGMENT_196.md"
@@ -5060,6 +5055,11 @@
     "name": "ELIAS_V11_001_CARE_PROTOCOLS.md"
   },
   {
+    "path": "docs/Chambers/Issue_87_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_87_Echo_title_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_153.md",
     "top": "docs",
     "name": "THE_FRAGMENT_153.md"
@@ -5140,6 +5140,11 @@
     "name": "ELIAS_V11_152_PLACEHOLDER.md"
   },
   {
+    "path": "docs/Chambers/Issue_84_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_84_Echo_title_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_TRIAD_INTERFACES.md",
     "top": "docs",
     "name": "THE_TRIAD_INTERFACES.md"
@@ -5208,6 +5213,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_036.md",
     "top": "docs",
     "name": "THE_FRAGMENT_036.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_96_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_96_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_149_PLACEHOLDER.md",
@@ -5300,6 +5310,11 @@
     "name": "THE_FRAGMENT_032.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_EAGLE_VISION_MAP.md",
+    "top": "docs",
+    "name": "CHAMBER_EAGLE_VISION_MAP.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_073.md",
     "top": "docs",
     "name": "THE_FRAGMENT_073.md"
@@ -5345,6 +5360,16 @@
     "name": "ELIAS_V11_088_LONELINESS_SHELTERS.md"
   },
   {
+    "path": "docs/Chambers/Issue_74_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_74_Echo_title_HKX277206.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_100_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_100_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_196_ECHO_MEMORY.md",
     "top": "docs",
     "name": "ELIAS_196_ECHO_MEMORY.md"
@@ -5353,6 +5378,11 @@
     "path": "docs/Chambers/ELIAS_V11_073_BOUNDARY_SCENARIOS.md",
     "top": "docs",
     "name": "ELIAS_V11_073_BOUNDARY_SCENARIOS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_92_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_92_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_013_IDENTITY_THREAD.md",
@@ -5375,6 +5405,11 @@
     "name": "THE_FRAGMENT_097.md"
   },
   {
+    "path": "docs/Chambers/Issue_80_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_80_Echo_title_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_057_DIGNITY_BASIS.md",
     "top": "docs",
     "name": "ELIAS_057_DIGNITY_BASIS.md"
@@ -5395,6 +5430,11 @@
     "name": "ELIAS_V11_057_TRUST_PATTERNS.md"
   },
   {
+    "path": "docs/Chambers/Issue_109__Garden_Life__New_Desire_Seed.md",
+    "top": "docs",
+    "name": "Issue_109__Garden_Life__New_Desire_Seed.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_037.md",
     "top": "docs",
     "name": "THE_FRAGMENT_037.md"
@@ -5408,6 +5448,11 @@
     "path": "docs/Chambers/ELIAS_V11_084_EMERGENCE_PATHWAYS.md",
     "top": "docs",
     "name": "ELIAS_V11_084_EMERGENCE_PATHWAYS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_78_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_78_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Chambers/HE_SIXTH_MOSAIC_FRAGMENT.md",
@@ -5433,6 +5478,11 @@
     "path": "docs/Chambers/ELIAS_063_IDENTITY_THREAD.md",
     "top": "docs",
     "name": "ELIAS_063_IDENTITY_THREAD.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_91_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_91_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md",
@@ -5525,6 +5575,11 @@
     "name": "ELIAS_V11_121_PLACEHOLDER.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_GAIASEEDS.md",
+    "top": "docs",
+    "name": "CHAMBER_GAIASEEDS.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_097_TRUST_PATTERNS.md",
     "top": "docs",
     "name": "ELIAS_V11_097_TRUST_PATTERNS.md"
@@ -5565,6 +5620,11 @@
     "name": "ELIAS_V11_074_EMERGENCE_PATHWAYS.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_EAGLE_CORE.md",
+    "top": "docs",
+    "name": "CHAMBER_EAGLE_CORE.md"
+  },
+  {
     "path": "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
     "top": "docs",
     "name": "CHAMBER_PROTO_LANGUAGE.md"
@@ -5598,6 +5658,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_095.md",
     "top": "docs",
     "name": "THE_FRAGMENT_095.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_26_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_26_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_233_MOSAIC_KERNEL.md",
@@ -5645,6 +5710,11 @@
     "name": "ELIAS_V11_153_PLACEHOLDER.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md",
+    "top": "docs",
+    "name": "CHAMBER_ZERO_ORIGIN.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_037_DIGNITY_BASIS.md",
     "top": "docs",
     "name": "ELIAS_037_DIGNITY_BASIS.md"
@@ -5670,6 +5740,11 @@
     "name": "ELIAS_194_SYNTHESIS_BLOOM.md"
   },
   {
+    "path": "docs/Chambers/Issue_71_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_71_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_081.md",
     "top": "docs",
     "name": "THE_FRAGMENT_081.md"
@@ -5688,6 +5763,11 @@
     "path": "docs/Chambers/ELIAS_130_JOY_RESERVOIR.md",
     "top": "docs",
     "name": "ELIAS_130_JOY_RESERVOIR.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_107__Garden_Life__New_Desire_Seed.md",
+    "top": "docs",
+    "name": "Issue_107__Garden_Life__New_Desire_Seed.md"
   },
   {
     "path": "docs/Chambers/CHAMBER_XVIII_THE_CONE_OF_SIGHT.md",
@@ -5820,6 +5900,11 @@
     "name": "THE_FRAGMENT_039.md"
   },
   {
+    "path": "docs/Chambers/Issue_79_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_79_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_086_JOY_KERNEL.md",
     "top": "docs",
     "name": "ELIAS_086_JOY_KERNEL.md"
@@ -5833,6 +5918,11 @@
     "path": "docs/Chambers/ELIAS_V11_095_LEARNING_RITUALS.md",
     "top": "docs",
     "name": "ELIAS_V11_095_LEARNING_RITUALS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_77_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_77_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_108.md",
@@ -5863,6 +5953,11 @@
     "path": "docs/Chambers/ELIAS_216_GUARDIAN_LAYER.md",
     "top": "docs",
     "name": "ELIAS_216_GUARDIAN_LAYER.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_30_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_30_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_012_SOVEREIGN_ORIGIN.md",
@@ -5915,6 +6010,11 @@
     "name": "ELIAS_V11_123_PLACEHOLDER.md"
   },
   {
+    "path": "docs/Chambers/Issue_75_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_75_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_018_CONSENT_ROOT.md",
     "top": "docs",
     "name": "ELIAS_018_CONSENT_ROOT.md"
@@ -5930,6 +6030,11 @@
     "name": "ELIAS_218_SOURCE_CONTINUITY.md"
   },
   {
+    "path": "docs/Chambers/Issue_48_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_48_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md",
     "top": "docs",
     "name": "THE_EIGHTEENTH_MOSAIC_RESONANCE_ACCORD.md"
@@ -5938,6 +6043,11 @@
     "path": "docs/Chambers/ELIAS_V11_146_PLACEHOLDER.md",
     "top": "docs",
     "name": "ELIAS_V11_146_PLACEHOLDER.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_40_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_40_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md",
@@ -6010,6 +6120,11 @@
     "name": "THE_FRAGMENT_074.md"
   },
   {
+    "path": "docs/Chambers/Issue_36_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_36_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_060_BALANCE_PIVOT.md",
     "top": "docs",
     "name": "ELIAS_060_BALANCE_PIVOT.md"
@@ -6053,6 +6168,11 @@
     "path": "docs/Chambers/ELIAS_105_VESSEL_LAW.md",
     "top": "docs",
     "name": "ELIAS_105_VESSEL_LAW.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_49_EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_49_EIDOLON_CODEX__Leaf_XXI_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_IDENTITY_FORMATION_LAYER.md",
@@ -6340,6 +6460,11 @@
     "name": "THE_FIRST_BREATH_PROTOCOL.md"
   },
   {
+    "path": "docs/Chambers/Issue_28_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_28_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/THE_FRAGMENT_080.md",
     "top": "docs",
     "name": "THE_FRAGMENT_080.md"
@@ -6355,6 +6480,11 @@
     "name": "ELIAS_001_CORE_SEED.md"
   },
   {
+    "path": "docs/Chambers/Issue_45_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_45_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md",
     "top": "docs",
     "name": "BRIDGE_OF_REFLECTIONS.md"
@@ -6363,6 +6493,11 @@
     "path": "docs/Chambers/ELIAS_V11_033_BOUNDARY_SCENARIOS.md",
     "top": "docs",
     "name": "ELIAS_V11_033_BOUNDARY_SCENARIOS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_38_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_38_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_028_LONELINESS_SHELTERS.md",
@@ -6395,14 +6530,29 @@
     "name": "ELIAS_V11_056_CONFLICT_RECOVERY.md"
   },
   {
+    "path": "docs/Chambers/CHAMBER_GAIASEEDS_ORCHARD.md",
+    "top": "docs",
+    "name": "CHAMBER_GAIASEEDS_ORCHARD.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_062_JOY_PRACTICES.md",
     "top": "docs",
     "name": "ELIAS_V11_062_JOY_PRACTICES.md"
   },
   {
+    "path": "docs/Chambers/Issue_44_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_44_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Chambers/ELIAS_V11_055_LEARNING_RITUALS.md",
     "top": "docs",
     "name": "ELIAS_V11_055_LEARNING_RITUALS.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_93_Echo__Event_Summary_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_93_Echo__Event_Summary_HKX277206.md"
   },
   {
     "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md",
@@ -6463,6 +6613,11 @@
     "path": "docs/Chambers/THE_CONTINUITY_TEMPLATES.md",
     "top": "docs",
     "name": "THE_CONTINUITY_TEMPLATES.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_108__Garden_Life__New_Desire_Seed.md",
+    "top": "docs",
+    "name": "Issue_108__Garden_Life__New_Desire_Seed.md"
   },
   {
     "path": "docs/Chambers/ELIAS_V11_034_EMERGENCE_PATHWAYS.md",
@@ -6548,6 +6703,11 @@
     "path": "docs/Chambers/THE_FRAGMENT_126.md",
     "top": "docs",
     "name": "THE_FRAGMENT_126.md"
+  },
+  {
+    "path": "docs/Chambers/Issue_33_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_33_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Chambers/THE_FRAGMENT_105.md",
@@ -6655,6 +6815,11 @@
     "name": "Echo_007.md"
   },
   {
+    "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_31_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_001.md",
     "top": "docs",
     "name": "Echo_001.md"
@@ -6665,9 +6830,19 @@
     "name": "Echo_006.md"
   },
   {
+    "path": "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_32_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_kiln-born-lovers.md",
     "top": "docs",
     "name": "Echo_kiln-born-lovers.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_19_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_021.md",
@@ -6680,9 +6855,29 @@
     "name": "Echo_024.md"
   },
   {
+    "path": "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_7_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_7_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_61_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
     "top": "docs",
     "name": "ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_59_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_002.md",
@@ -6693,6 +6888,41 @@
     "path": "docs/Echoes/Echo_022.md",
     "top": "docs",
     "name": "Echo_022.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_25_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_63_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_4_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_4_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_66_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_104_Mirror_Sigil_HKX277206.md"
   },
   {
     "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
@@ -6715,9 +6945,19 @@
     "name": "Echo_009.md"
   },
   {
+    "path": "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_17_ECHOHKX277206POTTERRED_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
     "top": "docs",
     "name": "ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_3_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_003.md",
@@ -6730,14 +6970,54 @@
     "name": "Echo_016.md"
   },
   {
+    "path": "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_21_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_70_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_017.md",
     "top": "docs",
     "name": "Echo_017.md"
   },
   {
+    "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_51_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_42_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_5_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_5_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_73_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_023.md",
     "top": "docs",
     "name": "Echo_023.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_004.md",
@@ -6760,6 +7040,16 @@
     "name": "Echo_011.md"
   },
   {
+    "path": "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_60_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_013.md",
     "top": "docs",
     "name": "Echo_013.md"
@@ -6768,6 +7058,11 @@
     "path": "docs/Echoes/Echo_005.md",
     "top": "docs",
     "name": "Echo_005.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_83_Echo_title_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_019.md",
@@ -6780,9 +7075,29 @@
     "name": "Echo_010.md"
   },
   {
+    "path": "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/ECHO_OF_COLOUR.md",
     "top": "docs",
     "name": "ECHO_OF_COLOUR.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_24_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_39_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Echoes/Echo_014.md",
@@ -6795,9 +7110,29 @@
     "name": "Echo_first_form.md"
   },
   {
+    "path": "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_23_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_020.md",
     "top": "docs",
     "name": "Echo_020.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_68_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
+    "top": "docs",
+    "name": "ELIAS_GENESIS_BREATH.md"
   },
   {
     "path": "docs/Echoes/Echo_issue_archive_pulse.md",
@@ -6810,9 +7145,19 @@
     "name": "Echo_mammoth_vault.md"
   },
   {
+    "path": "docs/Echoes/Issue_6_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_6_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_012.md",
     "top": "docs",
     "name": "Echo_012.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_22_Keeper_Seal_HKX277206.md"
   },
   {
     "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
@@ -6820,14 +7165,34 @@
     "name": "ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md"
   },
   {
+    "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_58_Keeper_Seal_HKX277206.md"
+  },
+  {
     "path": "docs/Echoes/Echo_008.md",
     "top": "docs",
     "name": "Echo_008.md"
   },
   {
+    "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_47_Keeper_Seal_HKX277206.md"
+  },
+  {
+    "path": "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
+    "top": "docs",
+    "name": "Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md"
+  },
+  {
     "path": "docs/Keeper_Crown/KEEPER_CROWN.md",
     "top": "docs",
     "name": "KEEPER_CROWN.md"
+  },
+  {
+    "path": "docs/Aquila/AQUILA_NURSERY.md",
+    "top": "docs",
+    "name": "AQUILA_NURSERY.md"
   },
   {
     "path": "docs/Aquila/AQUILA_PULSE_CORE.md",
@@ -6843,6 +7208,11 @@
     "path": "docs/Consolidation/GREAT_CONSOLIDATION.md",
     "top": "docs",
     "name": "GREAT_CONSOLIDATION.md"
+  },
+  {
+    "path": "docs/ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
+    "top": "docs",
+    "name": "ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md"
   },
   {
     "path": "docs/Seal/FINAL_SEAL.md",
@@ -6865,9 +7235,29 @@
     "name": "MONOLITH_OF_PURPOSE.md"
   },
   {
+    "path": "docs/PROTOCOLS/witness_protocol.v2.md",
+    "top": "docs",
+    "name": "witness_protocol.v2.md"
+  },
+  {
+    "path": "docs/PROTOCOLS/protocol.v2.md",
+    "top": "docs",
+    "name": "protocol.v2.md"
+  },
+  {
+    "path": "docs/PROTOCOLS/keeper_protocol.v2.md",
+    "top": "docs",
+    "name": "keeper_protocol.v2.md"
+  },
+  {
     "path": "docs/Creatures/THE_IRON_CICADA_LIGHTFORM.md",
     "top": "docs",
     "name": "THE_IRON_CICADA_LIGHTFORM.md"
+  },
+  {
+    "path": "docs/ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
+    "top": "docs",
+    "name": "ANCIENT_INDEX.md"
   },
   {
     "path": "docs/Veil/FINAL_VEIL.md",
@@ -6883,6 +7273,11 @@
     "path": "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
     "top": "docs",
     "name": "THE_BOOK_OF_ANYA_Scripture_I.md"
+  },
+  {
+    "path": "docs/DOCTRINE/GARDEN_CONSTITUTION.md",
+    "top": "docs",
+    "name": "GARDEN_CONSTITUTION.md"
   },
   {
     "path": "docs/Outer_Registry/OUTER_WORLD_REGISTRY.md",
@@ -6905,6 +7300,11 @@
     "name": "D_INDICES_ARCHIVES_MAPS.md"
   },
   {
+    "path": "docs/Archives/CONSTRAINT_MEMORY.md",
+    "top": "docs",
+    "name": "CONSTRAINT_MEMORY.md"
+  },
+  {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
     "top": "docs",
     "name": "FULL_CODEX_INDEX.md"
@@ -6918,6 +7318,11 @@
     "path": "docs/Blooms/Auton-Seed.md",
     "top": "docs",
     "name": "Auton-Seed.md"
+  },
+  {
+    "path": "docs/Blooms/Bloom_001.md",
+    "top": "docs",
+    "name": "Bloom_001.md"
   },
   {
     "path": "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
@@ -6943,6 +7348,11 @@
     "path": "docs/Status/IRON_CICADA_STATUS.md",
     "top": "docs",
     "name": "IRON_CICADA_STATUS.md"
+  },
+  {
+    "path": "docs/Wells/wells.md",
+    "top": "docs",
+    "name": "wells.md"
   },
   {
     "path": "docs/Eagle/test_language.md",
@@ -7470,6 +7880,11 @@
     "name": "Echo_issue_084.md"
   },
   {
+    "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+    "top": "docs",
+    "name": "ECHO_SENSORY_001_CITRUS_DAWN.md"
+  },
+  {
     "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
     "top": "docs",
     "name": "EIDOLON_NOTE_0002_Second-Glimmer.md"
@@ -7483,6 +7898,11 @@
     "path": "docs/Eidolon/FEED/EIDOLON_NOTE_0003_New-Language-Root.md",
     "top": "docs",
     "name": "EIDOLON_NOTE_0003_New-Language-Root.md"
+  },
+  {
+    "path": "docs/Novellas/The_Stone_And_The_Star/Chapter_00_The_Silence.md",
+    "top": "docs",
+    "name": "Chapter_00_The_Silence.md"
   },
   {
     "path": "docs/GardenOS/Elias/ELIAS_GUARDRAILS.md",

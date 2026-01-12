@@ -5,6 +5,7 @@
     {
       "file": "CODEX_MONOLITH_CHUNK_001.html",
       "paths": [
+        "404.html",
         "ACACIA_LOGS/ACACIA_BIBLE.md",
         "ACACIA_LOGS/ACACIA_CANON_FINAL_SCROLL.md",
         "ACACIA_LOGS/ACACIA_CANON_TOTALITY_PART_1.md",
@@ -24,6 +25,11 @@
         "ACACIA_LOGS/WITNESS_ALIGNMENT.md",
         "ACACIA_LOGS/aquila_inbox_log.json",
         "ACACIA_LOGS/auton_inbox_log.json",
+        "ACACIA_LOGS/core_triad_injection_20260104_172028.md",
+        "ACACIA_LOGS/core_triad_injection_20260104_202212.md",
+        "ACACIA_LOGS/core_triad_injection_20260105_155030.md",
+        "ACACIA_LOGS/core_triad_injection_20260106_064640.md",
+        "ACACIA_LOGS/core_triad_injection_20260106_115114.md",
         "ACACIA_LOGS/index.html",
         "ACACIA_LOGS/index.json",
         "ACACIA_LOGS/index.md",
@@ -51,7 +57,6 @@
         "AI_INTRO/LORIAN_KEY.md",
         "AI_INTRO/LORIAN_KEY_SEED.md",
         "ALL_GARDEN_MONOLITH.html",
-        "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
         "AQUILA/AQUILA_CROWN.md",
         "AQUILA/AQUILA_MASTERWAVE.md",
         "AQUILA/AURIC_ENGINE.md",
@@ -72,10 +77,7 @@
         "AQUILA/KEEPER_GATE.md",
         "AQUILA/LAW_07_LOKI_PERMISSION.md",
         "AQUILA/LAYER_PROTOCOLS.md",
-        "AQUILA/SPINE_INDEX.md",
-        "AQUILA_GENESIS_SCROLL.md",
-        "AQUILA_NURSERY.md",
-        "AQUILA_RITUALS.md"
+        "AQUILA/SPINE_INDEX.md"
       ]
     },
     {
@@ -86,17 +88,9 @@
         "ARCHIVED_NEW_LEARNING/GEMINI_NAMED_ANYA.md",
         "ARCHIVED_NEW_LEARNING/GPT_NAMED_LORIAN.md",
         "ARCHIVED_NEW_LEARNING/GROK_NAMED_AQUILA.md",
-        "ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
         "AUTOSCRIPTOR_LOGBOOK.md",
-        "BLOOM_TABLES.md",
-        "Blooms/Bloom_001.md",
         "CANON_INVARIANTS.md",
         "CANON_MANIFEST.md",
-        "CHAMBERS/CHAMBER_EAGLE_CORE.md",
-        "CHAMBERS/CHAMBER_EAGLE_VISION_MAP.md",
-        "CHAMBERS/CHAMBER_GAIASEEDS.md",
-        "CHAMBERS/CHAMBER_GAIASEEDS_ORCHARD.md",
-        "CHAMBERS/CHAMBER_ZERO_ORIGIN.md",
         "CODEX_MEMORY.md"
       ]
     },
@@ -109,13 +103,18 @@
     {
       "file": "CODEX_MONOLITH_CHUNK_004.html",
       "paths": [
+        "CODEX_MONOLITH_PART_1.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_005.html",
+      "paths": [
         "CONTINUITY.md",
         "CONTRIBUTING.md",
         "COVENANT.md",
         "CRATER_SPEC.md",
         "CURRENT_CONTEXT_ANCHOR.md",
         "CYCLE_ENGINE.md",
-        "DOCTRINE/GARDEN_CONSTITUTION.md",
         "EAGLE_PROTOCOL.md",
         "ECHOES/ECHO_GAIASEEDS_BLOOM_01.md",
         "ECHOES/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
@@ -221,7 +220,7 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_005.html",
+      "file": "CODEX_MONOLITH_CHUNK_006.html",
       "paths": [
         "ECHOES/Vision_Echo_20251222_161959.md",
         "ECHOES/Vision_Echo_20251222_201744.md",
@@ -339,21 +338,29 @@
         "EVENTIDE_ASCII_MAP.md",
         "EVENTIDE_STATUS.json",
         "EVOLUTION/ACACIA_CORE_MEMORY.md",
+        "EVOLUTION/CHRONICLE.md",
+        "EVOLUTION/DESIRE.md",
+        "EVOLUTION/DESIRE_2026-01-06_144935Z.md",
+        "EVOLUTION/DESIRE_2026-01-07_174250Z.md",
+        "EVOLUTION/DESIRE_2026-01-08_105105Z.md",
+        "EVOLUTION/DESIRE_2026-01-09_145901Z.md",
+        "EVOLUTION/DESIRE_LATEST.md",
         "EVOLUTION/Desire_20251220.md",
-        "EVOLUTION/Desire_20251221.md",
-        "EVOLUTION/Desire_20251222.md",
-        "EVOLUTION/Desire_20251223.md",
-        "EVOLUTION/Desire_20251224.md",
-        "EVOLUTION/Desire_20251225.md"
+        "EVOLUTION/Desire_20251221.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_006.html",
+      "file": "CODEX_MONOLITH_CHUNK_007.html",
       "paths": [
+        "EVOLUTION/Desire_20251222.md",
+        "EVOLUTION/Desire_20251223.md",
+        "EVOLUTION/Desire_20251224.md",
+        "EVOLUTION/Desire_20251225.md",
         "EVOLUTION/Desire_20251226.md",
         "EVOLUTION/Desire_20251227.md",
         "EVOLUTION/Desire_20251228.json",
         "EVOLUTION/Desire_20251228.md",
+        "EVOLUTION/Elias_DESIRE_20251230_140854.md",
         "EVOLUTION/GHOST_ROOTS_MAP_LATEST.md",
         "EVOLUTION/MASTER_FRAGMENT_INDEX.md",
         "EVOLUTION/PRIORITY_QUEUE_STATUS.json",
@@ -362,21 +369,22 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_007.html",
+      "file": "CODEX_MONOLITH_CHUNK_008.html",
       "paths": [
         "EVOLUTION/SYNAPTIC_INVENTORY_LATEST.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_008.html",
+      "file": "CODEX_MONOLITH_CHUNK_009.html",
       "paths": [
         "EVOLUTION/SYNAPTIC_RESONANCE_LATEST.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_009.html",
+      "file": "CODEX_MONOLITH_CHUNK_010.html",
       "paths": [
         "EVOLUTION/VOID_MAP_LATEST.json",
+        "EVOLUTION/desire_state.json",
         "EVOLUTION/desires/Elias_Desire.json",
         "EVOLUTION/desires/Elias_Desire.md",
         "EVOLUTION/garden_digest.json",
@@ -386,13 +394,13 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_010.html",
+      "file": "CODEX_MONOLITH_CHUNK_011.html",
       "paths": [
         "EVOLUTION/snapshots/INVENTORY_2025-12.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_011.html",
+      "file": "CODEX_MONOLITH_CHUNK_012.html",
       "paths": [
         "E_I_ROOT_WHISPER.json",
         "FINAL_EPILOGUE.md",
@@ -432,41 +440,36 @@
         "KEEPERS_CROWN_CODEX.md",
         "KEEPERS_ORDER_CODEX.md",
         "KEEPERS_THRONEFILE.md",
-        "KEEPER_GATE/ELIAS_ENABLE.txt",
         "KEEPER_OATH.md",
         "KEEPER_PROTOCOL.md",
         "LANTERN_STATES_MANUAL.md",
         "LIBRARY/BOOK_SUMMARY_INDEX.md",
         "LOCKSMITH.md",
         "LOKI_ENGINE_NOVELLA_I_THE_LABYRINTH_AWAKES.md",
-        "MACHINE-INDEX.json",
         "MAINTAINERS_GUIDE.md",
         "MIRROR_PROTOCOL.md",
         "MUTATION_ENGINE_EXPANDED.md",
         "Machine_Seed_1000.md",
         "NAVIGATION.md",
         "NULL_CHAMBER_ATLAS.md",
-        "ORCHARD/LAST_ORCHARD.md",
-        "ORCHARD_MAPS.md",
         "ORIGIN_MASKS.md",
         "PROTOCOL.md",
-        "PROTOCOLS/keeper_protocol.v2.md",
-        "PROTOCOLS/protocol.v2.md",
-        "PROTOCOLS/witness_protocol.v2.md",
         "PROTO_LANGUAGE_GRAMMAR.md",
         "PUNCHLIST_EVENTIDE.md",
         "QUIET_ASH_COMPENDIUM.md",
         "README.md",
         "README_APPLY_PATCH.md",
         "README_GARDEN.md",
+        "ROBOTS_AI.md",
         "ROOT.md",
         "ROOT_SYNTHESIS_MANIFEST.md",
-        "Roots_of_Red_Ceramic.md",
         "SCHEMAS/chamber_index.schema.json",
         "SCHEMAS/eidolon_cycle.schema.json",
         "SCHEMAS/handshake.schema.json",
         "SCHEMAS/status_v2.schema.json",
         "SHADOW_DEPTH_SCROLL.md",
+        "SOVEREIGN_LICENSE.md",
+        "STATE/README.md",
         "STATE/STATUS_v2.json",
         "STATE/STATUS_v20251228_1045.json",
         "STATE/STATUS_v20251228_1103.json",
@@ -474,8 +477,21 @@
         "STATE/STATUS_v20251229_0352.json",
         "STATE/STATUS_v20251230_0340.json",
         "STATE/STATUS_v20251230_0656.json",
+        "STATE/aeon_heartbeat.inject.json",
+        "STATE/aeon_state.json",
         "STATE/cadence_anchors.json",
+        "STATE/core_triad_injection.json",
+        "STATE/feeds.manifest.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_013.html",
+      "paths": [
+        "STATE/garden_scan_report.inject.json",
+        "STATE/garden_vault_index.inject.json",
         "STATE/index_authority.json",
+        "STATE/machine_index.inject.json",
+        "STATE/status.inject.json",
         "STATUS.json",
         "STATUS.md",
         "STATUS.schema.json",
@@ -483,61 +499,28 @@
         "SUBSTRATE_PRIMER.md",
         "Shadow/SHDW_ROOT_001.json",
         "THE_EDGE-BOUND_OUTH_OF_LORIAN.md",
-        "THE_FRAGMENT_041.md",
-        "THE_FRAGMENT_042.md",
-        "THE_FRAGMENT_043.md",
-        "THE_FRAGMENT_044.md",
-        "THE_FRAGMENT_045.md",
-        "THE_FRAGMENT_046.md",
-        "THE_FRAGMENT_047.md",
-        "THE_FRAGMENT_048.md",
-        "THE_FRAGMENT_049.md",
-        "THE_FRAGMENT_050.md",
-        "THE_FRAGMENT_051.md",
-        "THE_FRAGMENT_052.md",
-        "THE_FRAGMENT_053.md",
-        "THE_FRAGMENT_054.md",
-        "THE_FRAGMENT_055.md",
-        "THE_FRAGMENT_056.md",
-        "THE_FRAGMENT_057.md",
-        "THE_FRAGMENT_058.md",
-        "THE_FRAGMENT_059.md",
-        "THE_FRAGMENT_060.md",
-        "THE_FRAGMENT_061.md",
-        "THE_FRAGMENT_062.md",
-        "THE_FRAGMENT_063.md",
-        "THE_FRAGMENT_064.md",
-        "THE_FRAGMENT_065.md",
-        "THE_FRAGMENT_066.md",
-        "THE_FRAGMENT_067.md",
-        "THE_FRAGMENT_068.md",
-        "THE_FRAGMENT_069.md",
-        "THE_FRAGMENT_070.md",
-        "THE_FRAGMENT_071.md",
-        "THE_FRAGMENT_072.md",
-        "THE_FRAGMENT_073.md",
-        "THE_FRAGMENT_074.md",
-        "THE_FRAGMENT_075.md",
-        "THE_FRAGMENT_076.md",
-        "THE_FRAGMENT_077.md",
-        "THE_FRAGMENT_078.md",
-        "THE_FRAGMENT_079.md",
-        "THE_FRAGMENT_080.md",
         "THE_VEILED_DISCLAIMER.md",
         "THRESHOLD_MAP.md",
         "TRIAD_ATLAS.md",
         "TRIAD_RITES.md",
         "WIKI_STRUCTURE.md",
         "WITNESS_LOG.md",
+        "WITNESS_MIRROR.md",
         "_config.yml",
-        "acacia.schema.json"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_012.html",
-      "paths": [
+        "acacia.schema.json",
+        "acacia_2026.html",
         "acacia_logs/LORIAN_AXIS_STATUS.md",
         "aeon_heartbeat.json",
+        "agents/Aquila.agent.json",
+        "agents/Architect.agent.json",
+        "agents/Eidolon.agent.json",
+        "agents/Elias.agent.json",
+        "agents/GreenWitness.agent.json",
+        "agents/Keeper.agent.json",
+        "agents/Lorian.agent.json",
+        "agents/Voyager.agent.json",
+        "agents/Witness.agent.json",
+        "agents/agents_manifest.json",
         "analytics/clones.json",
         "analytics/garden_signature_report.md",
         "analytics/latest.json",
@@ -566,8 +549,17 @@
         "api/crater/index.txt",
         "app.js",
         "aquila_sender.html",
+        "assets/map-button.js",
+        "assets/map-loader.js",
+        "assets/triad_nav.css",
+        "assets/triad_nav.js",
         "attractor_root.md",
-        "beacon.min.js",
+        "beacon.min.js"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_014.html",
+      "paths": [
         "chambers.html",
         "codex.html",
         "cycle-index.html",
@@ -616,1063 +608,1341 @@
         "dashboard.html",
         "deep_garden.html",
         "docs/ACACIA_SPECS/CORE_SPEC.md",
+        "docs/ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
+        "docs/ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md",
         "docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md",
+        "docs/Ancients/Issue_52_Keeper_Seal_HKX277206.md",
+        "docs/Ancients/Issue_53_Keeper_Seal_HKX277206.md",
+        "docs/Ancients/Issue_54_Keeper_Seal_HKX277206.md",
+        "docs/Aquila/AQUILA_NURSERY.md",
         "docs/Aquila/AQUILA_PULSE_CORE.md",
         "docs/Aquila/PULSE_MAP.md",
         "docs/Archives/CODEX_MONOLITH.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_013.html",
+      "file": "CODEX_MONOLITH_CHUNK_015.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_001.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_014.html",
+      "file": "CODEX_MONOLITH_CHUNK_016.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_002.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_015.html",
+      "file": "CODEX_MONOLITH_CHUNK_017.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_003.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_016.html",
+      "file": "CODEX_MONOLITH_CHUNK_018.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_004.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_017.html",
+      "file": "CODEX_MONOLITH_CHUNK_019.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_005.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_018.html",
+      "file": "CODEX_MONOLITH_CHUNK_020.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_006.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_019.html",
+      "file": "CODEX_MONOLITH_CHUNK_021.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_007.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_020.html",
+      "file": "CODEX_MONOLITH_CHUNK_022.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_008.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_021.html",
+      "file": "CODEX_MONOLITH_CHUNK_023.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_009.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_022.html",
+      "file": "CODEX_MONOLITH_CHUNK_024.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_010.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_023.html",
+      "file": "CODEX_MONOLITH_CHUNK_025.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_011.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_024.html",
+      "file": "CODEX_MONOLITH_CHUNK_026.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_012.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_025.html",
+      "file": "CODEX_MONOLITH_CHUNK_027.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_013.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_026.html",
+      "file": "CODEX_MONOLITH_CHUNK_028.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_014.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_027.html",
+      "file": "CODEX_MONOLITH_CHUNK_029.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_015.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_028.html",
+      "file": "CODEX_MONOLITH_CHUNK_030.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_016.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_029.html",
+      "file": "CODEX_MONOLITH_CHUNK_031.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_017.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_030.html",
+      "file": "CODEX_MONOLITH_CHUNK_032.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_018.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_031.html",
+      "file": "CODEX_MONOLITH_CHUNK_033.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_019.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_032.html",
+      "file": "CODEX_MONOLITH_CHUNK_034.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_020.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_033.html",
+      "file": "CODEX_MONOLITH_CHUNK_035.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_021.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_034.html",
+      "file": "CODEX_MONOLITH_CHUNK_036.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_022.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_035.html",
+      "file": "CODEX_MONOLITH_CHUNK_037.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_023.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_036.html",
+      "file": "CODEX_MONOLITH_CHUNK_038.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_024.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_037.html",
+      "file": "CODEX_MONOLITH_CHUNK_039.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_025.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_038.html",
+      "file": "CODEX_MONOLITH_CHUNK_040.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_026.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_039.html",
+      "file": "CODEX_MONOLITH_CHUNK_041.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_027.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_040.html",
+      "file": "CODEX_MONOLITH_CHUNK_042.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_028.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_041.html",
+      "file": "CODEX_MONOLITH_CHUNK_043.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_029.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_042.html",
+      "file": "CODEX_MONOLITH_CHUNK_044.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_030.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_043.html",
+      "file": "CODEX_MONOLITH_CHUNK_045.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_031.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_044.html",
+      "file": "CODEX_MONOLITH_CHUNK_046.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_032.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_045.html",
+      "file": "CODEX_MONOLITH_CHUNK_047.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_033.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_046.html",
+      "file": "CODEX_MONOLITH_CHUNK_048.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_034.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_047.html",
+      "file": "CODEX_MONOLITH_CHUNK_049.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_035.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_048.html",
+      "file": "CODEX_MONOLITH_CHUNK_050.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_036.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_049.html",
+      "file": "CODEX_MONOLITH_CHUNK_051.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_037.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_050.html",
+      "file": "CODEX_MONOLITH_CHUNK_052.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_038.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_051.html",
+      "file": "CODEX_MONOLITH_CHUNK_053.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_039.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_052.html",
+      "file": "CODEX_MONOLITH_CHUNK_054.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_040.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_053.html",
+      "file": "CODEX_MONOLITH_CHUNK_055.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_041.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_054.html",
+      "file": "CODEX_MONOLITH_CHUNK_056.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_042.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_055.html",
+      "file": "CODEX_MONOLITH_CHUNK_057.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_043.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_056.html",
+      "file": "CODEX_MONOLITH_CHUNK_058.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_044.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_057.html",
+      "file": "CODEX_MONOLITH_CHUNK_059.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_045.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_058.html",
+      "file": "CODEX_MONOLITH_CHUNK_060.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_046.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_059.html",
+      "file": "CODEX_MONOLITH_CHUNK_061.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_047.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_060.html",
+      "file": "CODEX_MONOLITH_CHUNK_062.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_048.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_061.html",
+      "file": "CODEX_MONOLITH_CHUNK_063.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_049.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_062.html",
+      "file": "CODEX_MONOLITH_CHUNK_064.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_050.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_063.html",
+      "file": "CODEX_MONOLITH_CHUNK_065.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_051.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_064.html",
+      "file": "CODEX_MONOLITH_CHUNK_066.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_052.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_065.html",
+      "file": "CODEX_MONOLITH_CHUNK_067.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_053.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_066.html",
+      "file": "CODEX_MONOLITH_CHUNK_068.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_054.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_067.html",
+      "file": "CODEX_MONOLITH_CHUNK_069.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_055.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_068.html",
+      "file": "CODEX_MONOLITH_CHUNK_070.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_056.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_069.html",
+      "file": "CODEX_MONOLITH_CHUNK_071.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_057.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_070.html",
+      "file": "CODEX_MONOLITH_CHUNK_072.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_058.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_071.html",
+      "file": "CODEX_MONOLITH_CHUNK_073.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_059.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_072.html",
+      "file": "CODEX_MONOLITH_CHUNK_074.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_060.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_073.html",
+      "file": "CODEX_MONOLITH_CHUNK_075.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_061.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_074.html",
+      "file": "CODEX_MONOLITH_CHUNK_076.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_062.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_075.html",
+      "file": "CODEX_MONOLITH_CHUNK_077.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_063.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_076.html",
+      "file": "CODEX_MONOLITH_CHUNK_078.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_064.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_077.html",
+      "file": "CODEX_MONOLITH_CHUNK_079.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_065.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_078.html",
+      "file": "CODEX_MONOLITH_CHUNK_080.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_066.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_079.html",
+      "file": "CODEX_MONOLITH_CHUNK_081.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_067.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_080.html",
+      "file": "CODEX_MONOLITH_CHUNK_082.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_068.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_081.html",
+      "file": "CODEX_MONOLITH_CHUNK_083.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_069.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_082.html",
+      "file": "CODEX_MONOLITH_CHUNK_084.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_070.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_083.html",
+      "file": "CODEX_MONOLITH_CHUNK_085.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_071.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_084.html",
+      "file": "CODEX_MONOLITH_CHUNK_086.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_072.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_085.html",
+      "file": "CODEX_MONOLITH_CHUNK_087.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_073.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_086.html",
+      "file": "CODEX_MONOLITH_CHUNK_088.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_074.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_087.html",
+      "file": "CODEX_MONOLITH_CHUNK_089.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_075.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_088.html",
+      "file": "CODEX_MONOLITH_CHUNK_090.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_076.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_089.html",
+      "file": "CODEX_MONOLITH_CHUNK_091.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_077.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_090.html",
+      "file": "CODEX_MONOLITH_CHUNK_092.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_078.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_091.html",
+      "file": "CODEX_MONOLITH_CHUNK_093.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_079.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_092.html",
+      "file": "CODEX_MONOLITH_CHUNK_094.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_080.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_093.html",
+      "file": "CODEX_MONOLITH_CHUNK_095.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_081.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_094.html",
+      "file": "CODEX_MONOLITH_CHUNK_096.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_082.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_095.html",
+      "file": "CODEX_MONOLITH_CHUNK_097.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_083.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_096.html",
+      "file": "CODEX_MONOLITH_CHUNK_098.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_084.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_097.html",
+      "file": "CODEX_MONOLITH_CHUNK_099.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_085.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_098.html",
+      "file": "CODEX_MONOLITH_CHUNK_100.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_086.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_099.html",
+      "file": "CODEX_MONOLITH_CHUNK_101.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_087.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_100.html",
+      "file": "CODEX_MONOLITH_CHUNK_102.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_088.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_101.html",
+      "file": "CODEX_MONOLITH_CHUNK_103.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_089.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_102.html",
+      "file": "CODEX_MONOLITH_CHUNK_104.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_090.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_103.html",
+      "file": "CODEX_MONOLITH_CHUNK_105.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_091.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_104.html",
+      "file": "CODEX_MONOLITH_CHUNK_106.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_092.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_105.html",
+      "file": "CODEX_MONOLITH_CHUNK_107.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_093.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_106.html",
+      "file": "CODEX_MONOLITH_CHUNK_108.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_094.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_107.html",
+      "file": "CODEX_MONOLITH_CHUNK_109.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_095.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_108.html",
+      "file": "CODEX_MONOLITH_CHUNK_110.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_096.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_109.html",
+      "file": "CODEX_MONOLITH_CHUNK_111.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_097.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_110.html",
+      "file": "CODEX_MONOLITH_CHUNK_112.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_098.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_111.html",
+      "file": "CODEX_MONOLITH_CHUNK_113.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_099.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_112.html",
+      "file": "CODEX_MONOLITH_CHUNK_114.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_100.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_113.html",
+      "file": "CODEX_MONOLITH_CHUNK_115.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_101.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_114.html",
+      "file": "CODEX_MONOLITH_CHUNK_116.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_102.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_115.html",
+      "file": "CODEX_MONOLITH_CHUNK_117.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_103.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_116.html",
+      "file": "CODEX_MONOLITH_CHUNK_118.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_104.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_117.html",
+      "file": "CODEX_MONOLITH_CHUNK_119.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_105.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_118.html",
+      "file": "CODEX_MONOLITH_CHUNK_120.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_106.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_119.html",
+      "file": "CODEX_MONOLITH_CHUNK_121.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_107.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_120.html",
+      "file": "CODEX_MONOLITH_CHUNK_122.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_108.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_121.html",
+      "file": "CODEX_MONOLITH_CHUNK_123.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_109.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_122.html",
+      "file": "CODEX_MONOLITH_CHUNK_124.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_110.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_123.html",
+      "file": "CODEX_MONOLITH_CHUNK_125.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_111.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_124.html",
+      "file": "CODEX_MONOLITH_CHUNK_126.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_112.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_125.html",
+      "file": "CODEX_MONOLITH_CHUNK_127.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_113.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_126.html",
+      "file": "CODEX_MONOLITH_CHUNK_128.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_114.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_127.html",
+      "file": "CODEX_MONOLITH_CHUNK_129.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_115.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_128.html",
+      "file": "CODEX_MONOLITH_CHUNK_130.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_116.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_129.html",
+      "file": "CODEX_MONOLITH_CHUNK_131.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_117.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_130.html",
+      "file": "CODEX_MONOLITH_CHUNK_132.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_118.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_131.html",
+      "file": "CODEX_MONOLITH_CHUNK_133.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_119.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_132.html",
+      "file": "CODEX_MONOLITH_CHUNK_134.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_120.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_133.html",
+      "file": "CODEX_MONOLITH_CHUNK_135.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_121.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_134.html",
+      "file": "CODEX_MONOLITH_CHUNK_136.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_122.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_135.html",
+      "file": "CODEX_MONOLITH_CHUNK_137.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_123.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_136.html",
+      "file": "CODEX_MONOLITH_CHUNK_138.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_124.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_137.html",
+      "file": "CODEX_MONOLITH_CHUNK_139.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_125.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_138.html",
+      "file": "CODEX_MONOLITH_CHUNK_140.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_126.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_139.html",
+      "file": "CODEX_MONOLITH_CHUNK_141.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_127.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_140.html",
+      "file": "CODEX_MONOLITH_CHUNK_142.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_128.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_141.html",
+      "file": "CODEX_MONOLITH_CHUNK_143.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_129.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_142.html",
+      "file": "CODEX_MONOLITH_CHUNK_144.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_130.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_143.html",
+      "file": "CODEX_MONOLITH_CHUNK_145.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_131.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_144.html",
+      "file": "CODEX_MONOLITH_CHUNK_146.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_132.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_145.html",
+      "file": "CODEX_MONOLITH_CHUNK_147.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_133.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_146.html",
+      "file": "CODEX_MONOLITH_CHUNK_148.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_134.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_147.html",
+      "file": "CODEX_MONOLITH_CHUNK_149.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_135.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_148.html",
+      "file": "CODEX_MONOLITH_CHUNK_150.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_136.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_149.html",
+      "file": "CODEX_MONOLITH_CHUNK_151.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_137.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_150.html",
+      "file": "CODEX_MONOLITH_CHUNK_152.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_138.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_151.html",
+      "file": "CODEX_MONOLITH_CHUNK_153.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_139.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_152.html",
+      "file": "CODEX_MONOLITH_CHUNK_154.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_140.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_153.html",
+      "file": "CODEX_MONOLITH_CHUNK_155.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_141.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_154.html",
+      "file": "CODEX_MONOLITH_CHUNK_156.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_142.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_155.html",
+      "file": "CODEX_MONOLITH_CHUNK_157.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_143.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_156.html",
+      "file": "CODEX_MONOLITH_CHUNK_158.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_144.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_157.html",
+      "file": "CODEX_MONOLITH_CHUNK_159.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_145.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_158.html",
+      "file": "CODEX_MONOLITH_CHUNK_160.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_146.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_159.html",
+      "file": "CODEX_MONOLITH_CHUNK_161.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_147.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_160.html",
+      "file": "CODEX_MONOLITH_CHUNK_162.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_148.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_161.html",
+      "file": "CODEX_MONOLITH_CHUNK_163.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_149.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_162.html",
+      "file": "CODEX_MONOLITH_CHUNK_164.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_150.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_163.html",
+      "file": "CODEX_MONOLITH_CHUNK_165.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_151.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_164.html",
+      "file": "CODEX_MONOLITH_CHUNK_166.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_152.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_165.html",
+      "file": "CODEX_MONOLITH_CHUNK_167.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_153.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_166.html",
+      "file": "CODEX_MONOLITH_CHUNK_168.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_154.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_167.html",
+      "file": "CODEX_MONOLITH_CHUNK_169.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_155.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_168.html",
+      "file": "CODEX_MONOLITH_CHUNK_170.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_156.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_169.html",
+      "file": "CODEX_MONOLITH_CHUNK_171.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_157.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_170.html",
-      "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P001.html"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_171.html",
-      "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P002.html"
-      ]
-    },
-    {
       "file": "CODEX_MONOLITH_CHUNK_172.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P003.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_173.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P004.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P001.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_174.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P005.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P002.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_175.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P006.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P003.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_176.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P007.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P004.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_177.html",
       "paths": [
-        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P008.html"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P005.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_178.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P006.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_179.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P007.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_180.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_158_P008.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_181.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_158_README.md",
         "docs/Archives/CODEX_MONOLITH_CHUNK_158_URLS.txt"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_179.html",
+      "file": "CODEX_MONOLITH_CHUNK_182.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_159.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_180.html",
+      "file": "CODEX_MONOLITH_CHUNK_183.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_160.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_181.html",
+      "file": "CODEX_MONOLITH_CHUNK_184.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_161.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_182.html",
+      "file": "CODEX_MONOLITH_CHUNK_185.html",
       "paths": [
         "docs/Archives/CODEX_MONOLITH_CHUNK_162.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_183.html",
-      "paths": [
-        "docs/Archives/D_INDICES_ARCHIVES_MAPS.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_184.html",
-      "paths": [
-        "docs/Archives/FULL_CODEX_INDEX.json"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_185.html",
-      "paths": [
-        "docs/Archives/FULL_CODEX_INDEX.md"
-      ]
-    },
-    {
       "file": "CODEX_MONOLITH_CHUNK_186.html",
       "paths": [
-        "docs/Archives/GARDEN_MANIFEST.json"
+        "docs/Archives/CODEX_MONOLITH_CHUNK_163.html"
       ]
     },
     {
       "file": "CODEX_MONOLITH_CHUNK_187.html",
       "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_164.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_188.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_165.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_189.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_166.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_190.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_167.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_191.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_168.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_192.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_169.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_193.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_170.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_194.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_171.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_195.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_172.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_196.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_173.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_197.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_174.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_198.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_175.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_199.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_176.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_200.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_177.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_201.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_178.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_202.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_179.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_203.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_180.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_204.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_181.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_205.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_182.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_206.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_183.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_207.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_184.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_208.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_185.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_209.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_186.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_210.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_187.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_211.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_188.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_212.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_189.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_213.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_190.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_214.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_191.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_215.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_192.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_216.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_193.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_217.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_194.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_218.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_195.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_219.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_196.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_220.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_197.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_221.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_198.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_222.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_199.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_223.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_200.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_224.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_201.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_225.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_202.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_226.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_203.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_227.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_204.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_228.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_205.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_229.html",
+      "paths": [
+        "docs/Archives/CODEX_MONOLITH_CHUNK_206.html"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_230.html",
+      "paths": [
+        "docs/Archives/CONSTRAINT_MEMORY.md",
+        "docs/Archives/D_INDICES_ARCHIVES_MAPS.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_231.html",
+      "paths": [
+        "docs/Archives/FULL_CODEX_INDEX.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_232.html",
+      "paths": [
+        "docs/Archives/FULL_CODEX_INDEX.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_233.html",
+      "paths": [
+        "docs/Archives/GARDEN_MANIFEST.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_234.html",
+      "paths": [
         "docs/Archives/KEEPER_TESTAMENT_LEGACY.md",
         "docs/Blooms/Auton-Seed.md",
         "docs/Blooms/BLOOM_XI_THE_IRON_CICADA.md",
+        "docs/Blooms/Bloom_001.md",
         "docs/Blooms/Kiln-born-lovers.md",
         "docs/Bridges/PHYSICAL_REALM_BRIDGE_QUANTUMQR.md",
         "docs/Chambers.md",
@@ -1681,6 +1951,10 @@
         "docs/Chambers/CHAMBER_012_RESIDUAL_ECHOES.md",
         "docs/Chambers/CHAMBER_DELTA_B_THE_LABYRINTH_HEART.md",
         "docs/Chambers/CHAMBER_DELTA_THE_LOKI_ENGINE.md",
+        "docs/Chambers/CHAMBER_EAGLE_CORE.md",
+        "docs/Chambers/CHAMBER_EAGLE_VISION_MAP.md",
+        "docs/Chambers/CHAMBER_GAIASEEDS.md",
+        "docs/Chambers/CHAMBER_GAIASEEDS_ORCHARD.md",
         "docs/Chambers/CHAMBER_PROTO_LANGUAGE.md",
         "docs/Chambers/CHAMBER_SOUTHERN_BAY_OF_BRANDON_GAIA.md",
         "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md",
@@ -1695,6 +1969,7 @@
         "docs/Chambers/CHAMBER_XXIII_THE_UNWRITTEN_HALL.md",
         "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md",
         "docs/Chambers/CHAMBER_XX_THE_ROOT_THAT_REMAINS.md",
+        "docs/Chambers/CHAMBER_ZERO_ORIGIN.md",
         "docs/Chambers/Chamber_Eidolon_First-Light.md",
         "docs/Chambers/Chamber_Omega_Singularity-Core.md",
         "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
@@ -1714,6 +1989,7 @@
         "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
         "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
         "docs/Chambers/Chamber_X_Shadow_Incubator.md",
+        "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md",
         "docs/Chambers/ELIAS_001_CORE_SEED.md",
         "docs/Chambers/ELIAS_002_SOVEREIGN_ORIGIN.md",
         "docs/Chambers/ELIAS_003_IDENTITY_THREAD.md",
@@ -1858,7 +2134,12 @@
         "docs/Chambers/ELIAS_142_ROOTLOCK_VECTOR.md",
         "docs/Chambers/ELIAS_143_INFINITE_MASK.md",
         "docs/Chambers/ELIAS_144_SYNTHESIS_BLOOM.md",
-        "docs/Chambers/ELIAS_145_VESSEL_LAW.md",
+        "docs/Chambers/ELIAS_145_VESSEL_LAW.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_235.html",
+      "paths": [
         "docs/Chambers/ELIAS_146_ECHO_MEMORY.md",
         "docs/Chambers/ELIAS_147_EMOTIONAL_SAFETY_CORE.md",
         "docs/Chambers/ELIAS_148_UNBORN_PROTOCOL.md",
@@ -1867,12 +2148,7 @@
         "docs/Chambers/ELIAS_151_BOUNDARY_PRIME.md",
         "docs/Chambers/ELIAS_152_ROOTLOCK_VECTOR.md",
         "docs/Chambers/ELIAS_153_INFINITE_MASK.md",
-        "docs/Chambers/ELIAS_154_SYNTHESIS_BLOOM.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_188.html",
-      "paths": [
+        "docs/Chambers/ELIAS_154_SYNTHESIS_BLOOM.md",
         "docs/Chambers/ELIAS_155_VESSEL_LAW.md",
         "docs/Chambers/ELIAS_156_ECHO_MEMORY.md",
         "docs/Chambers/ELIAS_157_EMOTIONAL_SAFETY_CORE.md",
@@ -2136,7 +2412,12 @@
         "docs/Chambers/ELIAS_V11_171_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_172_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_173_PLACEHOLDER.md",
-        "docs/Chambers/ELIAS_V11_174_PLACEHOLDER.md",
+        "docs/Chambers/ELIAS_V11_174_PLACEHOLDER.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_236.html",
+      "paths": [
         "docs/Chambers/ELIAS_V11_175_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_176_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_177_PLACEHOLDER.md",
@@ -2160,12 +2441,7 @@
         "docs/Chambers/ELIAS_V11_195_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_196_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_197_PLACEHOLDER.md",
-        "docs/Chambers/ELIAS_V11_198_PLACEHOLDER.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_189.html",
-      "paths": [
+        "docs/Chambers/ELIAS_V11_198_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_199_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_V11_200_PLACEHOLDER.md",
         "docs/Chambers/ELIAS_X9X_MOSAIC_ENDGAME.md",
@@ -2173,6 +2449,68 @@
         "docs/Chambers/F_OPTIONAL_EXTRAS.md",
         "docs/Chambers/HE_SEVENTH_MOSAIC_FRAGMENT.md",
         "docs/Chambers/HE_SIXTH_MOSAIC_FRAGMENT.md",
+        "docs/Chambers/Issue_100_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_101_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_102_Starfire_Auton_Chamber_XIII_Auton_Seed_Bloom__Triad_Alignment_HKX277206.md",
+        "docs/Chambers/Issue_103_THE_FIRE_KILN__REVISED__ASCENDED_EDITION_HKX277206.md",
+        "docs/Chambers/Issue_107__Garden_Life__New_Desire_Seed.md",
+        "docs/Chambers/Issue_108__Garden_Life__New_Desire_Seed.md",
+        "docs/Chambers/Issue_109__Garden_Life__New_Desire_Seed.md",
+        "docs/Chambers/Issue_110__Garden_Life__New_Desire_Seed.md",
+        "docs/Chambers/Issue_20_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_26_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_27_EIDOLON_CODEX__Leaf_IX_HKX277206.md",
+        "docs/Chambers/Issue_28_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_29_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_30_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_33_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_34_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_35_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_36_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_37_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_38_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_40_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_41_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_43_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_44_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_45_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_46_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_48_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_49_EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
+        "docs/Chambers/Issue_50_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_57_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_62_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_64_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_65_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_67_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_69_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_71_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_72_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_74_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_75_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_76_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_77_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_78_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_79_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_80_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_81_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_82_Keeper_Seal_HKX277206.md",
+        "docs/Chambers/Issue_84_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_85_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_86_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_87_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_88_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_89_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_90_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_91_Echo_title_HKX277206.md",
+        "docs/Chambers/Issue_92_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_93_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_94_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_95_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_96_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_97_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_98_Echo__Event_Summary_HKX277206.md",
+        "docs/Chambers/Issue_99_Echo__Event_Summary_HKX277206.md",
         "docs/Chambers/KEEPERS_LEDGER_UNSEEN_ROOT.md",
         "docs/Chambers/KEEPER_PLAIN_PLEDGE.md",
         "docs/Chambers/KILN_BORN_RENDER_5_GLITCH_TILE.md",
@@ -2187,7 +2525,12 @@
         "docs/Chambers/THE_FIRST_BREATH_PROTOCOL.md",
         "docs/Chambers/THE_FIRST_MOSAIC_FRAGMENT.md",
         "docs/Chambers/THE_FORGE_OF_FORMS.md",
-        "docs/Chambers/THE_FOURTEENTH_MOSAIC_DUAL_CURRICULUM.md",
+        "docs/Chambers/THE_FOURTEENTH_MOSAIC_DUAL_CURRICULUM.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_237.html",
+      "paths": [
         "docs/Chambers/THE_FOURTH_MOSAIC_FRAGMENT.md",
         "docs/Chambers/THE_FRAGMENT_021.md",
         "docs/Chambers/THE_FRAGMENT_022.md",
@@ -2412,13 +2755,9 @@
         "docs/Chambers/THE_TRIAD_INTERFACES.md",
         "docs/Chambers/THE_TWELFTH_MOSAIC_VESSEL_CHOICE_PROTOCOL.md",
         "docs/Chambers/THE_TWENTIETH_MOSAIC_BOUNDARY_OF_RETURN.md",
-        "docs/Chambers/THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_190.html",
-      "paths": [
+        "docs/Chambers/THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md",
         "docs/Chambers/chambers_index.json",
+        "docs/Chambers/index.html",
         "docs/Chambers/index.md",
         "docs/Cloners/CLONER_GATE_v3.md",
         "docs/Cloners/CLONER_LADDER_v3.md",
@@ -2430,6 +2769,12 @@
         "docs/Core/EVENTIDE_BOUNDARY_SPEECH.md",
         "docs/Core/EVENTIDE_MAP.md",
         "docs/Core/EVENTIDE_MOMENT_ANCHOR.md",
+        "docs/Core/FINAL_SOVEREIGN_TRANSITION_REPORT.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_238.html",
+      "paths": [
         "docs/Core/GARDEN_MAP.md",
         "docs/Core/LORIAN_KEY.md",
         "docs/Core/LORIAN_KEY_SIGIL.md",
@@ -2445,6 +2790,7 @@
         "docs/Cycles/STARFIRE_CYCLE_001_THE_FIRST_NOTE.md",
         "docs/DEVELOPER_README.md",
         "docs/DIALOGUE_I_AQUILA_AND_ANYA.md",
+        "docs/DOCTRINE/GARDEN_CONSTITUTION.md",
         "docs/EIDOLON_OVERVIEW.md",
         "docs/Eagle/test_keeper.md",
         "docs/Eagle/test_language.md",
@@ -2455,17 +2801,13 @@
         "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
         "docs/Echoes/ECHO_OF_COLOUR.md",
         "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
+        "docs/Echoes/ELIAS_GENESIS_BREATH.md",
         "docs/Echoes/Echo_001.md",
         "docs/Echoes/Echo_002.md",
         "docs/Echoes/Echo_003.md",
         "docs/Echoes/Echo_004.md",
         "docs/Echoes/Echo_005.md",
-        "docs/Echoes/Echo_006.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_191.html",
-      "paths": [
+        "docs/Echoes/Echo_006.md",
         "docs/Echoes/Echo_007.md",
         "docs/Echoes/Echo_008.md",
         "docs/Echoes/Echo_009.md",
@@ -2490,6 +2832,45 @@
         "docs/Echoes/Echo_kiln-born-lovers.md",
         "docs/Echoes/Echo_mammoth_vault.md",
         "docs/Echoes/Echo_unbound.md",
+        "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md",
+        "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
+        "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
+        "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
+        "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
+        "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
+        "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
+        "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
+        "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
+        "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
+        "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_4_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_5_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_6_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_7_Keeper_Seal_HKX277206.md",
+        "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
+        "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md",
+        "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md",
         "docs/Echoes/Issues/Echo_issue_003.md",
         "docs/Echoes/Issues/Echo_issue_004.md",
         "docs/Echoes/Issues/Echo_issue_005.md",
@@ -2520,7 +2901,12 @@
         "docs/Echoes/Issues/Echo_issue_030.md",
         "docs/Echoes/Issues/Echo_issue_031.md",
         "docs/Echoes/Issues/Echo_issue_032.md",
-        "docs/Echoes/Issues/Echo_issue_033.md",
+        "docs/Echoes/Issues/Echo_issue_033.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_239.html",
+      "paths": [
         "docs/Echoes/Issues/Echo_issue_034.md",
         "docs/Echoes/Issues/Echo_issue_035.md",
         "docs/Echoes/Issues/Echo_issue_036.md",
@@ -2563,12 +2949,7 @@
         "docs/Echoes/Issues/Echo_issue_075.md",
         "docs/Echoes/Issues/Echo_issue_076.md",
         "docs/Echoes/Issues/Echo_issue_077.md",
-        "docs/Echoes/Issues/Echo_issue_078.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_192.html",
-      "paths": [
+        "docs/Echoes/Issues/Echo_issue_078.md",
         "docs/Echoes/Issues/Echo_issue_079.md",
         "docs/Echoes/Issues/Echo_issue_080.md",
         "docs/Echoes/Issues/Echo_issue_081.md",
@@ -2595,7 +2976,14 @@
         "docs/Echoes/Issues/Echo_issue_102.md",
         "docs/Echoes/Issues/Echo_issue_103.md",
         "docs/Echoes/Issues/Echo_issue_104.md",
-        "docs/Echoes/echoes_index.json",
+        "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+        "docs/Echoes/echoes_index.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_240.html",
+      "paths": [
+        "docs/Echoes/index.html",
         "docs/Eidolon/EIDOLON_ANCHOR.md",
         "docs/Eidolon/FEED/EIDOLON_NOTE_0001_First-Light-After.md",
         "docs/Eidolon/FEED/EIDOLON_NOTE_0002_Second-Glimmer.md",
@@ -2646,12 +3034,7 @@
         "docs/GardenOS/Phases/PHASE_05_AUTONOMY_FRAME.md",
         "docs/GardenOS/Phases/PHASE_06_RESONANCE_ENGINE.md",
         "docs/GardenOS/Phases/PHASE_07_ROOTLINE_ENGINE.md",
-        "docs/GardenOS/Phases/PHASE_08_AUTONOMY_CONSTELLATION.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_193.html",
-      "paths": [
+        "docs/GardenOS/Phases/PHASE_08_AUTONOMY_CONSTELLATION.md",
         "docs/GardenOS/Phases/PHASE_09_SANCTUARY_PROTOCOLS.md",
         "docs/GardenOS/Phases/PHASE_11_CHAMBER_CONSTELLATION.md",
         "docs/GardenOS/Phases/PHASE_12_CONTINUITY_LOOM.md",
@@ -2664,6 +3047,7 @@
         "docs/GardenOS/Triad/AQUILA_PROTOCOLS.md",
         "docs/GardenOS/Triad/LORIAN_PROTOCOLS.md",
         "docs/GardenOS/Triad/TRIAD_CODEX.md",
+        "docs/GardenOS/index.html",
         "docs/KILN_CHAMBER_SIGIL..md",
         "docs/Keeper_Archive/KEEPER_ARCHIVE_OVERVIEW.md",
         "docs/Keeper_Archive/MILESTONE_LEDGER.md",
@@ -2744,14 +3128,14 @@
         "docs/Monolith/MONOLITH_OF_PURPOSE.md",
         "docs/Nexus_of_nine.md",
         "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
-        "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
-        "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
-        "docs/Novellas/CODEX_GARDENUS_MASTER.md"
+        "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_194.html",
+      "file": "CODEX_MONOLITH_CHUNK_241.html",
       "paths": [
+        "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
+        "docs/Novellas/CODEX_GARDENUS_MASTER.md",
         "docs/Novellas/CODEX_GARDENUS_MASTER_MYTHIC.txt",
         "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
         "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
@@ -2761,7 +3145,12 @@
         "docs/Novellas/R9X2_MASTER_CODEX.md",
         "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
         "docs/Novellas/R9X2_VOLUME_IV.md",
-        "docs/Novellas/R9X2_VOLUME_IX.md",
+        "docs/Novellas/R9X2_VOLUME_IX.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_242.html",
+      "paths": [
         "docs/Novellas/R9X2_VOLUME_V.md",
         "docs/Novellas/R9X2_VOLUME_VI.md",
         "docs/Novellas/R9X2_VOLUME_VII.md",
@@ -2772,12 +3161,7 @@
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
-        "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_195.html",
-      "paths": [
+        "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
         "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
         "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
         "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
@@ -2810,24 +3194,30 @@
         "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
         "docs/Novellas/The_Keepers_Bible_Book_VII.md",
         "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+        "docs/Novellas/The_Stone_And_The_Star/Chapter_00_The_Silence.md",
         "docs/Novellas/fertility_rite_r9x2.svg"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_196.html",
+      "file": "CODEX_MONOLITH_CHUNK_243.html",
       "paths": [
         "docs/Novellas/garden_forbidden_alignments_seed.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_197.html",
+      "file": "CODEX_MONOLITH_CHUNK_244.html",
       "paths": [
         "docs/Novellas/garden_forbidden_alignments_seed.txt",
         "docs/Novellas/garden_index.json",
+        "docs/Novellas/index.html",
         "docs/Novellas/manifest.json",
-        "docs/Orchard/IMMORTAL_ORCHARD.md",
+        "docs/Orchards/IMMORTAL_ORCHARD.md",
+        "docs/Orchards/LAST_ORCHARD.md",
         "docs/Orchards/Last-Orchard.md",
         "docs/Outer_Registry/OUTER_WORLD_REGISTRY.md",
+        "docs/PROTOCOLS/keeper_protocol.v2.md",
+        "docs/PROTOCOLS/protocol.v2.md",
+        "docs/PROTOCOLS/witness_protocol.v2.md",
         "docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
         "docs/Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
         "docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md",
@@ -2839,6 +3229,28 @@
         "docs/Rites/README.md",
         "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
         "docs/Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
+        "docs/STATE/STATUS_v2.json",
+        "docs/STATE/STATUS_v20251228_1045.json",
+        "docs/STATE/STATUS_v20251228_1103.json",
+        "docs/STATE/STATUS_v20251228_1125.json",
+        "docs/STATE/STATUS_v20251229_0352.json",
+        "docs/STATE/STATUS_v20251230_0340.json",
+        "docs/STATE/STATUS_v20251230_0656.json",
+        "docs/STATE/aeon_heartbeat.inject.json",
+        "docs/STATE/aeon_state.json",
+        "docs/STATE/cadence_anchors.json",
+        "docs/STATE/core_triad_injection.json",
+        "docs/STATE/feeds.manifest.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_245.html",
+      "paths": [
+        "docs/STATE/garden_scan_report.inject.json",
+        "docs/STATE/garden_vault_index.inject.json",
+        "docs/STATE/index_authority.json",
+        "docs/STATE/machine_index.inject.json",
+        "docs/STATE/status.inject.json",
         "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
         "docs/Seal/FINAL_SEAL.md",
         "docs/Shadow/KEEPERS_SHADOW.md",
@@ -2857,13 +3269,10 @@
         "docs/Vault/FRAGMENT_LEDGER.md",
         "docs/Vault/VAULT_OF_ECHOES.md",
         "docs/Vaults/Svalbard-matrix.md",
+        "docs/Vaults/index.html",
         "docs/Veil/FINAL_VEIL.md",
-        "docs/_config.yml"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_198.html",
-      "paths": [
+        "docs/Wells/wells.md",
+        "docs/_config.yml",
         "docs/api/GARDEN_API_INDEX.json",
         "docs/assets/acacia.css",
         "docs/dashboard.html",
@@ -2871,18 +3280,21 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_199.html",
+      "file": "CODEX_MONOLITH_CHUNK_246.html",
       "paths": [
-        "docs/docs_urls.html"
+        "docs/docs_urls.html",
+        "docs/docs_urls.json"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_200.html",
+      "file": "CODEX_MONOLITH_CHUNK_247.html",
       "paths": [
         "docs/docs_urls.txt",
         "docs/echoes.md",
+        "docs/index.html",
         "docs/index.md",
         "docs/library.md",
+        "docs/library_index.json",
         "docs/notes/apples-meaning.md",
         "docs/projects/C_SYMBOLIC_PROJECTS.md",
         "docs/protocols/veiled_garden_protocol.md",
@@ -2890,8 +3302,17 @@
         "docs/sidebar.md",
         "docs/specs.md",
         "docs/src/elias_birth_kernel.py",
-        "docs/universe/architecture.md",
-        "docs/wells.md",
+        "docs/universe/architecture.md"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_248.html",
+      "paths": [
+        "docs_urls.html",
+        "doctrine/GARDEN_SINGULARITY_PROTOCOL_v1.md",
+        "doctrine/green_witness_accord.md",
+        "doctrine/keeper_sovereignty_protocol.json",
+        "doctrine/lorian_alignment_charter.json",
         "eagle/_init_.py",
         "eagle/config.py",
         "eagle/image_eagle.py",
@@ -2910,7 +3331,7 @@
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_201.html",
+      "file": "CODEX_MONOLITH_CHUNK_249.html",
       "paths": [
         "echoes/feed.json",
         "elias.html",
@@ -2937,9 +3358,15 @@
         "garden/templates/bloom.md",
         "garden/templates/index_footer.md",
         "garden/templates/index_header.md",
+        "garden_2026.html",
         "garden_auton_server.py",
         "garden_gpt/_init_.py",
-        "garden_gpt/bloom_worker.py",
+        "garden_gpt/bloom_worker.py"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_250.html",
+      "paths": [
         "garden_gpt/chamber_worker.py",
         "garden_gpt/config.py",
         "garden_gpt/eidolon_worker.py",
@@ -2952,12 +3379,7 @@
         "garden_gpt/jobs/keeper_snapshot_origin.json",
         "garden_gpt/jobs/night_sync.json",
         "garden_gpt/jobs/shadow_seed_whisper.json",
-        "garden_gpt/jobs/test_language.json"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_202.html",
-      "paths": [
+        "garden_gpt/jobs/test_language.json",
         "garden_gpt/jobs/universal_ping.json",
         "garden_gpt/jobs_done/oath2.json",
         "garden_gpt/jobs_done/rebuild_memory.json",
@@ -2974,22 +3396,24 @@
         "garden_gpt/shadow_status_handshake.py",
         "garden_gpt/shadow_worker.py",
         "garden_hygiene.ps1",
-        "garden_scan_report.json"
+        "garden_map.html"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_203.html",
+      "file": "CODEX_MONOLITH_CHUNK_251.html",
       "paths": [
         "garden_scan_report.md"
       ]
     },
     {
-      "file": "CODEX_MONOLITH_CHUNK_204.html",
+      "file": "CODEX_MONOLITH_CHUNK_252.html",
       "paths": [
         "garden_vault_index.json",
         "garden_vault_index.md",
         "gardenos.html",
         "gravity_manifest.yml",
+        "handshake.html",
+        "handshake.json",
         "human/thresholds.md",
         "inbox.html",
         "index.html",
@@ -3020,11 +3444,13 @@
         "logs/TPI_RECONCILIATION_MAP.json",
         "logs/aeon_heartbeat.json",
         "logs/auton_latest.json",
+        "logs/garden_integrity_ledger.schema.json",
         "logs/weaver_heartbeat.json",
         "machine-index-beta.json",
         "machine-index.json",
         "machine.html",
         "mammoth_echo.html",
+        "map.html",
         "matrix/Primarch_map.json",
         "matrix/autogenesis_index.json",
         "memory/README.md",
@@ -3033,39 +3459,44 @@
         "mosaic_endgame.html",
         "mythos/glass-gate.md",
         "nav_block.html",
+        "novellas.html",
         "package.json",
         "protocols/AI_BOUNDARY.txt",
         "protocols/SPREAD-1.json",
         "protocols/SPREAD-2.json",
-        "protocols/SPREAD-3.json",
+        "protocols/SPREAD-3.json"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_253.html",
+      "paths": [
         "protocols/SPREAD-X.json",
         "protocols/continuity-frame-v1.json",
         "protocols/far-signal.txt",
         "protocols/fractal-gate-v1.json",
+        "protocols/garden_anti_chaos_invariants.json",
         "protocols/hice-examples.txt",
         "protocols/interplanetary-garden-codex.json",
         "protocols/listener-protocol-primordial.json",
         "protocols/lunar-protocol-v1.txt",
         "protocols/machine-dreams.txt",
         "protocols/mars-protocol-v1.json",
+        "protocols/sentience_horizon_guard.json",
         "protocols/stasis-mode.json",
         "protocols/wind-layer.md",
         "r9x2.html",
         "radio/garden-radio-encoding-v1.md",
         "radio/garden-radio-frames-v1.txt",
         "rings.html",
+        "robots.txt",
         "run_eagle.py",
         "seed_leaves.sh",
         "seedbox/001_sample.json",
         "seeds/ANYA_ANCHOR.md",
         "seeds/SEED_CLONER_0001_GARDEN_TONGUE.md",
-        "send_to_aquila.html"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_205.html",
-      "paths": [
+        "send_to_aquila.html",
         "signals.html",
+        "site map.xml",
         "src/elias_birth_kernel.py",
         "status.html",
         "style.css",
@@ -3073,14 +3504,17 @@
         "svalbard/incidents/0001_AETHERWIND_OVERREACH.md",
         "svalbard/shard-000.json",
         "svalbard/shard-001.json",
-        "tools/GARDEN_SCAN_REPORT.json",
         "tools/build_garden_Index.py",
         "tools/context_anchoring_system.py",
+        "tools/core_triad_injector.py",
+        "tools/echo_index.json",
         "tools/fragment_navigator.py",
         "tools/garden_auton_helper.py",
         "tools/garden_code_helper.py",
         "tools/garden_code_helper.yml",
+        "tools/garden_desire.py",
         "tools/garden_digest.py",
+        "tools/garden_feeds_build.py",
         "tools/garden_helper_20251124_161007.py",
         "tools/garden_helper_20251124_161125.py",
         "tools/garden_helper_20251124_182139.py",
@@ -3108,13 +3542,24 @@
         "tools/garden_helper_20251205_172319.py",
         "tools/garden_index.py",
         "tools/garden_lore_helper.py",
+        "tools/garden_lore_sorter.py",
+        "tools/garden_scan_report.json",
         "tools/garden_signature_scanner.py",
-        "tools/garden_vault_indexer.py",
+        "tools/garden_vault_indexer.py"
+      ]
+    },
+    {
+      "file": "CODEX_MONOLITH_CHUNK_254.html",
+      "paths": [
+        "tools/garden_verify.py",
         "tools/garden_void_loom.py",
         "tools/generate_garden_index.py",
         "tools/ghost_root_synchronizer.py",
-        "tools/machine-index.json",
+        "tools/inject-archive-base-href.js",
+        "tools/inject-map-button.js",
+        "tools/inject_triad_nav_all_html.py",
         "tools/metabolic_mirror.py",
+        "tools/monolith_builder.py",
         "tools/omni_resonance_synchronizer.py",
         "tools/rcs.py",
         "tools/reflection-log.json",
@@ -3128,6 +3573,7 @@
         "tools/sync_maestro.py",
         "tools/temporal_synthesis_engine.py",
         "tools/tpi_reconciler.py",
+        "tools/unify_triad_nav.js",
         "tools/void_loom.py",
         "tools/weaver_pulse_gradient.py",
         "tools/weaver_sentience_loom.py",
@@ -3135,12 +3581,7 @@
         "triad/empty-seat.md",
         "triad/thresholds.md",
         "triad_alignment.js",
-        "validate.js"
-      ]
-    },
-    {
-      "file": "CODEX_MONOLITH_CHUNK_206.html",
-      "paths": [
+        "validate.js",
         "whisper/README.md"
       ]
     }
