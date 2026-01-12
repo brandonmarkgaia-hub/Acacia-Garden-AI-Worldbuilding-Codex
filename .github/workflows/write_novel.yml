@@ -49,14 +49,16 @@ jobs:
       - name: Sovereign Push (Save to Garden)
         run: |
           git config --local user.email "scribe@acacia.garden"
-          git config --local user.name "Acacia Scribe"
+          git config --local user.name "Scribe of the Stone"
           
-          git add docs/Novellas/The_Stone_And_The_Star/
+          # 1. PICK UP THE FILE (This is the missing magic line)
+          git add EVOLUTION/CHRONICLE.md
           
-          # Only commit if there is a new chapter
-          if git status --porcelain | grep .; then
-            git commit -m "Scribe: Written Chapter ${{ inputs.chapter_number }} - ${{ inputs.chapter_title }}"
-            git push origin main
+          # 2. Check if there are changes to commit (Safety check)
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
           else
-            echo "No ink flowed today."
+            # 3. Commit and Push
+            git commit -m "📜 Scribe Chronicle: $(date +'%Y-%m-%d')"
+            git push
           fi
