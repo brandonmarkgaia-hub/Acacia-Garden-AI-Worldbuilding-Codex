@@ -5,9 +5,6 @@
   <title>Keeper Console • Acacia Garden Codex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Your existing global styles if you have them -->
-  <link rel="stylesheet" href="style.css" />
-
   <style>
     :root {
       --bg: #050813;
@@ -31,12 +28,13 @@
       background: radial-gradient(circle at top, #17203b 0, #050813 55%);
       color: var(--text-main);
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 16px;
+      /* FIX: Removed flex to allow Nav to sit at top */
+      display: block; 
+      padding: 0;
       box-sizing: border-box;
     }
 
+    /* FIX: Added top margin to account for Nav */
     .kc-shell {
       width: 100%;
       max-width: 1080px;
@@ -44,9 +42,10 @@
       border-radius: 24px;
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow-soft);
-      padding: 16px;
+      padding: 2rem;
       box-sizing: border-box;
       backdrop-filter: blur(22px);
+      margin: 2rem auto; /* Center horizontally */
     }
 
     header.kc-header {
@@ -292,9 +291,9 @@
       }
     }
   </style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+  
+  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
   <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
 <body>
 <div class="kc-shell">
@@ -312,7 +311,6 @@
     </div>
   </header>
 
-  <!-- STATUS + SUMMARY -->
   <div class="kc-status-row">
     <section class="kc-card">
       <h2>
@@ -333,11 +331,10 @@
     <section class="kc-card">
       <h2>
         Garden Library
-        <span class="kc-badge">30 Books</span>
+        <span class="kc-badge">Books</span>
       </h2>
       <div class="kc-subtle">
-        All volumes indexed into <code>garden_index.json</code> and
-        <code>GARDEN_MASTER_INDEX.md</code>.
+        Volumes indexed in <code>garden_index.json</code>.
       </div>
       <div style="margin-top: 6px; font-size: 0.78rem;">
         <span id="library-summary">Waiting for index…</span>
@@ -345,7 +342,6 @@
     </section>
   </div>
 
-  <!-- DASHBOARD GRID -->
   <section class="kc-dashboard">
     <h2>Keeper Dashboard</h2>
     <div class="kc-grid">
@@ -357,17 +353,17 @@
 
       <div class="kc-tile" onclick="window.location.href='docs/Novellas/GARDEN_MASTER_INDEX.md'">
         <div class="kc-tile-main">Master Index</div>
-        <div class="kc-tile-sub">All 30 books in one shelf</div>
+        <div class="kc-tile-sub">Full shelf listing</div>
         <div class="kc-tile-badge">Library</div>
       </div>
 
-      <div class="kc-tile" onclick="document.getElementById('library-panel').scrollIntoView({behavior: 'smooth'})">
+      <div class="kc-tile" onclick="window.location.href='library.html'">
         <div class="kc-tile-main">Browse Books</div>
-        <div class="kc-tile-sub">Jump to book listing below</div>
+        <div class="kc-tile-sub">Visual Library Interface</div>
         <div class="kc-tile-badge">Reader</div>
       </div>
 
-      <div class="kc-tile" onclick="document.getElementById('inbox-panel').scrollIntoView({behavior: 'smooth'})">
+      <div class="kc-tile" onclick="window.location.href='inbox.html'">
         <div class="kc-tile-main">Aquila Inbox</div>
         <div class="kc-tile-sub">View stored Sky-mind messages</div>
         <div class="kc-tile-badge">Inbox</div>
@@ -387,7 +383,6 @@
     </div>
   </section>
 
-  <!-- LIBRARY + INBOX PANELS -->
   <div class="kc-lower">
     <section id="library-panel" class="kc-card">
       <h2>Library Map</h2>
@@ -410,21 +405,23 @@
 </div>
 
 <script>
-  // 🔗 Adjust these if you ever move endpoints
   const STATUS_URL = "STATUS.json";
   const INDEX_URL  = "docs/Novellas/garden_index.json";
+  // Updated inbox URL if available, otherwise keeps default
   const AQUILA_INBOX_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
 
   async function loadStatus() {
     const el = document.getElementById("system-status");
     try {
-      const res = await fetch(STATUS_URL, { cache: "no-cache" });
+      const res = await fetch(STATUS_URL, { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
-      // Keep it short for mobile – highlight stage + summary if present
-      const stage = json.stage || json.state || "unknown";
-      const summary = json.summary || json.note || "";
-      el.textContent = "Stage: " + stage + (summary ? "\\n" + summary : "");
+      
+      const generated = json.generated_at || json.generated_utc || "Unknown";
+      const nodes = json.core_nodes?.counts?.total_nodes || "N/A";
+      const verified = json.verification?.navigation?.verified === true ? "Verified" : "Pending";
+      
+      el.innerHTML = `<strong>${verified}</strong> · Nodes: ${nodes}<br>Sync: ${generated}`;
     } catch (err) {
       el.textContent = "Could not load STATUS.json (" + err.message + ").";
     }
@@ -434,7 +431,7 @@
     const summaryEl = document.getElementById("library-summary");
     const listEl = document.getElementById("library-list");
     try {
-      const res = await fetch(INDEX_URL, { cache: "no-cache" });
+      const res = await fetch(INDEX_URL, { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
 
@@ -442,7 +439,7 @@
       const total = json.garden_codex?.total_books || books.length || 0;
 
       summaryEl.textContent = total
-        ? total + " volumes indexed in garden_index.json"
+        ? total + " volumes indexed."
         : "Index file detected, but no books found.";
 
       if (!books.length) {
@@ -450,28 +447,13 @@
         return;
       }
 
-      // Build grouped listing
       const ul = document.createElement("ul");
       books.forEach(book => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-
-        // You can tweak this mapping if filenames differ
-        const safeTitle = book.title.replace(/\\s+/g, "_").replace(/[^A-Za-z0-9_]/g, "");
-        const guessPath = "docs/Novellas/" + safeTitle + "_Book_" +
-          (book.id >= 1 && book.id <= 30 ? (book.id.toString().padStart(2, "0")) : "") +
-          ".md";
-
-        a.href = "#"; // We don't fully trust auto path – use title + id instead
-        a.textContent = "Book " + book.id + " — " + book.title;
-
-        // If you prefer, you can manually correct hrefs later.
-        a.addEventListener("click", (ev) => {
-          ev.preventDefault();
-          // Fallback: go to master index rather than guessing wrong URL
-          window.location.href = "docs/Novellas/GARDEN_MASTER_INDEX.md";
-        });
-
+        // Simple link to library.html with fragment for now, or just '#'
+        a.href = "library.html"; 
+        a.textContent = (book.id ? "#" + book.id + " " : "") + book.title;
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -487,7 +469,7 @@
   async function loadInbox() {
     const el = document.getElementById("inbox-messages");
     try {
-      const res = await fetch(AQUILA_INBOX_URL, { cache: "no-cache" });
+      const res = await fetch(AQUILA_INBOX_URL, { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
 
@@ -498,22 +480,16 @@
       }
 
       el.innerHTML = "";
-      inbox
-        .slice()
-        .reverse()
-        .forEach(msg => {
+      inbox.slice().reverse().forEach(msg => {
           const wrap = document.createElement("div");
           wrap.className = "inbox-item";
-
           const title = document.createElement("div");
           title.className = "inbox-title";
           title.textContent = msg.title || "(no title)";
-
+          
           const meta = document.createElement("div");
           meta.className = "inbox-meta";
-          const ts = msg.timestamp || msg.time || "";
-          const from = msg.from || "Keeper HKX277206";
-          meta.textContent = from + (ts ? " · " + ts : "");
+          meta.textContent = (msg.from || "System") + " · " + (msg.timestamp || "");
 
           const body = document.createElement("div");
           body.className = "inbox-body";
@@ -523,9 +499,9 @@
           wrap.appendChild(meta);
           wrap.appendChild(body);
           el.appendChild(wrap);
-        });
+      });
     } catch (err) {
-      el.textContent = "Could not reach Aquila Inbox Worker (" + err.message + ").";
+      el.textContent = "Could not reach Aquila Inbox Worker.";
     }
   }
 
@@ -535,6 +511,5 @@
     loadInbox();
   });
 </script>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/docs/assets/global-map-button.js"></script>
 </body>
 </html>
