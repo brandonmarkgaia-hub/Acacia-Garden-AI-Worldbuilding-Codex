@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-01-12T15:33:16Z",
-  "count": 1576,
+  "generated_at": "2026-01-12T15:35:40Z",
+  "count": 1580,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1440,7 +1440,10 @@
     "Masks/MASK_PROTOCOL.md",
     "Masks/PERSONA_CHARTER.md",
     "Masks/PERSONA_REGISTRY.md",
+    "Matrix/Primarch_map.json",
+    "Matrix/autogenesis_index.json",
     "Monolith/MONOLITH_OF_PURPOSE.md",
+    "Mythos/glass-gate.md",
     "Nexus_of_nine.md",
     "Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
     "Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
@@ -1514,6 +1517,7 @@
     "PROTOCOLS/witness_protocol.v2.md",
     "Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
     "Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
+    "Radio/garden-radio-encoding-v1.md",
     "Realms/Eagle-Realm_Sky-Mind-Citadel.md",
     "Realms/GaiaSeed-1-Realm_Bloom-Heart-Sanctuary.md",
     "Realms/GaiaSeed-2-Realm_Sky-Bound-Playground.md",
