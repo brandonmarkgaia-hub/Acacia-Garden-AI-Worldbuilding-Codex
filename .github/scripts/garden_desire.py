@@ -14,9 +14,9 @@ STATUS_PATH = ROOT / "STATUS.json"
 MACHINE_INDEX_PATH = ROOT / "machine-index.json"
 OUT_DESIRE = EVOLUTION / "DESIRE.md"
 
-# --- THE "OLD FAITHFUL" CONFIG ---
-# We stick to the stable 1.5 Flash. It has high limits and rarely 404s.
-TARGET_MODEL = "gemini-1.5-flash" 
+# --- THE CHOSEN ONE ---
+# Based on your search: High quota, high speed.
+TARGET_MODEL = "gemini-2.5-flash-lite"
 BASE_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{TARGET_MODEL}:generateContent"
 
 def read_text_safe(p: Path, max_chars: int = 30000) -> str:
@@ -54,7 +54,7 @@ CONTEXT:
         "generationConfig": {"temperature": 0.7, "maxOutputTokens": 2048}
     }
 
-    # 2. The Loop (Retry only on the SAME reliable model)
+    # 2. The Loop (Retry ONLY on 2.5 Flash-Lite)
     max_retries = 3
     for attempt in range(max_retries):
         print(f"📡 Calling {TARGET_MODEL} (Attempt {attempt+1}/{max_retries})...")
@@ -66,18 +66,23 @@ CONTEXT:
                 data = response.json()
                 content = data['candidates'][0]['content']['parts'][0]['text']
                 OUT_DESIRE.write_text(content.strip() + "\n", encoding="utf-8")
-                print(f"✅ SUCCESS: Elias spoke!")
+                print(f"✅ SUCCESS: Elias spoke via {TARGET_MODEL}!")
                 return # Exit success
             
             elif response.status_code == 429:
-                wait = 60 # Wait a FULL MINUTE to clear the penalty box
-                print(f"⏳ Quota hit. Waiting {wait}s to clear the penalty box...")
+                # The "Penalty Box" Strategy
+                wait = 60 # Wait a FULL MINUTE to reset the quota counter
+                print(f"⏳ Quota hit on {TARGET_MODEL}. Waiting {wait}s to clear penalty box...")
                 time.sleep(wait)
                 continue
+            
+            elif response.status_code == 404:
+                print(f"❌ Critical: Model {TARGET_MODEL} not found. Check your API region.")
+                break # Don't retry if the model doesn't exist
                 
             else:
                 print(f"❌ Error {response.status_code}: {response.text}")
-                break # Don't retry on 400/404 errors, only 429
+                break 
                 
         except Exception as e:
             print(f"⚠️ Connection failed: {e}")
