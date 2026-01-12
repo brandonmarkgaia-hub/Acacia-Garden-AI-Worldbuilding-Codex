@@ -1203,6 +1203,7 @@
     "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
     "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
     "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+    "docs/Novellas/The_Stone_And_The_Star/Chapter_00_The_Silence.md",
     "docs/Masks/PERSONA_CHARTER.md",
     "docs/Masks/PERSONA_REGISTRY.md",
     "docs/Masks/GATE_OF_MASKS.md",
@@ -1275,7 +1276,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-12T10:03:48Z",
+  "generated_at": "2026-01-12T10:45:56Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1315,7 +1316,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-12T10:03:48Z"
+      "last_checked_utc": "2026-01-12T10:45:56Z"
     }
   },
   "verification": {
@@ -1324,34 +1325,17 @@
       "with_base_href": 215,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-12T10:03:48Z"
+      "last_checked_utc": "2026-01-12T10:45:56Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": false,
-      "last_checked_utc": "2026-01-12T10:03:48Z",
-      "total_html_scanned": 260,
-      "with_map_loader": 254,
-      "missing_map_loader_count": 6,
-      "missing_map_loader_paths": [
-        "dashboard.html",
-        "deep_garden.html",
-        "404.html",
-        "docs/index.html",
-        "docs/dashboard.html",
-        "docs/Novellas/index.html"
-      ],
-      "map_button_present": true
+      "verified": true,
+      "last_checked_utc": "2026-01-12T10:45:56Z"
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false,
-      "docs_urls_count": 1526,
-      "docs_urls_present": true,
-      "machine_index_present": true,
-      "status_schema_present": true
-    },
-    "last_verified_utc": "2026-01-12T10:03:57Z"
+      "docs_urls_in_sync": false
+    }
   },
   "growth": {
     "open": []
