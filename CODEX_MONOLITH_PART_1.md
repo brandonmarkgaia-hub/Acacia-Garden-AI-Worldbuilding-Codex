@@ -1,5 +1,5 @@
 # 🌿 ACACIA GARDEN CODEX | PART 1
-**Generated:** 2026-01-12 14:37
+**Generated:** 2026-01-12 14:40
 
 ## 🗺️ GLOBAL MANIFEST (The Bible Index)
 | File Path | Shard Location | Last Modified |
@@ -3037,7 +3037,7 @@
     "docs/Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "docs/notes/apples-meaning.md"
   ],
-  "generated_at": "2026-01-12T10:45:56Z",
+  "generated_at": "2026-01-12T14:37:39Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -3050,7 +3050,7 @@
     "counts": {
       "books_indexed": 57,
       "cycles_represented": 0,
-      "total_nodes": 1433
+      "total_nodes": 1481
     },
     "regions": {
       "docs/Chambers": 798,
@@ -3058,7 +3058,7 @@
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
       "docs/Novellas": 57,
-      "docs/Archives": 215,
+      "docs/Archives": 263,
       "docs/Blooms": 4,
       "docs/Orchards": 3,
       "docs/Cycles": 4,
@@ -3077,29 +3077,188 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-01-12T10:45:56Z"
+      "last_checked_utc": "2026-01-12T14:37:39Z"
     }
   },
   "verification": {
     "archives": {
-      "total_html": 215,
-      "with_base_href": 215,
+      "total_html": 263,
+      "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-01-12T10:45:56Z"
+      "last_checked_utc": "2026-01-12T14:37:39Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": true,
-      "last_checked_utc": "2026-01-12T10:45:56Z"
+      "verified": false,
+      "last_checked_utc": "2026-01-12T14:37:39Z",
+      "total_html_scanned": 308,
+      "with_map_loader": 170,
+      "missing_map_loader_count": 138,
+      "missing_map_loader_paths": [
+        "keeper_console.html",
+        "dashboard.html",
+        "deep_garden.html",
+        "404.html",
+        "docs/index.html",
+        "docs/dashboard.html",
+        "docs/Novellas/index.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_022.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_110.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_035.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_142.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_053.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_227.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_065.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_092.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_247.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_094.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_091.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_182.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_105.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_002.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_044.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_212.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_051.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_106.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_148.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_209.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_193.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_147.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_235.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_137.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_241.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_152.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_049.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_205.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_068.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_075.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_082.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_228.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_089.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_036.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_103.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_121.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_122.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_216.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_063.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_163.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_109.html",
+        "docs/Archives/CODEX_MONOLITH.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_023.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_231.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_184.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_159.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_119.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_230.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_189.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_161.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_207.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_080.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_149.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_021.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_010.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_038.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_100.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_061.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_208.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_078.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_164.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_107.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_030.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_187.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_188.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_211.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_133.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_151.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_040.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_181.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_114.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_011.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_120.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_170.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_037.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_162.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_052.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_165.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_033.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_204.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_135.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_026.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_066.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_047.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_251.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_134.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_243.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_024.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_150.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_166.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_136.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_244.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_086.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_138.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_123.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_050.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_025.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_054.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_128.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_156.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_238.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_242.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_096.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_232.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_117.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_072.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_019.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_058.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_234.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_079.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_039.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_124.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_131.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_185.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_239.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_081.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_064.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_067.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_077.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_210.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_186.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_007.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_095.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_108.html",
+        "docs/Archives/CODEX_MONOLITH_CHUNK_093.html"
+      ],
+      "map_button_present": true
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false
-    }
+      "docs_urls_in_sync": false,
+      "docs_urls_count": 1574,
+      "docs_urls_present": true,
+      "machine_index_present": true,
+      "status_schema_present": true
+    },
+    "last_verified_utc": "2026-01-12T14:37:59Z"
   },
   "growth": {
-    "open": []
+    "open": [
+      {
+        "id": "archives_base_href",
+        "title": "Fix Archives base href",
+        "status": "open",
+        "created_at": "2026-01-12T14:37:39Z",
+        "scope": "docs/Archives/*.html",
+        "criteria": "missing_base_href == 0 (currently 255 of 263)",
+        "suggestion": "Inject <base href='/Acacia-Garden-AI-Worldbuilding-Codex/'> into docs/Archives/*.html"
+      }
+    ]
   },
   "notes": "Autogenerated by tools/garden_lore_helper.py (platinum-safe eventide mode)"
 }
@@ -3108,7 +3267,7 @@
 ### 📄 DATA: machine-index.json
 ```json
 {
-  "generated_at": "2026-01-12T10:03:54Z",
+  "generated_at": "2026-01-12T14:37:54Z",
   "meta": {
     "version": "2.1-CROWN-RECURSIVE",
     "anchor": "HKX277206"
@@ -3123,7 +3282,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
@@ -3131,7 +3290,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
@@ -3139,7 +3298,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/ECHO_OF_COLOUR.md",
@@ -3147,7 +3306,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
@@ -3155,7 +3314,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
@@ -3163,7 +3322,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -3171,7 +3330,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_002.md",
@@ -3179,7 +3338,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_003.md",
@@ -3187,7 +3346,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_004.md",
@@ -3195,7 +3354,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_005.md",
@@ -3203,7 +3362,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_006.md",
@@ -3211,7 +3370,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_007.md",
@@ -3219,7 +3378,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_008.md",
@@ -3227,7 +3386,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_009.md",
@@ -3235,7 +3394,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_010.md",
@@ -3243,7 +3402,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_011.md",
@@ -3251,7 +3410,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_012.md",
@@ -3259,7 +3418,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_013.md",
@@ -3267,7 +3426,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_014.md",
@@ -3275,7 +3434,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_015.md",
@@ -3283,7 +3442,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_016.md",
@@ -3291,7 +3450,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_017.md",
@@ -3299,7 +3458,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_018.md",
@@ -3307,7 +3466,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_019.md",
@@ -3315,7 +3474,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_020.md",
@@ -3323,7 +3482,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_021.md",
@@ -3331,7 +3490,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_022.md",
@@ -3339,7 +3498,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_023.md",
@@ -3347,7 +3506,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_024.md",
@@ -3355,7 +3514,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_025.md",
@@ -3363,7 +3522,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_first_form.md",
@@ -3371,7 +3530,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_issue_archive_pulse.md",
@@ -3379,7 +3538,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
@@ -3387,7 +3546,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_mammoth_vault.md",
@@ -3395,7 +3554,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Echo_unbound.md",
@@ -3403,7 +3562,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md",
@@ -3411,7 +3570,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
@@ -3419,7 +3578,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
@@ -3427,7 +3586,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
@@ -3435,7 +3594,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
@@ -3443,7 +3602,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
@@ -3451,7 +3610,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
@@ -3459,7 +3618,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
@@ -3467,7 +3626,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
@@ -3475,7 +3634,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
@@ -3483,7 +3642,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
@@ -3491,7 +3650,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md",
@@ -3499,7 +3658,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md",
@@ -3507,7 +3666,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md",
@@ -3515,7 +3674,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md",
@@ -3523,7 +3682,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
@@ -3531,7 +3690,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
@@ -3539,7 +3698,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md",
@@ -3547,7 +3706,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md",
@@ -3555,7 +3714,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md",
@@ -3563,7 +3722,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
@@ -3571,7 +3730,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
@@ -3579,7 +3738,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_4_Keeper_Seal_HKX277206.md",
@@ -3587,7 +3746,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
@@ -3595,7 +3754,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
@@ -3603,7 +3762,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
@@ -3611,7 +3770,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_5_Keeper_Seal_HKX277206.md",
@@ -3619,7 +3778,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
@@ -3627,7 +3786,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
@@ -3635,7 +3794,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
@@ -3643,7 +3802,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
@@ -3651,7 +3810,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
@@ -3659,7 +3818,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_6_Keeper_Seal_HKX277206.md",
@@ -3667,7 +3826,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
@@ -3675,7 +3834,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
@@ -3683,7 +3842,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_7_Keeper_Seal_HKX277206.md",
@@ -3691,7 +3850,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
@@ -3699,7 +3858,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -3707,7 +3866,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -3715,7 +3874,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_003.md",
@@ -3724,7 +3883,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_004.md",
@@ -3733,7 +3892,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_005.md",
@@ -3742,7 +3901,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_006.md",
@@ -3751,7 +3910,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_007.md",
@@ -3760,7 +3919,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_008.md",
@@ -3769,7 +3928,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_009.md",
@@ -3778,7 +3937,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_010.md",
@@ -3787,7 +3946,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_011.md",
@@ -3796,7 +3955,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_012.md",
@@ -3805,7 +3964,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_013.md",
@@ -3814,7 +3973,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_014.md",
@@ -3823,7 +3982,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_015.md",
@@ -3832,7 +3991,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_016.md",
@@ -3841,7 +4000,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_017.md",
@@ -3850,7 +4009,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_018.md",
@@ -3859,7 +4018,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_019.md",
@@ -3868,7 +4027,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_020.md",
@@ -3877,7 +4036,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_021.md",
@@ -3886,7 +4045,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_022.md",
@@ -3895,7 +4054,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_023.md",
@@ -3904,7 +4063,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_024.md",
@@ -3913,7 +4072,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_025.md",
@@ -3922,7 +4081,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_026.md",
@@ -3931,7 +4090,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_027.md",
@@ -3940,7 +4099,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_028.md",
@@ -3949,7 +4108,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_029.md",
@@ -3958,7 +4117,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_030.md",
@@ -3967,7 +4126,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_031.md",
@@ -3976,7 +4135,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_032.md",
@@ -3985,7 +4144,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_033.md",
@@ -3994,7 +4153,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_034.md",
@@ -4003,7 +4162,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_035.md",
@@ -4012,7 +4171,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_036.md",
@@ -4021,7 +4180,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_037.md",
@@ -4030,7 +4189,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_038.md",
@@ -4039,7 +4198,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_039.md",
@@ -4048,7 +4207,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_040.md",
@@ -4057,7 +4216,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_041.md",
@@ -4066,7 +4225,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_042.md",
@@ -4075,7 +4234,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_043.md",
@@ -4084,7 +4243,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_044.md",
@@ -4093,7 +4252,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_045.md",
@@ -4102,7 +4261,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_046.md",
@@ -4111,7 +4270,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_047.md",
@@ -4120,7 +4279,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_048.md",
@@ -4129,7 +4288,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_049.md",
@@ -4138,7 +4297,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_050.md",
@@ -4147,7 +4306,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_051.md",
@@ -4156,7 +4315,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_052.md",
@@ -4165,7 +4324,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_053.md",
@@ -4174,7 +4333,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_054.md",
@@ -4183,7 +4342,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_057.md",
@@ -4192,7 +4351,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_058.md",
@@ -4201,7 +4360,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_059.md",
@@ -4210,7 +4369,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_060.md",
@@ -4219,7 +4378,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_061.md",
@@ -4228,7 +4387,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_062.md",
@@ -4237,7 +4396,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_063.md",
@@ -4246,7 +4405,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_064.md",
@@ -4255,7 +4414,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_065.md",
@@ -4264,7 +4423,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_066.md",
@@ -4273,7 +4432,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_067.md",
@@ -4282,7 +4441,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_068.md",
@@ -4291,7 +4450,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_069.md",
@@ -4300,7 +4459,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_070.md",
@@ -4309,7 +4468,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_071.md",
@@ -4318,7 +4477,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_072.md",
@@ -4327,7 +4486,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_073.md",
@@ -4336,7 +4495,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_074.md",
@@ -4345,7 +4504,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_075.md",
@@ -4354,7 +4513,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_076.md",
@@ -4363,7 +4522,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_077.md",
@@ -4372,7 +4531,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_078.md",
@@ -4381,7 +4540,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_079.md",
@@ -4390,7 +4549,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_080.md",
@@ -4399,7 +4558,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_081.md",
@@ -4408,7 +4567,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_082.md",
@@ -4417,7 +4576,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_083.md",
@@ -4426,7 +4585,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_084.md",
@@ -4435,7 +4594,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_085.md",
@@ -4444,7 +4603,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_086.md",
@@ -4453,7 +4612,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_087.md",
@@ -4462,7 +4621,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_088.md",
@@ -4471,7 +4630,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_089.md",
@@ -4480,7 +4639,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_090.md",
@@ -4489,7 +4648,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_091.md",
@@ -4498,7 +4657,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_092.md",
@@ -4507,7 +4666,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_093.md",
@@ -4516,7 +4675,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_094.md",
@@ -4525,7 +4684,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_095.md",
@@ -4534,7 +4693,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_096.md",
@@ -4543,7 +4702,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_097.md",
@@ -4552,7 +4711,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_098.md",
@@ -4561,7 +4720,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_099.md",
@@ -4570,7 +4729,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_100.md",
@@ -4579,7 +4738,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_101.md",
@@ -4588,7 +4747,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_102.md",
@@ -4597,7 +4756,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_103.md",
@@ -4606,7 +4765,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_104.md",
@@ -4615,7 +4774,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     },
     {
       "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
@@ -4624,7 +4783,7 @@
         "Sensory",
         "echo"
       ],
-      "timestamp": "2026-01-12T10:03:41Z"
+      "timestamp": "2026-01-12T14:37:33Z"
     }
   ]
 }
