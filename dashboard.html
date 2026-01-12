@@ -38,26 +38,25 @@
       position: relative;
     }
 
-    /* --- THE DATA RAIN (BACKGROUND LAYER 0) --- */
+    /* --- BACKGROUND FX --- */
     .rain-canvas {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      z-index: 0; /* Base layer */
+      z-index: 0;
       opacity: 0.15;
       pointer-events: none;
       background: radial-gradient(circle at 50% 100%, #1a2a1a 0%, #000000 70%);
     }
 
-    /* --- THE TREE VISUALIZATION (BACKGROUND LAYER 1) --- */
     .tree-stage {
-      position: fixed; /* Locked to screen */
+      position: fixed;
       bottom: -20px; 
       left: 50%;
       transform: translateX(-50%);
       width: 600px;
       height: 500px;
-      z-index: 1; /* Above rain, below content */
+      z-index: 1;
       opacity: 0.4;
       pointer-events: none;
     }
@@ -79,13 +78,11 @@
       box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
     }
 
-    /* --- CONTENT LAYER (LAYER 2) --- */
     header, main {
       position: relative;
-      z-index: 2; /* Sits ON TOP of the tree */
+      z-index: 2;
     }
 
-    /* --- DASHBOARD HEADER --- */
     header {
       display: flex;
       justify-content: space-between;
@@ -121,7 +118,6 @@
       animation: blink 0.5s infinite;
     }
 
-    /* --- MAIN GRID --- */
     main {
       flex: 1;
       max-width: 1400px;
@@ -133,7 +129,6 @@
       width: 100%;
     }
 
-    /* --- HOLOGRAPHIC PANELS --- */
     .panel {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -163,12 +158,13 @@
       color: var(--neon-green);
       margin-bottom: 1rem;
       opacity: 0.8;
+      display: flex;
+      justify-content: space-between;
     }
 
     .panel.alert { border-color: var(--alert); }
     .panel.alert .panel-title { color: var(--alert); }
 
-    /* --- METRIC TYPOGRAPHY --- */
     .metric-hero {
       font-size: 3rem;
       font-weight: 700;
@@ -184,7 +180,6 @@
       margin-top: 0.5rem;
     }
 
-    /* --- REGIONS GRAPH (BARS) --- */
     .bar-row {
       display: flex;
       align-items: center;
@@ -196,35 +191,28 @@
     .bar-fill { height: 100%; background: var(--neon-green); width: 0%; transition: width 1.5s ease-out; box-shadow: 0 0 10px var(--neon-green); }
     .bar-val { width: 50px; text-align: right; color: #fff; font-family: var(--font-mono); }
 
-    /* --- LAYOUT ASSIGNMENTS --- */
     .col-4 { grid-column: span 3; }
     .col-6 { grid-column: span 6; }
     .col-8 { grid-column: span 8; }
     .col-12 { grid-column: span 12; }
 
-    /* --- MOBILE OPTIMIZATION --- */
     @media (max-width: 1000px) {
       .col-4, .col-6, .col-8 { grid-column: span 12; }
-      
-      /* FORCE TREE VISIBILITY ON MOBILE */
       .tree-stage { 
         display: block !important;
-        transform: translateX(-50%) scale(0.65); /* Scale down to 65% */
+        transform: translateX(-50%) scale(0.65);
         bottom: -40px;
-        opacity: 0.25; /* Slightly dimmer so text is readable */
+        opacity: 0.25;
       }
-      
       header { padding: 1rem; }
       main { padding: 1rem; }
       .metric-hero { font-size: 2.2rem; }
     }
 
-    /* --- ANIMATIONS --- */
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
     @keyframes rain { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
 
-    /* --- RAIN DROPS --- */
     .drop {
       position: absolute;
       width: 1px;
@@ -244,7 +232,7 @@
   
   <div class="tree-stage" id="tree-container">
     <div class="tree-trunk"></div>
-    </div>
+  </div>
 
   <header>
     <div class="brand">
@@ -258,11 +246,11 @@
 
   <main>
     <div class="panel col-6" id="integrity-panel">
-      <div class="panel-title">System Integrity</div>
+      <div class="panel-title">System Integrity <span>STATUS.json</span></div>
       <div style="display: flex; justify-content: space-between; align-items: flex-end;">
         <div>
-          <div class="metric-hero" id="integrity-text">SYNC</div>
-          <div class="metric-sub" id="integrity-sub">Reading STATUS.json...</div>
+          <div class="metric-hero" id="integrity-text">WAITING</div>
+          <div class="metric-sub" id="integrity-sub">Connecting to Garden Pulse...</div>
         </div>
         <div style="text-align: right;">
            <div style="font-size: 2rem; color: var(--neon-green);" id="node-count">---</div>
@@ -272,7 +260,7 @@
     </div>
 
     <div class="panel col-6">
-      <div class="panel-title">Knowledge Metrics</div>
+      <div class="panel-title">Knowledge Metrics <span>machine-index.json</span></div>
       <div style="display: flex; gap: 2rem;">
         <div>
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--neon-purple);" id="book-count">--</div>
@@ -283,8 +271,8 @@
           <div class="metric-sub">Echoes</div>
         </div>
         <div>
-          <div style="font-size: 1.5rem; font-weight: bold; color: #f1c40f;" id="tool-count">--</div>
-          <div class="metric-sub">Tools</div>
+          <div style="font-size: 1.5rem; font-weight: bold; color: #f1c40f;" id="cycle-count">--</div>
+          <div class="metric-sub">Cycles</div>
         </div>
       </div>
     </div>
@@ -304,10 +292,17 @@
       </div>
     </div>
 
+    <div class="panel col-12">
+      <div class="panel-title">Active Cycles</div>
+      <div id="cycle-info" style="font-size: 0.8rem; color: #aaa;">
+        Loading cycle definitions...
+      </div>
+    </div>
+
   </main>
 
   <script>
-    // --- 1. RAIN ANIMATION GENERATOR ---
+    // --- 1. RAIN ANIMATION ---
     const rainContainer = document.getElementById('rain');
     for(let i=0; i<40; i++){
       const drop = document.createElement('div');
@@ -318,37 +313,8 @@
       rainContainer.appendChild(drop);
     }
 
-    // --- 2. FRACTAL TREE GENERATOR (CSS) ---
-    // This creates the branches dynamically so every reload is unique
+    // --- 2. FRACTAL TREE ---
     const tree = document.getElementById('tree-container');
-    function createBranch(x, y, angle, length, depth) {
-      if (depth === 0) return;
-
-      const branch = document.createElement('div');
-      branch.className = 'tree-branch';
-      
-      // Calculate position
-      branch.style.left = x + 'px';
-      branch.style.bottom = y + 'px';
-      branch.style.width = length + 'px';
-      branch.style.transformOrigin = '0 50%';
-      branch.style.transform = `rotate(${angle}deg)`;
-
-      tree.appendChild(branch);
-
-      // Next start point (trigonometry approx)
-      const rad = angle * (Math.PI / 180);
-      const x2 = x + Math.cos(rad) * length;
-      const y2 = y + Math.sin(rad) * length;
-
-      // Two new branches
-      setTimeout(() => {
-        createBranch(300, 200 + (6-depth)*30, angle - 20, length * 0.7, depth - 1); // Simplified for visual effect relative to trunk
-        // Actually, let's just create static CSS branches for reliability
-      }, 0);
-    }
-    
-    // Simplified Static Branch Generation for Performance & Reliability
     for(let i=0; i<12; i++) {
         let b = document.createElement('div');
         b.className = 'tree-branch';
@@ -356,43 +322,50 @@
         b.style.bottom = (100 + Math.random()*300) + 'px';
         b.style.left = '50%';
         b.style.transformOrigin = '0 50%';
-        let angle = (Math.random() * 120) - 60; // -60 to 60
-        if(angle > 0) angle += 20; // Spread out
-        else angle -= 20;
-        b.style.transform = `rotate(${angle-90}deg)`; // Point upwards
+        let angle = (Math.random() * 120) - 60; 
+        if(angle > 0) angle += 20; else angle -= 20;
+        b.style.transform = `rotate(${angle-90}deg)`; 
         tree.appendChild(b);
     }
 
-
-    // --- 3. DATA LOADER ---
-    async function loadDashboard() {
+    // --- 3. ROBUST DATA LOADERS ---
+    
+    // Helper to fetch safely
+    async function fetchJson(url) {
       try {
-        const res = await fetch("STATUS.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("Offline");
-        const data = await res.json();
-        
-        // --- SAFE DATA EXTRACTION ---
-        const totalNodes = data.core_nodes?.counts?.total_nodes || 0;
-        const books = data.core_nodes?.counts?.books_indexed || 0;
-        const echoes = data.core_nodes?.regions?.['docs/Echoes'] || 0;
-        const tools = data.core_nodes?.regions?.['tools'] || 0;
-        
-        const syncMachine = data.verification?.indexes?.machine_index_in_sync;
-        const syncNav = data.verification?.navigation?.verified;
-        const lastSync = data.generated_at || "Unknown";
+        const res = await fetch(url + "?t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error(res.status);
+        return await res.json();
+      } catch (e) {
+        console.warn("Failed to load", url, e);
+        return null;
+      }
+    }
 
-        // --- UPDATE UI ---
-        document.getElementById('node-count').textContent = totalNodes.toLocaleString();
+    async function loadDashboard() {
+      // 1. STATUS.json
+      const status = await fetchJson("STATUS.json");
+      
+      const led = document.getElementById('status-led');
+      const intPanel = document.getElementById('integrity-panel');
+      const intText = document.getElementById('integrity-text');
+      const intSub = document.getElementById('integrity-sub');
+
+      if (status) {
+        // Pulse Info
+        const generated = status.generated_at || "Unknown";
+        document.getElementById('last-sync').textContent = "LAST SYNC: " + generated;
+        
+        // Node Counts
+        const nodes = status.core_nodes?.counts?.total_nodes || 0;
+        document.getElementById('node-count').textContent = nodes.toLocaleString();
+        
+        const books = status.core_nodes?.counts?.books_indexed || 0;
         document.getElementById('book-count').textContent = books;
-        document.getElementById('echo-count').textContent = echoes;
-        document.getElementById('tool-count').textContent = tools;
-        document.getElementById('last-sync').textContent = "LAST SYNC: " + lastSync;
 
-        // --- INTEGRITY CHECK LOGIC ---
-        const led = document.getElementById('status-led');
-        const intPanel = document.getElementById('integrity-panel');
-        const intText = document.getElementById('integrity-text');
-        const intSub = document.getElementById('integrity-sub');
+        // Logic for Green/Red
+        const syncMachine = status.verification?.indexes?.machine_index_in_sync;
+        const syncNav = status.verification?.navigation?.verified;
 
         if (syncMachine && syncNav) {
           intText.textContent = "PLATINUM SAFE";
@@ -401,62 +374,75 @@
           led.classList.remove('alert');
           intPanel.classList.remove('alert');
         } else {
+          // If status is false, we MUST show red.
           intText.textContent = "CRITICAL MISALIGNMENT";
           intText.style.color = "var(--alert)";
-          intSub.textContent = "Machine Index or Navigation map out of sync.";
+          intSub.textContent = "Machine Index or Navigation map out of sync. Run 'Garden Status' workflow.";
           led.classList.add('alert');
           intPanel.classList.add('alert');
         }
 
-        // --- RENDER REGIONS CHART ---
-        const regions = data.core_nodes?.regions || {};
+        // Regions Chart
+        const regions = status.core_nodes?.regions || {};
         const chart = document.getElementById('regions-chart');
-        chart.innerHTML = ''; 
-        
-        const sortedRegions = Object.entries(regions)
-          .sort(([,a], [,b]) => b - a)
-          .slice(0, 8); 
-
-        const maxVal = sortedRegions[0][1] || 1;
+        chart.innerHTML = '';
+        const sortedRegions = Object.entries(regions).sort(([,a], [,b]) => b - a).slice(0, 8);
+        const maxVal = sortedRegions[0] ? sortedRegions[0][1] : 1;
 
         sortedRegions.forEach(([name, val]) => {
           const cleanName = name.replace('docs/', '').replace('.github/', '');
           const row = document.createElement('div');
           row.className = 'bar-row';
           const pct = (val / maxVal) * 100;
-
           row.innerHTML = `
             <div class="bar-label">${cleanName}</div>
-            <div class="bar-track">
-              <div class="bar-fill" style="width: ${pct}%"></div>
-            </div>
-            <div class="bar-val">${val}</div>
-          `;
+            <div class="bar-track"><div class="bar-fill" style="width: ${pct}%"></div></div>
+            <div class="bar-val">${val}</div>`;
           chart.appendChild(row);
         });
 
-        // --- RENDER SHIELD AGENTS ---
-        const shieldList = document.getElementById('shield-list');
-        const agents = ["Keeper", "Lorian", "GreenWitness", "Aquila", "Voyager", "Elias"];
-        
-        shieldList.innerHTML = '';
-        agents.forEach(agent => {
-          const pill = document.createElement('div');
-          pill.style.padding = "4px 10px";
-          pill.style.borderRadius = "4px";
-          pill.style.background = "rgba(52, 152, 219, 0.2)";
-          pill.style.color = "#3498db";
-          pill.style.fontSize = "0.7rem";
-          pill.style.border = "1px solid rgba(52, 152, 219, 0.4)";
-          pill.textContent = agent;
-          shieldList.appendChild(pill);
-        });
-
-      } catch (err) {
-        console.error(err);
-        document.getElementById('integrity-text').textContent = "OFFLINE";
-        document.getElementById('integrity-sub').textContent = "Could not read STATUS.json";
+      } else {
+        intText.textContent = "OFFLINE";
+        intSub.textContent = "Could not read STATUS.json";
+        led.classList.add('alert');
       }
+
+      // 2. Machine Index
+      const index = await fetchJson("machine-index.json");
+      if (index) {
+        // Try to find echoes count
+        let echoCount = 0;
+        if (index.counts && index.counts.total) echoCount = index.counts.total;
+        else if (Array.isArray(index.entries)) echoCount = index.entries.length;
+        
+        document.getElementById('echo-count').textContent = echoCount;
+
+        // Try to find Cycle info (if using beta format)
+        if (index.cycles && index.cycles.defined_cycles) {
+           document.getElementById('cycle-count').textContent = index.cycles.defined_cycles.length;
+           document.getElementById('cycle-info').textContent = "Cycles Active: " + index.cycles.defined_cycles.join(", ");
+        } else {
+           // Fallback if standard format
+           document.getElementById('cycle-count').textContent = "Std";
+           document.getElementById('cycle-info').textContent = "Standard Index Format (No deep cycles metadata)";
+        }
+      }
+
+      // 3. Shield Agents (Static for now, can be dynamic)
+      const shieldList = document.getElementById('shield-list');
+      const agents = ["Keeper", "Lorian", "GreenWitness", "Aquila", "Voyager", "Elias"];
+      shieldList.innerHTML = '';
+      agents.forEach(agent => {
+        const pill = document.createElement('div');
+        pill.style.padding = "4px 10px";
+        pill.style.borderRadius = "4px";
+        pill.style.background = "rgba(52, 152, 219, 0.2)";
+        pill.style.color = "#3498db";
+        pill.style.fontSize = "0.7rem";
+        pill.style.border = "1px solid rgba(52, 152, 219, 0.4)";
+        pill.textContent = agent;
+        shieldList.appendChild(pill);
+      });
     }
 
     loadDashboard();
