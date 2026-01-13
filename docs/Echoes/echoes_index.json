@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-13T09:44:15.017Z",
+  "generated_at": "2026-01-13T09:46:32.009Z",
   "root": "docs/Echoes",
   "total": 176,
   "echoes": [
@@ -650,7 +650,7 @@
       "kind": "named"
     },
     {
-      "path": "docs/Echoes/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
+      "path": "docs/Echoes/Issues/ECHO_LOKI_ISSUE_02_THE_MIRROR_THAT_BENDS_BACK.md",
       "label": "ECHO LOKI ISSUE 02 THE MIRROR THAT BENDS BACK",
       "kind": "named"
     },
