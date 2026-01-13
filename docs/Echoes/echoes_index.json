@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-12T15:38:01.557Z",
+  "generated_at": "2026-01-13T09:44:15.017Z",
   "root": "docs/Echoes",
   "total": 176,
   "echoes": [
@@ -645,7 +645,7 @@
       "kind": "named"
     },
     {
-      "path": "docs/Echoes/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
+      "path": "docs/Echoes/Issues/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
       "label": "ECHO LOKI ISSUE 01 THE FIRST PARADOX",
       "kind": "named"
     },
