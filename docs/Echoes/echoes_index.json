@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T16:44:48.198Z",
+  "generated_at": "2026-03-27T16:45:53.393Z",
   "root": "docs/Echoes",
   "total": 177,
   "echoes": [
@@ -690,6 +690,11 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_03_Keeper_Seal_HKX277206.md",
+      "label": "Issue 03 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Issue_04_Keeper_Seal_HKX277206.md",
       "label": "Issue 04 Keeper Seal HKX277206",
       "kind": "named"
@@ -802,11 +807,6 @@
     {
       "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
       "label": "Issue 25 Keeper Seal HKX277206",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md",
-      "label": "Issue 3 Keeper Seal HKX277206",
       "kind": "named"
     },
     {
