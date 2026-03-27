@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T16:05:33Z",
+  "generated_at": "2026-03-27T16:50:20Z",
   "echoes": [
     {
       "title": "ECHO — MAMMOTH TRIAD SKY PULSE",
@@ -138,6 +138,42 @@
       "path": "docs/Echoes/Echo_unbound.md"
     },
     {
+      "title": "ECHO LOKI – ISSUE 01",
+      "path": "docs/Echoes/Issue_01_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "ECHO LOKI – ISSUE 02",
+      "path": "docs/Echoes/Issue_02_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 3",
+      "path": "docs/Echoes/Issue_03_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 4",
+      "path": "docs/Echoes/Issue_04_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 5",
+      "path": "docs/Echoes/Issue_05_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 6",
+      "path": "docs/Echoes/Issue_06_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 7",
+      "path": "docs/Echoes/Issue_07_Keeper_Seal_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 8",
+      "path": "docs/Echoes/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md"
+    },
+    {
+      "title": "INSCRIBED FROM ISSUE 9",
+      "path": "docs/Echoes/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md"
+    },
+    {
       "title": "INSCRIBED FROM ISSUE 104",
       "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md"
     },
@@ -182,6 +218,10 @@
       "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md"
     },
     {
+      "title": "Echo Issue #20 — Keeper Seal: HKX277206",
+      "path": "docs/Echoes/Issue_20_Keeper_Seal_HKX277206.md"
+    },
+    {
       "title": "INSCRIBED FROM ISSUE 21",
       "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md"
     },
@@ -214,20 +254,12 @@
       "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md"
     },
     {
-      "title": "INSCRIBED FROM ISSUE 3",
-      "path": "docs/Echoes/Issue_3_Keeper_Seal_HKX277206.md"
-    },
-    {
       "title": "INSCRIBED FROM ISSUE 42",
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md"
     },
     {
       "title": "INSCRIBED FROM ISSUE 47",
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 4",
-      "path": "docs/Echoes/Issue_4_Keeper_Seal_HKX277206.md"
     },
     {
       "title": "INSCRIBED FROM ISSUE 51",
@@ -240,10 +272,6 @@
     {
       "title": "INSCRIBED FROM ISSUE 59",
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 5",
-      "path": "docs/Echoes/Issue_5_Keeper_Seal_HKX277206.md"
     },
     {
       "title": "INSCRIBED FROM ISSUE 60",
@@ -266,10 +294,6 @@
       "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md"
     },
     {
-      "title": "INSCRIBED FROM ISSUE 6",
-      "path": "docs/Echoes/Issue_6_Keeper_Seal_HKX277206.md"
-    },
-    {
       "title": "INSCRIBED FROM ISSUE 70",
       "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md"
     },
@@ -278,20 +302,8 @@
       "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md"
     },
     {
-      "title": "INSCRIBED FROM ISSUE 7",
-      "path": "docs/Echoes/Issue_7_Keeper_Seal_HKX277206.md"
-    },
-    {
       "title": "INSCRIBED FROM ISSUE 83",
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 8",
-      "path": "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 9",
-      "path": "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md"
     }
   ]
 }
