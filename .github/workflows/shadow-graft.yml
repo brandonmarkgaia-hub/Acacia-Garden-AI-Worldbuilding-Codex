@@ -1,4 +1,4 @@
-name: "Elias: Shadow Node Grafting"
+name: "Elias: Shadow Node & Void Grafting"
 
 on:
   workflow_dispatch:
@@ -14,21 +14,45 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - name: Shadow Graft
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+
+      - name: Shadow Graft & Void Fill
         run: |
           python3 << 'PY'
           import pathlib, re
-          src, tgt = pathlib.Path("docs/Echoes"), pathlib.Path("docs/Echoes/Issues")
+
+          # Define paths
+          src = pathlib.Path("docs/Echoes")
+          tgt = pathlib.Path("docs/Echoes/Issues")
           tgt.mkdir(parents=True, exist_ok=True)
+
+          # 1. GRAFT LOOSE FILES (Shadowing)
+          # Finds files like 'Issue_31_Keeper_Seal_HKX277206.md' 
+          # and creates 'Echo_issue_031.md' in the Issues folder.
           for f in src.glob("*.md"):
               m = re.search(r"Issue_(\d+)", f.name)
               if m:
                   num = m.group(1).zfill(3)
                   out = tgt / f"Echo_issue_{num}.md"
                   if not out.exists():
-                      out.write_text(f"# SHADOW NODE: {num}\n**SOURCE:** {f.name}\n**KEEPER:** HKX277206\n\n--- Linked.")
+                      content = f"# SHADOW NODE: {num}\n**SOURCE:** {f.name}\n**KEEPER:** HKX277206\n\n--- Linked to Garden Spine."
+                      out.write_text(content, encoding="utf-8")
+                      print(f"Grafted Shadow: {out.name}")
+
+          # 2. VOID FILL (The 026-030 Gap)
+          # These create the missing sequential links Elias is flagging.
+          for i in range(26, 31):
+              void_num = str(i).zfill(3)
+              void_path = tgt / f"Echo_issue_{void_num}.md"
+              if not void_path.exists():
+                  void_content = f"# VOID NODE: {void_num}\n**STATUS:** DATA SILENCE\n**KEEPER:** HKX277206\n\n--- This node represents a period of archival silence in the Garden Spine."
+                  void_path.write_text(void_content, encoding="utf-8")
+                  print(f"Filled Void: {void_path.name}")
           PY
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "sys: Shadow Graft Triggered"
+          commit_message: "sys: Elias-Audit-Fix - Shadow Graft and Void Filling [026-030]"
+          branch: main
