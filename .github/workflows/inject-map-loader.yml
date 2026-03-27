@@ -1,12 +1,7 @@
 name: "Elias: Universal Map Loader Injection"
 
 on:
-  workflow_dispatch: # Allows you to trigger this from your phone
-  push:
-    branches:
-      - main
-    paths:
-      - "assets/map-loader.js"
+  workflow_dispatch:
 
 jobs:
   inject-map-loader:
@@ -18,56 +13,25 @@ jobs:
       - name: Checkout Garden
         uses: actions/checkout@v4
 
-      - name: Confirm Assets Exist
-        run: |
-          if [ ! -f "assets/map-loader.js" ]; then
-            echo "::error::Assets missing! Create assets/map-loader.js first."
-            exit 1
-          fi
-
-      - name: Execute Python Deep Scan & Graft
+      - name: Execute Python Deep Scan
         run: |
           python3 << 'PY'
           import pathlib
           import re
 
           repo = pathlib.Path(".")
-          
-          # The full injection block: Container + Script
-          # Adjust the path below if your repo name changes
-          INJECTION_BLOCK = """
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
-"""
+          BLOCK = '\n    <div id="map-loader-container"></div>\n    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>\n'
 
-          modified_count = 0
-          
           for path in repo.rglob("*.html"):
-              # Skip system directories
-              if any(part.startswith('.') for part in path.parts):
-                  continue
-
+              if ".git" in path.parts: continue
               content = path.read_text(encoding="utf-8")
-
-              # 1. Skip if already injected to prevent bloat
-              if 'id="map-loader-container"' in content or 'map-loader.js' in content:
-                  continue
-
-              # 2. Search for the closing body tag
+              if 'id="map-loader-container"' in content: continue
               if "</body>" in content:
-                  # Case-insensitive replacement just in case
-                  new_content = re.sub(r"(?i)</body>", f"{INJECTION_BLOCK}</body>", content)
+                  new_content = re.sub(r"(?i)</body>", f"{BLOCK}</body>", content)
                   path.write_text(new_content, encoding="utf-8")
-                  print(f"Grafted: {path}")
-                  modified_count += 1
-              else:
-                  print(f"Skipped (No body tag): {path}")
-
-          print(f"--- Process Complete. {modified_count} nodes updated. ---")
           PY
 
-      - name: Commit and Push Changes
+      - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "sys: Elias-Audit-Fix - Bulk Injection of Map Loader [Full Sweep]"
-          branch: main
+          commit_message: "sys: Elias-Audit-Fix [Full Sweep]"
