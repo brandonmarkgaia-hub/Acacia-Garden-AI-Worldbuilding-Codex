@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T19:50:36.100Z",
+  "generated_at": "2026-03-27T19:56:04.238Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -872,6 +872,9 @@
         },
         {
           "path": "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md"
+        },
+        {
+          "path": "docs/Chambers/Elias_The_Architect.md"
         },
         {
           "path": "docs/Chambers/ELIAS_V11_001_CARE_PROTOCOLS.md"
