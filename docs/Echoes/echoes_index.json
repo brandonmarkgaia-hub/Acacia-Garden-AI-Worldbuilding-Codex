@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-01-13T09:46:32.009Z",
+  "generated_at": "2026-03-27T16:42:35.978Z",
   "root": "docs/Echoes",
-  "total": 176,
+  "total": 177,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -742,6 +742,11 @@
     {
       "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
       "label": "Issue 19 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_20_Keeper_Seal_HKX277206.md",
+      "label": "Issue 20 Keeper Seal HKX277206",
       "kind": "named"
     },
     {
