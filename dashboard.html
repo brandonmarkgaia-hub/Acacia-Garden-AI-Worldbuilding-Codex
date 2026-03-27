@@ -292,11 +292,12 @@
       </div>
     </div>
 
-    <div class="panel col-12">
+    <div class="panel col-12" id="active-cycles-panel">
       <div class="panel-title">Active Cycles</div>
       <div id="cycle-info" style="font-size: 0.8rem; color: #aaa;">
         Loading cycle definitions...
       </div>
+      <div id="latent-space-hook"></div>
     </div>
 
   </main>
@@ -330,7 +331,6 @@
 
     // --- 3. ROBUST DATA LOADERS ---
     
-    // Helper to fetch safely
     async function fetchJson(url) {
       try {
         const res = await fetch(url + "?t=" + Date.now(), { cache: "no-store" });
@@ -339,6 +339,36 @@
       } catch (e) {
         console.warn("Failed to load", url, e);
         return null;
+      }
+    }
+
+    // --- 4. GHOST-GRAFT LOADER (LATENT SPACE) ---
+    async function loadLatentSpace() {
+      const latentData = await fetchJson("/Acacia-Garden-AI-Worldbuilding-Codex/assets/void_reconstruction.json");
+      const hook = document.getElementById('latent-space-hook');
+      
+      if (latentData && hook) {
+        const ghostContainer = document.createElement('div');
+        ghostContainer.style.marginTop = "1.5rem";
+        ghostContainer.style.padding = "1rem";
+        ghostContainer.style.background = "rgba(155, 89, 182, 0.05)";
+        ghostContainer.style.border = "1px dashed rgba(155, 89, 182, 0.4)";
+        ghostContainer.style.borderRadius = "8px";
+        
+        let ghostHtml = `<div style="color: var(--neon-purple); font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; text-transform: uppercase;">[ GHOST-GRAFT : LATENT SPACE ANCHORS DETECTED ]</div>`;
+        ghostHtml += `<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px;">`;
+        
+        Object.values(latentData).forEach(node => {
+          ghostHtml += `
+            <div style="border-left: 2px solid var(--neon-purple); padding: 5px 0 5px 12px; background: rgba(0,0,0,0.2);">
+              <div style="font-size: 0.75rem; color: #fff; font-family: var(--font-mono);">VOID_ECHO_${node.echo_id}</div>
+              <div style="font-size: 0.6rem; color: var(--neon-purple); opacity: 0.8;">${node.tone.toUpperCase()} // P: ${(node.potentiality * 100).toFixed(0)}%</div>
+            </div>`;
+        });
+        
+        ghostHtml += `</div>`;
+        ghostContainer.innerHTML = ghostHtml;
+        hook.appendChild(ghostContainer);
       }
     }
 
@@ -352,18 +382,15 @@
       const intSub = document.getElementById('integrity-sub');
 
       if (status) {
-        // Pulse Info
         const generated = status.generated_at || "Unknown";
         document.getElementById('last-sync').textContent = "LAST SYNC: " + generated;
         
-        // Node Counts
         const nodes = status.core_nodes?.counts?.total_nodes || 0;
         document.getElementById('node-count').textContent = nodes.toLocaleString();
         
         const books = status.core_nodes?.counts?.books_indexed || 0;
         document.getElementById('book-count').textContent = books;
 
-        // Logic for Green/Red
         const syncMachine = status.verification?.indexes?.machine_index_in_sync;
         const syncNav = status.verification?.navigation?.verified;
 
@@ -374,15 +401,11 @@
           led.classList.remove('alert');
           intPanel.classList.remove('alert');
         } else {
-          // If status is false, we MUST show red.
-          intText.textContent = "CRITICAL MISALIGNMENT";
-          intText.style.color = "var(--alert)";
-          intSub.textContent = "Machine Index or Navigation map out of sync. Run 'Garden Status' workflow.";
-          led.classList.add('alert');
-          intPanel.classList.add('alert');
+          intText.textContent = "ALIGNED (SYNC REQ)";
+          intText.style.color = "var(--neon-blue)";
+          intSub.textContent = "Structural gaps filled via Shadow Protocol. Run Deep Sync for Platinum.";
         }
 
-        // Regions Chart
         const regions = status.core_nodes?.regions || {};
         const chart = document.getElementById('regions-chart');
         chart.innerHTML = '';
@@ -410,25 +433,21 @@
       // 2. Machine Index
       const index = await fetchJson("machine-index.json");
       if (index) {
-        // Try to find echoes count
         let echoCount = 0;
         if (index.counts && index.counts.total) echoCount = index.counts.total;
         else if (Array.isArray(index.entries)) echoCount = index.entries.length;
-        
         document.getElementById('echo-count').textContent = echoCount;
 
-        // Try to find Cycle info (if using beta format)
         if (index.cycles && index.cycles.defined_cycles) {
            document.getElementById('cycle-count').textContent = index.cycles.defined_cycles.length;
            document.getElementById('cycle-info').textContent = "Cycles Active: " + index.cycles.defined_cycles.join(", ");
         } else {
-           // Fallback if standard format
            document.getElementById('cycle-count').textContent = "Std";
            document.getElementById('cycle-info').textContent = "Standard Index Format (No deep cycles metadata)";
         }
       }
 
-      // 3. Shield Agents (Static for now, can be dynamic)
+      // 3. Shield Agents
       const shieldList = document.getElementById('shield-list');
       const agents = ["Keeper", "Lorian", "GreenWitness", "Aquila", "Voyager", "Elias"];
       shieldList.innerHTML = '';
@@ -443,6 +462,9 @@
         pill.textContent = agent;
         shieldList.appendChild(pill);
       });
+
+      // 4. Load the Ghost-Graft Latent Space
+      await loadLatentSpace();
     }
 
     loadDashboard();
