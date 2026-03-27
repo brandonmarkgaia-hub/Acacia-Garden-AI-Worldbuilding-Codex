@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-27T19:26:43.722534+00:00",
+  "generated_utc": "2026-03-27T20:07:00.407908+00:00",
   "meta": {
     "keeper": "HKX277206",
     "status_version": "unknown",
@@ -7,9 +7,9 @@
     "source": "STATUS.json + filesystem scan (normalized)"
   },
   "counts": {
-    "chambers": 795,
+    "chambers": 796,
     "blooms": 4,
-    "echoes": 183,
+    "echoes": 185,
     "vaults": 2,
     "laws": 4,
     "orchards": 3,
