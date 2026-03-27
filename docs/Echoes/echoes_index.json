@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T16:42:35.978Z",
+  "generated_at": "2026-03-27T16:43:42.430Z",
   "root": "docs/Echoes",
   "total": 177,
   "echoes": [
@@ -690,6 +690,16 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 08 ECHOHKX277206SPROUTONE HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 09 ECHOHKX277206SPROUTONE HKX277206",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
       "label": "Issue 10 ECHOHKX277206FLEETRETURN HKX277206",
       "kind": "named"
@@ -875,18 +885,8 @@
       "kind": "named"
     },
     {
-      "path": "docs/Echoes/Issue_8_ECHOHKX277206SPROUTONE_HKX277206.md",
-      "label": "Issue 8 ECHOHKX277206SPROUTONE HKX277206",
-      "kind": "named"
-    },
-    {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
       "label": "Issue 83 Echo title HKX277206",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issue_9_ECHOHKX277206SPROUTONE_HKX277206.md",
-      "label": "Issue 9 ECHOHKX277206SPROUTONE HKX277206",
       "kind": "named"
     }
   ]
