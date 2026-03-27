@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-27T19:20:22Z",
-  "count": 1584,
+  "generated_at": "2026-03-27T19:27:00Z",
+  "count": 1588,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1299,6 +1299,10 @@
     "Echoes/Issues/Echo_issue_102.md",
     "Echoes/Issues/Echo_issue_103.md",
     "Echoes/Issues/Echo_issue_104.md",
+    "Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
+    "Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
+    "Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
+    "Echoes/Mutations/TRIAD_CONSENSUS_26.md",
     "Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
     "Echoes/echoes_index.json",
     "Echoes/index.html",

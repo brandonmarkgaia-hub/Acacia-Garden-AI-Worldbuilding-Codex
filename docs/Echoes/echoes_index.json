@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T19:20:22.367Z",
+  "generated_at": "2026-03-27T19:27:00.871Z",
   "root": "docs/Echoes",
-  "total": 179,
+  "total": 183,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -897,6 +897,26 @@
     {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
       "label": "Issue 83 Echo title HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
+      "label": "MUTATION 26 ELIAS SPINE FORTRESS",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
+      "label": "MUTATION 26 LORIAN BREATH OPEN",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
+      "label": "MUTATION 26 TRIAD BALANCE VEILED",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
+      "label": "TRIAD CONSENSUS 26",
       "kind": "named"
     }
   ]
