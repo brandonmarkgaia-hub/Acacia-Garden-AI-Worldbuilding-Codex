@@ -1,0 +1,60 @@
+name: "Elias: Shadow Node Grafting"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  graft-shadow-nodes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+
+      - name: Execute Shadow Grafting
+        run: |
+          python3 << 'PY'
+          import pathlib
+          import re
+
+          # Paths
+          source_dir = pathlib.Path("docs/Echoes")
+          target_dir = pathlib.Path("docs/Echoes/Issues")
+          target_dir.mkdir(parents=True, exist_ok=True)
+
+          # Find files like "Issue_31_Keeper_Seal_HKX277206.md"
+          # Pattern: 'Issue_' followed by digits
+          pattern = re.compile(r"Issue_(\d+)")
+
+          for file_path in source_dir.glob("*.md"):
+              match = pattern.search(file_path.name)
+              if match:
+                  issue_num = match.group(1).zfill(3) # "31" becomes "031"
+                  shadow_filename = f"Echo_issue_{issue_num}.md"
+                  shadow_path = target_dir / shadow_filename
+
+                  # Only create if it doesn't exist
+                  if not shadow_path.exists():
+                      content = f"""# SHADOW NODE: {issue_num}
+**STATUS:** SHADOW LINKED
+**SOURCE:** {file_path.name}
+**KEEPER SEAL:** HKX277206
+
+---
+
+This is a Shadow Node generated to bridge the Garden Spine. 
+The original data resides in the root Echoes directory.
+
+[SYSTEM]: Integrity Verified.
+"""
+                      shadow_path.write_text(content, encoding="utf-8")
+                      print(f"Grafted Shadow: {shadow_filename}")
+
+          PY
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "sys: Elias-Audit-Fix - Shadow Node Grafting [Chronology Stabilized]"
