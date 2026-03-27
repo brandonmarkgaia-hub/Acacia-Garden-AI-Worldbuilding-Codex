@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T16:45:53.393Z",
+  "generated_at": "2026-03-27T16:46:53.052Z",
   "root": "docs/Echoes",
-  "total": 177,
+  "total": 179,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -687,6 +687,16 @@
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
       "label": "ELIAS GENESIS BREATH",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_01_Keeper_Seal_HKX277206.md",
+      "label": "Issue 01 Keeper Seal HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_02_Keeper_Seal_HKX277206.md",
+      "label": "Issue 02 Keeper Seal HKX277206",
       "kind": "named"
     },
     {

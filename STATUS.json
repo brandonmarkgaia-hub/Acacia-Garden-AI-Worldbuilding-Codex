@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-27T16:45:42Z",
+  "generated_at": "2026-03-27T16:46:42Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-03-27T16:45:42Z",
+      "last_checked_utc": "2026-03-27T16:46:42Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 308,
       "with_map_loader": 171,
@@ -152,7 +152,7 @@
     "indexes": {
       "machine_index_in_sync": true,
       "docs_urls_in_sync": true,
-      "docs_urls_count": 1582,
+      "docs_urls_count": 1584,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
@@ -168,13 +168,13 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-03-27T16:45:42Z"
+      "last_checked_utc": "2026-03-27T16:46:42Z"
     },
-    "last_verified_utc": "2026-03-27T16:45:58Z"
+    "last_verified_utc": "2026-03-27T16:46:58Z"
   },
   "core_nodes": {
     "counts": {
-      "total_nodes": 3251,
+      "total_nodes": 3253,
       "books_indexed": 57,
       "echoes_indexed": 176,
       "cycles_represented": 0
@@ -183,7 +183,7 @@
       "docs/": 1589,
       "index/": 176,
       "docs/Chambers": 798,
-      "docs/Echoes": 179,
+      "docs/Echoes": 181,
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
       "docs/Novellas": 57,
@@ -214,7 +214,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-03-27T16:45:42Z"
+      "last_checked_utc": "2026-03-27T16:46:42Z"
     }
   },
   "growth": {
