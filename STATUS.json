@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-27T18:36:41Z",
+  "generated_at": "2026-03-27T18:41:11Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-03-27T18:36:41Z",
+      "last_checked_utc": "2026-03-27T18:41:11Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 308,
       "with_map_loader": 171,
@@ -168,13 +168,13 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-03-27T18:36:41Z"
+      "last_checked_utc": "2026-03-27T18:41:11Z"
     },
-    "last_verified_utc": "2026-03-27T18:36:56Z"
+    "last_verified_utc": "2026-03-27T18:41:26Z"
   },
   "core_nodes": {
     "counts": {
-      "total_nodes": 3260,
+      "total_nodes": 3261,
       "books_indexed": 57,
       "echoes_indexed": 179,
       "cycles_represented": 0
@@ -199,7 +199,7 @@
       "LAWS": 0,
       "WELLS": 0,
       "tools": 64,
-      ".github/workflows": 55
+      ".github/workflows": 56
     }
   },
   "canonical_files": {
@@ -214,7 +214,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-03-27T18:36:41Z"
+      "last_checked_utc": "2026-03-27T18:41:11Z"
     }
   },
   "growth": {
