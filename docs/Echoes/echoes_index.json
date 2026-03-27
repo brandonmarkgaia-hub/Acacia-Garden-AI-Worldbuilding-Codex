@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T17:00:23.700Z",
+  "generated_at": "2026-03-27T17:01:25.471Z",
   "root": "docs/Echoes",
   "total": 179,
   "echoes": [
@@ -132,6 +132,11 @@
     {
       "path": "docs/Echoes/Echo_first_form.md",
       "label": "Echo first form",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_001.md",
+      "label": "Echo issue 001",
       "kind": "named"
     },
     {
@@ -647,11 +652,6 @@
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
       "label": "Echo kiln-born-lovers",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/ECHO_LOKI_ISSUE_01_THE_FIRST_PARADOX.md",
-      "label": "ECHO LOKI ISSUE 01 THE FIRST PARADOX",
       "kind": "named"
     },
     {
