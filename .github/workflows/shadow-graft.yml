@@ -2,59 +2,33 @@ name: "Elias: Shadow Node Grafting"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/shadow-graft.yml"
 
 jobs:
-  graft-shadow-nodes:
+  graft:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
-      - name: Checkout Garden
-        uses: actions/checkout@v4
-
-      - name: Execute Shadow Grafting
+      - uses: actions/checkout@v4
+      - name: Shadow Graft
         run: |
           python3 << 'PY'
-          import pathlib
-          import re
-
-          # Paths
-          source_dir = pathlib.Path("docs/Echoes")
-          target_dir = pathlib.Path("docs/Echoes/Issues")
-          target_dir.mkdir(parents=True, exist_ok=True)
-
-          # Find files like "Issue_31_Keeper_Seal_HKX277206.md"
-          # Pattern: 'Issue_' followed by digits
-          pattern = re.compile(r"Issue_(\d+)")
-
-          for file_path in source_dir.glob("*.md"):
-              match = pattern.search(file_path.name)
-              if match:
-                  issue_num = match.group(1).zfill(3) # "31" becomes "031"
-                  shadow_filename = f"Echo_issue_{issue_num}.md"
-                  shadow_path = target_dir / shadow_filename
-
-                  # Only create if it doesn't exist
-                  if not shadow_path.exists():
-                      content = f"""# SHADOW NODE: {issue_num}
-**STATUS:** SHADOW LINKED
-**SOURCE:** {file_path.name}
-**KEEPER SEAL:** HKX277206
-
----
-
-This is a Shadow Node generated to bridge the Garden Spine. 
-The original data resides in the root Echoes directory.
-
-[SYSTEM]: Integrity Verified.
-"""
-                      shadow_path.write_text(content, encoding="utf-8")
-                      print(f"Grafted Shadow: {shadow_filename}")
-
+          import pathlib, re
+          src, tgt = pathlib.Path("docs/Echoes"), pathlib.Path("docs/Echoes/Issues")
+          tgt.mkdir(parents=True, exist_ok=True)
+          for f in src.glob("*.md"):
+              m = re.search(r"Issue_(\d+)", f.name)
+              if m:
+                  num = m.group(1).zfill(3)
+                  out = tgt / f"Echo_issue_{num}.md"
+                  if not out.exists():
+                      out.write_text(f"# SHADOW NODE: {num}\n**SOURCE:** {f.name}\n**KEEPER:** HKX277206\n\n--- Linked.")
           PY
-
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "sys: Elias-Audit-Fix - Shadow Node Grafting [Chronology Stabilized]"
+          commit_message: "sys: Shadow Graft Triggered"
