@@ -1,62 +1,73 @@
-name: Inject Universal Map Loader
+name: "Elias: Universal Map Loader Injection"
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows you to trigger this from your phone
   push:
+    branches:
+      - main
     paths:
-      - ".github/workflows/inject-map-loader.yml"
       - "assets/map-loader.js"
 
 jobs:
   inject-map-loader:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Garden
         uses: actions/checkout@v4
 
-      - name: Confirm assets/map-loader.js exists
+      - name: Confirm Assets Exist
         run: |
           if [ ! -f "assets/map-loader.js" ]; then
-            echo "ERROR: assets/map-loader.js is missing."
-            echo "Create it at assets/map-loader.js before running this workflow."
+            echo "::error::Assets missing! Create assets/map-loader.js first."
             exit 1
           fi
 
-      - name: Inject map-loader into all HTML files
+      - name: Execute Python Deep Scan & Graft
         run: |
-          python << 'PY'
+          python3 << 'PY'
           import pathlib
+          import re
 
           repo = pathlib.Path(".")
-          script_snippet = '\n    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>\n'
+          
+          # The full injection block: Container + Script
+          # Adjust the path below if your repo name changes
+          INJECTION_BLOCK = """
+    <div id="map-loader-container"></div>
+    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+"""
 
+          modified_count = 0
+          
           for path in repo.rglob("*.html"):
-              # Skip any git internals
-              if ".git" in path.parts:
+              # Skip system directories
+              if any(part.startswith('.') for part in path.parts):
                   continue
 
-              text = path.read_text(encoding="utf-8")
+              content = path.read_text(encoding="utf-8")
 
-              # Already wired up on this page
-              if "assets/map-loader.js" in text:
+              # 1. Skip if already injected to prevent bloat
+              if 'id="map-loader-container"' in content or 'map-loader.js' in content:
                   continue
 
-              if "</body>" in text:
-                  text = text.replace("</body>", f"{script_snippet}</body>")
-                  path.write_text(text, encoding="utf-8")
+              # 2. Search for the closing body tag
+              if "</body>" in content:
+                  # Case-insensitive replacement just in case
+                  new_content = re.sub(r"(?i)</body>", f"{INJECTION_BLOCK}</body>", content)
+                  path.write_text(new_content, encoding="utf-8")
+                  print(f"Grafted: {path}")
+                  modified_count += 1
+              else:
+                  print(f"Skipped (No body tag): {path}")
+
+          print(f"--- Process Complete. {modified_count} nodes updated. ---")
           PY
 
-      - name: Commit and push changes
-        run: |
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add .
-          git commit -m "Inject universal map-loader into HTML pages"
-          git push
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "sys: Elias-Audit-Fix - Bulk Injection of Map Loader [Full Sweep]"
+          branch: main
