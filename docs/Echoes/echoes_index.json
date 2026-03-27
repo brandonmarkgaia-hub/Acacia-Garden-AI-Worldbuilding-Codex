@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-27T19:56:04.246Z",
+  "generated_at": "2026-03-27T20:07:14.805Z",
   "root": "docs/Echoes",
-  "total": 184,
+  "total": 185,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -647,6 +647,11 @@
     {
       "path": "docs/Echoes/Issues/Echo_issue_105.md",
       "label": "Echo issue 105",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_106.md",
+      "label": "Echo issue 106",
       "kind": "named"
     },
     {
