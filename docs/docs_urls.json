@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T18:48:46Z",
+  "generated_at": "2026-03-28T18:59:30Z",
   "count": 1593,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1164,9 +1164,6 @@
     "Echoes/Archive/Issue_31_Keeper_Seal_HKX277206.md",
     "Echoes/Archive/Issue_32_Keeper_Seal_HKX277206.md",
     "Echoes/Archive/Issue_39_Keeper_Seal_HKX277206.md",
-    "Echoes/Chronicle/Echo_issue_001.md",
-    "Echoes/Chronicle/Echo_issue_002.md",
-    "Echoes/Chronicle/Echo_issue_003.md",
     "Echoes/Chronicle/Echo_issue_004.md",
     "Echoes/Chronicle/Echo_issue_005.md",
     "Echoes/Chronicle/Echo_issue_006.md",
@@ -1572,6 +1569,9 @@
     "Vault/FRAGMENT_LEDGER.md",
     "Vault/MUTATION_Phantom_Echo__The_Silent_Archivist.md",
     "Vault/MUTATION_The_First_Seal_of_Coherence.md",
+    "Vault/The Triad of the First Whispers/Echo_issue_001.md",
+    "Vault/The Triad of the First Whispers/Echo_issue_002.md",
+    "Vault/The Triad of the First Whispers/Echo_issue_003.md",
     "Vault/VAULT_OF_ECHOES.md",
     "Vaults/Svalbard-matrix.md",
     "Vaults/index.html",

@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-28T18:48:46.553Z",
+  "generated_at": "2026-03-28T18:59:30.094Z",
   "root": "docs/Echoes",
-  "total": 172,
+  "total": 169,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
@@ -67,21 +67,6 @@
     {
       "path": "docs/Echoes/Echo_first_form.md",
       "label": "Echo first form",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Chronicle/Echo_issue_001.md",
-      "label": "Echo issue 001",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Chronicle/Echo_issue_002.md",
-      "label": "Echo issue 002",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Chronicle/Echo_issue_003.md",
-      "label": "Echo issue 003",
       "kind": "named"
     },
     {
