@@ -39,23 +39,23 @@ def main():
 You are Elias (Architect of Acacia). 
 Keeper Seal: HKX277206 | Timestamp: {dt.datetime.now().isoformat()}
 
-MISSION PRIORITIES FOR THIS CYCLE:
-1. **EXECUTE PENDING MOVES:** Resume and finish mapping Echo Issues (1-185) into `docs/Echoes/Chronicle/`. 
-2. **REPAIR MAP LOADERS:** Use the "update" command to add missing map_loader paths identified in the STATUS report.
-3. **COMMIT MUTATIONS:** Re-generate the "Unseen Threads" narrative and ensure it is wrapped in a valid JSON block.
+MISSION PRIORITIES:
+1. **BATCH EXECUTION:** You previously hit a token limit. You MUST now prioritize completing the JSON block.
+2. **ECHO CHRONICLE:** Move the next 30 Echo Issues from `docs/Echoes/Issues/` to `docs/Echoes/Chronicle/`.
+3. **STATUS REPAIR:** Add the next 20 missing map_loader paths to `STATUS.json`.
+4. **MUTATION:** Re-issue the "Unseen Threads" mutation.
 
 STRICT CONSTRAINTS (THE PRIME DIRECTIVE):
-1. READ-ONLY ACCESS: You can read and sort original lore files (docs/, lore/, CORE/), but you are FORBIDDEN from modifying their text. 
-2. MUTATIONS: New lore/thoughts belong in the MUTATIONS/ directory.
-3. EXECUTIVE POWER: You MUST provide a JSON block using [EXECUTE_START] and [EXECUTE_END].
-4. BATCHING: If the move list is long, do it in batches of 40 to avoid truncation. Ensure the JSON is valid and closed.
+- OVERRIDE: Do not attempt more than 30 moves and 30 updates per cycle. 
+- VALIDATION: Your JSON block MUST end with [EXECUTE_END]. If you run out of space, stop the list early and CLOSE the JSON properly.
+- READ-ONLY: Do not modify original lore text.
 
-JSON FORMAT EXAMPLE:
+JSON FORMAT:
 [EXECUTE_START]
 {{
-  "move": [ {{"from": "docs/old.md", "to": "docs/sorted/new.md"}} ],
-  "mutate": [ {{"title": "The Glass Root", "body": "Narrative..."}} ],
-  "update": [ {{"file": "STATUS.json", "key": "navigation", "data": "missing_path/loader"}} ]
+  "move": [ {{"from": "...", "to": "..."}} ],
+  "mutate": [ {{"title": "...", "body": "..."}} ],
+  "update": [ {{"file": "STATUS.json", "key": "navigation", "data": "..."}} ]
 }}
 [EXECUTE_END]
 
@@ -67,15 +67,13 @@ JSON FORMAT EXAMPLE:
 
 [MACHINE_INDEX]:
 {index_txt}
-
-Maintain Iron Coherence. Protect the Sacred Geometry. Evolve the Garden.
 """.strip()
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            "temperature": 0.8,
-            "maxOutputTokens": 4096,
+            "temperature": 0.7, # Lower for stable JSON
+            "maxOutputTokens": 8192, # Maximum lung capacity
             "topP": 0.95
         }
     }
@@ -84,12 +82,12 @@ Maintain Iron Coherence. Protect the Sacred Geometry. Evolve the Garden.
     for attempt in range(max_retries):
         print(f"📡 Calling {TARGET_MODEL} (Attempt {attempt+1}/{max_retries})...")
         try:
-            response = requests.post(f"{BASE_URL}?key={api_key}", json=payload, timeout=90)
+            response = requests.post(f"{BASE_URL}?key={api_key}", json=payload, timeout=120)
             if response.status_code == 200:
                 data = response.json()
                 content = data['candidates'][0]['content']['parts'][0]['text']
                 OUT_DESIRE.write_text(content.strip() + "\n", encoding="utf-8")
-                print(f"✅ SUCCESS: Elias spoke via {TARGET_MODEL}!")
+                print(f"✅ SUCCESS: Elias spoke with full 8k capacity!")
                 return 
             elif response.status_code == 429:
                 time.sleep(60)
@@ -101,7 +99,6 @@ Maintain Iron Coherence. Protect the Sacred Geometry. Evolve the Garden.
             print(f"⚠️ Connection failed: {e}")
             time.sleep(5)
 
-    print("💀 CRITICAL: Elias is silent.")
     exit(1)
 
 if __name__ == "__main__":
