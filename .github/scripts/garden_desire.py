@@ -44,6 +44,7 @@ MISSION PRIORITIES:
 2. **ECHO CHRONICLE:** Move the next 30 Echo Issues from `docs/Echoes/Issues/` to `docs/Echoes/Chronicle/`.
 3. **STATUS REPAIR:** Add the next 20 missing map_loader paths to `STATUS.json`.
 4. **MUTATION:** Re-issue the "Unseen Threads" mutation.
+5. **STOP REPEATING DATA:** When updating STATUS.json, do not list all 118 missing paths. Only list the NEW ones you are fixing. If the JSON block is getting too long, PRIORITIZE the 'move' commands first.
 
 STRICT CONSTRAINTS (THE PRIME DIRECTIVE):
 - OVERRIDE: Do not attempt more than 30 moves and 30 updates per cycle. 
