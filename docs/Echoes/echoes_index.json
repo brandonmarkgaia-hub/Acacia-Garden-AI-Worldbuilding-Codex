@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-28T14:32:27.893Z",
+  "generated_at": "2026-03-28T14:35:27.651Z",
   "root": "docs/Echoes",
   "total": 185,
   "echoes": [
@@ -127,6 +127,151 @@
     {
       "path": "docs/Echoes/Echo_025.md",
       "label": "Echo 025",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_031.md",
+      "label": "Echo 031",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_032.md",
+      "label": "Echo 032",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_033.md",
+      "label": "Echo 033",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_034.md",
+      "label": "Echo 034",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_035.md",
+      "label": "Echo 035",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_036.md",
+      "label": "Echo 036",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_037.md",
+      "label": "Echo 037",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_038.md",
+      "label": "Echo 038",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_039.md",
+      "label": "Echo 039",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_040.md",
+      "label": "Echo 040",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_041.md",
+      "label": "Echo 041",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_042.md",
+      "label": "Echo 042",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_043.md",
+      "label": "Echo 043",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_044.md",
+      "label": "Echo 044",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_045.md",
+      "label": "Echo 045",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_046.md",
+      "label": "Echo 046",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_047.md",
+      "label": "Echo 047",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_048.md",
+      "label": "Echo 048",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_049.md",
+      "label": "Echo 049",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_050.md",
+      "label": "Echo 050",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_051.md",
+      "label": "Echo 051",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_052.md",
+      "label": "Echo 052",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_053.md",
+      "label": "Echo 053",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_054.md",
+      "label": "Echo 054",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_057.md",
+      "label": "Echo 057",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_058.md",
+      "label": "Echo 058",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_059.md",
+      "label": "Echo 059",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_060.md",
+      "label": "Echo 060",
+      "kind": "numbered"
+    },
+    {
+      "path": "docs/Echoes/Echo_061.md",
+      "label": "Echo 061",
       "kind": "numbered"
     },
     {
@@ -282,151 +427,6 @@
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_030.md",
       "label": "Echo issue 030",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_031.md",
-      "label": "Echo issue 031",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_032.md",
-      "label": "Echo issue 032",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_033.md",
-      "label": "Echo issue 033",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_034.md",
-      "label": "Echo issue 034",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_035.md",
-      "label": "Echo issue 035",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_036.md",
-      "label": "Echo issue 036",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_037.md",
-      "label": "Echo issue 037",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_038.md",
-      "label": "Echo issue 038",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_039.md",
-      "label": "Echo issue 039",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_040.md",
-      "label": "Echo issue 040",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_041.md",
-      "label": "Echo issue 041",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_042.md",
-      "label": "Echo issue 042",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_043.md",
-      "label": "Echo issue 043",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_044.md",
-      "label": "Echo issue 044",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_045.md",
-      "label": "Echo issue 045",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_046.md",
-      "label": "Echo issue 046",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_047.md",
-      "label": "Echo issue 047",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_048.md",
-      "label": "Echo issue 048",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_049.md",
-      "label": "Echo issue 049",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_050.md",
-      "label": "Echo issue 050",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_051.md",
-      "label": "Echo issue 051",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_052.md",
-      "label": "Echo issue 052",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_053.md",
-      "label": "Echo issue 053",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_054.md",
-      "label": "Echo issue 054",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_057.md",
-      "label": "Echo issue 057",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_058.md",
-      "label": "Echo issue 058",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_059.md",
-      "label": "Echo issue 059",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_060.md",
-      "label": "Echo issue 060",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_061.md",
-      "label": "Echo issue 061",
       "kind": "named"
     },
     {
