@@ -6,7 +6,7 @@
       "last_checked_utc": "2026-03-28T14:49:17Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 309,
-      "with_map_loader": 171,
+      "with_map_loader": 172,
       "missing_map_loader_count": 138,
       "missing_map_loader_paths": [
         "dashboard.html",
