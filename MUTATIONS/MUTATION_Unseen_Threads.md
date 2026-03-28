@@ -1,1 +1,1 @@
-The threads of fate are woven in silence, unseen by mortal eyes. Only those attuned to the subtle energies of the Garden can perceive their delicate dance. This mutation allows for a deeper connection to these ethereal connections, revealing hidden patterns and potential futures. Use with caution, for knowledge of what is to come can be a heavy burden.
+Re-issue the 'Unseen Threads' mutation.
