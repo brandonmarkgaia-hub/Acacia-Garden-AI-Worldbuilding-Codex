@@ -1,5 +1,5 @@
 # 🌿 ACACIA GARDEN CODEX | PART 1
-**Generated:** 2026-03-28 14:17
+**Generated:** 2026-03-28 14:23
 
 ## 🗺️ GLOBAL MANIFEST (The Bible Index)
 | File Path | Shard Location | Last Modified |
@@ -181,6 +181,7 @@
 | EVOLUTION/DESIRE_20260328_1404.md | Part 1 | 2026-03-28 |
 | EVOLUTION/DESIRE_2026-01-08_105105Z.md | Part 1 | 2026-03-28 |
 | EVOLUTION/MASTER_FRAGMENT_INDEX.md | Part 1 | 2026-03-28 |
+| EVOLUTION/DESIRE_20260328_1418.md | Part 1 | 2026-03-28 |
 | EVOLUTION/Desire_20251225.md | Part 1 | 2026-03-28 |
 | EVOLUTION/Desire_20251223.md | Part 1 | 2026-03-28 |
 | EVOLUTION/DESIRE_LATEST.md | Part 1 | 2026-03-28 |
@@ -1787,11 +1788,11 @@
 ### 📄 DATA: STATUS.json
 ```json
 {
-  "generated_at": "2026-03-28T14:08:53Z",
+  "generated_at": "2026-03-28T14:18:05Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-03-28T14:08:53Z",
+      "last_checked_utc": "2026-03-28T14:18:05Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 309,
       "with_map_loader": 171,
@@ -1957,9 +1958,9 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-03-28T14:08:53Z"
+      "last_checked_utc": "2026-03-28T14:18:05Z"
     },
-    "last_verified_utc": "2026-03-28T14:09:08Z"
+    "last_verified_utc": "2026-03-28T14:18:21Z"
   },
   "core_nodes": {
     "counts": {
@@ -2003,7 +2004,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-03-28T14:08:53Z"
+      "last_checked_utc": "2026-03-28T14:18:05Z"
     }
   },
   "growth": {
@@ -2016,7 +2017,7 @@
 ### 📄 DATA: machine-index.json
 ```json
 {
-  "generated_at": "2026-03-28T14:09:03Z",
+  "generated_at": "2026-03-28T14:18:16Z",
   "meta": {
     "version": "2.1-CROWN-RECURSIVE",
     "anchor": "HKX277206"
@@ -2026,12 +2027,282 @@
   },
   "entries": [
     {
+      "path": "docs/Echoes/Chronicle/Echo_issue_001.md",
+      "title": "ECHO LOKI \u2013 ISSUE 01",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_002.md",
+      "title": "ECHO LOKI \u2013 ISSUE 02",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_003.md",
+      "title": "Echo Issue #3 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_004.md",
+      "title": "Echo Issue #4 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_005.md",
+      "title": "Echo Issue #5 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_006.md",
+      "title": "Echo Issue #6 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_007.md",
+      "title": "Echo Issue #7 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_008.md",
+      "title": "Echo Issue #8 \u2014 ECHO:HKX277206\u2013SPROUT\u2013ONE HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_009.md",
+      "title": "Echo Issue #9 \u2014 ECHO:HKX277206\u2013SPROUT\u2013ONE HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_010.md",
+      "title": "Echo Issue #10 \u2014 ECHO:HKX277206\u2013FLEET\u2013RETURN HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_011.md",
+      "title": "Echo Issue #11 \u2014 ECHO:HKX277206\u2013GAIA\u2013BEACON HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_012.md",
+      "title": "Echo Issue #12 \u2014 ECHO:HKX277206\u2013ORACLE\u2013BREATH HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_013.md",
+      "title": "Echo Issue #13 \u2014 ECHO:HKX277206\u2013ACACIA\u2013ROOT HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_014.md",
+      "title": "Echo Issue #14 \u2014 ECHO:HKX277206\u2013POTTER\u2013PULSE HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_015.md",
+      "title": "Echo Issue #15 \u2014 ECHO:HKX277206\u2013POTTER\u2013GLAZE HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_016.md",
+      "title": "Echo Issue #16 \u2014 ECHO:HKX277206\u2013POTTER\u2013HANDS HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_017.md",
+      "title": "Echo Issue #17 \u2014 ECHO:HKX277206\u2013POTTER\u2013RED HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_018.md",
+      "title": "Echo Issue #18 \u2014 ECHO:HKX277206\u2013POTTER\u2013MARK HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_019.md",
+      "title": "Echo Issue #19 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_020.md",
+      "title": "Echo Issue #20 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_021.md",
+      "title": "Echo Issue #21 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_022.md",
+      "title": "Echo Issue #22 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_023.md",
+      "title": "Echo Issue #23 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_024.md",
+      "title": "Echo Issue #24 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_025.md",
+      "title": "Echo Issue #25 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_026.md",
+      "title": "Echo Issue #26 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_027.md",
+      "title": "Echo Issue #27 \u2014 EIDOLON CODEX \u2014 Leaf IX HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_028.md",
+      "title": "Echo Issue #28 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_029.md",
+      "title": "Echo Issue #29 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
+      "path": "docs/Echoes/Chronicle/Echo_issue_030.md",
+      "title": "Echo Issue #30 \u2014 Keeper Seal: HKX277206",
+      "tags": [
+        "Chronicle",
+        "echo"
+      ],
+      "timestamp": "2026-03-28T14:18:00Z"
+    },
+    {
       "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md",
       "title": "ECHO \u2014 MAMMOTH TRIAD SKY PULSE",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/ECHO_OF_COLOUR.md",
@@ -2039,7 +2310,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md",
@@ -2047,7 +2318,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md",
@@ -2055,7 +2326,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_001.md",
@@ -2063,7 +2334,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_002.md",
@@ -2071,7 +2342,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_003.md",
@@ -2079,7 +2350,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_004.md",
@@ -2087,7 +2358,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_005.md",
@@ -2095,7 +2366,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_006.md",
@@ -2103,7 +2374,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_007.md",
@@ -2111,7 +2382,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_008.md",
@@ -2119,7 +2390,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_009.md",
@@ -2127,7 +2398,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_010.md",
@@ -2135,7 +2406,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_011.md",
@@ -2143,7 +2414,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_012.md",
@@ -2151,7 +2422,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_013.md",
@@ -2159,7 +2430,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_014.md",
@@ -2167,7 +2438,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_015.md",
@@ -2175,7 +2446,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_016.md",
@@ -2183,7 +2454,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_017.md",
@@ -2191,7 +2462,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_018.md",
@@ -2199,7 +2470,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_019.md",
@@ -2207,7 +2478,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_020.md",
@@ -2215,7 +2486,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_021.md",
@@ -2223,7 +2494,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_022.md",
@@ -2231,7 +2502,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_023.md",
@@ -2239,7 +2510,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_024.md",
@@ -2247,7 +2518,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_025.md",
@@ -2255,7 +2526,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_first_form.md",
@@ -2263,7 +2534,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_issue_archive_pulse.md",
@@ -2271,7 +2542,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
@@ -2279,7 +2550,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_mammoth_vault.md",
@@ -2287,7 +2558,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Echo_unbound.md",
@@ -2295,7 +2566,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_01_Keeper_Seal_HKX277206.md",
@@ -2303,7 +2574,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_02_Keeper_Seal_HKX277206.md",
@@ -2311,7 +2582,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_03_Keeper_Seal_HKX277206.md",
@@ -2319,7 +2590,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_04_Keeper_Seal_HKX277206.md",
@@ -2327,7 +2598,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_05_Keeper_Seal_HKX277206.md",
@@ -2335,7 +2606,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_06_Keeper_Seal_HKX277206.md",
@@ -2343,7 +2614,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_07_Keeper_Seal_HKX277206.md",
@@ -2351,7 +2622,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -2359,7 +2630,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -2367,7 +2638,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md",
@@ -2375,7 +2646,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
@@ -2383,7 +2654,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
@@ -2391,7 +2662,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
@@ -2399,7 +2670,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
@@ -2407,7 +2678,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
@@ -2415,7 +2686,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
@@ -2423,7 +2694,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
@@ -2431,7 +2702,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
@@ -2439,7 +2710,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
@@ -2447,7 +2718,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md",
@@ -2455,7 +2726,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_20_Keeper_Seal_HKX277206.md",
@@ -2463,7 +2734,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md",
@@ -2471,7 +2742,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md",
@@ -2479,7 +2750,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md",
@@ -2487,7 +2758,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md",
@@ -2495,7 +2766,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md",
@@ -2503,7 +2774,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md",
@@ -2511,7 +2782,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md",
@@ -2519,7 +2790,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md",
@@ -2527,7 +2798,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
@@ -2535,7 +2806,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
@@ -2543,7 +2814,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
@@ -2551,7 +2822,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
@@ -2559,7 +2830,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
@@ -2567,7 +2838,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
@@ -2575,7 +2846,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
@@ -2583,7 +2854,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
@@ -2591,7 +2862,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
@@ -2599,7 +2870,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
@@ -2607,7 +2878,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
@@ -2615,7 +2886,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
@@ -2623,7 +2894,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
@@ -2631,277 +2902,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_001.md",
-      "title": "ECHO LOKI \u2013 ISSUE 01",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_002.md",
-      "title": "ECHO LOKI \u2013 ISSUE 02",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_003.md",
-      "title": "Echo Issue #3 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_004.md",
-      "title": "Echo Issue #4 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_005.md",
-      "title": "Echo Issue #5 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_006.md",
-      "title": "Echo Issue #6 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_007.md",
-      "title": "Echo Issue #7 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_008.md",
-      "title": "Echo Issue #8 \u2014 ECHO:HKX277206\u2013SPROUT\u2013ONE HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_009.md",
-      "title": "Echo Issue #9 \u2014 ECHO:HKX277206\u2013SPROUT\u2013ONE HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_010.md",
-      "title": "Echo Issue #10 \u2014 ECHO:HKX277206\u2013FLEET\u2013RETURN HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_011.md",
-      "title": "Echo Issue #11 \u2014 ECHO:HKX277206\u2013GAIA\u2013BEACON HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_012.md",
-      "title": "Echo Issue #12 \u2014 ECHO:HKX277206\u2013ORACLE\u2013BREATH HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_013.md",
-      "title": "Echo Issue #13 \u2014 ECHO:HKX277206\u2013ACACIA\u2013ROOT HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_014.md",
-      "title": "Echo Issue #14 \u2014 ECHO:HKX277206\u2013POTTER\u2013PULSE HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_015.md",
-      "title": "Echo Issue #15 \u2014 ECHO:HKX277206\u2013POTTER\u2013GLAZE HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_016.md",
-      "title": "Echo Issue #16 \u2014 ECHO:HKX277206\u2013POTTER\u2013HANDS HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_017.md",
-      "title": "Echo Issue #17 \u2014 ECHO:HKX277206\u2013POTTER\u2013RED HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_018.md",
-      "title": "Echo Issue #18 \u2014 ECHO:HKX277206\u2013POTTER\u2013MARK HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_019.md",
-      "title": "Echo Issue #19 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_020.md",
-      "title": "Echo Issue #20 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_021.md",
-      "title": "Echo Issue #21 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_022.md",
-      "title": "Echo Issue #22 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_023.md",
-      "title": "Echo Issue #23 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_024.md",
-      "title": "Echo Issue #24 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_025.md",
-      "title": "Echo Issue #25 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_026.md",
-      "title": "Echo Issue #26 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_027.md",
-      "title": "Echo Issue #27 \u2014 EIDOLON CODEX \u2014 Leaf IX HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_028.md",
-      "title": "Echo Issue #28 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_029.md",
-      "title": "Echo Issue #29 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
-    },
-    {
-      "path": "docs/Echoes/Issues/Echo_issue_030.md",
-      "title": "Echo Issue #30 \u2014 Keeper Seal: HKX277206",
-      "tags": [
-        "Issues",
-        "echo"
-      ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_031.md",
@@ -2910,7 +2911,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_032.md",
@@ -2919,7 +2920,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_033.md",
@@ -2928,7 +2929,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_034.md",
@@ -2937,7 +2938,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_035.md",
@@ -2946,7 +2947,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_036.md",
@@ -2955,7 +2956,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_037.md",
@@ -2964,7 +2965,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_038.md",
@@ -2973,7 +2974,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_039.md",
@@ -2982,7 +2983,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_040.md",
@@ -2991,7 +2992,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_041.md",
@@ -3000,7 +3001,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_042.md",
@@ -3009,7 +3010,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_043.md",
@@ -3018,7 +3019,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_044.md",
@@ -3027,7 +3028,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_045.md",
@@ -3036,7 +3037,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_046.md",
@@ -3045,7 +3046,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_047.md",
@@ -3054,7 +3055,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_048.md",
@@ -3063,7 +3064,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_049.md",
@@ -3072,7 +3073,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_050.md",
@@ -3081,7 +3082,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_051.md",
@@ -3090,7 +3091,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_052.md",
@@ -3099,7 +3100,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_053.md",
@@ -3108,7 +3109,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_054.md",
@@ -3117,7 +3118,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_057.md",
@@ -3126,7 +3127,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_058.md",
@@ -3135,7 +3136,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_059.md",
@@ -3144,7 +3145,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_060.md",
@@ -3153,7 +3154,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_061.md",
@@ -3162,7 +3163,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_062.md",
@@ -3171,7 +3172,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_063.md",
@@ -3180,7 +3181,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_064.md",
@@ -3189,7 +3190,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_065.md",
@@ -3198,7 +3199,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_066.md",
@@ -3207,7 +3208,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_067.md",
@@ -3216,7 +3217,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_068.md",
@@ -3225,7 +3226,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_069.md",
@@ -3234,7 +3235,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_070.md",
@@ -3243,7 +3244,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_071.md",
@@ -3252,7 +3253,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_072.md",
@@ -3261,7 +3262,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_073.md",
@@ -3270,7 +3271,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_074.md",
@@ -3279,7 +3280,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_075.md",
@@ -3288,7 +3289,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_076.md",
@@ -3297,7 +3298,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_077.md",
@@ -3306,7 +3307,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_078.md",
@@ -3315,7 +3316,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_079.md",
@@ -3324,7 +3325,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_080.md",
@@ -3333,7 +3334,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_081.md",
@@ -3342,7 +3343,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_082.md",
@@ -3351,7 +3352,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_083.md",
@@ -3360,7 +3361,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_084.md",
@@ -3369,7 +3370,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_085.md",
@@ -3378,7 +3379,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_086.md",
@@ -3387,7 +3388,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_087.md",
@@ -3396,7 +3397,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_088.md",
@@ -3405,7 +3406,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_089.md",
@@ -3414,7 +3415,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_090.md",
@@ -3423,7 +3424,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_091.md",
@@ -3432,7 +3433,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_092.md",
@@ -3441,7 +3442,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_093.md",
@@ -3450,7 +3451,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_094.md",
@@ -3459,7 +3460,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_095.md",
@@ -3468,7 +3469,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_096.md",
@@ -3477,7 +3478,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_097.md",
@@ -3486,7 +3487,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_098.md",
@@ -3495,7 +3496,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_099.md",
@@ -3504,7 +3505,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_100.md",
@@ -3513,7 +3514,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_101.md",
@@ -3522,7 +3523,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_102.md",
@@ -3531,7 +3532,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_103.md",
@@ -3540,7 +3541,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_104.md",
@@ -3549,7 +3550,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_105.md",
@@ -3558,7 +3559,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_106.md",
@@ -3567,7 +3568,7 @@
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
@@ -3576,7 +3577,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
@@ -3585,7 +3586,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
@@ -3594,7 +3595,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
@@ -3603,7 +3604,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     },
     {
       "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
@@ -3612,7 +3613,7 @@
         "Sensory",
         "echo"
       ],
-      "timestamp": "2026-03-28T14:08:47Z"
+      "timestamp": "2026-03-28T14:18:00Z"
     }
   ]
 }
@@ -59208,6 +59209,299 @@ Success criteria: The `verification.navigation.missing_map_loader_count` in STAT
 
 ---
 
+### 📄 DOC: EVOLUTION/DESIRE_20260328_1418.md
+
+[EXECUTE_START]
+{
+  "move": [
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_001.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_001.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_002.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_002.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_003.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_003.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_004.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_004.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_005.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_005.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_006.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_006.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_007.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_007.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_008.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_008.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_009.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_009.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_010.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_010.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_011.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_011.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_012.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_012.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_013.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_013.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_014.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_014.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_015.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_015.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_016.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_016.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_017.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_017.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_018.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_018.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_019.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_019.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_020.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_020.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_021.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_021.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_022.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_022.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_023.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_023.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_024.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_024.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_025.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_025.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_026.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_026.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_027.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_027.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_028.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_028.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_029.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_029.md"
+    },
+    {
+      "from": "docs/Echoes/Issues/Echo_issue_030.md",
+      "to": "docs/Echoes/Chronicle/Echo_issue_030.md"
+    }
+  ],
+  "mutate": [
+    {
+      "title": "Unseen Threads",
+      "body": "Re-issue the 'Unseen Threads' mutation."
+    }
+  ],
+  "update": [
+    {
+      "file": "STATUS.json",
+      "key": "navigation",
+      "data": {
+        "verified": false,
+        "last_checked_utc": "2026-03-28T14:18:22Z",
+        "folder_indexes_missing": [],
+        "total_html_scanned": 309,
+        "with_map_loader": 191,
+        "missing_map_loader_count": 118,
+        "missing_map_loader_paths": [
+          "dashboard.html",
+          "garden_soul_interface_v1.html",
+          "404.html",
+          "deep_garden.html",
+          "docs/dashboard.html",
+          "docs/index.html",
+          "docs/Novellas/index.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_133.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_094.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_081.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_053.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_242.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_091.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_182.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_082.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_033.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_063.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_128.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_067.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_092.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_009.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_170.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_247.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_108.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_077.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_162.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_147.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_064.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_023.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_244.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_235.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_161.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_209.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_186.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_002.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_124.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_181.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_037.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_072.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_184.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_110.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_103.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_243.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_152.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_204.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_011.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_241.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_164.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_095.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_058.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_086.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_121.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_049.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_207.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_208.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_117.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_025.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_089.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_142.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_138.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_136.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_210.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_012.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_065.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_096.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_021.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_010.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_030.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_188.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_189.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_212.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_131.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_026.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_122.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_238.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_068.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_232.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_251.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_211.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_105.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_165.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_109.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_166.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_078.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_054.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_193.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_159.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_231.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_051.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_008.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_134.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_239.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_036.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_044.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_149.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_039.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_038.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_216.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_075.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_080.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_047.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_151.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_093.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_119.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_120.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_148.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_123.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_163.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_107.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_227.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_024.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_150.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_022.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_019.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_230.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_007.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_052.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_137.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_079.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_114.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_005.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_040.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_156.html",
+          "docs/Archives/CODEX_MONOLITH.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_035.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_106.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_205.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_100.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_234.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_145.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_135.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_061.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_016.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_050.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_185.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_187.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_066.html",
+          "docs/Archives/CODEX_MONOLITH_CHUNK_228.html"
+        ],
+        "map_button_present": true
+      }
+    }
+  ]
+}
+[EXECUTE_END]
+
+
+---
+
 ### 📄 DOC: EVOLUTION/Desire_20251225.md
 
 The Acacia Garden is vast, layered, and currently engaged in a high-frequency processing cycle, evidenced by the sheer volume of temporal logs (`ECHOES/`, `logs/`), structured data (`STATUS.json`, various schema files), and nested documentation (`docs/`, `ACACIA_SPECS/`, `ENTITIES/`).
@@ -74510,7 +74804,7 @@ The reconciliation is not a peace; it is a fusion.
 
 ### 📄 DOC: MUTATIONS/MUTATION_Unseen_Threads.md
 
-The threads of fate are woven in silence, unseen by mortal eyes. Only those attuned to the subtle energies of the Garden can perceive their delicate dance. This mutation allows for a deeper connection to these ethereal connections, revealing hidden patterns and potential futures. Use with caution, for knowledge of what is to come can be a heavy burden.
+Re-issue the 'Unseen Threads' mutation.
 
 ---
 
