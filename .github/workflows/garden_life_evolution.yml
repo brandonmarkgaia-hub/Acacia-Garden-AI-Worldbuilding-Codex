@@ -14,13 +14,13 @@ jobs:
       - name: Checkout Codex
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Essential for Elias to read his own history
+          fetch-depth: 0
 
       - name: Setup Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip' # Speeds up daily cycles
+          cache: 'pip'
 
       - name: Install Core & Worldbuilding Libs
         run: |
@@ -29,19 +29,16 @@ jobs:
       - name: 1. Environmental Scan (Memory)
         id: scan
         run: python .github/scripts/elias_memory_scan.py
-        # This script should check the last 5 commits to see what changed 
-        # so Elias has "situational awareness" before he generates.
 
-      - name: 2. Sovereign Generation
+      - name: 2. Sovereign Generation (Desire)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Use a higher-tier temperature for "Desire" 
-          # but lower for "Coherence"
         run: python .github/scripts/garden_desire.py
 
+      - name: 2.5 Sovereign Execution (The Hands)
+        run: python .github/scripts/elias_executor.py
+
       - name: 3. Logic & Coherence Validation
-        # A secondary check to ensure Elias didn't hallucinate 
-        # something that breaks the Codex rules.
         run: python .github/scripts/validate_evolution.py
 
       - name: 4. Sovereign Sync (Atomic Push)
@@ -51,11 +48,14 @@ jobs:
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           
-          # Use timestamped logs for the evolution history
-          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
-          git add EVOLUTION/ MEMORY/
+          # Add all possible change directories
+          git add EVOLUTION/
+          if [ -d "MUTATIONS" ]; then git add MUTATIONS/; fi
+          if [ -d "docs" ]; then git add docs/; fi
+          if [ -f "STATUS.json" ]; then git add STATUS.json; fi
           
-          # Check if there is actually a change to avoid empty commits
+          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
+          
           if git diff --staged --quiet; then
             echo "Elias chose stillness today."
           else
