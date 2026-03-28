@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-28T15:05:58Z",
-  "count": 1591,
+  "generated_at": "2026-03-28T15:18:17Z",
+  "count": 1593,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1570,6 +1570,8 @@
     "System/STATUS-DEEP.json",
     "V2_OVERVIEW.md",
     "Vault/FRAGMENT_LEDGER.md",
+    "Vault/MUTATION_Phantom_Echo__The_Silent_Archivist.md",
+    "Vault/MUTATION_The_First_Seal_of_Coherence.md",
     "Vault/VAULT_OF_ECHOES.md",
     "Vaults/Svalbard-matrix.md",
     "Vaults/index.html",
