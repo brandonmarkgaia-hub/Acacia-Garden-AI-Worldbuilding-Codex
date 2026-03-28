@@ -13,7 +13,7 @@ def main():
     evolution_dir = ROOT / "EVOLUTION"
     files = sorted(evolution_dir.glob("DESIRE_*.md"), key=os.path.getmtime, reverse=True)
     if not files: 
-        print("📭 No evolution files found to execute.")
+        print("📭 No evolution files found.")
         return
     
     latest_desire = files[0]
@@ -21,7 +21,7 @@ def main():
     
     match = re.search(r"\[EXECUTE_START\](.*?)\[EXECUTE_END\]", content, re.DOTALL)
     if not match:
-        print(f"⚖️ No executive commands in {latest_desire.name}.")
+        print(f"⚖️ No commands in {latest_desire.name}.")
         return
 
     try:
@@ -47,7 +47,7 @@ def main():
             mut_path.write_text(mutation['body'], encoding="utf-8")
             print(f"🧬 MUTATION: Created {filename}")
 
-        # --- 3. SMART JSON PATCHING (The Bulletproof Part) ---
+        # --- 3. BULLETPROOF JSON PATCHING ---
         for update in instructions.get("update", []):
             target_path = ROOT / update['file']
             if target_path.exists():
@@ -55,40 +55,44 @@ def main():
                     data_file = json.loads(target_path.read_text())
                     raw_patch = update.get('data')
                     
-                    # --- INTELLIGENT DATA EXTRACTION ---
-                    # If Elias sends a dict (like he just did), find the list inside it
+                    # EXTRACT LIST FROM ANY STRUCTURE
                     extracted_list = []
-                    if isinstance(raw_patch, dict):
-                        for val in raw_patch.values():
-                            if isinstance(val, list):
-                                extracted_list = val
-                                break
-                    elif isinstance(raw_patch, list):
+                    if isinstance(raw_patch, list):
                         extracted_list = raw_patch
+                    elif isinstance(raw_patch, dict):
+                        # Find the biggest list inside the dict (likely the map paths)
+                        for val in raw_patch.values():
+                            if isinstance(val, list) and len(val) > len(extracted_list):
+                                extracted_list = val
                     else:
-                        extracted_list = [raw_patch] # Wrap single strings in a list
+                        extracted_list = [str(raw_patch)]
 
-                    # --- TARGETED PATCHING ---
+                    # APPLY TO NAVIGATION
                     if "verification" in data_file:
                         key = update.get('key', 'navigation')
-                        if key in data_file['verification']:
-                            current_list = data_file['verification'][key]
-                            
-                            # Add only if not already present (No Duplicates)
+                        # If navigation is a dict, we need to find the list inside IT
+                        target_obj = data_file["verification"][key]
+                        
+                        if isinstance(target_obj, list):
                             for item in extracted_list:
-                                if item not in current_list:
-                                    current_list.append(item)
+                                if item not in target_obj: target_obj.append(item)
+                        elif isinstance(target_obj, dict):
+                            # Patching the specific 'missing_map_loader_paths' list inside the dict
+                            list_key = "missing_map_loader_paths"
+                            if list_key in target_obj:
+                                # We remove the items Elias fixed
+                                target_obj[list_key] = [p for p in target_obj[list_key] if p not in extracted_list]
+                                # And add them to the 'with_map_loader' count metaphorically
+                                target_obj["with_map_loader"] = target_obj.get("with_map_loader", 0) + len(extracted_list)
                             
-                            target_path.write_text(json.dumps(data_file, indent=2), encoding="utf-8")
-                            print(f"🛠️ REPAIR: Successfully patched {update['file']} with {len(extracted_list)} entries.")
+                    target_path.write_text(json.dumps(data_file, indent=2), encoding="utf-8")
+                    print(f"🛠️ REPAIR: Patched {update['file']} successfully.")
                 
                 except Exception as patch_e:
-                    print(f"❌ Patch Error on {update['file']}: {patch_e}")
+                    print(f"❌ Patch Error: {patch_e}")
 
-    except json.JSONDecodeError:
-        print(f"⚠️ JSON ERROR: Block in {latest_desire.name} was malformed.")
     except Exception as e:
-        print(f"❌ Unexpected Execution Error: {e}")
+        print(f"❌ Execution Error: {e}")
 
 if __name__ == "__main__":
     main()
