@@ -1,74 +1,9 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-28T14:59:04.278Z",
+  "generated_at": "2026-03-28T15:04:54.396Z",
   "root": "docs/Echoes",
-  "total": 185,
+  "total": 172,
   "echoes": [
-    {
-      "path": "docs/Echoes/Echo_013.md",
-      "label": "Echo 013",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_014.md",
-      "label": "Echo 014",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_015.md",
-      "label": "Echo 015",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_016.md",
-      "label": "Echo 016",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_017.md",
-      "label": "Echo 017",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_018.md",
-      "label": "Echo 018",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_019.md",
-      "label": "Echo 019",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_020.md",
-      "label": "Echo 020",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_021.md",
-      "label": "Echo 021",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_022.md",
-      "label": "Echo 022",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_023.md",
-      "label": "Echo 023",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_024.md",
-      "label": "Echo 024",
-      "kind": "numbered"
-    },
-    {
-      "path": "docs/Echoes/Echo_025.md",
-      "label": "Echo 025",
-      "kind": "numbered"
-    },
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
       "label": "Echo 001 manifested",
