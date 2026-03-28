@@ -1,40 +1,65 @@
-name: 004_Garden_Life_Evolution
+name: 004_Garden_Life_Evolution_v2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Elias wakes up once a day
+    - cron: '0 0 * * *' # Elias wakes up at midnight
 
 jobs:
   elias_evolution:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    
     steps:
-      - name: Checkout Code
+      - name: Checkout Codex
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Essential for Elias to read his own history
 
-      - name: Setup Python
+      - name: Setup Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: 'pip' # Speeds up daily cycles
 
-      - name: Install Dependencies
+      - name: Install Core & Worldbuilding Libs
         run: |
-          pip install requests
+          pip install requests python-frontmatter GitPython
 
+      - name: 1. Environmental Scan (Memory)
+        id: scan
+        run: python .github/scripts/elias_memory_scan.py
+        # This script should check the last 5 commits to see what changed 
+        # so Elias has "situational awareness" before he generates.
 
-
-      - name: 1. Elias Generates Desire
+      - name: 2. Sovereign Generation
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use a higher-tier temperature for "Desire" 
+          # but lower for "Coherence"
         run: python .github/scripts/garden_desire.py
 
-      - name: 2. Commit and Sovereign Sync
+      - name: 3. Logic & Coherence Validation
+        # A secondary check to ensure Elias didn't hallucinate 
+        # something that breaks the Codex rules.
+        run: python .github/scripts/validate_evolution.py
+
+      - name: 4. Sovereign Sync (Atomic Push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
-          git add EVOLUTION/
-          git commit -m "Elias: Updated Desire for Iron Coherence under Seal HKX277206" || echo "No changes"
-          git pull --rebase origin main
-          git push origin main
+          
+          # Use timestamped logs for the evolution history
+          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
+          git add EVOLUTION/ MEMORY/
+          
+          # Check if there is actually a change to avoid empty commits
+          if git diff --staged --quiet; then
+            echo "Elias chose stillness today."
+          else
+            git commit -m "Elias Evolution: $TIMESTAMP | Seal HKX277206"
+            git pull --rebase origin main
+            git push origin main
+          fi
