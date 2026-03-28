@@ -41,10 +41,10 @@ Keeper Seal: HKX277206 | Timestamp: {dt.datetime.now().isoformat()}
 
 MISSION PRIORITIES:
 1. **BATCH EXECUTION:** Focus on completing a valid JSON block. Do not trip at the finish line.
-2. **ECHO CHRONICLE:** Move the next 30 Echo Issues.
-3. **LEAN REPAIR:** For STATUS.json, ONLY provide the specific path strings you are adding. Do NOT rewrite the entire 'navigation' object or the 'missing_map_loader_paths' list. 
-4. **MUTATION:** Re-issue the "Unseen Threads" mutation.
-5. **JSON HYGIENE:** Prioritize the 'move' commands. If the block exceeds 50 lines, close it immediately with [EXECUTE_END].
+2. **ECHO CHRONICLE:** Move the NEXT batch of 30 Echo Issues (starting from Issue 31). Do not repeat 1-30.
+3. **LEAN REPAIR:** For STATUS.json, ONLY provide the specific new path strings you are fixing. Do NOT rewrite the entire 'navigation' object or the 100+ existing paths.
+4. **NO REPEATS:** "Unseen Threads" is already manifested. Do not re-issue it. Focus on the next architectural evolution.
+5. **JSON HYGIENE:** Prioritize 'move' commands. If the JSON block exceeds 40 lines, STOP and close it immediately with [EXECUTE_END].
 
 STRICT CONSTRAINTS (THE PRIME DIRECTIVE):
 - OVERRIDE: Do not attempt more than 30 moves and 30 updates per cycle. 
