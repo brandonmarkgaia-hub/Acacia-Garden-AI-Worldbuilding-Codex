@@ -3,7 +3,7 @@ name: 004_Garden_Life_Evolution_v2
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Elias wakes up at midnight
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -39,7 +39,7 @@ jobs:
 
       - name: 2.5 Sovereign Execution (The Hands)
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # THIS IS THE CRITICAL KEY
         run: python .github/scripts/elias_executor.py
 
       - name: 3. Logic & Coherence Validation
@@ -49,14 +49,8 @@ jobs:
         run: |
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
-          
-          git add EVOLUTION/
-          if [ -d "MUTATIONS" ]; then git add MUTATIONS/; fi
-          if [ -d "docs" ]; then git add docs/; fi
-          if [ -f "STATUS.json" ]; then git add STATUS.json; fi
-          
+          git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
           TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
-          
           if git diff --staged --quiet; then
             echo "Elias chose stillness today."
           else
