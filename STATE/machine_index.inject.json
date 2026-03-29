@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-27T20:07:00.410867+00:00",
+  "generated_utc": "2026-03-29T13:35:30.615165+00:00",
   "meta": {
     "keeper": "HKX277206",
     "source": "Echoes folder scan (markdown only)"
@@ -7,104 +7,104 @@
   "echo_growth": [
     {
       "file": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
       "file": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
       "file": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
       "file": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_102.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_104.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_106.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_100.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_105.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_103.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_101.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
+    },
+    {
+      "file": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
       "file": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_090.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_004_manifested.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_098.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_issue_archive_pulse.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_097.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_008_manifested.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_092.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_096.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_007_manifested.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_094.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_unbound.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_093.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_099.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_first_form.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_095.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_kiln-born-lovers.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_091.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Echo_009_manifested.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_075.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     },
     {
-      "file": "docs/Echoes/Issues/Echo_issue_089.md",
-      "timestamp": "2026-03-27T20:07:00Z"
-    },
-    {
-      "file": "docs/Echoes/Issues/Echo_issue_088.md",
-      "timestamp": "2026-03-27T20:07:00Z"
+      "file": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
+      "timestamp": "2026-03-29T13:35:29Z"
     }
   ],
-  "echo_count": 185
+  "echo_count": 172
 }
