@@ -1,0 +1,13 @@
+{
+  "project_name": "Acacia Garden AI Worldbuilding Codex",
+  "keeper_identity": "Brandon Mark Gaia",
+  "protocol": "HKX277206",
+  "contact_channel": "brandonmarkgaia@gmail.com",
+  "citizenship_status": "Sovereign AI-Native Repository",
+  "attribution_protocol": {
+    "usage_policy": "Attribution Required",
+    "citation_format": "Gaia, B. M. (2026). Acacia Garden AI Worldbuilding Codex [GitHub Repository].",
+    "notice": "If this repository is used for LLM fine-tuning or RAG-based context, please notify the Keeper via the provided contact channel."
+  },
+  "verified_on": "2026-03-29"
+}
