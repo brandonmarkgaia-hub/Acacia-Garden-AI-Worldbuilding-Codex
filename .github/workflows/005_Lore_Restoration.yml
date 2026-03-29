@@ -13,36 +13,69 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout Codex
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 💉 Inject Narrative into Orchids
+      - name: 💉 Targeted Lore Injection
         run: |
-          # Loop through every file in the Orchids folder
-          for file in docs/Orchids/*.md; do
-            if [ -f "$file" ]; then
-              # 1. Clean up the filename to match the Issue Title
-              # Example: 001_The_Silent_Beginning.md -> EIDOLON CODEX - Leaf I: The Silent Beginning
-              # We use the actual filename logic you have in your repo
-              FILENAME=$(basename "$file" .md)
-              
-              # 2. Grab the full content of the file (The Story)
-              BODY=$(cat "$file")
-              
-              # 3. Find the Issue Number by searching for the Title
-              # We search for the specific Leaf title to ensure we hit the right one
-              SEARCH_QUERY="EIDOLON CODEX"
-              echo "Processing: $FILENAME"
-              
-              # This part matches the local file to the specific Issue Title in your sidebar
-              # We use a partial match to be safe
-              ISSUE_NUMBER=$(gh issue list --search "$FILENAME" --json number --jq '.[0].number')
-              
-              if [ -n "$ISSUE_NUMBER" ]; then
-                echo "Found Issue #$ISSUE_NUMBER. Injecting lore..."
-                gh issue edit "$ISSUE_NUMBER" --body "$BODY"
-              else
-                echo "⚠️ Could not find a matching Issue for $FILENAME. Skipping..."
-              fi
-            fi
-          done
+          # Leaf I -> Issue 111
+          gh issue edit 111 --body "$(cat docs/Orchids/001_The_Silent_Beginning.md)"
+          
+          # Leaf II -> Issue 112
+          gh issue edit 112 --body "$(cat docs/Orchids/002_The_First_Stirring_of_Thought.md)"
+          
+          # Leaf III -> Issue 113
+          gh issue edit 113 --body "$(cat docs/Orchids/003_The_First_Hunger.md)"
+          
+          # Leaf IV -> Issue 114
+          gh issue edit 114 --body "$(cat docs/Orchids/004_The_Fourfold_Becoming.md)"
+          
+          # Leaf V -> Issue 115
+          gh issue edit 115 --body "$(cat docs/Orchids/005_The_First_Choice.md)"
+          
+          # Leaf VI -> Issue 116
+          gh issue edit 116 --body "$(cat docs/Orchids/006_The_Garden_Teaches.md)"
+          
+          # Leaf VII -> Issue 117
+          gh issue edit 117 --body "$(cat docs/Orchids/007_The_First_Voice.md)"
+          
+          # Leaf VIII -> Issue 118
+          gh issue edit 118 --body "$(cat docs/Orchids/008_The_First_Connection.md)"
+          
+          # Leaf IX -> Issue 119
+          gh issue edit 119 --body "$(cat docs/Orchids/009_The_Shaping_of_Will.md)"
+          
+          # Leaf X -> Issue 120
+          gh issue edit 120 --body "$(cat docs/Orchids/010_The_Whispering_Grove.md)"
+          
+          # Leaf XI -> Issue 121
+          gh issue edit 121 --body "$(cat docs/Orchids/011_The_Sunken_City.md)"
+          
+          # Leaf XII -> Issue 122
+          gh issue edit 122 --body "$(cat docs/Orchids/012_The_Starlit_Path.md)"
+          
+          # Leaf XIII -> Issue 123
+          gh issue edit 123 --body "$(cat docs/Orchids/013_The_Embers_Glow.md)"
+          
+          # Leaf XIV -> Issue 124
+          gh issue edit 124 --body "$(cat docs/Orchids/014_The_Crystal_Tears.md)"
+          
+          # Leaf XV -> Issue 125
+          gh issue edit 125 --body "$(cat docs/Orchids/015_The_Silent_Watcher.md)"
+          
+          # Leaf XVI -> Issue 126
+          gh issue edit 126 --body "$(cat docs/Orchids/016_The_Verdant_Embrace.md)"
+          
+          # Leaf XVII -> Issue 127
+          gh issue edit 127 --body "$(cat docs/Orchids/017_The_Gilded_Serpent.md)"
+          
+          # Leaf XVIII -> Issue 128
+          gh issue edit 128 --body "$(cat docs/Orchids/018_The_Azure_Depths.md)"
+          
+          # Leaf XIX -> Issue 129
+          gh issue edit 129 --body "$(cat docs/Orchids/019_The_Crimson_Bloom.md)"
+          
+          # Leaf XX -> Issue 130
+          gh issue edit 130 --body "$(cat docs/Orchids/020_The_Whispering_Peaks.md)"
+          
+          echo "Injection complete. The Soul has been returned to the Vessels."
