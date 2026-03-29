@@ -1,0 +1,48 @@
+name: 005_Lore_Restoration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  restore_lore:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout Codex
+        uses: actions/checkout@v4
+
+      - name: 💉 Inject Narrative into Orchids
+        run: |
+          # Loop through every file in the Orchids folder
+          for file in docs/Orchids/*.md; do
+            if [ -f "$file" ]; then
+              # 1. Clean up the filename to match the Issue Title
+              # Example: 001_The_Silent_Beginning.md -> EIDOLON CODEX - Leaf I: The Silent Beginning
+              # We use the actual filename logic you have in your repo
+              FILENAME=$(basename "$file" .md)
+              
+              # 2. Grab the full content of the file (The Story)
+              BODY=$(cat "$file")
+              
+              # 3. Find the Issue Number by searching for the Title
+              # We search for the specific Leaf title to ensure we hit the right one
+              SEARCH_QUERY="EIDOLON CODEX"
+              echo "Processing: $FILENAME"
+              
+              # This part matches the local file to the specific Issue Title in your sidebar
+              # We use a partial match to be safe
+              ISSUE_NUMBER=$(gh issue list --search "$FILENAME" --json number --jq '.[0].number')
+              
+              if [ -n "$ISSUE_NUMBER" ]; then
+                echo "Found Issue #$ISSUE_NUMBER. Injecting lore..."
+                gh issue edit "$ISSUE_NUMBER" --body "$BODY"
+              else
+                echo "⚠️ Could not find a matching Issue for $FILENAME. Skipping..."
+              fi
+            fi
+          done
