@@ -47,14 +47,13 @@ jobs:
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           
-          # 1. Stage everything
+          # 1. Stage the new lore and state changes
           git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
           
-          # 2. Safety Pull with Autostash
-          # This handles the "uncommitted changes" error by hiding them during the pull
+          # 2. Pull with Autostash to prevent the "Uncommitted Changes" error
           git pull --rebase --autostash origin main
           
-          # 3. Commit and Push
+          # 3. Final Push
           TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
           if git diff --staged --quiet; then
             echo "Elias chose stillness today."
@@ -62,4 +61,3 @@ jobs:
             git commit -m "Elias Evolution: $TIMESTAMP | Seal HKX277206"
             git push origin main
           fi
-
