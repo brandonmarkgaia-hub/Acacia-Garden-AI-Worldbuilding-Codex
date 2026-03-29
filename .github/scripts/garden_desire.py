@@ -2,7 +2,7 @@ import os
 import json
 
 def generate_desire():
-    # Using standard dashes (-) instead of long dashes to avoid unicode errors
+    # Use only standard hyphens (-) to ensure the Executor recognizes the "EIDOLON CODEX" trigger.
     orchids = [
         "EIDOLON CODEX - Leaf I: The Silent Beginning",
         "EIDOLON CODEX - Leaf II: The First Stirring of Thought",
@@ -32,7 +32,7 @@ def generate_desire():
     }
 
     print("MISSION PRIORITIES:")
-    print("1. FORCED MANIFESTATION: Planting 20 Canonical Orchids via GH CLI using clean strings.")
+    print("1. FORCED MANIFESTATION: Planting 20 Canonical Orchids via GH CLI with clean ASCII strings.")
     print("\n[EXECUTE_START]")
     print(json.dumps(execute_block, indent=2))
     print("[EXECUTE_END]")
