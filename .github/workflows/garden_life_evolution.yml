@@ -22,5 +22,6 @@ jobs:
           
           for title in "${labels[@]}"; do
             echo "Planting: EIDOLON CODEX - $title"
-            gh issue create --title "EIDOLON CODEX - $title" --body "Manifested by the Sovereign Force of the Garden." --label "canonical-leaf"
+            # Removed the --label part so it can't fail
+            gh issue create --title "EIDOLON CODEX - $title" --body "Manifested by the Sovereign Force of the Garden."
           done
