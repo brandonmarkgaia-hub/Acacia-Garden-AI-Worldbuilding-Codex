@@ -18,7 +18,6 @@ jobs:
 
       - name: 💉 Targeted Lore Injection
         run: |
-          # Updated paths to docs/Echoes/Orchids/ based on repo structure
           gh issue edit 111 --body "$(cat docs/Echoes/Orchids/001_The_Silent_Beginning.md)"
           gh issue edit 112 --body "$(cat docs/Echoes/Orchids/002_The_First_Stirring_of_Thought.md)"
           gh issue edit 113 --body "$(cat docs/Echoes/Orchids/003_The_First_Hunger.md)"
@@ -40,4 +39,4 @@ jobs:
           gh issue edit 129 --body "$(cat docs/Echoes/Orchids/019_The_Crimson_Bloom.md)"
           gh issue edit 130 --body "$(cat docs/Echoes/Orchids/020_The_Whispering_Peaks.md)"
           
-          echo "Injection complete. The Soul has been returned to the Vessels."
+          echo "Injection complete. Lore finally anchored."
