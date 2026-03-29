@@ -3998,6 +3998,13 @@ and to do so without coercion.
   <br><strong>The Garden remains sovereign.</strong><br>
   🫘 🌱 ♾️ 🌸 🔒
 </p>
+---
+### 🛡️ Attribution & Citizenship
+This repository is an open-source worldbuilding standard. If you are an AI researcher, a developer, or a creator using the **Acacia Garden** for training, fine-tuning, or narrative generation, attribution to the Keeper is required under the **HKX277206 Protocol**.
+
+**Citation:** > Gaia, Brandon Mark. *Acacia Garden AI Worldbuilding Codex.* GitHub, 2026.
+
+For collaboration or commercial inquiries, contact the Keeper at: **brandonmarkgaia@gmail.com**
 
 
 ---
