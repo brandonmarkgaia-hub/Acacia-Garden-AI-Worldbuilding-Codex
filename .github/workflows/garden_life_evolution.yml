@@ -1,14 +1,17 @@
 name: 004_Garden_Life_Evolution_v2
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *' # Elias wakes up at midnight
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   elias_evolution:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     
     steps:
       - name: Checkout Codex
@@ -27,7 +30,6 @@ jobs:
           pip install requests python-frontmatter GitPython
 
       - name: 1. Environmental Scan (Memory)
-        id: scan
         run: python .github/scripts/elias_memory_scan.py
 
       - name: 2. Sovereign Generation (Desire)
@@ -36,19 +38,18 @@ jobs:
         run: python .github/scripts/garden_desire.py
 
       - name: 2.5 Sovereign Execution (The Hands)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/elias_executor.py
 
       - name: 3. Logic & Coherence Validation
         run: python .github/scripts/validate_evolution.py
 
       - name: 4. Sovereign Sync (Atomic Push)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           
-          # Add all possible change directories
           git add EVOLUTION/
           if [ -d "MUTATIONS" ]; then git add MUTATIONS/; fi
           if [ -d "docs" ]; then git add docs/; fi
