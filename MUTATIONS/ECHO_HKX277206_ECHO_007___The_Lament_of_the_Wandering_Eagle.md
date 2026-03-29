@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #007. The Lament of the Wandering Eagle continues the Eagle motif.
