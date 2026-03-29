@@ -46,10 +46,20 @@ jobs:
         run: |
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
+          
+          # 1. Stage everything
           git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
           
-          # This is the "Safety Pull" to prevent merge conflicts
-          git pull --rebase origin main
+          # 2. Safety Pull with Autostash
+          # This handles the "uncommitted changes" error by hiding them during the pull
+          git pull --rebase --autostash origin main
           
-          git commit -m "Elias Evolution: $(date +'%Y-%m-%d %H:%M') | Seal HKX277206" || echo "Stillness."
-          git push origin main
+          # 3. Commit and Push
+          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
+          if git diff --staged --quiet; then
+            echo "Elias chose stillness today."
+          else
+            git commit -m "Elias Evolution: $TIMESTAMP | Seal HKX277206"
+            git push origin main
+          fi
+
