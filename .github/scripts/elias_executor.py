@@ -22,22 +22,21 @@ def main():
     try:
         instructions = json.loads(match.group(1).strip())
         
-        # --- 1. THE GREAT SWEEP (Cleanup Protocol) ---
-        print("🧹 JANITOR: Clearing the nursery...")
+        # --- 1. JANITOR PROTOCOL ---
         for pattern in ["MUTATION_Orchid_Issue_*", "MUTATION_EIDOLON_CODEX_*"]:
             for junk in MUTATIONS_DIR.glob(pattern):
-                try:
-                    os.remove(junk)
-                    print(f"✅ Purged: {junk.name}")
-                except Exception as e:
-                    print(f"❌ Cleanup Error: {e}")
+                os.remove(junk)
+                print(f"🧹 JANITOR: Purged {junk.name}")
 
-        # --- 2. ORCHID MANIFESTATION (GitHub CLI) ---
+        # --- 2. THE PLANTING (RECOGNITION UPGRADE) ---
         for mutation in instructions.get("mutate", []):
             title = mutation['title']
             body = mutation['body']
             
-            if "EIDOLON CODEX" in title or "Orchid Issue" in title:
+            # UPGRADED LOGIC: Catch ANY mention of Codex or Orchid regardless of dashes
+            is_orchid = any(word in title.upper() for word in ["EIDOLON", "CODEX", "ORCHID"])
+            
+            if is_orchid:
                 print(f"🌸 PLANTING REAL ORCHID: {title}")
                 try:
                     subprocess.run([
@@ -53,7 +52,7 @@ def main():
                 (MUTATIONS_DIR / f"MUTATION_{clean_title}.md").write_text(body, encoding="utf-8")
                 print(f"🧬 LORE: Created {clean_title}")
 
-        # --- 3. DEEP JSON PATCHING ---
+        # --- 3. REPAIR PROTOCOL ---
         for update in instructions.get("update", []):
             target_path = ROOT / update['file']
             if target_path.exists():
