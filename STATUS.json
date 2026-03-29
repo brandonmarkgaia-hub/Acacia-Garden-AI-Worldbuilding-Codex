@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-29T12:58:00Z",
+  "generated_at": "2026-03-29T13:35:44Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-03-29T12:58:00Z",
+      "last_checked_utc": "2026-03-29T13:35:44Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 309,
       "with_map_loader": 171,
@@ -153,7 +153,7 @@
     "indexes": {
       "machine_index_in_sync": true,
       "docs_urls_in_sync": true,
-      "docs_urls_count": 1594,
+      "docs_urls_count": 1595,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
@@ -169,13 +169,13 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-03-29T12:58:00Z"
+      "last_checked_utc": "2026-03-29T13:35:44Z"
     },
-    "last_verified_utc": "2026-03-29T12:58:16Z"
+    "last_verified_utc": "2026-03-29T13:35:59Z"
   },
   "core_nodes": {
     "counts": {
-      "total_nodes": 3271,
+      "total_nodes": 3272,
       "books_indexed": 57,
       "echoes_indexed": 185,
       "cycles_represented": 0
@@ -191,7 +191,7 @@
       "docs/Archives": 263,
       "docs/Blooms": 4,
       "docs/Orchards": 3,
-      "docs/Cycles": 6,
+      "docs/Cycles": 7,
       "docs/Laws": 4,
       "docs/Wells": 1,
       "BLOOMS": 0,
@@ -215,7 +215,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-03-29T12:58:00Z"
+      "last_checked_utc": "2026-03-29T13:35:44Z"
     }
   },
   "growth": {
