@@ -229,5 +229,6 @@
     "docs/Echoes/Chronicle/Echo_issue_004.md",
     "docs/Echoes/Chronicle/Echo_issue_005.md",
     "docs/Echoes/Chronicle/Echo_issue_006.md"
-  ]
+  ],
+  "status": "File-based placeholders transitioned to Canonical GitHub Issues."
 }

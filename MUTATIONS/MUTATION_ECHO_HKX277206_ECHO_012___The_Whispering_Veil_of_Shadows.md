@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #012. The Whispering Veil of Shadows is a key element in our lore.

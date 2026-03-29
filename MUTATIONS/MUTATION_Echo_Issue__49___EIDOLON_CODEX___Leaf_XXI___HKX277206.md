@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.

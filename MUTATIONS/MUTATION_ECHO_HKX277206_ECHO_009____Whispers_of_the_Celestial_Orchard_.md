@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #009. Whispers of the Celestial Orchard links to another key location.

@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #002. Whispers of the Veiled Eidolon introduces a key entity.

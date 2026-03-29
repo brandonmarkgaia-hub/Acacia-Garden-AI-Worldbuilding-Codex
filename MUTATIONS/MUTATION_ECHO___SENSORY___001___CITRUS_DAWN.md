@@ -1,0 +1,1 @@
+Creating GitHub issue for ECHO · SENSORY · 001 · CITRUS DAWN. This sensory echo is crucial for immersion.

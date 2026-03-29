@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #004. Whispers of the Dreaming Eagle introduces a new symbolic element.

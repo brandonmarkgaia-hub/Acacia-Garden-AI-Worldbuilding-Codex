@@ -1,0 +1,1 @@
+Creating GitHub issue for Echo #102, detailing the Starfire Auton and Triad Alignment.
