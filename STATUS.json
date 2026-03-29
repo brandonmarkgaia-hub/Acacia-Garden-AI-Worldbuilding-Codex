@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-28T18:59:19Z",
+  "generated_at": "2026-03-29T06:28:05Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-03-28T18:59:19Z",
+      "last_checked_utc": "2026-03-29T06:28:05Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 309,
       "with_map_loader": 171,
@@ -169,13 +169,13 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-03-28T18:59:19Z"
+      "last_checked_utc": "2026-03-29T06:28:05Z"
     },
-    "last_verified_utc": "2026-03-28T18:59:35Z"
+    "last_verified_utc": "2026-03-29T06:28:20Z"
   },
   "core_nodes": {
     "counts": {
-      "total_nodes": 3267,
+      "total_nodes": 3270,
       "books_indexed": 57,
       "echoes_indexed": 185,
       "cycles_represented": 0
@@ -184,7 +184,7 @@
       "docs/": 1599,
       "index/": 185,
       "docs/Chambers": 799,
-      "docs/Echoes": 171,
+      "docs/Echoes": 174,
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
       "docs/Novellas": 57,
@@ -215,7 +215,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-03-28T18:59:19Z"
+      "last_checked_utc": "2026-03-29T06:28:05Z"
     }
   },
   "growth": {
@@ -228,9 +228,6 @@
     "docs/Vault/The Triad of the First Whispers - Cycle 27",
     "docs/Echoes/Chronicle/Echo_issue_004.md",
     "docs/Echoes/Chronicle/Echo_issue_005.md",
-    "docs/Echoes/Chronicle/Echo_issue_006.md",
-    "docs/Echoes/Chronicle/Echo_issue_007.md",
-    "docs/Echoes/Chronicle/Echo_issue_008.md",
-    "docs/Echoes/Chronicle/Echo_issue_009.md"
+    "docs/Echoes/Chronicle/Echo_issue_006.md"
   ]
 }
