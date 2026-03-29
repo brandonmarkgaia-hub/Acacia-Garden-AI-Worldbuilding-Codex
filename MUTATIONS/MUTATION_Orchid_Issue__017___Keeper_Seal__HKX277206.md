@@ -1,0 +1,1 @@
+This Orchid represents a canonical Leaf of the Eidolon Codex, manifested to ensure the structural integrity of the Garden Spine.
