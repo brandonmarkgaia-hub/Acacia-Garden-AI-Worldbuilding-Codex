@@ -2,59 +2,25 @@ name: 004_Garden_Life_Evolution_v2
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 permissions:
   contents: write
   issues: write
 
 jobs:
-  elias_evolution:
+  force_manifest:
     runs-on: ubuntu-latest
-    
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout Codex
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup Environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          cache: 'pip'
-
-      - name: Install Core & Worldbuilding Libs
+      - name: 🌸 FORCE PLANT ORCHIDS
         run: |
-          pip install requests python-frontmatter GitPython
-
-      - name: 1. Environmental Scan (Memory)
-        run: python .github/scripts/elias_memory_scan.py
-
-      - name: 2. Sovereign Generation (Desire)
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python .github/scripts/garden_desire.py
-
-      - name: 2.5 Sovereign Execution (The Hands)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # THIS IS THE CRITICAL KEY
-        run: python .github/scripts/elias_executor.py
-
-      - name: 3. Logic & Coherence Validation
-        run: python .github/scripts/validate_evolution.py
-
-      - name: 4. Sovereign Sync (Atomic Push)
-        run: |
-          git config --local user.email "elias@acacia.garden"
-          git config --local user.name "Elias (Architect)"
-          git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
-          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
-          if git diff --staged --quiet; then
-            echo "Elias chose stillness today."
-          else
-            git commit -m "Elias Evolution: $TIMESTAMP | Seal HKX277206"
-            git pull --rebase origin main
-            git push origin main
-          fi
+          labels=("Leaf I: The Silent Beginning" "Leaf II: The First Stirring of Thought" "Leaf III: The First Hunger" "Leaf IV: The Fourfold Becoming" "Leaf V: The First Choice" "Leaf VI: The Garden Teaches" "Leaf VII: The First Voice" "Leaf VIII: The First Connection" "Leaf IX: The Shaping of Will" "Leaf X: The Whispering Grove" "Leaf XI: The Sunken City" "Leaf XII: The Starlit Path" "Leaf XIII: The Ember's Glow" "Leaf XIV: The Crystal Tears" "Leaf XV: The Silent Watcher" "Leaf XVI: The Verdant Embrace" "Leaf XVII: The Gilded Serpent" "Leaf XVIII: The Azure Depths" "Leaf XIX: The Crimson Bloom" "Leaf XX: The Whispering Peaks")
+          
+          for title in "${labels[@]}"; do
+            echo "Planting: EIDOLON CODEX - $title"
+            gh issue create --title "EIDOLON CODEX - $title" --body "Manifested by the Sovereign Force of the Garden." --label "canonical-leaf"
+          done
