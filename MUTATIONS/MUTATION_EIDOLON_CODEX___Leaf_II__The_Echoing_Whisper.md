@@ -1,1 +1,0 @@
-The second Echo of the Eidolon Codex, exploring the subtle echoes that begin to permeate the nascent reality.

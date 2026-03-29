@@ -225,10 +225,7 @@
   "navigation": [
     "docs/Vault/",
     "docs/Echoes/Chronicle/",
-    "docs/Vault/The Triad of the First Whispers - Cycle 27",
-    "docs/Echoes/Chronicle/Echo_issue_004.md",
-    "docs/Echoes/Chronicle/Echo_issue_005.md",
-    "docs/Echoes/Chronicle/Echo_issue_006.md"
+    "docs/Vault/The Triad of the First Whispers - Cycle 27"
   ],
   "status": "File-based placeholders transitioned to Canonical GitHub Issues."
 }

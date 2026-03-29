@@ -1,1 +1,0 @@
-The fourteenth Echo of the Eidolon Codex, touching upon themes of sorrow and the purity of emotion.

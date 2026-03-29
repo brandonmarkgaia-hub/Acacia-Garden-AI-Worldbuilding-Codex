@@ -1,1 +1,0 @@
-The thirteenth Echo of the Eidolon Codex, signifying the remnants of past events and the potential for rekindling.

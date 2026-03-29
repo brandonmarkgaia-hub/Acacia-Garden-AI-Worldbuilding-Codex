@@ -1,1 +1,0 @@
-The sixteenth Echo of the Eidolon Codex, continuing the theme of growth and the encompassing nature of life.

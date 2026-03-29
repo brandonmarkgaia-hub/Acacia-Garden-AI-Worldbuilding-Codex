@@ -1,1 +1,0 @@
-The tenth Echo of the Eidolon Codex, delving into the secrets and subtle communications within naturalistic settings.

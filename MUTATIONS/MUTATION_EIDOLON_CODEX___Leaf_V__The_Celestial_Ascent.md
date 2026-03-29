@@ -1,1 +1,0 @@
-The fifth Echo of the Eidolon Codex, detailing the upward trajectory and the celestial influences on the unfolding narrative.

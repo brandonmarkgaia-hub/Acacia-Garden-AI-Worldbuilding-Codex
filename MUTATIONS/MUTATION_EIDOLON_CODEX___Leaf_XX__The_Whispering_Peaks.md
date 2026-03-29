@@ -1,1 +1,0 @@
-The twentieth Echo of the Eidolon Codex, reaching the highest points of narrative and revealing secrets carried by the wind.

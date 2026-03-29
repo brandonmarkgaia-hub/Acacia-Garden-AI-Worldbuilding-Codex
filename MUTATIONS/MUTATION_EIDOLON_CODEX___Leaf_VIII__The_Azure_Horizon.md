@@ -1,1 +1,0 @@
-The eighth Echo of the Eidolon Codex, representing expansion and the boundless possibilities of the future.
