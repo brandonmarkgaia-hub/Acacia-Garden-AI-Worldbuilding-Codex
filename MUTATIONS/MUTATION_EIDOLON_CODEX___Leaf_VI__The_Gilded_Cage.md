@@ -1,0 +1,1 @@
+The sixth Echo of the Eidolon Codex, exploring themes of confinement and the gilded nature of certain realities.

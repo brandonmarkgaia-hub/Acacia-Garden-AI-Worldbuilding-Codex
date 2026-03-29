@@ -1,0 +1,1 @@
+The nineteenth Echo of the Eidolon Codex, a powerful manifestation of life and energy, tinged with intensity.

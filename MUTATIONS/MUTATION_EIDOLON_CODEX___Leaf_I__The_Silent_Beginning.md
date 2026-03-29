@@ -1,0 +1,1 @@
+This is the first Echo of the Eidolon Codex. It details the initial manifestations and the silent beginnings of the lore.

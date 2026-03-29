@@ -1,0 +1,1 @@
+The third Echo of the Eidolon Codex, depicting the instability and shifting nature of the early manifestations.

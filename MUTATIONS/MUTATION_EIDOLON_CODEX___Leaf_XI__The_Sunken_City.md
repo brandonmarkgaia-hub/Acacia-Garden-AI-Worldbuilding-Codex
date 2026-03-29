@@ -1,0 +1,1 @@
+The eleventh Echo of the Eidolon Codex, exploring forgotten realms and the mysteries of submerged civilizations.

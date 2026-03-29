@@ -1,0 +1,1 @@
+The seventh Echo of the Eidolon Codex, focusing on reflection and the darker, more inscrutable aspects of existence.

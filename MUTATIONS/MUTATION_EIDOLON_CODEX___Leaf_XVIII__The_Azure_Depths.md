@@ -1,0 +1,1 @@
+The eighteenth Echo of the Eidolon Codex, venturing into profound and mysterious aquatic realms.

@@ -1,0 +1,1 @@
+The fifteenth Echo of the Eidolon Codex, introducing an observer or a force that witnesses events without direct intervention.

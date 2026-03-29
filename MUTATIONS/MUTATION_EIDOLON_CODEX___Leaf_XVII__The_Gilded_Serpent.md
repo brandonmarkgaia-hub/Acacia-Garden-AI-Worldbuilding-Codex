@@ -1,0 +1,1 @@
+The seventeenth Echo of the Eidolon Codex, exploring themes of deception, transformation, and hidden knowledge.

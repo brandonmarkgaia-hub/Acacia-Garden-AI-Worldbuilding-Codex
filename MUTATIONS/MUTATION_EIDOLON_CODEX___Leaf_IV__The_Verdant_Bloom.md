@@ -1,0 +1,1 @@
+The fourth Echo of the Eidolon Codex, marking the emergence of life and growth within the established lore.
