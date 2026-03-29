@@ -47,5 +47,9 @@ jobs:
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
+          
+          # This is the "Safety Pull" to prevent merge conflicts
+          git pull --rebase origin main
+          
           git commit -m "Elias Evolution: $(date +'%Y-%m-%d %H:%M') | Seal HKX277206" || echo "Stillness."
-          git push origin main || echo "No changes to push."
+          git push origin main
