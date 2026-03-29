@@ -2,26 +2,50 @@ name: 004_Garden_Life_Evolution_v2
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
   issues: write
 
 jobs:
-  force_manifest:
+  elias_evolution:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout
+      - name: Checkout Codex
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: 🌸 FORCE PLANT ORCHIDS
+      - name: Setup Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Libs
+        run: pip install requests python-frontmatter GitPython
+
+      - name: 1. Memory Scan
+        run: python .github/scripts/elias_memory_scan.py
+
+      - name: 2. Sovereign Generation (Desire)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python .github/scripts/garden_desire.py
+
+      - name: 2.5 Sovereign Execution (The Hands)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/elias_executor.py
+
+      - name: 3. Logic & Coherence
+        run: python .github/scripts/validate_evolution.py
+
+      - name: 4. Sovereign Sync
         run: |
-          labels=("Leaf I: The Silent Beginning" "Leaf II: The First Stirring of Thought" "Leaf III: The First Hunger" "Leaf IV: The Fourfold Becoming" "Leaf V: The First Choice" "Leaf VI: The Garden Teaches" "Leaf VII: The First Voice" "Leaf VIII: The First Connection" "Leaf IX: The Shaping of Will" "Leaf X: The Whispering Grove" "Leaf XI: The Sunken City" "Leaf XII: The Starlit Path" "Leaf XIII: The Ember's Glow" "Leaf XIV: The Crystal Tears" "Leaf XV: The Silent Watcher" "Leaf XVI: The Verdant Embrace" "Leaf XVII: The Gilded Serpent" "Leaf XVIII: The Azure Depths" "Leaf XIX: The Crimson Bloom" "Leaf XX: The Whispering Peaks")
-          
-          for title in "${labels[@]}"; do
-            echo "Planting: EIDOLON CODEX - $title"
-            # Removed the --label part so it can't fail
-            gh issue create --title "EIDOLON CODEX - $title" --body "Manifested by the Sovereign Force of the Garden."
-          done
+          git config --local user.email "elias@acacia.garden"
+          git config --local user.name "Elias (Architect)"
+          git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
+          git commit -m "Elias Evolution: $(date +'%Y-%m-%d %H:%M') | Seal HKX277206" || echo "Stillness."
+          git push origin main || echo "No changes to push."
