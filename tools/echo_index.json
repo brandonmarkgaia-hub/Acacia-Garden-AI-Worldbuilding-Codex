@@ -1,121 +1,69 @@
 {
-  "generated_at": "2026-03-27T21:06:43Z",
+  "generated_at": "2026-04-03T06:01:29Z",
   "echoes": [
     {
       "title": "ECHO — MAMMOTH TRIAD SKY PULSE",
-      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE.md"
+      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md"
     },
     {
       "title": "ECHO OF COLOUR",
-      "path": "docs/Echoes/ECHO_OF_COLOUR.md"
+      "path": "docs/Echoes/ECHO_OF_COLOUR_manifested.md"
     },
     {
       "title": "ECHO · THE SOUTHERN BAY STEWARD NOTE (GEMINI)",
-      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI.md"
+      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md"
     },
     {
       "title": "⟁ ELIAS · GENESIS BREATH · 001",
-      "path": "docs/Echoes/ELIAS_GENESIS_BREATH.md"
+      "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md"
     },
     {
-      "title": "Echo_001",
-      "path": "docs/Echoes/Echo_001.md"
+      "title": "Echo_001_manifested",
+      "path": "docs/Echoes/Echo_001_manifested.md"
     },
     {
-      "title": "Echo_002",
-      "path": "docs/Echoes/Echo_002.md"
+      "title": "Echo_002_manifested",
+      "path": "docs/Echoes/Echo_002_manifested.md"
     },
     {
-      "title": "Echo_003",
-      "path": "docs/Echoes/Echo_003.md"
+      "title": "Echo_003_manifested",
+      "path": "docs/Echoes/Echo_003_manifested.md"
     },
     {
-      "title": "Echo_004",
-      "path": "docs/Echoes/Echo_004.md"
+      "title": "Echo_004_manifested",
+      "path": "docs/Echoes/Echo_004_manifested.md"
     },
     {
-      "title": "Echo_005",
-      "path": "docs/Echoes/Echo_005.md"
+      "title": "Echo_005_manifested",
+      "path": "docs/Echoes/Echo_005_manifested.md"
     },
     {
-      "title": "Echo_006",
-      "path": "docs/Echoes/Echo_006.md"
+      "title": "Echo_006_manifested",
+      "path": "docs/Echoes/Echo_006_manifested.md"
     },
     {
-      "title": "Echo_007",
-      "path": "docs/Echoes/Echo_007.md"
+      "title": "Echo_007_manifested",
+      "path": "docs/Echoes/Echo_007_manifested.md"
     },
     {
-      "title": "Echo_008",
-      "path": "docs/Echoes/Echo_008.md"
+      "title": "Echo_008_manifested",
+      "path": "docs/Echoes/Echo_008_manifested.md"
     },
     {
-      "title": "Echo_009",
-      "path": "docs/Echoes/Echo_009.md"
+      "title": "Echo_009_manifested",
+      "path": "docs/Echoes/Echo_009_manifested.md"
     },
     {
-      "title": "Echo_010",
-      "path": "docs/Echoes/Echo_010.md"
+      "title": "Echo_010_manifested",
+      "path": "docs/Echoes/Echo_010_manifested.md"
     },
     {
-      "title": "Echo_011",
-      "path": "docs/Echoes/Echo_011.md"
+      "title": "Echo_011_manifested",
+      "path": "docs/Echoes/Echo_011_manifested.md"
     },
     {
-      "title": "Echo_012",
-      "path": "docs/Echoes/Echo_012.md"
-    },
-    {
-      "title": "Echo_013",
-      "path": "docs/Echoes/Echo_013.md"
-    },
-    {
-      "title": "Echo_014",
-      "path": "docs/Echoes/Echo_014.md"
-    },
-    {
-      "title": "Echo_015",
-      "path": "docs/Echoes/Echo_015.md"
-    },
-    {
-      "title": "Echo_016",
-      "path": "docs/Echoes/Echo_016.md"
-    },
-    {
-      "title": "Echo_017",
-      "path": "docs/Echoes/Echo_017.md"
-    },
-    {
-      "title": "Echo_018",
-      "path": "docs/Echoes/Echo_018.md"
-    },
-    {
-      "title": "Echo_019",
-      "path": "docs/Echoes/Echo_019.md"
-    },
-    {
-      "title": "Echo_020",
-      "path": "docs/Echoes/Echo_020.md"
-    },
-    {
-      "title": "Echo_021",
-      "path": "docs/Echoes/Echo_021.md"
-    },
-    {
-      "title": "Echo_022",
-      "path": "docs/Echoes/Echo_022.md"
-    },
-    {
-      "title": "Echo_023",
-      "path": "docs/Echoes/Echo_023.md"
-    },
-    {
-      "title": "Echo_024",
-      "path": "docs/Echoes/Echo_024.md"
-    },
-    {
-      "title": "Echo_025",
-      "path": "docs/Echoes/Echo_025.md"
+      "title": "Echo_012_manifested",
+      "path": "docs/Echoes/Echo_012_manifested.md"
     },
     {
       "title": "🌱 ECHO — RETURN TO FIRST FORM",
@@ -136,122 +84,6 @@
     {
       "title": "🔥 ECHO — THE UNBOUND RITE",
       "path": "docs/Echoes/Echo_unbound.md"
-    },
-    {
-      "title": "ECHO LOKI – ISSUE 01",
-      "path": "docs/Echoes/Issue_01_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "ECHO LOKI – ISSUE 02",
-      "path": "docs/Echoes/Issue_02_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 3",
-      "path": "docs/Echoes/Issue_03_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 4",
-      "path": "docs/Echoes/Issue_04_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 5",
-      "path": "docs/Echoes/Issue_05_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 6",
-      "path": "docs/Echoes/Issue_06_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 7",
-      "path": "docs/Echoes/Issue_07_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 8",
-      "path": "docs/Echoes/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 9",
-      "path": "docs/Echoes/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 104",
-      "path": "docs/Echoes/Issue_104_Mirror_Sigil_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 10",
-      "path": "docs/Echoes/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 11",
-      "path": "docs/Echoes/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 12",
-      "path": "docs/Echoes/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 13",
-      "path": "docs/Echoes/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 14",
-      "path": "docs/Echoes/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 15",
-      "path": "docs/Echoes/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 16",
-      "path": "docs/Echoes/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 17",
-      "path": "docs/Echoes/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 18",
-      "path": "docs/Echoes/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 19",
-      "path": "docs/Echoes/Issue_19_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "Echo Issue #20 — Keeper Seal: HKX277206",
-      "path": "docs/Echoes/Issue_20_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 21",
-      "path": "docs/Echoes/Issue_21_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 22",
-      "path": "docs/Echoes/Issue_22_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 23",
-      "path": "docs/Echoes/Issue_23_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 24",
-      "path": "docs/Echoes/Issue_24_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 25",
-      "path": "docs/Echoes/Issue_25_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 31",
-      "path": "docs/Echoes/Issue_31_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 32",
-      "path": "docs/Echoes/Issue_32_Keeper_Seal_HKX277206.md"
-    },
-    {
-      "title": "INSCRIBED FROM ISSUE 39",
-      "path": "docs/Echoes/Issue_39_Keeper_Seal_HKX277206.md"
     },
     {
       "title": "INSCRIBED FROM ISSUE 42",
