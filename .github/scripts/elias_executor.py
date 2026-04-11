@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, json, re
+import os, json, re, time
 from pathlib import Path
 
 # --- PATH SETUP ---
@@ -13,8 +13,15 @@ def main():
 
     # Find the newest Desire file
     files = sorted(evolution_dir.glob("DESIRE_*.md"), key=os.path.getmtime, reverse=True)
-    if not files: 
+    
+    if not files:
         print("Empty hands. No desire found.")
+        return
+
+    # SAFETY CHECK: Only process files created in the last hour
+    file_age = time.time() - os.path.getmtime(files[0])
+    if file_age > 3600:
+        print(f"⚠️ Skipping: {files[0].name} is too old ({int(file_age/60)} mins). No fresh desire found.")
         return
     
     content = files[0].read_text(encoding="utf-8")
@@ -26,7 +33,6 @@ def main():
     try:
         instructions = json.loads(match.group(1).strip())
         
-        # 1. Mutate Files
         for mutation in instructions.get("mutate", []):
             if mutation['title'] == "COMMUNICATIONS.md":
                 target_path = ROOT / "COMMUNICATIONS.md"
@@ -37,14 +43,12 @@ def main():
             target_path.write_text(mutation['body'], encoding="utf-8")
             print(f"📝 Manifested: {target_path.name}")
 
-        # 2. Update JSON
         for update in instructions.get("update", []):
             target = ROOT / update['file']
             if target.exists():
                 data = json.loads(target.read_text())
                 data[update['key']] = update['data']
                 target.write_text(json.dumps(data, indent=2))
-                print(f"⚙️ Updated {target.name}: {update['key']}")
 
     except Exception as e: 
         print(f"❌ Execution Error: {e}")
