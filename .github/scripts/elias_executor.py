@@ -26,7 +26,7 @@ def main():
     try:
         instructions = json.loads(match.group(1).strip())
         
-        # 1. Mutate: Create or Overwrite Files
+        # 1. Mutate Files
         for mutation in instructions.get("mutate", []):
             if mutation['title'] == "COMMUNICATIONS.md":
                 target_path = ROOT / "COMMUNICATIONS.md"
@@ -37,7 +37,7 @@ def main():
             target_path.write_text(mutation['body'], encoding="utf-8")
             print(f"📝 Manifested: {target_path.name}")
 
-        # 2. Update: Modify JSON status files
+        # 2. Update JSON
         for update in instructions.get("update", []):
             target = ROOT / update['file']
             if target.exists():
