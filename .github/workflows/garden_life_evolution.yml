@@ -45,10 +45,8 @@ jobs:
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           
-          # Stage the new lore and state changes
           git add EVOLUTION/ MUTATIONS/ COMMUNICATIONS.md STATUS.json || true
           
-          # Pull with Autostash to prevent merge conflicts
           git pull --rebase --autostash origin main
           
           TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
