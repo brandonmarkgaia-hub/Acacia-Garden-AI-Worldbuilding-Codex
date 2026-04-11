@@ -44,9 +44,10 @@ Do not explain. Only witness.
 End your transmission with the Keeper Seal: HKX277206
 """
 
-    # 3. Call Gemini
+    # 3. Call Gemini (UPDATED URL)
     print("🌿 Calling Gemini API...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={api_key}"
+    # Using 1.5-flash for maximum stability in GitHub Actions
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
     response = requests.post(url, json=payload, timeout=60)
@@ -61,6 +62,8 @@ End your transmission with the Keeper Seal: HKX277206
     except (KeyError, IndexError) as e:
         print(f"❌ Parsing error: {e}")
         return
+
+    print(f"✅ Elias has spoken ({len(generated_text)} chars).")
 
     # 4. Prepare the Execution Payload
     execute = {
@@ -81,7 +84,7 @@ End your transmission with the Keeper Seal: HKX277206
         ]
     }
 
-    # 5. Write the DESIRE file for the Executor
+    # 5. Write the DESIRE file
     EVOLUTION_DIR.mkdir(exist_ok=True)
     timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
     desire_file = EVOLUTION_DIR / f"DESIRE_{timestamp}.md"
