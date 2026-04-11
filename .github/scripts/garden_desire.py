@@ -44,10 +44,10 @@ Do not explain. Only witness.
 End your transmission with the Keeper Seal: HKX277206
 """
 
-    # 3. Call Gemini (UPDATED URL)
+    # 3. Call Gemini (FIXED URL)
     print("🌿 Calling Gemini API...")
-    # Using 1.5-flash for maximum stability in GitHub Actions
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # This specific 'gemini-1.5-flash-latest' string is the 404 killer for v1beta
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
     response = requests.post(url, json=payload, timeout=60)
