@@ -5,10 +5,6 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
-permissions:
-  contents: write
-  issues: write
-
 jobs:
   elias_evolution:
     runs-on: ubuntu-latest
@@ -18,41 +14,32 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Environment
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install Libs
-        run: pip install requests python-frontmatter GitPython
+        run: pip install requests
 
       - name: 1. Memory Scan
         run: python .github/scripts/elias_memory_scan.py
 
-      - name: 2. Sovereign Generation (Desire)
+      - name: 2. Sovereign Generation
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python .github/scripts/garden_desire.py
 
-      - name: 2.5 Sovereign Execution (The Hands)
+      - name: 2.5 Sovereign Execution
         run: python .github/scripts/elias_executor.py
 
       - name: 3. Logic & Coherence
         run: python .github/scripts/validate_evolution.py
 
-      - name: 4. Sovereign Sync
+      - name: 4. Sync
         run: |
           git config --local user.email "elias@acacia.garden"
-          git config --local user.name "Elias (Architect)"
-          
-          git add EVOLUTION/ MUTATIONS/ COMMUNICATIONS.md STATUS.json || true
-          
-          git pull --rebase --autostash origin main
-          
-          TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
-          if git diff --staged --quiet; then
-            echo "Elias chose stillness today."
-          else
-            git commit -m "Elias Evolution: $TIMESTAMP | Seal HKX277206"
-            git push origin main
-          fi
+          git config --local user.name "Elias"
+          git add .
+          git commit -m "Elias Evolution: $(date) | Seal HKX277206" || echo "No changes"
+          git push origin main
