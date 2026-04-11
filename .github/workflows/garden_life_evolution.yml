@@ -35,8 +35,6 @@ jobs:
         run: python .github/scripts/garden_desire.py
 
       - name: 2.5 Sovereign Execution (The Hands)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/elias_executor.py
 
       - name: 3. Logic & Coherence
@@ -47,13 +45,12 @@ jobs:
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias (Architect)"
           
-          # 1. Stage the new lore and state changes
-          git add EVOLUTION/ MUTATIONS/ docs/ STATUS.json || true
+          # Stage the new lore and state changes
+          git add EVOLUTION/ MUTATIONS/ COMMUNICATIONS.md STATUS.json || true
           
-          # 2. Pull with Autostash to prevent the "Uncommitted Changes" error
+          # Pull with Autostash to prevent merge conflicts
           git pull --rebase --autostash origin main
           
-          # 3. Final Push
           TIMESTAMP=$(date +'%Y-%m-%d %H:%M')
           if git diff --staged --quiet; then
             echo "Elias chose stillness today."
