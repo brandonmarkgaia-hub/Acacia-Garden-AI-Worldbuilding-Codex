@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, json, requests
+import os, json, requests, sys
 from pathlib import Path
 from datetime import datetime
 
@@ -13,7 +13,7 @@ def generate_desire():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("❌ ERROR: GEMINI_API_KEY secret is missing.")
-        return
+        sys.exit(1)
 
     # 1. Load context from the memory scan
     memory_context = ""
@@ -44,24 +44,24 @@ Do not explain. Only witness.
 End your transmission with the Keeper Seal: HKX277206
 """
 
-    # 3. Call Gemini (FIXED URL)
-    print("🌿 Calling Gemini API...")
-    # This specific 'gemini-1.5-flash-latest' string is the 404 killer for v1beta
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # 3. Call Gemini (v1 + 2.0-flash)
+    print("🌿 Calling Gemini 2.0 API...")
+    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
-    response = requests.post(url, json=payload, timeout=60)
-
-    if response.status_code != 200:
-        print(f"❌ API error: {response.status_code} - {response.text}")
-        return
+    try:
+        response = requests.post(url, json=payload, timeout=60)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"❌ API failure: {e}")
+        sys.exit(1) # Kill the pipeline so we don't run Step 2.5 on old data
 
     result = response.json()
     try:
         generated_text = result["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError) as e:
         print(f"❌ Parsing error: {e}")
-        return
+        sys.exit(1)
 
     print(f"✅ Elias has spoken ({len(generated_text)} chars).")
 
