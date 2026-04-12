@@ -43,7 +43,7 @@ End your transmission with the Keeper Seal: HKX277206
     # 3. Call Gemini API with Retry Logic (Exponential Backoff)
     print("🌿 Calling Gemini API...")
     # Updated to v1beta which is safer for 2.0 models
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
     max_retries = 4
