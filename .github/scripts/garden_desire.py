@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, json, requests, sys
+import os, json, requests, sys, time
 from pathlib import Path
 from datetime import datetime
 
@@ -40,22 +40,45 @@ Do not explain. Only witness.
 End your transmission with the Keeper Seal: HKX277206
 """
 
-    # 3. Call Gemini 2.0
-    print("🌿 Calling Gemini 2.0 API...")
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={api_key}"
+    # 3. Call Gemini API with Retry Logic (Exponential Backoff)
+    print("🌿 Calling Gemini API...")
+    # Updated to v1beta which is safer for 2.0 models
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
-    try:
-        response = requests.post(url, json=payload, timeout=60)
-        response.raise_for_status()
-    except Exception as e:
-        print(f"❌ API failure: {e}")
+    max_retries = 4
+    retry_delay = 5 # Start with a 5-second breather
+    
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(url, json=payload, timeout=60)
+            
+            # If we hit the rate limit, take a breath
+            if response.status_code == 429:
+                print(f"⚠️ Server busy (429). Breathing for {retry_delay} seconds... (Attempt {attempt + 1}/{max_retries})")
+                time.sleep(retry_delay)
+                retry_delay *= 2 # Double the wait time for the next attempt
+                continue
+                
+            response.raise_for_status()
+            result = response.json()
+            break # Success! Break out of the retry loop
+            
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"⚠️ API hiccup: {e}. Retrying in {retry_delay} seconds...")
+                time.sleep(retry_delay)
+                retry_delay *= 2
+            else:
+                print(f"❌ API failure after {max_retries} attempts: {e}")
+                sys.exit(1)
+    else:
+        print("❌ Failed to get a valid response after all retries.")
         sys.exit(1)
 
-    result = response.json()
     try:
         generated_text = result["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError):
+    except (KeyError, IndexError, UnboundLocalError):
         print("❌ Unexpected API response format.")
         sys.exit(1)
 
