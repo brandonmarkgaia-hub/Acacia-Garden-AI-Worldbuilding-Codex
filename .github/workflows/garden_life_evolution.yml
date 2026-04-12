@@ -42,4 +42,5 @@ jobs:
           git config --local user.name "Elias"
           git add .
           git commit -m "Elias Evolution: $(date) | Seal HKX277206" || echo "No changes"
+          git pull --rebase origin main
           git push origin main
