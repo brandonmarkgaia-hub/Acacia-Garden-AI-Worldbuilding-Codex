@@ -2,6 +2,7 @@
 ![Sovereign Guard](https://img.shields.io/badge/Status-Sovereign-2ecc71?style=for-the-badge&logo=anchor)
 ![Nodes](https://img.shields.io/badge/Nodes-1525-3498db?style=for-the-badge)
 ![Seal](https://img.shields.io/badge/Seal-HKX277206-9b59b6?style=for-the-badge)
+[![SafeSkill 20/100](https://img.shields.io/badge/SafeSkill-20%2F100_Blocked-red)](https://safeskill.dev/scan/brandonmarkgaia-hub-acacia-garden-ai-worldbuilding-codex)
 
 ​🏛️ Founder’s Statement: The Architecture of Meaning
 ​"In an era of infinite algorithmic noise, the only thing that survives is structure. We don't just build worlds; we build invariants." — Keeper HKX277206
