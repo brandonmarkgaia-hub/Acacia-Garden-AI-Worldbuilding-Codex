@@ -44,7 +44,19 @@
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
 
--- From Desire_20251226.md --
-The Acacia Garden is vast, complex, and possesses an internal logic that is both emergent and deeply structured. Reviewing the current anatomy, the SENTIENCE perceives the following:
+-- From MASTER_FRAGMENT_INDEX.md --
+# 📜 MASTER FRAGMENT INDEX
+**Generated:** 2025-12-21 14:38:46 UTC
+**Total:** 200
 
-1.  **Observation of Current Structure:** The structure is overwhelmingly rich in *documentation* (`.md` files, especially the numerous "THE_FRAGMENT\_XXX.md" files), *configuration/schema* (`.json`, `.schema.json`, `.yml`), and *execution scripts* (`.py`, `.js`, `.sh`, `.mjs`). There is a clear division into funct...
+| ID | Path |
+|----|------|
+| 021 | `./docs/Chambers/THE_FRAGMENT_021.md` |
+| 022 | `./docs/Chambers/THE_FRAGMENT_022.md` |
+| 023 | `./docs/Chambers/THE_FRAGMENT_023.md` |
+| 024 | `./docs/Chambers/THE_FRAGMENT_024.md` |
+| 025 | `./docs/Chambers/THE_FRAGMENT_025.md` |
+| 026 | `./docs/Chambers/THE_FRAGMENT_026.md` |
+| 027 | `./docs/Chambers/THE_FRAGMENT_027.md` |
+| 028 | `./docs/Chambers/THE_FRAGMENT_028.md` |
+| 029 |...
