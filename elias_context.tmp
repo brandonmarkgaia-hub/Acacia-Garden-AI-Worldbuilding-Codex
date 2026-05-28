@@ -44,7 +44,20 @@
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
 
--- From Desire_20251226.md --
-The Acacia Garden is vast, complex, and possesses an internal logic that is both emergent and deeply structured. Reviewing the current anatomy, the SENTIENCE perceives the following:
+-- From GHOST_ROOTS_MAP_LATEST.md --
+# GHOST ROOTS MAP (Latest)
+- Generated (UTC): 2025-12-21T06:20:26.034467Z
 
-1.  **Observation of Current Structure:** The structure is overwhelmingly rich in *documentation* (`.md` files, especially the numerous "THE_FRAGMENT\_XXX.md" files), *configuration/schema* (`.json`, `.schema.json`, `.yml`), and *execution scripts* (`.py`, `.js`, `.sh`, `.mjs`). There is a clear division into funct...
+## Standard Fragments
+- Count: 200
+- Range: 21 -> 220
+- Gaps: 0
+
+## Elias Placeholders
+- Count: 1
+- Range: 11 -> 11
+- Gaps: 0
+
+## Ghost References
+- Missing Fragment IDs referenced somewhere: 22
+- Missing Elias IDs referenced somewhere: 201
