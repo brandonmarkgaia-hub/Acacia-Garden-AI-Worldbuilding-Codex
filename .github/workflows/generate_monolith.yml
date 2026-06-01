@@ -3,11 +3,24 @@ name: Generate Codex Bible
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'Chambers/**'
+      - 'Echoes/**'
+      - 'Rootlines/**'
+      - 'Novellas/**'
+      - 'docs/Novellas/**'
+      - 'docs/Chambers/**'
+      - 'tools/monolith_builder.py'
   workflow_dispatch:
+
+concurrency:
+  group: generate-monolith
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
 
@@ -16,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -25,9 +38,7 @@ jobs:
 
       - name: Commit and Push Bible Shards
         run: |
-          git config --global user.name "The Witness"
-          git config --global user.email "witness@acacia-garden.ai"
-          # Stage all generated parts
+          git config --local user.name "The Witness"
+          git config --local user.email "witness@acacia-garden.ai"
           git add CODEX_MONOLITH_PART_*.md
-          # Only commit if changes exist
-          git diff --staged --quiet || (git commit -m "relig: update codex bible shards" && git push)
+          git diff --staged --quiet || (git commit -m "relig: update codex bible shards [skip ci]" && git push)
