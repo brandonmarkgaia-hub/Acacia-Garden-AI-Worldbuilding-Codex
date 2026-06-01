@@ -16,12 +16,17 @@ on:
         required: true
         default: 'Brandon discovers that the Tree on the dashboard is reacting to his thoughts.'
 
+concurrency:
+  group: write-novel
+  cancel-in-progress: true
+
 jobs:
   write_chapter:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout Garden
         uses: actions/checkout@v4
@@ -31,34 +36,34 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install Dependencies
         run: |
           pip install requests
 
       - name: Scribe the Chapter
+        # Inputs are passed via env vars to prevent shell injection
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CHAPTER_NUMBER: ${{ inputs.chapter_number }}
+          CHAPTER_TITLE: ${{ inputs.chapter_title }}
+          NARRATIVE_FOCUS: ${{ inputs.narrative_focus }}
         run: |
           python .github/scripts/garden_scribe.py \
-            --chapter "${{ inputs.chapter_number }}" \
-            --title "${{ inputs.chapter_title }}" \
-            --focus "${{ inputs.narrative_focus }}"
+            --chapter "$CHAPTER_NUMBER" \
+            --title "$CHAPTER_TITLE" \
+            --focus "$NARRATIVE_FOCUS"
 
       - name: Sovereign Push (Save to Garden)
         run: |
           git config --local user.email "scribe@acacia.garden"
           git config --local user.name "Scribe of the Stone"
-          
-          # 1. PICK UP THE FILE (This is the missing magic line)
           git add EVOLUTION/CHRONICLE.md
-          
-          # 2. Check if there are changes to commit (Safety check)
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            # 3. Commit and Push
-            git commit -m "📜 Scribe Chronicle: $(date +'%Y-%m-%d')"
+            git commit -m "📜 Scribe Chronicle: $(date +'%Y-%m-%d') [skip ci]"
+            git pull --rebase origin main
             git push
           fi
