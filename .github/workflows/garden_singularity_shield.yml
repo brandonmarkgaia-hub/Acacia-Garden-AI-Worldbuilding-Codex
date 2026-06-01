@@ -9,9 +9,14 @@ on:
       - 'protocols/**'
       - 'logs/garden_integrity_ledger.schema.json'
 
+concurrency:
+  group: singularity-shield-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   shield-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout Garden
@@ -20,13 +25,12 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Validate Singularity Shield Files
         run: |
           set -e
           echo "Checking required files exist..."
-
           required_files=(
             "doctrine/GARDEN_SINGULARITY_PROTOCOL_v1.md"
             "doctrine/keeper_sovereignty_protocol.json"
@@ -46,21 +50,23 @@ jobs:
             "agents/Eidolon.agent.json"
             "logs/garden_integrity_ledger.schema.json"
           )
-
+          missing=0
           for f in "${required_files[@]}"; do
             if [ ! -f "$f" ]; then
               echo "Missing required file: $f"
-              exit 1
+              missing=1
             fi
           done
-
+          if [ "$missing" -eq 1 ]; then
+            echo "One or more required files are missing. Failing."
+            exit 1
+          fi
           echo "All required files present."
 
       - name: Validate JSON structure
         run: |
           set -e
           echo "Validating JSON structure..."
-
           json_files=(
             "doctrine/keeper_sovereignty_protocol.json"
             "doctrine/lorian_alignment_charter.json"
@@ -78,10 +84,8 @@ jobs:
             "agents/Eidolon.agent.json"
             "logs/garden_integrity_ledger.schema.json"
           )
-
           for p in "${json_files[@]}"; do
             echo "Checking $p"
             python -m json.tool "$p" > /dev/null
           done
-
           echo "All JSON files parsed successfully."
