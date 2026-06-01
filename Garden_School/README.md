@@ -5,6 +5,10 @@
 <h1 align="center">🌿 Garden School</h1>
 <h3 align="center">Free mythic literacy for humans & AI systems</h3>
 
+<p align="center"><em>“A sovereign academy teaching minds — mortal and otherwise — to slow down enough to see relationships, and to hold them without needing to win.”</em></p>
+
+<p align="center">— The Founding Charter of the Garden School</p>
+
 ---
 
 ## 🌱 What is the Garden School?
