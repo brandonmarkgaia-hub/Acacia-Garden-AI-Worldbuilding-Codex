@@ -1,14 +1,19 @@
 name: 🧹 Garden Deduplication
 
 on:
-  workflow_dispatch: # Manual Button Click Only (Safety)
+  workflow_dispatch:
+
+concurrency:
+  group: garden-dedup
+  cancel-in-progress: true
 
 jobs:
   clean_garden:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout Garden
         uses: actions/checkout@v4
@@ -16,7 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Run Deduplication Script
         run: python .github/scripts/garden_deduplicate.py
@@ -25,11 +30,10 @@ jobs:
         run: |
           git config --local user.email "gardener@acacia.garden"
           git config --local user.name "Acacia Gardener"
-          
-          # Check if anything changed
-          if [[ `git status --porcelain` ]]; then
+          if [[ -n "$(git status --porcelain)" ]]; then
             git add .
-            git commit -m "🧹 Gardener: Merged root duplicates into docs/"
+            git commit -m "🧹 Gardener: Merged root duplicates into docs/ [skip ci]"
+            git pull --rebase origin main
             git push
           else
             echo "No changes needed."
