@@ -1,12 +1,16 @@
 name: Decentralized Seed (IPFS + IPNS)
 
 on:
-  # Manual trigger only – no automatic runs on push
   workflow_dispatch:
+
+concurrency:
+  group: decentralized-seed
+  cancel-in-progress: true
 
 jobs:
   seed:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout Codex
@@ -25,18 +29,21 @@ jobs:
           service: pinata
           pinataKey: ${{ secrets.PINATA_API_KEY }}
           pinataSecret: ${{ secrets.PINATA_API_SECRET }}
-          # pinataPinName is deprecated; use pinName instead
           pinName: "Acacia-Garden-HKX277206"
 
       - name: Update IPNS Pointer
         # Only try to update IPNS if upload succeeded
         if: ${{ success() && steps.upload.outputs.hash != '' }}
+        env:
+          PINATA_JWT: ${{ secrets.PINATA_JWT }}
+          IPFS_CID: ${{ steps.upload.outputs.hash }}
         run: |
-          # This tells the network to point your permanent 'Sovereign-Key' to the new growth
+          # Use jq to safely construct JSON payload — prevents injection if CID contains special chars
+          PAYLOAD=$(jq -n \
+            --arg cid "$IPFS_CID" \
+            --arg key_name "Acacia-Garden-Sovereign-Key" \
+            '{cid: $cid, key_name: $key_name}')
           curl -X POST https://api.pinata.cloud/v3/ipns/records \
-          -H "Authorization: Bearer ${{ secrets.PINATA_JWT }}" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "cid": "${{ steps.upload.outputs.hash }}",
-            "key_name": "Acacia-Garden-Sovereign-Key"
-          }'
+            -H "Authorization: Bearer $PINATA_JWT" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"
