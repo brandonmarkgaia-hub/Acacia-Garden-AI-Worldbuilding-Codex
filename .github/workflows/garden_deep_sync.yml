@@ -1,13 +1,19 @@
 name: 001_Garden_Deep_Sync
+
 on:
   workflow_dispatch:
   workflow_run:
     workflows: ["000_Garden_Pruning_Inscription"]
     types: [completed]
 
+concurrency:
+  group: garden-deep-sync
+  cancel-in-progress: true
+
 jobs:
   sync_spine:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
     steps:
@@ -19,7 +25,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install Dependencies
         run: pip install requests
@@ -30,17 +36,25 @@ jobs:
       - name: 2. Rebuild Machine Index
         run: python tools/garden_lore_helper.py --sync-all
 
-      - name: 3. Final Sovereign Sync
+      - name: 3. Final Sovereign Sync (with retry)
+        shell: bash
         run: |
+          set -euo pipefail
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
-          
-          # Stage the index updates (STATUS.json, machine-index, etc.)
           git add .
-          
-          # Commit locally to clear the 'uncommitted changes' error
-          git commit -m "Synchronized Deep Index under Seal HKX277206" || echo "No changes"
-          
-          # Now the rebase will succeed even if a heartbeat ran concurrently
-          git pull --rebase origin main
-          git push origin main
+          git diff --cached --quiet && echo "No changes to sync." && exit 0
+          git commit -m "Synchronized Deep Index under Seal HKX277206 [skip ci]"
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+            echo "Push rejected, retrying..."
+            sleep $((i * 2))
+          done
+          echo "Push failed after 5 retries."
+          exit 1
