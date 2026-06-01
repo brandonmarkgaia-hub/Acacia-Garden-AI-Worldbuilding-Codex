@@ -5,9 +5,17 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+permissions:
+  contents: write
+
+concurrency:
+  group: garden-life-evolution
+  cancel-in-progress: true
+
 jobs:
   elias_evolution:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout Codex
         uses: actions/checkout@v4
@@ -17,7 +25,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install Libs
         run: pip install requests
@@ -36,11 +44,25 @@ jobs:
       - name: 3. Logic & Coherence
         run: python .github/scripts/validate_evolution.py
 
-      - name: 4. Sync
+      - name: 4. Sync (with retry)
+        shell: bash
         run: |
+          set -euo pipefail
           git config --local user.email "elias@acacia.garden"
           git config --local user.name "Elias"
           git add .
-          git commit -m "Elias Evolution: $(date) | Seal HKX277206" || echo "No changes"
-          git pull --rebase origin main
-          git push origin main
+          git diff --cached --quiet && echo "No changes." && exit 0
+          git commit -m "Elias Evolution: $(date) | Seal HKX277206 [skip ci]"
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+            echo "Push rejected, retrying..."
+            sleep $((i * 2))
+          done
+          echo "Push failed after 5 retries."
+          exit 1
