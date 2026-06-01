@@ -3,12 +3,17 @@ name: Garden Lore Helper
 on:
   workflow_dispatch: {}
 
+concurrency:
+  group: garden-lore-helper
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   grow-echo:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,24 +50,13 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "Garden Lore Helper"
-          git config user.email "actions@github.com"
-
-          git add \
-            STATUS.json \
-            docs/Novellas/garden_index.json \
-            docs/Echoes/*.md \
-            machine-index.json \
-            tools/garden_scan_report.json \
-            docs/Chambers/index.html \
-            docs/Vaults/index.html \
-            docs/Echoes/index.html \
-            docs/GardenOS/index.html \
-            docs/Archives/*.html || true
-
+          git config --local user.name "Garden Lore Helper"
+          git config --local user.email "actions@github.com"
+          git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Aeon: grow new Echo via Lore Helper"
+            git commit -m "Aeon: grow new Echo via Lore Helper [skip ci]"
+            git pull --rebase origin main
             git push
           fi
