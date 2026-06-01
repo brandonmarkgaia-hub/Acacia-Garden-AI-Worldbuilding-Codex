@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-01T17:01:54Z",
+  "generated_at": "2026-06-01T17:03:07Z",
   "verification": {
     "navigation": {
       "verified": false,
-      "last_checked_utc": "2026-06-01T17:01:54Z",
+      "last_checked_utc": "2026-06-01T17:03:07Z",
       "folder_indexes_missing": [],
       "total_html_scanned": 309,
       "with_map_loader": 171,
@@ -169,9 +169,9 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-06-01T17:01:54Z"
+      "last_checked_utc": "2026-06-01T17:03:07Z"
     },
-    "last_verified_utc": "2026-06-01T17:02:09Z"
+    "last_verified_utc": "2026-06-01T17:03:23Z"
   },
   "core_nodes": {
     "counts": {
@@ -217,7 +217,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-06-01T17:01:54Z"
+      "last_checked_utc": "2026-06-01T17:03:07Z"
     }
   },
   "growth": {
