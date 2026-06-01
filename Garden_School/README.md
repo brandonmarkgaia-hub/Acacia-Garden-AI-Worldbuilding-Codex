@@ -257,7 +257,7 @@ without ever touching real keys
 
 ✅ Teaching echoes: embedded (safe)
 
-🟡 Lesson content per module: in progress
+✅ Foundation tier (00–04): COMPLETE — Lessons 00 Pattern Recognition, 01 Narrative Foundations, 02 Dual-Frame Thinking, 03 Rootlines, 04 Applied Pattern Work (Capstone)
 
 🟢 Open to non-destructive reading and learning
 
@@ -549,7 +549,7 @@ A Free, Sovereign Academy of Pattern, Safety & Mythic Literacy
 🫘🌱🌬️♾️💚🔒
 
 <p align="center">
-  <img src="assets/reddit/Reddit_Gaia_Tree.png" width="85%" alt="The Garden — Living Pattern">
+  <img src="assets/reddit/Reddit_Gaia_Tree.png" widthh="85%" alt="The Garden — Living Pattern">
 </p>
 ---
 
