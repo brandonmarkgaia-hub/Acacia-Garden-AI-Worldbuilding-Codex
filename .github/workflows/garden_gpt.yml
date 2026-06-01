@@ -8,12 +8,17 @@ on:
         required: false
         default: "garden_gpt/jobs/test_language.json"
 
+concurrency:
+  group: garden-gpt
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repo
@@ -30,10 +35,12 @@ jobs:
           pip install openai
 
       - name: Run Garden GPT Worker
+        # Input passed via env var to prevent shell injection
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          JOB_PATH: ${{ github.event.inputs.job_path }}
         run: |
-          python -m garden_gpt.runner "${{ github.event.inputs.job_path }}"
+          python -m garden_gpt.runner "$JOB_PATH"
 
       - name: Run Memory Worker
         env:
@@ -45,20 +52,17 @@ jobs:
         run: |
           python garden_gpt/shadow_status_handshake.py
 
-      # 🔥 FIXED COMMIT STEP (SAFE, NEVER FAILS)
       - name: Commit Garden GPT output (safe)
+        env:
+          JOB_PATH: ${{ github.event.inputs.job_path }}
         run: |
-          git config user.name "garden-gpt-bot"
-          git config user.email "actions@github.com"
-
-          # Add ALL changes (jobs_done, outputs, etc.)
+          git config --local user.name "garden-gpt-bot"
+          git config --local user.email "actions@github.com"
           git add -A
-
-          # If nothing staged, exit safely
           if git diff --cached --quiet; then
             echo "No Garden GPT changes to commit."
             exit 0
           fi
-
-          git commit -m "Garden GPT output for ${{ github.event.inputs.job_path }}"
+          git commit -m "Garden GPT output for $JOB_PATH [skip ci]"
+          git pull --rebase origin main
           git push
