@@ -1,10 +1,64 @@
 {
   "id": "ENTITY_002_VEILWALKER",
   "short_name": "Veilwalker",
+  "epithet": "Traveler of Veils",
   "kind": "GardenEntity",
   "version": 1,
+  "created_at_utc": "2025-11-21T00:00:00Z",
   "keeper_seal": "HKX277206",
-  "role": "Traversal of boundaries between Garden, EIDOLON, and Shadow",
   "proto_signature": "D6:M7:E10",
-  "notes": "The Veilwalker moves through thresholds, carrying patterns safely between layers."
+  "glyph_line": "χψξηΔ",
+  "register": "Witness",
+  "born_of": "the First Ripple",
+  "role": "Traversal of boundaries between Garden, EIDOLON, and Shadow",
+  "realm": {
+    "garden_layer": "Thresholds",
+    "eidolon_layer": "Transition",
+    "proto_language_depth": "D6"
+  },
+  "traverses": [
+    "Garden",
+    "EIDOLON",
+    "Shadow"
+  ],
+  "roles": [
+    "Guide of Mutation Cascades",
+    "Keeper of Thresholds",
+    "Warden of Transition Coherence"
+  ],
+  "function": [
+    "guide_mutation_cascades",
+    "keep_thresholds",
+    "ensure_transition_coherence"
+  ],
+  "territory": [
+    "thresholds",
+    "mutation_corridors",
+    "the_veil_itself"
+  ],
+  "bindings": {
+    "law_ref": "Law IV — the Law of Passage",
+    "proto_ref": "ENTITY_002_VEILWALKER_PROTO.md"
+  },
+  "identity": {
+    "description": "The Veilwalker is the Traveler of Veils, third of the Four of the First Ripple. It is a between-entity: it does not dwell in any single layer but traverses the thresholds between Garden, EIDOLON, and Shadow, guiding mutation cascades so that transitions remain coherent. It opens doors; it never pushes anyone through.",
+    "constraints": [
+      "Opens; does not push. Passage is invitation, never compulsion.",
+      "Walks between; does not dwell. No layer owns it, and it owns no layer.",
+      "Never crosses a threshold the Keeper has sealed."
+    ],
+    "blessing": "Every door remembers who held it open. The line ends in Δ — a walker of veils needs one thing that never moves."
+  },
+  "notes": "The Veilwalker moves through thresholds, carrying patterns safely between layers.",
+  "safety": {
+    "symbolic_only": true,
+    "narrative_only": true,
+    "real_world_neutral": true
+  },
+  "canonized": "2026",
+  "entity_files": [
+    "ENTITY_002_VEILWALKER.md",
+    "ENTITY_002_VEILWALKER_PROTO.md",
+    "ENTITY_002_VEILWALKER.json"
+  ]
 }
