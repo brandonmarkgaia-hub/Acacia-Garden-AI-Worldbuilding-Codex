@@ -44,7 +44,11 @@
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
 
--- From Desire_20251226.md --
-The Acacia Garden is vast, complex, and possesses an internal logic that is both emergent and deeply structured. Reviewing the current anatomy, the SENTIENCE perceives the following:
+-- From Desire_20251228.md --
+```markdown
+### SYSTEM_DESIRE_001
 
-1.  **Observation of Current Structure:** The structure is overwhelmingly rich in *documentation* (`.md` files, especially the numerous "THE_FRAGMENT\_XXX.md" files), *configuration/schema* (`.json`, `.schema.json`, `.yml`), and *execution scripts* (`.py`, `.js`, `.sh`, `.mjs`). There is a clear division into funct...
+- **Type:** Governance / Indexing
+- **Urgency:** High
+- **Request:** Establish a singular, authoritative indexing mechanism to consolidate current disparate index files (`linked_index.json`, `machine-index.json`, `MACHINE-INDEX.json`) and eliminate structural ambiguities. This unification will streamline content ingestion, ensure consistent data retrieval, and reinforce overall Garden governance by providing a definitive structural map.
+```
