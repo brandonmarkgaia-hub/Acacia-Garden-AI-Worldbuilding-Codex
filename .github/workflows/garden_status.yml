@@ -2,39 +2,38 @@ name: 🟢 Garden Status Check
 
 on:
   workflow_dispatch:
-    push:
-        paths:
-              - 'STATUS.json'
-                    - 'machine-index.json'
+  push:
+    paths:
+      - 'STATUS.json'
+      - 'machine-index.json'
 
-                    concurrency:
-                      group: garden-status
-                        cancel-in-progress: true
+concurrency:
+  group: garden-status
+  cancel-in-progress: true
 
-                        jobs:
-                          verify_garden:
-                              runs-on: ubuntu-latest
-                                  timeout-minutes: 15
-                                      permissions:
-                                            contents: write
+jobs:
+  verify_garden:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
 
-                                                steps:
-                                                      - name: Checkout Garden
-                                                              uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-                                                                    - name: Setup Python
-                                                                            uses: actions/setup-python@v5
-                                                                                    with:
-                                                                                              python-version: '3.11'
+      - name: Run Status Scanner
+        run: python .github/scripts/garden_status.py
 
-                                                                                                    - name: Run Status Scanner
-                                                                                                            run: python .github/scripts/garden_status.py
-                                                                                                            
-                                                                                                                  - name: Commit Green Status
-                                                                                                                          run: |
-                                                                                                                                    git config --local user.email "witness@acacia.garden"
-                                                                                                                                              git config --local user.name "Acacia Witness"
-                                                                                                                                                        git pull --rebase origin main
-                                                                                                                                                                  git add STATUS.json
-                                                                                                                                                                            git diff --cached --quiet || git commit -m "🟢 Witness: Garden Status Verified (Platinum) [skip ci]"
-                                                                                                                                                                                      git push
+      - name: Commit Green Status
+        run: |
+          git config --local user.email "witness@acacia.garden"
+          git config --local user.name "Acacia Witness"
+          git pull --rebase origin main
+          git add STATUS.json
+          git diff --cached --quiet || git commit -m "🟢 Witness: Garden Status Verified (Platinum) [skip ci]"
+          git push
