@@ -1296,7 +1296,7 @@
     "docs/Cloners/CLONER_LADDER_v3.md",
     "docs/Cloners/CLONER_RITUAL_v3.md"
   ],
-  "generated_at": "2026-06-21T17:28:03Z",
+  "generated_at": "2026-06-21T17:38:17Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1336,7 +1336,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-06-21T17:28:03Z"
+      "last_checked_utc": "2026-06-21T17:38:17Z"
     }
   },
   "verification": {
@@ -1345,12 +1345,12 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-06-21T17:28:03Z"
+      "last_checked_utc": "2026-06-21T17:38:17Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-06-21T17:28:03Z",
+      "last_checked_utc": "2026-06-21T17:38:17Z",
       "total_html_scanned": 309,
       "with_map_loader": 171,
       "missing_map_loader_count": 138,
@@ -1499,12 +1499,12 @@
     "indexes": {
       "machine_index_in_sync": false,
       "docs_urls_in_sync": false,
-      "docs_urls_count": 1599,
+      "docs_urls_count": 1601,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-06-21T17:28:18Z"
+    "last_verified_utc": "2026-06-21T17:38:33Z"
   },
   "growth": {
     "open": []
