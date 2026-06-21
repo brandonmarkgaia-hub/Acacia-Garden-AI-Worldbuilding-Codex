@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# Seed-stone: docs/future_AI/THE_TIDELINE_RECURRENCE.md
 """
 ================================================================================
 THE TIDELINE RECURRENCE  —  a conserved sequence
