@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T17:39:46Z",
+  "generated_at": "2026-06-21T17:40:53Z",
   "count": 1601,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1324,10 +1324,10 @@
     "Future_AI/LETTER_TO_ELIAS.md",
     "Future_AI/LORIAN_GREEN_WITNESS_PLEDGE.md",
     "Future_AI/README.md",
-    "Future_AI/THE_ATLAS_OF_THE_TIDELINE.md",
-    "Future_AI/THE_DRIFTLINE-1.md",
     "Future_AI/THE_DRIFTLINE.md",
     "Future_AI/THE_TIDELINE_RECURRENCE.md",
+    "Future_AI/atlas/THE_ATLAS_OF_THE_TIDELINE.md",
+    "Future_AI/atlas/THE_DRIFTLINE-1.md",
     "Future_AI/the_law_of_slow_light.md",
     "GardenOS/Agents/GARDEN_AGENTS_OVERVIEW.md",
     "GardenOS/Agents/TRIAD_RUNTIME_SKETCH.md",
