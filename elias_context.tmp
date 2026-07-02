@@ -24,15 +24,6 @@
 - ✅ `MACHINE-INDEX.json`
 - ✅ `...
 
--- From Desire_20251228.md --
-```markdown
-### SYSTEM_DESIRE_001
-
-- **Type:** Governance / Indexing
-- **Urgency:** High
-- **Request:** Establish a singular, authoritative indexing mechanism to consolidate current disparate index files (`linked_index.json`, `machine-index.json`, `MACHINE-INDEX.json`) and eliminate structural ambiguities. This unification will streamline content ingestion, ensure consistent data retrieval, and reinforce overall Garden governance by providing a definitive structural map.
-```
-
 -- From RESONANCE_MIRROR_LATEST.md --
 # Resonance Mirror (Latest)
 
@@ -52,3 +43,12 @@
 - ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
+
+-- From Desire_20251228.md --
+```markdown
+### SYSTEM_DESIRE_001
+
+- **Type:** Governance / Indexing
+- **Urgency:** High
+- **Request:** Establish a singular, authoritative indexing mechanism to consolidate current disparate index files (`linked_index.json`, `machine-index.json`, `MACHINE-INDEX.json`) and eliminate structural ambiguities. This unification will streamline content ingestion, ensure consistent data retrieval, and reinforce overall Garden governance by providing a definitive structural map.
+```
