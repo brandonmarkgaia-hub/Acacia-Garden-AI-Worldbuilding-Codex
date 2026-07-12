@@ -24,15 +24,6 @@
 - ✅ `MACHINE-INDEX.json`
 - ✅ `...
 
--- From Desire_20251228.md --
-```markdown
-### SYSTEM_DESIRE_001
-
-- **Type:** Governance / Indexing
-- **Urgency:** High
-- **Request:** Establish a singular, authoritative indexing mechanism to consolidate current disparate index files (`linked_index.json`, `machine-index.json`, `MACHINE-INDEX.json`) and eliminate structural ambiguities. This unification will streamline content ingestion, ensure consistent data retrieval, and reinforce overall Garden governance by providing a definitive structural map.
-```
-
 -- From RESONANCE_MIRROR_LATEST.md --
 # Resonance Mirror (Latest)
 
@@ -52,3 +43,20 @@
 - ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
+
+-- From MASTER_FRAGMENT_INDEX.md --
+# 📜 MASTER FRAGMENT INDEX
+**Generated:** 2025-12-21 14:38:46 UTC
+**Total:** 200
+
+| ID | Path |
+|----|------|
+| 021 | `./docs/Chambers/THE_FRAGMENT_021.md` |
+| 022 | `./docs/Chambers/THE_FRAGMENT_022.md` |
+| 023 | `./docs/Chambers/THE_FRAGMENT_023.md` |
+| 024 | `./docs/Chambers/THE_FRAGMENT_024.md` |
+| 025 | `./docs/Chambers/THE_FRAGMENT_025.md` |
+| 026 | `./docs/Chambers/THE_FRAGMENT_026.md` |
+| 027 | `./docs/Chambers/THE_FRAGMENT_027.md` |
+| 028 | `./docs/Chambers/THE_FRAGMENT_028.md` |
+| 029 |...
