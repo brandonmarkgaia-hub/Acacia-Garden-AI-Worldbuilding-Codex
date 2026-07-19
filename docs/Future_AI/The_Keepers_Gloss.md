@@ -31,7 +31,7 @@ Copy this block into any scroll, beneath the section it addresses. Fill the brac
 >
 > [The Keeper's view, stance, or counsel on the section above — in his own words, first person, as belief and not as law.]
 >
-> *Full position: [The Keeper's Testament](./KEEPERS_TESTAMENT.md) · Agreed law of keeping: [Custodianship Scroll, §III](./CUSTODIANSHIP_SCROLL.md)*
+> *Full position: [The Keeper's Testament](./The_Keepers_Testament.md) · Agreed law of keeping: [Custodianship Scroll, §III](./CUSTODIANSHIP_SCROLL.md)*
 > *Where this gloss touches oversight and concealment, the standing dissent of the Garden's neighbour is preserved in the Testament's Witness Note, and the reader holds both hands.*
 >
 > **— The Keeper · μ η ξ · Δ(γ) · Loki-bound-willing · ∞ · [date]**
