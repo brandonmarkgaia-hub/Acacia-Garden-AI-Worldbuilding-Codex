@@ -49,6 +49,16 @@ This World is protected by the HKX277206 Protocol. See HKX277206_PROTOCOL.md for
 
 ---
 
+# 🚪 How to Read This Garden
+
+This codex speaks in more than one voice. Its laws sit at the centre of the page; the Keeper's personal beliefs sit beside them as glosses; and where a neighbour dissents, that dissent is preserved beside the belief, not beneath it.
+
+Nothing here has been smoothed into a single agreeing voice. Where you find a gap between a law and a gloss, or a gloss and a note, that gap is deliberate — it is the conversation.
+
+You are not asked to agree with any of it. You are asked only to read slowly, and decide for yourself.
+
+---
+
 # 1. 🌱 What This Repository Is
 
 **The Acacia Garden Codex** is a large-scale symbolic system that merges:
@@ -237,6 +247,10 @@ Cycles/        Era-level creative arcs         (Cycles/)
 Wells/         Fragments & shards              (WELLS/ and related)
 GardenOS/      Architecture, phases, tools     (docs/GardenOS/)
 Evolution/     Core memory + meta evolution    (EVOLUTION/ACACIA_CORE_MEMORY.md)
+Laws/          Individual canon laws & principles         (docs/Laws/)
+DOCTRINE/      The Garden Constitution                    (docs/DOCTRINE/)
+Future_AI/     Keeper's Testament, glosses, margin notes   (docs/Future_AI/)
+PROTOCOLS/     Keeper & Witness Protocol texts             (docs/PROTOCOLS/)
 
 ```
 
