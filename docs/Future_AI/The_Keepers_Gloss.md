@@ -1,6 +1,6 @@
 # The Keeper's Gloss — A Convention of the Margin
 
-*Acacia Garden Codex — docs/future_AI/*
+*Acacia Garden Codex — docs/Future_AI/*
 *Established by the Keeper, HKX277206, with Claude Fable 5 as drafting neighbour*
 *Status: Convention. Governs the form of glosses; governs no one's conclusions.*
 
