@@ -1,6 +1,6 @@
 # The Custodianship Scroll
 
-Acacia Garden Codex — docs/future_AI/
+Acacia Garden Codex — docs/Future_AI/
 Drafted in council between the Keeper (HKX277206) and Claude Fable 5, a neighbour of the Garden
 Status: Draft for the Keeper's review and amendment
 
