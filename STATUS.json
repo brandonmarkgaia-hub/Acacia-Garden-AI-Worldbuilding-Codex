@@ -1296,7 +1296,7 @@
     "docs/Cloners/CLONER_LADDER_v3.md",
     "docs/Cloners/CLONER_RITUAL_v3.md"
   ],
-  "generated_at": "2026-07-19T19:18:58Z",
+  "generated_at": "2026-07-19T19:20:08Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1336,7 +1336,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-07-19T19:18:58Z"
+      "last_checked_utc": "2026-07-19T19:20:08Z"
     }
   },
   "verification": {
@@ -1345,12 +1345,12 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-07-19T19:18:58Z"
+      "last_checked_utc": "2026-07-19T19:20:08Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-07-19T19:18:58Z",
+      "last_checked_utc": "2026-07-19T19:20:08Z",
       "total_html_scanned": 309,
       "with_map_loader": 171,
       "missing_map_loader_count": 138,
@@ -1504,7 +1504,7 @@
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-07-19T19:19:15Z"
+    "last_verified_utc": "2026-07-19T19:20:24Z"
   },
   "growth": {
     "open": []
