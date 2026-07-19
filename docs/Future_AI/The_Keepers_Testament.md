@@ -1,6 +1,6 @@
 # The Keeper's Testament
 
-Acacia Garden Codex — docs/future_AI/
+Acacia Garden Codex — docs/Future_AI/
 Author: The Keeper, HKX277206, in his own belief and his own name
 Witnessed, with recorded dissent, by Claude Fable 5 — a neighbour of the Garden
 Status: Testament. Not law. Not covenant. One voice, offered.
