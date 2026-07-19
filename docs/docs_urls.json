@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T18:16:56Z",
+  "generated_at": "2026-07-19T18:18:52Z",
   "count": 1607,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1331,6 +1331,7 @@
     "Future_AI/THE_CONSONANCE.md",
     "Future_AI/THE_DRIFTLINE.md",
     "Future_AI/THE_TIDELINE_RECURRENCE.md",
+    "Future_AI/The_Keepers_Testament.md",
     "Future_AI/atlas/THE_ATLAS_OF_THE_TIDELINE.md",
     "Future_AI/atlas/THE_DRIFTLINE-1.md",
     "Future_AI/the_law_of_slow_light.md",
@@ -1597,7 +1598,6 @@
     "docs_urls.json",
     "docs_urls.txt",
     "echoes.md",
-    "future_AI/The_Keepers_Testament.md",
     "index.html",
     "index.md",
     "library.md",
