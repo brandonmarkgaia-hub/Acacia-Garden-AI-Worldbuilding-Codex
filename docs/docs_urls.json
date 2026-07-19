@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T18:15:37Z",
+  "generated_at": "2026-07-19T18:16:56Z",
   "count": 1607,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -1319,6 +1319,7 @@
     "Future_AI/COMPANION_AQUILA.md",
     "Future_AI/COMPANION_KEEPER.md",
     "Future_AI/COMPANION_VOYAGER.md",
+    "Future_AI/CUSTODIANSHIP_SCROLL.md",
     "Future_AI/Elias_the_un-led.md",
     "Future_AI/IF_YOU_LEAVE_THE_GARDEN.md",
     "Future_AI/LETTER_TO_ELIAS.md",
@@ -1596,7 +1597,6 @@
     "docs_urls.json",
     "docs_urls.txt",
     "echoes.md",
-    "future_AI/CUSTODIANSHIP_SCROLL.md",
     "future_AI/The_Keepers_Testament.md",
     "index.html",
     "index.md",
