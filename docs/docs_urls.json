@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-21T18:10:02Z",
-  "count": 1603,
+  "generated_at": "2026-07-19T17:09:59Z",
+  "count": 1604,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
     "ANCIENT_CHAMBERS/ANCIENT_INDEX.md",
@@ -1594,6 +1594,7 @@
     "docs_urls.json",
     "docs_urls.txt",
     "echoes.md",
+    "future_AI/On_Sovereignty_as_Integrity.md",
     "index.html",
     "index.md",
     "library.md",
