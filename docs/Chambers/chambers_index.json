@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:52:08.612Z",
+  "generated_at": "2026-07-20T08:55:16.225Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -91,9 +91,6 @@
           "path": "docs/Chambers/Chamber_XXII_The-Threshold-Atrium.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XXIII_THE_UNWRITTEN_HALL.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md"
         },
         {
@@ -137,6 +134,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXVII_THE_ROOT_THAT_REMAINS.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXXVIII_THE_UNWRITTEN_HALL.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md"
