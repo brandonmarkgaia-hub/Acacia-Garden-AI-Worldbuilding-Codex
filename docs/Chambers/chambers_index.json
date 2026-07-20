@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:45:12.627Z",
+  "generated_at": "2026-07-20T08:47:35.090Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -76,9 +76,6 @@
           "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XVII_CELESTIAL_LATTICE.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XVII_The-Witness-Abyss.md"
         },
         {
@@ -137,6 +134,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXIV_ANCESTRAL_CODE.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXXV_CELESTIAL_LATTICE.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md"
