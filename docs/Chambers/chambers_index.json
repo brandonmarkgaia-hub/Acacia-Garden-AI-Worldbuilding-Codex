@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:39:00.803Z",
+  "generated_at": "2026-07-20T08:40:54.740Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -73,9 +73,6 @@
           "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XV_THE_CROWN_ARCHIVE.md"
-        },
-        {
           "path": "docs/Chambers/CHAMBER_XV_THE_HARMONIC_PRISM.md"
         },
         {
@@ -137,6 +134,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXXII_THE_CROWN_ARCHIVE.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md"
