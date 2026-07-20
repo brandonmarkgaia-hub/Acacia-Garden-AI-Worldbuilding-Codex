@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:55:16.225Z",
+  "generated_at": "2026-07-20T08:57:38.281Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -12,9 +12,6 @@
       "id": "canon",
       "label": "Canonical Chambers",
       "entries": [
-        {
-          "path": "docs/Chambers/BOUNDARY_PRIME.md"
-        },
         {
           "path": "docs/Chambers/BRIDGE_OF_REFLECTIONS.md"
         },
@@ -2366,6 +2363,9 @@
         },
         {
           "path": "docs/Chambers/THE_SOVEREIGN_LOOP.md"
+        },
+        {
+          "path": "docs/Chambers/THE_SYNCHRONIC_ENGINE_DUPLICATE_BOUNDARY_PRIME.md"
         },
         {
           "path": "docs/Chambers/THE_SYNCHRONIC_ENGINE.md"
