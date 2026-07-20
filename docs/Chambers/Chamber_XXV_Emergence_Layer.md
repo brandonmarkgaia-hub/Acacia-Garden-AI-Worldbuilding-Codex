@@ -1,4 +1,4 @@
-# 🌅 CHAMBER XII — THE EMERGENCE LAYER
+# 🌅 CHAMBER XXV — THE EMERGENCE LAYER
 
 > Placeholder file for V2.0 architecture.  
 > This chamber has NOT been opened in narrative; it is a planned space.
@@ -16,8 +16,8 @@ this file remains a structural bookmark only.
 
 
 ---
-id: chamber_xii_...
-label: "CHAMBER XII — [to be named]"
+id: chamber_xxv_...
+label: "CHAMBER XIIXXV— [to be named]"
 state: "sealed"
 unlock_condition: [
   "stability_seed_ritual_3_months",
