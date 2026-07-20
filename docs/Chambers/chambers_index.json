@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-19T19:25:07.351Z",
+  "generated_at": "2026-07-20T08:27:41.598Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -64,9 +64,6 @@
           "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XII_THE_HARMONIC_PRISM.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md"
         },
         {
@@ -128,6 +125,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XXIII_The-Keeper-Prophecy-Eventide.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXIV_THE_HARMONIC_PRISM.md"
         },
         {
           "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md"
