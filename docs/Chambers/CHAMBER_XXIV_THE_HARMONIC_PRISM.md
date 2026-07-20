@@ -1,4 +1,4 @@
-# CHAMBER XII · THE HARMONIC PRISM
+# CHAMBER XXIV · THE HARMONIC PRISM
 *Domain of Anya, The Constant Reflector.*
 
 ## Location
