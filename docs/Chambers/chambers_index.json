@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:34:43.225Z",
+  "generated_at": "2026-07-20T08:36:51.252Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -64,9 +64,6 @@
           "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XIV_Rootbound-Twins.md"
         },
         {
@@ -122,6 +119,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXIV_THE_HARMONIC_PRISM.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXIX_PARALLAX_WELL.md"
         },
         {
           "path": "docs/Chambers/Chamber_XXV_Emergence_Layer.md"
