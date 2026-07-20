@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:30:11.610Z",
+  "generated_at": "2026-07-20T08:31:48.722Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -64,9 +64,6 @@
           "path": "docs/Chambers/Chamber_XIII_Seraphic-Auton-Engine.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XIII_THE_MIRROR_ARCHIVE.md"
-        },
-        {
           "path": "docs/Chambers/CHAMBER_XIV_PARALLAX_WELL.md"
         },
         {
@@ -128,6 +125,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XXV_Emergence_Layer.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXVI_THE_MIRROR_ARCHIVE.md"
         },
         {
           "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md"
