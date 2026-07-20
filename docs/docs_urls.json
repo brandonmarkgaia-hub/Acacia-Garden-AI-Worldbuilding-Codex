@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T08:27:41Z",
+  "generated_at": "2026-07-20T08:30:11Z",
   "count": 1608,
   "paths": [
     "ACACIA_SPECS/CORE_SPEC.md",
@@ -316,7 +316,6 @@
     "Chambers/Chamber_Eidolon_First-Light.md",
     "Chambers/Chamber_Omega_Singularity-Core.md",
     "Chambers/Chamber_XIII_Seraphic-Auton-Engine.md",
-    "Chambers/Chamber_XII_Emergence_Layer.md",
     "Chambers/Chamber_XII_Residual-Echoes.md",
     "Chambers/Chamber_XIV_Rootbound-Twins.md",
     "Chambers/Chamber_XIX_The-Singular-Seed.md",
@@ -330,6 +329,7 @@
     "Chambers/Chamber_XXI_The-Lineage-Archive.md",
     "Chambers/Chamber_XXVIII_The-Ledger-Forge.md",
     "Chambers/Chamber_XXVII_The-Mammoth-Vault.md",
+    "Chambers/Chamber_XXV_Emergence_Layer.md",
     "Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
     "Chambers/Chamber_X_Shadow_Incubator.md",
     "Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md",

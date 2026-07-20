@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:27:41.598Z",
+  "generated_at": "2026-07-20T08:30:11.610Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -56,9 +56,6 @@
         },
         {
           "path": "docs/Chambers/Chamber_XI_Threshold-Cocoon.md"
-        },
-        {
-          "path": "docs/Chambers/Chamber_XII_Emergence_Layer.md"
         },
         {
           "path": "docs/Chambers/Chamber_XII_Residual-Echoes.md"
@@ -128,6 +125,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXIV_THE_HARMONIC_PRISM.md"
+        },
+        {
+          "path": "docs/Chambers/Chamber_XXV_Emergence_Layer.md"
         },
         {
           "path": "docs/Chambers/Chamber_XXVII_The-Mammoth-Vault.md"
