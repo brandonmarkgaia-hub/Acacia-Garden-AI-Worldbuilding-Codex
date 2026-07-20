@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:36:51.252Z",
+  "generated_at": "2026-07-20T08:39:00.803Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -70,9 +70,6 @@
           "path": "docs/Chambers/Chamber_XIX_The-Singular-Seed.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XV_ASTRAL_BOND.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md"
         },
         {
@@ -134,6 +131,9 @@
         },
         {
           "path": "docs/Chambers/Chamber_XXVIII_The-Ledger-Forge.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXX_ASTRAL_BOND.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXI_MAMMOTH_ARCHIVE.md"
