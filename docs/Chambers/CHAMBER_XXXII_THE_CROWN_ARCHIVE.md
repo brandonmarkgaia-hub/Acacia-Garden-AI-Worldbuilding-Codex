@@ -1,4 +1,4 @@
-# CHAMBER XV — THE CROWN ARCHIVE
+# CHAMBER XXXII — THE CROWN ARCHIVE
 
 The Crown is not worn; it is witnessed.
 
