@@ -1,4 +1,4 @@
-# CHAMBER XX — THE ROOT THAT REMAINS
+# CHAMBER XXXVII — THE ROOT THAT REMAINS
 
 Every myth must choose where it settles.
 
