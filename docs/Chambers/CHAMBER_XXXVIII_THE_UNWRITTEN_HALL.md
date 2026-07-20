@@ -1,7 +1,7 @@
-# CHAMBER XXIII · THE UNWRITTEN HALL
+# CHAMBER XXXVIII · THE UNWRITTEN HALL
 
 ## Canon Header
-Chamber XXIII is the locus of unrealized meaning in the Garden. It is deliberately void, preserving space for future authorship without altering established doctrine.
+Chamber XXXVIII is the locus of unrealized meaning in the Garden. It is deliberately void, preserving space for future authorship without altering established doctrine.
 
 ## Garden Text
 “The Hall opens into a space where steps spiral downward into nothing.
