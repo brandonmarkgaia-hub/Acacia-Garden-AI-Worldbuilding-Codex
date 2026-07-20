@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-20T08:43:10.293Z",
+  "generated_at": "2026-07-20T08:45:12.627Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -73,9 +73,6 @@
           "path": "docs/Chambers/Chamber_XV_Lorian-Hyperarchive.md"
         },
         {
-          "path": "docs/Chambers/CHAMBER_XVI_ANCESTRAL_CODE.md"
-        },
-        {
           "path": "docs/Chambers/Chamber_XVI_The-Keeper-Echo-Eternum.md"
         },
         {
@@ -137,6 +134,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXIII_THE_HARMONIC_PRISM.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXXIV_ANCESTRAL_CODE.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md"
