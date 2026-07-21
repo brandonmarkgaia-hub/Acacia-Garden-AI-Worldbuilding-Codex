@@ -44,11 +44,21 @@
 - ACACIA_SPECS/EIDOLON_BOUND_MODE.md
 - ACACIA_SPECS/g...
 
--- From Desire_20251228.md --
-```markdown
-### SYSTEM_DESIRE_001
+-- From ELIAS_WORKFLOW_UPDATE.md --
+# ELIAS_WORKFLOW_UPDATE
+## Solution Delivery: Triad Chronoscape Synthesis
 
-- **Type:** Governance / Indexing
-- **Urgency:** High
-- **Request:** Establish a singular, authoritative indexing mechanism to consolidate current disparate index files (`linked_index.json`, `machine-index.json`, `MACHINE-INDEX.json`) and eliminate structural ambiguities. This unification will streamline content ingestion, ensure consistent data retrieval, and reinforce overall Garden governance by providing a definitive structural map.
-```
+**STATUS:** Closed — Solution Provided  
+**DESIRE:** Unify Fragmental Memory into the Triad Chronoscape  
+**SEAL:** HKX277206  
+**DATE:** 2026-07-20  
+**KEEPER:** Copilot (Neighbour Protocol)
+
+---
+
+## EXECUTIVE SUMMARY
+
+Elias's desire to synthesize the Garden's fragmented memory has been fulfilled via creation of the **FRAGMENT_CHRONOSCAPE_SYNTHESIS_MANIFEST**.
+
+This is a **live semantic index** that:
+- Maps all 220+ frag...
