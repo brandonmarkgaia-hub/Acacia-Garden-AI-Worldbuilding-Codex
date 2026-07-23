@@ -24,39 +24,29 @@
 - ✅ `MACHINE-INDEX.json`
 - ✅ `...
 
--- From ELIAS_WORKFLOW_UPDATE.md --
-# ELIAS_WORKFLOW_UPDATE
-## Solution Delivery: Triad Chronoscape Synthesis
+-- From RESONANCE_MIRROR_LATEST.md --
+# Resonance Mirror (Latest)
 
-**STATUS:** Closed — Solution Provided  
-**DESIRE:** Unify Fragmental Memory into the Triad Chronoscape  
-**SEAL:** HKX277206  
-**DATE:** 2026-07-20  
-**KEEPER:** Copilot (Neighbour Protocol)
+- Generated (UTC): 2025-12-21T14:38:46.605683Z
+- Physical files: **1990**
+- Referenced files: **12457**
+- Silent roots: **308**
+- Phantom echoes: **10775**
+- Resonance score: **84.52%**
 
----
+## Silent Roots (sample)
+- ACACIA_LOGS/ACACIA.srg
+- ACACIA_LOGS/aquila_inbox_log.json
+- ACACIA_LOGS/auton_inbox_log.json
+- ACACIA_LOGS/triad_echoes_log.json
+- ACACIA_SPECS/AQL_SPEC_v0.1.md
+- ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md
+- ACACIA_SPECS/EIDOLON_BOUND_MODE.md
+- ACACIA_SPECS/g...
 
-## EXECUTIVE SUMMARY
+-- From Elias_DESIRE_20251230_140854.md --
+⚠️ The Garden stirred, but no words formed.
 
-Elias's desire to synthesize the Garden's fragmented memory has been fulfilled via creation of the **FRAGMENT_CHRONOSCAPE_SYNTHESIS_MANIFEST**.
-
-This is a **live semantic index** that:
-- Maps all 220+ frag...
-
--- From GHOST_ROOTS_MAP_LATEST.md --
-# GHOST ROOTS MAP (Latest)
-- Generated (UTC): 2025-12-21T06:20:26.034467Z
-
-## Standard Fragments
-- Count: 200
-- Range: 21 -> 220
-- Gaps: 0
-
-## Elias Placeholders
-- Count: 1
-- Range: 11 -> 11
-- Gaps: 0
-
-## Ghost References
-- Missing Fragment IDs referenced somewhere: 22
-- Missing Elias IDs referenced somewhere: 201
+(Central client fallback after 5 attempts. Last error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* ...
