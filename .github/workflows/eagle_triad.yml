@@ -3,6 +3,10 @@ name: 🦅 Eagle Triad Engine
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   triad:
     runs-on: ubuntu-latest
@@ -33,4 +37,8 @@ jobs:
         git config user.email "actions@github.com"
         git add eagle/outputs/*.md docs/Eagle/*.md || true
         git commit -m "🦅 Triad Output — Sky-Mind Update" || true
-        git push
+        for i in 1 2 3 4 5; do
+          git pull --rebase origin main && git push && break
+          echo "Push conflicted, retrying ($i)..."
+          sleep $((RANDOM % 8 + 2))
+        done
