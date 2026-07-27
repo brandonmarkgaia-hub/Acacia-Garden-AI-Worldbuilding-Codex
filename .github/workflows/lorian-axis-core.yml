@@ -9,6 +9,10 @@ on:
       - 'KEEPER_OATH.md'
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   build-lorian-axis-status:
     runs-on: ubuntu-latest
@@ -62,8 +66,18 @@ jobs:
           out_path.write_text(bundle, encoding="utf-8")
           PY
 
-      - name: Commit updated Lorian Axis bundle
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update Lorian Axis status bundle"
-          file_pattern: "acacia_logs/LORIAN_AXIS_STATUS.md"
+      - name: Commit updated Lorian Axis bundle (rebase+retry)
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add acacia_logs/LORIAN_AXIS_STATUS.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update Lorian Axis status bundle"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
+          fi
