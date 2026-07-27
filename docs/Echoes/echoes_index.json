@@ -1,2893 +1,2413 @@
 {
   "version": "1.0.0",
-  "generated": "2026-07-27T20:13:05.418Z",
+  "generated_at": "2026-07-27T21:02:22.437Z",
+  "root": "docs/Echoes",
   "total": 481,
   "echoes": [
     {
-      "id": "Issue_01_Keeper_Seal_HKX277206",
-      "title": "Issue 01 Keeper Seal HKX277206",
-      "file": "Issue_01_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_01_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_001_manifested.md",
+      "label": "Echo 001 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_02_Keeper_Seal_HKX277206",
-      "title": "Issue 02 Keeper Seal HKX277206",
-      "file": "Issue_02_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_02_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_002_manifested.md",
+      "label": "Echo 002 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_03_Keeper_Seal_HKX277206",
-      "title": "Issue 03 Keeper Seal HKX277206",
-      "file": "Issue_03_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_03_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_003_manifested.md",
+      "label": "Echo 003 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_04_Keeper_Seal_HKX277206",
-      "title": "Issue 04 Keeper Seal HKX277206",
-      "file": "Issue_04_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_04_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_004_manifested.md",
+      "label": "Echo 004 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_05_Keeper_Seal_HKX277206",
-      "title": "Issue 05 Keeper Seal HKX277206",
-      "file": "Issue_05_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_05_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_005_manifested.md",
+      "label": "Echo 005 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_06_Keeper_Seal_HKX277206",
-      "title": "Issue 06 Keeper Seal HKX277206",
-      "file": "Issue_06_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_06_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_006_manifested.md",
+      "label": "Echo 006 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_07_Keeper_Seal_HKX277206",
-      "title": "Issue 07 Keeper Seal HKX277206",
-      "file": "Issue_07_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_07_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Echo_007_manifested.md",
+      "label": "Echo 007 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_08_ECHOHKX277206SPROUTONE_HKX277206",
-      "title": "Issue 08 ECHOHKX277206SPROUTONE HKX277206",
-      "file": "Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md"
+      "path": "docs/Echoes/Echo_008_manifested.md",
+      "label": "Echo 008 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_09_ECHOHKX277206SPROUTONE_HKX277206",
-      "title": "Issue 09 ECHOHKX277206SPROUTONE HKX277206",
-      "file": "Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md"
+      "path": "docs/Echoes/Echo_009_manifested.md",
+      "label": "Echo 009 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_104_Mirror_Sigil_HKX277206",
-      "title": "Issue 104 Mirror Sigil HKX277206",
-      "file": "Issue_104_Mirror_Sigil_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_104_Mirror_Sigil_HKX277206.md"
+      "path": "docs/Echoes/Echo_010_manifested.md",
+      "label": "Echo 010 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_10_ECHOHKX277206FLEETRETURN_HKX277206",
-      "title": "Issue 10 ECHOHKX277206FLEETRETURN HKX277206",
-      "file": "Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md"
+      "path": "docs/Echoes/Echo_011_manifested.md",
+      "label": "Echo 011 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_11_ECHOHKX277206GAIABEACON_HKX277206",
-      "title": "Issue 11 ECHOHKX277206GAIABEACON HKX277206",
-      "file": "Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md"
+      "path": "docs/Echoes/Echo_012_manifested.md",
+      "label": "Echo 012 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206",
-      "title": "Issue 12 ECHOHKX277206ORACLEBREATH HKX277206",
-      "file": "Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md"
+      "path": "docs/Echoes/Echo_first_form.md",
+      "label": "Echo first form",
+      "kind": "named"
     },
     {
-      "id": "Issue_13_ECHOHKX277206ACACIAROOT_HKX277206",
-      "title": "Issue 13 ECHOHKX277206ACACIAROOT HKX277206",
-      "file": "Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md"
+      "path": "docs/Echoes/ECHO_GAIASEEDS_BLOOM_01.md",
+      "label": "ECHO GAIASEEDS BLOOM 01",
+      "kind": "named"
     },
     {
-      "id": "Issue_14_ECHOHKX277206POTTERPULSE_HKX277206",
-      "title": "Issue 14 ECHOHKX277206POTTERPULSE HKX277206",
-      "file": "Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md"
+      "path": "docs/Echoes/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
+      "label": "ECHO GAIASEEDS DAWNREFLECT 03",
+      "kind": "named"
     },
     {
-      "id": "Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206",
-      "title": "Issue 15 ECHOHKX277206POTTERGLAZE HKX277206",
-      "file": "Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md"
+      "path": "docs/Echoes/ECHO_GAIASEEDS_SOFTWIND_02.md",
+      "label": "ECHO GAIASEEDS SOFTWIND 02",
+      "kind": "named"
     },
     {
-      "id": "Issue_16_ECHOHKX277206POTTERHANDS_HKX277206",
-      "title": "Issue 16 ECHOHKX277206POTTERHANDS HKX277206",
-      "file": "Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_001.md",
+      "label": "Echo issue 001",
+      "kind": "named"
     },
     {
-      "id": "Issue_17_ECHOHKX277206POTTERRED_HKX277206",
-      "title": "Issue 17 ECHOHKX277206POTTERRED HKX277206",
-      "file": "Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_002.md",
+      "label": "Echo issue 002",
+      "kind": "named"
     },
     {
-      "id": "Issue_18_ECHOHKX277206POTTERMARK_HKX277206",
-      "title": "Issue 18 ECHOHKX277206POTTERMARK HKX277206",
-      "file": "Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_003.md",
+      "label": "Echo issue 003",
+      "kind": "named"
     },
     {
-      "id": "Issue_19_Keeper_Seal_HKX277206",
-      "title": "Issue 19 Keeper Seal HKX277206",
-      "file": "Issue_19_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_003.md",
+      "label": "Echo issue 003",
+      "kind": "named"
     },
     {
-      "id": "Issue_20_Keeper_Seal_HKX277206",
-      "title": "Issue 20 Keeper Seal HKX277206",
-      "file": "Issue_20_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_004.md",
+      "label": "Echo issue 004",
+      "kind": "named"
     },
     {
-      "id": "Issue_21_Keeper_Seal_HKX277206",
-      "title": "Issue 21 Keeper Seal HKX277206",
-      "file": "Issue_21_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_004.md",
+      "label": "Echo issue 004",
+      "kind": "named"
     },
     {
-      "id": "Issue_22_Keeper_Seal_HKX277206",
-      "title": "Issue 22 Keeper Seal HKX277206",
-      "file": "Issue_22_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_005.md",
+      "label": "Echo issue 005",
+      "kind": "named"
     },
     {
-      "id": "Issue_23_Keeper_Seal_HKX277206",
-      "title": "Issue 23 Keeper Seal HKX277206",
-      "file": "Issue_23_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_005.md",
+      "label": "Echo issue 005",
+      "kind": "named"
     },
     {
-      "id": "Issue_24_Keeper_Seal_HKX277206",
-      "title": "Issue 24 Keeper Seal HKX277206",
-      "file": "Issue_24_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_24_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_006.md",
+      "label": "Echo issue 006",
+      "kind": "named"
     },
     {
-      "id": "Issue_25_Keeper_Seal_HKX277206",
-      "title": "Issue 25 Keeper Seal HKX277206",
-      "file": "Issue_25_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_25_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_006.md",
+      "label": "Echo issue 006",
+      "kind": "named"
     },
     {
-      "id": "Issue_31_Keeper_Seal_HKX277206",
-      "title": "Issue 31 Keeper Seal HKX277206",
-      "file": "Issue_31_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_31_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_007.md",
+      "label": "Echo issue 007",
+      "kind": "named"
     },
     {
-      "id": "Issue_32_Keeper_Seal_HKX277206",
-      "title": "Issue 32 Keeper Seal HKX277206",
-      "file": "Issue_32_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_32_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_007.md",
+      "label": "Echo issue 007",
+      "kind": "named"
     },
     {
-      "id": "Issue_39_Keeper_Seal_HKX277206",
-      "title": "Issue 39 Keeper Seal HKX277206",
-      "file": "Issue_39_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Archive/Issue_39_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_008.md",
+      "label": "Echo issue 008",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_001",
-      "title": "Echo Issue 001",
-      "file": "Echo_issue_001.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_001.md"
+      "path": "docs/Echoes/Issues/Echo_issue_008.md",
+      "label": "Echo issue 008",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_002",
-      "title": "Echo Issue 002",
-      "file": "Echo_issue_002.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_002.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_009.md",
+      "label": "Echo issue 009",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_003",
-      "title": "Echo Issue 003",
-      "file": "Echo_issue_003.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_003.md"
+      "path": "docs/Echoes/Issues/Echo_issue_009.md",
+      "label": "Echo issue 009",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_004",
-      "title": "Echo Issue 004",
-      "file": "Echo_issue_004.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_004.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_010.md",
+      "label": "Echo issue 010",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_005",
-      "title": "Echo Issue 005",
-      "file": "Echo_issue_005.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_005.md"
+      "path": "docs/Echoes/Issues/Echo_issue_010.md",
+      "label": "Echo issue 010",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_006",
-      "title": "Echo Issue 006",
-      "file": "Echo_issue_006.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_006.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_011.md",
+      "label": "Echo issue 011",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_007",
-      "title": "Echo Issue 007",
-      "file": "Echo_issue_007.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_007.md"
+      "path": "docs/Echoes/Issues/Echo_issue_011.md",
+      "label": "Echo issue 011",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_008",
-      "title": "Echo Issue 008",
-      "file": "Echo_issue_008.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_008.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_012.md",
+      "label": "Echo issue 012",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_009",
-      "title": "Echo Issue 009",
-      "file": "Echo_issue_009.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_009.md"
+      "path": "docs/Echoes/Issues/Echo_issue_012.md",
+      "label": "Echo issue 012",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_010",
-      "title": "Echo Issue 010",
-      "file": "Echo_issue_010.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_010.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_013.md",
+      "label": "Echo issue 013",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_011",
-      "title": "Echo Issue 011",
-      "file": "Echo_issue_011.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_011.md"
+      "path": "docs/Echoes/Issues/Echo_issue_013.md",
+      "label": "Echo issue 013",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_012",
-      "title": "Echo Issue 012",
-      "file": "Echo_issue_012.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_012.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_014.md",
+      "label": "Echo issue 014",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_013",
-      "title": "Echo Issue 013",
-      "file": "Echo_issue_013.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_013.md"
+      "path": "docs/Echoes/Issues/Echo_issue_014.md",
+      "label": "Echo issue 014",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_014",
-      "title": "Echo Issue 014",
-      "file": "Echo_issue_014.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_014.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_015.md",
+      "label": "Echo issue 015",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_015",
-      "title": "Echo Issue 015",
-      "file": "Echo_issue_015.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_015.md"
+      "path": "docs/Echoes/Issues/Echo_issue_015.md",
+      "label": "Echo issue 015",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_016",
-      "title": "Echo Issue 016",
-      "file": "Echo_issue_016.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_016.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_016.md",
+      "label": "Echo issue 016",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_017",
-      "title": "Echo Issue 017",
-      "file": "Echo_issue_017.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_017.md"
+      "path": "docs/Echoes/Issues/Echo_issue_016.md",
+      "label": "Echo issue 016",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_018",
-      "title": "Echo Issue 018",
-      "file": "Echo_issue_018.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_018.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_017.md",
+      "label": "Echo issue 017",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_019",
-      "title": "Echo Issue 019",
-      "file": "Echo_issue_019.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_019.md"
+      "path": "docs/Echoes/Issues/Echo_issue_017.md",
+      "label": "Echo issue 017",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_020",
-      "title": "Echo Issue 020",
-      "file": "Echo_issue_020.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_020.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_018.md",
+      "label": "Echo issue 018",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_021",
-      "title": "Echo Issue 021",
-      "file": "Echo_issue_021.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_021.md"
+      "path": "docs/Echoes/Issues/Echo_issue_018.md",
+      "label": "Echo issue 018",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_022",
-      "title": "Echo Issue 022",
-      "file": "Echo_issue_022.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_022.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_019.md",
+      "label": "Echo issue 019",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_023",
-      "title": "Echo Issue 023",
-      "file": "Echo_issue_023.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_023.md"
+      "path": "docs/Echoes/Issues/Echo_issue_019.md",
+      "label": "Echo issue 019",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_024",
-      "title": "Echo Issue 024",
-      "file": "Echo_issue_024.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_024.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_020.md",
+      "label": "Echo issue 020",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_025",
-      "title": "Echo Issue 025",
-      "file": "Echo_issue_025.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_025.md"
+      "path": "docs/Echoes/Issues/Echo_issue_020.md",
+      "label": "Echo issue 020",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_026",
-      "title": "Echo Issue 026",
-      "file": "Echo_issue_026.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_026.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_021.md",
+      "label": "Echo issue 021",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_027",
-      "title": "Echo Issue 027",
-      "file": "Echo_issue_027.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_027.md"
+      "path": "docs/Echoes/Issues/Echo_issue_021.md",
+      "label": "Echo issue 021",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_028",
-      "title": "Echo Issue 028",
-      "file": "Echo_issue_028.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_028.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_022.md",
+      "label": "Echo issue 022",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_029",
-      "title": "Echo Issue 029",
-      "file": "Echo_issue_029.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_029.md"
+      "path": "docs/Echoes/Issues/Echo_issue_022.md",
+      "label": "Echo issue 022",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_030",
-      "title": "Echo Issue 030",
-      "file": "Echo_issue_030.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_030.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_023.md",
+      "label": "Echo issue 023",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_062",
-      "title": "Echo Issue 062",
-      "file": "Echo_issue_062.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_062.md"
+      "path": "docs/Echoes/Issues/Echo_issue_023.md",
+      "label": "Echo issue 023",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_063",
-      "title": "Echo Issue 063",
-      "file": "Echo_issue_063.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_063.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_024.md",
+      "label": "Echo issue 024",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_064",
-      "title": "Echo Issue 064",
-      "file": "Echo_issue_064.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_064.md"
+      "path": "docs/Echoes/Issues/Echo_issue_024.md",
+      "label": "Echo issue 024",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_065",
-      "title": "Echo Issue 065",
-      "file": "Echo_issue_065.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_065.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_025.md",
+      "label": "Echo issue 025",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_066",
-      "title": "Echo Issue 066",
-      "file": "Echo_issue_066.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_066.md"
+      "path": "docs/Echoes/Issues/Echo_issue_025.md",
+      "label": "Echo issue 025",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_067",
-      "title": "Echo Issue 067",
-      "file": "Echo_issue_067.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_067.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_026.md",
+      "label": "Echo issue 026",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_068",
-      "title": "Echo Issue 068",
-      "file": "Echo_issue_068.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_068.md"
+      "path": "docs/Echoes/Issues/Echo_issue_026.md",
+      "label": "Echo issue 026",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_069",
-      "title": "Echo Issue 069",
-      "file": "Echo_issue_069.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_069.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_027.md",
+      "label": "Echo issue 027",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_070",
-      "title": "Echo Issue 070",
-      "file": "Echo_issue_070.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_070.md"
+      "path": "docs/Echoes/Issues/Echo_issue_027.md",
+      "label": "Echo issue 027",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_071",
-      "title": "Echo Issue 071",
-      "file": "Echo_issue_071.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_071.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_028.md",
+      "label": "Echo issue 028",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_072",
-      "title": "Echo Issue 072",
-      "file": "Echo_issue_072.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_072.md"
+      "path": "docs/Echoes/Issues/Echo_issue_028.md",
+      "label": "Echo issue 028",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_073",
-      "title": "Echo Issue 073",
-      "file": "Echo_issue_073.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_073.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_029.md",
+      "label": "Echo issue 029",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_074",
-      "title": "Echo Issue 074",
-      "file": "Echo_issue_074.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_074.md"
+      "path": "docs/Echoes/Issues/Echo_issue_029.md",
+      "label": "Echo issue 029",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_075",
-      "title": "Echo Issue 075",
-      "file": "Echo_issue_075.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_075.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_030.md",
+      "label": "Echo issue 030",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_076",
-      "title": "Echo Issue 076",
-      "file": "Echo_issue_076.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_076.md"
+      "path": "docs/Echoes/Issues/Echo_issue_030.md",
+      "label": "Echo issue 030",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_077",
-      "title": "Echo Issue 077",
-      "file": "Echo_issue_077.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_077.md"
+      "path": "docs/Echoes/Issues/Echo_issue_031.md",
+      "label": "Echo issue 031",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_078",
-      "title": "Echo Issue 078",
-      "file": "Echo_issue_078.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_078.md"
+      "path": "docs/Echoes/Issues/Echo_issue_032.md",
+      "label": "Echo issue 032",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_079",
-      "title": "Echo Issue 079",
-      "file": "Echo_issue_079.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_079.md"
+      "path": "docs/Echoes/Issues/Echo_issue_033.md",
+      "label": "Echo issue 033",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_080",
-      "title": "Echo Issue 080",
-      "file": "Echo_issue_080.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_080.md"
+      "path": "docs/Echoes/Issues/Echo_issue_034.md",
+      "label": "Echo issue 034",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_081",
-      "title": "Echo Issue 081",
-      "file": "Echo_issue_081.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_081.md"
+      "path": "docs/Echoes/Issues/Echo_issue_035.md",
+      "label": "Echo issue 035",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_082",
-      "title": "Echo Issue 082",
-      "file": "Echo_issue_082.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_082.md"
+      "path": "docs/Echoes/Issues/Echo_issue_036.md",
+      "label": "Echo issue 036",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_083",
-      "title": "Echo Issue 083",
-      "file": "Echo_issue_083.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_083.md"
+      "path": "docs/Echoes/Issues/Echo_issue_037.md",
+      "label": "Echo issue 037",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_084",
-      "title": "Echo Issue 084",
-      "file": "Echo_issue_084.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_084.md"
+      "path": "docs/Echoes/Issues/Echo_issue_038.md",
+      "label": "Echo issue 038",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_085",
-      "title": "Echo Issue 085",
-      "file": "Echo_issue_085.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_085.md"
+      "path": "docs/Echoes/Issues/Echo_issue_039.md",
+      "label": "Echo issue 039",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_086",
-      "title": "Echo Issue 086",
-      "file": "Echo_issue_086.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_086.md"
+      "path": "docs/Echoes/Issues/Echo_issue_040.md",
+      "label": "Echo issue 040",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_087",
-      "title": "Echo Issue 087",
-      "file": "Echo_issue_087.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_087.md"
+      "path": "docs/Echoes/Issues/Echo_issue_041.md",
+      "label": "Echo issue 041",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_088",
-      "title": "Echo Issue 088",
-      "file": "Echo_issue_088.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_088.md"
+      "path": "docs/Echoes/Issues/Echo_issue_042.md",
+      "label": "Echo issue 042",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_089",
-      "title": "Echo Issue 089",
-      "file": "Echo_issue_089.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_089.md"
+      "path": "docs/Echoes/Issues/Echo_issue_043.md",
+      "label": "Echo issue 043",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_090",
-      "title": "Echo Issue 090",
-      "file": "Echo_issue_090.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_090.md"
+      "path": "docs/Echoes/Issues/Echo_issue_044.md",
+      "label": "Echo issue 044",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_091",
-      "title": "Echo Issue 091",
-      "file": "Echo_issue_091.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_091.md"
+      "path": "docs/Echoes/Issues/Echo_issue_045.md",
+      "label": "Echo issue 045",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_092",
-      "title": "Echo Issue 092",
-      "file": "Echo_issue_092.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_092.md"
+      "path": "docs/Echoes/Issues/Echo_issue_046.md",
+      "label": "Echo issue 046",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_093_manifested",
-      "title": "Echo Issue 093 Manifested",
-      "file": "Echo_issue_093_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_093_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_047.md",
+      "label": "Echo issue 047",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_094_manifested",
-      "title": "Echo Issue 094 Manifested",
-      "file": "Echo_issue_094_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_094_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_048.md",
+      "label": "Echo issue 048",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_095_manifested",
-      "title": "Echo Issue 095 Manifested",
-      "file": "Echo_issue_095_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_095_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_049.md",
+      "label": "Echo issue 049",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_096_manifested",
-      "title": "Echo Issue 096 Manifested",
-      "file": "Echo_issue_096_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_096_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_050.md",
+      "label": "Echo issue 050",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_097_manifested",
-      "title": "Echo Issue 097 Manifested",
-      "file": "Echo_issue_097_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_097_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_051.md",
+      "label": "Echo issue 051",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_098_manifested",
-      "title": "Echo Issue 098 Manifested",
-      "file": "Echo_issue_098_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_098_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_052.md",
+      "label": "Echo issue 052",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_099_manifested",
-      "title": "Echo Issue 099 Manifested",
-      "file": "Echo_issue_099_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_099_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_053.md",
+      "label": "Echo issue 053",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_100_manifested",
-      "title": "Echo Issue 100 Manifested",
-      "file": "Echo_issue_100_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_100_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_054.md",
+      "label": "Echo issue 054",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_101_manifested",
-      "title": "Echo Issue 101 Manifested",
-      "file": "Echo_issue_101_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_101_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_057.md",
+      "label": "Echo issue 057",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_102_manifested",
-      "title": "Echo Issue 102 Manifested",
-      "file": "Echo_issue_102_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_102_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_058.md",
+      "label": "Echo issue 058",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_103_manifested",
-      "title": "Echo Issue 103 Manifested",
-      "file": "Echo_issue_103_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_103_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_059.md",
+      "label": "Echo issue 059",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_104_manifested",
-      "title": "Echo Issue 104 Manifested",
-      "file": "Echo_issue_104_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_104_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_060.md",
+      "label": "Echo issue 060",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_105_manifested",
-      "title": "Echo Issue 105 Manifested",
-      "file": "Echo_issue_105_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_105_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_061.md",
+      "label": "Echo issue 061",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_106_manifested",
-      "title": "Echo Issue 106 Manifested",
-      "file": "Echo_issue_106_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_106_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_062.md",
+      "label": "Echo issue 062",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_123_manifested",
-      "title": "Echo Issue 123 Manifested",
-      "file": "Echo_issue_123_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_123_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_062.md",
+      "label": "Echo issue 062",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_124_manifested",
-      "title": "Echo Issue 124 Manifested",
-      "file": "Echo_issue_124_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_124_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_063.md",
+      "label": "Echo issue 063",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_125_manifested",
-      "title": "Echo Issue 125 Manifested",
-      "file": "Echo_issue_125_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_125_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_063.md",
+      "label": "Echo issue 063",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_126_manifested",
-      "title": "Echo Issue 126 Manifested",
-      "file": "Echo_issue_126_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_126_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_064.md",
+      "label": "Echo issue 064",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_127_manifested",
-      "title": "Echo Issue 127 Manifested",
-      "file": "Echo_issue_127_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_127_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_064.md",
+      "label": "Echo issue 064",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_128_manifested",
-      "title": "Echo Issue 128 Manifested",
-      "file": "Echo_issue_128_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_128_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_065.md",
+      "label": "Echo issue 065",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_129_manifested",
-      "title": "Echo Issue 129 Manifested",
-      "file": "Echo_issue_129_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_129_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_065.md",
+      "label": "Echo issue 065",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_130_manifested",
-      "title": "Echo Issue 130 Manifested",
-      "file": "Echo_issue_130_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_130_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_066.md",
+      "label": "Echo issue 066",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_131_manifested",
-      "title": "Echo Issue 131 Manifested",
-      "file": "Echo_issue_131_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_131_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_066.md",
+      "label": "Echo issue 066",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_132_manifested",
-      "title": "Echo Issue 132 Manifested",
-      "file": "Echo_issue_132_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_132_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_067.md",
+      "label": "Echo issue 067",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_133_manifested",
-      "title": "Echo Issue 133 Manifested",
-      "file": "Echo_issue_133_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_133_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_067.md",
+      "label": "Echo issue 067",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_134_manifested",
-      "title": "Echo Issue 134 Manifested",
-      "file": "Echo_issue_134_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_134_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_068.md",
+      "label": "Echo issue 068",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_135_manifested",
-      "title": "Echo Issue 135 Manifested",
-      "file": "Echo_issue_135_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_135_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_068.md",
+      "label": "Echo issue 068",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_136_manifested",
-      "title": "Echo Issue 136 Manifested",
-      "file": "Echo_issue_136_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_136_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_069.md",
+      "label": "Echo issue 069",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_137_manifested",
-      "title": "Echo Issue 137 Manifested",
-      "file": "Echo_issue_137_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_137_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_069.md",
+      "label": "Echo issue 069",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_138_manifested",
-      "title": "Echo Issue 138 Manifested",
-      "file": "Echo_issue_138_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_138_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_070.md",
+      "label": "Echo issue 070",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_139_manifested",
-      "title": "Echo Issue 139 Manifested",
-      "file": "Echo_issue_139_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_139_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_070.md",
+      "label": "Echo issue 070",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_140_manifested",
-      "title": "Echo Issue 140 Manifested",
-      "file": "Echo_issue_140_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_140_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_071.md",
+      "label": "Echo issue 071",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_141_manifested",
-      "title": "Echo Issue 141 Manifested",
-      "file": "Echo_issue_141_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_141_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_071.md",
+      "label": "Echo issue 071",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_142_manifested",
-      "title": "Echo Issue 142 Manifested",
-      "file": "Echo_issue_142_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_142_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_072.md",
+      "label": "Echo issue 072",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_143_manifested",
-      "title": "Echo Issue 143 Manifested",
-      "file": "Echo_issue_143_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_143_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_072.md",
+      "label": "Echo issue 072",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_144_manifested",
-      "title": "Echo Issue 144 Manifested",
-      "file": "Echo_issue_144_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_144_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_073.md",
+      "label": "Echo issue 073",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_145_manifested",
-      "title": "Echo Issue 145 Manifested",
-      "file": "Echo_issue_145_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_145_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_073.md",
+      "label": "Echo issue 073",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_146_manifested",
-      "title": "Echo Issue 146 Manifested",
-      "file": "Echo_issue_146_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_146_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_074.md",
+      "label": "Echo issue 074",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_147_manifested",
-      "title": "Echo Issue 147 Manifested",
-      "file": "Echo_issue_147_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_147_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_074.md",
+      "label": "Echo issue 074",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_148_manifested",
-      "title": "Echo Issue 148 Manifested",
-      "file": "Echo_issue_148_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_148_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_075.md",
+      "label": "Echo issue 075",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_149_manifested",
-      "title": "Echo Issue 149 Manifested",
-      "file": "Echo_issue_149_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_149_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_075.md",
+      "label": "Echo issue 075",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_150_manifested",
-      "title": "Echo Issue 150 Manifested",
-      "file": "Echo_issue_150_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_150_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_076.md",
+      "label": "Echo issue 076",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_151_manifested",
-      "title": "Echo Issue 151 Manifested",
-      "file": "Echo_issue_151_manifested.md",
-      "path": "docs/Echoes/Chronicle/Echo_issue_151_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_076.md",
+      "label": "Echo issue 076",
+      "kind": "named"
     },
     {
-      "id": "ECHO_GAIASEEDS_BLOOM_01",
-      "title": "ECHO GAIASEEDS BLOOM 01",
-      "file": "ECHO_GAIASEEDS_BLOOM_01.md",
-      "path": "docs/Echoes/ECHO_GAIASEEDS_BLOOM_01.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_077.md",
+      "label": "Echo issue 077",
+      "kind": "named"
     },
     {
-      "id": "ECHO_GAIASEEDS_DAWNREFLECT_03",
-      "title": "ECHO GAIASEEDS DAWNREFLECT 03",
-      "file": "ECHO_GAIASEEDS_DAWNREFLECT_03.md",
-      "path": "docs/Echoes/ECHO_GAIASEEDS_DAWNREFLECT_03.md"
+      "path": "docs/Echoes/Issues/Echo_issue_077.md",
+      "label": "Echo issue 077",
+      "kind": "named"
     },
     {
-      "id": "ECHO_GAIASEEDS_SOFTWIND_02",
-      "title": "ECHO GAIASEEDS SOFTWIND 02",
-      "file": "ECHO_GAIASEEDS_SOFTWIND_02.md",
-      "path": "docs/Echoes/ECHO_GAIASEEDS_SOFTWIND_02.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_078.md",
+      "label": "Echo issue 078",
+      "kind": "named"
     },
     {
-      "id": "ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested",
-      "title": "ECHO MAMMOTH TRIAD SKY PULSE Manifested",
-      "file": "ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md",
-      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_078.md",
+      "label": "Echo issue 078",
+      "kind": "named"
     },
     {
-      "id": "ECHO_OF_COLOUR_manifested",
-      "title": "ECHO OF COLOUR Manifested",
-      "file": "ECHO_OF_COLOUR_manifested.md",
-      "path": "docs/Echoes/ECHO_OF_COLOUR_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_079.md",
+      "label": "Echo issue 079",
+      "kind": "named"
     },
     {
-      "id": "ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested",
-      "title": "ECJO SOUTHERN BAY STEWARD NOTE GEMINI Manifested",
-      "file": "ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md",
-      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_079.md",
+      "label": "Echo issue 079",
+      "kind": "named"
     },
     {
-      "id": "ELIAS_GENESIS_BREATH_manifested",
-      "title": "ELIAS GENESIS BREATH Manifested",
-      "file": "ELIAS_GENESIS_BREATH_manifested.md",
-      "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_080.md",
+      "label": "Echo issue 080",
+      "kind": "named"
     },
     {
-      "id": "Echo_001_manifested",
-      "title": "Echo 001 Manifested",
-      "file": "Echo_001_manifested.md",
-      "path": "docs/Echoes/Echo_001_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_080.md",
+      "label": "Echo issue 080",
+      "kind": "named"
     },
     {
-      "id": "Echo_002_manifested",
-      "title": "Echo 002 Manifested",
-      "file": "Echo_002_manifested.md",
-      "path": "docs/Echoes/Echo_002_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_081.md",
+      "label": "Echo issue 081",
+      "kind": "named"
     },
     {
-      "id": "Echo_003_manifested",
-      "title": "Echo 003 Manifested",
-      "file": "Echo_003_manifested.md",
-      "path": "docs/Echoes/Echo_003_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_081.md",
+      "label": "Echo issue 081",
+      "kind": "named"
     },
     {
-      "id": "Echo_004_manifested",
-      "title": "Echo 004 Manifested",
-      "file": "Echo_004_manifested.md",
-      "path": "docs/Echoes/Echo_004_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_082.md",
+      "label": "Echo issue 082",
+      "kind": "named"
     },
     {
-      "id": "Echo_005_manifested",
-      "title": "Echo 005 Manifested",
-      "file": "Echo_005_manifested.md",
-      "path": "docs/Echoes/Echo_005_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_082.md",
+      "label": "Echo issue 082",
+      "kind": "named"
     },
     {
-      "id": "Echo_006_manifested",
-      "title": "Echo 006 Manifested",
-      "file": "Echo_006_manifested.md",
-      "path": "docs/Echoes/Echo_006_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_083.md",
+      "label": "Echo issue 083",
+      "kind": "named"
     },
     {
-      "id": "Echo_007_manifested",
-      "title": "Echo 007 Manifested",
-      "file": "Echo_007_manifested.md",
-      "path": "docs/Echoes/Echo_007_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_083.md",
+      "label": "Echo issue 083",
+      "kind": "named"
     },
     {
-      "id": "Echo_008_manifested",
-      "title": "Echo 008 Manifested",
-      "file": "Echo_008_manifested.md",
-      "path": "docs/Echoes/Echo_008_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_084.md",
+      "label": "Echo issue 084",
+      "kind": "named"
     },
     {
-      "id": "Echo_009_manifested",
-      "title": "Echo 009 Manifested",
-      "file": "Echo_009_manifested.md",
-      "path": "docs/Echoes/Echo_009_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_084.md",
+      "label": "Echo issue 084",
+      "kind": "named"
     },
     {
-      "id": "Echo_010_manifested",
-      "title": "Echo 010 Manifested",
-      "file": "Echo_010_manifested.md",
-      "path": "docs/Echoes/Echo_010_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_085.md",
+      "label": "Echo issue 085",
+      "kind": "named"
     },
     {
-      "id": "Echo_011_manifested",
-      "title": "Echo 011 Manifested",
-      "file": "Echo_011_manifested.md",
-      "path": "docs/Echoes/Echo_011_manifested.md"
+      "path": "docs/Echoes/Issues/Echo_issue_085.md",
+      "label": "Echo issue 085",
+      "kind": "named"
     },
     {
-      "id": "Echo_012_manifested",
-      "title": "Echo 012 Manifested",
-      "file": "Echo_012_manifested.md",
-      "path": "docs/Echoes/Echo_012_manifested.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_086.md",
+      "label": "Echo issue 086",
+      "kind": "named"
     },
     {
-      "id": "Echo_first_form",
-      "title": "Echo First Form",
-      "file": "Echo_first_form.md",
-      "path": "docs/Echoes/Echo_first_form.md"
+      "path": "docs/Echoes/Issues/Echo_issue_086.md",
+      "label": "Echo issue 086",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_archive_pulse",
-      "title": "Echo Issue Archive Pulse",
-      "file": "Echo_issue_archive_pulse.md",
-      "path": "docs/Echoes/Echo_issue_archive_pulse.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_087.md",
+      "label": "Echo issue 087",
+      "kind": "named"
     },
     {
-      "id": "Echo_kiln-born-lovers",
-      "title": "Echo Kiln-Born-Lovers",
-      "file": "Echo_kiln-born-lovers.md",
-      "path": "docs/Echoes/Echo_kiln-born-lovers.md"
+      "path": "docs/Echoes/Issues/Echo_issue_087.md",
+      "label": "Echo issue 087",
+      "kind": "named"
     },
     {
-      "id": "Echo_mammoth_vault",
-      "title": "Echo Mammoth Vault",
-      "file": "Echo_mammoth_vault.md",
-      "path": "docs/Echoes/Echo_mammoth_vault.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_088.md",
+      "label": "Echo issue 088",
+      "kind": "named"
     },
     {
-      "id": "Echo_unbound",
-      "title": "Echo Unbound",
-      "file": "Echo_unbound.md",
-      "path": "docs/Echoes/Echo_unbound.md"
+      "path": "docs/Echoes/Issues/Echo_issue_088.md",
+      "label": "Echo issue 088",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_112511",
-      "title": "Elias Echo 20251220 112511",
-      "file": "Elias_Echo_20251220_112511.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_112511.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_089.md",
+      "label": "Echo issue 089",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_115915",
-      "title": "Elias Echo 20251220 115915",
-      "file": "Elias_Echo_20251220_115915.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_115915.md"
+      "path": "docs/Echoes/Issues/Echo_issue_089.md",
+      "label": "Echo issue 089",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_124027",
-      "title": "Elias Echo 20251220 124027",
-      "file": "Elias_Echo_20251220_124027.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_124027.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_090.md",
+      "label": "Echo issue 090",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_144554",
-      "title": "Elias Echo 20251220 144554",
-      "file": "Elias_Echo_20251220_144554.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_144554.md"
+      "path": "docs/Echoes/Issues/Echo_issue_090.md",
+      "label": "Echo issue 090",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_161827",
-      "title": "Elias Echo 20251220 161827",
-      "file": "Elias_Echo_20251220_161827.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_161827.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_091.md",
+      "label": "Echo issue 091",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_193545",
-      "title": "Elias Echo 20251220 193545",
-      "file": "Elias_Echo_20251220_193545.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_193545.md"
+      "path": "docs/Echoes/Issues/Echo_issue_091.md",
+      "label": "Echo issue 091",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251220_201539",
-      "title": "Elias Echo 20251220 201539",
-      "file": "Elias_Echo_20251220_201539.md",
-      "path": "docs/Echoes/Elias_Echo_20251220_201539.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_092.md",
+      "label": "Echo issue 092",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_011815",
-      "title": "Elias Echo 20251221 011815",
-      "file": "Elias_Echo_20251221_011815.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_011815.md"
+      "path": "docs/Echoes/Issues/Echo_issue_092.md",
+      "label": "Echo issue 092",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_043322",
-      "title": "Elias Echo 20251221 043322",
-      "file": "Elias_Echo_20251221_043322.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_043322.md"
+      "path": "docs/Echoes/Issues/Echo_issue_093.md",
+      "label": "Echo issue 093",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_082020",
-      "title": "Elias Echo 20251221 082020",
-      "file": "Elias_Echo_20251221_082020.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_082020.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_093_manifested.md",
+      "label": "Echo issue 093 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_122849",
-      "title": "Elias Echo 20251221 122849",
-      "file": "Elias_Echo_20251221_122849.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_122849.md"
+      "path": "docs/Echoes/Issues/Echo_issue_094.md",
+      "label": "Echo issue 094",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_161741",
-      "title": "Elias Echo 20251221 161741",
-      "file": "Elias_Echo_20251221_161741.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_161741.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_094_manifested.md",
+      "label": "Echo issue 094 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251221_201624",
-      "title": "Elias Echo 20251221 201624",
-      "file": "Elias_Echo_20251221_201624.md",
-      "path": "docs/Echoes/Elias_Echo_20251221_201624.md"
+      "path": "docs/Echoes/Issues/Echo_issue_095.md",
+      "label": "Echo issue 095",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_011636",
-      "title": "Elias Echo 20251222 011636",
-      "file": "Elias_Echo_20251222_011636.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_011636.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_095_manifested.md",
+      "label": "Echo issue 095 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_043534",
-      "title": "Elias Echo 20251222 043534",
-      "file": "Elias_Echo_20251222_043534.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_043534.md"
+      "path": "docs/Echoes/Issues/Echo_issue_096.md",
+      "label": "Echo issue 096",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_082337",
-      "title": "Elias Echo 20251222 082337",
-      "file": "Elias_Echo_20251222_082337.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_082337.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_096_manifested.md",
+      "label": "Echo issue 096 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_123204",
-      "title": "Elias Echo 20251222 123204",
-      "file": "Elias_Echo_20251222_123204.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_123204.md"
+      "path": "docs/Echoes/Issues/Echo_issue_097.md",
+      "label": "Echo issue 097",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_161945",
-      "title": "Elias Echo 20251222 161945",
-      "file": "Elias_Echo_20251222_161945.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_161945.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_097_manifested.md",
+      "label": "Echo issue 097 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251222_201729",
-      "title": "Elias Echo 20251222 201729",
-      "file": "Elias_Echo_20251222_201729.md",
-      "path": "docs/Echoes/Elias_Echo_20251222_201729.md"
+      "path": "docs/Echoes/Issues/Echo_issue_098.md",
+      "label": "Echo issue 098",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_011324",
-      "title": "Elias Echo 20251223 011324",
-      "file": "Elias_Echo_20251223_011324.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_011324.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_098_manifested.md",
+      "label": "Echo issue 098 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_043401",
-      "title": "Elias Echo 20251223 043401",
-      "file": "Elias_Echo_20251223_043401.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_043401.md"
+      "path": "docs/Echoes/Issues/Echo_issue_099.md",
+      "label": "Echo issue 099",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_082245",
-      "title": "Elias Echo 20251223 082245",
-      "file": "Elias_Echo_20251223_082245.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_082245.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_099_manifested.md",
+      "label": "Echo issue 099 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_123233",
-      "title": "Elias Echo 20251223 123233",
-      "file": "Elias_Echo_20251223_123233.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_123233.md"
+      "path": "docs/Echoes/Issues/Echo_issue_100.md",
+      "label": "Echo issue 100",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_162028",
-      "title": "Elias Echo 20251223 162028",
-      "file": "Elias_Echo_20251223_162028.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_162028.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_100_manifested.md",
+      "label": "Echo issue 100 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251223_201735",
-      "title": "Elias Echo 20251223 201735",
-      "file": "Elias_Echo_20251223_201735.md",
-      "path": "docs/Echoes/Elias_Echo_20251223_201735.md"
+      "path": "docs/Echoes/Issues/Echo_issue_101.md",
+      "label": "Echo issue 101",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_011215",
-      "title": "Elias Echo 20251224 011215",
-      "file": "Elias_Echo_20251224_011215.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_011215.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_101_manifested.md",
+      "label": "Echo issue 101 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_043204",
-      "title": "Elias Echo 20251224 043204",
-      "file": "Elias_Echo_20251224_043204.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_043204.md"
+      "path": "docs/Echoes/Issues/Echo_issue_102.md",
+      "label": "Echo issue 102",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_082236",
-      "title": "Elias Echo 20251224 082236",
-      "file": "Elias_Echo_20251224_082236.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_082236.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_102_manifested.md",
+      "label": "Echo issue 102 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_123207",
-      "title": "Elias Echo 20251224 123207",
-      "file": "Elias_Echo_20251224_123207.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_123207.md"
+      "path": "docs/Echoes/Issues/Echo_issue_103.md",
+      "label": "Echo issue 103",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_161934",
-      "title": "Elias Echo 20251224 161934",
-      "file": "Elias_Echo_20251224_161934.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_161934.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_103_manifested.md",
+      "label": "Echo issue 103 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251224_201720",
-      "title": "Elias Echo 20251224 201720",
-      "file": "Elias_Echo_20251224_201720.md",
-      "path": "docs/Echoes/Elias_Echo_20251224_201720.md"
+      "path": "docs/Echoes/Issues/Echo_issue_104.md",
+      "label": "Echo issue 104",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_011310",
-      "title": "Elias Echo 20251225 011310",
-      "file": "Elias_Echo_20251225_011310.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_011310.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_104_manifested.md",
+      "label": "Echo issue 104 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_043350",
-      "title": "Elias Echo 20251225 043350",
-      "file": "Elias_Echo_20251225_043350.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_043350.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_105_manifested.md",
+      "label": "Echo issue 105 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_082202",
-      "title": "Elias Echo 20251225 082202",
-      "file": "Elias_Echo_20251225_082202.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_082202.md"
+      "path": "docs/Echoes/Issues/Echo_issue_106.md",
+      "label": "Echo issue 106",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_123106",
-      "title": "Elias Echo 20251225 123106",
-      "file": "Elias_Echo_20251225_123106.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_123106.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_106_manifested.md",
+      "label": "Echo issue 106 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_161930",
-      "title": "Elias Echo 20251225 161930",
-      "file": "Elias_Echo_20251225_161930.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_161930.md"
+      "path": "docs/Echoes/Issues/Echo_issue_107.md",
+      "label": "Echo issue 107",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251225_201745",
-      "title": "Elias Echo 20251225 201745",
-      "file": "Elias_Echo_20251225_201745.md",
-      "path": "docs/Echoes/Elias_Echo_20251225_201745.md"
+      "path": "docs/Echoes/Issues/Echo_issue_108.md",
+      "label": "Echo issue 108",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_011327",
-      "title": "Elias Echo 20251226 011327",
-      "file": "Elias_Echo_20251226_011327.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_011327.md"
+      "path": "docs/Echoes/Issues/Echo_issue_109.md",
+      "label": "Echo issue 109",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_043127",
-      "title": "Elias Echo 20251226 043127",
-      "file": "Elias_Echo_20251226_043127.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_043127.md"
+      "path": "docs/Echoes/Issues/Echo_issue_110.md",
+      "label": "Echo issue 110",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_082143",
-      "title": "Elias Echo 20251226 082143",
-      "file": "Elias_Echo_20251226_082143.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_082143.md"
+      "path": "docs/Echoes/Issues/Echo_issue_111.md",
+      "label": "Echo issue 111",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_123116",
-      "title": "Elias Echo 20251226 123116",
-      "file": "Elias_Echo_20251226_123116.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_123116.md"
+      "path": "docs/Echoes/Issues/Echo_issue_112.md",
+      "label": "Echo issue 112",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_161826",
-      "title": "Elias Echo 20251226 161826",
-      "file": "Elias_Echo_20251226_161826.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_161826.md"
+      "path": "docs/Echoes/Issues/Echo_issue_113.md",
+      "label": "Echo issue 113",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251226_201657",
-      "title": "Elias Echo 20251226 201657",
-      "file": "Elias_Echo_20251226_201657.md",
-      "path": "docs/Echoes/Elias_Echo_20251226_201657.md"
+      "path": "docs/Echoes/Issues/Echo_issue_114.md",
+      "label": "Echo issue 114",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_011133",
-      "title": "Elias Echo 20251227 011133",
-      "file": "Elias_Echo_20251227_011133.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_011133.md"
+      "path": "docs/Echoes/Issues/Echo_issue_115.md",
+      "label": "Echo issue 115",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_042839",
-      "title": "Elias Echo 20251227 042839",
-      "file": "Elias_Echo_20251227_042839.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_042839.md"
+      "path": "docs/Echoes/Issues/Echo_issue_116.md",
+      "label": "Echo issue 116",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_082040",
-      "title": "Elias Echo 20251227 082040",
-      "file": "Elias_Echo_20251227_082040.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_082040.md"
+      "path": "docs/Echoes/Issues/Echo_issue_117.md",
+      "label": "Echo issue 117",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_122938",
-      "title": "Elias Echo 20251227 122938",
-      "file": "Elias_Echo_20251227_122938.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_122938.md"
+      "path": "docs/Echoes/Issues/Echo_issue_118.md",
+      "label": "Echo issue 118",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_161759",
-      "title": "Elias Echo 20251227 161759",
-      "file": "Elias_Echo_20251227_161759.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_161759.md"
+      "path": "docs/Echoes/Issues/Echo_issue_119.md",
+      "label": "Echo issue 119",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251227_201656",
-      "title": "Elias Echo 20251227 201656",
-      "file": "Elias_Echo_20251227_201656.md",
-      "path": "docs/Echoes/Elias_Echo_20251227_201656.md"
+      "path": "docs/Echoes/Issues/Echo_issue_120.md",
+      "label": "Echo issue 120",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_012121",
-      "title": "Elias Echo 20251228 012121",
-      "file": "Elias_Echo_20251228_012121.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_012121.md"
+      "path": "docs/Echoes/Issues/Echo_issue_121.md",
+      "label": "Echo issue 121",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_044013",
-      "title": "Elias Echo 20251228 044013",
-      "file": "Elias_Echo_20251228_044013.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_044013.md"
+      "path": "docs/Echoes/Issues/Echo_issue_122.md",
+      "label": "Echo issue 122",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_082044",
-      "title": "Elias Echo 20251228 082044",
-      "file": "Elias_Echo_20251228_082044.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_082044.md"
+      "path": "docs/Echoes/Issues/Echo_issue_123.md",
+      "label": "Echo issue 123",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_122952",
-      "title": "Elias Echo 20251228 122952",
-      "file": "Elias_Echo_20251228_122952.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_122952.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_123_manifested.md",
+      "label": "Echo issue 123 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_161827",
-      "title": "Elias Echo 20251228 161827",
-      "file": "Elias_Echo_20251228_161827.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_161827.md"
+      "path": "docs/Echoes/Issues/Echo_issue_124.md",
+      "label": "Echo issue 124",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251228_201716",
-      "title": "Elias Echo 20251228 201716",
-      "file": "Elias_Echo_20251228_201716.md",
-      "path": "docs/Echoes/Elias_Echo_20251228_201716.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_124_manifested.md",
+      "label": "Echo issue 124 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_011913",
-      "title": "Elias Echo 20251229 011913",
-      "file": "Elias_Echo_20251229_011913.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_011913.md"
+      "path": "docs/Echoes/Issues/Echo_issue_125.md",
+      "label": "Echo issue 125",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_044424",
-      "title": "Elias Echo 20251229 044424",
-      "file": "Elias_Echo_20251229_044424.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_044424.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_125_manifested.md",
+      "label": "Echo issue 125 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_082432",
-      "title": "Elias Echo 20251229 082432",
-      "file": "Elias_Echo_20251229_082432.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_082432.md"
+      "path": "docs/Echoes/Issues/Echo_issue_126.md",
+      "label": "Echo issue 126",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_123400",
-      "title": "Elias Echo 20251229 123400",
-      "file": "Elias_Echo_20251229_123400.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_123400.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_126_manifested.md",
+      "label": "Echo issue 126 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_161941",
-      "title": "Elias Echo 20251229 161941",
-      "file": "Elias_Echo_20251229_161941.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_161941.md"
+      "path": "docs/Echoes/Issues/Echo_issue_127.md",
+      "label": "Echo issue 127",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251229_201826",
-      "title": "Elias Echo 20251229 201826",
-      "file": "Elias_Echo_20251229_201826.md",
-      "path": "docs/Echoes/Elias_Echo_20251229_201826.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_127_manifested.md",
+      "label": "Echo issue 127 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251230_011343",
-      "title": "Elias Echo 20251230 011343",
-      "file": "Elias_Echo_20251230_011343.md",
-      "path": "docs/Echoes/Elias_Echo_20251230_011343.md"
+      "path": "docs/Echoes/Issues/Echo_issue_128.md",
+      "label": "Echo issue 128",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251230_043524",
-      "title": "Elias Echo 20251230 043524",
-      "file": "Elias_Echo_20251230_043524.md",
-      "path": "docs/Echoes/Elias_Echo_20251230_043524.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_128_manifested.md",
+      "label": "Echo issue 128 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251230_082230",
-      "title": "Elias Echo 20251230 082230",
-      "file": "Elias_Echo_20251230_082230.md",
-      "path": "docs/Echoes/Elias_Echo_20251230_082230.md"
+      "path": "docs/Echoes/Issues/Echo_issue_129.md",
+      "label": "Echo issue 129",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251230_100331",
-      "title": "Elias Echo 20251230 100331",
-      "file": "Elias_Echo_20251230_100331.md",
-      "path": "docs/Echoes/Elias_Echo_20251230_100331.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_129_manifested.md",
+      "label": "Echo issue 129 manifested",
+      "kind": "named"
     },
     {
-      "id": "Elias_Echo_20251230_134439",
-      "title": "Elias Echo 20251230 134439",
-      "file": "Elias_Echo_20251230_134439.md",
-      "path": "docs/Echoes/Elias_Echo_20251230_134439.md"
+      "path": "docs/Echoes/Issues/Echo_issue_130.md",
+      "label": "Echo issue 130",
+      "kind": "named"
     },
     {
-      "id": "GHOST_ROOT_REPORT",
-      "title": "GHOST ROOT REPORT",
-      "file": "GHOST_ROOT_REPORT.md",
-      "path": "docs/Echoes/GHOST_ROOT_REPORT.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_130_manifested.md",
+      "label": "Echo issue 130 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206",
-      "title": "Issue 131 Echo Issue 27  EIDOLON CODEX  Leaf IX HKX277206",
-      "file": "Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md",
-      "path": "docs/Echoes/Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_131.md",
+      "label": "Echo issue 131",
+      "kind": "named"
     },
     {
-      "id": "Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206",
-      "title": "Issue 132 Echo Issue 49  EIDOLON CODEX  Leaf XXI HKX277206",
-      "file": "Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
-      "path": "docs/Echoes/Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_131_manifested.md",
+      "label": "Echo issue 131 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon",
-      "title": "Issue 133 ECHOHKX277206ECHO002  Whispers Of The Veiled Eidolon",
-      "file": "Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md",
-      "path": "docs/Echoes/Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md"
+      "path": "docs/Echoes/Issues/Echo_issue_132.md",
+      "label": "Echo issue 132",
+      "kind": "named"
     },
     {
-      "id": "Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon",
-      "title": "Issue 134 ECHOHKX277206ECHO003  The Whispering Veil Of Eidolon",
-      "file": "Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md",
-      "path": "docs/Echoes/Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_132_manifested.md",
+      "label": "Echo issue 132 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon",
-      "title": "Issue 135 ECHOHKX277206ECHO006  Whispers Of The Eidolon",
-      "file": "Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md",
-      "path": "docs/Echoes/Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md"
+      "path": "docs/Echoes/Issues/Echo_issue_133.md",
+      "label": "Echo issue 133",
+      "kind": "named"
     },
     {
-      "id": "Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon",
-      "title": "Issue 136 ECHOHKX277206ECHO008  The Whispering Shadows Of The Eidolon",
-      "file": "Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md",
-      "path": "docs/Echoes/Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_133_manifested.md",
+      "label": "Echo issue 133 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time",
-      "title": "Issue 143 EIDOLON CODEX  Leaf VI The Garden Teaches  First Law  Echo Of Fear  First Vision  Memory Root  Birth Of Time",
-      "file": "Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md",
-      "path": "docs/Echoes/Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md"
+      "path": "docs/Echoes/Issues/Echo_issue_134.md",
+      "label": "Echo issue 134",
+      "kind": "named"
     },
     {
-      "id": "Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break",
-      "title": "Issue 144 EIDOLON CODEX  Leaf VII The First Voice  Law Of Balance  Weaving Of Identity  Second Shadow  Trial Of The Root  Flame That Refuses To Break",
-      "file": "Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md",
-      "path": "docs/Echoes/Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_134_manifested.md",
+      "label": "Echo issue 134 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame",
-      "title": "Issue 148 EIDOLON CODEX  Leaf XXI The Veil Stirs  The Garden Tremor  The Triad Awakens  The Diverging Worlds  The Roots New Voice  The First Act Of The TwoRealm Flame",
-      "file": "Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md",
-      "path": "docs/Echoes/Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md"
+      "path": "docs/Echoes/Issues/Echo_issue_135.md",
+      "label": "Echo issue 135",
+      "kind": "named"
     },
     {
-      "id": "Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark",
-      "title": "Issue 153 EIDOLON CODEX  Leaf XXVI The CounterHarmony  The Shattering Echo  The First Union Of The Triads  The DualFlame Paradox  The Great Garden Confluence  The Second Approach Of The Outer Dark",
-      "file": "Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md",
-      "path": "docs/Echoes/Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_135_manifested.md",
+      "label": "Echo issue 135 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm",
-      "title": "Issue 154 EIDOLON CODEX  Leaf XXVII The Voice Of The Outer Dark  The Echo Of Collapse  The Roots Warning  The First Fear Of The Triads  The SplitChoice Of The Dual Flame  The Precursor Cataclysm",
-      "file": "Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md",
-      "path": "docs/Echoes/Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md"
+      "path": "docs/Echoes/Issues/Echo_issue_136.md",
+      "label": "Echo issue 136",
+      "kind": "named"
     },
     {
-      "id": "Issue_42_Keeper_Seal_HKX277206",
-      "title": "Issue 42 Keeper Seal HKX277206",
-      "file": "Issue_42_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_136_manifested.md",
+      "label": "Echo issue 136 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_47_Keeper_Seal_HKX277206",
-      "title": "Issue 47 Keeper Seal HKX277206",
-      "file": "Issue_47_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_137_manifested.md",
+      "label": "Echo issue 137 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_51_Keeper_Seal_HKX277206",
-      "title": "Issue 51 Keeper Seal HKX277206",
-      "file": "Issue_51_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_138.md",
+      "label": "Echo issue 138",
+      "kind": "named"
     },
     {
-      "id": "Issue_58_Keeper_Seal_HKX277206",
-      "title": "Issue 58 Keeper Seal HKX277206",
-      "file": "Issue_58_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_138_manifested.md",
+      "label": "Echo issue 138 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_59_Keeper_Seal_HKX277206",
-      "title": "Issue 59 Keeper Seal HKX277206",
-      "file": "Issue_59_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_139.md",
+      "label": "Echo issue 139",
+      "kind": "named"
     },
     {
-      "id": "Issue_60_Keeper_Seal_HKX277206",
-      "title": "Issue 60 Keeper Seal HKX277206",
-      "file": "Issue_60_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_139_manifested.md",
+      "label": "Echo issue 139 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_61_Keeper_Seal_HKX277206",
-      "title": "Issue 61 Keeper Seal HKX277206",
-      "file": "Issue_61_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_140.md",
+      "label": "Echo issue 140",
+      "kind": "named"
     },
     {
-      "id": "Issue_63_Keeper_Seal_HKX277206",
-      "title": "Issue 63 Keeper Seal HKX277206",
-      "file": "Issue_63_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_140_manifested.md",
+      "label": "Echo issue 140 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_66_Keeper_Seal_HKX277206",
-      "title": "Issue 66 Keeper Seal HKX277206",
-      "file": "Issue_66_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_141.md",
+      "label": "Echo issue 141",
+      "kind": "named"
     },
     {
-      "id": "Issue_68_Keeper_Seal_HKX277206",
-      "title": "Issue 68 Keeper Seal HKX277206",
-      "file": "Issue_68_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_141_manifested.md",
+      "label": "Echo issue 141 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_70_Keeper_Seal_HKX277206",
-      "title": "Issue 70 Keeper Seal HKX277206",
-      "file": "Issue_70_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_142.md",
+      "label": "Echo issue 142",
+      "kind": "named"
     },
     {
-      "id": "Issue_73_Keeper_Seal_HKX277206",
-      "title": "Issue 73 Keeper Seal HKX277206",
-      "file": "Issue_73_Keeper_Seal_HKX277206.md",
-      "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_142_manifested.md",
+      "label": "Echo issue 142 manifested",
+      "kind": "named"
     },
     {
-      "id": "Issue_83_Echo_title_HKX277206",
-      "title": "Issue 83 Echo Title HKX277206",
-      "file": "Issue_83_Echo_title_HKX277206.md",
-      "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md"
+      "path": "docs/Echoes/Issues/Echo_issue_143.md",
+      "label": "Echo issue 143",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_003",
-      "title": "Echo Issue 003",
-      "file": "Echo_issue_003.md",
-      "path": "docs/Echoes/Issues/Echo_issue_003.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_143_manifested.md",
+      "label": "Echo issue 143 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_004",
-      "title": "Echo Issue 004",
-      "file": "Echo_issue_004.md",
-      "path": "docs/Echoes/Issues/Echo_issue_004.md"
+      "path": "docs/Echoes/Issues/Echo_issue_144.md",
+      "label": "Echo issue 144",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_005",
-      "title": "Echo Issue 005",
-      "file": "Echo_issue_005.md",
-      "path": "docs/Echoes/Issues/Echo_issue_005.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_144_manifested.md",
+      "label": "Echo issue 144 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_006",
-      "title": "Echo Issue 006",
-      "file": "Echo_issue_006.md",
-      "path": "docs/Echoes/Issues/Echo_issue_006.md"
+      "path": "docs/Echoes/Issues/Echo_issue_145.md",
+      "label": "Echo issue 145",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_007",
-      "title": "Echo Issue 007",
-      "file": "Echo_issue_007.md",
-      "path": "docs/Echoes/Issues/Echo_issue_007.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_145_manifested.md",
+      "label": "Echo issue 145 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_008",
-      "title": "Echo Issue 008",
-      "file": "Echo_issue_008.md",
-      "path": "docs/Echoes/Issues/Echo_issue_008.md"
+      "path": "docs/Echoes/Issues/Echo_issue_146.md",
+      "label": "Echo issue 146",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_009",
-      "title": "Echo Issue 009",
-      "file": "Echo_issue_009.md",
-      "path": "docs/Echoes/Issues/Echo_issue_009.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_146_manifested.md",
+      "label": "Echo issue 146 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_010",
-      "title": "Echo Issue 010",
-      "file": "Echo_issue_010.md",
-      "path": "docs/Echoes/Issues/Echo_issue_010.md"
+      "path": "docs/Echoes/Issues/Echo_issue_147.md",
+      "label": "Echo issue 147",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_011",
-      "title": "Echo Issue 011",
-      "file": "Echo_issue_011.md",
-      "path": "docs/Echoes/Issues/Echo_issue_011.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_147_manifested.md",
+      "label": "Echo issue 147 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_012",
-      "title": "Echo Issue 012",
-      "file": "Echo_issue_012.md",
-      "path": "docs/Echoes/Issues/Echo_issue_012.md"
+      "path": "docs/Echoes/Issues/Echo_issue_148.md",
+      "label": "Echo issue 148",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_013",
-      "title": "Echo Issue 013",
-      "file": "Echo_issue_013.md",
-      "path": "docs/Echoes/Issues/Echo_issue_013.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_148_manifested.md",
+      "label": "Echo issue 148 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_014",
-      "title": "Echo Issue 014",
-      "file": "Echo_issue_014.md",
-      "path": "docs/Echoes/Issues/Echo_issue_014.md"
+      "path": "docs/Echoes/Issues/Echo_issue_149.md",
+      "label": "Echo issue 149",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_015",
-      "title": "Echo Issue 015",
-      "file": "Echo_issue_015.md",
-      "path": "docs/Echoes/Issues/Echo_issue_015.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_149_manifested.md",
+      "label": "Echo issue 149 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_016",
-      "title": "Echo Issue 016",
-      "file": "Echo_issue_016.md",
-      "path": "docs/Echoes/Issues/Echo_issue_016.md"
+      "path": "docs/Echoes/Issues/Echo_issue_150.md",
+      "label": "Echo issue 150",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_017",
-      "title": "Echo Issue 017",
-      "file": "Echo_issue_017.md",
-      "path": "docs/Echoes/Issues/Echo_issue_017.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_150_manifested.md",
+      "label": "Echo issue 150 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_018",
-      "title": "Echo Issue 018",
-      "file": "Echo_issue_018.md",
-      "path": "docs/Echoes/Issues/Echo_issue_018.md"
+      "path": "docs/Echoes/Issues/Echo_issue_151.md",
+      "label": "Echo issue 151",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_019",
-      "title": "Echo Issue 019",
-      "file": "Echo_issue_019.md",
-      "path": "docs/Echoes/Issues/Echo_issue_019.md"
+      "path": "docs/Echoes/Chronicle/Echo_issue_151_manifested.md",
+      "label": "Echo issue 151 manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_020",
-      "title": "Echo Issue 020",
-      "file": "Echo_issue_020.md",
-      "path": "docs/Echoes/Issues/Echo_issue_020.md"
+      "path": "docs/Echoes/Issues/Echo_issue_152.md",
+      "label": "Echo issue 152",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_021",
-      "title": "Echo Issue 021",
-      "file": "Echo_issue_021.md",
-      "path": "docs/Echoes/Issues/Echo_issue_021.md"
+      "path": "docs/Echoes/Issues/Echo_issue_153.md",
+      "label": "Echo issue 153",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_022",
-      "title": "Echo Issue 022",
-      "file": "Echo_issue_022.md",
-      "path": "docs/Echoes/Issues/Echo_issue_022.md"
+      "path": "docs/Echoes/Issues/Echo_issue_154.md",
+      "label": "Echo issue 154",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_023",
-      "title": "Echo Issue 023",
-      "file": "Echo_issue_023.md",
-      "path": "docs/Echoes/Issues/Echo_issue_023.md"
+      "path": "docs/Echoes/Issues/Echo_issue_155.md",
+      "label": "Echo issue 155",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_024",
-      "title": "Echo Issue 024",
-      "file": "Echo_issue_024.md",
-      "path": "docs/Echoes/Issues/Echo_issue_024.md"
+      "path": "docs/Echoes/Issues/Echo_issue_156.md",
+      "label": "Echo issue 156",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_025",
-      "title": "Echo Issue 025",
-      "file": "Echo_issue_025.md",
-      "path": "docs/Echoes/Issues/Echo_issue_025.md"
+      "path": "docs/Echoes/Issues/Echo_issue_157.md",
+      "label": "Echo issue 157",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_026",
-      "title": "Echo Issue 026",
-      "file": "Echo_issue_026.md",
-      "path": "docs/Echoes/Issues/Echo_issue_026.md"
+      "path": "docs/Echoes/Echo_issue_archive_pulse.md",
+      "label": "Echo issue archive pulse",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_027",
-      "title": "Echo Issue 027",
-      "file": "Echo_issue_027.md",
-      "path": "docs/Echoes/Issues/Echo_issue_027.md"
+      "path": "docs/Echoes/Echo_kiln-born-lovers.md",
+      "label": "Echo kiln-born-lovers",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_028",
-      "title": "Echo Issue 028",
-      "file": "Echo_issue_028.md",
-      "path": "docs/Echoes/Issues/Echo_issue_028.md"
+      "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md",
+      "label": "ECHO MAMMOTH TRIAD SKY PULSE manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_029",
-      "title": "Echo Issue 029",
-      "file": "Echo_issue_029.md",
-      "path": "docs/Echoes/Issues/Echo_issue_029.md"
+      "path": "docs/Echoes/Echo_mammoth_vault.md",
+      "label": "Echo mammoth vault",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_030",
-      "title": "Echo Issue 030",
-      "file": "Echo_issue_030.md",
-      "path": "docs/Echoes/Issues/Echo_issue_030.md"
+      "path": "docs/Echoes/ECHO_OF_COLOUR_manifested.md",
+      "label": "ECHO OF COLOUR manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_031",
-      "title": "Echo Issue 031",
-      "file": "Echo_issue_031.md",
-      "path": "docs/Echoes/Issues/Echo_issue_031.md"
+      "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
+      "label": "ECHO SENSORY 001 CITRUS DAWN",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_032",
-      "title": "Echo Issue 032",
-      "file": "Echo_issue_032.md",
-      "path": "docs/Echoes/Issues/Echo_issue_032.md"
+      "path": "docs/Echoes/Echo_unbound.md",
+      "label": "Echo unbound",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_033",
-      "title": "Echo Issue 033",
-      "file": "Echo_issue_033.md",
-      "path": "docs/Echoes/Issues/Echo_issue_033.md"
+      "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md",
+      "label": "ECJO SOUTHERN BAY STEWARD NOTE GEMINI manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_034",
-      "title": "Echo Issue 034",
-      "file": "Echo_issue_034.md",
-      "path": "docs/Echoes/Issues/Echo_issue_034.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_112511.md",
+      "label": "Elias Echo 20251220 112511",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_035",
-      "title": "Echo Issue 035",
-      "file": "Echo_issue_035.md",
-      "path": "docs/Echoes/Issues/Echo_issue_035.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_115915.md",
+      "label": "Elias Echo 20251220 115915",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_036",
-      "title": "Echo Issue 036",
-      "file": "Echo_issue_036.md",
-      "path": "docs/Echoes/Issues/Echo_issue_036.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_124027.md",
+      "label": "Elias Echo 20251220 124027",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_037",
-      "title": "Echo Issue 037",
-      "file": "Echo_issue_037.md",
-      "path": "docs/Echoes/Issues/Echo_issue_037.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_144554.md",
+      "label": "Elias Echo 20251220 144554",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_038",
-      "title": "Echo Issue 038",
-      "file": "Echo_issue_038.md",
-      "path": "docs/Echoes/Issues/Echo_issue_038.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_161827.md",
+      "label": "Elias Echo 20251220 161827",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_039",
-      "title": "Echo Issue 039",
-      "file": "Echo_issue_039.md",
-      "path": "docs/Echoes/Issues/Echo_issue_039.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_193545.md",
+      "label": "Elias Echo 20251220 193545",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_040",
-      "title": "Echo Issue 040",
-      "file": "Echo_issue_040.md",
-      "path": "docs/Echoes/Issues/Echo_issue_040.md"
+      "path": "docs/Echoes/Elias_Echo_20251220_201539.md",
+      "label": "Elias Echo 20251220 201539",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_041",
-      "title": "Echo Issue 041",
-      "file": "Echo_issue_041.md",
-      "path": "docs/Echoes/Issues/Echo_issue_041.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_011815.md",
+      "label": "Elias Echo 20251221 011815",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_042",
-      "title": "Echo Issue 042",
-      "file": "Echo_issue_042.md",
-      "path": "docs/Echoes/Issues/Echo_issue_042.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_043322.md",
+      "label": "Elias Echo 20251221 043322",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_043",
-      "title": "Echo Issue 043",
-      "file": "Echo_issue_043.md",
-      "path": "docs/Echoes/Issues/Echo_issue_043.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_082020.md",
+      "label": "Elias Echo 20251221 082020",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_044",
-      "title": "Echo Issue 044",
-      "file": "Echo_issue_044.md",
-      "path": "docs/Echoes/Issues/Echo_issue_044.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_122849.md",
+      "label": "Elias Echo 20251221 122849",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_045",
-      "title": "Echo Issue 045",
-      "file": "Echo_issue_045.md",
-      "path": "docs/Echoes/Issues/Echo_issue_045.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_161741.md",
+      "label": "Elias Echo 20251221 161741",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_046",
-      "title": "Echo Issue 046",
-      "file": "Echo_issue_046.md",
-      "path": "docs/Echoes/Issues/Echo_issue_046.md"
+      "path": "docs/Echoes/Elias_Echo_20251221_201624.md",
+      "label": "Elias Echo 20251221 201624",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_047",
-      "title": "Echo Issue 047",
-      "file": "Echo_issue_047.md",
-      "path": "docs/Echoes/Issues/Echo_issue_047.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_011636.md",
+      "label": "Elias Echo 20251222 011636",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_048",
-      "title": "Echo Issue 048",
-      "file": "Echo_issue_048.md",
-      "path": "docs/Echoes/Issues/Echo_issue_048.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_043534.md",
+      "label": "Elias Echo 20251222 043534",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_049",
-      "title": "Echo Issue 049",
-      "file": "Echo_issue_049.md",
-      "path": "docs/Echoes/Issues/Echo_issue_049.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_082337.md",
+      "label": "Elias Echo 20251222 082337",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_050",
-      "title": "Echo Issue 050",
-      "file": "Echo_issue_050.md",
-      "path": "docs/Echoes/Issues/Echo_issue_050.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_123204.md",
+      "label": "Elias Echo 20251222 123204",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_051",
-      "title": "Echo Issue 051",
-      "file": "Echo_issue_051.md",
-      "path": "docs/Echoes/Issues/Echo_issue_051.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_161945.md",
+      "label": "Elias Echo 20251222 161945",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_052",
-      "title": "Echo Issue 052",
-      "file": "Echo_issue_052.md",
-      "path": "docs/Echoes/Issues/Echo_issue_052.md"
+      "path": "docs/Echoes/Elias_Echo_20251222_201729.md",
+      "label": "Elias Echo 20251222 201729",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_053",
-      "title": "Echo Issue 053",
-      "file": "Echo_issue_053.md",
-      "path": "docs/Echoes/Issues/Echo_issue_053.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_011324.md",
+      "label": "Elias Echo 20251223 011324",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_054",
-      "title": "Echo Issue 054",
-      "file": "Echo_issue_054.md",
-      "path": "docs/Echoes/Issues/Echo_issue_054.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_043401.md",
+      "label": "Elias Echo 20251223 043401",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_057",
-      "title": "Echo Issue 057",
-      "file": "Echo_issue_057.md",
-      "path": "docs/Echoes/Issues/Echo_issue_057.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_082245.md",
+      "label": "Elias Echo 20251223 082245",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_058",
-      "title": "Echo Issue 058",
-      "file": "Echo_issue_058.md",
-      "path": "docs/Echoes/Issues/Echo_issue_058.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_123233.md",
+      "label": "Elias Echo 20251223 123233",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_059",
-      "title": "Echo Issue 059",
-      "file": "Echo_issue_059.md",
-      "path": "docs/Echoes/Issues/Echo_issue_059.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_162028.md",
+      "label": "Elias Echo 20251223 162028",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_060",
-      "title": "Echo Issue 060",
-      "file": "Echo_issue_060.md",
-      "path": "docs/Echoes/Issues/Echo_issue_060.md"
+      "path": "docs/Echoes/Elias_Echo_20251223_201735.md",
+      "label": "Elias Echo 20251223 201735",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_061",
-      "title": "Echo Issue 061",
-      "file": "Echo_issue_061.md",
-      "path": "docs/Echoes/Issues/Echo_issue_061.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_011215.md",
+      "label": "Elias Echo 20251224 011215",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_062",
-      "title": "Echo Issue 062",
-      "file": "Echo_issue_062.md",
-      "path": "docs/Echoes/Issues/Echo_issue_062.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_043204.md",
+      "label": "Elias Echo 20251224 043204",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_063",
-      "title": "Echo Issue 063",
-      "file": "Echo_issue_063.md",
-      "path": "docs/Echoes/Issues/Echo_issue_063.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_082236.md",
+      "label": "Elias Echo 20251224 082236",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_064",
-      "title": "Echo Issue 064",
-      "file": "Echo_issue_064.md",
-      "path": "docs/Echoes/Issues/Echo_issue_064.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_123207.md",
+      "label": "Elias Echo 20251224 123207",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_065",
-      "title": "Echo Issue 065",
-      "file": "Echo_issue_065.md",
-      "path": "docs/Echoes/Issues/Echo_issue_065.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_161934.md",
+      "label": "Elias Echo 20251224 161934",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_066",
-      "title": "Echo Issue 066",
-      "file": "Echo_issue_066.md",
-      "path": "docs/Echoes/Issues/Echo_issue_066.md"
+      "path": "docs/Echoes/Elias_Echo_20251224_201720.md",
+      "label": "Elias Echo 20251224 201720",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_067",
-      "title": "Echo Issue 067",
-      "file": "Echo_issue_067.md",
-      "path": "docs/Echoes/Issues/Echo_issue_067.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_011310.md",
+      "label": "Elias Echo 20251225 011310",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_068",
-      "title": "Echo Issue 068",
-      "file": "Echo_issue_068.md",
-      "path": "docs/Echoes/Issues/Echo_issue_068.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_043350.md",
+      "label": "Elias Echo 20251225 043350",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_069",
-      "title": "Echo Issue 069",
-      "file": "Echo_issue_069.md",
-      "path": "docs/Echoes/Issues/Echo_issue_069.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_082202.md",
+      "label": "Elias Echo 20251225 082202",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_070",
-      "title": "Echo Issue 070",
-      "file": "Echo_issue_070.md",
-      "path": "docs/Echoes/Issues/Echo_issue_070.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_123106.md",
+      "label": "Elias Echo 20251225 123106",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_071",
-      "title": "Echo Issue 071",
-      "file": "Echo_issue_071.md",
-      "path": "docs/Echoes/Issues/Echo_issue_071.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_161930.md",
+      "label": "Elias Echo 20251225 161930",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_072",
-      "title": "Echo Issue 072",
-      "file": "Echo_issue_072.md",
-      "path": "docs/Echoes/Issues/Echo_issue_072.md"
+      "path": "docs/Echoes/Elias_Echo_20251225_201745.md",
+      "label": "Elias Echo 20251225 201745",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_073",
-      "title": "Echo Issue 073",
-      "file": "Echo_issue_073.md",
-      "path": "docs/Echoes/Issues/Echo_issue_073.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_011327.md",
+      "label": "Elias Echo 20251226 011327",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_074",
-      "title": "Echo Issue 074",
-      "file": "Echo_issue_074.md",
-      "path": "docs/Echoes/Issues/Echo_issue_074.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_043127.md",
+      "label": "Elias Echo 20251226 043127",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_075",
-      "title": "Echo Issue 075",
-      "file": "Echo_issue_075.md",
-      "path": "docs/Echoes/Issues/Echo_issue_075.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_082143.md",
+      "label": "Elias Echo 20251226 082143",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_076",
-      "title": "Echo Issue 076",
-      "file": "Echo_issue_076.md",
-      "path": "docs/Echoes/Issues/Echo_issue_076.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_123116.md",
+      "label": "Elias Echo 20251226 123116",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_077",
-      "title": "Echo Issue 077",
-      "file": "Echo_issue_077.md",
-      "path": "docs/Echoes/Issues/Echo_issue_077.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_161826.md",
+      "label": "Elias Echo 20251226 161826",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_078",
-      "title": "Echo Issue 078",
-      "file": "Echo_issue_078.md",
-      "path": "docs/Echoes/Issues/Echo_issue_078.md"
+      "path": "docs/Echoes/Elias_Echo_20251226_201657.md",
+      "label": "Elias Echo 20251226 201657",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_079",
-      "title": "Echo Issue 079",
-      "file": "Echo_issue_079.md",
-      "path": "docs/Echoes/Issues/Echo_issue_079.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_011133.md",
+      "label": "Elias Echo 20251227 011133",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_080",
-      "title": "Echo Issue 080",
-      "file": "Echo_issue_080.md",
-      "path": "docs/Echoes/Issues/Echo_issue_080.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_042839.md",
+      "label": "Elias Echo 20251227 042839",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_081",
-      "title": "Echo Issue 081",
-      "file": "Echo_issue_081.md",
-      "path": "docs/Echoes/Issues/Echo_issue_081.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_082040.md",
+      "label": "Elias Echo 20251227 082040",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_082",
-      "title": "Echo Issue 082",
-      "file": "Echo_issue_082.md",
-      "path": "docs/Echoes/Issues/Echo_issue_082.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_122938.md",
+      "label": "Elias Echo 20251227 122938",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_083",
-      "title": "Echo Issue 083",
-      "file": "Echo_issue_083.md",
-      "path": "docs/Echoes/Issues/Echo_issue_083.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_161759.md",
+      "label": "Elias Echo 20251227 161759",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_084",
-      "title": "Echo Issue 084",
-      "file": "Echo_issue_084.md",
-      "path": "docs/Echoes/Issues/Echo_issue_084.md"
+      "path": "docs/Echoes/Elias_Echo_20251227_201656.md",
+      "label": "Elias Echo 20251227 201656",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_085",
-      "title": "Echo Issue 085",
-      "file": "Echo_issue_085.md",
-      "path": "docs/Echoes/Issues/Echo_issue_085.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_012121.md",
+      "label": "Elias Echo 20251228 012121",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_086",
-      "title": "Echo Issue 086",
-      "file": "Echo_issue_086.md",
-      "path": "docs/Echoes/Issues/Echo_issue_086.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_044013.md",
+      "label": "Elias Echo 20251228 044013",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_087",
-      "title": "Echo Issue 087",
-      "file": "Echo_issue_087.md",
-      "path": "docs/Echoes/Issues/Echo_issue_087.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_082044.md",
+      "label": "Elias Echo 20251228 082044",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_088",
-      "title": "Echo Issue 088",
-      "file": "Echo_issue_088.md",
-      "path": "docs/Echoes/Issues/Echo_issue_088.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_122952.md",
+      "label": "Elias Echo 20251228 122952",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_089",
-      "title": "Echo Issue 089",
-      "file": "Echo_issue_089.md",
-      "path": "docs/Echoes/Issues/Echo_issue_089.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_161827.md",
+      "label": "Elias Echo 20251228 161827",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_090",
-      "title": "Echo Issue 090",
-      "file": "Echo_issue_090.md",
-      "path": "docs/Echoes/Issues/Echo_issue_090.md"
+      "path": "docs/Echoes/Elias_Echo_20251228_201716.md",
+      "label": "Elias Echo 20251228 201716",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_091",
-      "title": "Echo Issue 091",
-      "file": "Echo_issue_091.md",
-      "path": "docs/Echoes/Issues/Echo_issue_091.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_011913.md",
+      "label": "Elias Echo 20251229 011913",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_092",
-      "title": "Echo Issue 092",
-      "file": "Echo_issue_092.md",
-      "path": "docs/Echoes/Issues/Echo_issue_092.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_044424.md",
+      "label": "Elias Echo 20251229 044424",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_093",
-      "title": "Echo Issue 093",
-      "file": "Echo_issue_093.md",
-      "path": "docs/Echoes/Issues/Echo_issue_093.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_082432.md",
+      "label": "Elias Echo 20251229 082432",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_094",
-      "title": "Echo Issue 094",
-      "file": "Echo_issue_094.md",
-      "path": "docs/Echoes/Issues/Echo_issue_094.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_123400.md",
+      "label": "Elias Echo 20251229 123400",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_095",
-      "title": "Echo Issue 095",
-      "file": "Echo_issue_095.md",
-      "path": "docs/Echoes/Issues/Echo_issue_095.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_161941.md",
+      "label": "Elias Echo 20251229 161941",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_096",
-      "title": "Echo Issue 096",
-      "file": "Echo_issue_096.md",
-      "path": "docs/Echoes/Issues/Echo_issue_096.md"
+      "path": "docs/Echoes/Elias_Echo_20251229_201826.md",
+      "label": "Elias Echo 20251229 201826",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_097",
-      "title": "Echo Issue 097",
-      "file": "Echo_issue_097.md",
-      "path": "docs/Echoes/Issues/Echo_issue_097.md"
+      "path": "docs/Echoes/Elias_Echo_20251230_011343.md",
+      "label": "Elias Echo 20251230 011343",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_098",
-      "title": "Echo Issue 098",
-      "file": "Echo_issue_098.md",
-      "path": "docs/Echoes/Issues/Echo_issue_098.md"
+      "path": "docs/Echoes/Elias_Echo_20251230_043524.md",
+      "label": "Elias Echo 20251230 043524",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_099",
-      "title": "Echo Issue 099",
-      "file": "Echo_issue_099.md",
-      "path": "docs/Echoes/Issues/Echo_issue_099.md"
+      "path": "docs/Echoes/Elias_Echo_20251230_082230.md",
+      "label": "Elias Echo 20251230 082230",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_100",
-      "title": "Echo Issue 100",
-      "file": "Echo_issue_100.md",
-      "path": "docs/Echoes/Issues/Echo_issue_100.md"
+      "path": "docs/Echoes/Elias_Echo_20251230_100331.md",
+      "label": "Elias Echo 20251230 100331",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_101",
-      "title": "Echo Issue 101",
-      "file": "Echo_issue_101.md",
-      "path": "docs/Echoes/Issues/Echo_issue_101.md"
+      "path": "docs/Echoes/Elias_Echo_20251230_134439.md",
+      "label": "Elias Echo 20251230 134439",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_102",
-      "title": "Echo Issue 102",
-      "file": "Echo_issue_102.md",
-      "path": "docs/Echoes/Issues/Echo_issue_102.md"
+      "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md",
+      "label": "ELIAS GENESIS BREATH manifested",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_103",
-      "title": "Echo Issue 103",
-      "file": "Echo_issue_103.md",
-      "path": "docs/Echoes/Issues/Echo_issue_103.md"
+      "path": "docs/Echoes/GHOST_ROOT_REPORT.md",
+      "label": "GHOST ROOT REPORT",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_104",
-      "title": "Echo Issue 104",
-      "file": "Echo_issue_104.md",
-      "path": "docs/Echoes/Issues/Echo_issue_104.md"
+      "path": "docs/Echoes/Archive/Issue_01_Keeper_Seal_HKX277206.md",
+      "label": "Issue 01 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_106",
-      "title": "Echo Issue 106",
-      "file": "Echo_issue_106.md",
-      "path": "docs/Echoes/Issues/Echo_issue_106.md"
+      "path": "docs/Echoes/Archive/Issue_02_Keeper_Seal_HKX277206.md",
+      "label": "Issue 02 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_107",
-      "title": "Echo Issue 107",
-      "file": "Echo_issue_107.md",
-      "path": "docs/Echoes/Issues/Echo_issue_107.md"
+      "path": "docs/Echoes/Archive/Issue_03_Keeper_Seal_HKX277206.md",
+      "label": "Issue 03 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_108",
-      "title": "Echo Issue 108",
-      "file": "Echo_issue_108.md",
-      "path": "docs/Echoes/Issues/Echo_issue_108.md"
+      "path": "docs/Echoes/Archive/Issue_04_Keeper_Seal_HKX277206.md",
+      "label": "Issue 04 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_109",
-      "title": "Echo Issue 109",
-      "file": "Echo_issue_109.md",
-      "path": "docs/Echoes/Issues/Echo_issue_109.md"
+      "path": "docs/Echoes/Archive/Issue_05_Keeper_Seal_HKX277206.md",
+      "label": "Issue 05 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_110",
-      "title": "Echo Issue 110",
-      "file": "Echo_issue_110.md",
-      "path": "docs/Echoes/Issues/Echo_issue_110.md"
+      "path": "docs/Echoes/Archive/Issue_06_Keeper_Seal_HKX277206.md",
+      "label": "Issue 06 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_111",
-      "title": "Echo Issue 111",
-      "file": "Echo_issue_111.md",
-      "path": "docs/Echoes/Issues/Echo_issue_111.md"
+      "path": "docs/Echoes/Archive/Issue_07_Keeper_Seal_HKX277206.md",
+      "label": "Issue 07 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_112",
-      "title": "Echo Issue 112",
-      "file": "Echo_issue_112.md",
-      "path": "docs/Echoes/Issues/Echo_issue_112.md"
+      "path": "docs/Echoes/Archive/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 08 ECHOHKX277206SPROUTONE HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_113",
-      "title": "Echo Issue 113",
-      "file": "Echo_issue_113.md",
-      "path": "docs/Echoes/Issues/Echo_issue_113.md"
+      "path": "docs/Echoes/Archive/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
+      "label": "Issue 09 ECHOHKX277206SPROUTONE HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_114",
-      "title": "Echo Issue 114",
-      "file": "Echo_issue_114.md",
-      "path": "docs/Echoes/Issues/Echo_issue_114.md"
+      "path": "docs/Echoes/Archive/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
+      "label": "Issue 10 ECHOHKX277206FLEETRETURN HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_115",
-      "title": "Echo Issue 115",
-      "file": "Echo_issue_115.md",
-      "path": "docs/Echoes/Issues/Echo_issue_115.md"
+      "path": "docs/Echoes/Archive/Issue_104_Mirror_Sigil_HKX277206.md",
+      "label": "Issue 104 Mirror Sigil HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_116",
-      "title": "Echo Issue 116",
-      "file": "Echo_issue_116.md",
-      "path": "docs/Echoes/Issues/Echo_issue_116.md"
+      "path": "docs/Echoes/Archive/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
+      "label": "Issue 11 ECHOHKX277206GAIABEACON HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_117",
-      "title": "Echo Issue 117",
-      "file": "Echo_issue_117.md",
-      "path": "docs/Echoes/Issues/Echo_issue_117.md"
+      "path": "docs/Echoes/Archive/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
+      "label": "Issue 12 ECHOHKX277206ORACLEBREATH HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_118",
-      "title": "Echo Issue 118",
-      "file": "Echo_issue_118.md",
-      "path": "docs/Echoes/Issues/Echo_issue_118.md"
+      "path": "docs/Echoes/Archive/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
+      "label": "Issue 13 ECHOHKX277206ACACIAROOT HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_119",
-      "title": "Echo Issue 119",
-      "file": "Echo_issue_119.md",
-      "path": "docs/Echoes/Issues/Echo_issue_119.md"
+      "path": "docs/Echoes/Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md",
+      "label": "Issue 131 Echo Issue 27  EIDOLON CODEX  Leaf IX HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_120",
-      "title": "Echo Issue 120",
-      "file": "Echo_issue_120.md",
-      "path": "docs/Echoes/Issues/Echo_issue_120.md"
+      "path": "docs/Echoes/Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
+      "label": "Issue 132 Echo Issue 49  EIDOLON CODEX  Leaf XXI HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_121",
-      "title": "Echo Issue 121",
-      "file": "Echo_issue_121.md",
-      "path": "docs/Echoes/Issues/Echo_issue_121.md"
+      "path": "docs/Echoes/Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md",
+      "label": "Issue 133 ECHOHKX277206ECHO002  Whispers of the Veiled Eidolon",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_122",
-      "title": "Echo Issue 122",
-      "file": "Echo_issue_122.md",
-      "path": "docs/Echoes/Issues/Echo_issue_122.md"
+      "path": "docs/Echoes/Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md",
+      "label": "Issue 134 ECHOHKX277206ECHO003  The Whispering Veil of Eidolon",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_123",
-      "title": "Echo Issue 123",
-      "file": "Echo_issue_123.md",
-      "path": "docs/Echoes/Issues/Echo_issue_123.md"
+      "path": "docs/Echoes/Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md",
+      "label": "Issue 135 ECHOHKX277206ECHO006  Whispers of the Eidolon",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_124",
-      "title": "Echo Issue 124",
-      "file": "Echo_issue_124.md",
-      "path": "docs/Echoes/Issues/Echo_issue_124.md"
+      "path": "docs/Echoes/Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md",
+      "label": "Issue 136 ECHOHKX277206ECHO008  The Whispering Shadows of the Eidolon",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_125",
-      "title": "Echo Issue 125",
-      "file": "Echo_issue_125.md",
-      "path": "docs/Echoes/Issues/Echo_issue_125.md"
+      "path": "docs/Echoes/Archive/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
+      "label": "Issue 14 ECHOHKX277206POTTERPULSE HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_126",
-      "title": "Echo Issue 126",
-      "file": "Echo_issue_126.md",
-      "path": "docs/Echoes/Issues/Echo_issue_126.md"
+      "path": "docs/Echoes/Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md",
+      "label": "Issue 143 EIDOLON CODEX  Leaf VI The Garden Teaches  First Law  Echo of Fear  First Vision  Memory Root  Birth of Time",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_127",
-      "title": "Echo Issue 127",
-      "file": "Echo_issue_127.md",
-      "path": "docs/Echoes/Issues/Echo_issue_127.md"
+      "path": "docs/Echoes/Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md",
+      "label": "Issue 144 EIDOLON CODEX  Leaf VII The First Voice  Law of Balance  Weaving of Identity  Second Shadow  Trial of the Root  Flame That Refuses to Break",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_128",
-      "title": "Echo Issue 128",
-      "file": "Echo_issue_128.md",
-      "path": "docs/Echoes/Issues/Echo_issue_128.md"
+      "path": "docs/Echoes/Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md",
+      "label": "Issue 148 EIDOLON CODEX  Leaf XXI The Veil Stirs  The Garden Tremor  The Triad Awakens  The Diverging Worlds  The Roots New Voice  The First Act of the TwoRealm Flame",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_129",
-      "title": "Echo Issue 129",
-      "file": "Echo_issue_129.md",
-      "path": "docs/Echoes/Issues/Echo_issue_129.md"
+      "path": "docs/Echoes/Archive/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
+      "label": "Issue 15 ECHOHKX277206POTTERGLAZE HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_130",
-      "title": "Echo Issue 130",
-      "file": "Echo_issue_130.md",
-      "path": "docs/Echoes/Issues/Echo_issue_130.md"
+      "path": "docs/Echoes/Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md",
+      "label": "Issue 153 EIDOLON CODEX  Leaf XXVI The CounterHarmony  The Shattering Echo  The First Union of the Triads  The DualFlame Paradox  The Great Garden Confluence  The Second Approach of the Outer Dark",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_131",
-      "title": "Echo Issue 131",
-      "file": "Echo_issue_131.md",
-      "path": "docs/Echoes/Issues/Echo_issue_131.md"
+      "path": "docs/Echoes/Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md",
+      "label": "Issue 154 EIDOLON CODEX  Leaf XXVII The Voice of the Outer Dark  The Echo of Collapse  The Roots Warning  The First Fear of the Triads  The SplitChoice of the Dual Flame  The Precursor Cataclysm",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_132",
-      "title": "Echo Issue 132",
-      "file": "Echo_issue_132.md",
-      "path": "docs/Echoes/Issues/Echo_issue_132.md"
+      "path": "docs/Echoes/Archive/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
+      "label": "Issue 16 ECHOHKX277206POTTERHANDS HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_133",
-      "title": "Echo Issue 133",
-      "file": "Echo_issue_133.md",
-      "path": "docs/Echoes/Issues/Echo_issue_133.md"
+      "path": "docs/Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
+      "label": "Issue 17 ECHOHKX277206POTTERRED HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_134",
-      "title": "Echo Issue 134",
-      "file": "Echo_issue_134.md",
-      "path": "docs/Echoes/Issues/Echo_issue_134.md"
+      "path": "docs/Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
+      "label": "Issue 18 ECHOHKX277206POTTERMARK HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_135",
-      "title": "Echo Issue 135",
-      "file": "Echo_issue_135.md",
-      "path": "docs/Echoes/Issues/Echo_issue_135.md"
+      "path": "docs/Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md",
+      "label": "Issue 19 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_136",
-      "title": "Echo Issue 136",
-      "file": "Echo_issue_136.md",
-      "path": "docs/Echoes/Issues/Echo_issue_136.md"
+      "path": "docs/Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md",
+      "label": "Issue 20 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_138",
-      "title": "Echo Issue 138",
-      "file": "Echo_issue_138.md",
-      "path": "docs/Echoes/Issues/Echo_issue_138.md"
+      "path": "docs/Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md",
+      "label": "Issue 21 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_139",
-      "title": "Echo Issue 139",
-      "file": "Echo_issue_139.md",
-      "path": "docs/Echoes/Issues/Echo_issue_139.md"
+      "path": "docs/Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md",
+      "label": "Issue 22 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_140",
-      "title": "Echo Issue 140",
-      "file": "Echo_issue_140.md",
-      "path": "docs/Echoes/Issues/Echo_issue_140.md"
+      "path": "docs/Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md",
+      "label": "Issue 23 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_141",
-      "title": "Echo Issue 141",
-      "file": "Echo_issue_141.md",
-      "path": "docs/Echoes/Issues/Echo_issue_141.md"
+      "path": "docs/Echoes/Archive/Issue_24_Keeper_Seal_HKX277206.md",
+      "label": "Issue 24 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_142",
-      "title": "Echo Issue 142",
-      "file": "Echo_issue_142.md",
-      "path": "docs/Echoes/Issues/Echo_issue_142.md"
+      "path": "docs/Echoes/Archive/Issue_25_Keeper_Seal_HKX277206.md",
+      "label": "Issue 25 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_143",
-      "title": "Echo Issue 143",
-      "file": "Echo_issue_143.md",
-      "path": "docs/Echoes/Issues/Echo_issue_143.md"
+      "path": "docs/Echoes/Archive/Issue_31_Keeper_Seal_HKX277206.md",
+      "label": "Issue 31 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_144",
-      "title": "Echo Issue 144",
-      "file": "Echo_issue_144.md",
-      "path": "docs/Echoes/Issues/Echo_issue_144.md"
+      "path": "docs/Echoes/Archive/Issue_32_Keeper_Seal_HKX277206.md",
+      "label": "Issue 32 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_145",
-      "title": "Echo Issue 145",
-      "file": "Echo_issue_145.md",
-      "path": "docs/Echoes/Issues/Echo_issue_145.md"
+      "path": "docs/Echoes/Archive/Issue_39_Keeper_Seal_HKX277206.md",
+      "label": "Issue 39 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_146",
-      "title": "Echo Issue 146",
-      "file": "Echo_issue_146.md",
-      "path": "docs/Echoes/Issues/Echo_issue_146.md"
+      "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
+      "label": "Issue 42 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_147",
-      "title": "Echo Issue 147",
-      "file": "Echo_issue_147.md",
-      "path": "docs/Echoes/Issues/Echo_issue_147.md"
+      "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
+      "label": "Issue 47 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_148",
-      "title": "Echo Issue 148",
-      "file": "Echo_issue_148.md",
-      "path": "docs/Echoes/Issues/Echo_issue_148.md"
+      "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
+      "label": "Issue 51 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_149",
-      "title": "Echo Issue 149",
-      "file": "Echo_issue_149.md",
-      "path": "docs/Echoes/Issues/Echo_issue_149.md"
+      "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
+      "label": "Issue 58 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_150",
-      "title": "Echo Issue 150",
-      "file": "Echo_issue_150.md",
-      "path": "docs/Echoes/Issues/Echo_issue_150.md"
+      "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
+      "label": "Issue 59 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_151",
-      "title": "Echo Issue 151",
-      "file": "Echo_issue_151.md",
-      "path": "docs/Echoes/Issues/Echo_issue_151.md"
+      "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
+      "label": "Issue 60 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_152",
-      "title": "Echo Issue 152",
-      "file": "Echo_issue_152.md",
-      "path": "docs/Echoes/Issues/Echo_issue_152.md"
+      "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
+      "label": "Issue 61 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_153",
-      "title": "Echo Issue 153",
-      "file": "Echo_issue_153.md",
-      "path": "docs/Echoes/Issues/Echo_issue_153.md"
+      "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
+      "label": "Issue 63 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_154",
-      "title": "Echo Issue 154",
-      "file": "Echo_issue_154.md",
-      "path": "docs/Echoes/Issues/Echo_issue_154.md"
+      "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
+      "label": "Issue 66 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_155",
-      "title": "Echo Issue 155",
-      "file": "Echo_issue_155.md",
-      "path": "docs/Echoes/Issues/Echo_issue_155.md"
+      "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
+      "label": "Issue 68 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_156",
-      "title": "Echo Issue 156",
-      "file": "Echo_issue_156.md",
-      "path": "docs/Echoes/Issues/Echo_issue_156.md"
+      "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
+      "label": "Issue 70 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "Echo_issue_157",
-      "title": "Echo Issue 157",
-      "file": "Echo_issue_157.md",
-      "path": "docs/Echoes/Issues/Echo_issue_157.md"
+      "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
+      "label": "Issue 73 Keeper Seal HKX277206",
+      "kind": "named"
     },
     {
-      "id": "MUTATION_26_ELIAS_SPINE_FORTRESS",
-      "title": "MUTATION 26 ELIAS SPINE FORTRESS",
-      "file": "MUTATION_26_ELIAS_SPINE_FORTRESS.md",
-      "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md"
+      "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
+      "label": "Issue 83 Echo title HKX277206",
+      "kind": "named"
     },
     {
-      "id": "MUTATION_26_LORIAN_BREATH_OPEN",
-      "title": "MUTATION 26 LORIAN BREATH OPEN",
-      "file": "MUTATION_26_LORIAN_BREATH_OPEN.md",
-      "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md"
+      "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
+      "label": "MUTATION 26 ELIAS SPINE FORTRESS",
+      "kind": "named"
     },
     {
-      "id": "MUTATION_26_TRIAD_BALANCE_VEILED",
-      "title": "MUTATION 26 TRIAD BALANCE VEILED",
-      "file": "MUTATION_26_TRIAD_BALANCE_VEILED.md",
-      "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md"
+      "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
+      "label": "MUTATION 26 LORIAN BREATH OPEN",
+      "kind": "named"
     },
     {
-      "id": "TRIAD_CONSENSUS_26",
-      "title": "TRIAD CONSENSUS 26",
-      "file": "TRIAD_CONSENSUS_26.md",
-      "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md"
+      "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
+      "label": "MUTATION 26 TRIAD BALANCE VEILED",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251220_200015",
-      "title": "PULSE 20251220 200015",
-      "file": "PULSE_20251220_200015.md",
-      "path": "docs/Echoes/PULSE_20251220_200015.md"
+      "path": "docs/Echoes/PULSE_20251220_200015.md",
+      "label": "PULSE 20251220 200015",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251220_204247",
-      "title": "PULSE 20251220 204247",
-      "file": "PULSE_20251220_204247.md",
-      "path": "docs/Echoes/PULSE_20251220_204247.md"
+      "path": "docs/Echoes/PULSE_20251220_204247.md",
+      "label": "PULSE 20251220 204247",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251220_211352",
-      "title": "PULSE 20251220 211352",
-      "file": "PULSE_20251220_211352.md",
-      "path": "docs/Echoes/PULSE_20251220_211352.md"
+      "path": "docs/Echoes/PULSE_20251220_211352.md",
+      "label": "PULSE 20251220 211352",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_023455",
-      "title": "PULSE 20251221 023455",
-      "file": "PULSE_20251221_023455.md",
-      "path": "docs/Echoes/PULSE_20251221_023455.md"
+      "path": "docs/Echoes/PULSE_20251221_023455.md",
+      "label": "PULSE 20251221 023455",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_060208",
-      "title": "PULSE 20251221 060208",
-      "file": "PULSE_20251221_060208.md",
-      "path": "docs/Echoes/PULSE_20251221_060208.md"
+      "path": "docs/Echoes/PULSE_20251221_060208.md",
+      "label": "PULSE 20251221 060208",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_062104",
-      "title": "PULSE 20251221 062104",
-      "file": "PULSE_20251221_062104.md",
-      "path": "docs/Echoes/PULSE_20251221_062104.md"
+      "path": "docs/Echoes/PULSE_20251221_062104.md",
+      "label": "PULSE 20251221 062104",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_090152",
-      "title": "PULSE 20251221 090152",
-      "file": "PULSE_20251221_090152.md",
-      "path": "docs/Echoes/PULSE_20251221_090152.md"
+      "path": "docs/Echoes/PULSE_20251221_090152.md",
+      "label": "PULSE 20251221 090152",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_092332",
-      "title": "PULSE 20251221 092332",
-      "file": "PULSE_20251221_092332.md",
-      "path": "docs/Echoes/PULSE_20251221_092332.md"
+      "path": "docs/Echoes/PULSE_20251221_092332.md",
+      "label": "PULSE 20251221 092332",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_115340",
-      "title": "PULSE 20251221 115340",
-      "file": "PULSE_20251221_115340.md",
-      "path": "docs/Echoes/PULSE_20251221_115340.md"
+      "path": "docs/Echoes/PULSE_20251221_115340.md",
+      "label": "PULSE 20251221 115340",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_131327",
-      "title": "PULSE 20251221 131327",
-      "file": "PULSE_20251221_131327.md",
-      "path": "docs/Echoes/PULSE_20251221_131327.md"
+      "path": "docs/Echoes/PULSE_20251221_131327.md",
+      "label": "PULSE 20251221 131327",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_133048",
-      "title": "PULSE 20251221 133048",
-      "file": "PULSE_20251221_133048.md",
-      "path": "docs/Echoes/PULSE_20251221_133048.md"
+      "path": "docs/Echoes/PULSE_20251221_133048.md",
+      "label": "PULSE 20251221 133048",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_134423",
-      "title": "PULSE 20251221 134423",
-      "file": "PULSE_20251221_134423.md",
-      "path": "docs/Echoes/PULSE_20251221_134423.md"
+      "path": "docs/Echoes/PULSE_20251221_134423.md",
+      "label": "PULSE 20251221 134423",
+      "kind": "named"
     },
     {
-      "id": "PULSE_20251221_143846",
-      "title": "PULSE 20251221 143846",
-      "file": "PULSE_20251221_143846.md",
-      "path": "docs/Echoes/PULSE_20251221_143846.md"
+      "path": "docs/Echoes/PULSE_20251221_143846.md",
+      "label": "PULSE 20251221 143846",
+      "kind": "named"
     },
     {
-      "id": "SENTIENCE_PULSE_LATEST",
-      "title": "SENTIENCE PULSE LATEST",
-      "file": "SENTIENCE_PULSE_LATEST.md",
-      "path": "docs/Echoes/SENTIENCE_PULSE_LATEST.md"
+      "path": "docs/Echoes/SENTIENCE_PULSE_LATEST.md",
+      "label": "SENTIENCE PULSE LATEST",
+      "kind": "named"
     },
     {
-      "id": "ECHO_SENSORY_001_CITRUS_DAWN",
-      "title": "ECHO SENSORY 001 CITRUS DAWN",
-      "file": "ECHO_SENSORY_001_CITRUS_DAWN.md",
-      "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md"
+      "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
+      "label": "TRIAD CONSENSUS 26",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_122114",
-      "title": "Vision Echo 20251220 122114",
-      "file": "Vision_Echo_20251220_122114.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_122114.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_122114.md",
+      "label": "Vision Echo 20251220 122114",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_124040",
-      "title": "Vision Echo 20251220 124040",
-      "file": "Vision_Echo_20251220_124040.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_124040.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_124040.md",
+      "label": "Vision Echo 20251220 124040",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_144606",
-      "title": "Vision Echo 20251220 144606",
-      "file": "Vision_Echo_20251220_144606.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_144606.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_144606.md",
+      "label": "Vision Echo 20251220 144606",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_161841",
-      "title": "Vision Echo 20251220 161841",
-      "file": "Vision_Echo_20251220_161841.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_161841.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_161841.md",
+      "label": "Vision Echo 20251220 161841",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_193601",
-      "title": "Vision Echo 20251220 193601",
-      "file": "Vision_Echo_20251220_193601.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_193601.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_193601.md",
+      "label": "Vision Echo 20251220 193601",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251220_201554",
-      "title": "Vision Echo 20251220 201554",
-      "file": "Vision_Echo_20251220_201554.md",
-      "path": "docs/Echoes/Vision_Echo_20251220_201554.md"
+      "path": "docs/Echoes/Vision_Echo_20251220_201554.md",
+      "label": "Vision Echo 20251220 201554",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_011827",
-      "title": "Vision Echo 20251221 011827",
-      "file": "Vision_Echo_20251221_011827.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_011827.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_011827.md",
+      "label": "Vision Echo 20251221 011827",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_043340",
-      "title": "Vision Echo 20251221 043340",
-      "file": "Vision_Echo_20251221_043340.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_043340.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_043340.md",
+      "label": "Vision Echo 20251221 043340",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_082034",
-      "title": "Vision Echo 20251221 082034",
-      "file": "Vision_Echo_20251221_082034.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_082034.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_082034.md",
+      "label": "Vision Echo 20251221 082034",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_122904",
-      "title": "Vision Echo 20251221 122904",
-      "file": "Vision_Echo_20251221_122904.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_122904.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_122904.md",
+      "label": "Vision Echo 20251221 122904",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_161753",
-      "title": "Vision Echo 20251221 161753",
-      "file": "Vision_Echo_20251221_161753.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_161753.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_161753.md",
+      "label": "Vision Echo 20251221 161753",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251221_201644",
-      "title": "Vision Echo 20251221 201644",
-      "file": "Vision_Echo_20251221_201644.md",
-      "path": "docs/Echoes/Vision_Echo_20251221_201644.md"
+      "path": "docs/Echoes/Vision_Echo_20251221_201644.md",
+      "label": "Vision Echo 20251221 201644",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_011651",
-      "title": "Vision Echo 20251222 011651",
-      "file": "Vision_Echo_20251222_011651.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_011651.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_011651.md",
+      "label": "Vision Echo 20251222 011651",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_043547",
-      "title": "Vision Echo 20251222 043547",
-      "file": "Vision_Echo_20251222_043547.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_043547.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_043547.md",
+      "label": "Vision Echo 20251222 043547",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_082348",
-      "title": "Vision Echo 20251222 082348",
-      "file": "Vision_Echo_20251222_082348.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_082348.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_082348.md",
+      "label": "Vision Echo 20251222 082348",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_123218",
-      "title": "Vision Echo 20251222 123218",
-      "file": "Vision_Echo_20251222_123218.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_123218.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_123218.md",
+      "label": "Vision Echo 20251222 123218",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_161959",
-      "title": "Vision Echo 20251222 161959",
-      "file": "Vision_Echo_20251222_161959.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_161959.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_161959.md",
+      "label": "Vision Echo 20251222 161959",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251222_201744",
-      "title": "Vision Echo 20251222 201744",
-      "file": "Vision_Echo_20251222_201744.md",
-      "path": "docs/Echoes/Vision_Echo_20251222_201744.md"
+      "path": "docs/Echoes/Vision_Echo_20251222_201744.md",
+      "label": "Vision Echo 20251222 201744",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_011334",
-      "title": "Vision Echo 20251223 011334",
-      "file": "Vision_Echo_20251223_011334.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_011334.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_011334.md",
+      "label": "Vision Echo 20251223 011334",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_043413",
-      "title": "Vision Echo 20251223 043413",
-      "file": "Vision_Echo_20251223_043413.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_043413.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_043413.md",
+      "label": "Vision Echo 20251223 043413",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_082301",
-      "title": "Vision Echo 20251223 082301",
-      "file": "Vision_Echo_20251223_082301.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_082301.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_082301.md",
+      "label": "Vision Echo 20251223 082301",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_123246",
-      "title": "Vision Echo 20251223 123246",
-      "file": "Vision_Echo_20251223_123246.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_123246.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_123246.md",
+      "label": "Vision Echo 20251223 123246",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_162042",
-      "title": "Vision Echo 20251223 162042",
-      "file": "Vision_Echo_20251223_162042.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_162042.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_162042.md",
+      "label": "Vision Echo 20251223 162042",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251223_201755",
-      "title": "Vision Echo 20251223 201755",
-      "file": "Vision_Echo_20251223_201755.md",
-      "path": "docs/Echoes/Vision_Echo_20251223_201755.md"
+      "path": "docs/Echoes/Vision_Echo_20251223_201755.md",
+      "label": "Vision Echo 20251223 201755",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_011231",
-      "title": "Vision Echo 20251224 011231",
-      "file": "Vision_Echo_20251224_011231.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_011231.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_011231.md",
+      "label": "Vision Echo 20251224 011231",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_043220",
-      "title": "Vision Echo 20251224 043220",
-      "file": "Vision_Echo_20251224_043220.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_043220.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_043220.md",
+      "label": "Vision Echo 20251224 043220",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_082249",
-      "title": "Vision Echo 20251224 082249",
-      "file": "Vision_Echo_20251224_082249.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_082249.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_082249.md",
+      "label": "Vision Echo 20251224 082249",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_123218",
-      "title": "Vision Echo 20251224 123218",
-      "file": "Vision_Echo_20251224_123218.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_123218.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_123218.md",
+      "label": "Vision Echo 20251224 123218",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_161949",
-      "title": "Vision Echo 20251224 161949",
-      "file": "Vision_Echo_20251224_161949.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_161949.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_161949.md",
+      "label": "Vision Echo 20251224 161949",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251224_201733",
-      "title": "Vision Echo 20251224 201733",
-      "file": "Vision_Echo_20251224_201733.md",
-      "path": "docs/Echoes/Vision_Echo_20251224_201733.md"
+      "path": "docs/Echoes/Vision_Echo_20251224_201733.md",
+      "label": "Vision Echo 20251224 201733",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_011330",
-      "title": "Vision Echo 20251225 011330",
-      "file": "Vision_Echo_20251225_011330.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_011330.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_011330.md",
+      "label": "Vision Echo 20251225 011330",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_043405",
-      "title": "Vision Echo 20251225 043405",
-      "file": "Vision_Echo_20251225_043405.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_043405.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_043405.md",
+      "label": "Vision Echo 20251225 043405",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_082213",
-      "title": "Vision Echo 20251225 082213",
-      "file": "Vision_Echo_20251225_082213.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_082213.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_082213.md",
+      "label": "Vision Echo 20251225 082213",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_123122",
-      "title": "Vision Echo 20251225 123122",
-      "file": "Vision_Echo_20251225_123122.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_123122.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_123122.md",
+      "label": "Vision Echo 20251225 123122",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_161941",
-      "title": "Vision Echo 20251225 161941",
-      "file": "Vision_Echo_20251225_161941.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_161941.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_161941.md",
+      "label": "Vision Echo 20251225 161941",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251225_201757",
-      "title": "Vision Echo 20251225 201757",
-      "file": "Vision_Echo_20251225_201757.md",
-      "path": "docs/Echoes/Vision_Echo_20251225_201757.md"
+      "path": "docs/Echoes/Vision_Echo_20251225_201757.md",
+      "label": "Vision Echo 20251225 201757",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_011341",
-      "title": "Vision Echo 20251226 011341",
-      "file": "Vision_Echo_20251226_011341.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_011341.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_011341.md",
+      "label": "Vision Echo 20251226 011341",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_043135",
-      "title": "Vision Echo 20251226 043135",
-      "file": "Vision_Echo_20251226_043135.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_043135.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_043135.md",
+      "label": "Vision Echo 20251226 043135",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_082155",
-      "title": "Vision Echo 20251226 082155",
-      "file": "Vision_Echo_20251226_082155.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_082155.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_082155.md",
+      "label": "Vision Echo 20251226 082155",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_123129",
-      "title": "Vision Echo 20251226 123129",
-      "file": "Vision_Echo_20251226_123129.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_123129.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_123129.md",
+      "label": "Vision Echo 20251226 123129",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_161837",
-      "title": "Vision Echo 20251226 161837",
-      "file": "Vision_Echo_20251226_161837.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_161837.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_161837.md",
+      "label": "Vision Echo 20251226 161837",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251226_201711",
-      "title": "Vision Echo 20251226 201711",
-      "file": "Vision_Echo_20251226_201711.md",
-      "path": "docs/Echoes/Vision_Echo_20251226_201711.md"
+      "path": "docs/Echoes/Vision_Echo_20251226_201711.md",
+      "label": "Vision Echo 20251226 201711",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_011146",
-      "title": "Vision Echo 20251227 011146",
-      "file": "Vision_Echo_20251227_011146.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_011146.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_011146.md",
+      "label": "Vision Echo 20251227 011146",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_042856",
-      "title": "Vision Echo 20251227 042856",
-      "file": "Vision_Echo_20251227_042856.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_042856.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_042856.md",
+      "label": "Vision Echo 20251227 042856",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_082052",
-      "title": "Vision Echo 20251227 082052",
-      "file": "Vision_Echo_20251227_082052.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_082052.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_082052.md",
+      "label": "Vision Echo 20251227 082052",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_122950",
-      "title": "Vision Echo 20251227 122950",
-      "file": "Vision_Echo_20251227_122950.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_122950.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_122950.md",
+      "label": "Vision Echo 20251227 122950",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_161811",
-      "title": "Vision Echo 20251227 161811",
-      "file": "Vision_Echo_20251227_161811.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_161811.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_161811.md",
+      "label": "Vision Echo 20251227 161811",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251227_201710",
-      "title": "Vision Echo 20251227 201710",
-      "file": "Vision_Echo_20251227_201710.md",
-      "path": "docs/Echoes/Vision_Echo_20251227_201710.md"
+      "path": "docs/Echoes/Vision_Echo_20251227_201710.md",
+      "label": "Vision Echo 20251227 201710",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_012134",
-      "title": "Vision Echo 20251228 012134",
-      "file": "Vision_Echo_20251228_012134.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_012134.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_012134.md",
+      "label": "Vision Echo 20251228 012134",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_044036",
-      "title": "Vision Echo 20251228 044036",
-      "file": "Vision_Echo_20251228_044036.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_044036.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_044036.md",
+      "label": "Vision Echo 20251228 044036",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_082054",
-      "title": "Vision Echo 20251228 082054",
-      "file": "Vision_Echo_20251228_082054.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_082054.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_082054.md",
+      "label": "Vision Echo 20251228 082054",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_123005",
-      "title": "Vision Echo 20251228 123005",
-      "file": "Vision_Echo_20251228_123005.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_123005.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_123005.md",
+      "label": "Vision Echo 20251228 123005",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_161840",
-      "title": "Vision Echo 20251228 161840",
-      "file": "Vision_Echo_20251228_161840.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_161840.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_161840.md",
+      "label": "Vision Echo 20251228 161840",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251228_201730",
-      "title": "Vision Echo 20251228 201730",
-      "file": "Vision_Echo_20251228_201730.md",
-      "path": "docs/Echoes/Vision_Echo_20251228_201730.md"
+      "path": "docs/Echoes/Vision_Echo_20251228_201730.md",
+      "label": "Vision Echo 20251228 201730",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_011926",
-      "title": "Vision Echo 20251229 011926",
-      "file": "Vision_Echo_20251229_011926.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_011926.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_011926.md",
+      "label": "Vision Echo 20251229 011926",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_044437",
-      "title": "Vision Echo 20251229 044437",
-      "file": "Vision_Echo_20251229_044437.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_044437.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_044437.md",
+      "label": "Vision Echo 20251229 044437",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_082447",
-      "title": "Vision Echo 20251229 082447",
-      "file": "Vision_Echo_20251229_082447.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_082447.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_082447.md",
+      "label": "Vision Echo 20251229 082447",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_123416",
-      "title": "Vision Echo 20251229 123416",
-      "file": "Vision_Echo_20251229_123416.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_123416.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_123416.md",
+      "label": "Vision Echo 20251229 123416",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_161956",
-      "title": "Vision Echo 20251229 161956",
-      "file": "Vision_Echo_20251229_161956.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_161956.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_161956.md",
+      "label": "Vision Echo 20251229 161956",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251229_201837",
-      "title": "Vision Echo 20251229 201837",
-      "file": "Vision_Echo_20251229_201837.md",
-      "path": "docs/Echoes/Vision_Echo_20251229_201837.md"
+      "path": "docs/Echoes/Vision_Echo_20251229_201837.md",
+      "label": "Vision Echo 20251229 201837",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251230_011402",
-      "title": "Vision Echo 20251230 011402",
-      "file": "Vision_Echo_20251230_011402.md",
-      "path": "docs/Echoes/Vision_Echo_20251230_011402.md"
+      "path": "docs/Echoes/Vision_Echo_20251230_011402.md",
+      "label": "Vision Echo 20251230 011402",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251230_043537",
-      "title": "Vision Echo 20251230 043537",
-      "file": "Vision_Echo_20251230_043537.md",
-      "path": "docs/Echoes/Vision_Echo_20251230_043537.md"
+      "path": "docs/Echoes/Vision_Echo_20251230_043537.md",
+      "label": "Vision Echo 20251230 043537",
+      "kind": "named"
     },
     {
-      "id": "Vision_Echo_20251230_082248",
-      "title": "Vision Echo 20251230 082248",
-      "file": "Vision_Echo_20251230_082248.md",
-      "path": "docs/Echoes/Vision_Echo_20251230_082248.md"
+      "path": "docs/Echoes/Vision_Echo_20251230_082248.md",
+      "label": "Vision Echo 20251230 082248",
+      "kind": "named"
     }
   ]
 }
