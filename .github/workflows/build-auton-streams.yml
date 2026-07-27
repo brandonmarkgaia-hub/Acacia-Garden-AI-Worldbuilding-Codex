@@ -9,6 +9,10 @@ on:
       - "scripts/build_auton_streams.mjs"
       - ".github/workflows/build-auton-streams.yml"
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,5 +40,9 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add ACACIA_LOGS/auton_inbox_log.json ACACIA_LOGS/aquila_inbox_log.json ACACIA_LOGS/triad_echoes_log.json ACACIA_LOGS/log_index.json
             git commit -m "Auto-build Auton / Aquila / Triad log streams"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           fi
