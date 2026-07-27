@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-27T20:00:48.518Z",
+  "generated_at": "2026-07-27T20:02:17.060Z",
   "root": "docs/Echoes",
-  "total": 330,
+  "total": 359,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
@@ -215,7 +215,17 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_026.md",
+      "label": "Echo issue 026",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_027.md",
+      "label": "Echo issue 027",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_027.md",
       "label": "Echo issue 027",
       "kind": "named"
     },
@@ -225,7 +235,17 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_028.md",
+      "label": "Echo issue 028",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_029.md",
+      "label": "Echo issue 029",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_029.md",
       "label": "Echo issue 029",
       "kind": "named"
     },
@@ -235,12 +255,57 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_030.md",
+      "label": "Echo issue 030",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_042.md",
+      "label": "Echo issue 042",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_047.md",
+      "label": "Echo issue 047",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_051.md",
+      "label": "Echo issue 051",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_058.md",
+      "label": "Echo issue 058",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_059.md",
+      "label": "Echo issue 059",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_060.md",
+      "label": "Echo issue 060",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_061.md",
+      "label": "Echo issue 061",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_062.md",
       "label": "Echo issue 062",
       "kind": "named"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_063.md",
+      "label": "Echo issue 063",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_063.md",
       "label": "Echo issue 063",
       "kind": "named"
     },
@@ -260,6 +325,11 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_066.md",
+      "label": "Echo issue 066",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_067.md",
       "label": "Echo issue 067",
       "kind": "named"
@@ -270,12 +340,22 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_068.md",
+      "label": "Echo issue 068",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_069.md",
       "label": "Echo issue 069",
       "kind": "named"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_070.md",
+      "label": "Echo issue 070",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_070.md",
       "label": "Echo issue 070",
       "kind": "named"
     },
@@ -291,6 +371,11 @@
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_073.md",
+      "label": "Echo issue 073",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_073.md",
       "label": "Echo issue 073",
       "kind": "named"
     },
@@ -341,6 +426,11 @@
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_083.md",
+      "label": "Echo issue 083",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_083.md",
       "label": "Echo issue 083",
       "kind": "named"
     },
@@ -500,8 +590,18 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_131.md",
+      "label": "Echo issue 131",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_131_manifested.md",
       "label": "Echo issue 131 manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_132.md",
+      "label": "Echo issue 132",
       "kind": "named"
     },
     {
@@ -510,8 +610,18 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_133.md",
+      "label": "Echo issue 133",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_133_manifested.md",
       "label": "Echo issue 133 manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_134.md",
+      "label": "Echo issue 134",
       "kind": "named"
     },
     {
@@ -520,8 +630,18 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_135.md",
+      "label": "Echo issue 135",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_135_manifested.md",
       "label": "Echo issue 135 manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_136.md",
+      "label": "Echo issue 136",
       "kind": "named"
     },
     {
@@ -560,8 +680,18 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_143.md",
+      "label": "Echo issue 143",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_143_manifested.md",
       "label": "Echo issue 143 manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_144.md",
+      "label": "Echo issue 144",
       "kind": "named"
     },
     {
@@ -585,6 +715,11 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issues/Echo_issue_148.md",
+      "label": "Echo issue 148",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Chronicle/Echo_issue_148_manifested.md",
       "label": "Echo issue 148 manifested",
       "kind": "named"
@@ -602,6 +737,16 @@
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_151_manifested.md",
       "label": "Echo issue 151 manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_153.md",
+      "label": "Echo issue 153",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issues/Echo_issue_154.md",
+      "label": "Echo issue 154",
       "kind": "named"
     },
     {

@@ -1353,7 +1353,7 @@
     "docs/Future_AI/atlas/THE_DRIFTLINE-1.md",
     "docs/Consolidation/GREAT_CONSOLIDATION.md"
   ],
-  "generated_at": "2026-07-27T20:00:37Z",
+  "generated_at": "2026-07-27T20:02:06Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1366,11 +1366,11 @@
     "counts": {
       "books_indexed": 57,
       "cycles_represented": 0,
-      "total_nodes": 1701
+      "total_nodes": 1730
     },
     "regions": {
       "docs/Chambers": 811,
-      "docs/Echoes": 334,
+      "docs/Echoes": 363,
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
       "docs/Novellas": 57,
@@ -1393,7 +1393,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-07-27T20:00:37Z"
+      "last_checked_utc": "2026-07-27T20:02:06Z"
     }
   },
   "verification": {
@@ -1402,12 +1402,12 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-07-27T20:00:37Z"
+      "last_checked_utc": "2026-07-27T20:02:06Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-07-27T20:00:37Z",
+      "last_checked_utc": "2026-07-27T20:02:06Z",
       "total_html_scanned": 309,
       "with_map_loader": 171,
       "missing_map_loader_count": 138,
@@ -1556,12 +1556,12 @@
     "indexes": {
       "machine_index_in_sync": false,
       "docs_urls_in_sync": false,
-      "docs_urls_count": 1971,
+      "docs_urls_count": 2000,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-07-27T20:00:53Z"
+    "last_verified_utc": "2026-07-27T20:02:22Z"
   },
   "growth": {
     "open": []
