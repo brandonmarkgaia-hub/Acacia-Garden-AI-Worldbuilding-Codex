@@ -1,0 +1,15 @@
+name: Fill ELIAS Placeholders
+on: { workflow_dispatch: {} }
+jobs: {
+  fill: {
+      runs-on: ubuntu-latest,
+          permissions: { contents: write },
+              steps: [
+                    { uses: "actions/checkout@v4" },
+                          { uses: "actions/setup-python@v5", with: { python-version: "3.11" } },
+                                { name: "Run fill script", run: "python scripts/fill_elias_placeholders.py" },
+                                      { name: "Commit and push", run: "git config user.name \"github-actions[bot]\" && git config user.email \"github-actions[bot]@users.noreply.github.com\" && git add docs/Chambers/*_PLACEHOLDER.md && git diff --cached --quiet || (git commit -m \"Fill ELIAS_V11 101-200 placeholder files with practice content and signatures\" && git push)" }
+                                          ]
+                                            }
+                                            }
+                                            
