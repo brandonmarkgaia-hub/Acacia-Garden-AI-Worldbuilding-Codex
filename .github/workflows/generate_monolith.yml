@@ -41,4 +41,11 @@ jobs:
           git config --local user.name "The Witness"
           git config --local user.email "witness@acacia-garden.ai"
           git add CODEX_MONOLITH_PART_*.md
-          git diff --staged --quiet || (git commit -m "relig: update codex bible shards [skip ci]" && git push)
+          if ! git diff --staged --quiet; then
+            git commit -m "relig: update codex bible shards [skip ci]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
+          fi
