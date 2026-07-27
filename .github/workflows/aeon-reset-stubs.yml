@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   reset-json:
     runs-on: ubuntu-latest
@@ -69,7 +73,11 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git add STATUS.json garden_scan_report.json garden_vault_index.json aeon_heartbeat.json
             git commit -m "Reset Aeon dashboard JSON stubs (STATUS, scan, vault, heartbeat)"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           else
             echo "No changes to commit."
           fi
