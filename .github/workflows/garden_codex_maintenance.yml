@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   codex-maintenance:
     runs-on: ubuntu-latest
@@ -325,8 +329,20 @@ jobs:
           print(f"[API] Wrote API index → {API_INDEX_JSON}")
           PY
 
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update codex indexes, manifest, monolith & API"
-          branch: ${{ github.ref_name }}
+      - name: Commit and push changes (rebase+retry)
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update codex indexes, manifest, monolith & API"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin "$TARGET_BRANCH" && git push origin HEAD:"$TARGET_BRANCH" && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
+          fi
