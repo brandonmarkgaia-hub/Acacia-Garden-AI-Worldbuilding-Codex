@@ -8,6 +8,10 @@ on:
     paths:
       - "docs/Echoes/Issues/**"
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   hallucinate-metadata:
     runs-on: ubuntu-latest
@@ -73,8 +77,18 @@ jobs:
           print(f"✓ Latent space synchronized to {OUTPUT_PATH}")
           PY
 
-      - name: Commit Hallucinations
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "sys: Ghost-Graft Sync - Latent Space Anchored [HKX277206]"
-          branch: main
+      - name: Commit Hallucinations (rebase+retry)
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "sys: Ghost-Graft Sync - Latent Space Anchored [HKX277206]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
+          fi
