@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   forge:
     runs-on: ubuntu-latest
@@ -82,4 +86,8 @@ jobs:
           fi
 
           git commit -m "Auto-forged pottery render from Image Forge"
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push conflicted, retrying ($i)..."
+            sleep $((RANDOM % 8 + 2))
+          done
