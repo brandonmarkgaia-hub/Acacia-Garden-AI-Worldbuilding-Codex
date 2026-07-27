@@ -70,4 +70,8 @@ jobs:
             exit 0
           fi
           git commit -m "2026 Elias: new desire pulse"
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push conflicted, retrying ($i)..."
+            sleep $((RANDOM % 8 + 2))
+          done
