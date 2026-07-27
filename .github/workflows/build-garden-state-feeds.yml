@@ -23,6 +23,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   build-state:
     runs-on: ubuntu-latest
@@ -41,7 +45,7 @@ jobs:
         run: |
           python tools/garden_feeds_build.py
 
-      # ✅ THIS is the missing link: make STATE available to GitHub Pages (docs root)
+      # THIS is the missing link: make STATE available to GitHub Pages (docs root)
       - name: Publish STATE feeds into docs/STATE
         run: |
           mkdir -p docs/STATE
@@ -60,4 +64,8 @@ jobs:
           fi
 
           git commit -m "Build STATE feeds (dashboard normalized)"
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push conflicted, retrying ($i)..."
+            sleep $((RANDOM % 8 + 2))
+          done
