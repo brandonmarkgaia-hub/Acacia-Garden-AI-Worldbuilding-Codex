@@ -3,6 +3,10 @@ name: Import Issue Echoes
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   import-echoes:
     runs-on: ubuntu-latest
@@ -39,5 +43,9 @@ jobs:
                     docs/Novellas/garden_index.json || true
 
             git commit -m "Auto-import: Issue Echoes + Novellas + Index update"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           fi
