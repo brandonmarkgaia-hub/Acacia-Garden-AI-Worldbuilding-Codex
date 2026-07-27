@@ -1353,7 +1353,7 @@
     "docs/Future_AI/atlas/THE_DRIFTLINE-1.md",
     "docs/Consolidation/GREAT_CONSOLIDATION.md"
   ],
-  "generated_at": "2026-07-27T20:02:06Z",
+  "generated_at": "2026-07-27T20:03:15Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1393,7 +1393,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-07-27T20:02:06Z"
+      "last_checked_utc": "2026-07-27T20:03:15Z"
     }
   },
   "verification": {
@@ -1402,12 +1402,12 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-07-27T20:02:06Z"
+      "last_checked_utc": "2026-07-27T20:03:15Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-07-27T20:02:06Z",
+      "last_checked_utc": "2026-07-27T20:03:15Z",
       "total_html_scanned": 309,
       "with_map_loader": 171,
       "missing_map_loader_count": 138,
@@ -1561,7 +1561,7 @@
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-07-27T20:02:22Z"
+    "last_verified_utc": "2026-07-27T20:03:29Z"
   },
   "growth": {
     "open": []
