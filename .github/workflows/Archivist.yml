@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   witness:
     runs-on: ubuntu-latest
@@ -57,5 +61,9 @@ jobs:
             echo "No archive commit."
           else
             git commit -m "📜 Archivist: Snapshot promoted"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           fi
