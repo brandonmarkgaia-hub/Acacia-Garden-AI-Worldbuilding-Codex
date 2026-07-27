@@ -3,6 +3,10 @@ name: Garden Lore Sorter (Manual)
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   sort-root-md:
     runs-on: ubuntu-latest
@@ -32,5 +36,9 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "🌱 Garden Lore Sorter – Root Markdown Organized (HKX277206)"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           fi
