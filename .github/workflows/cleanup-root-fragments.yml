@@ -2,6 +2,10 @@ name: 999_Sovereign_Root_Cleanup
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -34,4 +38,8 @@ jobs:
           
           git add .
           git commit -m "Cleanup: Root fragments purged/migrated to Chambers under Seal HKX277206" || echo "No changes"
-          git push origin main
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && break
+            echo "Push conflicted, retrying ($i)..."
+            sleep $((RANDOM % 8 + 2))
+          done
