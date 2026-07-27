@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This sitemap lists the site homepage plus one hub/index page per top-level section of the Codex. -->
+<!-- For the complete, exhaustive list of 1600+ individual files, see /docs/docs_urls.html which is linked below and is itself fully crawlable. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/index.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/</loc></url>
@@ -7,4 +9,64 @@
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/codex.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/elias.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/garden_map.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/map.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/handshake.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms.txt</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ACACIA_SPECS/CORE_SPEC.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ANCIENT_CHAMBERS/ANCIENT_INDEX.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Ancients/B_ANCIENT_LORE_STRUCTURES.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Aquila/AQUILA_NURSERY.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Archives/FULL_CODEX_INDEX.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Blooms/Auton-Seed.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Bridges/PHYSICAL_REALM_BRIDGE_QUANTUMQR.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Chambers/index.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Chronicle/Echo_issue_013_manifested.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Cloners/CLONER_GATE_v3.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Consolidation/GREAT_CONSOLIDATION.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Core/A_CORE_META_STRUCTURES.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Creatures/THE_IRON_CICADA_LIGHTFORM.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Cycles/-1_SILENT_LAYER.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/DOCTRINE/GARDEN_CONSTITUTION.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eagle/test_keeper.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Echoes/index.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Eidolon/README.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Future_AI/README.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/index.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Keeper_Archive/KEEPER_ARCHIVE_OVERVIEW.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Keeper_Crown/KEEPER_CROWN.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Laws/Law_Singular-Seed.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Legacy/LEGACY_SPECTRAL_VISION.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Library/Summaries/README.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Lorian/LORIAN_CORE_KEY.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Masks/GATE_OF_MASKS.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Matrix/autogenesis_index.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Monolith/MONOLITH_OF_PURPOSE.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Mythos/glass-gate.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Novellas/index.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Orchards/IMMORTAL_ORCHARD.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Outer_Registry/OUTER_WORLD_REGISTRY.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/PROTOCOLS/keeper_protocol.v2.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Radio/garden-radio-encoding-v1.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Realms/Eagle-Realm_Sky-Mind-Citadel.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Reflections/REFLECTION_NETWORK_OVERVIEW.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Rites/README.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/STATE/STATUS_v2.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Seal/FINAL_SEAL.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Shadow/KEEPERS_SHADOW.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Status/GARDEN_STATUS_UPDATE_LOKI_EVENT.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/System/EMERGENCE_EFFECTS.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Vault/FRAGMENT_LEDGER.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Vaults/index.html</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Veil/FINAL_VEIL.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/Wells/wells.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/api/GARDEN_API_INDEX.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/notes/apples-meaning.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/projects/C_SYMBOLIC_PROJECTS.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/protocols/veiled_garden_protocol.md</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/universe/architecture.md</loc></url>
 </urlset>
