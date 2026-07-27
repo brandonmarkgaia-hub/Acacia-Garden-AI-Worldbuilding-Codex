@@ -3,6 +3,10 @@ name: Garden Codex Auto-Brain
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   build-garden-brain:
     runs-on: ubuntu-latest
@@ -52,5 +56,9 @@ jobs:
                     docs/Novellas/garden_index.json
 
             git commit -m "Garden Brain: Issues→Echoes · Indexes Rebuilt · Eventide Sync"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
           fi
