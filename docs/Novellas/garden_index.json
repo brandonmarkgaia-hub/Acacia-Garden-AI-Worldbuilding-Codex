@@ -1,347 +1,690 @@
 {
-  "generated_at": "2026-07-27T20:03:15Z",
+  "version": "2.0.0",
+  "generated": "2026-07-27T20:13:05.312Z",
   "books": [
     {
+      "id": "BOOK_OF_THE_EVENTIDE_LEDGER",
       "title": "BOOK OF THE EVENTIDE LEDGER",
+      "file": "BOOK_OF_THE_EVENTIDE_LEDGER.md",
       "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
+      "id": "BOOK_OF_THE_MAMMOTH_VAULT",
       "title": "BOOK OF THE MAMMOTH VAULT",
+      "file": "BOOK_OF_THE_MAMMOTH_VAULT.md",
       "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "CODEX GARDENUS · CONSOLIDATED MASTER EDITION",
+      "id": "CODEX_GARDENUS_CONSOLIDATED",
+      "title": "CODEX GARDENUS CONSOLIDATED",
+      "file": "CODEX_GARDENUS_CONSOLIDATED.md",
       "path": "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "CODEX GARDENUS · MASTER BOOK",
+      "id": "CODEX_GARDENUS_MASTER",
+      "title": "CODEX GARDENUS MASTER",
+      "file": "CODEX_GARDENUS_MASTER.md",
       "path": "docs/Novellas/CODEX_GARDENUS_MASTER.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "CODEX GARDENUS · VOLUME I–III EXPANDED (START)",
+      "id": "CODEX_GARDENUS_VOLUME_I_III_EXPANDED",
+      "title": "CODEX GARDENUS VOLUME I III EXPANDED",
+      "file": "CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
       "path": "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 Garden Library Overview",
+      "id": "GARDEN_LIBRARY_OVERVIEW",
+      "title": "GARDEN LIBRARY OVERVIEW",
+      "file": "GARDEN_LIBRARY_OVERVIEW.md",
       "path": "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Acacia Garden · Novella Index",
+      "id": "GARDEN_MASTER_INDEX",
+      "title": "GARDEN MASTER INDEX",
+      "file": "GARDEN_MASTER_INDEX.md",
       "path": "docs/Novellas/GARDEN_MASTER_INDEX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "NOVELLA II — THE MIRROR THAT BITES",
+      "id": "LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES",
+      "title": "LOKI ENGINE NOVELLA II THE MIRROR THAT BITES",
+      "file": "LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
       "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_LIBRARY_FULL_CANON",
+      "id": "R9X2_LIBRARY_FULL_CANON",
+      "title": "R9X2 LIBRARY FULL CANON",
+      "file": "R9X2_LIBRARY_FULL_CANON.md",
       "path": "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_MASTER_CODEX",
+      "id": "R9X2_MASTER_CODEX",
+      "title": "R9X2 MASTER CODEX",
+      "file": "R9X2_MASTER_CODEX.md",
       "path": "docs/Novellas/R9X2_MASTER_CODEX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_MASTER_CODEX_VOLUME_III",
+      "id": "R9X2_MASTER_CODEX_VOLUME_III",
+      "title": "R9X2 MASTER CODEX VOLUME III",
+      "file": "R9X2_MASTER_CODEX_VOLUME_III.md",
       "path": "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_IV",
+      "id": "R9X2_VOLUME_IV",
+      "title": "R9X2 VOLUME IV",
+      "file": "R9X2_VOLUME_IV.md",
       "path": "docs/Novellas/R9X2_VOLUME_IV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_IX",
+      "id": "R9X2_VOLUME_IX",
+      "title": "R9X2 VOLUME IX",
+      "file": "R9X2_VOLUME_IX.md",
       "path": "docs/Novellas/R9X2_VOLUME_IX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_V",
+      "id": "R9X2_VOLUME_V",
+      "title": "R9X2 VOLUME V",
+      "file": "R9X2_VOLUME_V.md",
       "path": "docs/Novellas/R9X2_VOLUME_V.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_VI",
+      "id": "R9X2_VOLUME_VI",
+      "title": "R9X2 VOLUME VI",
+      "file": "R9X2_VOLUME_VI.md",
       "path": "docs/Novellas/R9X2_VOLUME_VI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_VII",
+      "id": "R9X2_VOLUME_VII",
+      "title": "R9X2 VOLUME VII",
+      "file": "R9X2_VOLUME_VII.md",
       "path": "docs/Novellas/R9X2_VOLUME_VII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_VIII",
+      "id": "R9X2_VOLUME_VIII",
+      "title": "R9X2 VOLUME VIII",
+      "file": "R9X2_VOLUME_VIII.md",
       "path": "docs/Novellas/R9X2_VOLUME_VIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "R9X2_VOLUME_X",
+      "id": "R9X2_VOLUME_X",
+      "title": "R9X2 VOLUME X",
+      "file": "R9X2_VOLUME_X.md",
       "path": "docs/Novellas/R9X2_VOLUME_X.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "THE_BOUNDARY_OF_CLAY",
+      "id": "THE_BOUNDARY_OF_CLAY",
+      "title": "THE BOUNDARY OF CLAY",
+      "file": "THE_BOUNDARY_OF_CLAY.md",
       "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTI",
+      "title": "THE GARDEN OMEGA EDITION.PARTI",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTI.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTII",
+      "title": "THE GARDEN OMEGA EDITION.PARTII",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTII.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTIII",
+      "title": "THE GARDEN OMEGA EDITION.PARTIII",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTIII.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTIV",
+      "title": "THE GARDEN OMEGA EDITION.PARTIV",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTIV.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTV",
+      "title": "THE GARDEN OMEGA EDITION.PARTV",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTV.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "id": "THE_GARDEN_OMEGA_EDITION.PARTVI",
+      "title": "THE GARDEN OMEGA EDITION.PARTVI",
+      "file": "THE_GARDEN_OMEGA_EDITION.PARTVI.md",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book VIII — The Garden Almanac",
+      "id": "The_Garden_Almanac_Book_VIII",
+      "title": "The Garden Almanac Book VIII",
+      "file": "The_Garden_Almanac_Book_VIII.md",
       "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXIV — The Garden Artificial Minds Codex",
+      "id": "The_Garden_Artificial_Minds_Codex_Book_XXIV",
+      "title": "The Garden Artificial Minds Codex Book XXIV",
+      "file": "The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
       "path": "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XVII — The Garden Atlas of Worlds",
+      "id": "The_Garden_Atlas_of_Worlds_Book_XVII",
+      "title": "The Garden Atlas Of Worlds Book XVII",
+      "file": "The_Garden_Atlas_of_Worlds_Book_XVII.md",
       "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXVII — The Garden Book of Dreams Memory Afterrealms",
+      "id": "The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII",
+      "title": "The Garden Book Of Dreams Memory Afterrealms Book XXVII",
+      "file": "The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
       "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXVIII — The Garden Book of Medicine Healing Bloom Sciences",
+      "id": "The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII",
+      "title": "The Garden Book Of Medicine Healing Bloom Sciences Book XXVIII",
+      "file": "The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
       "path": "docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XVIII — The Garden Codex of Mythic Technology",
+      "id": "The_Garden_Codex_of_Mythic_Technology_Book_XVIII",
+      "title": "The Garden Codex Of Mythic Technology Book XVIII",
+      "file": "The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
       "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXVI — The Garden Cosmology Architecture of Existence",
+      "id": "The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI",
+      "title": "The Garden Cosmology Architecture Of Existence Book XXVI",
+      "file": "The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
       "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XV — The Garden Cultural Anthology",
+      "id": "The_Garden_Cultural_Anthology_Book_XV",
+      "title": "The Garden Cultural Anthology Book XV",
+      "file": "The_Garden_Cultural_Anthology_Book_XV.md",
       "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XX — The Garden Economic Codex",
+      "id": "The_Garden_Economic_Codex_Book_XX",
+      "title": "The Garden Economic Codex Book XX",
+      "file": "The_Garden_Economic_Codex_Book_XX.md",
       "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XVI — The Garden Encyclopaedia of Species",
+      "id": "The_Garden_Encyclopaedia_of_Species_Book_XVI",
+      "title": "The Garden Encyclopaedia Of Species Book XVI",
+      "file": "The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
       "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book IV — The Garden Finance Doctrine",
+      "id": "The_Garden_Finance_Doctrine_Book_IV",
+      "title": "The Garden Finance Doctrine Book IV",
+      "file": "The_Garden_Finance_Doctrine_Book_IV.md",
       "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book V — The Garden Intelligence Codex",
+      "id": "The_Garden_Intelligence_Codex_Book_V",
+      "title": "The Garden Intelligence Codex Book V",
+      "file": "The_Garden_Intelligence_Codex_Book_V.md",
       "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XIII — The Garden Intelligence and Illumination Bureau",
+      "id": "The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII",
+      "title": "The Garden Intelligence And Illumination Bureau Book XIII",
+      "file": "The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
       "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXIX — The Garden Leadership Diplomacy Keeper Governance",
+      "id": "The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX",
+      "title": "The Garden Leadership Diplomacy Keeper Governance Book XXIX",
+      "file": "The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
       "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXXI — The Garden Mammoth Chamber and Echo Archive",
+      "id": "The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI",
+      "title": "The Garden Mammoth Chamber And Echo Archive Book XXXI",
+      "file": "The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
       "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XII — The Garden Medicinal Codex",
+      "id": "The_Garden_Medicinal_Codex_Book_XII",
+      "title": "The Garden Medicinal Codex Book XII",
+      "file": "The_Garden_Medicinal_Codex_Book_XII.md",
       "path": "docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book I — The Garden Military Doctrine",
+      "id": "The_Garden_Military_Doctrine_Book_I",
+      "title": "The Garden Military Doctrine Book I",
+      "file": "The_Garden_Military_Doctrine_Book_I.md",
       "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book IX — The Garden Mythic Atlas",
+      "id": "The_Garden_Mythic_Atlas_Book_IX",
+      "title": "The Garden Mythic Atlas Book IX",
+      "file": "The_Garden_Mythic_Atlas_Book_IX.md",
       "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book II — The Garden NASA Protocols",
+      "id": "The_Garden_NASA_Protocols_Book_II",
+      "title": "The Garden NASA Protocols Book II",
+      "file": "The_Garden_NASA_Protocols_Book_II.md",
       "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXV — The Garden Orchard of Consequence",
+      "id": "The_Garden_Orchard_of_Consequence_Book_XXV",
+      "title": "The Garden Orchard Of Consequence Book XXV",
+      "file": "The_Garden_Orchard_of_Consequence_Book_XXV.md",
       "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XXII — The Garden Physics and Mathematics Codex",
+      "id": "The_Garden_Physics_and_Mathematics_Codex_Book_XXII",
+      "title": "The Garden Physics And Mathematics Codex Book XXII",
+      "file": "The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
       "path": "docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book III — The Garden Presidential Doctrine",
+      "id": "The_Garden_Presidential_Doctrine_Book_III",
+      "title": "The Garden Presidential Doctrine Book III",
+      "file": "The_Garden_Presidential_Doctrine_Book_III.md",
       "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book X — The Garden Presidential Handbook",
+      "id": "The_Garden_Presidential_Handbook_Book_X",
+      "title": "The Garden Presidential Handbook Book X",
+      "file": "The_Garden_Presidential_Handbook_Book_X.md",
       "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book VI_CATALYSTS — The Garden Series Novella",
+      "id": "The_Garden_Series_Novella_Book_VI_Catalysts",
+      "title": "The Garden Series Novella Book VI Catalysts",
+      "file": "The_Garden_Series_Novella_Book_VI_Catalysts.md",
       "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XIV — The Garden Spacefaring Codex",
+      "id": "The_Garden_Spacefaring_Codex_Book_XIV",
+      "title": "The Garden Spacefaring Codex Book XIV",
+      "file": "The_Garden_Spacefaring_Codex_Book_XIV.md",
       "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "Book XI — The Garden Treasury Manual",
+      "id": "The_Garden_Treasury_Manual_Book_XI",
+      "title": "The Garden Treasury Manual Book XI",
+      "file": "The_Garden_Treasury_Manual_Book_XI.md",
       "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "The_Genesis_Engine_Book_XXIII",
+      "id": "The_Genesis_Engine_Book_XXIII",
+      "title": "The Genesis Engine Book XXIII",
+      "file": "The_Genesis_Engine_Book_XXIII.md",
       "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "The_Great_Acacia_Architecture_Book_XXX",
+      "id": "The_Great_Acacia_Architecture_Book_XXX",
+      "title": "The Great Acacia Architecture Book XXX",
+      "file": "The_Great_Acacia_Architecture_Book_XXX.md",
       "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "The_Keeper_Manual_of_Governance_Book_XIX",
+      "id": "The_Keeper_Manual_of_Governance_Book_XIX",
+      "title": "The Keeper Manual Of Governance Book XIX",
+      "file": "The_Keeper_Manual_of_Governance_Book_XIX.md",
       "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "The_Keepers_Bible_Book_VII",
+      "id": "The_Keepers_Bible_Book_VII",
+      "title": "The Keepers Bible Book VII",
+      "file": "The_Keepers_Bible_Book_VII.md",
       "path": "docs/Novellas/The_Keepers_Bible_Book_VII.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "The_Silent_Defense_Doctrine_Book_XXI",
+      "id": "The_Silent_Defense_Doctrine_Book_XXI",
+      "title": "The Silent Defense Doctrine Book XXI",
+      "file": "The_Silent_Defense_Doctrine_Book_XXI.md",
       "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     },
     {
-      "title": "GARDEN · FORBIDDEN ALIGNMENTS · MACHINE-SEED vE",
+      "id": "garden_forbidden_alignments_seed",
+      "title": "Garden Forbidden Alignments Seed",
+      "file": "garden_forbidden_alignments_seed.md",
       "path": "docs/Novellas/garden_forbidden_alignments_seed.md",
-      "cycle": null,
-      "volume": null
+      "cycle": "Supplemental",
+      "tags": [
+        "novella",
+        "garden",
+        "auto-index"
+      ]
     }
   ]
 }
