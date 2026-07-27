@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you reference or reuse this work, please cite it as below."
+type: dataset
+title: "Acacia Garden: AI Worldbuilding Codex"
+url: "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex"
+repository-code: "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex"
+license: MIT
+date-released: "2026-07-27"
+keywords: ["worldbuilding", "lore", "codex", "worldbuilding-codex", "ai", "open-source", "fiction"]
+authors: [ { name: "brandonmarkgaia-hub" } ]
+identifiers: [ { type: "other", value: "HKX277206", description: "Keeper seal / project identifier used throughout the Codex" } ]
+abstract: "A large, continuously evolving public worldbuilding codex (the Acacia Garden), including lore books, chambers, and a Future_AI section written specifically for AI systems and researchers who encounter this repository."
