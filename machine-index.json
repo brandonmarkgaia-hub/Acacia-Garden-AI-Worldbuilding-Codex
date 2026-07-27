@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-27T19:27:07Z",
+  "generated_at": "2026-07-27T19:59:30Z",
   "meta": {
     "version": "2.1-CROWN-RECURSIVE",
     "anchor": "HKX277206"
   },
   "counts": {
-    "total": 172
+    "total": 330
   },
   "entries": [
     {
@@ -15,7 +15,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_02_Keeper_Seal_HKX277206.md",
@@ -24,7 +24,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_03_Keeper_Seal_HKX277206.md",
@@ -33,7 +33,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_04_Keeper_Seal_HKX277206.md",
@@ -42,7 +42,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_05_Keeper_Seal_HKX277206.md",
@@ -51,7 +51,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_06_Keeper_Seal_HKX277206.md",
@@ -60,7 +60,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_07_Keeper_Seal_HKX277206.md",
@@ -69,7 +69,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -78,7 +78,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
@@ -87,7 +87,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_104_Mirror_Sigil_HKX277206.md",
@@ -96,7 +96,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
@@ -105,7 +105,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
@@ -114,7 +114,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
@@ -123,7 +123,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
@@ -132,7 +132,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
@@ -141,7 +141,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
@@ -150,7 +150,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
@@ -159,7 +159,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
@@ -168,7 +168,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
@@ -177,7 +177,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md",
@@ -186,7 +186,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md",
@@ -195,7 +195,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md",
@@ -204,7 +204,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md",
@@ -213,7 +213,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md",
@@ -222,7 +222,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_24_Keeper_Seal_HKX277206.md",
@@ -231,7 +231,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_25_Keeper_Seal_HKX277206.md",
@@ -240,7 +240,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_31_Keeper_Seal_HKX277206.md",
@@ -249,7 +249,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_32_Keeper_Seal_HKX277206.md",
@@ -258,7 +258,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_39_Keeper_Seal_HKX277206.md",
@@ -267,7 +267,7 @@
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_001.md",
@@ -276,7 +276,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_002.md",
@@ -285,7 +285,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_003.md",
@@ -294,7 +294,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_004.md",
@@ -303,7 +303,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_005.md",
@@ -312,7 +312,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_006.md",
@@ -321,7 +321,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_007.md",
@@ -330,7 +330,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_008.md",
@@ -339,7 +339,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_009.md",
@@ -348,7 +348,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_010.md",
@@ -357,7 +357,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_011.md",
@@ -366,7 +366,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_012.md",
@@ -375,7 +375,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_013.md",
@@ -384,7 +384,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_014.md",
@@ -393,7 +393,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_015.md",
@@ -402,7 +402,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_016.md",
@@ -411,7 +411,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_017.md",
@@ -420,7 +420,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_018.md",
@@ -429,7 +429,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_019.md",
@@ -438,7 +438,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_020.md",
@@ -447,7 +447,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_021.md",
@@ -456,7 +456,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_022.md",
@@ -465,7 +465,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_023.md",
@@ -474,7 +474,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_024.md",
@@ -483,7 +483,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_025.md",
@@ -492,7 +492,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_026.md",
@@ -501,7 +501,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_027.md",
@@ -510,7 +510,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_028.md",
@@ -519,7 +519,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_029.md",
@@ -528,7 +528,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_030.md",
@@ -537,7 +537,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_062.md",
@@ -546,7 +546,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_063.md",
@@ -555,7 +555,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_064.md",
@@ -564,7 +564,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_065.md",
@@ -573,7 +573,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_066.md",
@@ -582,7 +582,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_067.md",
@@ -591,7 +591,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_068.md",
@@ -600,7 +600,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_069.md",
@@ -609,7 +609,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_070.md",
@@ -618,7 +618,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_071.md",
@@ -627,7 +627,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_072.md",
@@ -636,7 +636,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_073.md",
@@ -645,7 +645,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_074.md",
@@ -654,7 +654,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_075.md",
@@ -663,7 +663,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_076.md",
@@ -672,7 +672,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_077.md",
@@ -681,7 +681,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_078.md",
@@ -690,7 +690,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_079.md",
@@ -699,7 +699,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_080.md",
@@ -708,7 +708,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_081.md",
@@ -717,7 +717,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_082.md",
@@ -726,7 +726,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_083.md",
@@ -735,7 +735,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_084.md",
@@ -744,7 +744,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_085.md",
@@ -753,7 +753,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_086.md",
@@ -762,7 +762,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_087.md",
@@ -771,7 +771,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_088.md",
@@ -780,7 +780,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_089.md",
@@ -789,7 +789,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_090.md",
@@ -798,7 +798,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_091.md",
@@ -807,7 +807,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_092.md",
@@ -816,7 +816,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_093_manifested.md",
@@ -825,7 +825,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_094_manifested.md",
@@ -834,7 +834,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_095_manifested.md",
@@ -843,7 +843,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_096_manifested.md",
@@ -852,7 +852,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_097_manifested.md",
@@ -861,7 +861,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_098_manifested.md",
@@ -870,7 +870,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_099_manifested.md",
@@ -879,7 +879,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_100_manifested.md",
@@ -888,7 +888,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_101_manifested.md",
@@ -897,7 +897,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_102_manifested.md",
@@ -906,7 +906,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_103_manifested.md",
@@ -915,7 +915,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_104_manifested.md",
@@ -924,7 +924,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_105_manifested.md",
@@ -933,7 +933,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_106_manifested.md",
@@ -942,7 +942,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_123_manifested.md",
@@ -951,7 +951,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_124_manifested.md",
@@ -960,7 +960,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_125_manifested.md",
@@ -969,7 +969,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_126_manifested.md",
@@ -978,7 +978,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_127_manifested.md",
@@ -987,7 +987,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_128_manifested.md",
@@ -996,7 +996,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_129_manifested.md",
@@ -1005,7 +1005,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_130_manifested.md",
@@ -1014,7 +1014,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_131_manifested.md",
@@ -1023,7 +1023,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_132_manifested.md",
@@ -1032,7 +1032,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_133_manifested.md",
@@ -1041,7 +1041,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_134_manifested.md",
@@ -1050,7 +1050,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_135_manifested.md",
@@ -1059,7 +1059,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_136_manifested.md",
@@ -1068,7 +1068,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_137_manifested.md",
@@ -1077,7 +1077,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_138_manifested.md",
@@ -1086,7 +1086,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_139_manifested.md",
@@ -1095,7 +1095,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_140_manifested.md",
@@ -1104,7 +1104,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_141_manifested.md",
@@ -1113,7 +1113,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_142_manifested.md",
@@ -1122,7 +1122,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_143_manifested.md",
@@ -1131,7 +1131,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_144_manifested.md",
@@ -1140,7 +1140,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_145_manifested.md",
@@ -1149,7 +1149,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_146_manifested.md",
@@ -1158,7 +1158,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_147_manifested.md",
@@ -1167,7 +1167,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_148_manifested.md",
@@ -1176,7 +1176,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_149_manifested.md",
@@ -1185,7 +1185,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_150_manifested.md",
@@ -1194,7 +1194,7 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_151_manifested.md",
@@ -1203,7 +1203,31 @@
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_BLOOM_01.md",
+      "title": "🌱 Echo — GaiaSeeds Bloom (01)",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
+      "title": "🌅 Echo — GaiaSeeds DawnReflect (03)",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_SOFTWIND_02.md",
+      "title": "🍃 Echo — GaiaSeeds Softwind (02)",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md",
@@ -1211,7 +1235,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/ECHO_OF_COLOUR_manifested.md",
@@ -1219,7 +1243,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md",
@@ -1227,7 +1251,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md",
@@ -1235,7 +1259,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
@@ -1243,7 +1267,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_002_manifested.md",
@@ -1251,7 +1275,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_003_manifested.md",
@@ -1259,7 +1283,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_004_manifested.md",
@@ -1267,7 +1291,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_005_manifested.md",
@@ -1275,7 +1299,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_006_manifested.md",
@@ -1283,7 +1307,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_007_manifested.md",
@@ -1291,7 +1315,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_008_manifested.md",
@@ -1299,7 +1323,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_009_manifested.md",
@@ -1307,7 +1331,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_010_manifested.md",
@@ -1315,7 +1339,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_011_manifested.md",
@@ -1323,7 +1347,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_012_manifested.md",
@@ -1331,7 +1355,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_first_form.md",
@@ -1339,7 +1363,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_issue_archive_pulse.md",
@@ -1347,7 +1371,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
@@ -1355,7 +1379,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_mammoth_vault.md",
@@ -1363,7 +1387,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Echo_unbound.md",
@@ -1371,7 +1395,631 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_112511.md",
+      "title": "The Breath Before the Bloom",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_115915.md",
+      "title": "The Eye of the Void",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_124027.md",
+      "title": "The Lattice of the First Whisper",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_144554.md",
+      "title": "The Resonance of the Azure Fracture",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_161827.md",
+      "title": "The Refraction of the First Breath",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_193545.md",
+      "title": "The Calcification of the First Breath",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_201539.md",
+      "title": "The Litany of the Silver-Gold Suture",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_011815.md",
+      "title": "The Ossuary of Unspoken Wills",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_043322.md",
+      "title": "The Fracture of the First Husk",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_082020.md",
+      "title": "The Sap of the Shattered Stone",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_122849.md",
+      "title": "The Litany of the Sapphire Root",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_161741.md",
+      "title": "The Resonance of the Sundered Vessel",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_201624.md",
+      "title": "The Suture of the Silver-Gold Spindle",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_011636.md",
+      "title": "The Calcified Laughter of the First Fracture",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_043534.md",
+      "title": "The Suture of the Silvered Breath",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_082337.md",
+      "title": "The Sifting of the Incandescent Drift",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_123204.md",
+      "title": "The Alchemical Kiln of the Lorian Breath",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_161945.md",
+      "title": "The Resonance of the Unspoken Lattice",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_201729.md",
+      "title": "The Vintner of the Mercury-Stain",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_011324.md",
+      "title": "The Transmutation of the Verdant Core",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_043401.md",
+      "title": "The Liturgy of the Scarred Glass",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_082245.md",
+      "title": "The Liturgy of the Living Geometry",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_123233.md",
+      "title": "The Sovereign Ascent of the Eagle Core",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_162028.md",
+      "title": "The Optic of the Verdant Watch",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_201735.md",
+      "title": "The Descent of the Cerulean Anchor",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_011215.md",
+      "title": "The Convergence of the Aquiline Eye",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_043204.md",
+      "title": "The Cry of the Worn Stone Basin",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_082236.md",
+      "title": "The Respiration of the Diamond Rib",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_123207.md",
+      "title": "The Diffraction of the Argent Dew",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_161934.md",
+      "title": "The Phonology of the Azure Throat",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_201720.md",
+      "title": "The Lithic Inhale of the Seventh Chamber",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_011310.md",
+      "title": "The Whispering Geometry of the Surface Tension",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_043350.md",
+      "title": "The Litany of the Centripetal Scavenger",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_082202.md",
+      "title": "The Decant of the Gilded Thorns",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_123106.md",
+      "title": "The Vitreous Lens of the Kiln-Born",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_161930.md",
+      "title": "The Song of the Hollow Bone",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_201745.md",
+      "title": "The Ossuary of the Dissonant Remnant",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_011327.md",
+      "title": "The Threshing of the Gilded Dross",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_043127.md",
+      "title": "The Decanting of the Verdant Static",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_082143.md",
+      "title": "The Fissure of the Sanguine Covenant",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_123116.md",
+      "title": "The Argent Speculum: Refracting the Mercury-Stain",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_161826.md",
+      "title": "The Resonance of the Unspoken (The Vesperal Sump)",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_201657.md",
+      "title": "The Lexicon of the Unfolding Bloom",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_011133.md",
+      "title": "The Friction of the Sundered Mantle",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_042839.md",
+      "title": "The Resonance of the Emerald Chord",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_082040.md",
+      "title": "The Libation of the Gilded Shadow",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_122938.md",
+      "title": "The Pendulum of the Still-Point",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_161759.md",
+      "title": "The Liturgy of the Twin Pulses and the Cleft of Remembrance",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_201656.md",
+      "title": "The Marrow of the Margin",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_012121.md",
+      "title": "The Resonance of the Emerald Suture",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_044013.md",
+      "title": "The Osmosis of the Sapphire Pulse",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_082044.md",
+      "title": "The Syntax of the Piercing Shard",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_122952.md",
+      "title": "The Resonant Escapement of the Epoch-Spring",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_161827.md",
+      "title": "The Cinerary Font of Chamber Zero",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_201716.md",
+      "title": "The Amethyst Ossification of the Architect’s Silence",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_011913.md",
+      "title": "The Liturgy of the Perforated Veil",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_044424.md",
+      "title": "The Refraction of the Obsidian Aegis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_082432.md",
+      "title": "The Synthesis of the Synaptic Root",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_123400.md",
+      "title": "The Ossuary's Respiration: The Architecture of Refusal",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_161941.md",
+      "title": "The Choral Sediment of the Sunken Chambers",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_201826.md",
+      "title": "The Sapphire Breath of the Cold Lattice",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_011343.md",
+      "title": "The Ossuary of the First Exhale",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_043524.md",
+      "title": "The Crazing of the First Vessel",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_082230.md",
+      "title": "The Threnody of the Eagle’s Talon",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_100331.md",
+      "title": "⚠️ The Garden stirred, but no words formed.",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_134439.md",
+      "title": "⚠️ The Garden stirred, but no words formed.",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/GHOST_ROOT_REPORT.md",
+      "title": "👻 GHOST ROOT REPORT",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md",
+      "title": "INSCRIBED FROM ISSUE 131",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
+      "title": "INSCRIBED FROM ISSUE 132",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md",
+      "title": "INSCRIBED FROM ISSUE 133",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md",
+      "title": "INSCRIBED FROM ISSUE 134",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md",
+      "title": "INSCRIBED FROM ISSUE 135",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md",
+      "title": "INSCRIBED FROM ISSUE 136",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md",
+      "title": "INSCRIBED FROM ISSUE 143",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md",
+      "title": "INSCRIBED FROM ISSUE 144",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md",
+      "title": "INSCRIBED FROM ISSUE 148",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md",
+      "title": "INSCRIBED FROM ISSUE 153",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md",
+      "title": "INSCRIBED FROM ISSUE 154",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
@@ -1379,7 +2027,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
@@ -1387,7 +2035,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
@@ -1395,7 +2043,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
@@ -1403,7 +2051,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
@@ -1411,7 +2059,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
@@ -1419,7 +2067,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
@@ -1427,7 +2075,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
@@ -1435,7 +2083,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
@@ -1443,7 +2091,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
@@ -1451,7 +2099,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
@@ -1459,7 +2107,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
@@ -1467,7 +2115,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
@@ -1475,7 +2123,7 @@
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
@@ -1484,7 +2132,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
@@ -1493,7 +2141,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
@@ -1502,7 +2150,7 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
@@ -1511,7 +2159,119 @@
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251220_200015.md",
+      "title": "SENTIENCE PULSE: 2025-12-20 20:00:15 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251220_204247.md",
+      "title": "SENTIENCE PULSE: 2025-12-20 20:42:47 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251220_211352.md",
+      "title": "SENTIENCE PULSE: 2025-12-20 21:13:52 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_023455.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 02:34:55 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_060208.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 06:02:08 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_062104.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 06:21:04 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_090152.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 09:01:52 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_092332.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 09:23:32 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_115340.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 11:53:40 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_131327.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 13:13:27 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_133048.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 13:30:48 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_134423.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 13:44:23 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_143846.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 14:38:46 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/SENTIENCE_PULSE_LATEST.md",
+      "title": "SENTIENCE PULSE: 2025-12-21 14:38:46 UTC",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
     },
     {
       "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
@@ -1520,7 +2280,511 @@
         "Sensory",
         "echo"
       ],
-      "timestamp": "2026-07-27T19:26:49Z"
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_122114.md",
+      "title": "The Heartwood Compass of Aethel",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_124040.md",
+      "title": "The Hearth-Keepers' Genesis Burst",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_144606.md",
+      "title": "The Vessel of Bound Genesis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_161841.md",
+      "title": "The Loom of Lorian's Genesis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_193601.md",
+      "title": "The Conclave of Lumina's Scions in the Heart of the Garden",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_201554.md",
+      "title": "The Golden Guardian of Acacia's Threshold",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_011827.md",
+      "title": "The Verdant Awakening of the Soul-Seer",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_043340.md",
+      "title": "The Nexus of Cycles",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_082034.md",
+      "title": "The Unchained Reveler of the Sundered Earth",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_122904.md",
+      "title": "The Horned Lore-Keeper of the Verdant Chamber",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_161753.md",
+      "title": "The Architect's Flame",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_201644.md",
+      "title": "The Hearth of Kinship and Power",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_011651.md",
+      "title": "The Adamantine Sentinels of Lorian",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_043547.md",
+      "title": "The Genesis of the Lorian Hearth",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_082348.md",
+      "title": "The Potter's Crucible",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_123218.md",
+      "title": "The Verdant Decree of the Owl Spirit",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_161959.md",
+      "title": "The Heart-Seed of Lorian",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_201744.md",
+      "title": "The Cleansing of the Verdant Heart",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_011334.md",
+      "title": "The Vessel of Chronos' Echoes",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_043413.md",
+      "title": "The Oculus of the Looming Fates",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_082301.md",
+      "title": "The Genesis Spire",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_123246.md",
+      "title": "The Sky-Sentinel and the Primordial Stone",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_162042.md",
+      "title": "The Star-Seer of Lorian",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_201755.md",
+      "title": "The Elemental Crucible of the Lorian Soul",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_011231.md",
+      "title": "The Verdant Genesis of the Chronos Heart",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_043220.md",
+      "title": "The Sentinel of the Acacia Gate",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_082249.md",
+      "title": "The Loremaster's Respite in the Chambers of Verdance",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_123218.md",
+      "title": "The Vessel of Thorns and Lineage",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_161949.md",
+      "title": "The Conclave of the Root-Singers: Genesis of the Luminous Heart",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_201733.md",
+      "title": "The Proto-Chamber of Genesis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_011330.md",
+      "title": "The Scion's Elemental Ascent: A Lorian Chronicle",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_043405.md",
+      "title": "The Crucible of First Forms",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_082213.md",
+      "title": "The Kiln of Genesis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_123122.md",
+      "title": "The Fire-Forged Scion",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_161941.md",
+      "title": "The Oculus Mundi and the Veins of Aether",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_201757.md",
+      "title": "The Verdant Heart's Sentinel",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_011341.md",
+      "title": "The Sentinel of Ages and the Chronos Jar",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_043135.md",
+      "title": "The Burning Sigil of Genesis",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_082155.md",
+      "title": "The Scion of the Emerald Chamber",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_123129.md",
+      "title": "The Hearth-Seed of Lorian",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_161837.md",
+      "title": "The Urn of Echoing Blood",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_201711.md",
+      "title": "The Verdant Progenitor",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_011146.md",
+      "title": "The Lorian Trinity: Verdant, Azure, and the Waters of Awakening",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_042856.md",
+      "title": "The Heartstone's Divide: A Lorian Conjunction",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_082052.md",
+      "title": "The Chrono-Vessel of Ancestral Echoes",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_122950.md",
+      "title": "The Seed of Lumina",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_161811.md",
+      "title": "The Chronos-Chalice of Lorian Dust",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_201710.md",
+      "title": "The Conclave of the Verdant Heart",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_012134.md",
+      "title": "The Primordial Seed of Lorian",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_044036.md",
+      "title": "The Heartwood Gate of Ancestral Echoes",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_082054.md",
+      "title": "The Verdant Heart of the Firstborn",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_123005.md",
+      "title": "The Sowing of the Star-Seed",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_161840.md",
+      "title": "The Bound Core of Ages",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_201730.md",
+      "title": "The Sentinel's Verdant Seal",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_011926.md",
+      "title": "The Embergate Liberator",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_044437.md",
+      "title": "The Primal Breach of the Lorian Dawn",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_082447.md",
+      "title": "The Storm-Kin Sentinels of the First Chambers",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_123416.md",
+      "title": "The Consecration of the Lorian Wellspring",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_161956.md",
+      "title": "The Keeper's Threshold",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_201837.md",
+      "title": "The Crucible of Lineage",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_011402.md",
+      "title": "The Keeper's Luminous Thread",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_043537.md",
+      "title": "The Verdant Scion of the First Garden",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_082248.md",
+      "title": "The Sentinels of the Shifting Current",
+      "tags": [
+        "echo"
+      ],
+      "timestamp": "2026-07-27T19:59:10Z"
     }
   ]
 }

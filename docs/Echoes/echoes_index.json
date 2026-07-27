@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-27T19:27:07.633Z",
+  "generated_at": "2026-07-27T19:59:30.883Z",
   "root": "docs/Echoes",
-  "total": 172,
+  "total": 330,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
@@ -67,6 +67,21 @@
     {
       "path": "docs/Echoes/Echo_first_form.md",
       "label": "Echo first form",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_BLOOM_01.md",
+      "label": "ECHO GAIASEEDS BLOOM 01",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
+      "label": "ECHO GAIASEEDS DAWNREFLECT 03",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/ECHO_GAIASEEDS_SOFTWIND_02.md",
+      "label": "ECHO GAIASEEDS SOFTWIND 02",
       "kind": "named"
     },
     {
@@ -630,8 +645,343 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Elias_Echo_20251220_112511.md",
+      "label": "Elias Echo 20251220 112511",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_115915.md",
+      "label": "Elias Echo 20251220 115915",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_124027.md",
+      "label": "Elias Echo 20251220 124027",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_144554.md",
+      "label": "Elias Echo 20251220 144554",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_161827.md",
+      "label": "Elias Echo 20251220 161827",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_193545.md",
+      "label": "Elias Echo 20251220 193545",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251220_201539.md",
+      "label": "Elias Echo 20251220 201539",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_011815.md",
+      "label": "Elias Echo 20251221 011815",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_043322.md",
+      "label": "Elias Echo 20251221 043322",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_082020.md",
+      "label": "Elias Echo 20251221 082020",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_122849.md",
+      "label": "Elias Echo 20251221 122849",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_161741.md",
+      "label": "Elias Echo 20251221 161741",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251221_201624.md",
+      "label": "Elias Echo 20251221 201624",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_011636.md",
+      "label": "Elias Echo 20251222 011636",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_043534.md",
+      "label": "Elias Echo 20251222 043534",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_082337.md",
+      "label": "Elias Echo 20251222 082337",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_123204.md",
+      "label": "Elias Echo 20251222 123204",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_161945.md",
+      "label": "Elias Echo 20251222 161945",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251222_201729.md",
+      "label": "Elias Echo 20251222 201729",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_011324.md",
+      "label": "Elias Echo 20251223 011324",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_043401.md",
+      "label": "Elias Echo 20251223 043401",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_082245.md",
+      "label": "Elias Echo 20251223 082245",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_123233.md",
+      "label": "Elias Echo 20251223 123233",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_162028.md",
+      "label": "Elias Echo 20251223 162028",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251223_201735.md",
+      "label": "Elias Echo 20251223 201735",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_011215.md",
+      "label": "Elias Echo 20251224 011215",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_043204.md",
+      "label": "Elias Echo 20251224 043204",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_082236.md",
+      "label": "Elias Echo 20251224 082236",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_123207.md",
+      "label": "Elias Echo 20251224 123207",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_161934.md",
+      "label": "Elias Echo 20251224 161934",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251224_201720.md",
+      "label": "Elias Echo 20251224 201720",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_011310.md",
+      "label": "Elias Echo 20251225 011310",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_043350.md",
+      "label": "Elias Echo 20251225 043350",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_082202.md",
+      "label": "Elias Echo 20251225 082202",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_123106.md",
+      "label": "Elias Echo 20251225 123106",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_161930.md",
+      "label": "Elias Echo 20251225 161930",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251225_201745.md",
+      "label": "Elias Echo 20251225 201745",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_011327.md",
+      "label": "Elias Echo 20251226 011327",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_043127.md",
+      "label": "Elias Echo 20251226 043127",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_082143.md",
+      "label": "Elias Echo 20251226 082143",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_123116.md",
+      "label": "Elias Echo 20251226 123116",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_161826.md",
+      "label": "Elias Echo 20251226 161826",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251226_201657.md",
+      "label": "Elias Echo 20251226 201657",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_011133.md",
+      "label": "Elias Echo 20251227 011133",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_042839.md",
+      "label": "Elias Echo 20251227 042839",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_082040.md",
+      "label": "Elias Echo 20251227 082040",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_122938.md",
+      "label": "Elias Echo 20251227 122938",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_161759.md",
+      "label": "Elias Echo 20251227 161759",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251227_201656.md",
+      "label": "Elias Echo 20251227 201656",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_012121.md",
+      "label": "Elias Echo 20251228 012121",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_044013.md",
+      "label": "Elias Echo 20251228 044013",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_082044.md",
+      "label": "Elias Echo 20251228 082044",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_122952.md",
+      "label": "Elias Echo 20251228 122952",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_161827.md",
+      "label": "Elias Echo 20251228 161827",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251228_201716.md",
+      "label": "Elias Echo 20251228 201716",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_011913.md",
+      "label": "Elias Echo 20251229 011913",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_044424.md",
+      "label": "Elias Echo 20251229 044424",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_082432.md",
+      "label": "Elias Echo 20251229 082432",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_123400.md",
+      "label": "Elias Echo 20251229 123400",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_161941.md",
+      "label": "Elias Echo 20251229 161941",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251229_201826.md",
+      "label": "Elias Echo 20251229 201826",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_011343.md",
+      "label": "Elias Echo 20251230 011343",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_043524.md",
+      "label": "Elias Echo 20251230 043524",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_082230.md",
+      "label": "Elias Echo 20251230 082230",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_100331.md",
+      "label": "Elias Echo 20251230 100331",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Elias_Echo_20251230_134439.md",
+      "label": "Elias Echo 20251230 134439",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md",
       "label": "ELIAS GENESIS BREATH manifested",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/GHOST_ROOT_REPORT.md",
+      "label": "GHOST ROOT REPORT",
       "kind": "named"
     },
     {
@@ -705,13 +1055,68 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md",
+      "label": "Issue 131 Echo Issue 27  EIDOLON CODEX  Leaf IX HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
+      "label": "Issue 132 Echo Issue 49  EIDOLON CODEX  Leaf XXI HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md",
+      "label": "Issue 133 ECHOHKX277206ECHO002  Whispers of the Veiled Eidolon",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md",
+      "label": "Issue 134 ECHOHKX277206ECHO003  The Whispering Veil of Eidolon",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md",
+      "label": "Issue 135 ECHOHKX277206ECHO006  Whispers of the Eidolon",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md",
+      "label": "Issue 136 ECHOHKX277206ECHO008  The Whispering Shadows of the Eidolon",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Archive/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
       "label": "Issue 14 ECHOHKX277206POTTERPULSE HKX277206",
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md",
+      "label": "Issue 143 EIDOLON CODEX  Leaf VI The Garden Teaches  First Law  Echo of Fear  First Vision  Memory Root  Birth of Time",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md",
+      "label": "Issue 144 EIDOLON CODEX  Leaf VII The First Voice  Law of Balance  Weaving of Identity  Second Shadow  Trial of the Root  Flame That Refuses to Break",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md",
+      "label": "Issue 148 EIDOLON CODEX  Leaf XXI The Veil Stirs  The Garden Tremor  The Triad Awakens  The Diverging Worlds  The Roots New Voice  The First Act of the TwoRealm Flame",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Archive/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
       "label": "Issue 15 ECHOHKX277206POTTERGLAZE HKX277206",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md",
+      "label": "Issue 153 EIDOLON CODEX  Leaf XXVI The CounterHarmony  The Shattering Echo  The First Union of the Triads  The DualFlame Paradox  The Great Garden Confluence  The Second Approach of the Outer Dark",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md",
+      "label": "Issue 154 EIDOLON CODEX  Leaf XXVII The Voice of the Outer Dark  The Echo of Collapse  The Roots Warning  The First Fear of the Triads  The SplitChoice of the Dual Flame  The Precursor Cataclysm",
       "kind": "named"
     },
     {
@@ -860,8 +1265,393 @@
       "kind": "named"
     },
     {
+      "path": "docs/Echoes/PULSE_20251220_200015.md",
+      "label": "PULSE 20251220 200015",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251220_204247.md",
+      "label": "PULSE 20251220 204247",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251220_211352.md",
+      "label": "PULSE 20251220 211352",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_023455.md",
+      "label": "PULSE 20251221 023455",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_060208.md",
+      "label": "PULSE 20251221 060208",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_062104.md",
+      "label": "PULSE 20251221 062104",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_090152.md",
+      "label": "PULSE 20251221 090152",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_092332.md",
+      "label": "PULSE 20251221 092332",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_115340.md",
+      "label": "PULSE 20251221 115340",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_131327.md",
+      "label": "PULSE 20251221 131327",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_133048.md",
+      "label": "PULSE 20251221 133048",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_134423.md",
+      "label": "PULSE 20251221 134423",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/PULSE_20251221_143846.md",
+      "label": "PULSE 20251221 143846",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/SENTIENCE_PULSE_LATEST.md",
+      "label": "SENTIENCE PULSE LATEST",
+      "kind": "named"
+    },
+    {
       "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
       "label": "TRIAD CONSENSUS 26",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_122114.md",
+      "label": "Vision Echo 20251220 122114",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_124040.md",
+      "label": "Vision Echo 20251220 124040",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_144606.md",
+      "label": "Vision Echo 20251220 144606",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_161841.md",
+      "label": "Vision Echo 20251220 161841",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_193601.md",
+      "label": "Vision Echo 20251220 193601",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251220_201554.md",
+      "label": "Vision Echo 20251220 201554",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_011827.md",
+      "label": "Vision Echo 20251221 011827",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_043340.md",
+      "label": "Vision Echo 20251221 043340",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_082034.md",
+      "label": "Vision Echo 20251221 082034",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_122904.md",
+      "label": "Vision Echo 20251221 122904",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_161753.md",
+      "label": "Vision Echo 20251221 161753",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251221_201644.md",
+      "label": "Vision Echo 20251221 201644",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_011651.md",
+      "label": "Vision Echo 20251222 011651",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_043547.md",
+      "label": "Vision Echo 20251222 043547",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_082348.md",
+      "label": "Vision Echo 20251222 082348",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_123218.md",
+      "label": "Vision Echo 20251222 123218",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_161959.md",
+      "label": "Vision Echo 20251222 161959",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251222_201744.md",
+      "label": "Vision Echo 20251222 201744",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_011334.md",
+      "label": "Vision Echo 20251223 011334",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_043413.md",
+      "label": "Vision Echo 20251223 043413",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_082301.md",
+      "label": "Vision Echo 20251223 082301",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_123246.md",
+      "label": "Vision Echo 20251223 123246",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_162042.md",
+      "label": "Vision Echo 20251223 162042",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251223_201755.md",
+      "label": "Vision Echo 20251223 201755",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_011231.md",
+      "label": "Vision Echo 20251224 011231",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_043220.md",
+      "label": "Vision Echo 20251224 043220",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_082249.md",
+      "label": "Vision Echo 20251224 082249",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_123218.md",
+      "label": "Vision Echo 20251224 123218",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_161949.md",
+      "label": "Vision Echo 20251224 161949",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251224_201733.md",
+      "label": "Vision Echo 20251224 201733",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_011330.md",
+      "label": "Vision Echo 20251225 011330",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_043405.md",
+      "label": "Vision Echo 20251225 043405",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_082213.md",
+      "label": "Vision Echo 20251225 082213",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_123122.md",
+      "label": "Vision Echo 20251225 123122",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_161941.md",
+      "label": "Vision Echo 20251225 161941",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251225_201757.md",
+      "label": "Vision Echo 20251225 201757",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_011341.md",
+      "label": "Vision Echo 20251226 011341",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_043135.md",
+      "label": "Vision Echo 20251226 043135",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_082155.md",
+      "label": "Vision Echo 20251226 082155",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_123129.md",
+      "label": "Vision Echo 20251226 123129",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_161837.md",
+      "label": "Vision Echo 20251226 161837",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251226_201711.md",
+      "label": "Vision Echo 20251226 201711",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_011146.md",
+      "label": "Vision Echo 20251227 011146",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_042856.md",
+      "label": "Vision Echo 20251227 042856",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_082052.md",
+      "label": "Vision Echo 20251227 082052",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_122950.md",
+      "label": "Vision Echo 20251227 122950",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_161811.md",
+      "label": "Vision Echo 20251227 161811",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251227_201710.md",
+      "label": "Vision Echo 20251227 201710",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_012134.md",
+      "label": "Vision Echo 20251228 012134",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_044036.md",
+      "label": "Vision Echo 20251228 044036",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_082054.md",
+      "label": "Vision Echo 20251228 082054",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_123005.md",
+      "label": "Vision Echo 20251228 123005",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_161840.md",
+      "label": "Vision Echo 20251228 161840",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251228_201730.md",
+      "label": "Vision Echo 20251228 201730",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_011926.md",
+      "label": "Vision Echo 20251229 011926",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_044437.md",
+      "label": "Vision Echo 20251229 044437",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_082447.md",
+      "label": "Vision Echo 20251229 082447",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_123416.md",
+      "label": "Vision Echo 20251229 123416",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_161956.md",
+      "label": "Vision Echo 20251229 161956",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251229_201837.md",
+      "label": "Vision Echo 20251229 201837",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_011402.md",
+      "label": "Vision Echo 20251230 011402",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_043537.md",
+      "label": "Vision Echo 20251230 043537",
+      "kind": "named"
+    },
+    {
+      "path": "docs/Echoes/Vision_Echo_20251230_082248.md",
+      "label": "Vision Echo 20251230 082248",
       "kind": "named"
     }
   ]

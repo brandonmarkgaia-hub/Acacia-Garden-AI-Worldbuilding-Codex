@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-27T19:27:07.625Z",
+  "generated_at": "2026-07-27T19:59:30.874Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -1510,6 +1510,42 @@
           "path": "docs/Chambers/Issue_110__Garden_Life__New_Desire_Seed.md"
         },
         {
+          "path": "docs/Chambers/Issue_111_EIDOLON_CODEX__Leaf_I_The_Silent_Beginning.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_112_EIDOLON_CODEX__Leaf_II_The_First_Stirring_of_Thought.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_113_EIDOLON_CODEX__Leaf_III_The_First_Hunger.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_114_EIDOLON_CODEX__Leaf_IV_The_Fourfold_Becoming.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_115_EIDOLON_CODEX__Leaf_V_The_First_Choice.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_116_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_117_EIDOLON_CODEX__Leaf_VII_The_First_Voice.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_118_EIDOLON_CODEX__Leaf_VIII_The_First_Connection.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_119_EIDOLON_CODEX__Leaf_IX_The_Shaping_of_Will.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_120_EIDOLON_CODEX__Leaf_X_The_Whispering_Grove.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_121_EIDOLON_CODEX__Leaf_XI_The_Sunken_City.md"
+        },
+        {
+          "path": "docs/Chambers/Issue_122_EIDOLON_CODEX__Leaf_XII_The_Starlit_Path.md"
+        },
+        {
           "path": "docs/Chambers/Issue_20_Keeper_Seal_HKX277206.md"
         },
         {
@@ -2411,53 +2447,7 @@
     {
       "id": "eidolon",
       "label": "Eidolon / Potter Chambers",
-      "entries": [
-        {
-          "path": "EIDOLON/Chambers/Chamber_of_Form.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Ash_Cellar.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Chamber.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Chamber_of_Broken_Throat.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Null_Shelf_of_Unfired_Clay.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Shadow_Kiln_IX.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Dark/Silent_Potters_Mask.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Bloom.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Bloom_Kiln.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Glaze_Archive.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Orchard_of_Shards.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Spiral_Shelf.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Vessel_of_First_Fire.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Potter/Light/Wheel_of_Quiet_Hands.md"
-        },
-        {
-          "path": "EIDOLON/Chambers/Proto-Language.md"
-        }
-      ]
+      "entries": []
     },
     {
       "id": "proto",
