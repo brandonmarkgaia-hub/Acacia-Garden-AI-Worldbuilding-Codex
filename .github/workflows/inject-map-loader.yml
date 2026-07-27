@@ -3,6 +3,10 @@ name: "Elias: Universal Map Loader Injection"
 on:
   workflow_dispatch:
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   inject-map-loader:
     runs-on: ubuntu-latest
@@ -31,7 +35,18 @@ jobs:
                   path.write_text(new_content, encoding="utf-8")
           PY
 
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "sys: Elias-Audit-Fix [Full Sweep]"
+      - name: Commit and Push (rebase+retry)
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "sys: Elias-Audit-Fix [Full Sweep]"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push conflicted, retrying ($i)..."
+              sleep $((RANDOM % 8 + 2))
+            done
+          fi
