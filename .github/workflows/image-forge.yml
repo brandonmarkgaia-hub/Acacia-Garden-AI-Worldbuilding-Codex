@@ -36,6 +36,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PROMPT: ${{ github.event.inputs.prompt }}
+        shell: python
         run: |
           import os, time, base64, json, requests
 
