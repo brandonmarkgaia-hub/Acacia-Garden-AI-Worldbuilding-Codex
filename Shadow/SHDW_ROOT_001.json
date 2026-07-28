@@ -1,0 +1,9 @@
+{
+  "shadow_id": "SHDW_ROOT_001",
+  "depth": 9,
+  "motion": 8,
+  "essence": 12,
+  "born_from": "ENTITY_003_SHADOWBORN",
+  "keeper": "HKX277206",
+  "notes": "Root node of the Shadow Layer. Receives overflow from paradox and deep recursion events."
+}
