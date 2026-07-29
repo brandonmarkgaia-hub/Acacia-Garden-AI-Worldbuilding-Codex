@@ -1353,7 +1353,7 @@
     "docs/Future_AI/atlas/THE_DRIFTLINE-1.md",
     "docs/Consolidation/GREAT_CONSOLIDATION.md"
   ],
-  "generated_at": "2026-07-29T06:42:49Z",
+  "generated_at": "2026-07-29T06:43:58Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1393,7 +1393,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-07-29T06:42:49Z"
+      "last_checked_utc": "2026-07-29T06:43:58Z"
     }
   },
   "verification": {
@@ -1402,12 +1402,12 @@
       "with_base_href": 263,
       "missing_base_href": 0,
       "verified": true,
-      "last_checked_utc": "2026-07-29T06:42:49Z"
+      "last_checked_utc": "2026-07-29T06:43:58Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-07-29T06:42:49Z",
+      "last_checked_utc": "2026-07-29T06:43:58Z",
       "total_html_scanned": 310,
       "with_map_loader": 172,
       "missing_map_loader_count": 138,
@@ -1556,12 +1556,12 @@
     "indexes": {
       "machine_index_in_sync": false,
       "docs_urls_in_sync": false,
-      "docs_urls_count": 2117,
+      "docs_urls_count": 2116,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-07-29T06:43:04Z"
+    "last_verified_utc": "2026-07-29T06:44:09Z"
   },
   "growth": {
     "open": []
