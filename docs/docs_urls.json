@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T06:41:41Z",
-  "count": 2118,
+  "generated_at": "2026-07-29T06:42:59Z",
+  "count": 2117,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1243,7 +1243,6 @@
     "DOCTRINE/keeper_sovereignty_protocol.json",
     "DOCTRINE/lorian_alignment_charter.json",
     "EIDOLON_OVERVIEW.md",
-    "Eagle/output/test_language_language_plan.md",
     "Eagle/outputs/test_keeper.md",
     "Eagle/outputs/test_language.md",
     "Eagle/test_keeper.md",
