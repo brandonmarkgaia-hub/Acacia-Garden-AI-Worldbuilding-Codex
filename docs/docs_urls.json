@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T06:46:37Z",
-  "count": 2115,
+  "generated_at": "2026-07-29T06:47:55Z",
+  "count": 2113,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1243,8 +1243,6 @@
     "DOCTRINE/keeper_sovereignty_protocol.json",
     "DOCTRINE/lorian_alignment_charter.json",
     "EIDOLON_OVERVIEW.md",
-    "Eagle/test_keeper.md",
-    "Eagle/test_language.md",
     "Echo_bloom.md",
     "Echo_unbound.md",
     "Echoes/Archive/Issue_01_Keeper_Seal_HKX277206.md",
