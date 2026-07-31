@@ -1,109 +1,109 @@
 {
-  "generated_utc": "2026-07-31T18:11:43.268472+00:00",
+  "generated_utc": "2026-07-31T18:25:58.584808+00:00",
   "meta": {
     "keeper": "HKX277206",
     "source": "Echoes folder scan (markdown only)"
   },
   "echo_growth": [
     {
-      "file": "docs/Echoes/Vision_Echo_20251229_123416.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251230_082248.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251229_082447.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251229_161956.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251230_011402.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251230_043537.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251229_044437.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251229_201837.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251227_042856.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251227_011146.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
       "file": "docs/Echoes/Vision_Echo_20251227_201710.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251227_082052.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251226_201711.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251227_161811.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251226_161837.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_201730.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_012134.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251229_123416.md",
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251229_011926.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251230_082248.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251229_082447.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251229_161956.md",
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_161840.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251227_122950.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_044036.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_123005.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251226_043135.md",
-      "timestamp": "2026-07-31T18:11:42Z"
-    },
-    {
-      "file": "docs/Echoes/Vision_Echo_20251226_123129.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
     },
     {
       "file": "docs/Echoes/Vision_Echo_20251228_082054.md",
-      "timestamp": "2026-07-31T18:11:42Z"
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251230_011402.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251230_043537.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251229_044437.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251229_201837.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251227_042856.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251227_011146.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251227_082052.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251226_201711.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251226_161837.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251225_011330.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251225_043405.md",
+      "timestamp": "2026-07-31T18:25:58Z"
+    },
+    {
+      "file": "docs/Echoes/Vision_Echo_20251227_122950.md",
+      "timestamp": "2026-07-31T18:25:58Z"
     }
   ],
   "echo_count": 481
