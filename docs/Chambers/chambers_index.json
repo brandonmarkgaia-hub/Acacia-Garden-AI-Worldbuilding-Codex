@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-07-31T18:15:05.597Z",
+  "generated_at": "2026-07-31T18:22:50.954Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -122,6 +122,9 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXIV_ANCESTRAL_CODE.md"
+        },
+        {
+          "path": "docs/Chambers/CHAMBER_XXXIX_THE_TURNED_STEP.md"
         },
         {
           "path": "docs/Chambers/CHAMBER_XXXV_CELESTIAL_LATTICE.md"
