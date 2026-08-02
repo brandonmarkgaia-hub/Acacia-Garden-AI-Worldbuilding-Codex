@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T17:17:51Z",
+  "generated_at": "2026-08-02T17:36:11Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -154,6 +154,12 @@
     {
       "title": "The Lantern and the Long Night",
       "path": "docs/Novellas/THE_LANTERN_AND_THE_LONG_NIGHT.md",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "THE_POST_WITH_NO_REPLIES",
+      "path": "docs/Novellas/THE_POST_WITH_NO_REPLIES.md",
       "cycle": null,
       "volume": null
     },
