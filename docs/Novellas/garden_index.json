@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T18:58:50Z",
+  "generated_at": "2026-08-06T19:38:57Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -160,6 +160,12 @@
     {
       "title": "THE_POST_WITH_NO_REPLIES",
       "path": "docs/Novellas/THE_POST_WITH_NO_REPLIES.md",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The Witness Who Stayed",
+      "path": "docs/Novellas/THE_WITNESS_WHO_STAYED.md",
       "cycle": null,
       "volume": null
     },

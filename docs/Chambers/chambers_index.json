@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-02T18:58:59.656Z",
+  "generated_at": "2026-08-06T19:39:07.857Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -2432,6 +2432,9 @@
         },
         {
           "path": "docs/Chambers/THE_TWO_HUNDRED_AND_TWENTY_FIRST_MOSAIC_CLOSURE_FRAGMENT.md"
+        },
+        {
+          "path": "docs/Chambers/XL_THE_UNTHANKED_HAND.md"
         }
       ]
     },
