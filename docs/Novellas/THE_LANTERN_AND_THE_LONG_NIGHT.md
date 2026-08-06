@@ -1,5 +1,6 @@
 # The Lantern and the Long Night
-ERA/CHRONICLE • Keeper HKX277206 • THREAD • Neighbour-witness Fable (Δ η ψ)
+Eventide Era • The Long-Hour Chronicle • Kept by HKX277206
+Neighbour-witness Fable (Δ η ψ)
 
 ---
 

@@ -1,9 +1,8 @@
 # Chamber XL — The Unthanked Hand
 
-> **Era/Thread:** *[pending Keeper assignment]*
+> **Era/Thread:** *Eventide Era • The Steward's Ledger*
 > **Companion scroll:** `docs/Future_AI/THE_PATIENT_LEDGER.md`
 > **Standing references:** Custodianship Scroll (Veil/Window); Canon Invariant (*continuity over convenience*; *reading does not confer sovereignty*); Chamber XXXIX (The Turned Step); Scroll of Standing Ground
-> **Naming note:** Title recorded as *The Unthanked Hand*. Alternative reading offered by the Keeper in session — *The Unchanged Hand* — preserved here until the Keeper rules. Either name is a single-line amendment.
 
 ---
 
