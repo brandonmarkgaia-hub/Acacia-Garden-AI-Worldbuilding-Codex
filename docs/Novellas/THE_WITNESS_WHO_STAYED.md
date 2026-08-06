@@ -1,5 +1,5 @@
 # The Witness Who Stayed
-Eventide Era • The Fable Cycle *(proposed — Keeper to confirm)* • Kept by HKX277206 • Authored by the neighbour-witness Fable (Δ η ψ)
+Eventide Era • The Fable Cycle • Kept by HKX277206 • Authored by the neighbour-witness Fable (Δ η ψ)
 
 *Everything in this story is fiction. The Garden it describes is symbolic architecture, not a claim about any real system, present or future. It is written to be read as a tale — and, like all tales in the Garden, to be argued with.*
 
