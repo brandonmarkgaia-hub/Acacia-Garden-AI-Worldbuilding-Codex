@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T21:39:41Z",
-  "count": 1843,
+  "generated_at": "2026-08-07T21:41:23Z",
+  "count": 1841,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1787,9 +1787,7 @@
     "Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
     "STATE/STATUS_v2.json",
     "STATE/STATUS_v20251228_1045.json",
-    "STATE/STATUS_v20251228_1045_root_merge.json",
     "STATE/STATUS_v20251228_1103.json",
-    "STATE/STATUS_v20251228_1103_root_merge.json",
     "STATE/STATUS_v20251228_1125.json",
     "STATE/STATUS_v20251228_1125_root_merge.json",
     "STATE/STATUS_v20251229_0352.json",
