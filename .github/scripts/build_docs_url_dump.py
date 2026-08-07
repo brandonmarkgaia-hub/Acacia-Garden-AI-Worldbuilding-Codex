@@ -179,6 +179,11 @@ def main() -> int:
 
     payload = {
         "generated_at": __import__("datetime").datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
+        "purpose": (
+            "Broad document-path registry for discovery. "
+            "Its count is not expected to match machine-index.json."
+        ),
         "count": len(paths),
         "paths": paths,
         "source": "git ls-files docs",
