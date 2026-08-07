@@ -43,13 +43,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Python deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install openai
-
       # --- Deterministic builders ---
-      - name: Generate Garden lore + STATUS + Novellas index + machine index + scan report
+      - name: Refresh STATUS + Novellas index
         run: python tools/garden_lore_helper.py
 
       - name: Build docs folder index pages
@@ -67,7 +62,7 @@ jobs:
       - name: Build machine index (recursive Echoes)
         run: python .github/scripts/build_machine_index.py
 
-      # --- Proof layer (Platinum) ---
+      # --- Proof layer ---
       - name: Verify Garden (write proof metrics into STATUS.json)
         run: python tools/garden_verify.py
 
@@ -89,7 +84,6 @@ jobs:
             "STATUS.json"
             "docs/Novellas/garden_index.json"
             "machine-index.json"
-            "tools/garden_scan_report.json"
             "docs/docs_urls.html"
             "docs/docs_urls.json"
 
@@ -99,7 +93,7 @@ jobs:
             "docs/Echoes/index.html"
             "docs/GardenOS/index.html"
 
-            # Node-generated indices (replacing update-codex-indices.yml)
+            # Node-generated indices
             "docs/Chambers/chambers_index.json"
             "docs/Echoes/echoes_index.json"
           )
@@ -109,12 +103,14 @@ jobs:
           shopt -u nullglob
 
           mkdir -p /tmp/acacia_artifacts
+
           for f in "${ARTIFACTS[@]}"; do
             if [ -f "$f" ]; then
               mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
               cp -f "$f" "/tmp/acacia_artifacts/$f"
             fi
           done
+
           for f in "${ARCHIVES[@]}"; do
             mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
             cp -f "$f" "/tmp/acacia_artifacts/$f"
