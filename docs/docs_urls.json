@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T20:00:22Z",
-  "count": 1863,
+  "generated_at": "2026-08-07T20:02:48Z",
+  "count": 1862,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1852,7 +1852,6 @@
     "dashboard.md",
     "docs_urls.html",
     "docs_urls.json",
-    "docs_urls.txt",
     "echoes.md",
     "index.html",
     "index.md",
