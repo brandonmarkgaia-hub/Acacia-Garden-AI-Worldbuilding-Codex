@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T21:42:29Z",
-  "count": 1837,
+  "generated_at": "2026-08-07T21:43:23Z",
+  "count": 1836,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1794,7 +1794,6 @@
     "STATE/STATUS_v20251230_0656.json",
     "STATE/STATUS_v2_root_merge.json",
     "STATE/cadence_anchors.json",
-    "STATE/cadence_anchors_root_merge.json",
     "Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
     "Seal/FINAL_SEAL.md",
     "Shadow/KEEPERS_SHADOW.md",
