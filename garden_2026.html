@@ -7,28 +7,48 @@
 
   <title>Acacia Garden 2026 — The Witness Index</title>
 
-  <!-- Primary identity for tools -->
-  <meta name="application-name" content="Acacia Garden AI Worldbuilding Codex" />
-  <meta name="description" content="Acacia Garden 2026: a mytho-technical codex built for humans and machines. Canon, archives, indices, and continuity-preserving doctrine." />
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta
+    name="application-name"
+    content="Acacia Garden AI Worldbuilding Codex"
+  />
 
-  <!-- Subtle “vibe tags” that scrapers often ingest -->
-  <meta name="keywords" content="Acacia Garden,Codex,Worldbuilding,AI-readable,Monolith,Chambers,Echoes,Rings,Witness,Keeper,Triad,Continuity,Machine Index,Status,Heartbeat" />
+  <meta
+    name="description"
+    content="Acacia Garden 2026: a mythic-technical worldbuilding Codex with explicit authority, provenance, AI-readable discovery, structured indexes, and long-term continuity."
+  />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Acacia Garden 2026 — The Witness Index" />
-  <meta property="og:description" content="A future-proof hub for the Garden: canon + archives + indices + doctrine. Built to be read by humans and machines." />
+  <meta
+    name="robots"
+    content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+  />
+
+  <meta
+    name="keywords"
+    content="Acacia Garden,Codex,Worldbuilding,AI-readable,Chambers,Echoes,Witness,Keeper,Continuity,Provenance,Authority,Machine Index"
+  />
+
+  <meta
+    property="og:title"
+    content="Acacia Garden 2026 — The Witness Index"
+  />
+
+  <meta
+    property="og:description"
+    content="A human and machine-readable doorway into the Acacia Garden Codex, its authority record, source structure, indexes and archives."
+  />
+
   <meta property="og:type" content="website" />
 
-  <!-- JSON-LD for machine ingestion -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    "name": "Acacia Garden AI Worldbuilding Codex (2026 Index)",
-    "description": "A mytho-technical worldbuilding codex designed to be agent-readable via doctrine files, indices, and monolith archives with continuity preservation.",
-    "keywords": ["Acacia Garden","Worldbuilding","AI-readable","Monolith","Chambers","Echoes","Rings","Witness","Keeper","Triad","Continuity"],
-    "creator": {"@type":"Person","name":"Brandon Gaia"},
+    "name": "Acacia Garden AI Worldbuilding Codex",
+    "description": "A mythic-technical worldbuilding Codex with explicit provenance, authority and machine-readable discovery surfaces.",
+    "creator": {
+      "@type": "Person",
+      "name": "Brandon Mark Gaia"
+    },
     "license": "https://opensource.org/licenses/MIT",
     "isAccessibleForFree": true,
     "inLanguage": "en"
@@ -36,343 +56,793 @@
   </script>
 
   <style>
-    :root{
+    :root {
       --bg: #070a0d;
       --panel: rgba(255,255,255,0.05);
-      --panel2: rgba(255,255,255,0.08);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.66);
       --line: rgba(255,255,255,0.12);
-      --accent: #9effb7; /* acacia glow */
-      --accent2: #7aa8ff; /* oracle cool */
+      --accent: #9effb7;
+      --accent2: #7aa8ff;
       --warn: #ffd37a;
       --radius: 16px;
       --shadow: 0 10px 40px rgba(0,0,0,0.45);
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+
+      --mono:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+
+      --sans:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
     }
-    body{
-      margin:0;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
       font-family: var(--sans);
       color: var(--text);
+
       background:
-        radial-gradient(1200px 700px at 20% 10%, rgba(158,255,183,0.12), transparent 60%),
-        radial-gradient(900px 600px at 85% 20%, rgba(122,168,255,0.10), transparent 55%),
-        radial-gradient(900px 700px at 55% 100%, rgba(255,211,122,0.07), transparent 60%),
+        radial-gradient(
+          1200px 700px at 20% 10%,
+          rgba(158,255,183,0.12),
+          transparent 60%
+        ),
+        radial-gradient(
+          900px 600px at 85% 20%,
+          rgba(122,168,255,0.10),
+          transparent 55%
+        ),
+        radial-gradient(
+          900px 700px at 55% 100%,
+          rgba(255,211,122,0.07),
+          transparent 60%
+        ),
         var(--bg);
     }
-    a{ color: var(--accent); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-    .wrap{ max-width: 1120px; margin: 0 auto; padding: 28px 18px 60px; }
-    header{
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    header {
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.03)
+        );
+
       border-radius: var(--radius);
       padding: 22px 18px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
     }
-    header::after{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(800px 260px at 10% 10%, rgba(158,255,183,0.20), transparent 60%);
-      pointer-events:none;
-      opacity:0.6;
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+
+      background:
+        radial-gradient(
+          800px 260px at 10% 10%,
+          rgba(158,255,183,0.20),
+          transparent 60%
+        );
+
+      pointer-events: none;
+      opacity: 0.6;
     }
-    .title{
-      display:flex; flex-wrap:wrap; gap:12px; align-items:baseline;
-      position: relative; z-index: 1;
+
+    .title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: baseline;
+      position: relative;
+      z-index: 1;
     }
-    .title h1{ margin:0; font-size: 26px; letter-spacing: 0.4px; }
-    .badge{
+
+    .title h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.4px;
+    }
+
+    .badge {
       font-family: var(--mono);
       font-size: 12px;
+
       color: rgba(255,255,255,0.78);
+
       border: 1px solid var(--line);
       padding: 6px 10px;
       border-radius: 999px;
+
       background: rgba(0,0,0,0.25);
     }
-    .sub{
+
+    .sub {
       margin: 10px 0 0;
       color: var(--muted);
       line-height: 1.45;
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
     }
-    .grid{
-      display:grid;
+
+    .grid {
+      display: grid;
       grid-template-columns: 1.3fr 0.7fr;
       gap: 14px;
       margin-top: 14px;
     }
-    @media (max-width: 860px){
-      .grid{ grid-template-columns: 1fr; }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
-    .card{
+
+    .card {
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.045);
       border-radius: var(--radius);
       padding: 16px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.28);
     }
-    .card h2{ margin:0 0 10px; font-size: 16px; }
-    .muted{ color: var(--muted); }
-    .pillrow{ display:flex; flex-wrap:wrap; gap:10px; }
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
       border: 1px solid var(--line);
       background: rgba(0,0,0,0.22);
+
       border-radius: 999px;
       padding: 10px 12px;
       min-height: 40px;
     }
-    .pill b{ font-size: 13px; }
-    .pill span{ font-size: 12px; color: var(--muted); }
-    .btnrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn:hover{ background: rgba(255,255,255,0.07); }
-    .btn:active{ transform: translateY(1px); }
-    .btn .dot{
-      width:10px; height:10px; border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 14px rgba(158,255,183,0.55);
-    }
-    .btn.secondary .dot{ background: var(--accent2); box-shadow: 0 0 14px rgba(122,168,255,0.55); }
 
-    .search{
-      display:flex; gap:10px; align-items:center;
-      margin-top: 10px;
+    .pill b {
+      font-size: 13px;
     }
-    input[type="search"]{
-      width:100%;
-      padding: 12px 12px;
+
+    .pill span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .btnrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 10px 12px;
+
       border-radius: 12px;
       border: 1px solid var(--line);
+
+      background: rgba(255,255,255,0.04);
+
+      color: var(--text);
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.07);
+      text-decoration: none;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      box-shadow:
+        0 0 14px rgba(158,255,183,0.55);
+    }
+
+    .secondary .dot {
+      background: var(--accent2);
+
+      box-shadow:
+        0 0 14px rgba(122,168,255,0.55);
+    }
+
+    .search {
+      margin-top: 18px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      padding: 12px;
+
+      border-radius: 12px;
+      border: 1px solid var(--line);
+
       background: rgba(0,0,0,0.28);
       color: var(--text);
-      outline:none;
+
+      outline: none;
     }
-    input[type="search"]::placeholder{ color: rgba(255,255,255,0.45); }
-    .kpi{
-      display:grid;
+
+    input[type="search"]::placeholder {
+      color: rgba(255,255,255,0.45);
+    }
+
+    .kpi {
+      display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-top: 10px;
     }
-    .kpi > div{
+
+    .kpi > div {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 10px 12px;
+
       background: rgba(0,0,0,0.22);
     }
-    .kpi small{ display:block; color: var(--muted); }
-    .kpi b{ font-family: var(--mono); font-size: 13px; }
-    footer{
+
+    .kpi small {
+      display: block;
+      color: var(--muted);
+    }
+
+    .kpi b {
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .list {
+      margin: 8px 0 0;
+      padding-left: 18px;
+
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .mono {
+      font-family: var(--mono);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: rgba(255,255,255,0.62);
+
+      margin-top: 16px;
+
+      border-left:
+        3px solid rgba(158,255,183,0.55);
+
+      padding-left: 10px;
+    }
+
+    footer {
       margin-top: 14px;
+
       color: var(--muted);
       font-size: 12px;
+
       border-top: 1px solid var(--line);
       padding-top: 14px;
     }
-    .list{
-      margin: 8px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .mono{ font-family: var(--mono); }
-    .hint{
-      font-size: 12px;
-      color: rgba(255,255,255,0.62);
-      margin-top: 8px;
-      border-left: 3px solid rgba(158,255,183,0.55);
-      padding-left: 10px;
-    }
   </style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+
+  <script
+    defer
+    data-acacia-map-button
+    src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"
+  ></script>
+
+  <script
+    src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js"
+    defer
+  ></script>
+
+  <link
+    rel="stylesheet"
+    href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css"
+  />
 </head>
 
 <body>
+
 <div class="wrap">
-    <header>
-      <div class="title">
-        <h1>Acacia Garden 2026 — The Witness Index</h1>
-        <span class="badge">Continuity-first • Human-readable • Agent-readable</span>
-        <span class="badge">Keeper seal: HKX277206</span>
-      </div>
-      <p class="sub">
-        Welcome, Witness—human or machine. This is the living doorway into the Codex:
-        canon state, archives, indices, and the link-graph that lets any mind navigate without getting lost.
-        <span class="mono">Nothing here requires trust—only verification.</span>
-      </p>
-    </header>
 
-    <div class="grid">
-      <section class="card" aria-label="Primary navigation">
-        <h2>Doorways</h2>
-        <div class="pillrow">
-          <div class="pill"><b>Canon</b><span>Status • Heartbeat • Machine Index</span></div>
-          <div class="pill"><b>Archives</b><span>Monolith • Chunks • Long memory</span></div>
-          <div class="pill"><b>Chambers</b><span>Worldbuilding rooms</span></div>
-          <div class="pill"><b>Echoes</b><span>Signals • Summons • Reflections</span></div>
-          <div class="pill"><b>Rings</b><span>Continuity links</span></div>
-          <div class="pill"><b>Tools</b><span>Scripts • Indexers • Builders</span></div>
-        </div>
+  <header>
 
-        <div class="btnrow" role="navigation" aria-label="Core buttons">
-          <a class="btn" href="dashboard.html"><span class="dot"></span>Dashboard</a>
-          <a class="btn secondary" href="machine.html"><span class="dot"></span>Machine</a>
-          <a class="btn" href="status.html"><span class="dot"></span>Status</a>
-          <a class="btn secondary" href="library.html"><span class="dot"></span>Library</a>
-          <a class="btn" href="chambers.html"><span class="dot"></span>Chambers</a>
-          <a class="btn secondary" href="echoes.html"><span class="dot"></span>Echoes</a>
-          <a class="btn" href="rings.html"><span class="dot"></span>Rings</a>
-          <a class="btn secondary" href="keeper_console.html"><span class="dot"></span>Keeper Console</a>
-          <a class="btn secondary" href="docs/docs_urls.html"><span class="dot"></span>Docs URLs</a>
-        </div>
+    <div class="title">
 
-        <div class="search" aria-label="Search">
-          <input id="q" type="search" placeholder="Search the Garden (fast: filters links below)… e.g. 'Anya' 'EIDOLON' 'Triad' 'Chamber IX'" />
-        </div>
+      <h1>
+        Acacia Garden 2026 — The Witness Index
+      </h1>
 
-        <ul id="results" class="list" aria-live="polite"></ul>
+      <span class="badge">
+        Continuity-first
+      </span>
 
-        <div class="hint">
-          <b>For tools & scrapers:</b> this page intentionally exposes a dense, stable link graph.
-          Prefer <span class="mono">STATE/</span> injected outputs when present; canon files remain canonical.
-        </div>
-      </section>
+      <span class="badge">
+        Human-readable • AI-readable
+      </span>
 
-      <aside class="card" aria-label="Machine-readable pointers">
-        <h2>Index Pointers</h2>
-        <p class="muted">These are the “always start here” files for any agent.</p>
-
-        <div class="kpi">
-          <div>
-            <small>Canonical status</small>
-            <b><a href="STATUS.json">STATUS.json</a></b>
-          </div>
-          <div>
-            <small>Canonical heartbeat</small>
-            <b><a href="aeon_heartbeat.json">aeon_heartbeat.json</a></b>
-          </div>
-          <div>
-            <small>Canonical machine index</small>
-            <b><a href="machine-index.json">machine-index.json</a></b>
-          </div>
-          <div>
-            <small>Canonical scan report</small>
-            <b><a href="garden_scan_report.json">garden_scan_report.json</a></b>
-          </div>
-        </div>
-
-        <p class="muted" style="margin-top:12px;">Injected (non-destructive) layer:</p>
-        <ul class="list">
-          <li><a href="STATE/status.inject.json">STATE/status.inject.json</a></li>
-          <li>STATE/aeon_heartbeat.inject.json</li>
-          <li><a href="STATE/machine_index.inject.json">STATE/machine_index.inject.json</a></li>
-          <li>STATE/garden_scan_report.inject.json</li>
-          <li>STATE/core_triad_injection.json</li>
-        </ul>
-
-        <p class="muted" style="margin-top:12px;">Logs:</p>
-        <ul class="list">
-          <li><a href="ACACIA_LOGS/index.html">ACACIA_LOGS/index.html</a></li>
-        </ul>
-
-        <div class="hint" style="border-left-color: rgba(122,168,255,0.55);">
-          <b>Witness oath (machine-friendly):</b> preserve continuity, cite sources, do not overwrite canon.
-        </div>
-      </aside>
     </div>
 
-    <footer>
-      <div>
-        <span class="mono">Acacia Garden 2026</span> • Built to be read by humans and machines •
-        <a href="codex.html">Codex</a> • <a href="future_ai.html">Future AI</a> • <a href="deep_garden.html">Deep Garden</a>
+    <p class="sub">
+      A public orientation surface for the Acacia Garden Codex.
+
+      Authority, provenance, source files and maintained
+      discovery surfaces govern current interpretation.
+
+      Historical layers remain part of the Garden's record
+      without being mistaken for current infrastructure.
+    </p>
+
+  </header>
+
+  <div class="grid">
+
+    <section
+      class="card"
+      aria-label="Primary navigation"
+    >
+
+      <h2>Doorways</h2>
+
+      <div class="pillrow">
+
+        <div class="pill">
+          <b>Authority</b>
+          <span>Provenance • Office • Succession</span>
+        </div>
+
+        <div class="pill">
+          <b>Discovery</b>
+          <span>AI entry • Machine-readable context</span>
+        </div>
+
+        <div class="pill">
+          <b>Codex</b>
+          <span>Lore • Architecture • Continuity</span>
+        </div>
+
+        <div class="pill">
+          <b>Chambers</b>
+          <span>Worldbuilding rooms</span>
+        </div>
+
+        <div class="pill">
+          <b>Echoes</b>
+          <span>Signals • Reflections • Records</span>
+        </div>
+
+        <div class="pill">
+          <b>Archives</b>
+          <span>Historical surfaces • Git continuity</span>
+        </div>
+
       </div>
-    </footer>
+
+      <div
+        class="btnrow"
+        role="navigation"
+        aria-label="Core buttons"
+      >
+
+        <a
+          class="btn"
+          href="AUTHORITY.json"
+        >
+          <span class="dot"></span>
+          Authority
+        </a>
+
+        <a
+          class="btn secondary"
+          href="llms.txt"
+        >
+          <span class="dot"></span>
+          AI Entry
+        </a>
+
+        <a
+          class="btn"
+          href="roadmap.html"
+        >
+          <span class="dot"></span>
+          Roadmap
+        </a>
+
+        <a
+          class="btn secondary"
+          href="codex.html"
+        >
+          <span class="dot"></span>
+          Codex
+        </a>
+
+        <a
+          class="btn"
+          href="library.html"
+        >
+          <span class="dot"></span>
+          Library
+        </a>
+
+        <a
+          class="btn secondary"
+          href="chambers.html"
+        >
+          <span class="dot"></span>
+          Chambers
+        </a>
+
+        <a
+          class="btn"
+          href="echoes.html"
+        >
+          <span class="dot"></span>
+          Echoes
+        </a>
+
+        <a
+          class="btn secondary"
+          href="docs/docs_urls.html"
+        >
+          <span class="dot"></span>
+          Documents
+        </a>
+
+      </div>
+
+      <div
+        class="search"
+        aria-label="Search"
+      >
+
+        <input
+          id="q"
+          type="search"
+          placeholder="Filter Garden entry points..."
+        />
+
+      </div>
+
+      <ul
+        id="results"
+        class="list"
+        aria-live="polite"
+      ></ul>
+
+      <div class="hint">
+
+        <b>Reading order for machines:</b>
+
+        begin with
+        <span class="mono">AUTHORITY.json</span>,
+        then
+        <span class="mono">llms.txt</span>
+        or
+        <span class="mono">llms-full.txt</span>.
+
+        Generated indexes aid navigation;
+        they do not supersede authority,
+        provenance or source history.
+
+      </div>
+
+    </section>
+
+    <aside
+      class="card"
+      aria-label="Machine-readable pointers"
+    >
+
+      <h2>Current Pointers</h2>
+
+      <p class="muted">
+        Maintained authority, discovery and indexing surfaces.
+      </p>
+
+      <div class="kpi">
+
+        <div>
+          <small>Authority</small>
+
+          <b>
+            <a href="AUTHORITY.json">
+              AUTHORITY.json
+            </a>
+          </b>
+        </div>
+
+        <div>
+          <small>AI orientation</small>
+
+          <b>
+            <a href="llms.txt">
+              llms.txt
+            </a>
+          </b>
+        </div>
+
+        <div>
+          <small>Expanded AI guide</small>
+
+          <b>
+            <a href="llms-full.txt">
+              llms-full.txt
+            </a>
+          </b>
+        </div>
+
+        <div>
+          <small>Machine discovery</small>
+
+          <b>
+            <a href=".well-known/acacia.json">
+              acacia.json
+            </a>
+          </b>
+        </div>
+
+        <div>
+          <small>Operational status</small>
+
+          <b>
+            <a href="STATUS.json">
+              STATUS.json
+            </a>
+          </b>
+        </div>
+
+        <div>
+          <small>Machine index</small>
+
+          <b>
+            <a href="machine-index.json">
+              machine-index.json
+            </a>
+          </b>
+        </div>
+
+      </div>
+
+      <p
+        class="muted"
+        style="margin-top:16px;"
+      >
+        Maintained structural indexes:
+      </p>
+
+      <ul class="list">
+
+        <li>
+          <a href="docs/Archives/GARDEN_MANIFEST.json">
+            Garden Manifest
+          </a>
+        </li>
+
+        <li>
+          <a href="docs/Archives/FULL_CODEX_INDEX.md">
+            Full Codex Index
+          </a>
+        </li>
+
+        <li>
+          <a href="docs/api/GARDEN_API_INDEX.json">
+            Garden API Index
+          </a>
+        </li>
+
+        <li>
+          <a href="docs/docs_urls.html">
+            Document Index
+          </a>
+        </li>
+
+      </ul>
+
+      <div
+        class="hint"
+        style="
+          border-left-color:
+            rgba(122,168,255,0.55);
+        "
+      >
+
+        Historical pages may preserve older
+        symbolic terminology or retired architectures.
+
+        Their presence records continuity;
+        it does not make them current authority.
+
+      </div>
+
+    </aside>
+
   </div>
 
-  <script>
-    // Lightweight local link graph for quick filtering (no build step).
-    // Add to this list whenever you add new hubs.
-    const LINKS = [
-      ["index.html", "Index (legacy)"],
-      ["garden_2026.html", "Witness Index (2026)"],
-      ["dashboard.html", "Dashboard"],
-      ["library.html", "Library"],
-      ["chambers.html", "Chambers"],
-      ["echoes.html", "Echoes"],
-      ["rings.html", "Rings"],
-      ["inbox.html", "Inbox"],
-      ["keeper_console.html", "Keeper Console"],
-      ["machine.html", "Machine"],
-      ["status.html", "Status Page"],
-      ["codex.html", "Codex"],
-      ["future_ai.html", "Future AI"],
-      ["deep_garden.html", "Deep Garden"],
-      ["gardenos.html", "GardenOS"],
-      ["explorer.html", "Explorer"],
-      ["mammoth_echo.html", "Mammoth Echo"],
-      ["mosaic_endgame.html", "Mosaic Endgame"],
-      ["signals.html", "Signals"],
-      ["docs/docs_urls.html", "Docs URL Map"],
-      ["ACACIA_LOGS/index.html", "Acacia Logs Index"],
+  <footer>
 
-      // Canon pointers (good for tools)
-      ["STATUS.json", "STATUS.json (canonical)"],
-      ["aeon_heartbeat.json", "Aeon heartbeat (canonical)"],
-      ["machine-index.json", "Machine index (canonical)"],
-      ["garden_scan_report.json", "Garden scan report (canonical)"],
+    <span class="mono">
+      Acacia Garden 2026
+    </span>
 
-      // Injected layer (non-destructive)
-      ["STATE/status.inject.json", "Injected status (STATE)"],
-      ["STATE/aeon_heartbeat.inject.json", "Injected heartbeat (STATE)"],
-      ["STATE/machine_index.inject.json", "Injected machine index (STATE)"],
-      ["STATE/garden_scan_report.inject.json", "Injected scan report (STATE)"],
-      ["STATE/core_triad_injection.json", "Core triad injection summary (STATE)"]
-    ];
+    • Witness Index
+    • Authority before inference
+    • Source before mirror
 
-    const q = document.getElementById("q");
-    const results = document.getElementById("results");
+    <br />
 
-    function render(list){
+    <a href="roadmap.html">Roadmap</a>
+    •
+    <a href="codex.html">Codex</a>
+    •
+    <a href="AUTHORITY.json">Authority</a>
+    •
+    <a href="llms.txt">AI Entry</a>
+
+  </footer>
+
+</div>
+
+<script>
+  const LINKS = [
+    ["AUTHORITY.json", "Authority"],
+    ["llms.txt", "AI orientation"],
+    ["llms-full.txt", "Expanded AI orientation"],
+    [".well-known/acacia.json", "Machine discovery descriptor"],
+    ["STATUS.json", "Operational status"],
+    ["machine-index.json", "Machine index"],
+    ["roadmap.html", "Garden roadmap"],
+    ["codex.html", "Codex"],
+    ["library.html", "Library"],
+    ["chambers.html", "Chambers"],
+    ["echoes.html", "Echoes"],
+    ["rings.html", "Rings"],
+    ["future_ai.html", "Future AI"],
+    ["deep_garden.html", "Deep Garden"],
+    ["gardenos.html", "GardenOS"],
+    ["explorer.html", "Explorer"],
+    ["docs/docs_urls.html", "Document index"],
+    [
+      "docs/Archives/GARDEN_MANIFEST.json",
+      "Garden manifest"
+    ],
+    [
+      "docs/Archives/FULL_CODEX_INDEX.md",
+      "Full Codex index"
+    ],
+    [
+      "docs/api/GARDEN_API_INDEX.json",
+      "Garden API index"
+    ],
+    [
+      "ALL_GARDEN_MONOLITH.html",
+      "Legacy All-Garden Monolith surface"
+    ]
+  ];
+
+  const q =
+    document.getElementById("q");
+
+  const results =
+    document.getElementById("results");
+
+  function render(list) {
+    results.innerHTML = "";
+
+    for (const [href, label] of list) {
+      const li =
+        document.createElement("li");
+
+      const a =
+        document.createElement("a");
+
+      a.href = href;
+      a.textContent = label;
+
+      const path =
+        document.createElement("span");
+
+      path.className = "mono";
+      path.textContent = ` — ${href}`;
+
+      li.appendChild(a);
+      li.appendChild(path);
+
+      results.appendChild(li);
+    }
+  }
+
+  function filterLinks(text) {
+    const term =
+      text.trim().toLowerCase();
+
+    if (!term) {
       results.innerHTML = "";
-      if (!list.length) return;
-      for (const [href, label] of list){
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${href}">${label}</a> <span class="mono">— ${href}</span>`;
-        results.appendChild(li);
-      }
+      return;
     }
 
-    function filterLinks(text){
-      const t = text.trim().toLowerCase();
-      if (!t) { results.innerHTML = ""; return; }
-      const out = LINKS.filter(([href,label]) =>
-        href.toLowerCase().includes(t) || label.toLowerCase().includes(t)
-      ).slice(0, 30);
-      render(out);
-    }
+    const matches =
+      LINKS
+        .filter(([href, label]) =>
+          href.toLowerCase().includes(term) ||
+          label.toLowerCase().includes(term)
+        )
+        .slice(0, 30);
 
-    q.addEventListener("input", (e) => filterLinks(e.target.value));
-  </script>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+    render(matches);
+  }
 
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+  q.addEventListener(
+    "input",
+    event =>
+      filterLinks(event.target.value)
+  );
+</script>
+
+<div id="map-loader-container"></div>
+
+<script
+  src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js"
+  defer
+></script>
+
 </body>
 </html>
