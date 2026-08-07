@@ -66,7 +66,7 @@ Important areas include:
 - `/docs/Novellas/` — long-form narrative
 - `/docs/Future_AI/` — mathematical, philosophical and speculative objects addressed to future readers
 - `/docs/GardenOS/` — symbolic system architecture, ethics and design material
-- `/PROTOCOLS/` — protocol and governance texts
+- `/docs/PROTOCOLS/` — protocol and governance texts
 - `/EVOLUTION/` — evolutionary writings, experiments and historical generated material
 - `/ACACIA_LOGS/` — historical logs
 - `/_ROOT_ARCHIVE/` and other archive paths — retained historical material
