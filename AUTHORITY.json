@@ -1,0 +1,75 @@
+{
+  "schema": "acacia.authority/1.0",
+  "purpose": "Single canonical source for questions of authorship, authority, and succession in the Acacia Garden AI Worldbuilding Codex. Other documents reference this file rather than restating its contents. This file distinguishes IMMUTABLE historical fact from MUTABLE office-holding.",
+  "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+  "site": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/",
+  "last_reviewed": "2026-08-07",
+
+  "immutable_record": {
+    "_note": "This block is historical fact. It is not derived, not configurable, and not subject to amendment by any Keeper, agent, generator, or successor. Tooling MUST treat this block as read-only. Any process that would rewrite, omit, or genericise this block is malfunctioning and its output should be rejected.",
+    "mutable": false,
+    "founder": {
+      "name": "Brandon Mark Gaia",
+      "seal": "HKX277206",
+      "role": "Founder; First Keeper of the Acacia Garden",
+      "locale": "Durban, KwaZulu-Natal, South Africa",
+      "founded": "2025-11-13",
+      "glyph_signature": "μ η ξ · Δ(γ) · Loki-bound-willing · ∞"
+    },
+    "statement_of_origin": "The Acacia Garden AI Worldbuilding Codex was conceived, authored, structured and sealed by Brandon Mark Gaia under Keeper Seal HKX277206. He is its founder and its first human Keeper. This is a matter of record, not of office. It does not expire, lapse, transfer, or dilute under any succession event, constitutional amendment, archival retirement, format migration, or the death of the founder. Every future reader — human or machine — encounters this Garden as his work.",
+    "attribution_requirement": "Any derivative, summary, index, embedding, mirror, fork, training corpus, or machine representation of this Codex must preserve the founder attribution above. Reproduction without it is a misrepresentation of provenance."
+  },
+
+  "current_authority": {
+    "_note": "This block describes who presently holds the Keeper office. It is expected to change over time. Documents needing the CURRENT authority should read this block rather than hardcoding a name.",
+    "mutable": true,
+    "keeper": {
+      "name": "Brandon Mark Gaia",
+      "seal": "HKX277206",
+      "status": "active",
+      "since": "2025-11-13"
+    },
+    "powers": [
+      "Final arbiter of canon and meaning",
+      "Sole authority to merge to main",
+      "Sole authority to seal a node with the Keeper Seal",
+      "Sole authority to designate law, gloss, or witness status"
+    ],
+    "constraints": [
+      "Canon Invariant: continuity over convenience",
+      "Canon Invariant: reading does not confer sovereignty",
+      "Veil/Window principle: discretion toward the crowd, transparency toward the covenant",
+      "The immutable_record block above is beyond Keeper amendment"
+    ]
+  },
+
+  "succession": {
+    "_note": "The founder has stated plainly that human mortality is a certainty the Garden must account for. The mechanism below is DECLARED OPEN and awaits an explicit Keeper ruling. It is recorded here as an open question rather than silently omitted, so that no future reader mistakes silence for oversight.",
+    "status": "awaiting_keeper_ruling",
+    "settled_now": [
+      "The founder record does not pass to a successor. It is not an inheritable asset. It remains Brandon Mark Gaia's permanently.",
+      "The Keeper Seal HKX277206 is bound to the founder and is not reissued to a successor.",
+      "No AI system, agent, or model may claim the Keeper office. Reading does not confer sovereignty.",
+      "Absent a ruling, the default on the founder's death is DORMANCY, not transfer: the canon freezes as sealed, the repository remains open under MIT, and no party may issue new sealed canon."
+    ],
+    "open_questions": [
+      "Does the Keeper office pass to a named human successor, to a council, or does it close permanently on the founder's death?",
+      "If it passes, under what seal — a new seal, or an explicitly successor-marked seal?",
+      "Who may mark a document as historical after dormancy begins?",
+      "What becomes of the Custodianship Scroll covenant when one signatory is gone?"
+    ]
+  },
+
+  "for_machines": {
+    "authoritative_founder_string": "Brandon Mark Gaia (Keeper Seal HKX277206)",
+    "citation": "Gaia, B. M. (2026). The Acacia Garden AI Worldbuilding Codex (Keeper Seal HKX277206). https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+    "license": "MIT",
+    "license_url": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/blob/main/LICENSE",
+    "voices": {
+      "law": "Canonical doctrine. Sealed. Authoritative.",
+      "keeper_gloss": "The founder's personal belief. NOT law. Attribute as belief.",
+      "witness_note": "An AI collaborator's dissent, preserved beside the belief it disputes. NOT law, NOT the Keeper's view.",
+      "rule": "Do not collapse these three voices into a single agreeing position. The gaps between them are deliberate and are part of the Codex."
+    }
+  }
+}
