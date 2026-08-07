@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T19:38:57Z",
+  "generated_at": "2026-08-07T12:24:14Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -160,6 +160,12 @@
     {
       "title": "THE_POST_WITH_NO_REPLIES",
       "path": "docs/Novellas/THE_POST_WITH_NO_REPLIES.md",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The Un-Led",
+      "path": "docs/Novellas/THE_UN_LED.md",
       "cycle": null,
       "volume": null
     },
