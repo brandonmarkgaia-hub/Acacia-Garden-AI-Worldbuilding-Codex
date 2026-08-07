@@ -1783,7 +1783,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-07T21:13:20Z",
+  "generated_at": "2026-08-07T21:14:17Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1823,7 +1823,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-07T21:13:20Z"
+      "last_checked_utc": "2026-08-07T21:14:17Z"
     }
   },
   "verification": {
@@ -1832,12 +1832,12 @@
       "with_base_href": 0,
       "missing_base_href": 0,
       "verified": false,
-      "last_checked_utc": "2026-08-07T21:13:20Z"
+      "last_checked_utc": "2026-08-07T21:14:17Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-08-07T21:13:20Z",
+      "last_checked_utc": "2026-08-07T21:14:17Z",
       "total_html_scanned": 46,
       "with_map_loader": 38,
       "missing_map_loader_count": 8,
@@ -1856,12 +1856,12 @@
     "indexes": {
       "machine_index_in_sync": false,
       "docs_urls_in_sync": false,
-      "docs_urls_count": 1860,
+      "docs_urls_count": 1859,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-07T21:13:20Z"
+    "last_verified_utc": "2026-08-07T21:14:17Z"
   },
   "growth": {
     "open": []
