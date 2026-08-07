@@ -318,10 +318,7 @@ def make_platinum_minimal(now_iso: str) -> Dict[str, Any]:
                 "folder_indexes_missing": [],
                 "verified": False,
             },
-            "indexes": {
-                "machine_index_in_sync": False,
-                "docs_urls_in_sync": False,
-            },
+            "indexes": {},
         },
         "growth": {
             "open": [],
