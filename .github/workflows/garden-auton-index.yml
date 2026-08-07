@@ -122,7 +122,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
-            rsync -a /tmp/acacia_artifacts/ ./
+            rsync -a --ignore-times /tmp/acacia_artifacts/ ./
 
             git add -A
 
