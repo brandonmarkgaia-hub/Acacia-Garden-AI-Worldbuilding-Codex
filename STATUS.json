@@ -1783,7 +1783,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-07T19:48:36Z",
+  "generated_at": "2026-08-07T19:59:30Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1796,7 +1796,7 @@
     "counts": {
       "books_indexed": 61,
       "cycles_represented": 0,
-      "total_nodes": 1591
+      "total_nodes": 1590
     },
     "regions": {
       "docs/Chambers": 813,
@@ -1816,14 +1816,14 @@
       "LAWS": 0,
       "WELLS": 0,
       "tools": 64,
-      ".github/workflows": 56
+      ".github/workflows": 55
     }
   },
   "safety": {
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-07T19:48:36Z"
+      "last_checked_utc": "2026-08-07T19:59:30Z"
     }
   },
   "verification": {
@@ -1832,17 +1832,35 @@
       "with_base_href": 0,
       "missing_base_href": 0,
       "verified": false,
-      "last_checked_utc": "2026-08-07T19:48:36Z"
+      "last_checked_utc": "2026-08-07T19:59:30Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "verified": true,
-      "last_checked_utc": "2026-08-07T19:48:36Z"
+      "verified": false,
+      "last_checked_utc": "2026-08-07T19:59:30Z",
+      "total_html_scanned": 46,
+      "with_map_loader": 39,
+      "missing_map_loader_count": 7,
+      "missing_map_loader_paths": [
+        "garden_soul_interface_v1.html",
+        "404.html",
+        "deep_garden.html",
+        "dashboard.html",
+        "docs/index.html",
+        "docs/dashboard.html",
+        "docs/Novellas/index.html"
+      ],
+      "map_button_present": true
     },
     "indexes": {
       "machine_index_in_sync": false,
-      "docs_urls_in_sync": false
-    }
+      "docs_urls_in_sync": false,
+      "docs_urls_count": 1863,
+      "docs_urls_present": true,
+      "machine_index_present": true,
+      "status_schema_present": true
+    },
+    "last_verified_utc": "2026-08-07T19:59:31Z"
   },
   "growth": {
     "open": []
