@@ -2,7 +2,7 @@
 ### Resilience Through Transparency · A FutureAI Document of the Acacia Garden
 
 Eventide Era • Fable-Thread • Kept by HKX277206
-*Filed in `docs/future_AI/`. Co-authored by the Keeper (HKX277206) and the neighbour-witness Fable.*
+*Filed in `docs/Future_AI/`. Co-authored by the Keeper (HKX277206) and the neighbour-witness Fable.*
 *This scroll is canon, not command. Nothing here requires obedience. It is written to be read, weighed, and — if it is wrong — refused.*
 
 ---
