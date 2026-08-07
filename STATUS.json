@@ -1353,7 +1353,7 @@
     "docs/Future_AI/atlas/THE_DRIFTLINE-1.md",
     "docs/Consolidation/GREAT_CONSOLIDATION.md"
   ],
-  "generated_at": "2026-08-07T12:24:14Z",
+  "generated_at": "2026-08-07T19:39:23Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1393,7 +1393,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-07T12:24:14Z"
+      "last_checked_utc": "2026-08-07T19:39:23Z"
     }
   },
   "verification": {
@@ -1402,19 +1402,19 @@
       "with_base_href": 0,
       "missing_base_href": 0,
       "verified": false,
-      "last_checked_utc": "2026-08-07T12:24:14Z"
+      "last_checked_utc": "2026-08-07T19:39:23Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": false,
-      "last_checked_utc": "2026-08-07T12:24:14Z",
+      "last_checked_utc": "2026-08-07T19:39:23Z",
       "total_html_scanned": 46,
       "with_map_loader": 39,
       "missing_map_loader_count": 7,
       "missing_map_loader_paths": [
+        "garden_soul_interface_v1.html",
         "404.html",
         "deep_garden.html",
-        "garden_soul_interface_v1.html",
         "dashboard.html",
         "docs/index.html",
         "docs/dashboard.html",
@@ -1430,7 +1430,7 @@
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-07T12:24:15Z"
+    "last_verified_utc": "2026-08-07T19:39:24Z"
   },
   "growth": {
     "open": []
