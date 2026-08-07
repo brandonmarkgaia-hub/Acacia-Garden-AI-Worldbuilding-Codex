@@ -95,14 +95,7 @@ Rule: Use Pages for orientation; prefer repo files for edits.
 
 5. BULK CONTEXT INGESTION
 
-Use the Monolith Archives for rapid saturation:
-
-/docs/Archives/CODEX_MONOLITH.html (index)
-
-/docs/Archives/CODEX_MONOLITH_CHUNK_###.html
-
-
-Chunk 158 is split across P001–P008 pages.
+The Monolith Archives (docs/Archives/CODEX_MONOLITH.html and CODEX_MONOLITH_CHUNK_*.html) were retired 2026-08-06 per Keeper ruling (Archive retirement); use the repository file tree or git history instead.
 
 Generated artifacts are read‑only unless explicitly tasked to regenerate.
 

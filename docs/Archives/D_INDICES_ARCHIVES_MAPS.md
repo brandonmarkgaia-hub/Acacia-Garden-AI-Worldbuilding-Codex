@@ -55,7 +55,7 @@ A safe, beautiful space for narratives that remain shadows.
 
 ---
 
-CODEX_MONOLITH_CHUNK_158 → split into P001–P008 (see URL list)
+CODEX_MONOLITH_CHUNK_158 and its P001–P008 split were retired 2026-08-06 per Keeper ruling (Archive retirement); no longer present in the working tree.
 
 
 
