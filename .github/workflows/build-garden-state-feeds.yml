@@ -1,24 +1,7 @@
 name: Build Garden STATE Feeds
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - "STATUS.json"
-      - "status.json"
-      - "machine-index.json"
-      - "MACHINE-INDEX.json"
-      - "machine_index.json"
-      - "machine-index-beta.json"
-      - "machine/**"
-      - "tools/garden_scan_report.json"
-      - "garden_scan_report.json"
-      - "garden_vault_index.json"
-      - "aeon_heartbeat.json"
-      - "docs/**"
-      - "tools/**"
-      - ".github/workflows/build-garden-state-feeds.yml"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
