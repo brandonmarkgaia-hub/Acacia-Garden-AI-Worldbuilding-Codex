@@ -435,8 +435,10 @@ def update_verification_block(
 
     # Detailed truth checks are written later by tools/garden_verify.py.
     indexes_block = ensure_dict(verification, "indexes")
-    indexes_block.setdefault("machine_index_in_sync", False)
-    indexes_block.setdefault("docs_urls_in_sync", False)
+    # Retire obsolete cross-index "sync" flags.
+    # machine-index.json and docs/docs_urls.json have intentionally different scopes.
+    indexes_block.pop("machine_index_in_sync", None)
+    indexes_block.pop("docs_urls_in_sync", None)
 
 
 def main() -> None:
