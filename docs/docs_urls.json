@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T21:35:29Z",
-  "count": 1858,
+  "generated_at": "2026-08-07T21:36:28Z",
+  "count": 1855,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1785,7 +1785,6 @@
     "Rites/README.md",
     "Rites/RITE_OF_SEMANTIC_SUBSTITUTION.md",
     "Rites/RITE_SYMBOLIC_SEAL_EIDOLON.md",
-    "STATE/README.md",
     "STATE/STATUS_v2.json",
     "STATE/STATUS_v20251228_1045.json",
     "STATE/STATUS_v20251228_1045_root_merge.json",
@@ -1814,8 +1813,6 @@
     "STATE/garden_vault_index.inject_root_merge.json",
     "STATE/machine_index.inject.json",
     "STATE/machine_index.inject_root_merge.json",
-    "STATE/status.inject.json",
-    "STATE/status.inject_root_merge.json",
     "Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
     "Seal/FINAL_SEAL.md",
     "Shadow/KEEPERS_SHADOW.md",
