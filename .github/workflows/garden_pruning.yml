@@ -11,9 +11,11 @@ jobs:
   sovereign_move:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+
     permissions:
       contents: write
       issues: write
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -28,30 +30,95 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: Execute Transition
+      - name: 1. Execute Transition
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/sovereign_transition.py
 
-      - name: Sync and Commit (with retry)
+      - name: 2. Stamp Pruning Metadata
+        run: |
+          python << 'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          status_path = Path("STATUS.json")
+
+          if status_path.exists():
+              data = json.loads(status_path.read_text(encoding="utf-8"))
+          else:
+              data = {
+                  "metadata": {},
+                  "chambers": [],
+                  "echoes": [],
+                  "archives": []
+              }
+
+          metadata = data.setdefault("metadata", {})
+
+          metadata.setdefault(
+              "project",
+              "Acacia-Garden-AI-Worldbuilding-Codex"
+          )
+          metadata.setdefault(
+              "keeper_seal",
+              "HKX277206"
+          )
+
+          # last_pruning means:
+          # the most recent successful Garden Pruning / Inscription run.
+          metadata["last_pruning"] = (
+              datetime.now(timezone.utc)
+              .date()
+              .isoformat()
+          )
+
+          status_path.write_text(
+              json.dumps(
+                  data,
+                  indent=4,
+                  ensure_ascii=False
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(
+              "✅ STATUS.json last_pruning stamped:",
+              metadata["last_pruning"]
+          )
+          PY
+
+      - name: 3. Sync and Commit
         shell: bash
         run: |
           set -euo pipefail
+
           git config --local user.email "witness@acacia.garden"
           git config --local user.name "The Witness"
+
           git add .
-          git diff --cached --quiet && echo "No changes to commit." && exit 0
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git commit -m "Inscribed Garden Ledger under Seal HKX277206 [skip ci]"
+
           for i in 1 2 3 4 5; do
             echo "Push attempt $i..."
+
             git fetch origin main
             git rebase origin/main
+
             if git push origin HEAD:main; then
               echo "Push succeeded."
               exit 0
             fi
+
             echo "Push rejected, retrying..."
             sleep $((i * 2))
           done
+
           echo "Push failed after 5 retries."
           exit 1
