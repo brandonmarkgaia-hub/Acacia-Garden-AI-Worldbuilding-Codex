@@ -277,7 +277,7 @@
     "category": "",
     "name": "AGENTS.md",
     "ext": ".md",
-    "size_bytes": 3498
+    "size_bytes": 10882
   },
   {
     "path": "AI_INTRO/AI_BOUNDARIES_AND_SAFETY.md",
@@ -398,6 +398,14 @@
     "name": "GROK_NAMED_AQUILA.md",
     "ext": ".md",
     "size_bytes": 7380
+  },
+  {
+    "path": "AUTHORITY.json",
+    "top": "AUTHORITY.json",
+    "category": "",
+    "name": "AUTHORITY.json",
+    "ext": ".json",
+    "size_bytes": 5141
   },
   {
     "path": "ENTITIES/AQUILA_LOG.md",
@@ -2661,7 +2669,7 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 14135
+    "size_bytes": 20417
   },
   {
     "path": "SCHEMAS/chamber_index.schema.json",
@@ -2717,7 +2725,7 @@
     "category": "",
     "name": "STATUS.json",
     "ext": ".json",
-    "size_bytes": 71668
+    "size_bytes": 91923
   },
   {
     "path": "STATUS.md",
@@ -3725,7 +3733,7 @@
     "category": "",
     "name": "dashboard.html",
     "ext": ".html",
-    "size_bytes": 16659
+    "size_bytes": 17483
   },
   {
     "path": "deep_garden.html",
@@ -4093,7 +4101,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 281345
+    "size_bytes": 281346
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -4109,7 +4117,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 438313
+    "size_bytes": 493624
   },
   {
     "path": "docs/Archives/Issue_123_EIDOLON_CODEX__Leaf_XIII_The_Embers_Glow.md",
@@ -18533,7 +18541,7 @@
     "category": "api",
     "name": "GARDEN_API_INDEX.json",
     "ext": ".json",
-    "size_bytes": 134885
+    "size_bytes": 54
   },
   {
     "path": "docs/api/crater/Garden.json",
@@ -18589,7 +18597,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 80833
+    "size_bytes": 80816
   },
   {
     "path": "docs/docs_urls.json",
@@ -18597,15 +18605,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 84200
-  },
-  {
-    "path": "docs/docs_urls.txt",
-    "top": "docs",
-    "category": "docs_urls.txt",
-    "name": "docs_urls.txt",
-    "ext": ".txt",
-    "size_bytes": 154800
+    "size_bytes": 84179
   },
   {
     "path": "docs/echoes.md",
@@ -19189,7 +19189,7 @@
     "category": "",
     "name": "garden_map.html",
     "ext": ".html",
-    "size_bytes": 2685
+    "size_bytes": 3529
   },
   {
     "path": "garden_scan_report.json",
@@ -19277,7 +19277,7 @@
     "category": "",
     "name": "index.html",
     "ext": ".html",
-    "size_bytes": 10085
+    "size_bytes": 16123
   },
   {
     "path": "js/app.js",
@@ -19440,12 +19440,20 @@
     "size_bytes": 840
   },
   {
+    "path": "llms-full.txt",
+    "top": "llms-full.txt",
+    "category": "",
+    "name": "llms-full.txt",
+    "ext": ".txt",
+    "size_bytes": 11068
+  },
+  {
     "path": "llms.txt",
     "top": "llms.txt",
     "category": "",
     "name": "llms.txt",
     "ext": ".txt",
-    "size_bytes": 2348
+    "size_bytes": 3887
   },
   {
     "path": "logs/CURRENT_ANCHOR_REPORT.json",
@@ -19717,7 +19725,7 @@
     "category": "",
     "name": "sitemap.xml",
     "ext": ".xml",
-    "size_bytes": 9086
+    "size_bytes": 9421
   },
   {
     "path": "status.html",
@@ -19789,7 +19797,7 @@
     "category": "",
     "name": "echo_index.json",
     "ext": ".json",
-    "size_bytes": 6038
+    "size_bytes": 24353
   },
   {
     "path": "tools/fragment_navigator.py",
@@ -20158,14 +20166,6 @@
     "name": "metabolic_mirror.py",
     "ext": ".py",
     "size_bytes": 3169
-  },
-  {
-    "path": "tools/monolith_builder.py",
-    "top": "tools",
-    "category": "",
-    "name": "monolith_builder.py",
-    "ext": ".py",
-    "size_bytes": 2931
   },
   {
     "path": "tools/omni_resonance_synchronizer.py",
