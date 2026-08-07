@@ -78,6 +78,11 @@ def main() -> int:
 
     out = {
         "generated_at": utc_now(),
+        "scope": "docs/Echoes/**/*.md",
+        "purpose": (
+            "Machine-facing index of Echo Markdown source files. "
+            "This is not a full repository or full docs index."
+        ),
         "meta": {
             "version": META_VERSION,
             "anchor": ANCHOR
