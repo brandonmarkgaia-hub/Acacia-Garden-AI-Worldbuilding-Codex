@@ -247,7 +247,10 @@ jobs:
                   f"ACACIA · GARDEN · CODEX · MONOLITH · CHUNK {chunk_idx:03}",
                   "\n".join(current_sections)
               )
-              chunk_path.write_text(page_html, encoding="utf-8")
+              # Disabled 2026-08-06 per Keeper ruling (Archive retirement): stopped writing
+              # physical chunk_path files; chunk_files list is still populated below so the
+              # Garden API index (section 4) keeps working. See PR "Archive retirement
+              # (Keeper to merge)" on witness/archive-retirement-2026-08.
               print(f"[MONOLITH] Wrote chunk {chunk_idx:03} → {chunk_path}")
               chunk_files.append((chunk_name, [str(p) for p in current_paths]))
               chunk_idx += 1
@@ -299,15 +302,9 @@ jobs:
           index_sections.append(f"<p>Total files included: {total_files}</p>")
           index_sections.append("<p>See also: <code>docs/Archives/GARDEN_MANIFEST.json</code> and <code>docs/api/GARDEN_API_INDEX.json</code>.</p>")
 
-          MONOLITH_HTML.write_text(
-              make_page_html(
-                  "ACACIA · GARDEN · CODEX · MONOLITH · INDEX",
-                  "\n".join(index_sections)
-              ),
-              encoding="utf-8"
-          )
-          print(f"[MONOLITH] Wrote index → {MONOLITH_HTML}")
-
+# Disabled 2026-08-06 per Keeper ruling (Archive retirement): stopped writing
+# docs/Archives/CODEX_MONOLITH.html (the chunk index page). See PR "Archive
+# retirement (Keeper to merge)" on witness/archive-retirement-2026-08.
           # ---------- 4) Garden API index ----------
 
           api_index = {
