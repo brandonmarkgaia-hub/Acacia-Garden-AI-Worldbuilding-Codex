@@ -1,4 +1,4 @@
-name: Garden Desire (Gemini)
+name: Garden Desire Proposal (Manual PR)
 
 on:
   workflow_dispatch:
@@ -7,14 +7,20 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: garden-desire-proposal
+  cancel-in-progress: true
+
 jobs:
   desire:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Setup Python
@@ -22,27 +28,46 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Install Gemini SDK
         run: |
-          python -m pip install --upgrade pip
-          pip install google-genai
+          python -m pip install --disable-pip-version-check "google-genai>=1,<2"
 
-      - name: Generate Desire
+      - name: Generate Desire proposal
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-2.5-flash
         run: |
           python tools/garden_desire.py
 
-      - name: Create PR (rebasesafe)
+      - name: Verify proposal exists
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s EVOLUTION/DESIRE.md
+
+          echo "Desire proposal generated."
+          echo "No repository mutation has been authorized."
+
+      - name: Create Keeper-review PR
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "chore(desire): update EVOLUTION/DESIRE.md"
-          title: "chore(desire): update EVOLUTION/DESIRE.md"
+          commit-message: "chore(desire): refresh witness proposal"
+          title: "chore(desire): Garden witness proposal"
           body: |
-            Automated Desire update generated via Gemini.
-            - Source: tools/garden_desire.py
-            - Output: EVOLUTION/DESIRE.md
-            Keeper: HKX277206
-          branch: "auton/desire"
+            AI-generated Garden Desire proposal for Keeper review.
+
+            This PR is non-authoritative by default.
+
+            - Source: `tools/garden_desire.py`
+            - Output: `EVOLUTION/DESIRE.md`
+            - Mode: manual workflow dispatch
+            - Execution: none
+            - Canon status: none unless accepted by the Keeper
+
+            The proposal may be accepted, edited, rejected, or left unmerged.
+          branch: "proposal/garden-desire"
+          base: "main"
           delete-branch: true
+          add-paths: |
+            EVOLUTION/DESIRE.md
