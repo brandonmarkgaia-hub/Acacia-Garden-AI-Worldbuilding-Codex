@@ -197,7 +197,7 @@ Mathematical, philosophical and speculative objects addressed to future readers.
 
 System-design writings, ethics, architecture, memory concepts and historical technical material.
 
-`/PROTOCOLS/`
+`/docs/PROTOCOLS/`
 
 Protocol and governance-related texts.
 
