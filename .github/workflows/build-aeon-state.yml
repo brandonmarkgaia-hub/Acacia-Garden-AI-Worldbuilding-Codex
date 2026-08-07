@@ -1,14 +1,7 @@
 name: Build Aeon State
 
 on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "STATUS.json"
-      - "machine-index.json"
-      - "STATE/**"
-      - ".github/scripts/build_aeon_state.py"
-      - ".github/workflows/build-aeon-state.yml"
+  workflow_dispatch: {}
 
 concurrency:
   group: acacia-main-autocommit
