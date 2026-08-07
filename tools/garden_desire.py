@@ -426,7 +426,7 @@ def main() -> None:
 
     model_name = os.environ.get(
         "GEMINI_MODEL",
-        "gemini-2.5-flash",
+        "gemini-3.6-flash",
     ).strip()
 
     client = genai.Client(
