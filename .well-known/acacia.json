@@ -24,6 +24,8 @@
     },
     "ai_index": {
           "llms_txt": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms.txt",
+          "llms_full_txt": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms-full.txt",
+          "authority": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/AUTHORITY.json",
           "full_url_index": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html",
           "sitemap": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/sitemap.xml"
     }
