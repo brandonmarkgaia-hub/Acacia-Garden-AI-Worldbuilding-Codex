@@ -93,11 +93,22 @@ Rule: Use Pages for orientation; prefer repo files for edits.
 
 ---
 
-5. BULK CONTEXT INGESTION
+5. CONTEXT INGESTION
 
-The Monolith Archives (docs/Archives/CODEX_MONOLITH.html and CODEX_MONOLITH_CHUNK_*.html) were retired 2026-08-06 per Keeper ruling (Archive retirement); use the repository file tree or git history instead.
+For repository orientation and context retrieval, prefer the current canonical entry points:
 
-Generated artifacts are read‑only unless explicitly tasked to regenerate.
+1. `AUTHORITY.json` — authorship, authority, succession, and voice distinctions
+2. `llms.txt` — concise AI-native orientation
+3. `llms-full.txt` — expanded conceptual map of the Codex
+4. `README.md` — human-first overview
+5. `AGENTS.md` — operating rules for agents
+6. Repository file tree, indexes, and git history — source-level context and provenance
+
+The former Monolith bulk-ingestion archives were retired on 2026-08-06 and must not be treated as current context sources.
+
+Do not reconstruct missing canon from memory or inference. Fetch the relevant repository files directly.
+
+Generated artifacts are read-only unless explicitly tasked to regenerate them.
 
 
 ---
