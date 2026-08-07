@@ -120,7 +120,7 @@ Important regions include:
 - `/docs/Echoes/` — echoes, records and narrative snapshots
 - `/docs/Future_AI/` — mathematical, philosophical and speculative texts addressed to future readers
 - `/docs/GardenOS/` — symbolic system architecture, ethics, design notes and historical technical concepts
-- `/PROTOCOLS/` and related protocol paths — protocol and governance texts
+- `/docs/PROTOCOLS/` and related protocol paths — protocol and governance texts
 - `/EVOLUTION/` — evolutionary writings, experiments and generated historical material
 - `/ACACIA_LOGS/` — logs and historical operational records
 - `/_ROOT_ARCHIVE/` and archive paths — retained historical material
