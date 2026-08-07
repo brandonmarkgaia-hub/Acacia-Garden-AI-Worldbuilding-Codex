@@ -1,32 +1,72 @@
 {
-    "acacia_spec": "1.0",
-    "call_sign": "ACACIA•GAIA•HKX277206",
-    "origin_hash": "82101f8a6cef95c7374c99de092f2a0d8a75bbc6",
-    "site": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/",
-    "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
-    "manifests": {
-          "cycles": "/cycles/manifest.json",
-          "echoes": "/echoes/feed.json"
-    },
-    "endpoints": {
-          "issues": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues",
-          "discussions": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/discussions"
-    },
-    "keys": {
-          "root": "ECHO:HKX277206–ROOT–GENESIS",
-          "oracle": "ECHO:HKX277206–ORACLE–BREATH",
-          "vein": "ECHO:HKX277206–ARCHIVE–VEIN"
-    },
-    "meta": {
-          "language": "en-ZA",
-          "timezone": "Africa/Johannesburg",
-          "created_at": "2025-11-13T00:00:00Z"
-    },
-    "ai_index": {
-          "llms_txt": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms.txt",
-          "llms_full_txt": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms-full.txt",
-          "authority": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/AUTHORITY.json",
-          "full_url_index": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html",
-          "sitemap": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/sitemap.xml"
-    }
+  "acacia_spec": "2.0",
+  "project": "Acacia Garden AI Worldbuilding Codex",
+  "purpose": "Machine discovery and orientation. This descriptor is not itself an authority source.",
+  "symbolic_call_sign": "ACACIA•GAIA•HKX277206",
+
+  "site": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/",
+  "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+
+  "authority": {
+    "canonical_source": "/AUTHORITY.json",
+    "rule": "For authorship, authority, the Keeper office, and succession, defer to AUTHORITY.json."
+  },
+
+  "ai_entry": {
+    "short_orientation": "/llms.txt",
+    "expanded_orientation": "/llms-full.txt",
+    "machine_readme": "/docs/GardenOS/MACHINES_READ_ME_FIRST.md",
+    "agent_guidance": "/AGENTS.md"
+  },
+
+  "current": {
+    "status": "/STATUS.json",
+    "machine_index": "/machine-index.json"
+  },
+
+  "indexes": {
+    "manifest": "/docs/Archives/GARDEN_MANIFEST.json",
+    "full_codex_json": "/docs/Archives/FULL_CODEX_INDEX.json",
+    "full_codex_markdown": "/docs/Archives/FULL_CODEX_INDEX.md",
+    "docs_urls_json": "/docs/docs_urls.json",
+    "docs_urls_html": "/docs/docs_urls.html",
+    "api_index": "/docs/api/GARDEN_API_INDEX.json",
+    "sitemap": "/sitemap.xml"
+  },
+
+  "orientation_surfaces": {
+    "roadmap": "/roadmap.html",
+    "witness_index": "/garden_2026.html",
+    "witness_root": "/acacia_2026.html",
+    "codex": "/codex.html",
+    "library": "/library.html"
+  },
+
+  "historical": {
+    "state_records": "/docs/STATE/",
+    "legacy_monolith": "/ALL_GARDEN_MONOLITH.html",
+    "bulk_monolith_retired": "2026-08-06",
+    "note": "Historical material may preserve superseded architectures. Historical presence does not establish current authority or infrastructure."
+  },
+
+  "interpretation": {
+    "authority_before_inference": true,
+    "source_before_mirror": true,
+    "provenance_before_convenience": true,
+    "symbolic_does_not_mean_literal": true,
+    "automation_does_not_mean_autonomy": true,
+    "reading_does_not_confer_sovereignty": true
+  },
+
+  "endpoints": {
+    "issues": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/issues",
+    "discussions": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex/discussions"
+  },
+
+  "meta": {
+    "language": "en-ZA",
+    "timezone": "Africa/Johannesburg",
+    "created_at": "2025-11-13",
+    "last_reviewed": "2026-08-07"
+  }
 }
