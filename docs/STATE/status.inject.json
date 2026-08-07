@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-06T19:53:45.160474+00:00",
+  "generated_utc": "2026-08-07T12:24:06.402011+00:00",
   "meta": {
     "keeper": "HKX277206",
     "status_version": "unknown",
@@ -14,7 +14,7 @@
     "laws": 4,
     "orchards": 3,
     "cycles": 46,
-    "novellas": 61,
-    "archives": 28
+    "novellas": 62,
+    "archives": 27
   }
 }
