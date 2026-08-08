@@ -1,106 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Garden Status</title>
-  <meta name="description" content="The live status page of the Acacia Garden Codex — a snapshot of the Garden's current state." />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="garden:anchor" content="HKX277206" />
-<meta name="garden:status-source" content="STATUS.json" />
-<style>
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #060709;
-    color: #f4fff7;
-    margin: 0;
-    padding: 32px 16px 48px;
-  }
-  .wrap {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-weight: 600;
-    margin-bottom: 0.3em;
-  }
-  p {
-    line-height: 1.7;
-  }
-  code {
-    background: rgba(255,255,255,0.08);
-    padding: 2px 5px;
-    border-radius: 4px;
-  }
-  .block {
-    margin-top: 28px;
-    padding: 16px 18px;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.03);
-    border-left: 4px solid #7fffba;
-  }
-  a {
-    color: #9dffd1;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .footer {
-    margin-top: 40px;
-    opacity: 0.7;
-    font-size: 0.9em;
-  }
-</style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07100b" />
+  <title>Garden Status · Acacia Garden</title>
+  <meta name="description" content="Human-readable guide to the maintained Acacia Garden STATUS.json and current verification signals." />
+  <meta name="garden:status-source" content="STATUS.json" />
+  <style>
+    :root{color-scheme:dark;--bg:#060908;--panel:#0d1812;--border:#284332;--text:#eef8f1;--muted:#a7b9ad;--green:#7ee3a7;--bad:#ff7a7a}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(55,138,89,.14),transparent 32rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}main{width:min(860px,calc(100% - 2rem));margin:auto;padding:4rem 0 5rem}h1{margin:0;font-size:clamp(2.2rem,8vw,4.2rem);letter-spacing:-.04em;line-height:1}h2{font-size:1.15rem;margin:0 0 .65rem}p,li{color:var(--muted)}a{color:#a9f5c6}code{background:#07130c;border:1px solid #1f3528;border-radius:.35rem;padding:.1rem .32rem}.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.15em;font:800 .76rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace}.notice,.block{margin-top:1.2rem;padding:1rem 1.1rem;border:1px solid var(--border);border-radius:.8rem;background:var(--panel)}.notice{border-left:4px solid var(--green)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.8rem;margin-top:.8rem}.metric{padding:.8rem;border:1px solid var(--border);border-radius:.65rem;background:rgba(0,0,0,.12)}.metric strong{display:block;font:700 1.25rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace}.metric span{display:block;margin-top:.25rem;color:var(--muted);font-size:.82rem}.good{color:var(--green)}.bad{color:var(--bad)}section{margin-top:2.6rem}.nav{display:flex;flex-wrap:wrap;gap:.6rem 1rem;margin-top:1rem}footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:.88rem}
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Garden Status</h1>
-  <p>
-    The canonical status record for the Acacia Garden Codex is maintained in
-    <code>STATUS.json</code> at the repository root.
-  </p>
+<main>
+  <header>
+    <div class="eyebrow">Acacia Garden · current generated state</div>
+    <h1>Garden Status</h1>
+    <p>This page explains and displays the maintained <code>STATUS.json</code>. The JSON is a generated description of repository state, not a source of authorship or Keeper authority.</p>
+    <div class="notice"><strong>Authority:</strong> <a href="AUTHORITY.json">AUTHORITY.json</a> · <strong>Status source:</strong> <a href="STATUS.json">STATUS.json</a> · <strong>Schema:</strong> <a href="STATUS.schema.json">STATUS.schema.json</a></div>
+  </header>
 
-  <div class="block">
-    <h2>Canonical Source</h2>
-    <p>
-      Current machine status file:<br/>
-      <a href="STATUS.json">STATUS.json</a>
-    </p>
-    <p>
-      Schema definition:<br/>
-      <a href="STATUS.schema.json">STATUS.schema.json</a>
-    </p>
-    <p>
-      Any derived dashboards, pages or visualisations are secondary to this JSON source.
-    </p>
-  </div>
+  <section>
+    <h2>Current verification</h2>
+    <div class="grid" id="live"><div class="metric"><strong>Loading…</strong><span>Reading STATUS.json</span></div></div>
+  </section>
 
-  <div class="block">
-    <h2>Typical Fields (Conceptual)</h2>
-    <p>This is a human-readable explanation of common fields; the exact values live in <code>STATUS.json</code>:</p>
+  <section class="block">
+    <h2>How to read STATUS.json</h2>
     <ul>
-      <li><code>version</code> — current status document version.</li>
-      <li><code>updated_at</code> — last update timestamp (ISO-8601).</li>
-      <li><code>anchor</code> — the Garden anchor string (e.g., <code>HKX277206</code>).</li>
-      <li><code>cycles</code> — summary of known cycles and their health.</li>
-      <li><code>signals</code> — high-level flags (ok, degraded, experimental, etc.).</li>
-      <li><code>notes</code> — free-form human notes attached to the current state.</li>
+      <li><code>generated_at</code> is the current deterministic status-generation timestamp.</li>
+      <li><code>core_nodes.counts</code> and <code>core_nodes.regions</code> are descriptive repository counts produced by the maintained builder.</li>
+      <li><code>verification.navigation</code> records the audited HTML/map-access proof.</li>
+      <li><code>verification.indexes</code> records presence/count checks for maintained machine/index surfaces.</li>
+      <li><code>verification.last_verified_utc</code> records the most recent deterministic verification pass.</li>
+      <li>Older nested metadata can preserve lineage. Do not treat an older nested timestamp as evidence that the top-level generated state is stale.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="footer">
-    <p>
-      For machines: validate <code>STATUS.json</code> with <code>STATUS.schema.json</code>.<br/>
-      For humans: treat this page as a guide, not as the source of truth.
-    </p>
-  </div>
-</div>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
+  <section class="block">
+    <h2>Source hierarchy</h2>
+    <p>Use <a href="AUTHORITY.json">AUTHORITY.json</a> for authority; individual source files for lore/content; <a href="STATUS.json">STATUS.json</a> for current generated repository signals; <a href="machine-index.json">machine-index.json</a> for the scoped Echo index; and <a href="docs/docs_urls.json">docs/docs_urls.json</a> for broad docs discovery.</p>
+    <p>Derived pages such as <a href="dashboard.html">dashboard.html</a> and <a href="keeper_console.html">keeper_console.html</a> are convenience views only.</p>
+  </section>
 
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+  <div class="nav"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="machine.html">Machine orientation</a><a href="garden_map.html">Map</a><a href="codex.html">Codex</a></div>
+  <footer id="stamp">Waiting for status timestamp…</footer>
+</main>
+
+<script>
+const esc=v=>String(v??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const box=(value,label,cls='')=>`<div class="metric"><strong class="${cls}">${esc(value)}</strong><span>${esc(label)}</span></div>`;
+(async()=>{
+  const live=document.getElementById('live');
+  try{
+    const r=await fetch('STATUS.json?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const s=await r.json();
+    const n=s.verification?.navigation||{};
+    const i=s.verification?.indexes||{};
+    const counts=s.core_nodes?.counts||{};
+    const regions=s.core_nodes?.regions||{};
+    live.innerHTML=[
+      box(n.verified===true?'VERIFIED':'CHECK','Navigation proof',n.verified===true?'good':'bad'),
+      box(`${n.with_map_loader ?? '—'} / ${n.total_html_scanned ?? '—'}`,'Audited HTML with map access'),
+      box(n.missing_map_loader_count ?? '—','Missing audited map access',n.missing_map_loader_count===0?'good':'bad'),
+      box(i.docs_urls_count ?? '—','Docs registry entries'),
+      box(i.machine_index_present===true?'PRESENT':'MISSING','Echo machine index',i.machine_index_present===true?'good':'bad'),
+      box(regions['.github/workflows'] ?? '—','Tracked workflow files'),
+      box(counts.total_nodes ?? '—','Tracked nodes'),
+      box(counts.books_indexed ?? '—','Books indexed')
+    ].join('');
+    document.getElementById('stamp').textContent=`STATUS generated: ${s.generated_at ?? s.metadata?.generated_at ?? 'unknown'} · verified: ${s.verification?.last_verified_utc ?? 'unknown'}`;
+  }catch(e){
+    live.innerHTML=box('UNAVAILABLE',`STATUS.json could not be loaded: ${e.message}`,'bad');
+    document.getElementById('stamp').textContent='STATUS.json unavailable';
+  }
+})();
+</script>
+<div id="map-loader-container"></div>
+<script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
 </body>
 </html>
