@@ -39,9 +39,15 @@ BASE_TAG_NEEDLE = f'<base href="{BASE_HREF}"'
 MAP_LOADER_NEEDLES = [
     'data-acacia-map-button',                 # injected loader marker
     "/assets/map-button.js",                  # canonical runtime file
+    "/assets/map-loader.js",                  # universal Garden map loader
     "/docs/assets/global-map-button.js",      # legacy acceptable loader
     "map.html",                               # fallback: direct link (still counts as map access)
 ]
+
+# Pure compatibility doorways do not need their own map control.
+MAP_LOADER_EXEMPT_PATHS = {
+    "docs_urls.html",
+}
 
 
 def utc_now_iso() -> str:
@@ -104,8 +110,9 @@ def iter_html_files() -> List[Path]:
 
 def scan_map_loader_coverage() -> Tuple[int, int, List[str]]:
     """
-    Returns (total_html, with_map_loader, missing_paths_rel)
-    missing_paths are repo-relative POSIX paths.
+    Returns (total_html, with_map_loader, missing_paths_rel).
+    Explicit compatibility-doorway exemptions are excluded from total_html.
+    Missing paths are repo-relative POSIX paths.
     """
     html_files = iter_html_files()
     total = 0
@@ -113,17 +120,22 @@ def scan_map_loader_coverage() -> Tuple[int, int, List[str]]:
     missing: List[str] = []
 
     for p in html_files:
+        rel = p.relative_to(ROOT).as_posix()
+
+        if rel in MAP_LOADER_EXEMPT_PATHS:
+            continue
+
         total += 1
         try:
             txt = p.read_text(encoding="utf-8", errors="ignore")
         except Exception:
-            missing.append(p.relative_to(ROOT).as_posix())
+            missing.append(rel)
             continue
 
         if any(needle in txt for needle in MAP_LOADER_NEEDLES):
             with_map += 1
         else:
-            missing.append(p.relative_to(ROOT).as_posix())
+            missing.append(rel)
 
     return (total, with_map, missing)
 
