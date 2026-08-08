@@ -18,6 +18,9 @@ on:
       - "docs/System/IRON_CICADA_STATUS.json"
       - ".github/workflows/validate-status.yml"
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
