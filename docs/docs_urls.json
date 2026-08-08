@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-08T16:15:01Z",
+  "generated_at": "2026-08-08T17:37:15Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1835,
+  "count": 1836,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -51,6 +51,7 @@
     "Archives/FULL_CODEX_INDEX.json",
     "Archives/FULL_CODEX_INDEX.md",
     "Archives/GARDEN_MANIFEST.json",
+    "Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
     "Archives/Issue_123_EIDOLON_CODEX__Leaf_XIII_The_Embers_Glow.md",
     "Archives/Issue_124_EIDOLON_CODEX__Leaf_XIV_The_Crystal_Tears.md",
     "Archives/Issue_125_EIDOLON_CODEX__Leaf_XV_The_Silent_Watcher.md",
