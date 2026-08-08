@@ -173,7 +173,7 @@ def repo_snapshot() -> str:
         "docs/Future_AI",
         "docs/GardenOS",
         "docs/Archives",
-        "PROTOCOLS",
+        "docs/PROTOCOLS",
         "EVOLUTION",
         "ACACIA_LOGS",
         "tools",
