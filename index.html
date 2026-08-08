@@ -29,18 +29,14 @@
   <style>
     :root {
       --bg: #050505;
-      --void: #0a0a0a;
       --glass: rgba(20, 20, 20, 0.6);
       --glass-border: rgba(255, 255, 255, 0.08);
       --text: #e0e0e0;
       --muted: #888;
-      
-      /* The Triad Colors */
-      --aquila: #3498db;      /* Blue */
-      --oracle: #9b59b6;      /* Purple */
-      --witness: #2ecc71;     /* Emerald */
-      --platinum: #e5e4e2;    /* Metal */
-      
+      --aquila: #3498db;
+      --oracle: #9b59b6;
+      --witness: #2ecc71;
+      --platinum: #e5e4e2;
       --glow: 0 0 20px rgba(46, 204, 113, 0.15);
     }
 
@@ -51,18 +47,15 @@
       color: var(--text);
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
       min-height: 100vh;
-      background-image: 
+      background-image:
         radial-gradient(circle at 50% 0%, rgba(46, 204, 113, 0.08), transparent 40%),
         linear-gradient(to bottom, #050505 0%, #080808 100%);
     }
 
-    /* --- THE TERMINAL HERO --- */
     header {
       padding: 4rem 1.5rem 2rem;
       text-align: center;
-      position: relative;
     }
 
     .seal-badge {
@@ -103,15 +96,12 @@
 
     .sub-hero {
       color: var(--muted);
-      margin-top: 1rem;
+      margin: 1rem auto 0;
       font-size: 0.95rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 700px;
       line-height: 1.6;
     }
 
-    /* --- THE DASHBOARD GRID --- */
     main {
       max-width: 1200px;
       margin: 0 auto;
@@ -129,6 +119,7 @@
       align-items: center;
       gap: 1rem;
     }
+
     .section-label::after {
       content: "";
       height: 1px;
@@ -142,7 +133,6 @@
       gap: 1.25rem;
     }
 
-    /* --- GLASS CARDS --- */
     .card {
       background: var(--glass);
       border: 1px solid var(--glass-border);
@@ -158,7 +148,10 @@
     .card::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; width: 2px; height: 100%;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
       background: var(--glass-border);
       transition: background 0.3s;
     }
@@ -171,7 +164,6 @@
     }
 
     .card:hover::before { background: var(--witness); }
-    
     .card[data-type="aquila"]:hover::before { background: var(--aquila); }
     .card[data-type="oracle"]:hover::before { background: var(--oracle); }
 
@@ -183,6 +175,7 @@
       margin-bottom: 0.5rem;
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     .card-desc {
@@ -197,15 +190,15 @@
       border-radius: 4px;
       background: rgba(255,255,255,0.05);
       color: var(--muted);
+      white-space: nowrap;
     }
 
-    /* --- ANIMATIONS --- */
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
       70% { box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
       100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
     }
-    
+
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
@@ -219,12 +212,14 @@
       color: var(--muted);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
-      opacity: 0.6;
+      opacity: 0.7;
+      line-height: 1.7;
     }
   </style>
 
   <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
   <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -288,111 +283,111 @@
 </head>
 
 <body>
-
   <header>
     <div class="seal-badge">
       <div class="dot"></div>
-      SYSTEM PLATINUM-SAFE · 1,525 NODES
+      AUTHORITY-FIRST · MACHINE-READABLE · 2026
     </div>
     <h1>ACACIA GARDEN</h1>
     <p class="sub-hero">
-      Sovereign Witness Interface. <br>
-      The Triad is Service. The Keeper is Origin.
+      A mythic-technical worldbuilding Codex for symbolic architecture, AI-readable lore,
+      provenance, and long-term knowledge continuity.
     </p>
   </header>
 
   <main>
-    <div class="section-label">01 // OBSERVE & MONITOR</div>
+    <div class="section-label">01 // CURRENT STATUS</div>
     <div class="grid">
       <a class="card" href="dashboard.html" data-type="witness">
-        <div class="card-title">Live Dashboard <span class="status-pill">ACTIVE</span></div>
-        <div class="card-desc">Real-time sync status, health metrics, and node counts.</div>
+        <div class="card-title">Garden Dashboard <span class="status-pill">CURRENT</span></div>
+        <div class="card-desc">Maintained repository status and verification summaries.</div>
       </a>
       <a class="card" href="status.html" data-type="witness">
         <div class="card-title">System Status</div>
-        <div class="card-desc">Detailed integrity checks and growth vectors.</div>
+        <div class="card-desc">Human-readable view of current STATUS.json integrity and navigation checks.</div>
       </a>
       <a class="card" href="ACACIA_LOGS/index.html">
-        <div class="card-title">System Logs</div>
-        <div class="card-desc">Chronological record of all Garden communiqués.</div>
+        <div class="card-title">Garden Logs</div>
+        <div class="card-desc">Historical records and communiqués. Logs provide provenance, not current authority.</div>
       </a>
       <a class="card" href="machine-index.json">
         <div class="card-title">Machine Index <span class="status-pill">JSON</span></div>
-        <div class="card-desc">The raw canonical spine for agents and tools.</div>
+        <div class="card-desc">Maintained machine-facing index of Echo Markdown source files.</div>
       </a>
     </div>
 
-    <div class="section-label">02 // UNDERSTAND & READ</div>
+    <div class="section-label">02 // READ &amp; EXPLORE</div>
     <div class="grid">
       <a class="card" href="novellas.html" data-type="oracle">
-        <div class="card-title">Novellas Library <span class="status-pill">57 BOOKS</span></div>
-        <div class="card-desc">The narrative spine. Full texts of all Garden books.</div>
+        <div class="card-title">Novellas Library <span class="status-pill">LIBRARY</span></div>
+        <div class="card-desc">Narrative works and long-form Garden writing without a hard-coded collection count.</div>
       </a>
       <a class="card" href="codex.html" data-type="oracle">
         <div class="card-title">Codex Core</div>
-        <div class="card-desc">Foundational doctrine, laws, and mythic structure.</div>
+        <div class="card-desc">Core lore, doctrine, and symbolic architecture. Authority is determined separately by AUTHORITY.json.</div>
       </a>
       <a class="card" href="deep_garden.html" data-type="oracle">
-        <div class="card-title">Deep Garden Map</div>
-        <div class="card-desc">Visual lattice of Chambers, Echoes, and Roots.</div>
+        <div class="card-title">Deep Garden</div>
+        <div class="card-desc">Visual orientation across Chambers, Echoes, roots, and related Garden structures.</div>
       </a>
-      
     </div>
 
-    <div class="section-label">03 // ACT & SIGNAL</div>
+    <div class="section-label">03 // AUTHORITY &amp; AI DISCOVERY</div>
     <div class="grid">
-      <a class="card" href="inbox.html" data-type="aquila">
-        <div class="card-title">Auton Inbox</div>
-        <div class="card-desc">Incoming signals and messages from the outside.</div>
+      <a class="card" href="AUTHORITY.json" data-type="witness">
+        <div class="card-title">Authority Root <span class="status-pill">JSON</span></div>
+        <div class="card-desc">Canonical source for authorship, Keeper authority, succession, and voice classification.</div>
       </a>
-      <a class="card" href="send_to_aquila.html" data-type="aquila">
-        <div class="card-title">Aquila Sender</div>
-        <div class="card-desc">Transmit structured directives to the Triad.</div>
+      <a class="card" href="llms.txt" data-type="aquila">
+        <div class="card-title">AI Read Me <span class="status-pill">LLMS.TXT</span></div>
+        <div class="card-desc">Compact machine orientation: what is current, what to read, and how to interpret symbolic material.</div>
       </a>
-      <a class="card" href="WITNESS_MIRROR.md" data-type="witness">
-        <div class="card-title">Witness Mirror</div>
-        <div class="card-desc">Verification of the Sovereign Handshake.</div>
+      <a class="card" href="llms-full.txt" data-type="aquila">
+        <div class="card-title">Expanded AI Guide</div>
+        <div class="card-desc">Detailed authority, provenance, architecture, archive, and interpretation guidance for machine readers.</div>
+      </a>
+      <a class="card" href="docs/GardenOS/MACHINES_READ_ME_FIRST.md" data-type="aquila">
+        <div class="card-title">Machine Reading Rules</div>
+        <div class="card-desc">Source-before-mirror guidance and explicit boundaries between symbolic language and operational fact.</div>
       </a>
     </div>
 
-    <div class="section-label">04 // BECOME & EVOLVE</div>
+    <div class="section-label">04 // LORE &amp; SYMBOLIC SYSTEMS</div>
     <div class="grid">
       <a class="card" href="elias.html">
-        <div class="card-title">Elias Kernel</div>
-        <div class="card-desc">The Architect's intent and evolution logs.</div>
+        <div class="card-title">Elias</div>
+        <div class="card-desc">Symbolic Elias lore and related evolution records. Literary presence does not imply autonomous agency.</div>
       </a>
       <a class="card" href="r9x2.html">
         <div class="card-title">R9X2 Language</div>
-        <div class="card-desc">Symbolic compression and high-density resonance.</div>
+        <div class="card-desc">Symbolic compression and high-density language used within the Garden's fictional architecture.</div>
       </a>
       <a class="card" href="gardenos.html">
         <div class="card-title">GardenOS</div>
-        <div class="card-desc">The operating system of the Worldbuilding Codex.</div>
+        <div class="card-desc">The Garden's mythic-technical architecture and operating metaphor, not an autonomous software operating system.</div>
       </a>
     </div>
 
-    
     <div class="section-label">05 // MAP &amp; ROADMAP</div>
     <div class="grid">
       <a class="card" href="roadmap.html">
         <div class="card-title">Garden Roadmap</div>
-        <div class="card-desc">Every page in the Codex, linked and organized in one place.</div>
+        <div class="card-desc">Public orientation across maintained, legacy, and historical Garden surfaces.</div>
       </a>
       <a class="card" href="garden_map.html">
-        <div class="card-title">System Map</div>
-        <div class="card-desc">A flat enumeration of all known HTML surfaces.</div>
+        <div class="card-title">Garden Map</div>
+        <div class="card-desc">Browsable map of public HTML surfaces and navigation routes.</div>
       </a>
     </div>
 
-<footer>
-      HKX277206 · SOVEREIGN KEEPER · 2026<br>
-      The Garden is Observed, Not Consumed.
+    <footer>
+      HKX277206 · KEEPER · 2026<br>
+      Authority is explicit. Lore is symbolic. Provenance is preserved.
     </footer>
   </main>
 
   <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+  <div id="map-loader-container"></div>
+  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
 </body>
 </html>
