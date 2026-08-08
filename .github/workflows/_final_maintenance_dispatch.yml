@@ -1,0 +1,20 @@
+name: One-shot Final Maintenance Dispatch
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/_final_maintenance_dispatch.yml"
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch current Garden Codex Maintenance
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run garden_codex_maintenance.yml --ref main
