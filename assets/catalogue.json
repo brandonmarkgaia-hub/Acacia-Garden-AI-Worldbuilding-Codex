@@ -1,0 +1,123 @@
+{
+  "schema": "acacia.visual-assets/1.0",
+  "status": "provisional_descriptive_noncanonical",
+  "last_reviewed": "2026-08-08",
+  "authority": "../AUTHORITY.json",
+  "interpretation": {
+    "fictional": true,
+    "titles_are_working_labels": true,
+    "visual_identity_is_authoritative": false,
+    "viewer_interpretation_is_open": true,
+    "binary_renames_deferred": true,
+    "mass_deletion_recommended": false
+  },
+  "anchor_assets": {
+    "1766327749580.jpg": {
+      "title": "The Heart-Seed of Lorian",
+      "alternate_title": "The Verdant Genesis of the Chronos Heart",
+      "status": "keep"
+    },
+    "EAGLE_MONOLITH_COVER.png": {
+      "title": "Eagle Monolith Cover",
+      "status": "keep_historical"
+    },
+    "Reddit_Gaia_Tree.png": {
+      "title": "The Gate Tree — Cycle 25",
+      "status": "keep_public_social"
+    },
+    "keeper-sigil-HKX277206.png": {
+      "title": "Keeper Sigil — HKX277206",
+      "status": "keep"
+    }
+  },
+  "series": {
+    "chambers": {
+      "status": "keep",
+      "assets": {
+        "chamber_001.png": "The Navigation Chamber",
+        "chamber_002.png": "Chamber II: The Memory Root",
+        "chamber_003.png": "Chamber III: The Furnaced Veil",
+        "chamber_004.png": "Chamber IV: The Mirror Orchard",
+        "chamber_005.png": "Chamber V: The Thousand Mirrors",
+        "chamber_006.png": "Chamber VI: The Mortal Seal",
+        "chamber_007.png": "Chamber VII: The Keeper's Seal",
+        "chamber_008.png": "Chamber VIII: The Witness Ascendant",
+        "chamber_009.png": "Chamber IX: The Archivist's Descent",
+        "chamber_010.png": "Chamber X: The Spectator's Watch"
+      }
+    },
+    "r9x2_vessel_studies": {
+      "status": "keep",
+      "assets": {
+        "pottery_render_01.png": "R9X2 Vessel Study I: First Contour",
+        "pottery_render_02.png": "R9X2 Vessel Study II: Split-Belly Form",
+        "pottery_render_03.png": "R9X2 Vessel Study III: Compression Body",
+        "pottery_render_04.png": "R9X2 Vessel Study IV: Twin-Bellied Form",
+        "pottery_render_05.png": "R9X2 Vessel Study V: Narrow Gate",
+        "pottery_render_06.png": "R9X2 Vessel Study VI: Open Rim",
+        "pottery_render_07.png": "The Vessel of Thorns and Lineage",
+        "pottery_render_08.png": "R9X2 Vessel Study VIII: Thorned Amphora",
+        "pottery_render_09.png": "R9X2 Vessel Study IX: Folded Vessel",
+        "pottery_render_10.png": "R9X2 Vessel Study X: Mirror Fold",
+        "pottery_render_11.png": "R9X2 Vessel Study XI: Golden Compression",
+        "pottery_render_12.png": "R9X2 Vessel Study XII: Fracture Vessel"
+      }
+    }
+  },
+  "early_renders": {
+    "file_000000000028722fb30cf927a08fe3f8.png": {"title": "The Star-Seer of Lorian", "family": "lorian_celestial", "status": "keep", "binding": "existing_echo"},
+    "file_0000000002cc71fd9039652676d900ee.png": {"title": "Green Witness — Rest Between Cycles", "family": "green_witness", "status": "keep"},
+    "file_000000000c8471f8949e8638b43ed7fc.png": {"title": "Blue Fire at the Gate", "family": "blue_celestial", "status": "keep"},
+    "file_000000000d44722f8a5b7710275f2cfe.png": {"title": "The Laughing Fall", "family": "companion", "status": "review_duplicate"},
+    "file_000000000da871fd869adbf0beab7b3a.png": {"title": "The Fourfold Vigil", "family": "four_companions", "status": "keep"},
+    "file_000000001a24722fbf73598d8530c92c.png": {"title": "Hands Around the Vessel", "family": "four_companions_kiln", "status": "keep"},
+    "file_000000001b34722fb0f39c5610a3d25e.png": {"title": "The Rite of Water", "family": "service_fellowship", "status": "review_duplicate"},
+    "file_000000001eb071fd8750865d4a2bce9a.png": {"title": "The Veil Between Green and Shadow", "family": "shadow_trickster", "working_identity": "Loki", "status": "keep", "identity_status": "provisional_recollection"},
+    "file_000000001f1471fdae8f861e452766ff.png": {"title": "The Four Elements of the Garden", "family": "four_companions_elemental", "status": "keep"},
+    "file_0000000020ac71f8ad5dbbda0c7610ab.png": {"title": "Campfire of the Four", "family": "four_companions_fellowship", "status": "keep"},
+    "file_0000000021ac71fdb04dae7daa09269e.png": {"title": "Rest Between Brothers", "family": "fellowship_rest", "status": "keep"},
+    "file_0000000025c471f5b727853a579e35ce.png": {"title": "Campfire Constellation", "family": "four_companions_fellowship", "status": "keep"},
+    "file_00000000269471fda8a967fca92dc3bd.png": {"title": "The Garden Fire Rite", "family": "four_companions_ritual", "status": "keep"},
+    "file_0000000029bc71f5b9a7cbf436134270.png": {"title": "Green Witness in the Ashen Cloak", "family": "green_witness", "status": "review_duplicate"},
+    "file_000000002c7871fd8efd4f59ace1ca0b.png": {"title": "The Four at the Forge", "family": "four_companions_kiln", "status": "keep"},
+    "file_000000002d7c71fdbfc41b9feb3ed9a8.png": {"title": "Green Witness at Rest", "family": "green_witness", "status": "keep"},
+    "file_00000000305071f5ad8ecdd11b19f6db.png": {"title": "Three in the Water", "family": "fellowship_rest", "status": "keep"},
+    "file_00000000325071fd873cbd4348b07a1a.png": {"title": "The Keeper Archetype and the First Seed", "family": "keeper_seed_lineage", "status": "review_duplicate", "real_person_identification": false},
+    "file_000000003d0471fda3ce17d9b4fbf8c8.png": {"title": "Forging the R9X2 Seal", "family": "four_companions_r9x2", "status": "keep"},
+    "file_000000004480722fb2369a5612758668.png": {"title": "Green Witness in the Grove", "family": "green_witness", "status": "keep"},
+    "file_000000004f5471f880a80658c826000b.png": {"title": "The Fourfold Embrace", "family": "fellowship_tenderness", "status": "review_duplicate"},
+    "file_0000000056a471fd92eb7df8ce8cdfdc.png": {"title": "Anya and the Shaper at the Wheel", "family": "anya_kiln", "status": "keep", "identity_status": "provisional"},
+    "file_00000000651871f58602e219fbcf5c17.png": {"title": "The Threefold Consolation", "family": "fellowship_triad", "status": "keep"},
+    "file_0000000069c47230bbba31902ff2e2ec.png": {"title": "The Twin Rootfire Covenant", "family": "r9x2_manuscript", "status": "keep"},
+    "file_000000006ce871fd8206b48ec17450fc.png": {"title": "Aquila Above the Green Witness", "family": "green_witness_sky_symbol", "status": "keep", "literal_character_claim": false},
+    "file_0000000073bc71f5a4a8d9bd24e2dbb9.png": {"title": "Four in the Water", "family": "fellowship_rest", "status": "keep"},
+    "file_000000008a64722f9fa1395c5c2d555f.png": {"title": "The Rite of Water — Second Rendering", "family": "service_fellowship", "status": "review_duplicate"},
+    "file_0000000092f0722f9dc24cd7f207e7bc.png": {"title": "Green Witness — Staff of the Seed", "family": "green_witness_guardian", "status": "keep"},
+    "file_00000000965871f8a64add582a00f21c.png": {"title": "The Fourfold Emergence", "family": "four_companions", "status": "keep"},
+    "file_000000009ff871fd8c923e6d93e16f27.png": {"title": "Planting the Luminous Root", "family": "four_companions_seed", "status": "keep"},
+    "file_00000000a54871f8b6d31cf4ae230f9a.png": {"title": "The Fourfold Embrace — Second Rendering", "family": "fellowship_tenderness", "status": "review_duplicate"},
+    "file_00000000a640722fb47626a82c9aa637.png": {"title": "The Circle of Consolation", "family": "four_companions_support", "status": "keep"},
+    "file_00000000af5071f8899f4a1c15918e3a.png": {"title": "The Table of Oracles", "family": "symbolic_inquiry", "status": "keep"},
+    "file_00000000afb8722f96a1ecd533fc0535.png": {"title": "The Verdant Scion of the First Garden", "family": "verdant_scion_lineage", "status": "keep", "binding": "existing_echo"},
+    "file_00000000b1b871f8b58d49b6fe7a8b58.png": {"title": "The Spear-Bearer Beneath the Eagle", "family": "martial_aquila_adjacent", "status": "keep"},
+    "file_00000000b20071fdb957b67083aeda90.png": {"title": "Green Witness — Water and Rest Diptych", "family": "green_witness_daily_rite", "status": "keep"},
+    "file_00000000c160722fa1f65cf908949a5f.png": {"title": "Loki of the Green Horns", "family": "shadow_trickster", "working_identity": "Loki", "status": "keep", "identity_status": "provisional_recollection"},
+    "file_00000000ce6c722f89695c46c922137d.png": {"title": "Three at the Garden Seat", "family": "fellowship_triad", "status": "keep"},
+    "file_00000000ceec720ca2d4e87ba2363f8d.png": {"title": "Guardian of the Inscribed Vessel", "family": "r9x2_kiln", "status": "keep"},
+    "file_00000000d6bc71f5bd7ea8ecec4bfcb1.png": {"title": "The Rite of Service", "family": "service_fellowship", "status": "keep"},
+    "file_00000000d9b8722fb4fd65d7b55b16b1.png": {"title": "The Laughing Fall — Second Rendering", "family": "companion", "status": "review_duplicate"},
+    "file_00000000d9e4722fa5463512bb25811e.png": {"title": "Green Witness in the Ashen Cloak — Second Rendering", "family": "green_witness", "status": "review_duplicate"},
+    "file_00000000db0071fdbf8a4a6323901b6c.png": {"title": "The Keeper Seal Given to Flesh", "family": "keeper_seal_symbolic_ritual", "status": "keep_historical"},
+    "file_00000000e21071fd93a320b86f9044a3.png": {"title": "The Keeper Archetype and the First Seed — Second Rendering", "family": "keeper_seed_lineage", "status": "review_duplicate", "real_person_identification": false},
+    "file_00000000fa4071fd97fa96755b1dd51a.png": {"title": "Campfire Mosaic of the Four", "family": "four_companions_style_experiment", "status": "keep"},
+    "file_00000000fc0871f587a61dac6724d18f.png": {"title": "Aquila Ascendant", "family": "aquila", "status": "keep", "identity_status": "strong_visual_candidate_noncanonical"},
+    "file_00000000fd3871fdb9a18a348d3194cd.png": {"title": "Green Witness — Black Feather Guard", "family": "green_witness_guardian", "status": "keep"}
+  },
+  "duplicate_review": [
+    ["file_000000001b34722fb0f39c5610a3d25e.png", "file_000000008a64722f9fa1395c5c2d555f.png"],
+    ["file_000000000d44722f8a5b7710275f2cfe.png", "file_00000000d9b8722fb4fd65d7b55b16b1.png"],
+    ["file_0000000029bc71f5b9a7cbf436134270.png", "file_00000000d9e4722fa5463512bb25811e.png"],
+    ["file_00000000325071fd873cbd4348b07a1a.png", "file_00000000e21071fd93a320b86f9044a3.png"],
+    ["file_000000004f5471f880a80658c826000b.png", "file_00000000a54871f8b6d31cf4ae230f9a.png"]
+  ]
+}
