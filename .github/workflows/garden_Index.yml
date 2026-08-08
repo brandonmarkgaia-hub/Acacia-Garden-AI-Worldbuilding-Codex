@@ -1,4 +1,4 @@
-name: Garden · Novellas index
+name: Garden · Novellas human index
 
 on:
   workflow_dispatch:
@@ -6,6 +6,9 @@ on:
     paths:
       - "docs/Novellas/BOOK_*.md"
       - "tools/garden_index.py"
+
+permissions:
+  contents: write
 
 concurrency:
   group: acacia-main-autocommit
@@ -18,35 +21,36 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies (none needed)
-        run: python -m pip install --upgrade pip
-
-      - name: Generate Garden novellas index
+      - name: Generate human Novellas index
         run: python tools/garden_index.py
 
-      - name: Commit index if changed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit human index if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          set -euo pipefail
 
-          git status --short
-
-          if [ -n "$(git status --porcelain docs/Novellas/garden_index.json docs/Novellas/GARDEN_MASTER_INDEX.md)" ]; then
-            git add docs/Novellas/garden_index.json docs/Novellas/GARDEN_MASTER_INDEX.md
-            git commit -m "chore: update Garden novellas index [autogen]"
-            for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push && break
-              echo "Push conflicted, retrying ($i)..."
-              sleep $((RANDOM % 8 + 2))
-            done
-          else
-            echo "No index changes to commit."
+          if git diff --quiet -- docs/Novellas/GARDEN_MASTER_INDEX.md; then
+            echo "No human-index changes to commit."
+            exit 0
           fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/Novellas/GARDEN_MASTER_INDEX.md
+          git commit -m "chore: update Novellas human index [autogen]"
+
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push conflicted, retrying ($i)..."
+            sleep $((RANDOM % 8 + 2))
+          done
+
+          echo "Push failed after retries."
+          exit 1
