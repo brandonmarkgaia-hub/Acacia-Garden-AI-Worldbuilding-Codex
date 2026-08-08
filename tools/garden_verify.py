@@ -47,6 +47,7 @@ MAP_LOADER_NEEDLES = [
 # Pure compatibility doorways do not need their own map control.
 MAP_LOADER_EXEMPT_PATHS = {
     "docs_urls.html",
+    "aquila_sender.html",
 }
 
 
