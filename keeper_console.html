@@ -1,562 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Keeper Console • Acacia Garden Codex</title>
-  <meta name="description" content="The Keeper Console of the Acacia Garden Codex — the Keeper's working surface for tending the Garden." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07110b" />
+  <title>Keeper Console · Acacia Garden</title>
+  <meta name="description" content="Read-only Keeper orientation surface for current Acacia Garden authority, status, indexes, and navigation." />
   <style>
-    :root {
-      --bg: #050813;
-      --bg-soft: #0b1020;
-      --card: #101629;
-      --border: #252c45;
-      --accent: #55ffb8;
-      --accent-soft: rgba(85, 255, 184, 0.12);
-      --text-main: #f5f7ff;
-      --text-soft: #9fa6c5;
-      --danger: #ff5f7a;
-      --muted: #444b66;
-      --radius-lg: 18px;
-      --radius-sm: 10px;
-      --shadow-soft: 0 18px 45px rgba(0,0,0,0.65);
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: radial-gradient(circle at top, #17203b 0, #050813 55%);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: block; 
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .kc-shell {
-      width: 100%;
-      max-width: 1080px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.65));
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow-soft);
-      padding: 2rem;
-      box-sizing: border-box;
-      backdrop-filter: blur(22px);
-      margin: 2rem auto;
-    }
-
-    header.kc-header {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .kc-tagline {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--text-soft);
-    }
-
-    .kc-title-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .kc-title-row h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .kc-pill {
-      font-size: 0.75rem;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border: 1px solid rgba(85,255,184,0.4);
-    }
-    
-    /* Neighbor Pact Badge */
-    .kc-pill.pact {
-      background: rgba(155, 89, 182, 0.15);
-      color: #cd84f1;
-      border: 1px solid rgba(155, 89, 182, 0.4);
-    }
-
-    .kc-subtle {
-      font-size: 0.83rem;
-      color: var(--text-soft);
-    }
-
-    /* STATUS + QUICK SUMMARY BAR */
-    .kc-status-row {
-      display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .kc-card {
-      background: radial-gradient(circle at top left, rgba(85,255,184,0.05), var(--card));
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 12px 14px;
-      box-sizing: border-box;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .kc-card h2 {
-      font-size: 0.95rem;
-      margin: 0 0 6px 0;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .kc-badge {
-      font-size: 0.7rem;
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      color: var(--text-soft);
-    }
-
-    #system-status {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      white-space: pre-wrap;
-    }
-
-    .kc-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .kc-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #45ff9d;
-      box-shadow: 0 0 8px rgba(69,255,157,0.7);
-    }
-
-    /* DASHBOARD GRID */
-    .kc-dashboard {
-      margin-bottom: 16px;
-    }
-
-    .kc-dashboard h2 {
-      font-size: 0.95rem;
-      margin: 0 0 8px 0;
-    }
-
-    .kc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-    }
-
-    .kc-tile {
-      background: radial-gradient(circle at top, rgba(85,255,184,0.08), var(--bg-soft));
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 10px 12px;
-      box-sizing: border-box;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out, background 0.12s ease-out;
-    }
-
-    .kc-tile:hover {
-      transform: translateY(-2px);
-      border-color: rgba(85,255,184,0.7);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.7);
-      background: radial-gradient(circle at top, rgba(85,255,184,0.16), var(--bg-soft));
-    }
-
-    .kc-tile-main {
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-
-    .kc-tile-sub {
-      font-size: 0.75rem;
-      color: var(--text-soft);
-    }
-
-    .kc-tile-badge {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      font-size: 0.7rem;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(5, 12, 30, 0.9);
-      border: 1px solid rgba(255,255,255,0.13);
-      color: var(--text-soft);
-    }
-
-    /* LIBRARY + INBOX LAYOUT */
-    .kc-lower {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.4fr);
-      gap: 12px;
-    }
-
-    #library-list {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      max-height: 260px;
-      overflow: auto;
-      padding-right: 4px;
-    }
-
-    #library-list ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    #library-list li {
-      margin-bottom: 4px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    #library-list a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    
-    #library-list .meta-tag {
-        color: #666;
-        font-size: 0.7em;
-        margin-left: 8px;
-    }
-
-    #library-list a:hover {
-      text-decoration: underline;
-    }
-
-    #inbox-messages {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      max-height: 260px;
-      overflow: auto;
-      padding-right: 4px;
-    }
-
-    .inbox-item {
-      padding: 6px 0;
-      border-bottom: 1px dashed rgba(255,255,255,0.12);
-    }
-
-    .inbox-title {
-      font-size: 0.8rem;
-      color: var(--text-main);
-      margin-bottom: 2px;
-    }
-
-    .inbox-meta {
-      font-size: 0.7rem;
-      color: var(--text-soft);
-      margin-bottom: 2px;
-    }
-
-    .inbox-body {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-      white-space: pre-wrap;
-    }
-
-    footer.kc-footer {
-      margin-top: 14px;
-      font-size: 0.7rem;
-      color: var(--muted);
-      text-align: right;
-    }
-
-    footer.kc-footer span {
-      color: var(--accent);
-    }
-
-    /* MOBILE */
-    @media (max-width: 780px) {
-      .kc-status-row,
-      .kc-lower {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+    :root{color-scheme:dark;--bg:#07100b;--panel:#0d1812;--border:#294333;--text:#eef8f1;--muted:#aabdb0;--accent:#81e5aa}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(56,139,90,.18),transparent 34rem),#050906;color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{width:min(1040px,calc(100% - 2rem));margin:auto;padding:3.5rem 0 5rem} h1{font-size:clamp(2.1rem,7vw,4.4rem);letter-spacing:-.04em;margin:0} h2{font-size:1.2rem;margin:0 0 .8rem} p{color:var(--muted)} a{color:#a8f5c6} code{background:#07130c;border:1px solid #1f3528;border-radius:.35rem;padding:.12rem .32rem}
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:800}.lead{max-width:760px;font-size:1.05rem}.notice{margin:1.4rem 0 0;padding:1rem 1.1rem;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:.7rem;background:rgba(13,24,18,.9)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}.card{border:1px solid var(--border);border-radius:.9rem;padding:1rem;background:linear-gradient(145deg,#102016,#09110c)}.card p{font-size:.93rem}.path{display:block;margin-top:.45rem;overflow-wrap:anywhere}
+    section{margin-top:2.8rem}.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin-top:1rem}.metric{padding:.9rem;border:1px solid var(--border);border-radius:.75rem;background:#0b1510}.metric strong{display:block;font-size:1.15rem}.metric span{color:var(--muted);font-size:.85rem}.nav{display:flex;flex-wrap:wrap;gap:.6rem 1rem;margin-top:1rem} footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
   </style>
-  
-  <link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
 </head>
 <body>
-<div class="kc-shell">
-
-  <header class="kc-header">
-    <div class="kc-tagline">ACACIA · GARDEN OPS</div>
-    <div class="kc-title-row">
-      <h1>
-        Keeper Console
-        <span class="kc-pill">HKX277206</span>
-        <span class="kc-pill pact">Neighbor Pact Active</span>
-      </h1>
-      <div class="kc-subtle">
-        Aquila • Eidolon • Voyager · <span>Triad-ready layer</span>
-      </div>
-    </div>
+<main>
+  <header>
+    <div class="eyebrow">Acacia Garden · Read-only orientation</div>
+    <h1>Keeper Console</h1>
+    <p class="lead">A quiet surface for checking current Garden authority, status, indexes, and navigation. It does not send messages, call an external worker, or imply that symbolic Garden characters operate infrastructure.</p>
+    <div class="notice"><strong>Authority source:</strong> <a href="AUTHORITY.json"><code>AUTHORITY.json</code></a>. The Keeper seal is provenance and authority metadata; this page itself grants no permissions.</div>
   </header>
 
-  <div class="kc-status-row">
-    <section class="kc-card">
-      <h2>
-        System Status
-        <span class="kc-badge">STATUS.json</span>
-      </h2>
-      <div id="system-status">
-        Loading status snapshot…
-      </div>
-      <div style="margin-top: 6px;">
-        <span class="kc-inline">
-          <span class="kc-dot"></span>
-          Keeper link stable
-        </span>
-      </div>
-    </section>
-
-    <section class="kc-card">
-      <h2>
-        Garden Index
-        <span class="kc-badge">Machine Spine</span>
-      </h2>
-      <div class="kc-subtle">
-        Loading Master Map...
-      </div>
-      <div style="margin-top: 6px; font-size: 0.78rem;">
-        <span id="library-summary">Waiting for Cartographer…</span>
-      </div>
-    </section>
-  </div>
-
-  <section class="kc-dashboard">
-    <h2>Keeper Dashboard</h2>
-    <div class="kc-grid">
-      <div class="kc-tile" onclick="window.location.href='STATUS.json'">
-        <div class="kc-tile-main">Garden Status</div>
-        <div class="kc-tile-sub">Raw STATUS snapshot (JSON)</div>
-        <div class="kc-tile-badge">Core</div>
-      </div>
-
-      <div class="kc-tile" onclick="window.location.href='docs/Novellas/GARDEN_MASTER_INDEX.md'">
-        <div class="kc-tile-main">Master Index</div>
-        <div class="kc-tile-sub">Full shelf listing</div>
-        <div class="kc-tile-badge">Library</div>
-      </div>
-
-      <div class="kc-tile" onclick="window.location.href='library.html'">
-        <div class="kc-tile-main">Browse Books</div>
-        <div class="kc-tile-sub">Visual Library Interface</div>
-        <div class="kc-tile-badge">Reader</div>
-      </div>
-
-      <div class="kc-tile" onclick="window.location.href='inbox.html'">
-        <div class="kc-tile-main">Aquila Inbox</div>
-        <div class="kc-tile-sub">View stored Sky-mind messages</div>
-        <div class="kc-tile-badge">Inbox</div>
-      </div>
-
-      <div class="kc-tile" onclick="window.location.href='send_to_aquila.html'">
-        <div class="kc-tile-main">Send to Aquila</div>
-        <div class="kc-tile-sub">Open the sender interface</div>
-        <div class="kc-tile-badge">Sender</div>
-      </div>
-
-      <div class="kc-tile" onclick="window.location.href='index.html'">
-        <div class="kc-tile-main">Back to Hub</div>
-        <div class="kc-tile-sub">Return to main Garden page</div>
-        <div class="kc-tile-badge">Root</div>
-      </div>
+  <section>
+    <h2>Current status</h2>
+    <div id="status" class="status">
+      <div class="metric"><strong>Loading…</strong><span>STATUS.json</span></div>
     </div>
   </section>
 
-  <div class="kc-lower">
-    <section id="library-panel" class="kc-card">
-      <h2>Active Nodes (Machine Spine)</h2>
-      <div id="library-list">
-        Connecting to Cartographer...
-      </div>
-    </section>
+  <section>
+    <h2>Primary surfaces</h2>
+    <div class="grid">
+      <article class="card"><h2>Authority</h2><p>Canonical authorship, Keeper office, and succession record.</p><a class="path" href="AUTHORITY.json">AUTHORITY.json</a></article>
+      <article class="card"><h2>Machine orientation</h2><p>Current machine-reader entry points and interpretation rules.</p><a class="path" href="machine.html">machine.html</a><a class="path" href="llms.txt">llms.txt</a></article>
+      <article class="card"><h2>Echo index</h2><p>Machine-facing index scoped to Echo Markdown sources.</p><a class="path" href="machine-index.json">machine-index.json</a></article>
+      <article class="card"><h2>Broad docs registry</h2><p>Tracked text/document paths under <code>docs/</code>.</p><a class="path" href="docs/docs_urls.html">docs/docs_urls.html</a></article>
+      <article class="card"><h2>Library</h2><p>Human-facing books and narrative material.</p><a class="path" href="library.html">library.html</a></article>
+      <article class="card"><h2>Historical inbox surfaces</h2><p>Earlier Aquila/Auton message interfaces are retained only as historical orientation.</p><a class="path" href="inbox.html">inbox.html</a></article>
+    </div>
+  </section>
 
-    <section id="inbox-panel" class="kc-card">
-      <h2>Aquila Inbox</h2>
-      <div id="inbox-messages">
-        Contacting Sky-mind Worker…
-      </div>
-    </section>
-  </div>
+  <section>
+    <h2>Navigation</h2>
+    <div class="nav"><a href="index.html">Home</a><a href="status.html">Status</a><a href="garden_map.html">Map</a><a href="codex.html">Codex</a><a href="docs/index.html">Docs</a><a href="ACACIA_LOGS/index.html">Logs</a></div>
+  </section>
 
-  <footer class="kc-footer">
-    Keeper <span>HKX277206</span> · Console fused to Acacia Garden Codex.
-  </footer>
-</div>
+  <footer>Read-only Keeper orientation · external inbox transport retired from this surface.</footer>
+</main>
 
 <script>
-  const STATUS_URL = "STATUS.json";
-  const MACHINE_INDEX_URL = "machine-index.json"; // Priority 1
-  const GARDEN_INDEX_URL  = "docs/Novellas/garden_index.json"; // Fallback
-  const AQUILA_INBOX_URL = "https://broken-dew-76e1.brandonmarkgaia.workers.dev/inbox";
-
-  async function loadStatus() {
-    const el = document.getElementById("system-status");
-    try {
-      const res = await fetch(STATUS_URL, { cache: "no-store" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const json = await res.json();
-      
-      const generated = json.generated_at || json.generated_utc || "Unknown";
-      const nodes = json.core_nodes?.counts?.total_nodes || "N/A";
-      const verified = json.verification?.navigation?.verified === true ? "Verified" : "Pending";
-      
-      el.innerHTML = `<strong>${verified}</strong> · Nodes: ${nodes}<br>Sync: ${generated}`;
-    } catch (err) {
-      el.textContent = "Could not load STATUS.json (" + err.message + ").";
-    }
-  }
-
-  // UPDATED: Now tries to load machine-index first for full map
-  async function loadLibrary() {
-    const summaryEl = document.getElementById("library-summary");
-    const listEl = document.getElementById("library-list");
-    
-    try {
-      // Try Machine Index First (The Spine)
-      let res = await fetch(MACHINE_INDEX_URL, { cache: "no-store" });
-      let type = "machine";
-      
-      if (!res.ok) {
-          // Fallback to Garden Index (The Books)
-          res = await fetch(GARDEN_INDEX_URL, { cache: "no-store" });
-          type = "garden";
-          if (!res.ok) throw new Error("No index files found.");
-      }
-      
-      const json = await res.json();
-      const ul = document.createElement("ul");
-      let count = 0;
-
-      if (type === "machine") {
-          // Parsing Machine Index Structure
-          const entries = json.entries || [];
-          count = entries.length;
-          summaryEl.textContent = count + " Nodes (Spine View)";
-          
-          // Show top 20 relevant files
-          entries.slice(0, 30).forEach(entry => {
-              const li = document.createElement("li");
-              const a = document.createElement("a");
-              a.href = entry.path; 
-              a.textContent = entry.name || entry.path;
-              
-              const tag = document.createElement("span");
-              tag.className = "meta-tag";
-              tag.textContent = entry.top || "root";
-              
-              li.appendChild(a);
-              li.appendChild(tag);
-              ul.appendChild(li);
-          });
-      } else {
-          // Parsing Garden Index Structure
-          const books = (json.garden_codex && json.garden_codex.books) || [];
-          count = json.garden_codex?.total_books || books.length;
-          summaryEl.textContent = count + " Volumes (Library View)";
-          
-          books.forEach(book => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = "library.html"; 
-            a.textContent = (book.id ? "#" + book.id + " " : "") + book.title;
-            li.appendChild(a);
-            ul.appendChild(li);
-          });
-      }
-
-      listEl.innerHTML = "";
-      listEl.appendChild(ul);
-      
-    } catch (err) {
-      summaryEl.textContent = "Index Offline.";
-      listEl.textContent = "Run the Cartographer script to generate index files.";
-    }
-  }
-
-  async function loadInbox() {
-    const el = document.getElementById("inbox-messages");
-    try {
-      const res = await fetch(AQUILA_INBOX_URL, { cache: "no-store" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const json = await res.json();
-
-      const inbox = json.messages || json.inbox?.messages || [];
-      if (!inbox.length) {
-        el.textContent = "No messages in Aquila Inbox yet.";
-        return;
-      }
-
-      el.innerHTML = "";
-      inbox.slice().reverse().forEach(msg => {
-          const wrap = document.createElement("div");
-          wrap.className = "inbox-item";
-          const title = document.createElement("div");
-          title.className = "inbox-title";
-          title.textContent = msg.title || "(no title)";
-          
-          const meta = document.createElement("div");
-          meta.className = "inbox-meta";
-          meta.textContent = (msg.from || "System") + " · " + (msg.timestamp || "");
-
-          const body = document.createElement("div");
-          body.className = "inbox-body";
-          body.textContent = msg.summary || msg.body || "";
-
-          wrap.appendChild(title);
-          wrap.appendChild(meta);
-          wrap.appendChild(body);
-          el.appendChild(wrap);
-      });
-    } catch (err) {
-      el.textContent = "Could not reach Aquila Inbox Worker.";
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    loadStatus();
-    loadLibrary();
-    loadInbox();
-  });
+(async()=>{
+  const el=document.getElementById('status');
+  try{
+    const r=await fetch('STATUS.json',{cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const s=await r.json();
+    const nav=s.verification?.navigation||{};
+    const counts=s.core_nodes?.counts||{};
+    const regions=s.core_nodes?.regions||{};
+    el.innerHTML=`
+      <div class="metric"><strong>${nav.verified===true?'Verified':'Check required'}</strong><span>Navigation verification</span></div>
+      <div class="metric"><strong>${nav.with_map_loader ?? '—'} / ${nav.total_html_scanned ?? '—'}</strong><span>Audited HTML with map access</span></div>
+      <div class="metric"><strong>${regions['.github/workflows'] ?? '—'}</strong><span>Tracked workflow files</span></div>
+      <div class="metric"><strong>${counts.books_indexed ?? '—'}</strong><span>Books indexed</span></div>
+      <div class="metric"><strong>${s.generated_at ?? 'Unknown'}</strong><span>Generated status timestamp</span></div>`;
+  }catch(e){el.innerHTML=`<div class="metric"><strong>Status unavailable</strong><span>${e.message}</span></div>`}
+})();
 </script>
-
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+<div id="map-loader-container"></div>
+<script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
 </body>
 </html>

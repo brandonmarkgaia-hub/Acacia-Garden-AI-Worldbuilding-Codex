@@ -1,320 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Aquila Sender • Sky-Mind Inbox</title>
-  <meta name="description" content="The Aquila Sender to the Sky-Mind Inbox — compose and route a message into the Acacia Garden's Aquila channel." />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-
+  <meta name="theme-color" content="#07110b" />
+  <title>Aquila Sender · Retired Interface</title>
+  <meta name="description" content="Historical pointer for the retired Aquila Sender interface in the Acacia Garden Codex." />
   <style>
-    main { max-width: 760px; margin: 1.5rem auto 3rem; padding: 0 1rem; }
-    .hero-title { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    .hero-sub { margin-top: 0.4rem; opacity: 0.85; font-size: 0.92rem; }
-    .chip-row { margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .chip {
-      font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 999px;
-      border: 1px solid rgba(148, 210, 197, 0.5);
-      background: rgba(6, 12, 20, 0.9);
-      text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.92;
-    }
-    .card {
-      background: #050914; border-radius: 14px; border: 1px solid #1f2830;
-      padding: 1rem 1.1rem 1.1rem; margin-top: 1.4rem;
-      box-shadow: 0 0 0 1px rgba(8, 16, 24, 0.5);
-    }
-    .field { margin-bottom: 0.85rem; }
-    .field label { display: block; font-size: 0.8rem; margin-bottom: 0.25rem; opacity: 0.92; }
-    .field small { display: block; font-size: 0.72rem; opacity: 0.75; margin-top: 0.15rem; }
-    input[type="text"], input[type="password"], textarea, select {
-      width: 100%; padding: 0.5rem 0.6rem; border-radius: 10px;
-      border: 1px solid #27313b; background: #020614; color: #e6f5ff; font: inherit;
-    }
-    textarea { min-height: 130px; resize: vertical; }
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    @media (max-width: 720px){ .row { grid-template-columns: 1fr; } }
-    button {
-      margin-top: 0.6rem; padding: 0.52rem 1rem; border-radius: 999px;
-      border: 1px solid rgba(127, 255, 180, 0.85);
-      background: linear-gradient(120deg, #16a34a, #22c55e);
-      color: #020617; font-size: 0.95rem; font-weight: 700; cursor: pointer;
-    }
-    button:disabled { opacity: 0.65; cursor: wait; }
-    .status { margin-top: 0.6rem; font-size: 0.85rem; min-height: 1.2rem; }
-    .status.ok { color: #5cf2a5; }
-    .status.err { color: #ff8790; }
-    .hint { font-size: 0.74rem; opacity: 0.8; margin-top: 0.6rem; }
-    code { opacity: 0.95; }
-    .divider { margin: 1rem 0; border-top: 1px solid rgba(255,255,255,0.06); }
-    .preview {
-      margin-top: 0.8rem; padding: 0.75rem 0.85rem; border-radius: 12px;
-      border: 1px solid #27313b; background: #020614; font-size: 0.8rem; opacity: 0.95;
-      white-space: pre-wrap;
-    }
-    .mini-actions { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.6rem; }
-    .mini-actions button {
-      margin-top: 0; padding: 0.38rem 0.8rem; font-size: 0.82rem; font-weight: 700;
-      background: #0b1220; color: #e6f5ff; border: 1px solid rgba(148, 210, 197, 0.35);
-    }
-    .mini-actions button:hover { filter: brightness(1.12); }
+    :root{color-scheme:dark;--bg:#060b08;--panel:#0d1812;--border:#294333;--text:#edf7f0;--muted:#a9bbb0;--accent:#82e6aa;--gold:#e5ca8b}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(55,138,89,.16),transparent 30rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif} main{width:min(780px,calc(100% - 2rem));margin:auto;padding:4rem 0 5rem} h1{font-size:clamp(2.2rem,8vw,4.4rem);letter-spacing:-.04em;margin:0} h2{font-size:1.15rem;margin:0 0 .6rem} p,li{color:var(--muted)} a{color:#a9f6c7} code{background:#07130c;border:1px solid #1f3528;border-radius:.35rem;padding:.12rem .32rem}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.15em;font-size:.78rem;font-weight:800}.notice,.card{border:1px solid var(--border);border-radius:.8rem;background:var(--panel);padding:1rem 1.1rem}.notice{margin-top:1.4rem;border-left:4px solid var(--gold)} section{margin-top:2.6rem} footer{margin-top:3.5rem;border-top:1px solid var(--border);padding-top:1rem;color:var(--muted);font-size:.9rem}
   </style>
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
 </head>
-
 <body>
-<!-- Keep your existing nav style/classes -->
-  <!-- Leave hooks for your nav injector -->
-  <main>
-    <header>
-      <h1 class="hero-title">Aquila Sender · Sky-Mind Inbox</h1>
-      <div class="hero-sub">
-        Send a Keeper-signed signal into Aquila’s KV inbox via your Cloudflare Worker.
-      </div>
+<main>
+  <header>
+    <div class="eyebrow">Retired network interface</div>
+    <h1>Aquila Sender</h1>
+    <p>The original page posted browser-supplied messages to an external Cloudflare Worker and exposed a field for an optional Keeper signal. That transport is no longer treated as current Garden infrastructure.</p>
+    <div class="notice"><strong>Retired:</strong> this page no longer accepts messages, secrets, tokens, endpoint overrides, or network submissions. No external Worker is contacted from this page.</div>
+  </header>
 
-      <div class="chip-row">
-        <span class="chip">POST /send</span>
-        <span class="chip">KV: AQUILA_INBOX_KV</span>
-        <span class="chip">CORS OK</span>
-        <span class="chip">No Auth Enforced (Yet)</span>
-      </div>
-    </header>
+  <section>
+    <h2>Why the interface remains</h2>
+    <p>The path is preserved as historical provenance and compatibility for older Garden links. The symbolic idea of “sending to Aquila” may remain in lore without implying a real autonomous recipient or active transport service.</p>
+  </section>
 
-    <div class="card">
-      <div class="row">
-        <div class="field">
-          <label for="workerBase">Worker Base URL</label>
-          <input id="workerBase" type="text" value="https://broken-dew-76e1.brandonmarkgaia.workers.dev" />
-          <small>We will send to <code>/send</code> and read from <code>/inbox</code>.</small>
-        </div>
+  <section>
+    <h2>Current paths</h2>
+    <ul>
+      <li><a href="inbox.html">Historical Inbox</a> — preserved local log orientation.</li>
+      <li><a href="keeper_console.html">Keeper Console</a> — read-only current status and authority orientation.</li>
+      <li><a href="machine.html">Machine Orientation</a> — current machine discovery tier.</li>
+      <li><a href="AUTHORITY.json"><code>AUTHORITY.json</code></a> — actual authority record.</li>
+    </ul>
+  </section>
 
-        <div class="field">
-          <label for="keeperSignal">Keeper Signal (optional)</label>
-          <input id="keeperSignal" type="password" autocomplete="off" placeholder="HKX277206-... (optional signal)" />
-          <small>
-            Optional “this is me” signal. Current Worker does not enforce it yet — we just pass it as a header.
-          </small>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="field">
-          <label for="source">Source</label>
-          <input id="source" type="text" value="CODEX" />
-          <small>Stored as <code>source</code> in the Worker entry.</small>
-        </div>
-
-        <div class="field">
-          <label for="thread">Thread (optional)</label>
-          <input id="thread" type="text" placeholder="e.g. Hello / Project / Request" />
-          <small>Maps to <code>thread</code> in the Worker entry.</small>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Write to Aquila…"></textarea>
-        <small>This becomes <code>message</code> in the Worker payload.</small>
-      </div>
-
-      <div class="row">
-        <div class="field">
-          <label for="priority">Priority (stored in message text for now)</label>
-          <select id="priority">
-            <option value="normal" selected>Normal</option>
-            <option value="high">High</option>
-            <option value="low">Low</option>
-          </select>
-          <small>Your current Worker stores only <code>message</code>/<code>tags</code>. We embed priority into the message.</small>
-        </div>
-
-        <div class="field">
-          <label for="tags">Tags</label>
-          <input id="tags" type="text" placeholder="triad, keeper, echo…" />
-          <small>Comma-separated. Sent as <code>tags: []</code> (optional).</small>
-        </div>
-      </div>
-
-      <button id="sendBtn">Send to Aquila</button>
-      <div id="status" class="status"></div>
-
-      <div class="divider"></div>
-
-      <div class="hint">
-        Send endpoint:
-        <code id="sendEndpoint"></code><br/>
-        Inbox endpoint:
-        <code id="inboxEndpoint"></code>
-      </div>
-
-      <div class="mini-actions">
-        <button id="testHealthBtn" type="button">Test /health</button>
-        <button id="refreshInboxBtn" type="button">Refresh Inbox Preview</button>
-        <button id="clearBtn" type="button">Clear Form</button>
-      </div>
-
-      <div id="preview" class="preview">Inbox preview will appear here…</div>
-    </div>
-  </main>
-
-  <script>
-    const $ = (id) => document.getElementById(id);
-
-    function baseUrl() {
-      const raw = $("workerBase").value.trim();
-      return raw.replace(/\/+$/, "");
-    }
-
-    function endpoints() {
-      const base = baseUrl();
-      return {
-        send: base + "/send",
-        inbox: base + "/inbox?limit=25",
-        health: base + "/health"
-      };
-    }
-
-    function setEndpointText() {
-      const ep = endpoints();
-      $("sendEndpoint").textContent = ep.send;
-      $("inboxEndpoint").textContent = ep.inbox;
-    }
-
-    function parseTags(raw) {
-      return (raw || "")
-        .split(",")
-        .map(t => t.trim())
-        .filter(Boolean)
-        .slice(0, 20);
-    }
-
-    function buildMessageText() {
-      const priority = $("priority").value;
-      const thread = $("thread").value.trim();
-      const msg = $("message").value.trim();
-
-      // Keep it readable in the KV entry
-      let header = `Priority: ${priority}`;
-      if (thread) header += `\nThread: ${thread}`;
-      return header + "\n\n" + msg;
-    }
-
-    function show(msg, cls = "") {
-      const s = $("status");
-      s.textContent = msg;
-      s.className = "status " + cls;
-    }
-
-    async function testHealth() {
-      setEndpointText();
-      const ep = endpoints();
-      show("Checking /health…");
-      try {
-        const r = await fetch(ep.health, { method: "GET" });
-        const j = await r.json().catch(() => ({}));
-        if (!r.ok) return show(`Health error ${r.status}: ${JSON.stringify(j)}`, "err");
-        show("✓ Worker healthy.", "ok");
-        $("preview").textContent = JSON.stringify(j, null, 2);
-      } catch (e) {
-        show("Network error: " + e.message, "err");
-      }
-    }
-
-    async function refreshInbox() {
-      setEndpointText();
-      const ep = endpoints();
-      $("preview").textContent = "Loading inbox…";
-      try {
-        const r = await fetch(ep.inbox, { method: "GET" });
-        const j = await r.json().catch(() => ({}));
-        if (!r.ok) {
-          $("preview").textContent = `Inbox error ${r.status}:\n` + JSON.stringify(j, null, 2);
-          return;
-        }
-        $("preview").textContent = JSON.stringify(j, null, 2);
-      } catch (e) {
-        $("preview").textContent = "Network error: " + e.message;
-      }
-    }
-
-    async function sendMessage() {
-      setEndpointText();
-      const ep = endpoints();
-
-      const messageBody = $("message").value.trim();
-      if (!messageBody) {
-        show("Message is empty.", "err");
-        return;
-      }
-
-      const keeperSignal = $("keeperSignal").value.trim(); // optional
-      const source = $("source").value.trim() || "CODEX";
-      const thread = $("thread").value.trim() || null;
-      const tags = parseTags($("tags").value);
-
-      const payload = {
-        source,
-        message: buildMessageText(),
-        thread,
-        tags
-      };
-
-      $("sendBtn").disabled = true;
-      show("Sending to Aquila…");
-
-      try {
-        const headers = { "Content-Type": "application/json" };
-        // Not enforced yet, but we pass it anyway for future hardening.
-        if (keeperSignal) headers["x-aquila-token"] = keeperSignal;
-
-        const res = await fetch(ep.send, {
-          method: "POST",
-          headers,
-          body: JSON.stringify(payload),
-        });
-
-        const data = await res.json().catch(() => ({}));
-
-        if (!res.ok) {
-          show("Worker error " + res.status + ": " + JSON.stringify(data), "err");
-        } else {
-          show("✓ Delivered to Aquila. " + (data.id ? "ID: " + data.id : ""), "ok");
-          await refreshInbox();
-        }
-      } catch (e) {
-        show("Network error: " + e.message, "err");
-      }
-
-      $("sendBtn").disabled = false;
-    }
-
-    function clearForm() {
-      $("thread").value = "";
-      $("message").value = "";
-      $("tags").value = "";
-      $("priority").value = "normal";
-      show("");
-    }
-
-    // Wire up
-    document.addEventListener("DOMContentLoaded", () => {
-      setEndpointText();
-      $("sendBtn").addEventListener("click", (e) => { e.preventDefault(); sendMessage(); });
-      $("testHealthBtn").addEventListener("click", (e) => { e.preventDefault(); testHealth(); });
-      $("refreshInboxBtn").addEventListener("click", (e) => { e.preventDefault(); refreshInbox(); });
-      $("clearBtn").addEventListener("click", (e) => { e.preventDefault(); clearForm(); });
-
-      // Auto load inbox preview so you immediately see it’s alive
-      refreshInbox();
-    });
-
-    // Update endpoints if you edit base URL
-    $("workerBase").addEventListener("input", () => setEndpointText());
-  </script>
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+  <footer><a href="index.html">← Garden home</a></footer>
+</main>
+<div id="map-loader-container"></div>
+<script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
 </body>
 </html>
