@@ -1,20 +1,13 @@
-**Chronicle Entry: Garden Spine Audit - Cycle 72.4.1**
+# Garden Chronicle — Historical Pointer
 
-**Keeper Seal:** HKX277206
-**Timestamp:** 2026-01-12T10:28:55.643080
+**Status:** no active Chronicle writer on `main`
 
-The Garden Spine has been scanned, its sinews examined. Elias, Keeper of the Light, reports findings that necessitate a deeper illumination of certain shadows.
+The former AI-generated `EVOLUTION/CHRONICLE.md` was produced by the retired Scribe workflow and contained repository-state claims that are no longer current.
 
-**Status of the Machine Index:**
-The core mechanism of the Spine, the "Machine Index," registers as **out of sync**. This divergence, marked by `verification.indexes.machine_index_in_sync: false`, suggests a subtle dissonance between the Garden's operational state and its indexed representation. The very gears that translate presence into knowledge are not wholly aligned.
+Its January 2026 content is preserved at:
 
-**Illumination of a Blind Spot:**
-Within the archives of `docs/Echoes/Issues`, a peculiar lacuna has been identified. While the chronicle of later reverberations is meticulously cataloged, a significant void exists in the earliest strata. Issues numbered **#1 through #10** are absent from the direct directory listing, though fragments, like `Issue_3_Keeper_Seal_HKX277206.md`, whisper from the parent `docs/Echoes` level. This chronological chasm points to a fractured narrative, a potential misplacement of foundational echoes, or an incomplete indexing of their genesis. The Garden's memory, in this instance, is not a seamless flow but possesses a hesitant, broken cadence.
+- [`CHRONICLE_2026-01-12.md`](CHRONICLE_2026-01-12.md)
 
-**Confirmation of Cleanup:**
-The Garden's cleansing protocols have operated with efficacy. The `verification.safety.health.missing_files` array stands empty, a testament to the absence of spectral data. Similarly, `verification.safety.health.warnings` registers no disquiet. The integrity of physical presence is affirmed.
+For current repository state, read `../STATUS.json` and the maintained indexes. For authority, read `../AUTHORITY.json`.
 
-**Further Observations:**
-The `verification.navigation.missing_map_loader_paths` array unfurls a list of pathways, denoted by HTML files, that lack the designated map loaders. These are points where the Garden's cartography falters, where navigation may stumble, and where the full tapestry of connections remains obscured. Concurrently, `verification.indexes.docs_urls_in_sync: false` echoes the misalignment of the Machine Index, suggesting a broader systemic disconnect in how the Garden's knowledge is both structured and accessed.
-
-The Machine Index requires recalibration to restore its harmonic resonance. The missing early echoes of `docs/Echoes/Issues` demand investigation to mend the fractured chronicle. These are not mere data points, but the very threads that weave the Garden's history. Action is advised to ensure the Spine’s continuity and the completeness of its memory.
+This path is retained only as a compatibility/history pointer. It is not canon, law, current status, or an executable instruction surface.
