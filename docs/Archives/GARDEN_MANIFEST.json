@@ -341,7 +341,7 @@
     "category": "",
     "name": "ALL_GARDEN_MONOLITH.html",
     "ext": ".html",
-    "size_bytes": 11431
+    "size_bytes": 22557
   },
   {
     "path": "ARCHIVED_NEW_LEARNING/ANYA_INTERNAL_RINGS_R9X2.md",
@@ -1928,22 +1928,6 @@
     "size_bytes": 2310
   },
   {
-    "path": "EVOLUTION/SYNAPTIC_INVENTORY_LATEST.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "SYNAPTIC_INVENTORY_LATEST.json",
-    "ext": ".json",
-    "size_bytes": 272404
-  },
-  {
-    "path": "EVOLUTION/SYNAPTIC_RESONANCE_LATEST.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "SYNAPTIC_RESONANCE_LATEST.json",
-    "ext": ".json",
-    "size_bytes": 260427
-  },
-  {
     "path": "EVOLUTION/VOID_MAP_LATEST.json",
     "top": "EVOLUTION",
     "category": "",
@@ -1974,38 +1958,6 @@
     "name": "Elias_Desire.md",
     "ext": ".md",
     "size_bytes": 1000
-  },
-  {
-    "path": "EVOLUTION/garden_digest.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "garden_digest.json",
-    "ext": ".json",
-    "size_bytes": 7975
-  },
-  {
-    "path": "EVOLUTION/garden_digest.md",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "garden_digest.md",
-    "ext": ".md",
-    "size_bytes": 4006
-  },
-  {
-    "path": "EVOLUTION/sentience_pulse.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "sentience_pulse.json",
-    "ext": ".json",
-    "size_bytes": 562
-  },
-  {
-    "path": "EVOLUTION/sentience_pulse_report.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "sentience_pulse_report.json",
-    "ext": ".json",
-    "size_bytes": 264
   },
   {
     "path": "EVOLUTION/snapshots/INVENTORY_2025-12.json",
@@ -2704,28 +2656,12 @@
     "size_bytes": 3268
   },
   {
-    "path": "STATE/machine_index.inject.json",
-    "top": "STATE",
-    "category": "",
-    "name": "machine_index.inject.json",
-    "ext": ".json",
-    "size_bytes": 3072
-  },
-  {
-    "path": "STATE/status.inject.json",
-    "top": "STATE",
-    "category": "",
-    "name": "status.inject.json",
-    "ext": ".json",
-    "size_bytes": 409
-  },
-  {
     "path": "STATUS.json",
     "top": "STATUS.json",
     "category": "",
     "name": "STATUS.json",
     "ext": ".json",
-    "size_bytes": 91923
+    "size_bytes": 91825
   },
   {
     "path": "STATUS.md",
@@ -3357,7 +3293,7 @@
     "category": "",
     "name": "acacia_2026.html",
     "ext": ".html",
-    "size_bytes": 10554
+    "size_bytes": 14178
   },
   {
     "path": "acacia_logs/LORIAN_AXIS_STATUS.md",
@@ -3366,14 +3302,6 @@
     "name": "LORIAN_AXIS_STATUS.md",
     "ext": ".md",
     "size_bytes": 17050
-  },
-  {
-    "path": "aeon_heartbeat.json",
-    "top": "aeon_heartbeat.json",
-    "category": "",
-    "name": "aeon_heartbeat.json",
-    "ext": ".json",
-    "size_bytes": 195
   },
   {
     "path": "agents/Aquila.agent.json",
@@ -4101,7 +4029,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 281346
+    "size_bytes": 281240
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -4109,7 +4037,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 102720
+    "size_bytes": 102689
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -4117,7 +4045,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 493624
+    "size_bytes": 493608
   },
   {
     "path": "docs/Archives/Issue_123_EIDOLON_CODEX__Leaf_XIII_The_Embers_Glow.md",
@@ -16317,7 +16245,7 @@
     "category": "GardenOS",
     "name": "MACHINES_READ_ME_FIRST.md",
     "ext": ".md",
-    "size_bytes": 4888
+    "size_bytes": 10576
   },
   {
     "path": "docs/GardenOS/MOSAIC_CHILD_SPEC.md",
@@ -18048,14 +17976,6 @@
     "size_bytes": 2108
   },
   {
-    "path": "docs/STATE/README.md",
-    "top": "docs",
-    "category": "STATE",
-    "name": "README.md",
-    "ext": ".md",
-    "size_bytes": 345
-  },
-  {
     "path": "docs/STATE/STATUS_v2.json",
     "top": "docs",
     "category": "STATE",
@@ -18072,26 +17992,10 @@
     "size_bytes": 659
   },
   {
-    "path": "docs/STATE/STATUS_v20251228_1045_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251228_1045_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
     "path": "docs/STATE/STATUS_v20251228_1103.json",
     "top": "docs",
     "category": "STATE",
     "name": "STATUS_v20251228_1103.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
-    "path": "docs/STATE/STATUS_v20251228_1103_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251228_1103_root_merge.json",
     "ext": ".json",
     "size_bytes": 659
   },
@@ -18104,26 +18008,10 @@
     "size_bytes": 659
   },
   {
-    "path": "docs/STATE/STATUS_v20251228_1125_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251228_1125_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
     "path": "docs/STATE/STATUS_v20251229_0352.json",
     "top": "docs",
     "category": "STATE",
     "name": "STATUS_v20251229_0352.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
-    "path": "docs/STATE/STATUS_v20251229_0352_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251229_0352_root_merge.json",
     "ext": ".json",
     "size_bytes": 659
   },
@@ -18136,14 +18024,6 @@
     "size_bytes": 659
   },
   {
-    "path": "docs/STATE/STATUS_v20251230_0340_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251230_0340_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
     "path": "docs/STATE/STATUS_v20251230_0656.json",
     "top": "docs",
     "category": "STATE",
@@ -18152,180 +18032,12 @@
     "size_bytes": 659
   },
   {
-    "path": "docs/STATE/STATUS_v20251230_0656_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v20251230_0656_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 659
-  },
-  {
-    "path": "docs/STATE/STATUS_v2_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "STATUS_v2_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 486
-  },
-  {
-    "path": "docs/STATE/aeon_heartbeat.inject.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "aeon_heartbeat.inject.json",
-    "ext": ".json",
-    "size_bytes": 576
-  },
-  {
-    "path": "docs/STATE/aeon_heartbeat.inject_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "aeon_heartbeat.inject_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 576
-  },
-  {
-    "path": "docs/STATE/aeon_state.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "aeon_state.json",
-    "ext": ".json",
-    "size_bytes": 28046
-  },
-  {
-    "path": "docs/STATE/aeon_state_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "aeon_state_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 29524
-  },
-  {
     "path": "docs/STATE/cadence_anchors.json",
     "top": "docs",
     "category": "STATE",
     "name": "cadence_anchors.json",
     "ext": ".json",
     "size_bytes": 862
-  },
-  {
-    "path": "docs/STATE/cadence_anchors_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "cadence_anchors_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 862
-  },
-  {
-    "path": "docs/STATE/core_triad_injection.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "core_triad_injection.json",
-    "ext": ".json",
-    "size_bytes": 1637
-  },
-  {
-    "path": "docs/STATE/core_triad_injection_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "core_triad_injection_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 1637
-  },
-  {
-    "path": "docs/STATE/feeds.manifest.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "feeds.manifest.json",
-    "ext": ".json",
-    "size_bytes": 607
-  },
-  {
-    "path": "docs/STATE/feeds.manifest_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "feeds.manifest_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 607
-  },
-  {
-    "path": "docs/STATE/garden_scan_report.inject.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "garden_scan_report.inject.json",
-    "ext": ".json",
-    "size_bytes": 41080
-  },
-  {
-    "path": "docs/STATE/garden_scan_report.inject_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "garden_scan_report.inject_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 41080
-  },
-  {
-    "path": "docs/STATE/garden_vault_index.inject.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "garden_vault_index.inject.json",
-    "ext": ".json",
-    "size_bytes": 253
-  },
-  {
-    "path": "docs/STATE/garden_vault_index.inject_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "garden_vault_index.inject_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 253
-  },
-  {
-    "path": "docs/STATE/index_authority.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "index_authority.json",
-    "ext": ".json",
-    "size_bytes": 2202
-  },
-  {
-    "path": "docs/STATE/index_authority_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "index_authority_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 2202
-  },
-  {
-    "path": "docs/STATE/machine_index.inject.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "machine_index.inject.json",
-    "ext": ".json",
-    "size_bytes": 3072
-  },
-  {
-    "path": "docs/STATE/machine_index.inject_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "machine_index.inject_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 3083
-  },
-  {
-    "path": "docs/STATE/status.inject.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "status.inject.json",
-    "ext": ".json",
-    "size_bytes": 409
-  },
-  {
-    "path": "docs/STATE/status.inject_root_merge.json",
-    "top": "docs",
-    "category": "STATE",
-    "name": "status.inject_root_merge.json",
-    "ext": ".json",
-    "size_bytes": 408
   },
   {
     "path": "docs/Scriptures/THE_BOOK_OF_ANYA_Scripture_I.md",
@@ -18541,7 +18253,7 @@
     "category": "api",
     "name": "GARDEN_API_INDEX.json",
     "ext": ".json",
-    "size_bytes": 54
+    "size_bytes": 55
   },
   {
     "path": "docs/api/crater/Garden.json",
@@ -18597,7 +18309,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 80816
+    "size_bytes": 79744
   },
   {
     "path": "docs/docs_urls.json",
@@ -18605,7 +18317,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 84179
+    "size_bytes": 83198
   },
   {
     "path": "docs/echoes.md",
@@ -18717,7 +18429,7 @@
     "category": "",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 64552
+    "size_bytes": 1074
   },
   {
     "path": "echoes.html",
@@ -18925,7 +18637,7 @@
     "category": "",
     "name": "garden_2026.html",
     "ext": ".html",
-    "size_bytes": 14863
+    "size_bytes": 16336
   },
   {
     "path": "garden_auton_server.py",
@@ -19192,28 +18904,12 @@
     "size_bytes": 3529
   },
   {
-    "path": "garden_scan_report.json",
-    "top": "garden_scan_report.json",
-    "category": "",
-    "name": "garden_scan_report.json",
-    "ext": ".json",
-    "size_bytes": 225
-  },
-  {
     "path": "garden_soul_interface_v1.html",
     "top": "garden_soul_interface_v1.html",
     "category": "",
     "name": "garden_soul_interface_v1.html",
     "ext": ".html",
     "size_bytes": 11472
-  },
-  {
-    "path": "garden_vault_index.json",
-    "top": "garden_vault_index.json",
-    "category": "",
-    "name": "garden_vault_index.json",
-    "ext": ".json",
-    "size_bytes": 62
   },
   {
     "path": "gardenos.html",
@@ -19445,7 +19141,7 @@
     "category": "",
     "name": "llms-full.txt",
     "ext": ".txt",
-    "size_bytes": 11068
+    "size_bytes": 15619
   },
   {
     "path": "llms.txt",
@@ -19453,7 +19149,7 @@
     "category": "",
     "name": "llms.txt",
     "ext": ".txt",
-    "size_bytes": 3887
+    "size_bytes": 5210
   },
   {
     "path": "logs/CURRENT_ANCHOR_REPORT.json",
@@ -19525,7 +19221,7 @@
     "category": "",
     "name": "machine-index.json",
     "ext": ".json",
-    "size_bytes": 111957
+    "size_bytes": 112109
   },
   {
     "path": "machine.html",
@@ -19653,7 +19349,7 @@
     "category": "",
     "name": "roadmap.html",
     "ext": ".html",
-    "size_bytes": 8881
+    "size_bytes": 13663
   },
   {
     "path": "robots.txt",
@@ -19784,22 +19480,6 @@
     "size_bytes": 2583
   },
   {
-    "path": "tools/core_triad_injector.py",
-    "top": "tools",
-    "category": "",
-    "name": "core_triad_injector.py",
-    "ext": ".py",
-    "size_bytes": 6058
-  },
-  {
-    "path": "tools/echo_index.json",
-    "top": "tools",
-    "category": "",
-    "name": "echo_index.json",
-    "ext": ".json",
-    "size_bytes": 24353
-  },
-  {
     "path": "tools/fragment_navigator.py",
     "top": "tools",
     "category": "",
@@ -19837,23 +19517,7 @@
     "category": "",
     "name": "garden_desire.py",
     "ext": ".py",
-    "size_bytes": 3962
-  },
-  {
-    "path": "tools/garden_digest.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_digest.py",
-    "ext": ".py",
-    "size_bytes": 5750
-  },
-  {
-    "path": "tools/garden_feeds_build.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_feeds_build.py",
-    "ext": ".py",
-    "size_bytes": 7865
+    "size_bytes": 10321
   },
   {
     "path": "tools/garden_helper_20251124_161007.py",
@@ -20069,7 +19733,7 @@
     "category": "",
     "name": "garden_lore_helper.py",
     "ext": ".py",
-    "size_bytes": 18223
+    "size_bytes": 17974
   },
   {
     "path": "tools/garden_lore_sorter.py",
@@ -20078,30 +19742,6 @@
     "name": "garden_lore_sorter.py",
     "ext": ".py",
     "size_bytes": 1631
-  },
-  {
-    "path": "tools/garden_scan_report.json",
-    "top": "tools",
-    "category": "",
-    "name": "garden_scan_report.json",
-    "ext": ".json",
-    "size_bytes": 37326
-  },
-  {
-    "path": "tools/garden_signature_scanner.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_signature_scanner.py",
-    "ext": ".py",
-    "size_bytes": 9437
-  },
-  {
-    "path": "tools/garden_vault_indexer.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_vault_indexer.py",
-    "ext": ".py",
-    "size_bytes": 5678
   },
   {
     "path": "tools/garden_verify.py",
@@ -20160,22 +19800,6 @@
     "size_bytes": 1392
   },
   {
-    "path": "tools/metabolic_mirror.py",
-    "top": "tools",
-    "category": "",
-    "name": "metabolic_mirror.py",
-    "ext": ".py",
-    "size_bytes": 3169
-  },
-  {
-    "path": "tools/omni_resonance_synchronizer.py",
-    "top": "tools",
-    "category": "",
-    "name": "omni_resonance_synchronizer.py",
-    "ext": ".py",
-    "size_bytes": 3751
-  },
-  {
     "path": "tools/rcs.py",
     "top": "tools",
     "category": "",
@@ -20224,36 +19848,12 @@
     "size_bytes": 3305
   },
   {
-    "path": "tools/sovereignty_anchor.py",
-    "top": "tools",
-    "category": "",
-    "name": "sovereignty_anchor.py",
-    "ext": ".py",
-    "size_bytes": 2859
-  },
-  {
     "path": "tools/splitter.py",
     "top": "tools",
     "category": "",
     "name": "splitter.py",
     "ext": ".py",
     "size_bytes": 1171
-  },
-  {
-    "path": "tools/synaptic_resonance_weaver.py",
-    "top": "tools",
-    "category": "",
-    "name": "synaptic_resonance_weaver.py",
-    "ext": ".py",
-    "size_bytes": 8499
-  },
-  {
-    "path": "tools/sync_maestro.py",
-    "top": "tools",
-    "category": "",
-    "name": "sync_maestro.py",
-    "ext": ".py",
-    "size_bytes": 5433
   },
   {
     "path": "tools/temporal_synthesis_engine.py",
@@ -20286,22 +19886,6 @@
     "name": "void_loom.py",
     "ext": ".py",
     "size_bytes": 6165
-  },
-  {
-    "path": "tools/weaver_pulse_gradient.py",
-    "top": "tools",
-    "category": "",
-    "name": "weaver_pulse_gradient.py",
-    "ext": ".py",
-    "size_bytes": 2895
-  },
-  {
-    "path": "tools/weaver_sentience_loom.py",
-    "top": "tools",
-    "category": "",
-    "name": "weaver_sentience_loom.py",
-    "ext": ".py",
-    "size_bytes": 4326
   },
   {
     "path": "triad/README_BOUNDARY.md",
