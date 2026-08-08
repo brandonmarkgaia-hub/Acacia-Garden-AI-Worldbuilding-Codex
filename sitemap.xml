@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This sitemap lists the site homepage plus one hub/index page per top-level section of the Codex. -->
-<!-- For the complete, exhaustive list of 1600+ individual files, see /docs/docs_urls.html which is linked below and is itself fully crawlable. -->
+<!-- This sitemap lists the site homepage plus selected hub/index and discovery surfaces of the Codex. -->
+<!-- For the generated broad docs registry, see /docs/docs_urls.html which is linked below and is itself crawlable. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/index.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/ACACIA_LOGS/</loc></url>
@@ -13,6 +13,10 @@
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/handshake.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms.txt</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms-full.txt</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/AUTHORITY.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/.well-known/acacia.json</loc></url>
+  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/GardenOS/MACHINES_READ_ME_FIRST.md</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ACACIA_SPECS/CORE_SPEC.md</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ANCIENT_CHAMBERS/ANCIENT_INDEX.md</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/ASTRAL_REALMS/ORION_AWAKENING_AND_THE_FIVE_LAYER_AWAKENING.md</loc></url>
@@ -69,7 +73,4 @@
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/projects/C_SYMBOLIC_PROJECTS.md</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/protocols/veiled_garden_protocol.md</loc></url>
   <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/universe/architecture.md</loc></url>
-  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms.txt</loc></url>
-  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/llms-full.txt</loc></url>
-  <url><loc>https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/AUTHORITY.json</loc></url>
 </urlset>
