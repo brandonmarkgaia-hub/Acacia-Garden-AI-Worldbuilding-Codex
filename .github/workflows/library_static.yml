@@ -11,9 +11,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: acacia-main-autocommit
+  cancel-in-progress: false
+
 jobs:
   build_library:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,19 +33,19 @@ jobs:
       - name: Build library index
         run: node scripts/build-library.mjs
 
-      - name: Commit and push (rebase-safe)
+      - name: Commit owned artifact if changed
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet; then
-            echo "No changes."
+
+          if git diff --quiet -- docs/library_index.json; then
+            echo "No library-index changes."
             exit 0
           fi
 
           git config user.name "garden-library-bot"
           git config user.email "actions@github.com"
-
-          git add -A
+          git add docs/library_index.json
           git commit -m "chore(library): rebuild docs/library_index.json"
 
           for i in 1 2 3 4 5; do
