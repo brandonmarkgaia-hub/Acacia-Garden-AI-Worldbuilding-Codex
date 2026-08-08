@@ -1,4 +1,4 @@
-name: Garden Auton Index (Crowned Builder)
+name: Garden Crowned Builder (Deterministic)
 
 on:
   push:
@@ -13,16 +13,26 @@ on:
       - "STATUS.schema.json"
       - "machine-index.json"
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Garden Codex Maintenance"
+    types:
+      - completed
 
 permissions:
   contents: write
 
 concurrency:
-  group: garden-auton-index
+  group: garden-crowned-builder
   cancel-in-progress: false
 
 jobs:
   build-index:
+    if: >-
+      ${{
+        github.event_name != 'workflow_run' ||
+        github.event.workflow_run.conclusion == 'success'
+      }}
     runs-on: ubuntu-latest
 
     steps:
@@ -44,7 +54,7 @@ jobs:
           node-version: "20"
 
       # --- Deterministic builders ---
-      - name: Refresh STATUS + Novellas index
+      - name: Refresh STATUS + Novellas machine index
         run: python tools/garden_lore_helper.py
 
       - name: Build docs folder index pages
@@ -67,7 +77,7 @@ jobs:
         run: python tools/garden_verify.py
 
       # --- Publish (conflict-immune) ---
-      - name: Commit and push updated artifacts (conflict-immune)
+      - name: Commit and push owned artifacts
         shell: bash
         run: |
           set -euo pipefail
@@ -124,7 +134,10 @@ jobs:
 
             rsync -a --ignore-times /tmp/acacia_artifacts/ ./
 
-            git add -A
+            git add -- "${ARTIFACTS[@]}"
+            if [ "${#ARCHIVES[@]}" -gt 0 ]; then
+              git add -- "${ARCHIVES[@]}"
+            fi
 
             if git diff --cached --quiet; then
               echo "After reset+restore, nothing to commit."
