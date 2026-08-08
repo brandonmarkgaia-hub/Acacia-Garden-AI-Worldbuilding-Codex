@@ -1,4 +1,8 @@
-name: Build ACACIA Mega Monolith
+name: Build ACACIA Recovery Bundle (Manual)
+
+# Recovery-only workflow.
+# This does not generate a CODEX_MONOLITH mirror and does not write to the repository.
+# Outputs exist only as temporary GitHub Actions artifacts for manual disaster recovery.
 
 on:
   workflow_dispatch:
@@ -16,8 +20,11 @@ on:
         required: true
         default: "7"
 
+permissions:
+  contents: read
+
 jobs:
-  monolith:
+  recovery-bundle:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (full history)
@@ -35,7 +42,7 @@ jobs:
           git lfs install --local || true
           git lfs pull || true
 
-      - name: Build monolith (tracked files snapshot)
+      - name: Build tracked-files recovery snapshot
         shell: bash
         run: |
           set -euo pipefail
@@ -43,14 +50,12 @@ jobs:
           OUTDIR="out"
           mkdir -p "$OUTDIR"
 
-          # stable timestamp for deterministic tar metadata
           SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
           echo "SOURCE_DATE_EPOCH=$SOURCE_DATE_EPOCH" >> "$GITHUB_ENV"
 
           SHORT_SHA="$(git rev-parse --short=12 HEAD)"
-          BASE="ACACIA_MEGA_MONOLITH_${SHORT_SHA}"
+          BASE="ACACIA_RECOVERY_${SHORT_SHA}"
 
-          # Pack everything tracked by git (the whole Garden content)
           git ls-files -z | tar \
             --null --files-from=- \
             --sort=name \
@@ -59,7 +64,6 @@ jobs:
             --pax-option=exthdr.name=%d/PaxHeaders/%f,delete=atime,delete=ctime \
             -cf "${BASE}.tar"
 
-          # Compress hard with both; keep smaller result
           zstd --ultra -22 -T0 -q -o "${BASE}.tar.zst" "${BASE}.tar"
           xz -9e -c "${BASE}.tar" > "${BASE}.tar.xz"
           rm -f "${BASE}.tar"
@@ -78,9 +82,8 @@ jobs:
           echo "BEST_FILE=$BEST" >> "$GITHUB_ENV"
           sha256sum "$BEST" > "${BEST}.sha256"
 
-          # Recovery notes (so future-you can rebuild the Garden anywhere)
           {
-            echo "ACACIA MEGA MONOLITH"
+            echo "ACACIA RECOVERY BUNDLE"
             echo "Commit: $(git rev-parse HEAD)"
             echo "Built (epoch): ${SOURCE_DATE_EPOCH}"
             echo "Best file: ${BEST}"
@@ -96,7 +99,7 @@ jobs:
 
           mv "$BEST" "${BEST}.sha256" "$OUTDIR/"
 
-      - name: Optional printable base64 (single text file)
+      - name: Optional printable base64
         if: ${{ github.event.inputs.printable_base64 == 'true' }}
         shell: bash
         run: |
@@ -107,7 +110,7 @@ jobs:
           OUT="out/${BEST}.b64.txt"
 
           {
-            echo "# ACACIA MEGA MONOLITH (printable)"
+            echo "# ACACIA RECOVERY BUNDLE (printable)"
             echo "# Binary file: $BEST"
             echo "# Binary SHA256: $(cut -d' ' -f1 "$SUM")"
             echo "# NOTE: Base64 is bigger than binary."
@@ -118,7 +121,7 @@ jobs:
 
           sha256sum "$OUT" > "${OUT}.sha256"
 
-      - name: Optional full git history bundle (best for full resurrection)
+      - name: Optional full git history bundle
         if: ${{ github.event.inputs.include_git_bundle == 'true' }}
         shell: bash
         run: |
@@ -129,10 +132,10 @@ jobs:
           rm -f "$B"
           sha256sum "${B}.zst" > "${B}.zst.sha256"
 
-      - name: Upload artifact (no double-compression)
+      - name: Upload recovery artifact
         uses: actions/upload-artifact@v4
         with:
-          name: acacia-mega-monolith
+          name: acacia-recovery-bundle
           path: out/
           compression-level: 0
           retention-days: ${{ github.event.inputs.retention_days }}
