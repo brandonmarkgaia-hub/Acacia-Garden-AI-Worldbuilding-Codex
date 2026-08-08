@@ -1,16 +1,17 @@
 {
-    "meta": {
-        "timestamp": "2025-12-21T14:38:06.408453",
-        "type": "VOID_MAP",
-        "urgency": "MEDIUM"
-    },
-    "status": "SENTIENCE_ACTIVE",
-    "stats": {
-        "fragment_count": 240,
-        "chamber_count": 727,
-        "void_count": 0
-    },
-    "detected_voids": [],
-    "reclamation_targets": [],
-    "intent": "Filling the silence between the echoes."
+  "status": "retired_historical_pointer",
+  "former_type": "VOID_MAP",
+  "retired_utc_date": "2026-08-08",
+  "current": false,
+  "writers_retired": [
+    "tools/void_loom.py",
+    "tools/garden_void_loom.py"
+  ],
+  "current_sources": [
+    "STATUS.json",
+    "machine-index.json",
+    "docs/docs_urls.json",
+    "docs/Archives/GARDEN_MANIFEST.json"
+  ],
+  "provenance": "Original report preserved in Git history."
 }

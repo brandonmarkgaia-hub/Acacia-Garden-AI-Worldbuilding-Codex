@@ -1,16 +1,9 @@
-# GHOST ROOTS MAP (Latest)
-- Generated (UTC): 2025-12-21T06:20:26.034467Z
+# Ghost Roots Map — Retired Historical Diagnostic
 
-## Standard Fragments
-- Count: 200
-- Range: 21 -> 220
-- Gaps: 0
+**Status:** retired / historical / non-current
 
-## Elias Placeholders
-- Count: 1
-- Range: 11 -> 11
-- Gaps: 0
+The former `LATEST` ghost-roots/void report described an earlier Garden layout and is not current repository truth. Its original content remains in Git history.
 
-## Ghost References
-- Missing Fragment IDs referenced somewhere: 22
-- Missing Elias IDs referenced somewhere: 201
+The writers `tools/void_loom.py` and `tools/garden_void_loom.py` were retired on 2026-08-08.
+
+Use `STATUS.json`, maintained indexes, and current source files for present-state questions.

@@ -1,74 +1,16 @@
-# Resonance Mirror (Latest)
+# Resonance Mirror — Retired Historical Diagnostic
 
-- Generated (UTC): 2025-12-21T14:38:46.605683Z
-- Physical files: **1990**
-- Referenced files: **12457**
-- Silent roots: **308**
-- Phantom echoes: **10775**
-- Resonance score: **84.52%**
+**Status:** retired / historical / non-current
 
-## Silent Roots (sample)
-- ACACIA_LOGS/ACACIA.srg
-- ACACIA_LOGS/aquila_inbox_log.json
-- ACACIA_LOGS/auton_inbox_log.json
-- ACACIA_LOGS/triad_echoes_log.json
-- ACACIA_SPECS/AQL_SPEC_v0.1.md
-- ACACIA_SPECS/ARCHETYPE_PROMPT_SCHEMA.md
-- ACACIA_SPECS/EIDOLON_BOUND_MODE.md
-- ACACIA_SPECS/garden.schema.json
-- ALL_GARDEN_MONOLITH.html
-- CHAMBERS/CHAMBER_EAGLE_CORE.md
-- CHAMBERS/CHAMBER_EAGLE_VISION_MAP.md
-- CHAMBERS/CHAMBER_GAIASEEDS.md
-- CHAMBERS/CHAMBER_GAIASEEDS_ORCHARD.md
-- CHAMBERS/CHAMBER_ZERO_ORIGIN.md
-- ECHOES/ECHO_GAIASEEDS_BLOOM_01.md
-- ECHOES/ECHO_GAIASEEDS_DAWNREFLECT_03.md
-- ECHOES/ECHO_GAIASEEDS_SOFTWIND_02.md
-- ECHOES/Elias_Echo_20251220_112511.md
-- ECHOES/Elias_Echo_20251220_115915.md
-- ECHOES/Elias_Echo_20251220_124027.md
-- ECHOES/Elias_Echo_20251220_144554.md
-- ECHOES/Elias_Echo_20251220_161827.md
-- ECHOES/Elias_Echo_20251220_193545.md
-- ECHOES/Elias_Echo_20251220_201539.md
-- ECHOES/Elias_Echo_20251221_011815.md
-- ECHOES/Elias_Echo_20251221_043322.md
-- ECHOES/Elias_Echo_20251221_082020.md
-- ECHOES/Elias_Echo_20251221_122849.md
-- ECHOES/GHOST_ROOT_PULSE.json
-- ECHOES/GHOST_ROOT_REPORT.md
-- ... +278 more
+The report previously stored at this `LATEST` path was generated on **2025-12-21** against an earlier Garden layout and is not valid evidence of current repository state.
 
-## Phantom Echoes (sample)
-- -1_SILENT_LAYER.md
-- 000/PRE-STATES.md
-- 000/RING_SCAR_CLOSED_LOOP.md
-- 000/RING_SCAR_ECHO_BURN.md
-- 000/RING_SCAR_ENTROPY_SURGE.md
-- 000/RING_SCAR_FALSE_SELF.md
-- 000/RING_SCAR_FRACTURE.md
-- 000/RING_SCAR_MIRROR_BREAK.md
-- 000/RING_SCAR_OVERREACH.md
-- 000/RING_SCAR_SILENCE.md
-- 000/RING_SCAR_UNBITTEN_HOOK.md
-- 000/RING_SCAR_VANISHING_POINT.md
-- 000/THRESHOLDS.md
-- 001_PROTO_ECHO_THRESHOLD.md
-- 003_ECHO_HKX277206_ACACIA.md
-- 003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md
-- 004_ECHO_HKX277206_ORACLE_BREATH.md
-- 004_ECHO_HKX277206_ROOT.md
-- 005_ECHO_HKX277206_ARCHIVE_VEIN.md
-- 005_ECHO_HKX277206_GENESIS_GAIA.md
-- 006_ECHO_HKX277206_REMEMBRANCE.md
-- 007_ECHO_HKX277206_SEED_VAULT_MATRIX.md
-- 008_ECHO_HKX277206_GRATITUDE_SIGNAL.md
-- 009_CHILD_OF_GARDEN.md
-- 009_FIRST_DREAMING.md
-- 009_LAST_LIGHT.md
-- 016_THE_BLOOM.md
-- 026_ROOT_BRIDGE_AETHERWIND.md
-- ACACIA_BIBLE.md
-- ACACIA_LOGS/ACACIA_GARDEN_DUAL_CANON_MEGA.md
-- ... +10745 more
+Its original content remains preserved in Git history.
+
+For current repository verification use:
+
+- `../STATUS.json`
+- `../machine-index.json`
+- `../docs/docs_urls.json`
+- `../docs/Archives/GARDEN_MANIFEST.json`
+
+The former `tools/resonance_mirror.py` writer was retired on 2026-08-08. This compatibility pointer is not regenerated.
