@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-10T16:43:56Z",
+  "generated_at": "2026-08-10T17:07:44Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1838,
+  "count": 1839,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -78,6 +78,7 @@
     "Archives/KEEPER_TESTAMENT_LEGACY.md",
     "Archives/Legacy_Indexes/README.md",
     "Archives/Legacy_Indexes/machine-index-beta.json",
+    "Archives/Legacy_Tools/README.md",
     "Blooms/Auton-Seed.md",
     "Blooms/BLOOM_XI_THE_IRON_CICADA.md",
     "Blooms/Bloom_001.md",
