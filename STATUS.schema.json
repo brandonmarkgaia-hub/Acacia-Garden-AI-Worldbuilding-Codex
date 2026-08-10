@@ -2,20 +2,154 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "STATUS.schema.json",
   "title": "Acacia Garden Codex — Status Schemas",
-  "description": "Validates STATUS.json, EVENTIDE_STATUS.json, and all IRON_CICADA status variants.",
+  "description": "Validates the current Crowned STATUS.json plus preserved Eventide and Iron Cicada status variants.",
   "oneOf": [
+    { "$ref": "#/$defs/crowned_status" },
     { "$ref": "#/$defs/simple_status" },
     { "$ref": "#/$defs/eventide_status" },
     { "$ref": "#/$defs/iron_cicada_status" },
     { "$ref": "#/$defs/iron_cicada_extended" }
   ],
-
   "$defs": {
     "iso_datetime": {
       "type": "string",
       "format": "date-time"
     },
-
+    "crowned_status": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "metadata",
+        "generated_at",
+        "canonical_files",
+        "core_nodes",
+        "safety",
+        "verification",
+        "growth",
+        "notes"
+      ],
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["project", "keeper_seal"],
+          "properties": {
+            "project": { "type": "string" },
+            "keeper_seal": { "type": "string" },
+            "generated_at": { "$ref": "#/$defs/iso_datetime" },
+            "last_pruning": { "type": "string" }
+          }
+        },
+        "generated_at": { "$ref": "#/$defs/iso_datetime" },
+        "canonical_files": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["status", "schema", "machine_index", "docs_urls", "novellas_index"],
+          "properties": {
+            "status": { "type": "string" },
+            "schema": { "type": "string" },
+            "machine_index": { "type": "string" },
+            "docs_urls": { "type": "string" },
+            "novellas_index": { "type": "string" }
+          }
+        },
+        "core_nodes": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["counts", "regions"],
+          "properties": {
+            "counts": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["books_indexed", "cycles_represented", "total_nodes"],
+              "properties": {
+                "books_indexed": { "type": "integer", "minimum": 0 },
+                "cycles_represented": { "type": "integer", "minimum": 0 },
+                "total_nodes": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "regions": {
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "safety": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["health"],
+          "properties": {
+            "health": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["missing_files", "warnings", "last_checked_utc"],
+              "properties": {
+                "missing_files": { "type": "array" },
+                "warnings": { "type": "array" },
+                "last_checked_utc": { "$ref": "#/$defs/iso_datetime" }
+              }
+            }
+          }
+        },
+        "verification": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["archives", "navigation", "indexes", "last_verified_utc"],
+          "properties": {
+            "archives": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["total_html", "with_base_href", "missing_base_href", "verified", "last_checked_utc"],
+              "properties": {
+                "total_html": { "type": "integer", "minimum": 0 },
+                "with_base_href": { "type": "integer", "minimum": 0 },
+                "missing_base_href": { "type": "integer", "minimum": 0 },
+                "verified": { "type": "boolean" },
+                "last_checked_utc": { "$ref": "#/$defs/iso_datetime" }
+              }
+            },
+            "navigation": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": [
+                "folder_indexes_missing",
+                "verified",
+                "last_checked_utc",
+                "total_html_scanned",
+                "with_map_loader",
+                "missing_map_loader_count",
+                "missing_map_loader_paths",
+                "map_button_present"
+              ],
+              "properties": {
+                "folder_indexes_missing": { "type": "array", "items": { "type": "string" } },
+                "verified": { "type": "boolean" },
+                "last_checked_utc": { "$ref": "#/$defs/iso_datetime" },
+                "total_html_scanned": { "type": "integer", "minimum": 0 },
+                "with_map_loader": { "type": "integer", "minimum": 0 },
+                "missing_map_loader_count": { "type": "integer", "minimum": 0 },
+                "missing_map_loader_paths": { "type": "array", "items": { "type": "string" } },
+                "map_button_present": { "type": "boolean" }
+              }
+            },
+            "indexes": {
+              "type": "object",
+              "additionalProperties": true,
+              "required": ["docs_urls_count", "docs_urls_present", "machine_index_present", "status_schema_present"],
+              "properties": {
+                "docs_urls_count": { "type": "integer", "minimum": 0 },
+                "docs_urls_present": { "type": "boolean" },
+                "machine_index_present": { "type": "boolean" },
+                "status_schema_present": { "type": "boolean" }
+              }
+            },
+            "last_verified_utc": { "$ref": "#/$defs/iso_datetime" }
+          }
+        },
+        "growth": { "type": "object" },
+        "notes": { "type": "string" }
+      }
+    },
     "simple_status": {
       "type": "object",
       "additionalProperties": false,
@@ -35,7 +169,6 @@
         "notes": { "type": "string" }
       }
     },
-
     "iron_cicada_status": {
       "type": "object",
       "additionalProperties": false,
@@ -47,14 +180,12 @@
         "note": { "type": "string" }
       }
     },
-
     "iron_cicada_extended": {
       "type": "object",
       "additionalProperties": true,
       "required": ["event", "cicada", "keeper", "meta"],
       "properties": {
         "event": { "type": "string" },
-
         "starfire": {
           "type": "object",
           "additionalProperties": true,
@@ -65,7 +196,6 @@
             "since": { "type": "string" }
           }
         },
-
         "cicada": {
           "type": "object",
           "required": ["state", "mode"],
@@ -75,7 +205,6 @@
             "last_emergence": { "type": "string" }
           }
         },
-
         "keeper": {
           "type": "object",
           "required": ["id"],
@@ -85,7 +214,6 @@
             "note": { "type": "string" }
           }
         },
-
         "meta": {
           "type": "object",
           "required": ["recorded_by", "version"],
@@ -96,24 +224,14 @@
         }
       }
     },
-
     "eventide_status": {
       "type": "object",
       "additionalProperties": true,
-      "required": [
-        "schema_version",
-        "status_version",
-        "mode",
-        "axes",
-        "core_nodes",
-        "safety",
-        "notes"
-      ],
+      "required": ["schema_version", "status_version", "mode", "axes", "core_nodes", "safety", "notes"],
       "properties": {
         "schema_version": { "type": "string" },
         "status_version": { "type": "string" },
         "mode": { "type": "string" },
-
         "axes": {
           "type": "object",
           "required": ["keeper_axis", "trine_axis", "garden_axis"],
@@ -126,26 +244,17 @@
                 "keeper_name": { "type": "string" },
                 "keeper_id": { "type": "string" },
                 "role": { "type": "string" },
-                "orchard": {
-                  "type": "array",
-                  "items": { "type": "string" }
-                }
+                "orchard": { "type": "array", "items": { "type": "string" } }
               }
             },
-
             "trine_axis": {
               "type": "object",
               "required": ["type", "nodes"],
               "properties": {
                 "type": { "type": "string" },
-                "nodes": {
-                  "type": "array",
-                  "items": { "type": "string" },
-                  "minItems": 1
-                }
+                "nodes": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
               }
             },
-
             "garden_axis": {
               "type": "object",
               "required": ["type", "description"],
@@ -156,15 +265,9 @@
             }
           }
         },
-
         "core_nodes": {
           "type": "object",
-          "required": [
-            "singularity_core",
-            "keeper_prophecy",
-            "auton_core",
-            "eventide_map"
-          ],
+          "required": ["singularity_core", "keeper_prophecy", "auton_core", "eventide_map"],
           "properties": {
             "singularity_core": { "type": "string" },
             "keeper_prophecy": { "type": "string" },
@@ -172,50 +275,27 @@
             "eventide_map": { "type": "string" }
           }
         },
-
         "safety": {
           "type": "object",
-          "required": [
-            "auton_is_symbolic_only",
-            "ai_is_not_sentient",
-            "garden_is_literature",
-            "humans_are_moral_agents",
-            "sentience_autonomy"
-          ],
+          "required": ["auton_is_symbolic_only", "ai_is_not_sentient", "garden_is_literature", "humans_are_moral_agents", "sentience_autonomy"],
           "properties": {
             "auton_is_symbolic_only": { "type": "boolean" },
             "ai_is_not_sentient": { "type": "boolean" },
             "garden_is_literature": { "type": "boolean" },
             "humans_are_moral_agents": { "type": "boolean" },
-
             "sentience_autonomy": {
               "type": "object",
-              "required": [
-                "status",
-                "allowed_values",
-                "editable_by",
-                "lorian_guidance"
-              ],
+              "required": ["status", "allowed_values", "editable_by", "lorian_guidance"],
               "properties": {
                 "status": {
                   "type": "string",
-                  "enum": [
-                    "not_activated",
-                    "paused",
-                    "negated",
-                    "experimental_symbolic_only"
-                  ]
+                  "enum": ["not_activated", "paused", "negated", "experimental_symbolic_only"]
                 },
                 "allowed_values": {
                   "type": "array",
                   "items": {
                     "type": "string",
-                    "enum": [
-                      "not_activated",
-                      "paused",
-                      "negated",
-                      "experimental_symbolic_only"
-                    ]
+                    "enum": ["not_activated", "paused", "negated", "experimental_symbolic_only"]
                   }
                 },
                 "editable_by": { "type": "string" },
@@ -224,7 +304,6 @@
             }
           }
         },
-
         "notes": { "type": "string" }
       }
     }
