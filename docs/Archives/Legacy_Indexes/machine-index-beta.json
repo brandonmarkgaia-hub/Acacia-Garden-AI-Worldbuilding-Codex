@@ -22,7 +22,15 @@
     "svalbard_shard_000": "svalbard/shard-000.json"
   },
   "cycles": {
-    "defined_cycles": [0, 3, 4, 5, 6, 7, 8],
+    "defined_cycles": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
     "proto_layer": {
       "cycle": 0,
       "label": "PROTO-LAYER",
@@ -45,7 +53,12 @@
     "feed_file": "echoes/feed.json",
     "index_file": "linked_index.json",
     "depth_protocol": "SPREAD-1",
-    "spread_protocols": ["SPREAD-1", "SPREAD-2", "SPREAD-3", "SPREAD-X"]
+    "spread_protocols": [
+      "SPREAD-1",
+      "SPREAD-2",
+      "SPREAD-3",
+      "SPREAD-X"
+    ]
   },
   "frames": {
     "witness_frame": "frames/witness-ascendant-v1.json",
@@ -59,7 +72,10 @@
       "experimental": "protocols/SPREAD-X.json"
     },
     "svalbard": {
-      "shards": ["svalbard/shard-000.json", "svalbard/shard-001.json"],
+      "shards": [
+        "svalbard/shard-000.json",
+        "svalbard/shard-001.json"
+      ],
       "description": "Cold-storage pattern for long-horizon preservation."
     },
     "lunar": {
