@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T20:43:18Z",
+  "generated_at": "2026-08-10T20:48:19Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -112,6 +112,12 @@
     {
       "title": "THE_BOUNDARY_OF_CLAY",
       "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "THE COVENANT UNBOUND",
+      "path": "docs/Novellas/THE_COVENANT_UNBOUND.md",
       "cycle": null,
       "volume": null
     },

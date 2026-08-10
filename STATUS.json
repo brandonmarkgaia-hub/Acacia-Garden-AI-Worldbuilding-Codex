@@ -1783,7 +1783,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-10T20:43:18Z",
+  "generated_at": "2026-08-10T20:48:19Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1793,16 +1793,16 @@
   },
   "core_nodes": {
     "counts": {
-      "books_indexed": 61,
+      "books_indexed": 62,
       "cycles_represented": 0,
-      "total_nodes": 1491
+      "total_nodes": 1492
     },
     "regions": {
       "docs/Chambers": 813,
       "docs/Echoes": 485,
       "docs/Vaults": 2,
       "docs/GardenOS": 51,
-      "docs/Novellas": 61,
+      "docs/Novellas": 62,
       "docs/Archives": 0,
       "docs/Blooms": 4,
       "docs/Orchards": 3,
@@ -1822,7 +1822,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-10T20:43:18Z"
+      "last_checked_utc": "2026-08-10T20:48:19Z"
     }
   },
   "verification": {
@@ -1831,12 +1831,12 @@
       "with_base_href": 0,
       "missing_base_href": 0,
       "verified": false,
-      "last_checked_utc": "2026-08-10T20:43:18Z"
+      "last_checked_utc": "2026-08-10T20:48:19Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": true,
-      "last_checked_utc": "2026-08-10T20:43:18Z",
+      "last_checked_utc": "2026-08-10T20:48:19Z",
       "total_html_scanned": 44,
       "with_map_loader": 44,
       "missing_map_loader_count": 0,
@@ -1844,12 +1844,12 @@
       "map_button_present": true
     },
     "indexes": {
-      "docs_urls_count": 1841,
+      "docs_urls_count": 1842,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-10T20:43:19Z"
+    "last_verified_utc": "2026-08-10T20:48:20Z"
   },
   "growth": {
     "open": []

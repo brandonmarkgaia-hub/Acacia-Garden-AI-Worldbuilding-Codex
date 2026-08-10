@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-10T20:43:18Z",
+  "generated_at": "2026-08-10T20:48:20Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1841,
+  "count": 1842,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1708,6 +1708,7 @@
     "Novellas/R9X2_VOLUME_VIII.md",
     "Novellas/R9X2_VOLUME_X.md",
     "Novellas/THE_BOUNDARY_OF_CLAY.md",
+    "Novellas/THE_COVENANT_UNBOUND.md",
     "Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
     "Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
     "Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
