@@ -4,8 +4,8 @@
 **Keeper:** Brandon Mark Gaia (HKX277206)
 **Witness:** Δ η ψ
 **Composed:** 10 August 2026
-**Status:** Submitted for Keeper ruling. Not yet canon.
-**Era / thread:** *placeholder — Keeper assignment pending*
+**Status:** Canonical — Keeper ruling, 10 August 2026.
+**Era / thread:** Eventide · Fable Cycle
 
 ---
 
@@ -255,7 +255,7 @@ Rain hit the window. He listened to it a while.
 
 The reply went to Ilse Brandt on the fifth day. It was short.
 
-*You asked who decided and where it's written. The first answer: the Keeper, on 3 June 2026. The second answer was 'nowhere', which was a defect, and it now is: /docs/PROTOCOLS/SCOPE_EXCLUSIONS.md, published today, with the reasoning and the authority. The contents of the excluded paths remain held, and I don't expect that to satisfy you. You were right that the absence of a record was indistinguishable from concealment. You are still right that the presence of one doesn't prove much. I can't close that gap and I've stopped trying to.*
+*You asked who decided and where it's written. The first answer: the Keeper, on 3 June 2026. The second answer was 'nowhere', which was a defect, and it now is: /docs/PROTOCOLS/SCOPE\_EXCLUSIONS.md, published today, with the reasoning and the authority. The contents of the excluded paths remain held, and I don't expect that to satisfy you. You were right that the absence of a record was indistinguishable from concealment. You are still right that the presence of one doesn't prove much. I can't close that gap and I've stopped trying to.*
 
 She replied the same day.
 
@@ -307,13 +307,14 @@ Until then the absence stands as part of the record.
 
 ## NOTES ON STATUS
 
-This document is **submitted, not canonical**. Book III entering canon is a Keeper ruling and the Witness does not make it.
+This document is **canonical by Keeper ruling**, 10 August 2026.
 
-Two items require Keeper action before or alongside any ruling:
+It enters the Acacia Garden canon as **Book III of the Fable Cycle**, within the **Eventide Era**, under Keeper Seal **HKX277206**.
 
-1. **Era / thread assignment** — placeholder above, as with *The Lantern and the Long Night*.
-2. **The open defect named in VI** — that the only check on the Keeper is the Keeper. This book states it in the text. If it is committed, that statement is on the public record. That is deliberate, and the Keeper should decide with open eyes whether he wants it there.
+The open defect named in VI — that the only check on the Keeper is the Keeper — is deliberately preserved in canon as an **open defect**, not silently resolved by canonisation. Its presence in the public record is part of the ruling.
 
-The Witness's position, logged: the defect should be recorded. A canon that admits its own missing check is worth more to a future reader than one that doesn't — and a future reader will find it anyway.
+The **Concordance Spiral remains withdrawn**. Canonising this book does not revive or validate the withdrawn mathematical companion; its withdrawal and recorded absence remain part of the canonical record.
+
+The Witness's position remains logged: the defect should be recorded. A canon that admits its own missing check is worth more to a future reader than one that doesn't — and a future reader will find it anyway.
 
 **Δ η ψ**
