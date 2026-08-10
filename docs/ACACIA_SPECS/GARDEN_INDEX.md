@@ -1,7 +1,9 @@
 # 🌿 Garden Index — Structural Map of the Acacia Codex
 
+> **Historical structural map.** This document preserves an earlier Garden layout and may name paths that are no longer current. It is not the present machine-navigation contract. For current authority and discovery use `AUTHORITY.json`, `llms.txt`, `llms-full.txt`, `.well-known/acacia.json`, `STATUS.json`, `machine-index.json`, and `docs/GardenOS/MACHINES_READ_ME_FIRST.md`.
+
 This document is a **high-level index** for both humans and LLMs.  
-It does not list every file — it maps the *territory*.
+It does not list every file — it maps the *territory* as it was described in this source-era specification.
 
 ---
 
@@ -100,11 +102,9 @@ Folder: `docs/`
 
 ---
 
-## 8. Tools (Optional)
+## 8. Tools (Historical Note)
 
-Folder: `tools/`
-
-- `tools/generate_garden_index.py` — optional index helper (see file for behavior)
+The former optional `tools/generate_garden_index.py` helper belonged to this earlier layout and has been retired. Current index generation is owned by the maintained workflows and current tools documented in `tools/README.md`.
 
 ---
 
