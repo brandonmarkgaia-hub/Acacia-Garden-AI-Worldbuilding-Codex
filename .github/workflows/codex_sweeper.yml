@@ -11,6 +11,11 @@ on:
       - "ISSUE_INDEX.md"
       - ".github/workflows/codex_sweeper.yml"
 
+env:
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: init.defaultBranch
+  GIT_CONFIG_VALUE_0: main
+
 permissions:
   contents: read
   issues: read
