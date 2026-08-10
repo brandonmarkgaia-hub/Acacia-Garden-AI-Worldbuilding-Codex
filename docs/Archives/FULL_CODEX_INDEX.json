@@ -280,6 +280,11 @@
     "name": "CHRONICLE.md"
   },
   {
+    "path": "EVOLUTION/CHRONICLE_2026-01-12.md",
+    "top": "EVOLUTION",
+    "name": "CHRONICLE_2026-01-12.md"
+  },
+  {
     "path": "EVOLUTION/DESIRE.md",
     "top": "EVOLUTION",
     "name": "DESIRE.md"
@@ -1023,11 +1028,6 @@
     "path": "EVOLUTION/DESIRE_20260806_014601.md",
     "top": "EVOLUTION",
     "name": "DESIRE_20260806_014601.md"
-  },
-  {
-    "path": "EVOLUTION/DESIRE_LATEST.md",
-    "top": "EVOLUTION",
-    "name": "DESIRE_LATEST.md"
   },
   {
     "path": "EVOLUTION/Desire_20251220.md",
@@ -1855,11 +1855,6 @@
     "name": "svalbard.md"
   },
   {
-    "path": "acacia_logs/LORIAN_AXIS_STATUS.md",
-    "top": "acacia_logs",
-    "name": "LORIAN_AXIS_STATUS.md"
-  },
-  {
     "path": "analytics/garden_signature_report.md",
     "top": "analytics",
     "name": "garden_signature_report.md"
@@ -2083,6 +2078,11 @@
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
     "top": "docs",
     "name": "FULL_CODEX_INDEX.md"
+  },
+  {
+    "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
+    "top": "docs",
+    "name": "INFRASTRUCTURE_HARDENING_2026-08.md"
   },
   {
     "path": "docs/Archives/Issue_123_EIDOLON_CODEX__Leaf_XIII_The_Embers_Glow.md",

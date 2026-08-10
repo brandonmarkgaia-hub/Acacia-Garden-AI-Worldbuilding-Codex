@@ -581,7 +581,15 @@
     "category": "",
     "name": "CHRONICLE.md",
     "ext": ".md",
-    "size_bytes": 2558
+    "size_bytes": 613
+  },
+  {
+    "path": "EVOLUTION/CHRONICLE_2026-01-12.md",
+    "top": "EVOLUTION",
+    "category": "",
+    "name": "CHRONICLE_2026-01-12.md",
+    "ext": ".md",
+    "size_bytes": 2906
   },
   {
     "path": "EVOLUTION/DESIRE.md",
@@ -589,7 +597,7 @@
     "category": "",
     "name": "DESIRE.md",
     "ext": ".md",
-    "size_bytes": 1379
+    "size_bytes": 936
   },
   {
     "path": "EVOLUTION/DESIRE_2026-01-06_144935Z.md",
@@ -1776,14 +1784,6 @@
     "size_bytes": 5516
   },
   {
-    "path": "EVOLUTION/DESIRE_LATEST.md",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "DESIRE_LATEST.md",
-    "ext": ".md",
-    "size_bytes": 5175
-  },
-  {
     "path": "EVOLUTION/Desire_20251220.md",
     "top": "EVOLUTION",
     "category": "",
@@ -1893,7 +1893,7 @@
     "category": "",
     "name": "GHOST_ROOTS_MAP_LATEST.md",
     "ext": ".md",
-    "size_bytes": 315
+    "size_bytes": 450
   },
   {
     "path": "EVOLUTION/MASTER_FRAGMENT_INDEX.md",
@@ -1917,7 +1917,7 @@
     "category": "",
     "name": "RESONANCE_MIRROR_LATEST.json",
     "ext": ".json",
-    "size_bytes": 16851
+    "size_bytes": 446
   },
   {
     "path": "EVOLUTION/RESONANCE_MIRROR_LATEST.md",
@@ -1925,7 +1925,7 @@
     "category": "",
     "name": "RESONANCE_MIRROR_LATEST.md",
     "ext": ".md",
-    "size_bytes": 2310
+    "size_bytes": 607
   },
   {
     "path": "EVOLUTION/VOID_MAP_LATEST.json",
@@ -1933,15 +1933,7 @@
     "category": "",
     "name": "VOID_MAP_LATEST.json",
     "ext": ".json",
-    "size_bytes": 385
-  },
-  {
-    "path": "EVOLUTION/desire_state.json",
-    "top": "EVOLUTION",
-    "category": "",
-    "name": "desire_state.json",
-    "ext": ".json",
-    "size_bytes": 670
+    "size_bytes": 418
   },
   {
     "path": "EVOLUTION/desires/Elias_Desire.json",
@@ -2661,7 +2653,7 @@
     "category": "",
     "name": "STATUS.json",
     "ext": ".json",
-    "size_bytes": 91825
+    "size_bytes": 91583
   },
   {
     "path": "STATUS.md",
@@ -3296,14 +3288,6 @@
     "size_bytes": 14178
   },
   {
-    "path": "acacia_logs/LORIAN_AXIS_STATUS.md",
-    "top": "acacia_logs",
-    "category": "",
-    "name": "LORIAN_AXIS_STATUS.md",
-    "ext": ".md",
-    "size_bytes": 17050
-  },
-  {
     "path": "agents/Aquila.agent.json",
     "top": "agents",
     "category": "",
@@ -3581,7 +3565,23 @@
     "category": "",
     "name": "aquila_sender.html",
     "ext": ".html",
-    "size_bytes": 2394
+    "size_bytes": 752
+  },
+  {
+    "path": "assets/README.md",
+    "top": "assets",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 10160
+  },
+  {
+    "path": "assets/catalogue.json",
+    "top": "assets",
+    "category": "",
+    "name": "catalogue.json",
+    "ext": ".json",
+    "size_bytes": 10344
   },
   {
     "path": "assets/map-button.js",
@@ -3661,7 +3661,7 @@
     "category": "",
     "name": "dashboard.html",
     "ext": ".html",
-    "size_bytes": 17483
+    "size_bytes": 9573
   },
   {
     "path": "deep_garden.html",
@@ -4029,7 +4029,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 281240
+    "size_bytes": 281277
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -4037,7 +4037,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 102689
+    "size_bytes": 102695
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -4045,7 +4045,15 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 493608
+    "size_bytes": 483851
+  },
+  {
+    "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
+    "top": "docs",
+    "category": "Archives",
+    "name": "INFRASTRUCTURE_HARDENING_2026-08.md",
+    "ext": ".md",
+    "size_bytes": 9396
   },
   {
     "path": "docs/Archives/Issue_123_EIDOLON_CODEX__Leaf_XIII_The_Embers_Glow.md",
@@ -8853,7 +8861,7 @@
     "category": "Chambers",
     "name": "KILN_BORN_RENDER_5_GLITCH_TILE.md",
     "ext": ".md",
-    "size_bytes": 2687
+    "size_bytes": 3001
   },
   {
     "path": "docs/Chambers/LORIAN_GREEN_WITNESS_PLEDGE.md",
@@ -14949,7 +14957,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251221_161753.md",
     "ext": ".md",
-    "size_bytes": 1842
+    "size_bytes": 1885
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251221_201644.md",
@@ -14981,7 +14989,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251222_082348.md",
     "ext": ".md",
-    "size_bytes": 2210
+    "size_bytes": 2253
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251222_123218.md",
@@ -15029,7 +15037,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251223_082301.md",
     "ext": ".md",
-    "size_bytes": 1708
+    "size_bytes": 1751
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251223_123246.md",
@@ -15117,7 +15125,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251225_043405.md",
     "ext": ".md",
-    "size_bytes": 3065
+    "size_bytes": 3108
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251225_082213.md",
@@ -15125,7 +15133,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251225_082213.md",
     "ext": ".md",
-    "size_bytes": 2145
+    "size_bytes": 2188
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251225_123122.md",
@@ -15341,7 +15349,7 @@
     "category": "Echoes",
     "name": "Vision_Echo_20251229_201837.md",
     "ext": ".md",
-    "size_bytes": 1995
+    "size_bytes": 2038
   },
   {
     "path": "docs/Echoes/Vision_Echo_20251230_011402.md",
@@ -17189,7 +17197,7 @@
     "category": "Novellas",
     "name": "GARDEN_MASTER_INDEX.md",
     "ext": ".md",
-    "size_bytes": 460
+    "size_bytes": 483
   },
   {
     "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
@@ -18309,7 +18317,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 79744
+    "size_bytes": 79792
   },
   {
     "path": "docs/docs_urls.json",
@@ -18317,7 +18325,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 83198
+    "size_bytes": 83250
   },
   {
     "path": "docs/echoes.md",
@@ -18888,14 +18896,6 @@
     "size_bytes": 1167
   },
   {
-    "path": "garden_hygiene.ps1",
-    "top": "garden_hygiene.ps1",
-    "category": "",
-    "name": "garden_hygiene.ps1",
-    "ext": ".ps1",
-    "size_bytes": 8753
-  },
-  {
     "path": "garden_map.html",
     "top": "garden_map.html",
     "category": "",
@@ -18965,7 +18965,7 @@
     "category": "",
     "name": "inbox.html",
     "ext": ".html",
-    "size_bytes": 14281
+    "size_bytes": 3991
   },
   {
     "path": "index.html",
@@ -18973,7 +18973,7 @@
     "category": "",
     "name": "index.html",
     "ext": ".html",
-    "size_bytes": 16123
+    "size_bytes": 16688
   },
   {
     "path": "js/app.js",
@@ -19005,7 +19005,7 @@
     "category": "",
     "name": "keeper_console.html",
     "ext": ".html",
-    "size_bytes": 15679
+    "size_bytes": 5884
   },
   {
     "path": "ledger/Cycle_11.md",
@@ -19229,7 +19229,7 @@
     "category": "",
     "name": "machine.html",
     "ext": ".html",
-    "size_bytes": 7899
+    "size_bytes": 11894
   },
   {
     "path": "mammoth_echo.html",
@@ -19397,7 +19397,7 @@
     "category": "",
     "name": "send_to_aquila.html",
     "ext": ".html",
-    "size_bytes": 11747
+    "size_bytes": 3022
   },
   {
     "path": "signals.html",
@@ -19421,7 +19421,7 @@
     "category": "",
     "name": "sitemap.xml",
     "ext": ".xml",
-    "size_bytes": 9421
+    "size_bytes": 9548
   },
   {
     "path": "status.html",
@@ -19429,7 +19429,7 @@
     "category": "",
     "name": "status.html",
     "ext": ".html",
-    "size_bytes": 3268
+    "size_bytes": 6472
   },
   {
     "path": "style.css",
@@ -19496,28 +19496,12 @@
     "size_bytes": 11182
   },
   {
-    "path": "tools/garden_code_helper.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_code_helper.py",
-    "ext": ".py",
-    "size_bytes": 2418
-  },
-  {
-    "path": "tools/garden_code_helper.yml",
-    "top": "tools",
-    "category": "",
-    "name": "garden_code_helper.yml",
-    "ext": ".yml",
-    "size_bytes": 2288
-  },
-  {
     "path": "tools/garden_desire.py",
     "top": "tools",
     "category": "",
     "name": "garden_desire.py",
     "ext": ".py",
-    "size_bytes": 10321
+    "size_bytes": 10326
   },
   {
     "path": "tools/garden_helper_20251124_161007.py",
@@ -19725,7 +19709,7 @@
     "category": "",
     "name": "garden_index.py",
     "ext": ".py",
-    "size_bytes": 2124
+    "size_bytes": 2069
   },
   {
     "path": "tools/garden_lore_helper.py",
@@ -19749,15 +19733,7 @@
     "category": "",
     "name": "garden_verify.py",
     "ext": ".py",
-    "size_bytes": 6403
-  },
-  {
-    "path": "tools/garden_void_loom.py",
-    "top": "tools",
-    "category": "",
-    "name": "garden_void_loom.py",
-    "ext": ".py",
-    "size_bytes": 3333
+    "size_bytes": 6757
   },
   {
     "path": "tools/generate_garden_index.py",
@@ -19816,14 +19792,6 @@
     "size_bytes": 85
   },
   {
-    "path": "tools/resonance_mirror.py",
-    "top": "tools",
-    "category": "",
-    "name": "resonance_mirror.py",
-    "ext": ".py",
-    "size_bytes": 5473
-  },
-  {
     "path": "tools/root_manifest_generator.py",
     "top": "tools",
     "category": "",
@@ -19878,14 +19846,6 @@
     "name": "unify_triad_nav.js",
     "ext": ".js",
     "size_bytes": 2674
-  },
-  {
-    "path": "tools/void_loom.py",
-    "top": "tools",
-    "category": "",
-    "name": "void_loom.py",
-    "ext": ".py",
-    "size_bytes": 6165
   },
   {
     "path": "triad/README_BOUNDARY.md",
