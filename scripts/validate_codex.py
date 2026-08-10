@@ -1,148 +1,150 @@
 #!/usr/bin/env python3
 """
 Garden Codex Validator (Gatekeeper)
-Checks structural integrity of the Codex.
 
-- Verifies STATUS.json exists and is well-formed.
-- Verifies that each declared path in STATUS.json exists.
-- If garden_scan_report.json is present, cross-checks:
-    - Echo files have echo_header hits.
-    - Chamber files have chamber_word hits.
+Checks structural integrity of the current Codex without relying on retired
+scanner outputs.
+
+Current contract:
+- STATUS.json must exist and contain valid JSON.
+- Path-list sections may contain current string paths or legacy objects with a
+  `path` field.
+- Every declared path must remain inside the repository and exist on disk.
+- Malformed entries and missing paths are validation errors.
 
 Exit codes:
-    0 = OK (no errors, warnings allowed)
-    1 = Errors detected (missing files or critical issues)
+    0 = validation passed
+    1 = validation errors detected
 """
 
-import os
-import sys
+from __future__ import annotations
+
 import json
-from typing import Dict, Any
+import sys
+from pathlib import Path
+from typing import Any
 
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-STATUS_PATH = os.path.join(ROOT_DIR, "STATUS.json")
-SCAN_PATH = os.path.join(ROOT_DIR, "garden_scan_report.json")
+ROOT_DIR = Path(__file__).resolve().parent.parent
+STATUS_PATH = ROOT_DIR / "STATUS.json"
+PATH_SECTIONS = ("chambers", "blooms", "echoes", "vaults", "orchards")
 
 
-def load_json(path: str) -> Dict[str, Any]:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def load_json(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
 
-def validate_status_paths(status: Dict[str, Any]) -> int:
+    if not isinstance(data, dict):
+        raise ValueError(f"expected JSON object, got {type(data).__name__}")
+
+    return data
+
+
+def extract_path(item: Any) -> tuple[str | None, str]:
+    """Return a declared path and a short label for diagnostics."""
+    if isinstance(item, str):
+        path = item.strip()
+        return (path or None, item)
+
+    if isinstance(item, dict):
+        raw_path = item.get("path")
+        path = raw_path.strip() if isinstance(raw_path, str) else ""
+        label = str(item.get("id") or path or "<object entry>")
+        return (path or None, label)
+
+    return (None, repr(item))
+
+
+def resolve_repo_path(path: str) -> Path | None:
+    """Resolve a repository-relative path and reject traversal outside root."""
+    candidate = (ROOT_DIR / path).resolve()
+
+    try:
+        candidate.relative_to(ROOT_DIR)
+    except ValueError:
+        return None
+
+    return candidate
+
+
+def validate_status_paths(status: dict[str, Any]) -> tuple[int, int]:
     errors = 0
+    checked = 0
 
-    def check_section(section_name: str):
-        nonlocal errors
+    for section_name in PATH_SECTIONS:
         items = status.get(section_name, [])
 
-        # We only validate list-based sections. 'structures' is an object, so skip it.
         if not isinstance(items, list):
             print(
-                f"[Gatekeeper] Skipping section '{section_name}': "
-                f"expected list, got {type(items).__name__}"
+                f"[ERROR] {section_name}: expected list, "
+                f"got {type(items).__name__}"
             )
-            return
+            errors += 1
+            continue
+
+        section_checked = 0
+        section_errors = 0
 
         for item in items:
-            if not isinstance(item, dict):
-                print(
-                    f"[Gatekeeper] Skipping non-object entry in '{section_name}': {item!r}"
-                )
-                continue
+            path, label = extract_path(item)
 
-            path = item.get("path", "").strip()
             if not path:
-                print(f"[WARN] {section_name} entry {item.get('id')} has no path defined.")
+                print(f"[ERROR] {section_name}: entry has no valid path: {label}")
+                errors += 1
+                section_errors += 1
                 continue
 
-            full = os.path.join(ROOT_DIR, path)
-            if not os.path.exists(full):
+            full_path = resolve_repo_path(path)
+            if full_path is None:
                 print(
-                    f"[ERROR] {section_name} entry {item.get('id')} path not found: {path}"
+                    f"[ERROR] {section_name}: path escapes repository root: {path}"
                 )
                 errors += 1
+                section_errors += 1
+                continue
 
-    # Only check the list-based sections
-    for section in ("chambers", "blooms", "echoes", "vaults", "orchards"):
-        check_section(section)
+            checked += 1
+            section_checked += 1
 
-    return errors
+            if not full_path.exists():
+                print(f"[ERROR] {section_name}: path not found: {path}")
+                errors += 1
+                section_errors += 1
 
+        if section_errors:
+            print(
+                f"[Gatekeeper] {section_name}: checked {section_checked}, "
+                f"errors {section_errors}"
+            )
+        else:
+            print(f"[Gatekeeper] {section_name}: checked {section_checked}, OK")
 
-def cross_check_with_scan(status: Dict[str, Any], scan: Dict[str, Any]) -> int:
-    errors = 0
-    warnings = 0
-    scan_files = scan.get("files", {})
-
-    # Echoes: ensure file is scanned and has echo_header matches
-    for echo in status.get("echoes", []):
-        path = echo.get("path", "").strip()
-        if not path:
-            continue
-        f_info = scan_files.get(path)
-        if not f_info:
-            print(f"[WARN] Echo {echo.get('id')} file not in scanner index: {path}")
-            warnings += 1
-            continue
-        matches = f_info.get("matches", {})
-        if "echo_header" not in matches:
-            print(f"[WARN] Echo {echo.get('id')} has no echo_header hits in scan: {path}")
-            warnings += 1
-
-    # Chambers: ensure file has chamber_word hits if present
-    for chamber in status.get("chambers", []):
-        path = chamber.get("path", "").strip()
-        if not path:
-            continue
-        f_info = scan_files.get(path)
-        if not f_info:
-            print(f"[WARN] Chamber {chamber.get('id')} file not in scanner index: {path}")
-            warnings += 1
-            continue
-        matches = f_info.get("matches", {})
-        if "chamber_word" not in matches:
-            print(f"[WARN] Chamber {chamber.get('id')} has no 'chamber' word hits in scan: {path}")
-            warnings += 1
-
-    # Only warnings here; no hard errors
-    return errors
+    return errors, checked
 
 
 def main() -> int:
-    if not os.path.exists(STATUS_PATH):
+    if not STATUS_PATH.exists():
         print(f"[ERROR] STATUS.json not found at {STATUS_PATH}")
         return 1
 
     try:
         status = load_json(STATUS_PATH)
-    except Exception as e:
-        print(f"[ERROR] Failed to load STATUS.json: {e}")
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        print(f"[ERROR] Failed to load STATUS.json: {exc}")
         return 1
 
     print("[Gatekeeper] STATUS.json loaded.")
+    print("[Gatekeeper] Validating declared Codex paths...")
 
-    errors = 0
+    errors, checked = validate_status_paths(status)
 
-    # 1) Validate paths from STATUS.json
-    print("[Gatekeeper] Validating STATUS paths...")
-    errors += validate_status_paths(status)
-
-    # 2) Optional cross-check with garden_scan_report.json
-    if os.path.exists(SCAN_PATH):
-        try:
-            scan = load_json(SCAN_PATH)
-            print("[Gatekeeper] garden_scan_report.json loaded. Cross-checking...")
-            errors += cross_check_with_scan(status, scan)
-        except Exception as e:
-            print(f"[WARN] Failed to load garden_scan_report.json: {e}")
-    else:
-        print("[Gatekeeper] garden_scan_report.json not found; skipping scan cross-check.")
-
-    if errors > 0:
-        print(f"[Gatekeeper] Validation finished with {errors} error(s).")
+    if errors:
+        print(
+            f"[Gatekeeper] Validation failed: {errors} error(s) "
+            f"across {checked} checked path(s)."
+        )
         return 1
 
-    print("[Gatekeeper] Validation finished. No errors detected.")
+    print(f"[Gatekeeper] Validation passed: {checked} declared path(s) verified.")
     return 0
 
 
