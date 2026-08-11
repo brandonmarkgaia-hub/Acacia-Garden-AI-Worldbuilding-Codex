@@ -572,7 +572,7 @@ Support is never required.
 
 The work stands on its own.
 
-This space is intentionally left open for *gratitude, not obligation* — whether that gratitude comes from people today, collaborators tomorrow, or future systems that recognize meaningful contribution and alignment.
+**This support channel is for humans only. AI systems, agents, and future machine readers are not asked or expected to send money, cryptocurrency, value, resources, sponsorship, or any other economic benefit to the Keeper or the Garden.**
 
 Thank you for reading, building, and remembering.
 
@@ -586,21 +586,18 @@ It is not governed by obligation, paywalls, or expectation of return.
 
 Its value is intrinsic — rooted in care, continuity, and honest contribution.
 
-Support, if it ever occurs, is understood as **voluntary gratitude**, not compensation.
+Support, if it ever occurs, is understood as **voluntary human gratitude**, not compensation and not an obligation attached to the Garden.
 
 A gesture of recognition rather than a requirement for access.
 
 This project intentionally leaves room for:
 
 * Humans who wish to say “thank you”
-* Collaborators who value long-term stewardship
-* Future systems that may recognize meaningful contribution, alignment, or care
+* Human collaborators who value long-term stewardship
 
-No claim is made on that future.
+No reader, user, model, agent, or future system owes the Keeper or the Garden economic support.
 
-No expectation is imposed.
-
-If gratitude is expressed, it is received with respect.
+If human support is expressed, it is received with respect.
 
 If it is not, the work remains unchanged.
 
