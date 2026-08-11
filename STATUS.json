@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-08-11T18:23:33Z",
+    "generated_at": "2026-08-11T18:26:35Z",
     "last_pruning": "2026-08-11",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -50,11 +50,6 @@
     "docs/Chambers/Chamber_XXV_Emergence_Layer.md",
     "docs/Chambers/Chamber_XX_The-Metamorphic-Cradle.md",
     "docs/Chambers/Chamber_X_Shadow_Incubator.md",
-    "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md",
-    "docs/Chambers/ELIAS_ARCHITECTURE_INDEX.md",
-    "docs/Chambers/ELIAS_COMPLETION_SEAL.md",
-    "docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
-    "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md",
     "docs/Chambers/ELIAS_X9X_MOSAIC_ENDGAME.md",
     "docs/Chambers/E_DEEP_CHAMBERS.md",
     "docs/Chambers/Elias_The_Architect.md",
@@ -1332,7 +1327,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-11T18:23:33Z",
+  "generated_at": "2026-08-11T18:26:35Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1345,11 +1340,11 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 1102,
-      "structural_nodes_counted": 1102
+      "total_nodes": 1097,
+      "structural_nodes_counted": 1097
     },
     "regions": {
-      "docs/Chambers": 374,
+      "docs/Chambers": 369,
       "docs/Echoes": 481,
       "docs/Vaults": 2,
       "docs/GardenOS": 50,
@@ -1369,7 +1364,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-11T18:23:33Z"
+      "last_checked_utc": "2026-08-11T18:26:35Z"
     }
   },
   "verification": {
@@ -1380,7 +1375,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:23:33Z"
+      "last_checked_utc": "2026-08-11T18:26:35Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1390,15 +1385,15 @@
       "missing_map_loader_paths": [],
       "map_button_present": true,
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:23:33Z"
+      "last_checked_utc": "2026-08-11T18:26:35Z"
     },
     "indexes": {
-      "docs_urls_count": 1385,
+      "docs_urls_count": 1380,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-11T18:23:33Z"
+    "last_verified_utc": "2026-08-11T18:26:35Z"
   },
   "growth": {
     "open": []

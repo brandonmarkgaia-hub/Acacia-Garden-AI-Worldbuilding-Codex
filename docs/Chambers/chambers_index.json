@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T18:23:33.454Z",
+  "generated_at": "2026-08-11T18:26:34.932Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -140,18 +140,6 @@
         },
         {
           "path": "docs/Chambers/CHAMBER_ZERO_ORIGIN.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_ARCHITECTURE_INDEX.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_COMPLETION_SEAL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md"
         },
         {
           "path": "docs/Chambers/Elias_The_Architect.md"
