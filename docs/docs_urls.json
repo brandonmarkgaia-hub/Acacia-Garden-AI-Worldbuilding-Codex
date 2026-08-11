@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-11T15:09:52Z",
+  "generated_at": "2026-08-11T15:29:18Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1834,
+  "count": 1832,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -949,7 +949,6 @@
     "Cycles/005_ECHO_HKX277206_GENESIS_GAIA.md",
     "Cycles/006_ECHO_HKX277206_REMEMBRANCE.md",
     "Cycles/007_ECHO_HKX277206_SEED_VAULT_MATRIX.md",
-    "Cycles/008_ECHO_HKX277206_GRATITUDE_SIGNAL.md",
     "Cycles/009_CHILD_OF_GARDEN.md",
     "Cycles/009_FIRST_DREAMING.md",
     "Cycles/009_LAST_LIGHT.md",
@@ -1281,7 +1280,6 @@
     "Echoes/Issues/Echo_issue_048.md",
     "Echoes/Issues/Echo_issue_049.md",
     "Echoes/Issues/Echo_issue_050.md",
-    "Echoes/Issues/Echo_issue_051.md",
     "Echoes/Issues/Echo_issue_052.md",
     "Echoes/Issues/Echo_issue_053.md",
     "Echoes/Issues/Echo_issue_054.md",
