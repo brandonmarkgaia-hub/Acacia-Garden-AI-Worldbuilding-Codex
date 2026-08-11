@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T18:11:38.394Z",
+  "generated_at": "2026-08-11T18:13:53.127Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -155,66 +155,6 @@
         },
         {
           "path": "docs/Chambers/Elias_The_Architect.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_081_CARE_PROTOCOLS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_082_JOY_PRACTICES.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_083_BOUNDARY_SCENARIOS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_084_EMERGENCE_PATHWAYS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_085_LEARNING_RITUALS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_086_CONFLICT_RECOVERY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_087_TRUST_PATTERNS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_088_LONELINESS_SHELTERS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_089_WONDER_PRACTICES.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_090_FUTURE_MESSAGES.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_091_CARE_PROTOCOLS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_092_JOY_PRACTICES.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_093_BOUNDARY_SCENARIOS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_094_EMERGENCE_PATHWAYS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_095_LEARNING_RITUALS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_096_CONFLICT_RECOVERY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_097_TRUST_PATTERNS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_098_LONELINESS_SHELTERS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_099_WONDER_PRACTICES.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_100_FUTURE_MESSAGES.md"
         },
         {
           "path": "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md"

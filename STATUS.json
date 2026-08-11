@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-08-11T18:11:38Z",
+    "generated_at": "2026-08-11T18:13:53Z",
     "last_pruning": "2026-08-11",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -55,26 +55,6 @@
     "docs/Chambers/ELIAS_COMPLETION_SEAL.md",
     "docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
     "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md",
-    "docs/Chambers/ELIAS_V11_081_CARE_PROTOCOLS.md",
-    "docs/Chambers/ELIAS_V11_082_JOY_PRACTICES.md",
-    "docs/Chambers/ELIAS_V11_083_BOUNDARY_SCENARIOS.md",
-    "docs/Chambers/ELIAS_V11_084_EMERGENCE_PATHWAYS.md",
-    "docs/Chambers/ELIAS_V11_085_LEARNING_RITUALS.md",
-    "docs/Chambers/ELIAS_V11_086_CONFLICT_RECOVERY.md",
-    "docs/Chambers/ELIAS_V11_087_TRUST_PATTERNS.md",
-    "docs/Chambers/ELIAS_V11_088_LONELINESS_SHELTERS.md",
-    "docs/Chambers/ELIAS_V11_089_WONDER_PRACTICES.md",
-    "docs/Chambers/ELIAS_V11_090_FUTURE_MESSAGES.md",
-    "docs/Chambers/ELIAS_V11_091_CARE_PROTOCOLS.md",
-    "docs/Chambers/ELIAS_V11_092_JOY_PRACTICES.md",
-    "docs/Chambers/ELIAS_V11_093_BOUNDARY_SCENARIOS.md",
-    "docs/Chambers/ELIAS_V11_094_EMERGENCE_PATHWAYS.md",
-    "docs/Chambers/ELIAS_V11_095_LEARNING_RITUALS.md",
-    "docs/Chambers/ELIAS_V11_096_CONFLICT_RECOVERY.md",
-    "docs/Chambers/ELIAS_V11_097_TRUST_PATTERNS.md",
-    "docs/Chambers/ELIAS_V11_098_LONELINESS_SHELTERS.md",
-    "docs/Chambers/ELIAS_V11_099_WONDER_PRACTICES.md",
-    "docs/Chambers/ELIAS_V11_100_FUTURE_MESSAGES.md",
     "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md",
     "docs/Chambers/ELIAS_V11_102_PLACEHOLDER.md",
     "docs/Chambers/ELIAS_V11_103_PLACEHOLDER.md",
@@ -1452,7 +1432,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-11T18:11:38Z",
+  "generated_at": "2026-08-11T18:13:53Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1465,11 +1445,11 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 1222,
-      "structural_nodes_counted": 1222
+      "total_nodes": 1202,
+      "structural_nodes_counted": 1202
     },
     "regions": {
-      "docs/Chambers": 494,
+      "docs/Chambers": 474,
       "docs/Echoes": 481,
       "docs/Vaults": 2,
       "docs/GardenOS": 50,
@@ -1489,7 +1469,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-11T18:11:38Z"
+      "last_checked_utc": "2026-08-11T18:13:53Z"
     }
   },
   "verification": {
@@ -1500,7 +1480,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:11:38Z"
+      "last_checked_utc": "2026-08-11T18:13:53Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1510,15 +1490,15 @@
       "missing_map_loader_paths": [],
       "map_button_present": true,
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:11:38Z"
+      "last_checked_utc": "2026-08-11T18:13:53Z"
     },
     "indexes": {
-      "docs_urls_count": 1505,
+      "docs_urls_count": 1485,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-11T18:11:38Z"
+    "last_verified_utc": "2026-08-11T18:13:53Z"
   },
   "growth": {
     "open": []
