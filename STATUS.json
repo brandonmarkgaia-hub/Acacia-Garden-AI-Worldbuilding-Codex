@@ -1783,7 +1783,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-11T15:37:44Z",
+  "generated_at": "2026-08-11T16:55:13Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1793,16 +1793,16 @@
   },
   "core_nodes": {
     "counts": {
-      "books_indexed": 61,
+      "books_indexed": 57,
       "cycles_represented": 0,
-      "total_nodes": 1485
+      "total_nodes": 1478
     },
     "regions": {
       "docs/Chambers": 813,
       "docs/Echoes": 481,
       "docs/Vaults": 2,
       "docs/GardenOS": 50,
-      "docs/Novellas": 61,
+      "docs/Novellas": 57,
       "docs/Archives": 0,
       "docs/Blooms": 4,
       "docs/Orchards": 3,
@@ -1814,15 +1814,15 @@
       "CYCLES": 0,
       "LAWS": 0,
       "WELLS": 0,
-      "tools": 8,
-      ".github/workflows": 12
+      "tools": 6,
+      ".github/workflows": 11
     }
   },
   "safety": {
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-11T15:37:44Z"
+      "last_checked_utc": "2026-08-11T16:55:13Z"
     }
   },
   "verification": {
@@ -1831,12 +1831,12 @@
       "with_base_href": 0,
       "missing_base_href": 0,
       "verified": false,
-      "last_checked_utc": "2026-08-11T15:37:44Z"
+      "last_checked_utc": "2026-08-11T16:55:13Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
       "verified": true,
-      "last_checked_utc": "2026-08-11T15:37:44Z",
+      "last_checked_utc": "2026-08-11T16:55:13Z",
       "total_html_scanned": 44,
       "with_map_loader": 44,
       "missing_map_loader_count": 0,
@@ -1844,12 +1844,12 @@
       "map_button_present": true
     },
     "indexes": {
-      "docs_urls_count": 1829,
+      "docs_urls_count": 1825,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-11T15:37:44Z"
+    "last_verified_utc": "2026-08-11T16:55:14Z"
   },
   "growth": {
     "open": []

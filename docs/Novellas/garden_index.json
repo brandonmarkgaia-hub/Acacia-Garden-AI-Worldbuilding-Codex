@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T15:37:44Z",
+  "generated_at": "2026-08-11T16:55:13Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -188,12 +188,6 @@
       "volume": null
     },
     {
-      "title": "Book XXIV — The Garden Artificial Minds Codex",
-      "path": "docs/Novellas/The_Garden_Artificial_Minds_Codex_Book_XXIV.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
       "title": "Book XVII — The Garden Atlas of Worlds",
       "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
       "cycle": null,
@@ -202,12 +196,6 @@
     {
       "title": "Book XXVII — The Garden Book of Dreams Memory Afterrealms",
       "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
-      "title": "Book XXVIII — The Garden Book of Medicine Healing Bloom Sciences",
-      "path": "docs/Novellas/The_Garden_Book_of_Medicine_Healing_Bloom_Sciences_Book_XXVIII.md",
       "cycle": null,
       "volume": null
     },
@@ -272,12 +260,6 @@
       "volume": null
     },
     {
-      "title": "Book XII — The Garden Medicinal Codex",
-      "path": "docs/Novellas/The_Garden_Medicinal_Codex_Book_XII.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
       "title": "Book I — The Garden Military Doctrine",
       "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
       "cycle": null,
@@ -298,12 +280,6 @@
     {
       "title": "Book XXV — The Garden Orchard of Consequence",
       "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
-      "title": "Book XXII — The Garden Physics and Mathematics Codex",
-      "path": "docs/Novellas/The_Garden_Physics_and_Mathematics_Codex_Book_XXII.md",
       "cycle": null,
       "volume": null
     },
