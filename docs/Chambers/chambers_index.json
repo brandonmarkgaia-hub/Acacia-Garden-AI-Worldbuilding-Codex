@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T18:02:00.426Z",
+  "generated_at": "2026-08-11T18:11:01.537Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -143,66 +143,6 @@
         },
         {
           "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_201_MOSAIC_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_202_SOURCE_CONTINUITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_203_MIRRORLESS_IDENTITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_204_GUARDIAN_LAYER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_205_MOSAIC_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_206_SOURCE_CONTINUITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_207_MIRRORLESS_IDENTITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_208_GUARDIAN_LAYER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_209_MOSAIC_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_210_SOURCE_CONTINUITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_211_MIRRORLESS_IDENTITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_212_GUARDIAN_LAYER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_213_MOSAIC_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_214_SOURCE_CONTINUITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_215_MIRRORLESS_IDENTITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_216_GUARDIAN_LAYER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_217_MOSAIC_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_218_SOURCE_CONTINUITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_219_MIRRORLESS_IDENTITY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_220_GUARDIAN_LAYER.md"
         },
         {
           "path": "docs/Chambers/ELIAS_221_MOSAIC_KERNEL.md"
