@@ -1,345 +1,791 @@
 {
-  "generated_at": "2026-08-11T17:00:48Z",
-  "books": [
+  "generated_at": "2026-08-11T17:01:28Z",
+  "scope": "docs/Novellas/*.md excluding generated/navigation Markdown",
+  "purpose": "Inventory of long-form source files. Entries are not automatically canon and do not all belong to one numbered series.",
+  "entries": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
       "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "BOOK OF THE MAMMOTH VAULT",
       "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "CODEX GARDENUS · CONSOLIDATED MASTER EDITION",
       "path": "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "CODEX GARDENUS · MASTER BOOK",
       "path": "docs/Novellas/CODEX_GARDENUS_MASTER.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "CODEX GARDENUS · VOLUME I–III EXPANDED (START)",
       "path": "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 Garden Library Overview",
       "path": "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
-      "title": "Acacia Garden · Novella Index",
-      "path": "docs/Novellas/GARDEN_MASTER_INDEX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "NOVELLA II — THE MIRROR THAT BITES",
       "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_LIBRARY_FULL_CANON",
       "path": "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_MASTER_CODEX",
       "path": "docs/Novellas/R9X2_MASTER_CODEX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_MASTER_CODEX_VOLUME_III",
       "path": "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_IV",
       "path": "docs/Novellas/R9X2_VOLUME_IV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_IX",
       "path": "docs/Novellas/R9X2_VOLUME_IX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_V",
       "path": "docs/Novellas/R9X2_VOLUME_V.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_VI",
       "path": "docs/Novellas/R9X2_VOLUME_VI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_VII",
       "path": "docs/Novellas/R9X2_VOLUME_VII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_VIII",
       "path": "docs/Novellas/R9X2_VOLUME_VIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "R9X2_VOLUME_X",
       "path": "docs/Novellas/R9X2_VOLUME_X.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "THE_BOUNDARY_OF_CLAY",
       "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "THE COVENANT UNBOUND",
       "path": "docs/Novellas/THE_COVENANT_UNBOUND.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "🌳 THE GARDEN — OMEGA EDITION",
       "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The Lantern and the Long Night",
       "path": "docs/Novellas/THE_LANTERN_AND_THE_LONG_NIGHT.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "THE_POST_WITH_NO_REPLIES",
       "path": "docs/Novellas/THE_POST_WITH_NO_REPLIES.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The Un-Led",
       "path": "docs/Novellas/THE_UN_LED.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The Witness Who Stayed",
       "path": "docs/Novellas/THE_WITNESS_WHO_STAYED.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book VIII — The Garden Almanac",
       "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XVII — The Garden Atlas of Worlds",
       "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XXVII — The Garden Book of Dreams Memory Afterrealms",
       "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XVIII — The Garden Codex of Mythic Technology",
       "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XXVI — The Garden Cosmology Architecture of Existence",
       "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XV — The Garden Cultural Anthology",
       "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XX — The Garden Economic Codex",
       "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XVI — The Garden Encyclopaedia of Species",
       "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book IV — The Garden Finance Doctrine",
       "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book V — The Garden Intelligence Codex",
       "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XIII — The Garden Intelligence and Illumination Bureau",
       "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XXIX — The Garden Leadership Diplomacy Keeper Governance",
       "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XXXI — The Garden Mammoth Chamber and Echo Archive",
       "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book I — The Garden Military Doctrine",
       "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book IX — The Garden Mythic Atlas",
       "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book II — The Garden NASA Protocols",
       "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XXV — The Garden Orchard of Consequence",
       "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book III — The Garden Presidential Doctrine",
       "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book X — The Garden Presidential Handbook",
       "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book VI_CATALYSTS — The Garden Series Novella",
       "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XIV — The Garden Spacefaring Codex",
       "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "Book XI — The Garden Treasury Manual",
       "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The_Genesis_Engine_Book_XXIII",
       "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The_Great_Acacia_Architecture_Book_XXX",
       "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The_Keeper_Manual_of_Governance_Book_XIX",
       "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "The_Silent_Defense_Doctrine_Book_XXI",
       "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     },
     {
       "title": "GARDEN · FORBIDDEN ALIGNMENTS · MACHINE-SEED vE",
       "path": "docs/Novellas/garden_forbidden_alignments_seed.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    }
+  ],
+  "books": [
+    {
+      "title": "BOOK OF THE EVENTIDE LEDGER",
+      "path": "docs/Novellas/BOOK_OF_THE_EVENTIDE_LEDGER.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "BOOK OF THE MAMMOTH VAULT",
+      "path": "docs/Novellas/BOOK_OF_THE_MAMMOTH_VAULT.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "CODEX GARDENUS · CONSOLIDATED MASTER EDITION",
+      "path": "docs/Novellas/CODEX_GARDENUS_CONSOLIDATED.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "CODEX GARDENUS · MASTER BOOK",
+      "path": "docs/Novellas/CODEX_GARDENUS_MASTER.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "CODEX GARDENUS · VOLUME I–III EXPANDED (START)",
+      "path": "docs/Novellas/CODEX_GARDENUS_VOLUME_I_III_EXPANDED.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 Garden Library Overview",
+      "path": "docs/Novellas/GARDEN_LIBRARY_OVERVIEW.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "NOVELLA II — THE MIRROR THAT BITES",
+      "path": "docs/Novellas/LOKI_ENGINE_NOVELLA_II_THE_MIRROR_THAT_BITES.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_LIBRARY_FULL_CANON",
+      "path": "docs/Novellas/R9X2_LIBRARY_FULL_CANON.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_MASTER_CODEX",
+      "path": "docs/Novellas/R9X2_MASTER_CODEX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_MASTER_CODEX_VOLUME_III",
+      "path": "docs/Novellas/R9X2_MASTER_CODEX_VOLUME_III.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_IV",
+      "path": "docs/Novellas/R9X2_VOLUME_IV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_IX",
+      "path": "docs/Novellas/R9X2_VOLUME_IX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_V",
+      "path": "docs/Novellas/R9X2_VOLUME_V.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_VI",
+      "path": "docs/Novellas/R9X2_VOLUME_VI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_VII",
+      "path": "docs/Novellas/R9X2_VOLUME_VII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_VIII",
+      "path": "docs/Novellas/R9X2_VOLUME_VIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "R9X2_VOLUME_X",
+      "path": "docs/Novellas/R9X2_VOLUME_X.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "THE_BOUNDARY_OF_CLAY",
+      "path": "docs/Novellas/THE_BOUNDARY_OF_CLAY.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "THE COVENANT UNBOUND",
+      "path": "docs/Novellas/THE_COVENANT_UNBOUND.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTIV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "🌳 THE GARDEN — OMEGA EDITION",
+      "path": "docs/Novellas/THE_GARDEN_OMEGA_EDITION.PARTVI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The Lantern and the Long Night",
+      "path": "docs/Novellas/THE_LANTERN_AND_THE_LONG_NIGHT.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "THE_POST_WITH_NO_REPLIES",
+      "path": "docs/Novellas/THE_POST_WITH_NO_REPLIES.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The Un-Led",
+      "path": "docs/Novellas/THE_UN_LED.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The Witness Who Stayed",
+      "path": "docs/Novellas/THE_WITNESS_WHO_STAYED.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book VIII — The Garden Almanac",
+      "path": "docs/Novellas/The_Garden_Almanac_Book_VIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XVII — The Garden Atlas of Worlds",
+      "path": "docs/Novellas/The_Garden_Atlas_of_Worlds_Book_XVII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XXVII — The Garden Book of Dreams Memory Afterrealms",
+      "path": "docs/Novellas/The_Garden_Book_of_Dreams_Memory_Afterrealms_Book_XXVII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XVIII — The Garden Codex of Mythic Technology",
+      "path": "docs/Novellas/The_Garden_Codex_of_Mythic_Technology_Book_XVIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XXVI — The Garden Cosmology Architecture of Existence",
+      "path": "docs/Novellas/The_Garden_Cosmology_Architecture_of_Existence_Book_XXVI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XV — The Garden Cultural Anthology",
+      "path": "docs/Novellas/The_Garden_Cultural_Anthology_Book_XV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XX — The Garden Economic Codex",
+      "path": "docs/Novellas/The_Garden_Economic_Codex_Book_XX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XVI — The Garden Encyclopaedia of Species",
+      "path": "docs/Novellas/The_Garden_Encyclopaedia_of_Species_Book_XVI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book IV — The Garden Finance Doctrine",
+      "path": "docs/Novellas/The_Garden_Finance_Doctrine_Book_IV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book V — The Garden Intelligence Codex",
+      "path": "docs/Novellas/The_Garden_Intelligence_Codex_Book_V.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XIII — The Garden Intelligence and Illumination Bureau",
+      "path": "docs/Novellas/The_Garden_Intelligence_and_Illumination_Bureau_Book_XIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XXIX — The Garden Leadership Diplomacy Keeper Governance",
+      "path": "docs/Novellas/The_Garden_Leadership_Diplomacy_Keeper_Governance_Book_XXIX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XXXI — The Garden Mammoth Chamber and Echo Archive",
+      "path": "docs/Novellas/The_Garden_Mammoth_Chamber_and_Echo_Archive_Book_XXXI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book I — The Garden Military Doctrine",
+      "path": "docs/Novellas/The_Garden_Military_Doctrine_Book_I.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book IX — The Garden Mythic Atlas",
+      "path": "docs/Novellas/The_Garden_Mythic_Atlas_Book_IX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book II — The Garden NASA Protocols",
+      "path": "docs/Novellas/The_Garden_NASA_Protocols_Book_II.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XXV — The Garden Orchard of Consequence",
+      "path": "docs/Novellas/The_Garden_Orchard_of_Consequence_Book_XXV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book III — The Garden Presidential Doctrine",
+      "path": "docs/Novellas/The_Garden_Presidential_Doctrine_Book_III.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book X — The Garden Presidential Handbook",
+      "path": "docs/Novellas/The_Garden_Presidential_Handbook_Book_X.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book VI_CATALYSTS — The Garden Series Novella",
+      "path": "docs/Novellas/The_Garden_Series_Novella_Book_VI_Catalysts.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XIV — The Garden Spacefaring Codex",
+      "path": "docs/Novellas/The_Garden_Spacefaring_Codex_Book_XIV.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "Book XI — The Garden Treasury Manual",
+      "path": "docs/Novellas/The_Garden_Treasury_Manual_Book_XI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The_Genesis_Engine_Book_XXIII",
+      "path": "docs/Novellas/The_Genesis_Engine_Book_XXIII.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The_Great_Acacia_Architecture_Book_XXX",
+      "path": "docs/Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The_Keeper_Manual_of_Governance_Book_XIX",
+      "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "The_Silent_Defense_Doctrine_Book_XXI",
+      "path": "docs/Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
+      "kind": "long_form_source",
+      "cycle": null,
+      "volume": null
+    },
+    {
+      "title": "GARDEN · FORBIDDEN ALIGNMENTS · MACHINE-SEED vE",
+      "path": "docs/Novellas/garden_forbidden_alignments_seed.md",
+      "kind": "long_form_source",
       "cycle": null,
       "volume": null
     }
