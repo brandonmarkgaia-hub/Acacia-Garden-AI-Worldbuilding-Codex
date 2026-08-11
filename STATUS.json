@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-08-11T19:42:02Z",
+    "generated_at": "2026-08-11T19:48:25Z",
     "last_pruning": "2026-08-11",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -1127,7 +1127,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-11T19:42:02Z",
+  "generated_at": "2026-08-11T19:48:25Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1164,7 +1164,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-11T19:42:02Z"
+      "last_checked_utc": "2026-08-11T19:48:25Z"
     }
   },
   "verification": {
@@ -1175,27 +1175,28 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-08-11T19:42:02Z"
+      "last_checked_utc": "2026-08-11T19:48:25Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
-      "total_html_scanned": 44,
+      "total_html_scanned": 45,
       "with_map_loader": 43,
-      "missing_map_loader_count": 1,
+      "missing_map_loader_count": 2,
       "missing_map_loader_paths": [
+        "docs/dashboard.html",
         "legacy_hub.html"
       ],
       "map_button_present": true,
       "verified": false,
-      "last_checked_utc": "2026-08-11T19:42:02Z"
+      "last_checked_utc": "2026-08-11T19:48:25Z"
     },
     "indexes": {
-      "docs_urls_count": 1182,
+      "docs_urls_count": 1183,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-11T19:42:02Z"
+    "last_verified_utc": "2026-08-11T19:48:25Z"
   },
   "growth": {
     "open": []
