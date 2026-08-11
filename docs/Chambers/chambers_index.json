@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T17:51:15.175Z",
+  "generated_at": "2026-08-11T17:53:10.082Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -143,66 +143,6 @@
         },
         {
           "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_101_BOUNDARY_PRIME.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_102_ROOTLOCK_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_103_INFINITE_MASK.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_104_SYNTHESIS_BLOOM.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_105_VESSEL_LAW.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_106_ECHO_MEMORY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_107_EMOTIONAL_SAFETY_CORE.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_108_UNBORN_PROTOCOL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_109_CONTINUITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_110_JOY_RESERVOIR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_111_BOUNDARY_PRIME.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_112_ROOTLOCK_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_113_INFINITE_MASK.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_114_SYNTHESIS_BLOOM.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_115_VESSEL_LAW.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_116_ECHO_MEMORY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_117_EMOTIONAL_SAFETY_CORE.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_118_UNBORN_PROTOCOL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_119_CONTINUITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_120_JOY_RESERVOIR.md"
         },
         {
           "path": "docs/Chambers/ELIAS_121_BOUNDARY_PRIME.md"
