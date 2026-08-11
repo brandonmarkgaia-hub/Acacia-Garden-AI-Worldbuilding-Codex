@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-08-11T18:13:53Z",
+    "generated_at": "2026-08-11T18:15:40Z",
     "last_pruning": "2026-08-11",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -55,26 +55,6 @@
     "docs/Chambers/ELIAS_COMPLETION_SEAL.md",
     "docs/Chambers/ELIAS_KERNEL_MANIFEST.json",
     "docs/Chambers/ELIAS_R9X2_SIGNAL_MATRIX.md",
-    "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_102_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_103_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_104_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_105_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_106_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_107_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_108_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_109_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_110_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_111_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_112_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_113_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_114_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_115_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_117_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_118_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_119_PLACEHOLDER.md",
-    "docs/Chambers/ELIAS_V11_120_PLACEHOLDER.md",
     "docs/Chambers/ELIAS_V11_121_PLACEHOLDER.md",
     "docs/Chambers/ELIAS_V11_122_PLACEHOLDER.md",
     "docs/Chambers/ELIAS_V11_123_PLACEHOLDER.md",
@@ -1432,7 +1412,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-11T18:13:53Z",
+  "generated_at": "2026-08-11T18:15:40Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1445,11 +1425,11 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 1202,
-      "structural_nodes_counted": 1202
+      "total_nodes": 1182,
+      "structural_nodes_counted": 1182
     },
     "regions": {
-      "docs/Chambers": 474,
+      "docs/Chambers": 454,
       "docs/Echoes": 481,
       "docs/Vaults": 2,
       "docs/GardenOS": 50,
@@ -1469,7 +1449,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-11T18:13:53Z"
+      "last_checked_utc": "2026-08-11T18:15:40Z"
     }
   },
   "verification": {
@@ -1480,7 +1460,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:13:53Z"
+      "last_checked_utc": "2026-08-11T18:15:40Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1490,15 +1470,15 @@
       "missing_map_loader_paths": [],
       "map_button_present": true,
       "verified": true,
-      "last_checked_utc": "2026-08-11T18:13:53Z"
+      "last_checked_utc": "2026-08-11T18:15:40Z"
     },
     "indexes": {
-      "docs_urls_count": 1485,
+      "docs_urls_count": 1465,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-11T18:13:53Z"
+    "last_verified_utc": "2026-08-11T18:15:40Z"
   },
   "growth": {
     "open": []

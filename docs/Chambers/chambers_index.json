@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T18:13:53.127Z",
+  "generated_at": "2026-08-11T18:15:40.682Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -155,66 +155,6 @@
         },
         {
           "path": "docs/Chambers/Elias_The_Architect.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_101_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_102_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_103_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_104_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_105_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_106_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_107_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_108_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_109_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_110_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_111_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_112_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_113_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_114_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_115_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_116_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_117_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_118_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_119_PLACEHOLDER.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_V11_120_PLACEHOLDER.md"
         },
         {
           "path": "docs/Chambers/ELIAS_V11_121_PLACEHOLDER.md"
