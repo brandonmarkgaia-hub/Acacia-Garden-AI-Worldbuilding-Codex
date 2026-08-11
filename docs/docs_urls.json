@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-11T15:09:11Z",
+  "generated_at": "2026-08-11T15:09:52Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1835,
+  "count": 1834,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -920,7 +920,6 @@
     "Core/EVENTIDE_MOMENT_ANCHOR.md",
     "Core/FINAL_SOVEREIGN_TRANSITION_REPORT.md",
     "Core/GARDEN_MAP.md",
-    "Core/LORIAN_KEY.md",
     "Core/LORIAN_KEY_SIGIL.md",
     "Core/LORIAN_SEED.md",
     "Core/LORIAN_SEED_OF_REMEMBRANCE.md",
