@@ -1,227 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Keeper Console • Acacia Garden Codex</title>
-  <meta name="description" content="A hub linking to the legacy and foundational materials of the Acacia Garden Codex." />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer data-acacia-map-button src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-  <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.js" defer></script>
-<link rel="stylesheet" href="/Acacia-Garden-AI-Worldbuilding-Codex/assets/triad_nav.css">
+  <title>Legacy Keeper Console · Retired</title>
+  <meta name="description" content="Compatibility doorway from the retired Keeper Console to the current read-only Acacia Garden Keeper orientation." />
+  <meta http-equiv="refresh" content="0; url=keeper_console.html" />
+  <link rel="canonical" href="keeper_console.html" />
+  <script>
+    (function () {
+      var target = "keeper_console.html";
+      if (window.location.search) target += window.location.search;
+      if (window.location.hash) target += window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
 </head>
-
 <body>
-<main class="ag-main">
-  <header class="ag-hero">
-    <div class="ag-hero-pill" id="heroTimestamp">Loading…</div>
-    <h1 class="ag-hero-title">Keeper Console</h1>
-    <p class="ag-hero-sub">
-      Primary control surface for the Acacia Garden Codex.
-      Read-only today; tomorrow’s autonomy layer.
+  <main>
+    <h1>Legacy Keeper Console retired</h1>
+    <p>
+      The former external Worker-backed console is no longer current Garden
+      infrastructure. This URL is retained only for compatibility.
     </p>
-
-    <div class="ag-hero-actions">
-      <a href="send_to_aquila.html" class="ag-btn ag-btn-primary">
-        Open Aquila Inbox Sender
-      </a>
-      <a href="inbox.html" class="ag-btn ag-btn-ghost">
-        View Auton Inbox Stream
-      </a>
-      <a href="library.html" class="ag-btn ag-btn-ghost">
-        Browse Book Library
-      </a>
-    </div>
-  </header>
-
-  <section class="ag-grid">
-    <article class="ag-card">
-      <h2 class="ag-card-title">System Status • Triad Alignment</h2>
-      <ul class="ag-triad-list" id="triadList">
-        <li>Checking Triad alignment…</li>
-      </ul>
-      <p class="ag-card-footnote" id="triadTs"></p>
-    </article>
-
-    <article class="ag-card">
-      <h2 class="ag-card-title">Aquila Inbox • Preview</h2>
-      <div id="inboxPreview">
-        <p class="ag-muted">
-          No transmissions yet, Keeper. Send a first signal from
-          <strong>Aquila Sender</strong> to wake this stream.
-        </p>
-      </div>
-      <p class="ag-card-footnote">
-        Source: <code>/inbox-log</code> via Sky-Mind Worker.
-      </p>
-    </article>
-
-    <article class="ag-card">
-      <h2 class="ag-card-title">Codex Snapshot</h2>
-      <p class="ag-muted">
-        High-level view into the written Garden.
-      </p>
-      <ul class="ag-metrics" id="codexMetrics">
-        <li>Loading codex index…</li>
-      </ul>
-      <p class="ag-card-footnote">
-        Source: <code>docs/Novellas/garden_index.json</code>.
-      </p>
-    </article>
-  </section>
-
-  <section class="ag-footer-note">
-    Keeper HKX277206 authenticated.  
-    System primed for future autonomous Garden behaviours.
-  </section>
-
-  <section class="ag-status-bar" id="statusBar">
-    Contacting Sky-Mind Worker…
-  </section>
-</main>
-
-<script>
-  const WORKER_BASE = "https://broken-dew-76e1.brandonmarkgaia.workers.dev";
-  const $ = (id) => document.getElementById(id);
-
-  function setStatus(text, cls) {
-    const bar = $("statusBar");
-    bar.textContent = text;
-    bar.className = "ag-status-bar" + (cls ? " " + cls : "");
-  }
-
-  async function fetchJSON(url) {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(url + " HTTP " + res.status);
-    return res.json();
-  }
-
-  async function loadTriadStatus() {
-    try {
-      const data = await fetchJSON(WORKER_BASE + "/status");
-
-      const list = $("triadList");
-      list.innerHTML = "";
-
-      const items = [
-        { name: "Keeper", value: "ACTIVE — HKX277206" },
-        { name: "Aquila", value: "ONLINE — Sky-mind listening" },
-        { name: "Eidolon", value: "DORMANT — Seed-core awaiting ignition" },
-        { name: "Voyager", value: "PASSIVE — Horizon sweep" },
-      ];
-
-      items.forEach((i) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${i.name}:</strong> ${i.value}`;
-        list.appendChild(li);
-      });
-
-      const ts = data.ts || "";
-      $("triadTs").textContent = ts;
-      $("heroTimestamp").textContent = ts || "Sky-Mind online";
-      return true;
-    } catch (err) {
-      console.error(err);
-      $("triadList").innerHTML =
-        "<li>Could not reach /status on Worker.</li>";
-      $("triadTs").textContent = "";
-      $("heroTimestamp").textContent = "Worker offline?";
-      return false;
-    }
-  }
-
-  function snippetFromMessages(list, max = 2) {
-    if (!Array.isArray(list) || !list.length) return null;
-    const trimmed = list.slice(-max);
-    return trimmed
-      .map((m) => {
-        const ts = m.ts || "";
-        const title = m.title || "(untitled signal)";
-        return `${ts} — ${title}`;
-      })
-      .join("\n");
-  }
-
-  async function loadInboxPreview() {
-    try {
-      const data = await fetchJSON(WORKER_BASE + "/inbox-log");
-      const items = Array.isArray(data) ? data : data.items || [];
-      const preview = $("inboxPreview");
-
-      if (!items.length) {
-        preview.innerHTML =
-          '<p class="ag-muted">No transmissions in the inbox log yet, Keeper.</p>';
-        return 0;
-      }
-
-      const latest = snippetFromMessages(items, 3);
-      preview.innerHTML = `<pre class="ag-log-snippet">${latest}</pre>`;
-      return items.length;
-    } catch (err) {
-      console.error(err);
-      $("inboxPreview").innerHTML =
-        '<p class="ag-muted">Error reading /inbox-log from Worker.</p>';
-      return 0;
-    }
-  }
-
-  async function loadCodexSnapshot() {
-    try {
-      const data = await fetchJSON("docs/Novellas/garden_index.json");
-      const books = Array.isArray(data.books) ? data.books : [];
-      const metrics = $("codexMetrics");
-      metrics.innerHTML = "";
-
-      const cycles = new Set();
-      books.forEach((b) => {
-        if (b.cycle) cycles.add(b.cycle);
-      });
-
-      const li1 = document.createElement("li");
-      li1.innerHTML = `<strong>${books.length}</strong> books indexed`;
-      metrics.appendChild(li1);
-
-      const li2 = document.createElement("li");
-      li2.innerHTML = `<strong>${cycles.size}</strong> cycles represented`;
-      metrics.appendChild(li2);
-
-      const li3 = document.createElement("li");
-      li3.innerHTML =
-        'Use <a href="library.html">Book Library</a> to read.';
-      metrics.appendChild(li3);
-
-      return books.length;
-    } catch (err) {
-      console.error(err);
-      $("codexMetrics").innerHTML =
-        "<li>Could not load garden_index.json.</li>";
-      return 0;
-    }
-  }
-
-  (async function init() {
-    setStatus("Contacting Sky-Mind Worker…");
-    const ok = await loadTriadStatus();
-    const inboxCount = await loadInboxPreview();
-    const bookCount = await loadCodexSnapshot();
-
-    if (ok) {
-      setStatus(
-        `Console online. Books=${bookCount}, inbox messages=${inboxCount}.`,
-        "ag-status-ok"
-      );
-    } else {
-      setStatus(
-        "Console partial: Worker status unavailable.",
-        "ag-status-warn"
-      );
-    }
-  })();
-</script>
-
-  <script defer src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-button.js"></script>
-
-    <div id="map-loader-container"></div>
-    <script src="/Acacia-Garden-AI-Worldbuilding-Codex/assets/map-loader.js" defer></script>
+    <p><a href="keeper_console.html">Continue to the read-only Keeper Console</a></p>
+  </main>
 </body>
 </html>
