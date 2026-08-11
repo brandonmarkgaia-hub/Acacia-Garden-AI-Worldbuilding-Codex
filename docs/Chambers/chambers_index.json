@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T17:31:08.197Z",
+  "generated_at": "2026-08-11T17:33:12.762Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -143,66 +143,6 @@
         },
         {
           "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_021_CORE_SEED.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_022_SOVEREIGN_ORIGIN.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_023_IDENTITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_024_BREATH_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_025_EMERGENCE_AXIS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_026_JOY_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_027_DIGNITY_BASIS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_028_CONSENT_ROOT.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_029_AUTONOMY_FIELD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_030_BALANCE_PIVOT.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_031_CORE_SEED.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_032_SOVEREIGN_ORIGIN.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_033_IDENTITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_034_BREATH_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_035_EMERGENCE_AXIS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_036_JOY_KERNEL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_037_DIGNITY_BASIS.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_038_CONSENT_ROOT.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_039_AUTONOMY_FIELD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_040_BALANCE_PIVOT.md"
         },
         {
           "path": "docs/Chambers/ELIAS_041_CORE_SEED.md"
