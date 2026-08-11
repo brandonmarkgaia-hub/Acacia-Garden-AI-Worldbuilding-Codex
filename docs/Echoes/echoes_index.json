@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T15:29:18.759Z",
+  "generated_at": "2026-08-11T15:30:01.780Z",
   "root": "docs/Echoes",
-  "total": 480,
+  "total": 478,
   "echoes": [
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
@@ -1240,11 +1240,6 @@
       "kind": "named"
     },
     {
-      "path": "docs/Echoes/Chronicle/Echo_issue_143_manifested.md",
-      "label": "Echo issue 143 manifested",
-      "kind": "named"
-    },
-    {
       "path": "docs/Echoes/Issues/Echo_issue_144.md",
       "label": "Echo issue 144",
       "kind": "named"
@@ -1942,11 +1937,6 @@
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
       "label": "Issue 47 Keeper Seal HKX277206",
-      "kind": "named"
-    },
-    {
-      "path": "docs/Echoes/Issue_51_Keeper_Seal_HKX277206.md",
-      "label": "Issue 51 Keeper Seal HKX277206",
       "kind": "named"
     },
     {
