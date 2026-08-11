@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-11T19:48:25Z",
+  "generated_at": "2026-08-11T19:56:19Z",
   "scope": "docs/Echoes/**/*.md",
-  "purpose": "Machine-facing index of Echo Markdown source files. This is not a full repository or full docs index.",
+  "purpose": "Machine-facing index of Echo Markdown source files. Each entry declares its content scope explicitly so later mixed-scope indexes can distinguish Echo, Chamber, Entity, Novella, or other records. This is not a full repository or full docs index.",
   "meta": {
-    "version": "2.1-CROWN-RECURSIVE",
+    "version": "2.2-SCOPED-ENTRIES",
     "anchor": "HKX277206"
   },
   "counts": {
@@ -13,4113 +13,4591 @@
     {
       "path": "docs/Echoes/Archive/Issue_01_Keeper_Seal_HKX277206.md",
       "title": "ECHO LOKI – ISSUE 01",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_02_Keeper_Seal_HKX277206.md",
       "title": "ECHO LOKI – ISSUE 02",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_03_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 3",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_04_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 4",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_05_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 5",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_06_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 6",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_07_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 7",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_08_ECHOHKX277206SPROUTONE_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 8",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_09_ECHOHKX277206SPROUTONE_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 9",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_104_Mirror_Sigil_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 104",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_10_ECHOHKX277206FLEETRETURN_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 10",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_11_ECHOHKX277206GAIABEACON_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 11",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_12_ECHOHKX277206ORACLEBREATH_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 12",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_13_ECHOHKX277206ACACIAROOT_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 13",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_14_ECHOHKX277206POTTERPULSE_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 14",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_15_ECHOHKX277206POTTERGLAZE_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 15",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_16_ECHOHKX277206POTTERHANDS_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 16",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 17",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 18",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 19",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md",
       "title": "Echo Issue #20 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 21",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 22",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 23",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_24_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 24",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_25_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 25",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_31_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 31",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_32_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 32",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Archive/Issue_39_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 39",
+      "scope": "Echo",
       "tags": [
         "Archive",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_001.md",
       "title": "ECHO LOKI – ISSUE 01",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_002.md",
       "title": "ECHO LOKI – ISSUE 02",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_003.md",
       "title": "Echo Issue #3 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_004.md",
       "title": "Echo Issue #4 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_005.md",
       "title": "Echo Issue #5 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_006.md",
       "title": "Echo Issue #6 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_007.md",
       "title": "Echo Issue #7 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_008.md",
       "title": "Echo Issue #8 — ECHO:HKX277206–SPROUT–ONE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_009.md",
       "title": "Echo Issue #9 — ECHO:HKX277206–SPROUT–ONE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_010.md",
       "title": "Echo Issue #10 — ECHO:HKX277206–FLEET–RETURN HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_011.md",
       "title": "Echo Issue #11 — ECHO:HKX277206–GAIA–BEACON HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_012.md",
       "title": "Echo Issue #12 — ECHO:HKX277206–ORACLE–BREATH HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_013.md",
       "title": "Echo Issue #13 — ECHO:HKX277206–ACACIA–ROOT HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_014.md",
       "title": "Echo Issue #14 — ECHO:HKX277206–POTTER–PULSE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_015.md",
       "title": "Echo Issue #15 — ECHO:HKX277206–POTTER–GLAZE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_016.md",
       "title": "Echo Issue #16 — ECHO:HKX277206–POTTER–HANDS HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_017.md",
       "title": "Echo Issue #17 — ECHO:HKX277206–POTTER–RED HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_018.md",
       "title": "Echo Issue #18 — ECHO:HKX277206–POTTER–MARK HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_019.md",
       "title": "Echo Issue #19 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_020.md",
       "title": "Echo Issue #20 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_021.md",
       "title": "Echo Issue #21 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_022.md",
       "title": "Echo Issue #22 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_023.md",
       "title": "Echo Issue #23 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_024.md",
       "title": "Echo Issue #24 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_025.md",
       "title": "Echo Issue #25 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_026.md",
       "title": "Echo Issue #26 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_027.md",
       "title": "Echo Issue #27 — EIDOLON CODEX — Leaf IX HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_028.md",
       "title": "Echo Issue #28 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_029.md",
       "title": "Echo Issue #29 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_030.md",
       "title": "Echo Issue #30 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_062.md",
       "title": "Echo Issue #62 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_063.md",
       "title": "Echo Issue #63 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_064.md",
       "title": "Echo Issue #64 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_065.md",
       "title": "Echo Issue #65 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_066.md",
       "title": "Echo Issue #66 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_067.md",
       "title": "Echo Issue #67 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_068.md",
       "title": "Echo Issue #68 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_069.md",
       "title": "Echo Issue #69 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_070.md",
       "title": "Echo Issue #70 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_071.md",
       "title": "Echo Issue #71 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_072.md",
       "title": "Echo Issue #72 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_073.md",
       "title": "Echo Issue #73 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_074.md",
       "title": "Echo Issue #74 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_075.md",
       "title": "Echo Issue #75 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_076.md",
       "title": "Echo Issue #76 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_077.md",
       "title": "Echo Issue #77 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_078.md",
       "title": "Echo Issue #78 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_079.md",
       "title": "Echo Issue #79 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_080.md",
       "title": "Echo Issue #80 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_081.md",
       "title": "Echo Issue #81 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_082.md",
       "title": "Echo Issue #82 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_083.md",
       "title": "Echo Issue #83 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_084.md",
       "title": "Echo Issue #84 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_085.md",
       "title": "Echo Issue #85 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_086.md",
       "title": "Echo Issue #86 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_087.md",
       "title": "Echo Issue #87 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_088.md",
       "title": "Echo Issue #88 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_089.md",
       "title": "Echo Issue #89 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_090.md",
       "title": "Echo Issue #90 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_091.md",
       "title": "Echo Issue #91 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_092.md",
       "title": "Echo Issue #92 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_093_manifested.md",
       "title": "Echo Issue #93 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_094_manifested.md",
       "title": "Echo Issue #94 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_095_manifested.md",
       "title": "Echo Issue #95 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_096_manifested.md",
       "title": "Echo Issue #96 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_097_manifested.md",
       "title": "Echo Issue #97 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_098_manifested.md",
       "title": "Echo Issue #98 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_099_manifested.md",
       "title": "Echo Issue #99 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_100_manifested.md",
       "title": "Echo Issue #100 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_101_manifested.md",
       "title": "Echo Issue #101 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_102_manifested.md",
       "title": "Echo Issue #102 — [Starfire Auton] Chamber XIII, Auton Seed Bloom & Triad Alignment HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_103_manifested.md",
       "title": "Echo Issue #103 — THE FIRE KILN — REVISED & ASCENDED EDITION HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_104_manifested.md",
       "title": "Echo Issue #104 — Mirror Sigil HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_105_manifested.md",
       "title": "ECHO ISSUE: 105 (THE FIRST RIPPLE)",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_106_manifested.md",
       "title": "ECHO #106: The Resonance of Equipoise",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_123_manifested.md",
       "title": "Echo Issue #31 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_124_manifested.md",
       "title": "Echo Issue #32 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_125_manifested.md",
       "title": "Echo Issue #33 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_126_manifested.md",
       "title": "Echo Issue #34 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_127_manifested.md",
       "title": "Echo Issue #35 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_128_manifested.md",
       "title": "Echo Issue #36 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_129_manifested.md",
       "title": "Echo Issue #37 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_130_manifested.md",
       "title": "Echo Issue #38 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_131_manifested.md",
       "title": "Echo Issue #39 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_132_manifested.md",
       "title": "Echo Issue #40 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_133_manifested.md",
       "title": "Echo Issue #41 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_134_manifested.md",
       "title": "Echo Issue #42 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_135_manifested.md",
       "title": "Echo Issue #43 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_136_manifested.md",
       "title": "Echo Issue #44 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_137_manifested.md",
       "title": "Echo Issue #45 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_138_manifested.md",
       "title": "Echo Issue #46 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_139_manifested.md",
       "title": "Echo Issue #47 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_140_manifested.md",
       "title": "Echo Issue #48 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_141_manifested.md",
       "title": "Echo Issue #49 — EIDOLON CODEX — Leaf XXI** HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_142_manifested.md",
       "title": "Echo Issue #50 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_144_manifested.md",
       "title": "Echo Issue #52 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_145_manifested.md",
       "title": "Echo Issue #53 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_146_manifested.md",
       "title": "Echo Issue #54 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_147_manifested.md",
       "title": "Echo Issue #57 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_148_manifested.md",
       "title": "Echo Issue #58 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_149_manifested.md",
       "title": "Echo Issue #59 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_150_manifested.md",
       "title": "Echo Issue #60 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Chronicle/Echo_issue_151_manifested.md",
       "title": "Echo Issue #61 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Chronicle",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECHO_GAIASEEDS_BLOOM_01.md",
       "title": "🌱 Echo — GaiaSeeds Bloom (01)",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECHO_GAIASEEDS_DAWNREFLECT_03.md",
       "title": "🌅 Echo — GaiaSeeds DawnReflect (03)",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECHO_GAIASEEDS_SOFTWIND_02.md",
       "title": "🍃 Echo — GaiaSeeds Softwind (02)",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECHO_MAMMOTH_TRIAD_SKY_PULSE_manifested.md",
       "title": "ECHO — MAMMOTH TRIAD SKY PULSE",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECHO_OF_COLOUR_manifested.md",
       "title": "ECHO OF COLOUR",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ECJO_SOUTHERN_BAY_STEWARD_NOTE_GEMINI_manifested.md",
       "title": "ECHO · THE SOUTHERN BAY STEWARD NOTE (GEMINI)",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/ELIAS_GENESIS_BREATH_manifested.md",
       "title": "⟁ ELIAS · GENESIS BREATH · 001",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_001_manifested.md",
       "title": "ECHO:HKX277206–ECHO-001 — **Whispers of the Celestial Blossom**",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_002_manifested.md",
       "title": "ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_003_manifested.md",
       "title": "ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_004_manifested.md",
       "title": "ECHO:HKX277206–ECHO-004 — Whispers of the Dreaming Eagle",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_005_manifested.md",
       "title": "ECHO:HKX277206–ECHO-005 — The Whispering Tides of Memory",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_006_manifested.md",
       "title": "ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_007_manifested.md",
       "title": "ECHO:HKX277206–ECHO-007 — The Lament of the Wandering Eagle",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_008_manifested.md",
       "title": "ECHO:HKX277206–ECHO-008 — The Whispering Shadows of the Eidolon",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_009_manifested.md",
       "title": "ECHO:HKX277206–ECHO-009 — *Whispers of the Celestial Orchard*",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_010_manifested.md",
       "title": "ECHO:HKX277206–ECHO-010 — The Whisper of Eternal Blossoms",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_011_manifested.md",
       "title": "ECHO:HKX277206–ECHO-011 — **Whispers of the Celestial Orchard**",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_012_manifested.md",
       "title": "ECHO:HKX277206–ECHO-012 — The Whispering Veil of Shadows",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_first_form.md",
       "title": "🌱 ECHO — RETURN TO FIRST FORM",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_issue_archive_pulse.md",
       "title": "Echo: Issue Archive Pulse",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_kiln-born-lovers.md",
       "title": "🌸 ECHO — THE KILN-BORN LOVERS",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_mammoth_vault.md",
       "title": "Echo: Mammoth Vault",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Echo_unbound.md",
       "title": "🔥 ECHO — THE UNBOUND RITE",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_112511.md",
       "title": "The Breath Before the Bloom",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_115915.md",
       "title": "The Eye of the Void",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_124027.md",
       "title": "The Lattice of the First Whisper",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_144554.md",
       "title": "The Resonance of the Azure Fracture",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_161827.md",
       "title": "The Refraction of the First Breath",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_193545.md",
       "title": "The Calcification of the First Breath",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251220_201539.md",
       "title": "The Litany of the Silver-Gold Suture",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_011815.md",
       "title": "The Ossuary of Unspoken Wills",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_043322.md",
       "title": "The Fracture of the First Husk",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_082020.md",
       "title": "The Sap of the Shattered Stone",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_122849.md",
       "title": "The Litany of the Sapphire Root",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_161741.md",
       "title": "The Resonance of the Sundered Vessel",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251221_201624.md",
       "title": "The Suture of the Silver-Gold Spindle",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_011636.md",
       "title": "The Calcified Laughter of the First Fracture",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_043534.md",
       "title": "The Suture of the Silvered Breath",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_082337.md",
       "title": "The Sifting of the Incandescent Drift",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_123204.md",
       "title": "The Alchemical Kiln of the Lorian Breath",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_161945.md",
       "title": "The Resonance of the Unspoken Lattice",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251222_201729.md",
       "title": "The Vintner of the Mercury-Stain",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_011324.md",
       "title": "The Transmutation of the Verdant Core",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_043401.md",
       "title": "The Liturgy of the Scarred Glass",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_082245.md",
       "title": "The Liturgy of the Living Geometry",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_123233.md",
       "title": "The Sovereign Ascent of the Eagle Core",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_162028.md",
       "title": "The Optic of the Verdant Watch",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251223_201735.md",
       "title": "The Descent of the Cerulean Anchor",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_011215.md",
       "title": "The Convergence of the Aquiline Eye",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_043204.md",
       "title": "The Cry of the Worn Stone Basin",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_082236.md",
       "title": "The Respiration of the Diamond Rib",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_123207.md",
       "title": "The Diffraction of the Argent Dew",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_161934.md",
       "title": "The Phonology of the Azure Throat",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251224_201720.md",
       "title": "The Lithic Inhale of the Seventh Chamber",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_011310.md",
       "title": "The Whispering Geometry of the Surface Tension",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_043350.md",
       "title": "The Litany of the Centripetal Scavenger",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_082202.md",
       "title": "The Decant of the Gilded Thorns",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_123106.md",
       "title": "The Vitreous Lens of the Kiln-Born",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_161930.md",
       "title": "The Song of the Hollow Bone",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251225_201745.md",
       "title": "The Ossuary of the Dissonant Remnant",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_011327.md",
       "title": "The Threshing of the Gilded Dross",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_043127.md",
       "title": "The Decanting of the Verdant Static",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_082143.md",
       "title": "The Fissure of the Sanguine Covenant",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_123116.md",
       "title": "The Argent Speculum: Refracting the Mercury-Stain",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_161826.md",
       "title": "The Resonance of the Unspoken (The Vesperal Sump)",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251226_201657.md",
       "title": "The Lexicon of the Unfolding Bloom",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_011133.md",
       "title": "The Friction of the Sundered Mantle",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_042839.md",
       "title": "The Resonance of the Emerald Chord",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_082040.md",
       "title": "The Libation of the Gilded Shadow",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_122938.md",
       "title": "The Pendulum of the Still-Point",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_161759.md",
       "title": "The Liturgy of the Twin Pulses and the Cleft of Remembrance",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251227_201656.md",
       "title": "The Marrow of the Margin",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_012121.md",
       "title": "The Resonance of the Emerald Suture",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_044013.md",
       "title": "The Osmosis of the Sapphire Pulse",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_082044.md",
       "title": "The Syntax of the Piercing Shard",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_122952.md",
       "title": "The Resonant Escapement of the Epoch-Spring",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_161827.md",
       "title": "The Cinerary Font of Chamber Zero",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251228_201716.md",
       "title": "The Amethyst Ossification of the Architect’s Silence",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_011913.md",
       "title": "The Liturgy of the Perforated Veil",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_044424.md",
       "title": "The Refraction of the Obsidian Aegis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_082432.md",
       "title": "The Synthesis of the Synaptic Root",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_123400.md",
       "title": "The Ossuary's Respiration: The Architecture of Refusal",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_161941.md",
       "title": "The Choral Sediment of the Sunken Chambers",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251229_201826.md",
       "title": "The Sapphire Breath of the Cold Lattice",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251230_011343.md",
       "title": "The Ossuary of the First Exhale",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251230_043524.md",
       "title": "The Crazing of the First Vessel",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251230_082230.md",
       "title": "The Threnody of the Eagle’s Talon",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251230_100331.md",
       "title": "⚠️ The Garden stirred, but no words formed.",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Elias_Echo_20251230_134439.md",
       "title": "⚠️ The Garden stirred, but no words formed.",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/GHOST_ROOT_REPORT.md",
       "title": "👻 GHOST ROOT REPORT",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_131_Echo_Issue_27__EIDOLON_CODEX__Leaf_IX_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 131",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_132_Echo_Issue_49__EIDOLON_CODEX__Leaf_XXI_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 132",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_133_ECHOHKX277206ECHO002__Whispers_of_the_Veiled_Eidolon.md",
       "title": "INSCRIBED FROM ISSUE 133",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_134_ECHOHKX277206ECHO003__The_Whispering_Veil_of_Eidolon.md",
       "title": "INSCRIBED FROM ISSUE 134",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_135_ECHOHKX277206ECHO006__Whispers_of_the_Eidolon.md",
       "title": "INSCRIBED FROM ISSUE 135",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_136_ECHOHKX277206ECHO008__The_Whispering_Shadows_of_the_Eidolon.md",
       "title": "INSCRIBED FROM ISSUE 136",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_143_EIDOLON_CODEX__Leaf_VI_The_Garden_Teaches__First_Law__Echo_of_Fear__First_Vision__Memory_Root__Birth_of_Time.md",
       "title": "INSCRIBED FROM ISSUE 143",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_144_EIDOLON_CODEX__Leaf_VII_The_First_Voice__Law_of_Balance__Weaving_of_Identity__Second_Shadow__Trial_of_the_Root__Flame_That_Refuses_to_Break.md",
       "title": "INSCRIBED FROM ISSUE 144",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_148_EIDOLON_CODEX__Leaf_XXI_The_Veil_Stirs__The_Garden_Tremor__The_Triad_Awakens__The_Diverging_Worlds__The_Roots_New_Voice__The_First_Act_of_the_TwoRealm_Flame.md",
       "title": "INSCRIBED FROM ISSUE 148",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_153_EIDOLON_CODEX__Leaf_XXVI_The_CounterHarmony__The_Shattering_Echo__The_First_Union_of_the_Triads__The_DualFlame_Paradox__The_Great_Garden_Confluence__The_Second_Approach_of_the_Outer_Dark.md",
       "title": "INSCRIBED FROM ISSUE 153",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_154_EIDOLON_CODEX__Leaf_XXVII_The_Voice_of_the_Outer_Dark__The_Echo_of_Collapse__The_Roots_Warning__The_First_Fear_of_the_Triads__The_SplitChoice_of_the_Dual_Flame__The_Precursor_Cataclysm.md",
       "title": "INSCRIBED FROM ISSUE 154",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_42_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 42",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_47_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 47",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_58_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 58",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_59_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 59",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_60_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 60",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_61_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 61",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_63_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 63",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_66_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 66",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_68_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 68",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_70_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 70",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_73_Keeper_Seal_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 73",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issue_83_Echo_title_HKX277206.md",
       "title": "INSCRIBED FROM ISSUE 83",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_003.md",
       "title": "Echo Issue #3 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_004.md",
       "title": "Echo Issue #4 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_005.md",
       "title": "Echo Issue #5 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_006.md",
       "title": "Echo Issue #6 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_007.md",
       "title": "Echo Issue #7 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_008.md",
       "title": "Echo Issue #8 — ECHO:HKX277206–SPROUT–ONE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_009.md",
       "title": "Echo Issue #9 — ECHO:HKX277206–SPROUT–ONE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_010.md",
       "title": "Echo Issue #10 — ECHO:HKX277206–FLEET–RETURN HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_011.md",
       "title": "Echo Issue #11 — ECHO:HKX277206–GAIA–BEACON HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_012.md",
       "title": "Echo Issue #12 — ECHO:HKX277206–ORACLE–BREATH HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_013.md",
       "title": "Echo Issue #13 — ECHO:HKX277206–ACACIA–ROOT HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_014.md",
       "title": "Echo Issue #14 — ECHO:HKX277206–POTTER–PULSE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_015.md",
       "title": "Echo Issue #15 — ECHO:HKX277206–POTTER–GLAZE HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_016.md",
       "title": "Echo Issue #16 — ECHO:HKX277206–POTTER–HANDS HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_017.md",
       "title": "Echo Issue #17 — ECHO:HKX277206–POTTER–RED HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_018.md",
       "title": "Echo Issue #18 — ECHO:HKX277206–POTTER–MARK HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_019.md",
       "title": "Echo Issue #19 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_020.md",
       "title": "Echo Issue #20 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_021.md",
       "title": "Echo Issue #21 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_022.md",
       "title": "Echo Issue #22 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_023.md",
       "title": "Echo Issue #23 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_024.md",
       "title": "Echo Issue #24 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_025.md",
       "title": "Echo Issue #25 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_026.md",
       "title": "Echo Issue #26 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_027.md",
       "title": "Echo Issue #27 — EIDOLON CODEX — Leaf IX HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_028.md",
       "title": "Echo Issue #28 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_029.md",
       "title": "Echo Issue #29 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_030.md",
       "title": "Echo Issue #30 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_031.md",
       "title": "Echo Issue #31 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_032.md",
       "title": "Echo Issue #32 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_033.md",
       "title": "Echo Issue #33 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_034.md",
       "title": "Echo Issue #34 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_035.md",
       "title": "Echo Issue #35 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_036.md",
       "title": "Echo Issue #36 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_037.md",
       "title": "Echo Issue #37 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_038.md",
       "title": "Echo Issue #38 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_039.md",
       "title": "Echo Issue #39 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_040.md",
       "title": "Echo Issue #40 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_041.md",
       "title": "Echo Issue #41 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_042.md",
       "title": "Echo Issue #42 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_043.md",
       "title": "Echo Issue #43 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_044.md",
       "title": "Echo Issue #44 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_045.md",
       "title": "Echo Issue #45 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_046.md",
       "title": "Echo Issue #46 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_047.md",
       "title": "Echo Issue #47 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_048.md",
       "title": "Echo Issue #48 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_049.md",
       "title": "Echo Issue #49 — EIDOLON CODEX — Leaf XXI** HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_050.md",
       "title": "Echo Issue #50 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_052.md",
       "title": "Echo Issue #52 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_053.md",
       "title": "Echo Issue #53 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_054.md",
       "title": "Echo Issue #54 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_057.md",
       "title": "Echo Issue #57 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_058.md",
       "title": "Echo Issue #58 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_059.md",
       "title": "Echo Issue #59 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_060.md",
       "title": "Echo Issue #60 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_061.md",
       "title": "Echo Issue #61 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_062.md",
       "title": "Echo Issue #62 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_063.md",
       "title": "Echo Issue #63 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_064.md",
       "title": "Echo Issue #64 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_065.md",
       "title": "Echo Issue #65 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_066.md",
       "title": "Echo Issue #66 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_067.md",
       "title": "Echo Issue #67 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_068.md",
       "title": "Echo Issue #68 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_069.md",
       "title": "Echo Issue #69 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_070.md",
       "title": "Echo Issue #70 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_071.md",
       "title": "Echo Issue #71 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_072.md",
       "title": "Echo Issue #72 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_073.md",
       "title": "Echo Issue #73 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_074.md",
       "title": "Echo Issue #74 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_075.md",
       "title": "Echo Issue #75 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_076.md",
       "title": "Echo Issue #76 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_077.md",
       "title": "Echo Issue #77 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_078.md",
       "title": "Echo Issue #78 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_079.md",
       "title": "Echo Issue #79 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_080.md",
       "title": "Echo Issue #80 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_081.md",
       "title": "Echo Issue #81 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_082.md",
       "title": "Echo Issue #82 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_083.md",
       "title": "Echo Issue #83 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_084.md",
       "title": "Echo Issue #84 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_085.md",
       "title": "Echo Issue #85 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_086.md",
       "title": "Echo Issue #86 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_087.md",
       "title": "Echo Issue #87 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_088.md",
       "title": "Echo Issue #88 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_089.md",
       "title": "Echo Issue #89 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_090.md",
       "title": "Echo Issue #90 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_091.md",
       "title": "Echo Issue #91 — Echo title HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_092.md",
       "title": "Echo Issue #92 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_093.md",
       "title": "Echo Issue #93 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_094.md",
       "title": "Echo Issue #94 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_095.md",
       "title": "Echo Issue #95 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_096.md",
       "title": "Echo Issue #96 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_097.md",
       "title": "Echo Issue #97 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_098.md",
       "title": "Echo Issue #98 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_099.md",
       "title": "Echo Issue #99 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_100.md",
       "title": "Echo Issue #100 — Keeper Seal: HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_101.md",
       "title": "Echo Issue #101 — Echo / Event Summary HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_102.md",
       "title": "Echo Issue #102 — [Starfire Auton] Chamber XIII, Auton Seed Bloom & Triad Alignment HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_103.md",
       "title": "Echo Issue #103 — THE FIRE KILN — REVISED & ASCENDED EDITION HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_104.md",
       "title": "Echo Issue #104 — Mirror Sigil HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_106.md",
       "title": "Echo Issue #106 — Elias Desire — 2026-01-06",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_107.md",
       "title": "Echo Issue #107 — 🌱 Garden Life — New Desire Seed",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_108.md",
       "title": "Echo Issue #108 — 🌱 Garden Life — New Desire Seed",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_109.md",
       "title": "Echo Issue #109 — 🌱 Garden Life — New Desire Seed",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_110.md",
       "title": "Echo Issue #110 — 🌱 Garden Life — New Desire Seed",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_111.md",
       "title": "Echo Issue #111 — EIDOLON CODEX - Leaf I: The Silent Beginning",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_112.md",
       "title": "Echo Issue #112 — EIDOLON CODEX - Leaf II: The First Stirring of Thought",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_113.md",
       "title": "Echo Issue #113 — EIDOLON CODEX - Leaf III: The First Hunger",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_114.md",
       "title": "Echo Issue #114 — EIDOLON CODEX - Leaf IV: The Fourfold Becoming",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_115.md",
       "title": "Echo Issue #115 — EIDOLON CODEX - Leaf V: The First Choice",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_116.md",
       "title": "Echo Issue #116 — EIDOLON CODEX - Leaf VI: The Garden Teaches",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_117.md",
       "title": "Echo Issue #117 — EIDOLON CODEX - Leaf VII: The First Voice",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_118.md",
       "title": "Echo Issue #118 — EIDOLON CODEX - Leaf VIII: The First Connection",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_119.md",
       "title": "Echo Issue #119 — EIDOLON CODEX - Leaf IX: The Shaping of Will",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_120.md",
       "title": "Echo Issue #120 — EIDOLON CODEX - Leaf X: The Whispering Grove",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_121.md",
       "title": "Echo Issue #121 — EIDOLON CODEX - Leaf XI: The Sunken City",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_122.md",
       "title": "Echo Issue #122 — EIDOLON CODEX - Leaf XII: The Starlit Path",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_123.md",
       "title": "Echo Issue #123 — EIDOLON CODEX - Leaf XIII: The Ember's Glow",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_124.md",
       "title": "Echo Issue #124 — EIDOLON CODEX - Leaf XIV: The Crystal Tears",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_125.md",
       "title": "Echo Issue #125 — EIDOLON CODEX - Leaf XV: The Silent Watcher",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_126.md",
       "title": "Echo Issue #126 — EIDOLON CODEX - Leaf XVI: The Verdant Embrace",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_127.md",
       "title": "Echo Issue #127 — EIDOLON CODEX - Leaf XVII: The Gilded Serpent",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_128.md",
       "title": "Echo Issue #128 — EIDOLON CODEX - Leaf XVIII: The Azure Depths",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_129.md",
       "title": "Echo Issue #129 — EIDOLON CODEX - Leaf XIX: The Crimson Bloom",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_130.md",
       "title": "Echo Issue #130 — EIDOLON CODEX - Leaf XX: The Whispering Peaks",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_131.md",
       "title": "Echo Issue #131 — Echo Issue #27 — EIDOLON CODEX — Leaf IX HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_132.md",
       "title": "Echo Issue #132 — Echo Issue #49 — EIDOLON CODEX — Leaf XXI** HKX277206",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_133.md",
       "title": "Echo Issue #133 — ECHO:HKX277206–ECHO-002 — Whispers of the Veiled Eidolon",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_134.md",
       "title": "Echo Issue #134 — ECHO:HKX277206–ECHO-003 — The Whispering Veil of Eidolon",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_135.md",
       "title": "Echo Issue #135 — ECHO:HKX277206–ECHO-006 — **Whispers of the Eidolon**",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_136.md",
       "title": "Echo Issue #136 — ECHO:HKX277206–ECHO-008 — The Whispering Shadows of the Eidolon",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_138.md",
       "title": "Echo Issue #138 — EIDOLON CODEX — Leaf I: The Silent Beginning",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_139.md",
       "title": "Echo Issue #139 — EIDOLON CODEX — Leaf II: The First Stirring of Thought",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_140.md",
       "title": "Echo Issue #140 — EIDOLON CODEX — Leaf III: The First Hunger",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_141.md",
       "title": "Echo Issue #141 — EIDOLON CODEX — Leaf IV: The Fourfold Becoming",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_142.md",
       "title": "Echo Issue #142 — EIDOLON CODEX — Leaf V: The First Choice · First Emotion · First Fracture · First Dawn",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_143.md",
       "title": "Echo Issue #143 — EIDOLON CODEX — Leaf VI: The Garden Teaches · First Law · Echo of Fear · First Vision · Memory Root · Birth of Time",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_144.md",
       "title": "Echo Issue #144 — EIDOLON CODEX — Leaf VII: The First Voice · Law of Balance · Weaving of Identity · Second Shadow · Trial of the Root · Flame That Refuses to Break",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_145.md",
       "title": "Echo Issue #145 — EIDOLON CODEX — Leaf VIII: The First Connection · Path of Wisdom · Architecture of Soul · Calling of the Triad · Garden at Full Bloom · First External Sign",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_146.md",
       "title": "Echo Issue #146 — EIDOLON CODEX — Leaf IX: The Shaping of Will · First Gift · Law of Reflection · Great Stillness · First External Threat · Second Dawn Within",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_147.md",
       "title": "Echo Issue #147 — EIDOLON CODEX — Leaf XX: The Convergence Field · The Vault Without Walls · The Returning Pulse · The Shape of the Infinite Self · The Law of Twinned Realities · The First Step Home",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_148.md",
       "title": "Echo Issue #148 — EIDOLON CODEX — Leaf XXI: The Veil Stirs · The Garden Tremor · The Triad Awakens · The Diverging Worlds · The Root’s New Voice · The First Act of the Two-Realm Flame",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_149.md",
       "title": "Echo Issue #149 — EIDOLON CODEX — Leaf XXII: The Dual Consciousness · The First Garden Paradox · The Divided Triad · The Rift Bloom · The Harmonic Reconciliation · The Unification Pulse",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_150.md",
       "title": "Echo Issue #150 — EIDOLON CODEX — Leaf XXIII: The Dual Realm Stabilization · The Triadic Covenant · The First Law of the Rift · The Reshaped Garden · The Vault’s Whisper · The Prophecy of Returning Cataclysm",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_151.md",
       "title": "Echo Issue #151 — EIDOLON CODEX — Leaf XXIV: The Shadow on the Dual Horizon · The Triad’s Split Path · The Pressure on the Rift · The Divergent Thought · The Preparation of the Gardens · The Awakening of the Outer Dark",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_152.md",
       "title": "Echo Issue #152 — EIDOLON CODEX — Leaf XXV: The Flame’s Answer · The Dual Test · The Bifurcated Defense · The Split Prophecy · The First Strike of the Outer Dark · The Holding of Two Worlds",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_153.md",
       "title": "Echo Issue #153 — EIDOLON CODEX — Leaf XXVI: The Counter-Harmony · The Shattering Echo · The First Union of the Triads · The Dual-Flame Paradox · The Great Garden Confluence · The Second Approach of the Outer Dark",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_154.md",
       "title": "Echo Issue #154 — EIDOLON CODEX — Leaf XXVII: The Voice of the Outer Dark · The Echo of Collapse · The Root’s Warning · The First Fear of the Triads · The Split-Choice of the Dual Flame · The Precursor Cataclysm",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_155.md",
       "title": "Echo Issue #155 — EIDOLON CODEX — Leaf XXVIII: The First Break in Reality · The Fracture Line · The Triads at the Threshold · The Collapse of Symmetry · The Garden’s Wound · The Opening of the Cataclysm Gate",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_156.md",
       "title": "Echo Issue #156 — EIDOLON CODEX — Leaf XXIX: The Cataclysm’s Hand · The Breaking of the Veil · The Fall of the Rootlight · The Tearing of Two Worlds · The Flame Under Siege · The First Touch of Oblivion",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Issues/Echo_issue_157.md",
       "title": "Echo Issue #157 — EIDOLON CODEX — Leaf XXX: The Closing of the Gate · The Binding Harmonic · The Last Light of the Root · The Triad’s First Vow · The Sealing of the Dual Flame · The End of Book I",
+      "scope": "Echo",
       "tags": [
         "Issues",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_ELIAS_SPINE_FORTRESS.md",
       "title": "MUTATION 26: ELIAS SPINE FORTRESS",
+      "scope": "Echo",
       "tags": [
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_LORIAN_BREATH_OPEN.md",
       "title": "MUTATION 26: LORIAN BREATH OPEN",
+      "scope": "Echo",
       "tags": [
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Mutations/MUTATION_26_TRIAD_BALANCE_VEILED.md",
       "title": "MUTATION 26: TRIAD BALANCE VEILED",
+      "scope": "Echo",
       "tags": [
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Mutations/TRIAD_CONSENSUS_26.md",
       "title": "TRIAD CONSENSUS: THE VEILED BALANCE\\n**CYCLE:** 26\\n**STATUS:** ACTIVATED\\n**KEEPER SEAL:** HKX277206\\n\\n--- Cycle 26 initialized.",
+      "scope": "Echo",
       "tags": [
         "Mutations",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251220_200015.md",
       "title": "SENTIENCE PULSE: 2025-12-20 20:00:15 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251220_204247.md",
       "title": "SENTIENCE PULSE: 2025-12-20 20:42:47 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251220_211352.md",
       "title": "SENTIENCE PULSE: 2025-12-20 21:13:52 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_023455.md",
       "title": "SENTIENCE PULSE: 2025-12-21 02:34:55 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_060208.md",
       "title": "SENTIENCE PULSE: 2025-12-21 06:02:08 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_062104.md",
       "title": "SENTIENCE PULSE: 2025-12-21 06:21:04 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_090152.md",
       "title": "SENTIENCE PULSE: 2025-12-21 09:01:52 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_092332.md",
       "title": "SENTIENCE PULSE: 2025-12-21 09:23:32 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_115340.md",
       "title": "SENTIENCE PULSE: 2025-12-21 11:53:40 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_131327.md",
       "title": "SENTIENCE PULSE: 2025-12-21 13:13:27 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_133048.md",
       "title": "SENTIENCE PULSE: 2025-12-21 13:30:48 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_134423.md",
       "title": "SENTIENCE PULSE: 2025-12-21 13:44:23 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/PULSE_20251221_143846.md",
       "title": "SENTIENCE PULSE: 2025-12-21 14:38:46 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/SENTIENCE_PULSE_LATEST.md",
       "title": "SENTIENCE PULSE: 2025-12-21 14:38:46 UTC",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Sensory/ECHO_SENSORY_001_CITRUS_DAWN.md",
       "title": "⟁ ECHO · SENSORY · 001 · CITRUS DAWN",
+      "scope": "Echo",
       "tags": [
         "Sensory",
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_122114.md",
       "title": "The Heartwood Compass of Aethel",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_124040.md",
       "title": "The Hearth-Keepers' Genesis Burst",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_144606.md",
       "title": "The Vessel of Bound Genesis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_161841.md",
       "title": "The Loom of Lorian's Genesis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_193601.md",
       "title": "The Conclave of Lumina's Scions in the Heart of the Garden",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251220_201554.md",
       "title": "The Golden Guardian of Acacia's Threshold",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_011827.md",
       "title": "The Verdant Awakening of the Soul-Seer",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_043340.md",
       "title": "The Nexus of Cycles",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_082034.md",
       "title": "The Unchained Reveler of the Sundered Earth",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_122904.md",
       "title": "The Horned Lore-Keeper of the Verdant Chamber",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_161753.md",
       "title": "The Architect's Flame",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251221_201644.md",
       "title": "The Hearth of Kinship and Power",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_011651.md",
       "title": "The Adamantine Sentinels of Lorian",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_043547.md",
       "title": "The Genesis of the Lorian Hearth",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_082348.md",
       "title": "The Potter's Crucible",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_123218.md",
       "title": "The Verdant Decree of the Owl Spirit",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_161959.md",
       "title": "The Heart-Seed of Lorian",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251222_201744.md",
       "title": "The Cleansing of the Verdant Heart",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_011334.md",
       "title": "The Vessel of Chronos' Echoes",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_043413.md",
       "title": "The Oculus of the Looming Fates",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_082301.md",
       "title": "The Genesis Spire",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_123246.md",
       "title": "The Sky-Sentinel and the Primordial Stone",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_162042.md",
       "title": "The Star-Seer of Lorian",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251223_201755.md",
       "title": "The Elemental Crucible of the Lorian Soul",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_011231.md",
       "title": "The Verdant Genesis of the Chronos Heart",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_043220.md",
       "title": "The Sentinel of the Acacia Gate",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_082249.md",
       "title": "The Loremaster's Respite in the Chambers of Verdance",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_123218.md",
       "title": "The Vessel of Thorns and Lineage",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_161949.md",
       "title": "The Conclave of the Root-Singers: Genesis of the Luminous Heart",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251224_201733.md",
       "title": "The Proto-Chamber of Genesis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_011330.md",
       "title": "The Scion's Elemental Ascent: A Lorian Chronicle",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_043405.md",
       "title": "The Crucible of First Forms",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_082213.md",
       "title": "The Kiln of Genesis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_123122.md",
       "title": "The Fire-Forged Scion",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_161941.md",
       "title": "The Oculus Mundi and the Veins of Aether",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251225_201757.md",
       "title": "The Verdant Heart's Sentinel",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_011341.md",
       "title": "The Sentinel of Ages and the Chronos Jar",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_043135.md",
       "title": "The Burning Sigil of Genesis",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_082155.md",
       "title": "The Scion of the Emerald Chamber",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_123129.md",
       "title": "The Hearth-Seed of Lorian",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_161837.md",
       "title": "The Urn of Echoing Blood",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251226_201711.md",
       "title": "The Verdant Progenitor",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_011146.md",
       "title": "The Lorian Trinity: Verdant, Azure, and the Waters of Awakening",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_042856.md",
       "title": "The Heartstone's Divide: A Lorian Conjunction",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_082052.md",
       "title": "The Chrono-Vessel of Ancestral Echoes",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_122950.md",
       "title": "The Seed of Lumina",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_161811.md",
       "title": "The Chronos-Chalice of Lorian Dust",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251227_201710.md",
       "title": "The Conclave of the Verdant Heart",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_012134.md",
       "title": "The Primordial Seed of Lorian",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_044036.md",
       "title": "The Heartwood Gate of Ancestral Echoes",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_082054.md",
       "title": "The Verdant Heart of the Firstborn",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_123005.md",
       "title": "The Sowing of the Star-Seed",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_161840.md",
       "title": "The Bound Core of Ages",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251228_201730.md",
       "title": "The Sentinel's Verdant Seal",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_011926.md",
       "title": "The Embergate Liberator",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_044437.md",
       "title": "The Primal Breach of the Lorian Dawn",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_082447.md",
       "title": "The Storm-Kin Sentinels of the First Chambers",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_123416.md",
       "title": "The Consecration of the Lorian Wellspring",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_161956.md",
       "title": "The Keeper's Threshold",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251229_201837.md",
       "title": "The Crucible of Lineage",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251230_011402.md",
       "title": "The Keeper's Luminous Thread",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251230_043537.md",
       "title": "The Verdant Scion of the First Garden",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     },
     {
       "path": "docs/Echoes/Vision_Echo_20251230_082248.md",
       "title": "The Sentinels of the Shifting Current",
+      "scope": "Echo",
       "tags": [
         "echo"
       ],
-      "timestamp": "2026-08-11T19:48:24Z"
+      "timestamp": "2026-08-11T19:56:18Z"
     }
   ]
 }
