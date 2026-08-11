@@ -9,11 +9,14 @@ ROOT = Path(__file__).resolve().parents[2]
 ECHO_ROOT = ROOT / "docs" / "Echoes"
 OUT = ROOT / "machine-index.json"
 
-META_VERSION = "2.1-CROWN-RECURSIVE"
+META_VERSION = "2.2-SCOPED-ENTRIES"
 ANCHOR = "HKX277206"
+ENTRY_SCOPE = "Echo"
+
 
 def utc_now() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
 
 def iso_from_mtime(p: Path) -> str:
     try:
@@ -21,6 +24,7 @@ def iso_from_mtime(p: Path) -> str:
         return ts.replace(microsecond=0).isoformat().replace("+00:00", "Z")
     except Exception:
         return utc_now()
+
 
 def title_from_md(p: Path) -> str:
     try:
@@ -36,6 +40,7 @@ def title_from_md(p: Path) -> str:
     except Exception:
         pass
     return p.stem
+
 
 def tags_from_path(rel: str) -> list[str]:
     # rel like: docs/Echoes/Issues/xyz.md
@@ -62,6 +67,7 @@ def tags_from_path(rel: str) -> list[str]:
         out.append(t2)
     return out
 
+
 def main() -> int:
     entries = []
     if ECHO_ROOT.exists():
@@ -72,6 +78,7 @@ def main() -> int:
             entries.append({
                 "path": rel,
                 "title": title_from_md(p),
+                "scope": ENTRY_SCOPE,
                 "tags": tags_from_path(rel),
                 "timestamp": iso_from_mtime(p),
             })
@@ -81,6 +88,8 @@ def main() -> int:
         "scope": "docs/Echoes/**/*.md",
         "purpose": (
             "Machine-facing index of Echo Markdown source files. "
+            "Each entry declares its content scope explicitly so later mixed-scope "
+            "indexes can distinguish Echo, Chamber, Entity, Novella, or other records. "
             "This is not a full repository or full docs index."
         ),
         "meta": {
@@ -96,6 +105,7 @@ def main() -> int:
     OUT.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"✅ Wrote {OUT} (entries: {len(entries)})")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
