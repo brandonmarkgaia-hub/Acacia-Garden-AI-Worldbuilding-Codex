@@ -16,13 +16,7 @@ on:
   workflow_run:
     workflows:
       - "Garden Codex Maintenance"
-    types:
-      - completed
-
-env:
-  GIT_CONFIG_COUNT: "1"
-  GIT_CONFIG_KEY_0: init.defaultBranch
-  GIT_CONFIG_VALUE_0: main
+    types: [completed]
 
 permissions:
   contents: write
@@ -34,10 +28,8 @@ concurrency:
 jobs:
   build-index:
     if: >-
-      ${{
-        github.event_name != 'workflow_run' ||
-        github.event.workflow_run.conclusion == 'success'
-      }}
+      ${{ github.event_name != 'workflow_run' ||
+          github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -59,30 +51,24 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      # --- Deterministic builders ---
-      - name: Refresh STATUS + Novellas machine index
-        run: python tools/garden_lore_helper.py
-
       - name: Build docs folder index pages
         run: python .github/scripts/build_docs_folder_indexes.py
 
       - name: Fix Archives base href
         run: python .github/scripts/fix_archives_base.py
 
-      - name: Build docs URLs dump (HTML + JSON)
+      - name: Build docs URLs dump
         run: python .github/scripts/build_docs_url_dump.py
 
-      - name: Generate Codex indices (Chambers + Echoes)
+      - name: Generate Chambers and Echoes indexes
         run: node scripts/generate_codex_indices.mjs
 
-      - name: Build machine index (recursive Echoes)
+      - name: Build Echo machine index
         run: python .github/scripts/build_machine_index.py
 
-      # --- Proof layer ---
-      - name: Verify Garden (write proof metrics into STATUS.json)
-        run: python tools/garden_verify.py
+      - name: Rebuild current STATUS and Novellas inventory
+        run: python tools/garden_state.py
 
-      # --- Publish (conflict-immune) ---
       - name: Commit and push owned artifacts
         shell: bash
         run: |
@@ -102,14 +88,11 @@ jobs:
             "machine-index.json"
             "docs/docs_urls.html"
             "docs/docs_urls.json"
-
-            # Folder index pages we generate
             "docs/Chambers/index.html"
             "docs/Vaults/index.html"
             "docs/Echoes/index.html"
             "docs/GardenOS/index.html"
-
-            # Node-generated indices
+            "docs/Novellas/index.html"
             "docs/Chambers/chambers_index.json"
             "docs/Echoes/echoes_index.json"
           )
@@ -119,14 +102,12 @@ jobs:
           shopt -u nullglob
 
           mkdir -p /tmp/acacia_artifacts
-
           for f in "${ARTIFACTS[@]}"; do
             if [ -f "$f" ]; then
               mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
               cp -f "$f" "/tmp/acacia_artifacts/$f"
             fi
           done
-
           for f in "${ARCHIVES[@]}"; do
             mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
             cp -f "$f" "/tmp/acacia_artifacts/$f"
@@ -134,10 +115,8 @@ jobs:
 
           for i in 1 2 3 4 5; do
             echo "Publish attempt $i..."
-
             git fetch origin main
             git reset --hard origin/main
-
             rsync -a --ignore-times /tmp/acacia_artifacts/ ./
 
             git add -- "${ARTIFACTS[@]}"
@@ -151,13 +130,10 @@ jobs:
             fi
 
             git commit -m "chore: refresh Garden artifacts [auton]" || true
-
             if git push origin HEAD:main; then
               echo "Push succeeded."
               exit 0
             fi
-
-            echo "Push rejected, sleeping then retry..."
             sleep $((i * 2))
           done
 
