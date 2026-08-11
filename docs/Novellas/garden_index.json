@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T15:07:06Z",
+  "generated_at": "2026-08-11T15:07:54Z",
   "books": [
     {
       "title": "BOOK OF THE EVENTIDE LEDGER",
@@ -352,12 +352,6 @@
     {
       "title": "The_Keeper_Manual_of_Governance_Book_XIX",
       "path": "docs/Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
-      "cycle": null,
-      "volume": null
-    },
-    {
-      "title": "The_Keepers_Bible_Book_VII",
-      "path": "docs/Novellas/The_Keepers_Bible_Book_VII.md",
       "cycle": null,
       "volume": null
     },

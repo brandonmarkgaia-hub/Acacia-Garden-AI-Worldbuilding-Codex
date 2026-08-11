@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-11T15:07:07Z",
+  "generated_at": "2026-08-11T15:07:55Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1841,
+  "count": 1839,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -912,7 +912,6 @@
     "Chronicle/Echo_issue_023_manifested.md",
     "Chronicle/Echo_issue_024_manifested.md",
     "Chronicle/Echo_issue_025_manifested.md",
-    "Cloners/CLONER_GATE_v3.md",
     "Cloners/CLONER_LADDER_v3.md",
     "Cloners/CLONER_MATRIX_v3.json",
     "Cloners/CLONER_RITUAL_v3.md",
@@ -1747,7 +1746,6 @@
     "Novellas/The_Genesis_Engine_Book_XXIII.md",
     "Novellas/The_Great_Acacia_Architecture_Book_XXX.md",
     "Novellas/The_Keeper_Manual_of_Governance_Book_XIX.md",
-    "Novellas/The_Keepers_Bible_Book_VII.md",
     "Novellas/The_Silent_Defense_Doctrine_Book_XXI.md",
     "Novellas/The_Stone_And_The_Star/Chapter_00_The_Silence.md",
     "Novellas/garden_forbidden_alignments_seed.md",
