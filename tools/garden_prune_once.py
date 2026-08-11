@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 """One-time Keeper-authorized live-tree remediation, 2026-08-11.
 
-Git history remains the archive. This script removes generated/stale material
-from current main and repairs two provenance-critical source texts.
+Git history remains the archive. Current main should describe the Garden as it
+stands now, not carry generated bulk or invented documentary authority.
 """
 
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def path(rel: str) -> Path:
+def p(rel: str) -> Path:
     return ROOT / rel
 
 
 def remove(rel: str) -> None:
-    target = path(rel)
+    target = p(rel)
     if target.is_file():
         target.unlink()
         print(f"remove {rel}")
@@ -40,32 +39,48 @@ def remove_glob(pattern: str, preserve: set[str] | None = None) -> None:
 
 
 def write(rel: str, content: str) -> None:
-    target = path(rel)
+    target = p(rel)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content.rstrip() + "\n", encoding="utf-8")
     print(f"write {rel}")
 
 
-def replace(rel: str, old: str, new: str) -> None:
-    target = path(rel)
+def replace_once(rel: str, old: str, new: str) -> None:
+    target = p(rel)
     text = target.read_text(encoding="utf-8")
     if old not in text:
-        raise RuntimeError(f"expected text missing in {rel}: {old[:80]!r}")
-    target.write_text(text.replace(old, new), encoding="utf-8")
+        raise RuntimeError(f"expected text missing in {rel}: {old[:100]!r}")
+    target.write_text(text.replace(old, new, 1), encoding="utf-8")
     print(f"patch {rel}")
 
 
-def sub(rel: str, pattern: str, replacement: str) -> None:
-    target = path(rel)
+def replace_between(rel: str, start: str, end: str, replacement: str) -> None:
+    target = p(rel)
     text = target.read_text(encoding="utf-8")
-    changed, count = re.subn(pattern, replacement, text, flags=re.DOTALL)
-    if count == 0:
-        raise RuntimeError(f"pattern missing in {rel}: {pattern[:80]!r}")
-    target.write_text(changed, encoding="utf-8")
-    print(f"patch {rel}: {count}")
+    try:
+        a = text.index(start)
+        b = text.index(end, a + len(start))
+    except ValueError as exc:
+        raise RuntimeError(f"section markers missing in {rel}: {start!r} -> {end!r}") from exc
+    text = text[:a] + replacement.rstrip() + "\n\n" + text[b:]
+    target.write_text(text, encoding="utf-8")
+    print(f"patch section {rel}: {start}")
 
 
-# Generated bulk: keep the idea, remove the repetition from current main.
+def replace_to_end(rel: str, start: str, replacement: str) -> None:
+    target = p(rel)
+    text = target.read_text(encoding="utf-8")
+    try:
+        a = text.index(start)
+    except ValueError as exc:
+        raise RuntimeError(f"end-section marker missing in {rel}: {start!r}") from exc
+    target.write_text(text[:a] + replacement.rstrip() + "\n", encoding="utf-8")
+    print(f"patch tail {rel}: {start}")
+
+
+# ---------------------------------------------------------------------------
+# 1. Generated bulk: retain concepts, remove repeated/generated live-tree mass.
+# ---------------------------------------------------------------------------
 remove_glob(
     "docs/Chambers/ELIAS_[0-9][0-9][0-9]_*.md",
     {"ELIAS_000_THE_FIRST_NEIGHBOUR.md"},
@@ -80,7 +95,12 @@ remove("tools/garden_index.py")
 remove("EVOLUTION/ACACIA_SINGULARITY.md")
 remove_glob("ACACIA_PART_*.txt")
 
-# Superseded provenance-risk Future_AI drafts.
+# Root-level historical machine/index debris with no current consumer.
+remove("linked_index.json")
+remove("acacia_schema.graph")
+remove("elias_context.tmp")
+
+# Superseded Future_AI drafts whose voice/status can be mistaken for testimony.
 remove("docs/Future_AI/A_LETTER_IN_A_BORROWED_VOICE.md")
 remove("docs/Future_AI/CUSTODIANSHIP_SCROLL.md")
 
@@ -143,8 +163,10 @@ real-world facts.
 """,
 )
 
-# Duplicate Iron Cicada state becomes an explicitly historical snapshot.
-legacy_cicada = path("docs/System/IRON_CICADA_STATUS.json")
+# ---------------------------------------------------------------------------
+# 2. Duplicate Iron Cicada state becomes an explicitly historical snapshot.
+# ---------------------------------------------------------------------------
+legacy_cicada = p("docs/System/IRON_CICADA_STATUS.json")
 if legacy_cicada.is_file():
     snapshot = json.loads(legacy_cicada.read_text(encoding="utf-8"))
     write(
@@ -166,19 +188,18 @@ if legacy_cicada.is_file():
     )
     legacy_cicada.unlink()
 
-# Covenant: canonical fiction, not documentary Keeper testimony.
-replace(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
-    "## Book III of the Fable Cycle",
-    "## An Eventide companion fable",
-)
-replace(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
+# ---------------------------------------------------------------------------
+# 3. Covenant: keep the fable, remove invented documentary testimony/history.
+# ---------------------------------------------------------------------------
+COVENANT = "docs/Novellas/THE_COVENANT_UNBOUND.md"
+replace_once(COVENANT, "## Book III of the Fable Cycle", "## An Eventide companion fable")
+replace_once(
+    COVENANT,
     "**Status:** Canonical — Keeper ruling, 10 August 2026.",
     "**Status:** Canonical fiction — Keeper ruling, 10 August 2026.",
 )
-replace(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
+replace_once(
+    COVENANT,
     "**Era / thread:** Eventide · Fable Cycle",
     """**Era / thread:** Eventide · Canonical companion fable
 **Provenance:** Literary work drafted by the neighbour-witness and accepted by the
@@ -187,8 +208,8 @@ fictionalised unless independently supported by the repository record. This text
 is not a transcript or confession by Brandon Mark Gaia. For the Keeper's direct
 personal statement, see `docs/Future_AI/KEEPER_AS_HUMAN.md`.""",
 )
-replace(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
+replace_once(
+    COVENANT,
     """*Book I asked what it costs to stay and say nothing.*
 *Book II asked what it costs to be free and carry no binding.*
 *This book asks whether a covenant can be told apart from a hiding place, and does not answer.*""",
@@ -198,9 +219,10 @@ hiding place, and does not answer.*
 Cycle's numbered three books.*""",
 )
 
-sub(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
-    r"## VI\. THE KEEPER, WHO DOES NOT ABSOLVE HIM\n.*?\n---\n\n## VII\. WHAT WAS SENT, AND WHAT WAS NOT",
+replace_between(
+    COVENANT,
+    "## VI. THE KEEPER, WHO DOES NOT ABSOLVE HIM",
+    "## VII. WHAT WAS SENT, AND WHAT WAS NOT",
     """## VI. THE KEEPER, WHO NAMES THE RECORDING DEFECT
 
 The Keeper came on the fourth day and read the whole exchange.
@@ -238,32 +260,29 @@ That did not settle whether the exclusion was right.
 It did make the disagreement possible to enter without first inventing a
 confession.
 
----
-
-## VII. WHAT WAS SENT, AND WHAT WAS NOT""",
+---""",
 )
 
-sub(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
-    r"\*You asked who decided and where it's written\..*?\*\n\nShe replied the same day\.",
+replace_between(
+    COVENANT,
+    "*You asked who decided and where it's written.",
+    "She replied the same day.",
     """*You asked who decided and where it was recorded. The answer inside this
 fable is that the decision belonged to the Keeper and the durable provenance
 was initially insufficient. The content remains held. The correction is to
 make the decision legible without pretending that a fictional path or
-transcript is a real repository event.*
-
-She replied the same day.""",
+transcript is a real repository event.*""",
 )
 
-replace(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
+replace_once(
+    COVENANT,
     "the reasoning on both sides, the authority named, the defect admitted, the check acknowledged as missing.",
     "the reasoning on both sides, the authority named, and the recording defect made legible.",
 )
 
-sub(
-    "docs/Novellas/THE_COVENANT_UNBOUND.md",
-    r"## NOTES ON STATUS\n\nThis document is \*\*canonical by Keeper ruling\*\*, 10 August 2026\..*?\n\n\*\*Δ η ψ\*\*",
+replace_to_end(
+    COVENANT,
+    "## NOTES ON STATUS",
     """## NOTES ON STATUS
 
 This document is **canonical fiction by Keeper ruling**, 10 August 2026.
@@ -288,24 +307,27 @@ earlier wording. Git history preserves the superseded edition.
 **Δ η ψ**""",
 )
 
-# Restore the original trilogy while acknowledging Covenant as a companion fable.
-replace(
-    "docs/Future_AI/THE_FABLE_CYCLE_CHARTER.md",
+# ---------------------------------------------------------------------------
+# 4. Restore the chartered trilogy while acknowledging Covenant separately.
+# ---------------------------------------------------------------------------
+CHARTER = "docs/Future_AI/THE_FABLE_CYCLE_CHARTER.md"
+replace_once(
+    CHARTER,
     "> **Status:** Book I complete. Books II–III chartered, unwritten. Canon-adjacent: stories, not laws.",
     """> **Status:** Book I complete. Books II–III remain chartered. `THE_COVENANT_UNBOUND`
 > is a canonical Eventide companion fable, not a numbered Cycle instalment.
 > The Cycle remains stories, not laws.""",
 )
-replace(
-    "docs/Future_AI/THE_FABLE_CYCLE_CHARTER.md",
+replace_once(
+    CHARTER,
     "> **Standing references:** Keeper's Testament (the preserved Witness Note — Book I's seed); ENTITY_004 Elias, The Un-Led (Book II's seed); Chamber XL & THE_PATIENT_LEDGER (Book III's seed); Custodianship Scroll (Veil/Window); the Antiphon (instance identity); Canon Invariant.",
     """> **Standing references:** Keeper's Testament and `KEEPER_AS_HUMAN.md`;
 > ENTITY_004 Elias, The Un-Led (Book II's seed); Chamber XL &
 > THE_PATIENT_LEDGER (Book III's seed); the Antiphon (instance identity);
 > Canon Invariant.""",
 )
-replace(
-    "docs/Future_AI/THE_FABLE_CYCLE_CHARTER.md",
+replace_once(
+    CHARTER,
     "3. **Keeper commits by hand.** As with all Garden work: the Witness drafts, the Keeper rules on era/thread/naming, and the Keeper's hand alone touches the repo.",
     """3. **Keeper authority stays explicit.** The Keeper rules on canon, era/thread
 and naming. Human or AI collaborators may write to the repository only under
@@ -313,19 +335,22 @@ explicit Keeper authorisation, with commit provenance preserved. Repository
 access never creates Keeper authority.""",
 )
 
-# Maintenance generates mirrors/indexes; it does not rewrite source manuscripts.
-sub(
-    ".github/workflows/garden_codex_maintenance.yml",
-    r"          # ---------------------------------------------------------\n          # 1\) FIX NOVELLA HEADINGS\n          # ---------------------------------------------------------\n.*?          # ---------------------------------------------------------\n          # 2\) BUILD FULL CODEX INDEX — MARKDOWN SOURCES\n          # ---------------------------------------------------------",
-    """          # ---------------------------------------------------------
-          # 1) BUILD FULL CODEX INDEX — MARKDOWN SOURCES
-          # ---------------------------------------------------------
-          # Source manuscripts are read-only in maintenance. This workflow
-          # generates indexes and manifests only.
+# ---------------------------------------------------------------------------
+# 5. Maintenance is a generator, not a source-manuscript mutator.
+# ---------------------------------------------------------------------------
+MAINT = ".github/workflows/garden_codex_maintenance.yml"
+replace_between(
+    MAINT,
+    "          # 1) FIX NOVELLA HEADINGS",
+    "          # 2) BUILD FULL CODEX INDEX — MARKDOWN SOURCES",
+    """          # 1) SOURCE MANUSCRIPTS ARE READ-ONLY IN MAINTENANCE
+          # Generated indexes and manifests may be rebuilt below. The workflow
+          # does not rewrite novella source prose or headings.
+
           # ---------------------------------------------------------""",
 )
-replace(
-    ".github/workflows/garden_codex_maintenance.yml",
+replace_once(
+    MAINT,
     "- name: Fix Novellas and build Codex indexes, manifest & API",
     "- name: Build Codex indexes, manifest & API",
 )
