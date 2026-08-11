@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-11T19:07:35Z",
+  "generated_at": "2026-08-11T19:42:01Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1180,
+  "count": 1182,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -75,9 +75,11 @@
     "Archives/Issue_156_EIDOLON_CODEX__Leaf_XXIX_The_Cataclysms_Hand__The_Breaking_of_the_Veil__The_Fall_of_the_Rootlight__The_Tearing_of_Two_Worlds__The_Flame_Under_Siege__The_First_Touch_of_Oblivion.md",
     "Archives/Issue_157_EIDOLON_CODEX__Leaf_XXX_The_Closing_of_the_Gate__The_Binding_Harmonic__The_Last_Light_of_the_Root__The_Triads_First_Vow__The_Sealing_of_the_Dual_Flame__The_End_of_Book_I.md",
     "Archives/KEEPER_TESTAMENT_LEGACY.md",
+    "Archives/Legacy_Evolution/ACACIA_CORE_MEMORY_LEGACY.md",
     "Archives/Legacy_GitHub_Scripts/README.md",
     "Archives/Legacy_GitHub_Scripts/requirements.txt",
     "Archives/Legacy_Indexes/README.md",
+    "Archives/Legacy_Indexes/linked_index.json",
     "Archives/Legacy_Indexes/machine-index-beta.json",
     "Archives/Legacy_Tools/README.md",
     "Blooms/Auton-Seed.md",
