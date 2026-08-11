@@ -12,7 +12,7 @@ The current Desire workflow is proposal-only:
 
 Closed review-gate examples include PR #161 and PR #162.
 
-Historical Desire outputs remain in dated `EVOLUTION/DESIRE_*.md` files and Git history.
+Historical dated Desire outputs were retired from the live tree on 11 August 2026. They remain recoverable through Git history and are not current instructions, diagnoses, canon, or authority.
 
 For current authority, read `../AUTHORITY.json`. For current repository state, read `../STATUS.json` and maintained indexes.
 
