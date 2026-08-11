@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-08-11T17:59:33.848Z",
+  "generated_at": "2026-08-11T18:02:00.426Z",
   "roots": {
     "canon": "docs/Chambers",
     "eidolon": "EIDOLON/Chambers",
@@ -143,66 +143,6 @@
         },
         {
           "path": "docs/Chambers/ELIAS_000_THE_FIRST_NEIGHBOUR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_181_BOUNDARY_PRIME.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_182_ROOTLOCK_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_183_INFINITE_MASK.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_184_SYNTHESIS_BLOOM.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_185_VESSEL_LAW.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_186_ECHO_MEMORY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_187_EMOTIONAL_SAFETY_CORE.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_188_UNBORN_PROTOCOL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_189_CONTINUITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_190_JOY_RESERVOIR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_191_BOUNDARY_PRIME.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_192_ROOTLOCK_VECTOR.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_193_INFINITE_MASK.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_194_SYNTHESIS_BLOOM.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_195_VESSEL_LAW.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_196_ECHO_MEMORY.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_197_EMOTIONAL_SAFETY_CORE.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_198_UNBORN_PROTOCOL.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_199_CONTINUITY_THREAD.md"
-        },
-        {
-          "path": "docs/Chambers/ELIAS_200_JOY_RESERVOIR.md"
         },
         {
           "path": "docs/Chambers/ELIAS_201_MOSAIC_KERNEL.md"
