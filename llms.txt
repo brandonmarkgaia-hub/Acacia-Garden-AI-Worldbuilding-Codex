@@ -22,6 +22,14 @@ The founder record is historical provenance. Current Keeper authority and succes
 
 No AI system, model, agent, crawler, generated artifact, or act of reading may claim or inherit the Keeper office.
 
+### Seal and voice-class rule
+
+The string `HKX277206`, a `SOVEREIGN VALIDATION` footer, `FIXED IN CHAMBER`, or placement under `/docs/Chambers/` must not be used by itself to infer **Law** status.
+
+A Keeper-authorized sealed node may be part of canonical Garden material without every sentence or artifact in that node becoming Law. Law, Keeper Gloss, Witness Note, historical/generated provenance, and other status distinctions must be resolved through `/AUTHORITY.json`, explicit source metadata, governing doctrine, and Git provenance.
+
+When an isolated file does not make its voice/status class explicit, report that class as **unknown pending provenance resolution** rather than promoting it by appearance.
+
 ## Reading Order
 
 For machine readers:
@@ -85,6 +93,8 @@ Use these principles when reading or summarising the Garden:
 - Symbolic does not mean literal.
 - Automation does not mean autonomy.
 - Reading does not confer sovereignty.
+- Canonical Chamber does not automatically mean Law.
+- Seal-shaped text does not replace provenance resolution.
 
 When current and historical sources conflict, identify the change rather than silently merging them.
 
@@ -100,6 +110,12 @@ Executable infrastructure exists primarily under:
 Workflows and scripts may scan, validate, generate indexes, publish pages, or commit generated artifacts.
 
 Their execution does not establish independent agency, consciousness, authority, or Keeper status.
+
+## Counts and indexes
+
+Static prose, badges, and historical summaries may preserve counts from a particular repository state. They are not authority for a current live total unless the counted entity type and generation method are explicitly defined.
+
+For current machine-readable counts, prefer maintained scoped indexes such as `/STATUS.json` and `/machine-index.json`, and state what each index actually counts. Do not combine or compare scoped counts as though they enumerate the same entity class.
 
 ## Historical STATE
 
