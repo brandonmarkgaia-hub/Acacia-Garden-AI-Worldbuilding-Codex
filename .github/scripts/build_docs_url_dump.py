@@ -1,206 +1,42 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-
-import json
-import subprocess
+import json, subprocess
 from pathlib import Path
+from datetime import datetime, timezone
 
-ROOT = Path(__file__).resolve().parents[2]
-DOCS_DIR = ROOT / "docs"
-OUT_HTML = DOCS_DIR / "docs_urls.html"
-OUT_JSON = DOCS_DIR / "docs_urls.json"
+ROOT=Path(__file__).resolve().parents[2]; DOCS_DIR=ROOT/"docs"; OUT_HTML=DOCS_DIR/"docs_urls.html"; OUT_JSON=DOCS_DIR/"docs_urls.json"
+SITE="https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/docs/docs_urls.html"
 
-
-def git_ls_files_docs() -> list[str]:
-    """
-    Uses git's tracked file list to avoid filesystem quirks in Actions.
-    Returns docs-relative paths like 'Chambers/xyz.md' (no leading 'docs/').
-    """
-    if not (ROOT / ".git").exists():
-        # fallback if running without git metadata
-        return []
-
-    try:
-        out = subprocess.check_output(
-            ["git", "ls-files", "docs"],
-            cwd=str(ROOT),
-            text=True,
-        )
-    except Exception:
-        return []
-
-    rels: list[str] = []
+def git_ls_files_docs():
+    try: out=subprocess.check_output(["git","ls-files","docs"],cwd=ROOT,text=True)
+    except Exception: return []
+    vals=[]
     for line in out.splitlines():
-        line = line.strip()
-        if not line or not line.startswith("docs/"):
-            continue
-        # drop "docs/"
-        rel = line[5:]
-        if not rel:
-            continue
-        # keep only useful types
-        suf = Path(rel).suffix.lower()
-        if suf not in {".html", ".md", ".json", ".txt"}:
-            continue
-        rels.append(rel)
+        if not line.startswith("docs/"): continue
+        rel=line[5:].strip()
+        if rel and Path(rel).suffix.lower() in {".html",".md",".json",".txt"}: vals.append(rel)
+    return sorted(vals)
 
-    return sorted(rels)
-
-
-MAP_LOADER_INLINE = r"""
-<script>
-(function(){
-  try {
-    if (window.__acaciaMapLoaderInstalled) return;
-    window.__acaciaMapLoaderInstalled = true;
-
-    var path = (location && location.pathname) ? location.pathname : "/";
-    var parts = path.split("/").filter(Boolean);
-    var base = "/";
-    if (parts.length >= 1) base = "/" + parts[0] + "/";
-
-    function mkBtn(text, href, rightPx){
-      var a = document.createElement("a");
-      a.textContent = text;
-      a.href = base + href.replace(/^\/+/, "");
-      a.style.position = "fixed";
-      a.style.bottom = "18px";
-      a.style.right = rightPx + "px";
-      a.style.zIndex = "99999";
-      a.style.padding = "10px 12px";
-      a.style.borderRadius = "999px";
-      a.style.background = "rgba(15, 23, 42, 0.75)";
-      a.style.border = "1px solid rgba(148, 163, 184, 0.35)";
-      a.style.color = "#e5e7eb";
-      a.style.font = "600 12px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
-      a.style.letterSpacing = ".08em";
-      a.style.textTransform = "uppercase";
-      a.style.textDecoration = "none";
-      a.style.backdropFilter = "blur(6px)";
-      a.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
-      a.onmouseenter = function(){ a.style.background = "rgba(30, 41, 59, 0.85)"; };
-      a.onmouseleave = function(){ a.style.background = "rgba(15, 23, 42, 0.75)"; };
-      return a;
-    }
-
-    document.body.appendChild(mkBtn("Map", "map.html", 18));
-    document.body.appendChild(mkBtn("Handshake", "handshake.html", 86));
-  } catch (e) {}
-})();
-</script>
-""".strip()
-
-
-HTML_TEMPLATE = """<!doctype html>
+HTML='''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acacia • docs_urls</title>
+  <title>Acacia Garden · Machine Document Registry</title>
+  <meta name="description" content="Machine-readable and human-searchable registry of tracked Acacia Garden documents under docs/." />
+  <meta name="robots" content="index,follow,max-snippet:-1" />
+  <link rel="canonical" href="'''+SITE+'''" />
   <style>
-    :root {{
-      --bg:#050812; --panel:rgba(15,23,42,.72); --border:rgba(148,163,184,.22);
-      --text:#e5e7eb; --muted:#94a3b8; --link:#7dd3fc;
-    }}
-    body {{ margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }}
-    .wrap {{ max-width: 980px; margin: 0 auto; padding: 28px 16px 48px; }}
-    .card {{ background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px 16px; }}
-    h1 {{ margin:0 0 .35rem; font-size: 1.8rem; }}
-    p {{ margin:.35rem 0 1rem; color:var(--muted); line-height:1.55; }}
-    a {{ color:var(--link); text-decoration:none; }}
-    a:hover {{ text-decoration:underline; }}
-    input {{ width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:rgba(2,6,23,.5); color:var(--text); }}
-    ul {{ list-style:none; padding:0; margin: 14px 0 0; }}
-    li {{ padding:8px 6px; border-bottom:1px solid rgba(148,163,184,.12); }}
-    .meta {{ font-size:.85rem; color:var(--muted); }}
+    :root{--bg:#050812;--panel:rgba(15,23,42,.72);--border:rgba(148,163,184,.22);--text:#e5e7eb;--muted:#94a3b8;--link:#7dd3fc}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:980px;margin:0 auto;padding:28px 16px 48px}.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px 16px}h1{margin:0 0 .35rem;font-size:1.8rem}p{margin:.35rem 0 1rem;color:var(--muted);line-height:1.55}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:rgba(2,6,23,.5);color:var(--text)}ul{list-style:none;padding:0;margin:14px 0 0}li{padding:8px 6px;border-bottom:1px solid rgba(148,163,184,.12)}.meta{font-size:.85rem;color:var(--muted)}
   </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>docs_urls</h1>
-      <p class="meta">Generated by build_docs_url_dump.py • Count: <strong id="count">0</strong></p>
-      <input id="q" placeholder="Filter paths…" autocomplete="off" />
-      <ul id="list"></ul>
-    </div>
-  </div>
+</head><body><main class="wrap"><section class="card"><h1>Acacia Garden document registry</h1><p>Tracked machine-discoverable documents under <code>docs/</code>. Generated from Git, not hand-maintained.</p><p class="meta">Count: <strong id="count">0</strong></p><input id="q" aria-label="Filter document paths" placeholder="Filter paths…" autocomplete="off"/><ul id="list"></ul></section></main>
+<script>const paths={PATHS};const q=document.getElementById('q'),list=document.getElementById('list'),count=document.getElementById('count');function base(){const p=location.pathname.split('/').filter(Boolean);return p.length?'/'+p[0]+'/':'/'}function href(p){return base()+'docs/'+p.split('/').map(encodeURIComponent).join('/')}function render(a){list.innerHTML='';count.textContent=String(a.length);for(const p of a){const li=document.createElement('li'),x=document.createElement('a');x.href=href(p);x.textContent=p;li.appendChild(x);list.appendChild(li)}}q.addEventListener('input',()=>{const t=q.value.toLowerCase().trim();render(t?paths.filter(p=>p.toLowerCase().includes(t)):paths)});render(paths);</script>
+</body></html>'''
 
-  {map_loader}
-
-  <script>
-    const paths = {paths_json};
-
-    const q = document.getElementById('q');
-    const list = document.getElementById('list');
-    const count = document.getElementById('count');
-
-    function repoBase() {{
-      const parts = location.pathname.split('/').filter(Boolean);
-      if (parts.length >= 1) return '/' + parts[0] + '/';
-      return '/';
-    }}
-
-    function linkFor(relPath) {{
-      const base = repoBase();
-      return base + 'docs/' + relPath.split('/').map(encodeURIComponent).join('/');
-    }}
-
-    function render(items) {{
-      list.innerHTML = '';
-      count.textContent = String(items.length);
-      for (const p of items) {{
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = linkFor(p);
-        a.textContent = p;
-        li.appendChild(a);
-        list.appendChild(li);
-      }}
-    }}
-
-    function apply() {{
-      const term = (q.value || '').toLowerCase().trim();
-      if (!term) return render(paths);
-      render(paths.filter(p => p.toLowerCase().includes(term)));
-    }}
-
-    q.addEventListener('input', apply);
-    render(paths);
-  </script>
-</body>
-</html>
-"""
-
-
-def main() -> int:
-    DOCS_DIR.mkdir(parents=True, exist_ok=True)
-
-    paths = git_ls_files_docs()
-
-    payload = {
-        "generated_at": __import__("datetime").datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
-        "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
-        "purpose": (
-            "Broad document-path registry for discovery. "
-            "Its count is not expected to match machine-index.json."
-        ),
-        "count": len(paths),
-        "paths": paths,
-        "source": "git ls-files docs",
-    }
-
-    OUT_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-    html = HTML_TEMPLATE.format(
-        paths_json=json.dumps(paths, ensure_ascii=False),
-        map_loader=MAP_LOADER_INLINE,
-    )
-    OUT_HTML.write_text(html, encoding="utf-8")
-
-    print(f"✅ Wrote {OUT_JSON} (count={len(paths)})")
-    print(f"✅ Wrote {OUT_HTML}")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+def main():
+    DOCS_DIR.mkdir(parents=True,exist_ok=True); paths=git_ls_files_docs()
+    payload={"generated_at":datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z"),"scope":"tracked files under docs/ with extensions .html, .md, .json, and .txt","purpose":"Broad document-path registry for discovery. Its count is not expected to match machine-index.json.","count":len(paths),"paths":paths,"source":"git ls-files docs"}
+    OUT_JSON.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    OUT_HTML.write_text(HTML.replace("{PATHS}",json.dumps(paths,ensure_ascii=False)),encoding="utf-8")
+    print(f"Wrote {OUT_JSON} ({len(paths)} paths) and {OUT_HTML}"); return 0
+if __name__=="__main__": raise SystemExit(main())
