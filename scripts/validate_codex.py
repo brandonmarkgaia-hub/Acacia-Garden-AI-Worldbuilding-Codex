@@ -82,7 +82,6 @@ def html_check():
         else:
             if not DESC.search(text): print(f"[ERROR] HTML {rel}: missing description"); e+=1
             if not CANON.search(text): print(f"[ERROR] HTML {rel}: missing canonical"); e+=1
-        # Historical prose may name retired artifacts; only active href/src routes are stale errors.
         for raw in ATTR.findall(text):
             if not archive(rel) and any(x in unquote(urlsplit(raw).path) for x in RETIRED): print(f"[ERROR] HTML {rel}: active link to retired surface {raw}"); e+=1
             target=local(page,raw)
@@ -105,8 +104,8 @@ def exact_index(label,listed,actual,count=None):
 
 def machine_check():
     e=c=0
-    jsons=("AUTHORITY.json","STATUS.json","machine-index.json","machine-discovery.json",".well-known/acacia.json","docs/Archives/GARDEN_MANIFEST.json","docs/Archives/FULL_CODEX_INDEX.json","docs/api/GARDEN_API_INDEX.json","docs/docs_urls.json")
-    texts=("README.md","DISCOVERY.md","llms.txt","llms-full.txt","AGENTS.md","robots.txt","sitemap.xml")
+    jsons=("AUTHORITY.json","STATUS.json","machine-index.json","machine-discovery.json",".well-known/acacia.json","docs/Archives/GARDEN_MANIFEST.json","docs/Archives/FULL_CODEX_INDEX.json","docs/api/GARDEN_API_INDEX.json","docs/docs_urls.json","GARDEN_VERSION.json")
+    texts=("README.md","DISCOVERY.md","llms.txt","llms-full.txt","AGENTS.md","robots.txt","sitemap.xml","CHECKSUMS.sha256")
     for rel in jsons:
         c+=1
         try: j(rel)
@@ -119,7 +118,7 @@ def machine_check():
     x,y=exact_index("machine-index",listed,actual,mi.get("counts",{}).get("total")); e+=x;c+=y
     du=j("docs/docs_urls.json"); listed=du.get("paths",du.get("files",du.get("entries",[])))
     if listed and isinstance(listed[0],dict): listed=[x.get("path") for x in listed if isinstance(x.get("path"),str)]
-    suffix={".html",".md",".json",".txt"}; actual=[p.relative_to(ROOT).as_posix() for p in sorted((ROOT/"docs").rglob("*")) if p.is_file() and p.suffix.lower() in suffix]
+    suffix={".html",".md",".json",".txt"}; actual=[p.relative_to(ROOT/"docs").as_posix() for p in sorted((ROOT/"docs").rglob("*")) if p.is_file() and p.suffix.lower() in suffix]
     declared=du.get("count",du.get("counts",{}).get("total") if isinstance(du.get("counts"),dict) else None)
     x,y=exact_index("docs_urls",listed,actual,declared); e+=x;c+=y
     print(f"[Gatekeeper] Machine surfaces/indexes: {c} checked; {e} errors")
