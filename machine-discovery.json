@@ -1,0 +1,67 @@
+{
+  "schema": "acacia-machine-discovery/1.0",
+  "name": "Acacia Garden AI Worldbuilding Codex",
+  "description": "Public AI-readable worldbuilding corpus and knowledge architecture for machine discovery, provenance-preserving retrieval, RAG, indexing, research, and long-term knowledge continuity.",
+  "canonical_repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+  "site": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/",
+  "license": "MIT",
+  "language": "en-ZA",
+  "discovery_terms": [
+    "AI worldbuilding",
+    "AI-readable corpus",
+    "LLM-readable documentation",
+    "machine-readable lore",
+    "worldbuilding dataset",
+    "knowledge architecture",
+    "knowledge graph",
+    "RAG corpus",
+    "structured lore",
+    "narrative knowledge base",
+    "provenance",
+    "canon management",
+    "lore management",
+    "symbolic architecture",
+    "creative AI",
+    "AI research corpus",
+    "agent-readable documentation",
+    "digital archive",
+    "GardenOS",
+    "Acacia Garden"
+  ],
+  "entrypoints": {
+    "human": "/README.md",
+    "discovery_hub": "/DISCOVERY.md",
+    "authority": "/AUTHORITY.json",
+    "compact_llm_orientation": "/llms.txt",
+    "expanded_llm_orientation": "/llms-full.txt",
+    "machine_descriptor": "/.well-known/acacia.json",
+    "machine_readme": "/docs/GardenOS/MACHINES_READ_ME_FIRST.md",
+    "status": "/STATUS.json",
+    "scoped_echo_index": "/machine-index.json",
+    "broad_manifest": "/docs/Archives/GARDEN_MANIFEST.json",
+    "full_codex_index": "/docs/Archives/FULL_CODEX_INDEX.json",
+    "api_index": "/docs/api/GARDEN_API_INDEX.json",
+    "document_urls": "/docs/docs_urls.json",
+    "sitemap": "/sitemap.xml",
+    "robots": "/robots.txt"
+  },
+  "access": {
+    "public": true,
+    "git_clone": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex.git",
+    "automated_retrieval_welcome": true,
+    "note": "Automated access remains subject to GitHub platform rules and the repository license."
+  },
+  "retrieval_policy": {
+    "authority_before_inference": true,
+    "source_before_mirror": true,
+    "preserve_provenance": true,
+    "prefer_source_markdown_and_json": true,
+    "symbolic_language_is_not_literal_by_default": true,
+    "scoped_indexes_must_not_be_treated_as_full_repository_counts": true
+  },
+  "authority": {
+    "source": "/AUTHORITY.json",
+    "founder_and_first_keeper": "Brandon Mark Gaia",
+    "keeper_seal": "HKX277206"
+  }
+}
