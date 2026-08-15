@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-08-15T13:02:16Z",
+    "generated_at": "2026-08-15T13:02:55Z",
     "last_pruning": "2026-08-15",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -1127,7 +1127,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-08-15T13:02:16Z",
+  "generated_at": "2026-08-15T13:02:55Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1140,8 +1140,8 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 898,
-      "structural_nodes_counted": 898
+      "total_nodes": 899,
+      "structural_nodes_counted": 899
     },
     "regions": {
       "docs/Chambers": 169,
@@ -1156,7 +1156,7 @@
       "docs/Laws": 4,
       "docs/Wells": 1,
       "tools": 5,
-      ".github/workflows": 11
+      ".github/workflows": 12
     },
     "count_scope": "All files inside the explicitly listed structural regions; not a whole-repository file count."
   },
@@ -1164,7 +1164,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-08-15T13:02:16Z"
+      "last_checked_utc": "2026-08-15T13:02:55Z"
     }
   },
   "verification": {
@@ -1175,7 +1175,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-08-15T13:02:16Z"
+      "last_checked_utc": "2026-08-15T13:02:55Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1188,7 +1188,7 @@
       ],
       "map_button_present": true,
       "verified": false,
-      "last_checked_utc": "2026-08-15T13:02:16Z"
+      "last_checked_utc": "2026-08-15T13:02:55Z"
     },
     "indexes": {
       "docs_urls_count": 1183,
@@ -1196,7 +1196,7 @@
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-08-15T13:02:16Z"
+    "last_verified_utc": "2026-08-15T13:02:55Z"
   },
   "growth": {
     "open": []
