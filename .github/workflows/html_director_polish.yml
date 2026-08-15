@@ -1,0 +1,49 @@
+name: HTML Director Polish
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/polish_html.py"
+      - ".github/workflows/html_director_polish.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: acacia-html-director-polish
+  cancel-in-progress: false
+
+jobs:
+  polish-html:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Polish every tracked HTML document
+        run: python scripts/polish_html.py
+
+      - name: Commit deterministic HTML repairs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -- '*.html'
+          if git diff --cached --quiet; then
+            echo "No HTML repairs required."
+            exit 0
+          fi
+          git commit -m "chore: normalize HTML structure and discovery metadata"
+          git pull --rebase origin main
+          git push origin HEAD:main
