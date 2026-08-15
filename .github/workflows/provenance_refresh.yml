@@ -1,0 +1,49 @@
+name: Refresh Garden Provenance
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/build_provenance.py"
+      - ".github/workflows/provenance_refresh.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: acacia-provenance-refresh
+  cancel-in-progress: false
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Build SHA-256 provenance artifacts
+        run: python scripts/build_provenance.py
+
+      - name: Commit provenance artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add CHECKSUMS.sha256 GARDEN_VERSION.json
+          if git diff --cached --quiet; then
+            echo "Provenance artifacts already current."
+            exit 0
+          fi
+          git commit -m "chore: refresh machine-verifiable repository provenance"
+          git pull --rebase origin main
+          git push origin HEAD:main
