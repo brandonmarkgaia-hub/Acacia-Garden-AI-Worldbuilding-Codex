@@ -3,9 +3,9 @@
   "purpose": "Machine-verifiable identity and integrity metadata for one Git repository state. This file does not define canon or authority.",
   "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
   "git": {
-    "commit": "2c3df5d550863ea5b9aa484b288e8e18c0ba4dae",
-    "tree": "13f7f73f07b82f926ee83fee489fd2c9896954ef",
-    "commit_time": "2026-08-15T15:02:50+02:00",
+    "commit": "66c3116abc577ff784d71734097cb858b1abc87c",
+    "tree": "10c4a177a925409401a18b71582113160e58c29f",
+    "commit_time": "2026-08-15T15:12:23+02:00",
     "default_branch": "main"
   },
   "authority_source": "AUTHORITY.json",
@@ -26,12 +26,12 @@
     "llms.txt": "82586ce3f04548935694b9a8c23b356b9b12347f32a9f3f21bbb05bc6f3b5c9d",
     "llms-full.txt": "93c152a8e714eadb7c493809c716d6e2f42e2f2d49db757d4aee3f21a177ea35",
     "AGENTS.md": "cf3d8f6581c54b9213042e55898b05df5e5a6bc873e2e7fe62d93a81e0c959c5",
-    "STATUS.json": "51dfd4c68498c089edaac6282ddec954d3afc33eae990dd499f9c94dfc8ff477",
-    "machine-index.json": "31120e8f1c4ca0b236e949fa0f9d71270543927188d71c6d45a55b9e78dec42f",
-    "machine-discovery.json": "426227c5d175fcae655026555dd46dbda5f6b78f938244a277ab9b4da45b8b99",
-    ".well-known/acacia.json": "91670c461e5808d3a1c56c54dfeb14a7d91c15b3b91f154ec0cdd34fdd3b399a",
+    "STATUS.json": "5fb2a630c6d2a72b14351403122df8b7d83cec32677a02577919d1f7be0576a0",
+    "machine-index.json": "03215edca1f02d01ff18eedf14e0cff400ff00eb4585fa51af1c32f8576a0f70",
+    "machine-discovery.json": "6f72c41a7416a4ab6ce6366576050d9c69e8af4497f3c8d4ae3290eab6d2b917",
+    ".well-known/acacia.json": "ca8ba73b86ff653252f09b283a8e5bb82982d8ee17fca7cad017cdcd576c4225",
     "robots.txt": "126170d6ec79a8998362a39cfe9a802f52a69aee832b660c8f2231ba41b511ff",
-    "sitemap.xml": "5fbbe75ea086e93615591c200f678ff724fc3bae95db1cd409528157c266c884"
+    "sitemap.xml": "1c820646eaa14fb8b50c059e9556a70d0ab3feac8ff2fef089c7a9213bb70934"
   },
   "interpretation": {
     "git_is_provenance_record": true,
