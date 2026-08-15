@@ -1,11 +1,12 @@
 {
-  "acacia_spec": "2.0",
+  "acacia_spec": "2.1",
   "project": "Acacia Garden AI Worldbuilding Codex",
   "purpose": "Machine discovery and orientation. This descriptor is not itself an authority source.",
   "symbolic_call_sign": "ACACIA•GAIA•HKX277206",
 
   "site": "https://brandonmarkgaia-hub.github.io/Acacia-Garden-AI-Worldbuilding-Codex/",
   "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+  "clone": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex.git",
 
   "authority": {
     "canonical_source": "/AUTHORITY.json",
@@ -13,6 +14,8 @@
   },
 
   "ai_entry": {
+    "discovery_hub": "/DISCOVERY.md",
+    "structured_discovery": "/machine-discovery.json",
     "short_orientation": "/llms.txt",
     "expanded_orientation": "/llms-full.txt",
     "machine_readme": "/docs/GardenOS/MACHINES_READ_ME_FIRST.md",
@@ -21,7 +24,8 @@
 
   "current": {
     "status": "/STATUS.json",
-    "machine_index": "/machine-index.json"
+    "machine_index": "/machine-index.json",
+    "machine_index_scope_note": "machine-index.json is a scoped Echo index, not a complete repository inventory."
   },
 
   "indexes": {
@@ -32,6 +36,33 @@
     "docs_urls_html": "/docs/docs_urls.html",
     "api_index": "/docs/api/GARDEN_API_INDEX.json",
     "sitemap": "/sitemap.xml"
+  },
+
+  "discovery": {
+    "public": true,
+    "automated_retrieval_welcome": true,
+    "terms": [
+      "AI worldbuilding",
+      "AI-readable corpus",
+      "LLM-readable documentation",
+      "machine-readable lore",
+      "worldbuilding dataset",
+      "knowledge architecture",
+      "knowledge graph",
+      "RAG corpus",
+      "structured lore",
+      "narrative knowledge base",
+      "provenance",
+      "canon management",
+      "lore management",
+      "symbolic architecture",
+      "creative AI",
+      "AI research corpus",
+      "agent-readable documentation",
+      "digital archive",
+      "GardenOS",
+      "Acacia Garden"
+    ]
   },
 
   "orientation_surfaces": {
@@ -67,6 +98,6 @@
     "language": "en-ZA",
     "timezone": "Africa/Johannesburg",
     "created_at": "2025-11-13",
-    "last_reviewed": "2026-08-07"
+    "last_reviewed": "2026-08-15"
   }
 }
