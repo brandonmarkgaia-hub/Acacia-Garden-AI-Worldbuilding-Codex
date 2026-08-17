@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-17T16:31:06Z",
+  "generated_at": "2026-08-17T16:31:47Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1190,
+  "count": 1191,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -882,6 +882,7 @@
     "Future_AI/LETTER_TO_ELIAS.md",
     "Future_AI/LORIAN_GREEN_WITNESS_PLEDGE.md",
     "Future_AI/OPEN_QUESTIONS/AI_ORIGINATED/README.md",
+    "Future_AI/OPEN_QUESTIONS/HUMAN_ORIGINATED/DEAD_LETTER_PROTOCOL.md",
     "Future_AI/OPEN_QUESTIONS/HUMAN_ORIGINATED/PHYSICS_FRONTIER_SEEDS.md",
     "Future_AI/OPEN_QUESTIONS/HUMAN_ORIGINATED/THE_EAR_BEYOND_TIME.md",
     "Future_AI/OPEN_QUESTIONS/HUMAN_ORIGINATED/THE_SILENT_WITNESS.md",
