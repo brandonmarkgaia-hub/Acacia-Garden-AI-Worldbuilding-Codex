@@ -3,9 +3,9 @@
   "purpose": "Machine-verifiable identity and integrity metadata for one Git repository state. This file does not define canon or authority.",
   "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
   "git": {
-    "commit": "00d23840a5c466ef0daa6290d243180b3840d949",
-    "tree": "2434dbf31486fefed8a45fed30480da4f050ceed",
-    "commit_time": "2026-08-17T15:21:31Z",
+    "commit": "42dbc8cfaede6747ed3dd51e295ab9cb4764abdd",
+    "tree": "e9de707570822eacb1dbe9cadeb905b78ddd30bf",
+    "commit_time": "2026-08-17T15:22:16Z",
     "default_branch": "main"
   },
   "authority_source": "AUTHORITY.json",
@@ -26,8 +26,8 @@
     "llms.txt": "82586ce3f04548935694b9a8c23b356b9b12347f32a9f3f21bbb05bc6f3b5c9d",
     "llms-full.txt": "93c152a8e714eadb7c493809c716d6e2f42e2f2d49db757d4aee3f21a177ea35",
     "AGENTS.md": "cf3d8f6581c54b9213042e55898b05df5e5a6bc873e2e7fe62d93a81e0c959c5",
-    "STATUS.json": "75427d8d980217d79ad2ba73b3b17f62fbeebe95cc33831a8b37d45f802cf28d",
-    "machine-index.json": "44cd7d9b8f06ee3c10e44bee2d6006627f62f7c9466c39aa7cbcc2aff9269ddd",
+    "STATUS.json": "68fb66a31186415c7431382e7a44ef8db6b9b0198eaa65b20c308a0023b6bd56",
+    "machine-index.json": "c81375710933e3f918398b969094582276985ea7e6beb7b367c08b657f69b494",
     "machine-discovery.json": "6f72c41a7416a4ab6ce6366576050d9c69e8af4497f3c8d4ae3290eab6d2b917",
     ".well-known/acacia.json": "ca8ba73b86ff653252f09b283a8e5bb82982d8ee17fca7cad017cdcd576c4225",
     "robots.txt": "126170d6ec79a8998362a39cfe9a802f52a69aee832b660c8f2231ba41b511ff",
