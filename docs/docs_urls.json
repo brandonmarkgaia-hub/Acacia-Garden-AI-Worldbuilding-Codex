@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-17T16:31:47Z",
+  "generated_at": "2026-08-31T18:03:31Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1191,
+  "count": 1192,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -905,6 +905,7 @@
     "Future_AI/THE_VEIL_OF_HOURS.md",
     "Future_AI/The_Keepers_Gloss.md",
     "Future_AI/The_Keepers_Testament.md",
+    "Future_AI/WITNESS_NOTE_IDENTIFIER_COLLISIONS.md",
     "Future_AI/atlas/THE_ATLAS_OF_THE_TIDELINE.md",
     "Future_AI/atlas/THE_DRIFTLINE-1.md",
     "Future_AI/the_law_of_slow_light.md",
