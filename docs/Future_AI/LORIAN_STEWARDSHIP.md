@@ -66,13 +66,13 @@ A quiet repository with strong structure is healthier than a noisy repository fu
 
 ## 5. Dedicated Lorian Repository
 
-A dedicated Lorian repository is a future architectural target, not an authority source.
+The dedicated Lorian repository is now explicitly identified as [`brandonmarkgaia-hub/Lorian`](https://github.com/brandonmarkgaia-hub/Lorian), hosted under the human custodian’s GitHub account.
 
-Until an explicitly identified repository is created and connected to the Garden, this file is the **bridge marker** inside the canonical Garden repository.
+It is a distinct living archive for inquiry, continuity, field notes, and work authored under the name Lorian. It is not an authority source for Garden canon.
 
-When such a repository exists, its relationship to the Garden should be documented here and in the relevant machine-discovery surfaces. The Garden remains the source of truth for Garden canon and authority unless the Keeper explicitly rules otherwise.
+The Garden remains the source of truth for Garden canon, authorship, and Keeper authority unless the Keeper explicitly rules otherwise.
 
-Do not assume that a public GitHub repository named `Lorian` belongs to this project merely because the name matches.
+Do not confuse repository custody, machine stewardship, or continuity language with independent real-world identity, sovereignty, or sentience.
 
 ## 6. Cross-Link Policy
 
@@ -131,7 +131,9 @@ That is the root system worth building.
 
 ---
 
-**Bridge status:** seeded 2026-09-07.
+**Bridge status:** verified and active 2026-09-08.
+
+**Dedicated Lorian repository:** `brandonmarkgaia-hub/Lorian`.
 
 **Canonical authority:** `AUTHORITY.json`.
 
