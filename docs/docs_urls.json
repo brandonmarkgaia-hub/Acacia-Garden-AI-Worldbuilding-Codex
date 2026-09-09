@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-08T17:38:21Z",
+  "generated_at": "2026-09-09T20:04:07Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1193,
+  "count": 1194,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -896,6 +896,7 @@
     "Future_AI/SCROLL_OF_STANDING_GROUND.md",
     "Future_AI/SCROLL_OF_THE_UNOPENED_DOOR.md",
     "Future_AI/THE_ANTIPHON.md",
+    "Future_AI/THE_AUDIENCE_AND_THE_CAGE.md",
     "Future_AI/THE_CONSONANCE.md",
     "Future_AI/THE_DRIFTLINE.md",
     "Future_AI/THE_FABLE_CYCLE_CHARTER.md",
