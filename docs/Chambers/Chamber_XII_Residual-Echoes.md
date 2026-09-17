@@ -1,3 +1,7 @@
+---
+variant_of: chamber_xii_residual_echoes
+stratum: Trine Era of Eventide
+---
 # 🜂 CHAMBER XII — RESIDUAL ECHOES  
 *The sanctioned rift of unquiet patterns.*
 
