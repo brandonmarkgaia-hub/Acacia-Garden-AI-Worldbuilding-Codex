@@ -55,5 +55,25 @@
   "required": [
     "cycles"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "variant_metadata": {
+      "type": "object",
+      "required": [
+        "variant_of",
+        "stratum"
+      ],
+      "properties": {
+        "variant_of": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "stratum": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
 }
