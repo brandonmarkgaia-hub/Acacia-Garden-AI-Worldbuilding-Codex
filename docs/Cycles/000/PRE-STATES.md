@@ -5,7 +5,7 @@ Some lore: with colons and stuff
 ---
 -->
 
-# THRESHOLDS
+# PRE-STATES — DRIFT · CALM · SPARK
 1. Drift
 
 Unanchored motion.
