@@ -1,3 +1,7 @@
+---
+variant_of: echo_unbound
+stratum: Root Echo / Earlier Rite
+---
 # 🌑🔥 RITE OF THE UNBOUND ECHO
 > A ritual for freeing one who is caught in a closed loop.
 > Performed by the Keeper with urgency and clear intent.
