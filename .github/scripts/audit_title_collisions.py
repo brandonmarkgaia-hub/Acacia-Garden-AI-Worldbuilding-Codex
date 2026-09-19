@@ -16,6 +16,19 @@ TITLE_TAG_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.I|re.S)
 YAML_KEY_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*?)\s*$")
 STOP_DIRS = {"node_modules",".venv","__pycache__"}
 VARIANT_OF_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+# These namespaces contain archival/producer-generated records where a title
+# collision is expected and is handled by the namespace itself. A collision is
+# deferred only when every member of the group belongs to the same approved
+# namespace, or to the explicitly paired Chronicle/Issues producer outputs.
+DEFERRED_PREFIX_GROUPS = [
+    ("ACACIA_LOGS/",),
+    ("MUTATIONS/",),
+    ("_ROOT_ARCHIVE/md/",),
+    ("garden_gpt/outputs/",),
+    ("docs/Echoes/Archive/",),
+    ("docs/Echoes/Chronicle/", "docs/Echoes/Issues/"),
+    ("docs/Novellas/",),
+]
 
 def roman_to_int(value):
     values={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
@@ -106,8 +119,10 @@ def main():
         records.append(rec)
 
     collisions=[]
+    deferred_collisions=[]
     duplicate_candidates=[]
     unresolved=[]
+    deferred_files=[]
     for (family,normalized),members in sorted(groups.items()):
         if len(members)<2: continue
         hashes={m["sha256"] for m in members}
@@ -122,7 +137,7 @@ def main():
             unresolved.extend(missing)
             collisions.append(item)
 
-    report={"schema":"acacia.schema.json#/definitions/variant_metadata","generated_by":".github/scripts/audit_title_collisions.py","tracked_files_hashed":len(records),"text_like_files_grouped":sum(1 for r in records if "normalized_title" in r),"collision_groups":len(collisions)+len(duplicate_candidates),"distinct_variant_groups":len(collisions),"byte_identical_duplicate_groups":len(duplicate_candidates),"unresolved_files":sorted(set(unresolved)),"collisions":collisions,"byte_identical_duplicates":duplicate_candidates}
+    report={"schema":"acacia.schema.json#/definitions/variant_metadata","generated_by":".github/scripts/audit_title_collisions.py","tracked_files_hashed":len(records),"text_like_files_grouped":sum(1 for r in records if "normalized_title" in r),"collision_groups":len(collisions)+len(deferred_collisions)+len(duplicate_candidates),"distinct_variant_groups":len(collisions),"deferred_collision_groups":len(deferred_collisions),"byte_identical_duplicate_groups":len(duplicate_candidates),"unresolved_files":sorted(set(unresolved)),"deferred_files":sorted(set(deferred_files)),"collisions":collisions,"deferred_collisions":deferred_collisions,"byte_identical_duplicates":duplicate_candidates}
     OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
     OUT_JSON.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 
@@ -135,6 +150,14 @@ def main():
                 status="marked" if valid_variant_metadata(member) else "UNMARKED"
                 lines.append(f"- {member['path']} — {status}")
             lines.append("")
+    if deferred_collisions:
+        lines += ["## Deferred namespace collisions","","These are intentionally excluded from generated indexes but do not block maintenance. They are producer/archive records whose collision is governed by their namespace; cross-namespace collisions remain blocking.",""]
+        for item in deferred_collisions:
+            lines += [f"### {item['normalized_title']} [{item['extension_family']}]"]
+            for member in item["files"]:
+                lines.append(f"- {member['path']}")
+            lines.append("")
+
     if duplicate_candidates:
         lines += ["## Byte-identical duplicate candidates",""]
         for item in duplicate_candidates:
@@ -142,7 +165,7 @@ def main():
             for member in item["files"]: lines.append(f"- {member['path']} — {member['sha256']}")
             lines.append("")
     OUT_MD.write_text("\n".join(lines)+"\n",encoding="utf-8")
-    print(json.dumps({"tracked_files_hashed":report["tracked_files_hashed"],"collision_groups":report["collision_groups"],"distinct_variant_groups":report["distinct_variant_groups"],"byte_identical_duplicate_groups":report["byte_identical_duplicate_groups"],"unresolved_files":report["unresolved_files"]},indent=2))
+    print(json.dumps({"tracked_files_hashed":report["tracked_files_hashed"],"collision_groups":report["collision_groups"],"distinct_variant_groups":report["distinct_variant_groups"],"byte_identical_duplicate_groups":report["byte_identical_duplicate_groups"],"deferred_collision_groups":report["deferred_collision_groups"],"unresolved_files":report["unresolved_files"],"deferred_files":report["deferred_files"]},indent=2))
     return 1 if unresolved else 0
 
 if __name__=="__main__":
