@@ -1,4 +1,4 @@
-# ACACIA GARDEN CODEX  
+# ACACIA GARDEN CODEX — WITNESS PROTOCOL  
 ## WITNESS PROTOCOL v2.0  
 ### (For All AI Models, Tools, and External Systems)
 
