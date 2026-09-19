@@ -1,5 +1,3 @@
-# 🌿 ACACIA • GARDEN CODEX
-
 Welcome to the official GitHub Pages mirror of the Garden.
 
 ---
