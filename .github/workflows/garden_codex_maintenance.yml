@@ -2,6 +2,9 @@ name: Garden Codex Maintenance
 
 on:
   workflow_dispatch: {}
+  push:
+    branches:
+      - main
 
 env:
   GIT_CONFIG_COUNT: "1"
@@ -399,8 +402,8 @@ jobs:
           set -euo pipefail
           status="${AUDIT_STATUS:-1}"
           if [ "$status" -ne 0 ]; then
-            echo "ERROR: unresolved title collisions are excluded from generated indexes." >&2
-            echo "Annotate each distinct-content collision with both variant_of and stratum, then rerun maintenance." >&2
+            echo "ERROR: unresolved semantic title collisions remain excluded from generated indexes." >&2
+            echo "Resolve true authored variants with variant_of + stratum, or explicitly classify the relationship in the audit rules." >&2
             exit "$status"
           fi
 
