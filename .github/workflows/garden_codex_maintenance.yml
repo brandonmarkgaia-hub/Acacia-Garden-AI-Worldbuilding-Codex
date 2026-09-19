@@ -31,10 +31,20 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Audit title collisions and validate variant metadata
+        shell: bash
+        run: |
+          set +e
+          python .github/scripts/audit_title_collisions.py
+          status=$?
+          echo "AUDIT_STATUS=$status" >> "$GITHUB_ENV"
+          exit 0
+
       - name: Fix Novellas and build Codex indexes, manifest & API
         run: |
           python - << 'PY'
           import json
+          import os
           from pathlib import Path
 
           ROOT = Path(".").resolve()
@@ -145,6 +155,10 @@ jobs:
               "README_GARDEN.md",
           }
 
+          AUDIT_REPORT = ARCHIVES_DIR / "TITLE_COLLISION_AUDIT.json"
+          audit_data = json.loads(AUDIT_REPORT.read_text(encoding="utf-8"))
+          INDEX_INELIGIBLE = set(audit_data.get("unresolved_files", []))
+
 
           def is_excluded(path: Path) -> bool:
               rel = path.relative_to(ROOT)
@@ -154,6 +168,9 @@ jobs:
                   return True
 
               if rel.name in EXCLUDE_FILES:
+                  return True
+
+              if str(rel) in INDEX_INELIGIBLE:
                   return True
 
               return False
@@ -294,6 +311,7 @@ jobs:
                   for path in ROOT.rglob("*")
                   if path.is_file()
                   and not manifest_excluded(path)
+                  and str(path.relative_to(ROOT)) not in INDEX_INELIGIBLE
                   and path.suffix.lower() in TEXT_EXTS
               ),
               key=lambda path: str(
@@ -374,6 +392,17 @@ jobs:
           )
 
           PY
+
+      - name: Fail loudly on unresolved collisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="${AUDIT_STATUS:-1}"
+          if [ "$status" -ne 0 ]; then
+            echo "ERROR: unresolved title collisions are excluded from generated indexes." >&2
+            echo "Annotate each distinct-content collision with both variant_of and stratum, then rerun maintenance." >&2
+            exit "$status"
+          fi
 
       - name: Commit and push changes
         shell: bash
