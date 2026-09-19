@@ -157,7 +157,7 @@ jobs:
 
           AUDIT_REPORT = ARCHIVES_DIR / "TITLE_COLLISION_AUDIT.json"
           audit_data = json.loads(AUDIT_REPORT.read_text(encoding="utf-8"))
-          INDEX_INELIGIBLE = set(audit_data.get("unresolved_files", []))
+          INDEX_INELIGIBLE = set(audit_data.get("unresolved_files", [])) | set(audit_data.get("deferred_files", []))
 
 
           def is_excluded(path: Path) -> bool:
