@@ -123,6 +123,19 @@ def main():
     duplicate_candidates=[]
     unresolved=[]
     deferred_files=[]
+
+    def deferred_group(paths):
+        for prefixes in DEFERRED_PREFIX_GROUPS:
+            if len(prefixes) == 1:
+                if all(p.startswith(prefixes[0]) for p in paths):
+                    return prefixes
+            else:
+                # Explicitly paired producer namespaces, e.g. Chronicle + Issues.
+                if all(any(p.startswith(prefix) for prefix in prefixes) for p in paths):
+                    if all(any(p.startswith(prefix) for p in paths) for prefix in prefixes):
+                        return prefixes
+        return None
+
     for (family,normalized),members in sorted(groups.items()):
         if len(members)<2: continue
         hashes={m["sha256"] for m in members}
@@ -131,11 +144,21 @@ def main():
             item["classification"]="byte_identical_duplicate"
             duplicate_candidates.append(item)
         else:
-            item["classification"]="distinct_variant"
             missing=[m["path"] for m in members if not valid_variant_metadata(m)]
-            item["unmarked_files"]=missing
-            unresolved.extend(missing)
-            collisions.append(item)
+            paths=[m["path"] for m in members]
+            deferred=deferred_group(paths)
+            if deferred:
+                item["classification"]="deferred_namespace_collision"
+                item["deferred_reason"]="producer_or_archive_namespace"
+                item["deferred_namespaces"]=list(deferred)
+                item["unmarked_files"]=missing
+                deferred_files.extend(missing)
+                deferred_collisions.append(item)
+            else:
+                item["classification"]="distinct_variant"
+                item["unmarked_files"]=missing
+                unresolved.extend(missing)
+                collisions.append(item)
 
     report={"schema":"acacia.schema.json#/definitions/variant_metadata","generated_by":".github/scripts/audit_title_collisions.py","tracked_files_hashed":len(records),"text_like_files_grouped":sum(1 for r in records if "normalized_title" in r),"collision_groups":len(collisions)+len(deferred_collisions)+len(duplicate_candidates),"distinct_variant_groups":len(collisions),"deferred_collision_groups":len(deferred_collisions),"byte_identical_duplicate_groups":len(duplicate_candidates),"unresolved_files":sorted(set(unresolved)),"deferred_files":sorted(set(deferred_files)),"collisions":collisions,"deferred_collisions":deferred_collisions,"byte_identical_duplicates":duplicate_candidates}
     OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
