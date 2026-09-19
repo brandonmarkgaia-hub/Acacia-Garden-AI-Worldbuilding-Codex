@@ -5,6 +5,8 @@ prime_directive_link: "HELIOS_PROTOCOL"
 keeper_id: HKX277206
 role: "Resource allocation and late-stage trade-offs for physical sanctuary."
 state: "seeded"
+variant_of: last_orchard
+stratum: Orchards / Resource Model
 ---
 
 # THE LAST ORCHARD
