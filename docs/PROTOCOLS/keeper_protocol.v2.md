@@ -1,4 +1,4 @@
-# ACACIA GARDEN CODEX  
+# ACACIA GARDEN CODEX — KEEPER PROTOCOL  
 ## KEEPER PROTOCOL v2.0  
 ### (Rules and Boundaries for the Sovereign Author)
 
