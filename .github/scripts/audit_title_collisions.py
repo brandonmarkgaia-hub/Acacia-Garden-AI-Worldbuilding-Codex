@@ -14,7 +14,7 @@ ARABIC_RE = re.compile(r"\b\d{1,4}\b")
 H1_RE = re.compile(r"^\s{0,3}#\s+(.+?)\s*$", re.M)
 TITLE_TAG_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.I|re.S)
 YAML_KEY_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*?)\s*$")
-STOP_DIRS = {".git",".github","node_modules","dist",".venv","__pycache__"}
+STOP_DIRS = {"node_modules",".venv","__pycache__"}
 VARIANT_OF_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 
 def roman_to_int(value):
