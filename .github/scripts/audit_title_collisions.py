@@ -75,7 +75,9 @@ def extract_title(path,raw):
         if m: return re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",m.group(1))).strip()
         m=re.search(r"<h1[^>]*>(.*?)</h1>",text,re.I|re.S)
         if m: return re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",m.group(1))).strip()
-    return path.stem.replace("_"," ").replace("-"," ")
+    # Do not invent a semantic title from a filename. Generic structural names
+    # such as README, index, manifest and config are not authored titles.
+    return None
 
 def parse_frontmatter(raw):
     text=raw.decode("utf-8",errors="replace")
@@ -123,6 +125,7 @@ def main():
     duplicate_candidates=[]
     unresolved=[]
     deferred_files=[]
+    structural_filename_collisions=[]
 
     def deferred_group(paths):
         for prefixes in DEFERRED_PREFIX_GROUPS:
@@ -148,19 +151,43 @@ def main():
             paths=[m["path"] for m in members]
             deferred=deferred_group(paths)
             if deferred:
-                item["classification"]="deferred_namespace_collision"
-                item["deferred_reason"]="producer_or_archive_namespace"
-                item["deferred_namespaces"]=list(deferred)
-                item["unmarked_files"]=missing
-                deferred_files.extend(missing)
-                deferred_collisions.append(item)
+                # A mixed source/derived collision is allowed when exactly one
+                # authored source remains outside the producer/archive namespace.
+                # The source stays indexable; derived records remain preserved.
+                outside=[p for p in paths if not any(p.startswith(prefix) for prefix in deferred)]
+                if len(outside) <= 1:
+                    item["classification"]="derived_namespace_collision" if outside else "deferred_namespace_collision"
+                    item["deferred_reason"]="producer_or_archive_namespace"
+                    item["deferred_namespaces"]=list(deferred)
+                    item["source_files"]=outside
+                    item["unmarked_files"]=missing
+                    derived=[p for p in missing if p not in outside]
+                    deferred_files.extend(derived)
+                    deferred_collisions.append(item)
+                else:
+                    item["classification"]="cross_namespace_collision"
+                    item["unmarked_files"]=missing
+                    unresolved.extend(missing)
+                    collisions.append(item)
             else:
                 item["classification"]="distinct_variant"
                 item["unmarked_files"]=missing
                 unresolved.extend(missing)
                 collisions.append(item)
 
-    report={"schema":"acacia.schema.json#/definitions/variant_metadata","generated_by":".github/scripts/audit_title_collisions.py","tracked_files_hashed":len(records),"text_like_files_grouped":sum(1 for r in records if "normalized_title" in r),"collision_groups":len(collisions)+len(deferred_collisions)+len(duplicate_candidates),"distinct_variant_groups":len(collisions),"deferred_collision_groups":len(deferred_collisions),"byte_identical_duplicate_groups":len(duplicate_candidates),"unresolved_files":sorted(set(unresolved)),"deferred_files":sorted(set(deferred_files)),"collisions":collisions,"deferred_collisions":deferred_collisions,"byte_identical_duplicates":duplicate_candidates}
+    # Repeated structural basenames are reported separately for navigation
+    # hygiene. They are not semantic-title collisions and do not block CI.
+    basename_groups=defaultdict(list)
+    for r in records:
+        if r["extension_family"] in {"markdown","html","json","yaml"}:
+            stem=normalize_title(Path(r["path"]).stem)
+            if stem:
+                basename_groups[(r["extension_family"],stem)].append(r["path"])
+    for (family,stem),paths in sorted(basename_groups.items()):
+        if len(paths)>1:
+            structural_filename_collisions.append({"extension_family":family,"normalized_stem":stem,"files":sorted(paths)})
+
+    report={"schema":"acacia.schema.json#/definitions/variant_metadata","generated_by":".github/scripts/audit_title_collisions.py","tracked_files_hashed":len(records),"text_like_files_grouped":sum(1 for r in records if r.get("normalized_title")),"structural_filename_collision_groups":len(structural_filename_collisions),"collision_groups":len(collisions)+len(deferred_collisions)+len(duplicate_candidates),"distinct_variant_groups":len(collisions),"deferred_collision_groups":len(deferred_collisions),"byte_identical_duplicate_groups":len(duplicate_candidates),"unresolved_files":sorted(set(unresolved)),"deferred_files":sorted(set(deferred_files)),"collisions":collisions,"deferred_collisions":deferred_collisions,"byte_identical_duplicates":duplicate_candidates,"structural_filename_collisions":structural_filename_collisions}
     OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
     OUT_JSON.write_text(json.dumps(report,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 
@@ -174,11 +201,18 @@ def main():
                 lines.append(f"- {member['path']} — {status}")
             lines.append("")
     if deferred_collisions:
-        lines += ["## Deferred namespace collisions","","These are intentionally excluded from generated indexes but do not block maintenance. They are producer/archive records whose collision is governed by their namespace; cross-namespace collisions remain blocking.",""]
+        lines += ["## Deferred namespace collisions","","These records remain preserved but are excluded from canonical source indexes. A mixed source/derived collision is allowed only when one source remains outside an approved producer/archive namespace.",""]
         for item in deferred_collisions:
             lines += [f"### {item['normalized_title']} [{item['extension_family']}]"]
             for member in item["files"]:
                 lines.append(f"- {member['path']}")
+            lines.append("")
+
+    if structural_filename_collisions:
+        lines += ["## Structural filename collisions","","These repeated basenames are reported for navigation hygiene only. They do not imply duplicate content or canon conflicts.",""]
+        for item in structural_filename_collisions:
+            lines += [f"### {item['normalized_stem']} [{item['extension_family']}]" ]
+            for path in item["files"]: lines.append(f"- {path}")
             lines.append("")
 
     if duplicate_candidates:
