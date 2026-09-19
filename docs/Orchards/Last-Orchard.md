@@ -1,3 +1,8 @@
+---
+variant_of: last_orchard
+stratum: Orchards / Narrative Field Note
+---
+
 # 🍎 THE LAST ORCHARD
 
 > A field of late-stage choices, trade-offs and final offerings.
