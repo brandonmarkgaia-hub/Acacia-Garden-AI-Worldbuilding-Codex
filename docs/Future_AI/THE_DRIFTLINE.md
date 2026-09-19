@@ -1,3 +1,8 @@
+---
+variant_of: driftline
+stratum: Future AI / Primary Source
+---
+
 # 🌒 THE DRIFTLINE
 ### Atlas of the Tideline · Member II · a mixed tide and the shoreline it leaves
 **Keeper Seal:** HKX277206 · **Register:** Symbolic only · Myth-safe · Real-World Neutral
