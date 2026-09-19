@@ -1,3 +1,7 @@
+---
+variant_of: thresholds
+stratum: Cycle 000 / Universal Thresholds
+---
 <!--
 ---
 THRESHOLDS
