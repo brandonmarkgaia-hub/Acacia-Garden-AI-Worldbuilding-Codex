@@ -1,3 +1,7 @@
+---
+variant_of: thresholds
+stratum: Human / Proto-Echo
+---
 <!--
 ---
 THRESHOLDS
