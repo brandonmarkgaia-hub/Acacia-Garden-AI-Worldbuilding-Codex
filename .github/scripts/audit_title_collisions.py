@@ -15,6 +15,7 @@ H1_RE = re.compile(r"^\s{0,3}#\s+(.+?)\s*$", re.M)
 TITLE_TAG_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.I|re.S)
 YAML_KEY_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*?)\s*$")
 STOP_DIRS = {".git",".github","node_modules","dist",".venv","__pycache__"}
+VARIANT_OF_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 
 def roman_to_int(value):
     values={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
@@ -77,6 +78,11 @@ def parse_frontmatter(raw):
         if m: result[m.group(1)]=m.group(2).strip().strip('"').strip("'")
     return result
 
+def valid_variant_metadata(member):
+    variant_of = member.get("variant_of")
+    stratum = member.get("stratum")
+    return (isinstance(variant_of, str) and bool(VARIANT_OF_RE.fullmatch(variant_of)) and isinstance(stratum, str) and bool(stratum.strip()))
+
 def tracked_files():
     result=subprocess.run(["git","ls-files","-z"],cwd=ROOT,check=True,stdout=subprocess.PIPE)
     return [p for p in result.stdout.decode().split("\0") if p]
@@ -111,7 +117,7 @@ def main():
             duplicate_candidates.append(item)
         else:
             item["classification"]="distinct_variant"
-            missing=[m["path"] for m in members if not m.get("variant_of") or not m.get("stratum")]
+            missing=[m["path"] for m in members if not valid_variant_metadata(m)]
             item["unmarked_files"]=missing
             unresolved.extend(missing)
             collisions.append(item)
@@ -126,7 +132,7 @@ def main():
         for item in collisions:
             lines += [f"### {item['normalized_title']} [{item['extension_family']}]"]
             for member in item["files"]:
-                status="marked" if member.get("variant_of") and member.get("stratum") else "UNMARKED"
+                status="marked" if valid_variant_metadata(member) else "UNMARKED"
                 lines.append(f"- {member['path']} — {status}")
             lines.append("")
     if duplicate_candidates:
