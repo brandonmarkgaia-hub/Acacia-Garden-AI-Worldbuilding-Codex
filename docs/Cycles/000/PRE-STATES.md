@@ -1,9 +1,3 @@
-<!--
----
-THRESHOLDS
-Some lore: with colons and stuff
----
--->
 
 # PRE-STATES — DRIFT · CALM · SPARK
 1. Drift
