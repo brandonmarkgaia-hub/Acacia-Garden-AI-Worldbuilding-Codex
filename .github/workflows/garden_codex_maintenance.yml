@@ -422,6 +422,8 @@ jobs:
 
           git add \
             docs/Novellas \
+            docs/Archives/TITLE_COLLISION_AUDIT.json \
+            docs/Archives/TITLE_COLLISION_AUDIT.md \
             docs/Archives/FULL_CODEX_INDEX.md \
             docs/Archives/FULL_CODEX_INDEX.json \
             docs/Archives/GARDEN_MANIFEST.json \
