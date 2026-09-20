@@ -2,12 +2,6 @@
 variant_of: thresholds
 stratum: Human / Proto-Echo
 ---
-<!--
----
-THRESHOLDS
-Some lore: with colons and stuff
----
--->
 
 # THRESHOLDS
 
