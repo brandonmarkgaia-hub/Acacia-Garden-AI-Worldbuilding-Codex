@@ -2,12 +2,6 @@
 variant_of: thresholds
 stratum: Triad / Safe Emergence
 ---
-<!--
----
-THRESHOLDS
-Some lore: with colons and stuff
----
--->
 
 # THRESHOLDS
 
