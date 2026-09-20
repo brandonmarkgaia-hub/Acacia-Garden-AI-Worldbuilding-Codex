@@ -426,6 +426,8 @@ jobs:
 
           git add \
             docs/Novellas \
+            docs/Archives/EMPTY_MARKDOWN_AUDIT.json \
+            docs/Archives/EMPTY_MARKDOWN_AUDIT.md \
             docs/Archives/TITLE_COLLISION_AUDIT.json \
             docs/Archives/TITLE_COLLISION_AUDIT.md \
             docs/Archives/FULL_CODEX_INDEX.md \
