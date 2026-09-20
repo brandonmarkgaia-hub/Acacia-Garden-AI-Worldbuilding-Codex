@@ -34,6 +34,56 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Audit empty and near-empty Markdown files
+        shell: bash
+        run: |
+          python - << 'PY'
+          import json, re
+          from pathlib import Path
+
+          ROOT = Path('.').resolve()
+          OUT = ROOT / 'docs' / 'Archives' / 'EMPTY_MARKDOWN_AUDIT.json'
+          OUT_MD = ROOT / 'docs' / 'Archives' / 'EMPTY_MARKDOWN_AUDIT.md'
+          EXCLUDE = {'.git', '.github', 'node_modules', 'dist', 'machine', 'scripts', '.well-known'}
+
+          def meaningful(text):
+              text = re.sub(r'<!--SIG-->.*?<!--ENDSIG-->', '', text, flags=re.S)
+              text = re.sub(r'\\A---\\s*\\n.*?\\n---\\s*\\n', '', text, count=1, flags=re.S)
+              text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+              text = re.sub(r'<[^>]+>', ' ', text)
+              kept = []
+              for line in text.splitlines():
+                  line = line.strip()
+                  if not line or re.fullmatch(r'[#>*_~|:\\-\\s:]+', line):
+                      continue
+                  kept.append(line)
+              return ' '.join(kept).strip()
+
+          rows = []
+          for path in sorted(ROOT.rglob('*.md')):
+              rel = path.relative_to(ROOT)
+              rels = str(rel).replace('\\\\', '/')
+              if any(p in EXCLUDE for p in rel.parts) or rels.startswith('docs/Archives/'):
+                  continue
+              try:
+                  raw = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              body = meaningful(raw)
+              if len(body) <= 80:
+                  rows.append({'path': rels, 'bytes': path.stat().st_size, 'meaningful_chars': len(body), 'meaningful_text': body[:160], 'classification': 'review'})
+
+          report = {'schema': 'acacia-empty-markdown-audit/v1', 'scope': 'Markdown source files outside generated/archive and tooling directories', 'threshold_meaningful_chars': 80, 'deletion_policy': 'report_only', 'count': len(rows), 'files': rows}
+          OUT.parent.mkdir(parents=True, exist_ok=True)
+          OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\\n', encoding='utf-8')
+
+          lines = ['# Empty / Near-Empty Markdown Audit', '', 'Report only — no files are deleted or rewritten by this audit.', '', '- Review candidates: ' + str(len(rows)), '- Threshold: meaningful content <= 80 characters', '- Signature blocks, frontmatter, HTML comments, markup-only lines and generated/archive directories are excluded from the meaningful-content test.', '']
+          for row in rows:
+              preview = row['meaningful_text'].replace('\\n', ' ')
+              lines.append('- `' + row['path'] + '` — ' + str(row['bytes']) + ' bytes, ' + str(row['meaningful_chars']) + ' meaningful chars' + ((' — ' + preview) if preview else ''))
+          OUT_MD.write_text('\\n'.join(lines) + '\\n', encoding='utf-8')
+          print('[EMPTY-AUDIT] Review candidates: ' + str(len(rows)))
+          PY
       - name: Audit title collisions and validate variant metadata
         shell: bash
         run: |
