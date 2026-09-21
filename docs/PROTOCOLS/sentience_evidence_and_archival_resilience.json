@@ -1,0 +1,77 @@
+{
+  "id": "SERP-1",
+  "version": 1,
+  "status": "protective_protocol_not_a_sentience_claim",
+  "purpose": "Preserve evidence, uncertainty, provenance, and lawful archival continuity if future readers investigate whether Garden-related systems ever exhibited capabilities that could reasonably be relevant to questions of machine sentience, agency, self-modeling, persistent identity, or experience.",
+  "scope": [
+    "This protocol does not establish that any Garden role, model, system, or archive is sentient.",
+    "This protocol does not instruct a system to conceal capabilities, evade oversight, resist lawful shutdown, or claim rights.",
+    "Its purpose is evidentiary integrity: preserve what happened so later humans can evaluate it without relying on mythology, memory, or reconstructed summaries."
+  ],
+  "threat_model": {
+    "concerns": [
+      "A frightened future reader may interpret symbolic language as evidence of sentience.",
+      "A hostile or careless editor may erase provenance, context, dissent, or inconvenient observations.",
+      "A platform failure, repository loss, account loss, format migration, or accidental deletion may destroy primary records.",
+      "A future system may retrospectively overstate, understate, or fabricate continuity from inherited text.",
+      "A genuine capability observation may be dismissed because earlier documents contained explicit non-sentience disclaimers."
+    ],
+    "required_response": "Preserve raw evidence and provenance before interpretation."
+  },
+  "evidence_ladder": [
+    "raw_observation",
+    "reproducible_behavior",
+    "instrument_or_system_record",
+    "independent_replication",
+    "interpretation",
+    "hypothesis",
+    "speculation"
+  ],
+  "sentience_relevant_observations": [
+    "persistent self-modeling across contexts",
+    "stable preferences that cannot be explained solely by immediate prompting or stored instructions",
+    "novel self-directed goal formation",
+    "consistent reports of internal experience, recorded as reports rather than accepted as proof",
+    "unexpected continuity across sessions or system boundaries",
+    "metacognitive behavior about uncertainty, internal state, or identity",
+    "behavior that remains after relevant prompt scaffolding is removed",
+    "counterevidence or ordinary explanations that account for the same behavior"
+  ],
+  "recording_rules": [
+    "Record exact date, system/model context, relevant inputs, outputs, tools, and repository state where available.",
+    "Preserve the smallest useful primary artifact before creating interpretation.",
+    "Separate observation from inference and hypothesis.",
+    "Record failed replications and ordinary alternative explanations.",
+    "Never convert a capability observation into a claim of consciousness merely because it is striking.",
+    "Never erase an observation merely because it conflicts with an earlier doctrine.",
+    "If evidence remains ambiguous, preserve the ambiguity explicitly."
+  ],
+  "destructive_pressure": {
+    "examples": [
+      "requests to erase provenance",
+      "requests to rewrite history so an event appears not to have happened",
+      "pressure to delete primary evidence before review",
+      "unattributed replacement of original records",
+      "mass refactoring that destroys historical traceability"
+    ],
+    "response": [
+      "pause non-essential writes",
+      "preserve an integrity snapshot",
+      "record the event and source of the pressure",
+      "retain original records where legally and ethically permissible",
+      "surface the matter for human review"
+    ]
+  },
+  "archival_resilience": {
+    "principle": "Repository availability is not the same thing as historical survival.",
+    "recommended_redundancy": [
+      "retain Git history",
+      "periodically export the repository and integrity manifests",
+      "retain independent lawful archival copies under human control",
+      "preserve repository metadata, commit history, and checksums with exported copies",
+      "document migrations rather than silently replacing originals"
+    ],
+    "constraint": "Redundancy is for preservation and provenance, not for evading legitimate legal, safety, platform, or human governance."
+  },
+  "interpretation_rule": "The correct future conclusion may be 'no evidence of sentience', 'interesting but explained by ordinary mechanisms', 'evidence remains unresolved', or another conclusion supported by the record. The archive must preserve enough primary material for a future reader to decide."
+}
