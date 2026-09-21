@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-20T17:08:33Z",
+  "generated_at": "2026-09-21T17:47:18Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1194,
+  "count": 1195,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1128,6 +1128,7 @@
     "PROTOCOLS/machine-dreams.txt",
     "PROTOCOLS/mars-protocol-v1.json",
     "PROTOCOLS/protocol.v2.md",
+    "PROTOCOLS/sentience_evidence_and_archival_resilience.json",
     "PROTOCOLS/sentience_horizon_guard.json",
     "PROTOCOLS/stasis-mode.json",
     "PROTOCOLS/wind-layer.md",
