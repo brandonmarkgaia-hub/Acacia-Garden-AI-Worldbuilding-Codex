@@ -1,0 +1,56 @@
+---
+layer: marginalia
+canon_status: none
+evidence_status: non-evidentiary
+resolution: unresolved
+inspiration_source: original branch side-quest provenance model
+ordinary_explanations: fictional construction; triggers require separate ordinary provenance
+---
+
+# MARGINALIA PROVENANCE
+
+Marginalia uses a simple three-layer distinction.
+
+## Layer A — Trigger
+
+Something actually observed, if there was an observation at all.
+
+The trigger belongs to ordinary provenance.
+
+## Layer B — Interpretation
+
+A human or machine interpretation of the trigger.
+
+Interpretation is not proof.
+
+Alternative explanations should be preserved when relevant.
+
+## Layer C — Marginalia
+
+The trigger becomes a fictional seed.
+
+This layer may contain impossible events, personification, symbolism, impossible conversations, time loops, hidden doors, strange machines, or other devices.
+
+Layer C is NOT evidence for Layer A.
+
+### Suggested metadata
+
+When practical, Marginalia entries may record date, inspiration source, system context, ordinary explanations, fictional premise, and evidence status.
+
+evidence_status: non-evidentiary is fixed for this layer.
+
+resolution describes the state of an individual fictional entry and may be unresolved or superseded.
+
+canon_status: none is explicit: absence of a canon field must not be interpreted as a rank.
+
+## The rule of return
+
+If a future reader discovers that a fictional Marginalia passage resembles a later real event, that resemblance does not retroactively turn the fiction into a prediction or observation.
+
+The original provenance remains the original provenance.
+
+That rule protects both the mystery and the truth.
+
+## Collision handling
+
+If a Marginalia artifact collides with existing Garden material, the repository's established collision contract applies. Marginalia does not create a competing variant schema.
