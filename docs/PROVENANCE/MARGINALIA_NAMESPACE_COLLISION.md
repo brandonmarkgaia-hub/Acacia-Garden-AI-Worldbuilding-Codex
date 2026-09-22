@@ -22,6 +22,9 @@ The earlier side-quest material is preserved in Git history. No history is rewri
 
 The fictional namespace is being renamed from ELIAS/ to MARGINALIA/.
 
+Framework documents (README, RULES, MYTHOS, PROVENANCE) were updated to name the layer.
+Authored artifacts (EPISODES, INSPIRATIONS) were preserved as written, including their original Elias wording.
+
 The former ELIAS/EASTER_EGGS/R9X2.md artifact is removed from the working tree because it reused an established Garden glyph. Its content and history remain preserved in Git.
 
 The fictional episode retains the filename ELIAS-001-THE-FORK.md because that is part of its authored provenance; its path now places it inside MARGINALIA/.
