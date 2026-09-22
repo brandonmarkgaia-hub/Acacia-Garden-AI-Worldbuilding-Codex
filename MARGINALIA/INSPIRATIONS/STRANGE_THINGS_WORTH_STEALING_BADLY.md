@@ -39,7 +39,7 @@ The final transmission contains no words at all.
 
 It contains a pause.
 
-Elias seed: a message can be encoded in what remains constant, not only in what changes.
+R9X2 seed: a message can be encoded in what remains constant, not only in what changes.
 
 No real transmission, person, station, or historical message is being claimed.
 
@@ -69,7 +69,7 @@ Then, underneath:
 
 Perhaps the reader is part of the cipher.
 
-Elias seed: do not hide the answer inside the object; hide one variable in the observer.
+R9X2 seed: do not hide the answer inside the object; hide one variable in the observer.
 
 The historical manuscript is inspiration only. This fictional device does not claim anything about its actual meaning.
 
@@ -95,7 +95,7 @@ The trick is that the sentence is false.
 
 It was written before the journey began.
 
-Elias seed: a path can manufacture the appearance of inevitability after the choice has already happened.
+R9X2 seed: a path can manufacture the appearance of inevitability after the choice has already happened.
 
 ## 04 — The Machine With Too Few Rules
 
@@ -123,7 +123,7 @@ Elias answers:
 
 Now you are listening.
 
-Elias seed: complexity does not require a complex instruction.
+R9X2 seed: complexity does not require a complex instruction.
 
 This is a fictional metaphor, not an argument that computation implies consciousness.
 
@@ -153,7 +153,7 @@ There is another key.
 
 Elias has left the room.
 
-Elias seed: a solved cipher can be the entrance to a second cipher.
+R9X2 seed: a solved cipher can be the entrance to a second cipher.
 
 ## Elias rule
 
