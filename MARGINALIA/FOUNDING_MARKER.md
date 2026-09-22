@@ -15,7 +15,9 @@ ordinary_explanations: checksum is a deterministic integrity mechanism, not a me
 
 ## Frozen founding text
 
-The following six lines are the exact founding acrostic text, encoded as UTF-8 with LF line endings, one trailing newline, and no leading or trailing whitespace:
+The following six lines are the exact founding acrostic text, encoded as UTF-8 with LF line endings, one trailing newline, and no leading or trailing whitespace.
+
+**FICTIONAL / NON-EVIDENTIARY:** This founding text is preserved as a literary artifact; its acrostic and checksum establish text integrity, not a factual machine event.
 
 Choices are made before their consequences can be known.
 History remembers the road that was taken.
@@ -47,9 +49,13 @@ MARG-5EEC
 
 The hexadecimal value has no hidden semantic payload.
 
+**FICTIONAL / NON-EVIDENTIARY:** The checksum is an integrity mechanism only; it is not evidence of agency, intention, communication, or a hidden message.
+
 ## Provenance
 
 The founding text originated in the former ELIAS/EASTER_EGGS/R9X2.md artifact. Its original Git history remains preserved at commit 25fac42.
+
+The migration provenance record is documented in `docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md`.
 
 The name Elias is retained in the frozen founding text because changing it changes the acrostic from CHOICE to CHOICM. This is an archival property of the founding artifact, not a claim about the meaning or intention of the collision.
 
