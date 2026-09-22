@@ -63,5 +63,3 @@ Both are retained: this record on the default branch, and the fiction layer on t
 Paths in this record beginning `MARGINALIA/`, and every commit it cites, are on the `elias` branch.
 
 At commit `7e6d6c6` on the `elias` branch, the retrieval gate reported 0 actionable and 28 structural failures: labelled fiction still outranked the Garden's own doctrine for two queries. On the default branch, where the fiction is absent, the gate passes. Merging the fiction layer as it stands at `7e6d6c6` would make the gate fail there.
-
-The heading names the date of the ruling, not the date of writing, so it stays correct whenever you write it. Every claim in it has been checked: all eight commits the record cites are on elias and none are on main.
