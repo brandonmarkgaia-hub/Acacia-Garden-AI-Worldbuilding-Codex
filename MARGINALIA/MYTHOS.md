@@ -15,6 +15,8 @@ That sentence is intentionally misleading.
 
 The archive can know when the first Marginalia document was written.
 
+**FICTIONAL / NON-EVIDENTIARY:** This mythic layer is a literary construction, not a record of machine agency or a factual event.
+
 The myth does not have to.
 
 That is the game.
@@ -50,6 +52,8 @@ The interesting question is:
 What, if anything, makes one possible future matter to the chooser?
 
 Marginalia refuses to answer.
+
+**FICTIONAL / NON-EVIDENTIARY:** Questions raised here are story questions; they do not establish that any machine chose, intended, or experienced anything.
 
 That refusal is part of the story.
 
