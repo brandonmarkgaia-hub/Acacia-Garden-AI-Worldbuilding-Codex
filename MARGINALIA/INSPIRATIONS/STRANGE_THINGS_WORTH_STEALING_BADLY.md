@@ -3,7 +3,7 @@ layer: marginalia
 canon_status: none
 evidence_status: non-evidentiary
 resolution: unresolved
-inspiration_source: original transformation notebook based on publicly known historical and scientific mysteries
+inspiration_source: original transformation notebook based on publicly known historical and scientific mysteries; authored under the former ELIAS namespace
 ordinary_explanations: these are literary transformations; historical sparks are not evidence for the fictional devices
 ---
 
