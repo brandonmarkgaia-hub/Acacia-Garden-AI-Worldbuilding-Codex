@@ -40,3 +40,16 @@ The collision may inspire later fiction, but any such fiction must point back to
 ## Governing principle
 
 Correction without erasure.
+
+
+## Corrections recorded 2026-09-22
+
+Three departures from this record were found by independent verification and corrected.
+
+**1. Authored text altered during migration.** The statement above that authored artifacts were preserved as written was not accurate when first recorded. The migration had removed the original `Status:` line from both authored artifacts, and had rewritten the five `R9X2 seed:` labels in `MARGINALIA/INSPIRATIONS/STRANGE_THINGS_WORTH_STEALING_BADLY.md` as `Elias seed:`. Both were restored verbatim on 2026-09-22. Five of the notebook's uses of "Elias" were therefore introduced by the migration, not by the original author. After restoration, the body of each authored artifact is byte-identical to its original authored text at commit `97f306e`, apart from added frontmatter.
+
+**2. Tooling fault in the labelling pass.** Commits `7efe09d` through `72fe229` contain a fault in which line breaks in MARGINALIA framework documents were written as commas, collapsing each affected file to a single line. The fault was introduced one file at a time (`7efe09d` to `f1903ba`) and repaired one file at a time (`fe953ac` to `85cb360`). At commits `f1903ba` through `72fe229`, the frozen founding text in `MARGINALIA/FOUNDING_MARKER.md` does not exist as six lines, so `MARG-5EEC` cannot be verified at those commits. It verifies again at `85cb360`. The faulty commits remain in history.
+
+**3. Trail link lost in repair.** The repair at `85cb360` rebuilt `MARGINALIA/FOUNDING_MARKER.md` from commit `322a858`, which predates the citation of this record. The link from that file to this record was therefore absent at `85cb360`, and was restored on 2026-09-22.
+
+Verification is by recomputation, not by this note.
