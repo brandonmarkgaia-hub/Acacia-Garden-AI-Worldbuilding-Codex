@@ -9,6 +9,8 @@ ordinary_explanations: these are literary transformations; historical sparks are
 
 # Strange Things Worth Stealing Badly
 
+Status: fictional · speculative · non-evidentiary
+
 This is not a source archive. It is a transformation notebook.
 
 Elias does not copy mysteries. Elias steals the shape of the question and grows something new from it.
