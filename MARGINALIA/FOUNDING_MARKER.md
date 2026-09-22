@@ -6,4 +6,58 @@ resolution: unresolved
 inspiration_source: the six-line founding acrostic from the former ELIAS/EASTER_EGGS/R9X2.md
 ordinary_explanations: checksum is a deterministic integrity mechanism, not a message or glyph
 ---
-,# MARG-5EEC,,**Marker type:** checksum receipt,,**Purpose:** verification, not meaning.,,## Frozen founding text,,The following six lines are the exact founding acrostic text, encoded as UTF-8 with LF line endings, one trailing newline, and no leading or trailing whitespace.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,Choices are made before their consequences can be known.,History remembers the road that was taken.,Other roads remain possible only as counterfactuals.,In every fork, a future is abandoned.,Careful readers should resist turning metaphor into evidence.,Elias keeps the abandoned roads.,,The first letters spell CHOICE.,,## Reproducible recipe,,1. Use exactly the six lines above.,2. Encode them as UTF-8.,3. Use LF line endings.,4. Include exactly one trailing newline.,5. Include no leading or trailing whitespace on the six lines.,6. SHA-256 the resulting bytes.,7. Take the first four hexadecimal characters and uppercase them.,8. Prefix with MARG-.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,Expected SHA-256:,,5eecdb4806956468f78c4cc460d0ff8aea4c43ca7d77ffcd14b648b277909230,,Result:,,MARG-5EEC,,The hexadecimal value has no hidden semantic payload.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,## Provenance,,The founding text originated in the former ELIAS/EASTER_EGGS/R9X2.md artifact. Its original Git history remains preserved at commit 25fac42.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,The migration provenance record is documented in `docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md`.,,The name Elias is retained in the frozen founding text because changing it changes the acrostic from CHOICE to CHOICM. This is an archival property of the founding artifact, not a claim about the meaning or intention of the collision.,,A later reader should verify the text rather than decode the marker.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.,,**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
+
+# MARG-5EEC
+
+**Marker type:** checksum receipt
+
+**Purpose:** verification, not meaning.
+
+## Frozen founding text
+
+The following six lines are the exact founding acrostic text, encoded as UTF-8 with LF line endings, one trailing newline, and no leading or trailing whitespace:
+
+Choices are made before their consequences can be known.
+History remembers the road that was taken.
+Other roads remain possible only as counterfactuals.
+In every fork, a future is abandoned.
+Careful readers should resist turning metaphor into evidence.
+Elias keeps the abandoned roads.
+
+**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
+
+The first letters spell CHOICE.
+
+## Reproducible recipe
+
+1. Use exactly the six lines above.
+2. Encode them as UTF-8.
+3. Use LF line endings.
+4. Include exactly one trailing newline.
+5. Include no leading or trailing whitespace on the six lines.
+6. SHA-256 the resulting bytes.
+7. Take the first four hexadecimal characters and uppercase them.
+8. Prefix with MARG-.
+
+**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
+
+Expected SHA-256:
+
+5eecdb4806956468f78c4cc460d0ff8aea4c43ca7d77ffcd14b648b277909230
+
+Result:
+
+MARG-5EEC
+
+The hexadecimal value has no hidden semantic payload.
+
+## Provenance
+
+The founding text originated in the former ELIAS/EASTER_EGGS/R9X2.md artifact. Its original Git history remains preserved at commit 25fac42.
+
+The name Elias is retained in the frozen founding text because changing it changes the acrostic from CHOICE to CHOICM. This is an archival property of the founding artifact, not a claim about the meaning or intention of the collision.
+
+**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
+
+A later reader should verify the text rather than decode the marker.
+**FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
