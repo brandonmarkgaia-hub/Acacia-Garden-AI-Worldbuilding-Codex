@@ -9,6 +9,8 @@ ordinary_explanations: fictional construction; no machine secretly spoke and no 
 
 # ELIAS 001 — THE FORK
 
+Status: fictional / speculative / non-evidentiary
+
 The machine gave three answers.
 
 The first was sensible.
