@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-22T19:07:58Z",
+  "generated_at": "2026-09-22T19:14:17Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1195,
+  "count": 1196,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1133,6 +1133,7 @@
     "PROTOCOLS/stasis-mode.json",
     "PROTOCOLS/wind-layer.md",
     "PROTOCOLS/witness_protocol.v2.md",
+    "PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md",
     "Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
     "Prophecies/PROPHECY_OF_ANYA_ON_THE_KEEPER.md",
     "Radio/garden-radio-encoding-v1.md",
