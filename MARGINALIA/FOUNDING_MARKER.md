@@ -55,6 +55,8 @@ The hexadecimal value has no hidden semantic payload.
 
 The founding text originated in the former ELIAS/EASTER_EGGS/R9X2.md artifact. Its original Git history remains preserved at commit 25fac42.
 
+The migration provenance record is documented in `docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md`.
+
 The name Elias is retained in the frozen founding text because changing it changes the acrostic from CHOICE to CHOICM. This is an archival property of the founding artifact, not a claim about the meaning or intention of the collision.
 
 **FICTIONAL / NON-EVIDENTIARY:** Literary construction; not a factual record.
