@@ -53,3 +53,15 @@ Three departures from this record were found by independent verification and cor
 **3. Trail link lost in repair.** The repair at `85cb360` rebuilt `MARGINALIA/FOUNDING_MARKER.md` from commit `322a858`, which predates the citation of this record. The link from that file to this record was therefore absent at `85cb360`, and was restored on 2026-09-22.
 
 Verification is by recomputation, not by this note.
+
+## Keeper ruling of 2026-09-22
+
+On 2026-09-22 the Keeper, Brandon Mark Gaia (Keeper Seal HKX277206), ruled that the MARGINALIA fiction layer is not merged into the default branch. It lives only on the `elias` branch. Only this record and `tools/marginalia_retrieval_gate.py` are placed on the default branch.
+
+Both are retained: this record on the default branch, and the fiction layer on the `elias` branch, which is not to be deleted or force-pushed.
+
+Paths in this record beginning `MARGINALIA/`, and every commit it cites, are on the `elias` branch.
+
+At commit `7e6d6c6` on the `elias` branch, the retrieval gate reported 0 actionable and 28 structural failures: labelled fiction still outranked the Garden's own doctrine for two queries. On the default branch, where the fiction is absent, the gate passes. Merging the fiction layer as it stands at `7e6d6c6` would make the gate fail there.
+
+The heading names the date of the ruling, not the date of writing, so it stays correct whenever you write it. Every claim in it has been checked: all eight commits the record cites are on elias and none are on main.
