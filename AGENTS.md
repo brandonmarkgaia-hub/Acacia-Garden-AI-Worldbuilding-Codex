@@ -327,6 +327,22 @@ For major canon changes, prefer additive growth unless the Keeper explicitly rul
 
 Commit messages should describe what actually changed.
 
+### Verification Rules
+
+These rules come from mistakes made while working on this repository in September 2026. Several of them, and how they were corrected, are recorded in `docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md`. Follow these rules for every change, however small.
+
+* **Search before naming.** Before giving anything a name, search the whole repository for it. A name already in use brings its history with it.
+* **Check the blob before and after.** Before editing a file, confirm its git blob is the version you meant to change. After writing, confirm the new blob is the one expected. If either differs, stop.
+* **Copy, don't compose.** Text that moves within the repository is copied from the repository, never retyped. Text that arrives through a chat is checked against its expected blob once written: rendered chat drops characters, and notes meant for the agent can end up in the record.
+* **Verify at the latest commit, from git itself.** Check your work after your final commit, not only partway through. Report full 40-character commit hashes. A tool's report of what it wrote is not evidence of what landed.
+* **Repair from the last good state.** When rebuilding a file, start from its most recent correct version, not an older clean one. An older base silently undoes the work in between.
+* **Stop at the first mismatch.** Report it. Do not repair it by guessing.
+* **Date history from full history.** A shallow clone shows its oldest commit as touching every file. When following a file across renames, confirm each path change rather than trusting the chain.
+* **Labels say what a text is.** A disclaimer that names a topic draws searches toward that topic. Name the kind of text instead.
+* **Diagnosis is not authority.** An agent may investigate, test and propose. The Keeper rules. Only then does anything change.
+* **Record authorship accurately.** State who proposed, who ruled and who executed.
+* **Fiction never merges to `main`.** The Marginalia fiction layer lives only on the `elias` branch (Keeper ruling of 2026-09-22). `.github/workflows/marginalia-gate.yml` fails if it arrives.
+
 ---
 
 ## 10. OUTPUT STANDARD
