@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27T17:01:54Z",
+  "generated_at": "2026-09-27T17:02:29Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1196,
+  "count": 1195,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -360,7 +360,6 @@
     "Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
     "Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
     "Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md",
-    "Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md",
     "Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md",
     "Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md",
     "Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md",

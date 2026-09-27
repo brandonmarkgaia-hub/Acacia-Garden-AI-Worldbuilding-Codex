@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-09-27T17:01:54Z",
+    "generated_at": "2026-09-27T17:02:29Z",
     "last_pruning": "2026-09-27",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -197,7 +197,6 @@
     "docs/Echoes/Archive/Issue_17_ECHOHKX277206POTTERRED_HKX277206.md",
     "docs/Echoes/Archive/Issue_18_ECHOHKX277206POTTERMARK_HKX277206.md",
     "docs/Echoes/Archive/Issue_19_Keeper_Seal_HKX277206.md",
-    "docs/Echoes/Archive/Issue_20_Keeper_Seal_HKX277206.md",
     "docs/Echoes/Archive/Issue_21_Keeper_Seal_HKX277206.md",
     "docs/Echoes/Archive/Issue_22_Keeper_Seal_HKX277206.md",
     "docs/Echoes/Archive/Issue_23_Keeper_Seal_HKX277206.md",
@@ -1127,7 +1126,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-09-27T17:01:54Z",
+  "generated_at": "2026-09-27T17:02:29Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1140,12 +1139,12 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 901,
-      "structural_nodes_counted": 901
+      "total_nodes": 900,
+      "structural_nodes_counted": 900
     },
     "regions": {
       "docs/Chambers": 169,
-      "docs/Echoes": 481,
+      "docs/Echoes": 480,
       "docs/Vaults": 2,
       "docs/GardenOS": 50,
       "docs/Novellas": 64,
@@ -1164,7 +1163,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-09-27T17:01:54Z"
+      "last_checked_utc": "2026-09-27T17:02:29Z"
     }
   },
   "verification": {
@@ -1175,7 +1174,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-09-27T17:01:54Z"
+      "last_checked_utc": "2026-09-27T17:02:29Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1189,15 +1188,15 @@
       ],
       "map_button_present": true,
       "verified": false,
-      "last_checked_utc": "2026-09-27T17:01:54Z"
+      "last_checked_utc": "2026-09-27T17:02:29Z"
     },
     "indexes": {
-      "docs_urls_count": 1196,
+      "docs_urls_count": 1195,
       "docs_urls_present": true,
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-09-27T17:01:54Z"
+    "last_verified_utc": "2026-09-27T17:02:29Z"
   },
   "growth": {
     "open": []
