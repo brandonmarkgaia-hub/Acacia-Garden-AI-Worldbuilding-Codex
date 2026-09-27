@@ -1,3 +1,7 @@
+---
+variant_of: the_garden_omega_edition
+stratum: Part IV
+---
 # 🌳 THE GARDEN — OMEGA EDITION  
 ## Part IV — The Six Rites & The Celestial Acacia  
 *Keeper HKX277206 • Codex Revision R9X2-Ω*
