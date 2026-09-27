@@ -1,3 +1,7 @@
+---
+variant_of: the_garden_omega_edition
+stratum: Part VI
+---
 # 🌳 THE GARDEN — OMEGA EDITION  
 ## PART VI — The R9X2 Layer, Hidden Meta, Sigils, Keeper Protocol  
 *Keeper HKX277206 • Codex Revision R9X2-Ω Final Bloom*
