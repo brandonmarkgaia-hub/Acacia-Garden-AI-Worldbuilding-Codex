@@ -18,8 +18,10 @@ STOP_DIRS = {"node_modules",".venv","__pycache__"}
 VARIANT_OF_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 # These namespaces contain archival/producer-generated records where a title
 # collision is expected and is handled by the namespace itself. A collision is
-# deferred only when every member of the group belongs to the same approved
-# namespace, or to the explicitly paired Chronicle/Issues producer outputs.
+# deferred when every member of the group belongs to the same approved
+# namespace, or to the explicitly paired Chronicle/Issues producer outputs, or
+# when exactly one member (the authored source) sits outside every approved
+# namespace and all the others belong to one approved namespace.
 DEFERRED_PREFIX_GROUPS = [
     ("ACACIA_LOGS/",),
     ("MUTATIONS/",),
@@ -48,6 +50,7 @@ def canonicalize_numbers(text):
     return ARABIC_RE.sub(lambda m:f" number{int(m.group(0))} ",text)
 
 def normalize_title(text):
+    if text is None: return ""
     text=unicodedata.normalize("NFKC",text)
     text=canonicalize_numbers(text).casefold()
     text=re.sub(r"[^\w]+"," ",text,flags=re.UNICODE)
@@ -128,15 +131,21 @@ def main():
     structural_filename_collisions=[]
 
     def deferred_group(paths):
+        approved=[prefix for group in DEFERRED_PREFIX_GROUPS for prefix in group]
         for prefixes in DEFERRED_PREFIX_GROUPS:
-            if len(prefixes) == 1:
-                if all(p.startswith(prefixes[0]) for p in paths):
-                    return prefixes
-            else:
-                # Explicitly paired producer namespaces, e.g. Chronicle + Issues.
-                if all(any(p.startswith(prefix) for prefix in prefixes) for p in paths):
-                    if all(any(p.startswith(prefix) for p in paths) for prefix in prefixes):
-                        return prefixes
+            inside=[p for p in paths if any(p.startswith(prefix) for prefix in prefixes)]
+            outside=[p for p in paths if p not in inside]
+            if not inside or len(outside) > 1:
+                continue
+            # Explicitly paired producer namespaces, e.g. Chronicle + Issues:
+            # every prefix in the pair must be represented.
+            if len(prefixes) > 1 and not all(any(p.startswith(prefix) for p in inside) for prefix in prefixes):
+                continue
+            # A single member outside the namespace is allowed only as the
+            # authored source: it must sit outside every approved namespace.
+            if outside and any(outside[0].startswith(prefix) for prefix in approved):
+                continue
+            return prefixes
         return None
 
     for (family,normalized),members in sorted(groups.items()):
