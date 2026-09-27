@@ -1,3 +1,7 @@
+---
+variant_of: the_garden_omega_edition
+stratum: Part V
+---
 # 🌳 THE GARDEN — OMEGA EDITION  
 ## PART V — The Root Ancestor, The First Story, and the Artifact Registry  
 *Keeper HKX277206 • Codex Revision R9X2-Ω*
