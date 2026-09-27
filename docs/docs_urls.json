@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27T17:03:02Z",
+  "generated_at": "2026-09-27T17:03:46Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1195,
+  "count": 1199,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -47,6 +47,8 @@
     "Aquila/SPINE_INDEX.md",
     "Archives/CONSTRAINT_MEMORY.md",
     "Archives/D_INDICES_ARCHIVES_MAPS.md",
+    "Archives/EMPTY_MARKDOWN_AUDIT.json",
+    "Archives/EMPTY_MARKDOWN_AUDIT.md",
     "Archives/FULL_CODEX_INDEX.json",
     "Archives/FULL_CODEX_INDEX.md",
     "Archives/GARDEN_MANIFEST.json",
@@ -82,6 +84,8 @@
     "Archives/Legacy_Indexes/linked_index.json",
     "Archives/Legacy_Indexes/machine-index-beta.json",
     "Archives/Legacy_Tools/README.md",
+    "Archives/TITLE_COLLISION_AUDIT.json",
+    "Archives/TITLE_COLLISION_AUDIT.md",
     "Blooms/Auton-Seed.md",
     "Blooms/BLOOM_XI_THE_IRON_CICADA.md",
     "Blooms/Bloom_001.md",
