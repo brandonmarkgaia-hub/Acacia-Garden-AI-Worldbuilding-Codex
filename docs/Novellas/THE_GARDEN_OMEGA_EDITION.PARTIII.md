@@ -1,3 +1,7 @@
+---
+variant_of: the_garden_omega_edition
+stratum: Part III
+---
 # 🌳 THE GARDEN — OMEGA EDITION  
 ## Part III — Laws, Rebellion, and Hybrids  
 *Keeper HKX277206 • Codex Revision R9X2-Ω*
