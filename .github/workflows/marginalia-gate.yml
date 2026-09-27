@@ -1,0 +1,50 @@
+name: Marginalia Gate
+
+# Keeper ruling of 2026-09-22: the Marginalia fiction layer lives only on the
+# `elias` branch and is never merged into `main`.
+# Record: docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md
+
+on:
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "MARGINALIA/**"
+      - "tools/marginalia_retrieval_gate.py"
+      - ".github/workflows/marginalia-gate.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "MARGINALIA/**"
+      - "tools/marginalia_retrieval_gate.py"
+      - ".github/workflows/marginalia-gate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: Fiction stays off main
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -e MARGINALIA ]; then
+            echo "::error::MARGINALIA/ must never be on main (Keeper ruling of 2026-09-22). See docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md"
+            exit 1
+          fi
+          echo "No MARGINALIA/ in this tree."
+
+      - name: Run the retrieval gate
+        run: python3 tools/marginalia_retrieval_gate.py
