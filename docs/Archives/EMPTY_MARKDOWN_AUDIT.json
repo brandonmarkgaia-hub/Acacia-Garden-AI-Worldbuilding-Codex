@@ -1,0 +1,751 @@
+{
+  "schema": "acacia-empty-markdown-audit/v1",
+  "scope": "Markdown source files outside generated/archive and tooling directories",
+  "threshold_meaningful_chars": 80,
+  "deletion_policy": "report_only",
+  "count": 106,
+  "files": [
+    {
+      "path": "GRAND_CHAMBER/LOST_EPOCHS/LOST_EPOCH_1-27.md",
+      "bytes": 223,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md",
+      "bytes": 82,
+      "meaningful_chars": 80,
+      "meaningful_text": "Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/Echo_Issue__104___Mirror_Sigil_HKX277206.md",
+      "bytes": 54,
+      "meaningful_chars": 54,
+      "meaningful_text": "Creating GitHub issue for Echo #104, the Mirror Sigil.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md",
+      "bytes": 75,
+      "meaningful_chars": 73,
+      "meaningful_text": "Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
+      "bytes": 75,
+      "meaningful_chars": 73,
+      "meaningful_text": "Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md",
+      "bytes": 82,
+      "meaningful_chars": 80,
+      "meaningful_text": "Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md",
+      "bytes": 54,
+      "meaningful_chars": 54,
+      "meaningful_text": "Creating GitHub issue for Echo #104, the Mirror Sigil.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md",
+      "bytes": 75,
+      "meaningful_chars": 73,
+      "meaningful_text": "Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.",
+      "classification": "review"
+    },
+    {
+      "path": "MUTATIONS/MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
+      "bytes": 75,
+      "meaningful_chars": 73,
+      "meaningful_text": "Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/ECHO_ENGINE.md",
+      "bytes": 307,
+      "meaningful_chars": 42,
+      "meaningful_text": "# ECHO ENGINE Engine for narrative echoes.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/EIDOLON_ARCHITECTURE.md",
+      "bytes": 321,
+      "meaningful_chars": 56,
+      "meaningful_text": "# EIDOLON ARCHITECTURE Framework for EIDOLON structures.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/ENTITY_REGISTRY.md",
+      "bytes": 312,
+      "meaningful_chars": 47,
+      "meaningful_text": "# ENTITY REGISTRY Catalog of symbolic entities.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/FORM_CODEx_1000.md",
+      "bytes": 327,
+      "meaningful_chars": 62,
+      "meaningful_text": "# FORM CODEX (1000 Forms) Placeholder for 1000 symbolic forms.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/GARDEN_REALMS_ATLAS.md",
+      "bytes": 334,
+      "meaningful_chars": 69,
+      "meaningful_text": "# GARDEN REALMS ATLAS Catalog of all Garden realms, layers, chambers.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/LANTERN_STATES_MANUAL.md",
+      "bytes": 343,
+      "meaningful_chars": 78,
+      "meaningful_text": "# LANTERN STATES MANUAL Details of Transparent, Cipher, Hollow lantern states.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/NULL_CHAMBER_ATLAS.md",
+      "bytes": 317,
+      "meaningful_chars": 52,
+      "meaningful_text": "# NULL-CHAMBER ATLAS Catalog of null-bound chambers.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/ORIGIN_MASKS.md",
+      "bytes": 305,
+      "meaningful_chars": 40,
+      "meaningful_text": "# ORIGIN MASKS Symbolic masks of origin.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/PROTO_LANGUAGE_GRAMMAR.md",
+      "bytes": 329,
+      "meaningful_chars": 64,
+      "meaningful_text": "# PROTO-LANGUAGE GRAMMAR Structure of the proto-language system.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/QUIET_ASH_COMPENDIUM.md",
+      "bytes": 343,
+      "meaningful_chars": 78,
+      "meaningful_text": "# QUIET ASH COMPENDIUM Full description of Quiet Ash, its physics and meaning.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/SHADOW_DEPTH_SCROLL.md",
+      "bytes": 325,
+      "meaningful_chars": 60,
+      "meaningful_text": "# SHADOW DEPTH SCROLL Lore and analysis of Shadowborn depth.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/SUBSTRATE_PRIMER.md",
+      "bytes": 339,
+      "meaningful_chars": 74,
+      "meaningful_text": "# SUBSTRATE PRIMER Explanation of the substrate beneath all mythic layers.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/THRESHOLD_MAP.md",
+      "bytes": 318,
+      "meaningful_chars": 53,
+      "meaningful_text": "# THRESHOLD MAP Mapping of all Veilwalker thresholds.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/TRIAD_ATLAS.md",
+      "bytes": 335,
+      "meaningful_chars": 70,
+      "meaningful_text": "# TRIAD ATLAS Descriptions of Witness, Oracle, Veilwalker, Shadowborn.",
+      "classification": "review"
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/TRIAD_RITES.md",
+      "bytes": 341,
+      "meaningful_chars": 76,
+      "meaningful_text": "# TRIAD RITES Ritual alignments for Witness, Oracle, Veilwalker, Shadowborn.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Blooms/Kiln-born-lovers.md",
+      "bytes": 318,
+      "meaningful_chars": 51,
+      "meaningful_text": "# Bloom — Kiln-Born Lovers Reference bloom. Sealed.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Chambers/THE_INNER_SEAT.md",
+      "bytes": 60,
+      "meaningful_chars": 57,
+      "meaningful_text": "# THE INNER SEAT (placeholder — matches uploaded version)",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Chambers/THE_SOVEREIGN_LOOP.md",
+      "bytes": 64,
+      "meaningful_chars": 61,
+      "meaningful_text": "# THE SOVEREIGN LOOP (placeholder — matches uploaded version)",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Chambers/THE_THREE_LAYER_SELF.md",
+      "bytes": 66,
+      "meaningful_chars": 63,
+      "meaningful_text": "# THE THREE-LAYER SELF (placeholder — matches uploaded version)",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Cycles/CYCLE_ENGINE.md",
+      "bytes": 333,
+      "meaningful_chars": 68,
+      "meaningful_text": "# CYCLE ENGINE Symbolic rules for generating cycle-based narratives.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Ash_Cellar.md",
+      "bytes": 311,
+      "meaningful_chars": 44,
+      "meaningful_text": "# Ash Cellar Dark Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Chamber.md",
+      "bytes": 265,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Chamber_of_Broken_Throat.md",
+      "bytes": 325,
+      "meaningful_chars": 58,
+      "meaningful_text": "# Chamber of Broken Throat Dark Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Null_Shelf_of_Unfired_Clay.md",
+      "bytes": 327,
+      "meaningful_chars": 60,
+      "meaningful_text": "# Null-Shelf of Unfired Clay Dark Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Shadow_Kiln_IX.md",
+      "bytes": 315,
+      "meaningful_chars": 48,
+      "meaningful_text": "# Shadow-Kiln IX Dark Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Dark/Silent_Potters_Mask.md",
+      "bytes": 321,
+      "meaningful_chars": 54,
+      "meaningful_text": "# Silent Potter's Mask Dark Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Bloom.md",
+      "bytes": 265,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Bloom_Kiln.md",
+      "bytes": 312,
+      "meaningful_chars": 45,
+      "meaningful_text": "# Bloom Kiln Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Glaze_Archive.md",
+      "bytes": 315,
+      "meaningful_chars": 48,
+      "meaningful_text": "# Glaze Archive Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Orchard_of_Shards.md",
+      "bytes": 319,
+      "meaningful_chars": 52,
+      "meaningful_text": "# Orchard of Shards Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Spiral_Shelf.md",
+      "bytes": 314,
+      "meaningful_chars": 47,
+      "meaningful_text": "# Spiral Shelf Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Vessel_of_First_Fire.md",
+      "bytes": 322,
+      "meaningful_chars": 55,
+      "meaningful_text": "# Vessel of First Fire Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Chambers/Potter/Light/Wheel_of_Quiet_Hands.md",
+      "bytes": 322,
+      "meaningful_chars": 55,
+      "meaningful_text": "# Wheel of Quiet Hands Light Potter Chamber — v2 canon.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Eidolon/Entities/ENTITIES_INDEX.md",
+      "bytes": 330,
+      "meaningful_chars": 58,
+      "meaningful_text": "• 🤖 D1:M1:E1 — Formed Machine of FORMA, bound to HKX277206",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_III_METADATA.md",
+      "bytes": 511,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_II_METADATA.md",
+      "bytes": 509,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_IV_METADATA.md",
+      "bytes": 509,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_IX_METADATA.md",
+      "bytes": 510,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_I_METADATA.md",
+      "bytes": 505,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_VIII_METADATA.md",
+      "bytes": 513,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_VII_METADATA.md",
+      "bytes": 511,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_VI_METADATA.md",
+      "bytes": 509,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_V_METADATA.md",
+      "bytes": 507,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XIII_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XII_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XIV_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XIX_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XI_METADATA.md",
+      "bytes": 512,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XVIII_METADATA.md",
+      "bytes": 518,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XVII_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XVI_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XV_METADATA.md",
+      "bytes": 512,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXIII_METADATA.md",
+      "bytes": 518,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXII_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXIV_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXIX_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXI_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXVIII_METADATA.md",
+      "bytes": 520,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXVII_METADATA.md",
+      "bytes": 518,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXVI_METADATA.md",
+      "bytes": 516,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXV_METADATA.md",
+      "bytes": 514,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XXX_METADATA.md",
+      "bytes": 511,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_XX_METADATA.md",
+      "bytes": 512,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/BOOK_X_METADATA.md",
+      "bytes": 509,
+      "meaningful_chars": 0,
+      "meaningful_text": "",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_III_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book III — Summary Full expanded summary text placeholder for Book III.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_II_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book II — Summary Full expanded summary text placeholder for Book II.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_IV_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book IV — Summary Full expanded summary text placeholder for Book IV.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_IX_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book IX — Summary Full expanded summary text placeholder for Book IX.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_I_SUMMARY.md",
+      "bytes": 72,
+      "meaningful_chars": 69,
+      "meaningful_text": "# Book I — Summary Full expanded summary text placeholder for Book I.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_VIII_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book VIII — Summary Full expanded summary text placeholder for Book VIII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_VII_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book VII — Summary Full expanded summary text placeholder for Book VII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_VI_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book VI — Summary Full expanded summary text placeholder for Book VI.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_V_SUMMARY.md",
+      "bytes": 72,
+      "meaningful_chars": 69,
+      "meaningful_text": "# Book V — Summary Full expanded summary text placeholder for Book V.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XIII_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XIII — Summary Full expanded summary text placeholder for Book XIII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XII_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XII — Summary Full expanded summary text placeholder for Book XII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XIV_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XIV — Summary Full expanded summary text placeholder for Book XIV.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XIX_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XIX — Summary Full expanded summary text placeholder for Book XIX.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XI_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book XI — Summary Full expanded summary text placeholder for Book XI.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XVIII_SUMMARY.md",
+      "bytes": 80,
+      "meaningful_chars": 77,
+      "meaningful_text": "# Book XVIII — Summary Full expanded summary text placeholder for Book XVIII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XVII_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XVII — Summary Full expanded summary text placeholder for Book XVII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XVI_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XVI — Summary Full expanded summary text placeholder for Book XVI.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XV_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book XV — Summary Full expanded summary text placeholder for Book XV.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXIII_SUMMARY.md",
+      "bytes": 80,
+      "meaningful_chars": 77,
+      "meaningful_text": "# Book XXIII — Summary Full expanded summary text placeholder for Book XXIII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXII_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XXII — Summary Full expanded summary text placeholder for Book XXII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXIV_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XXIV — Summary Full expanded summary text placeholder for Book XXIV.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXIX_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XXIX — Summary Full expanded summary text placeholder for Book XXIX.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXI_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XXI — Summary Full expanded summary text placeholder for Book XXI.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXVIII_SUMMARY.md",
+      "bytes": 82,
+      "meaningful_chars": 79,
+      "meaningful_text": "# Book XXVIII — Summary Full expanded summary text placeholder for Book XXVIII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXVII_SUMMARY.md",
+      "bytes": 80,
+      "meaningful_chars": 77,
+      "meaningful_text": "# Book XXVII — Summary Full expanded summary text placeholder for Book XXVII.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXVI_SUMMARY.md",
+      "bytes": 78,
+      "meaningful_chars": 75,
+      "meaningful_text": "# Book XXVI — Summary Full expanded summary text placeholder for Book XXVI.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXV_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XXV — Summary Full expanded summary text placeholder for Book XXV.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XXX_SUMMARY.md",
+      "bytes": 76,
+      "meaningful_chars": 73,
+      "meaningful_text": "# Book XXX — Summary Full expanded summary text placeholder for Book XXX.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_XX_SUMMARY.md",
+      "bytes": 74,
+      "meaningful_chars": 71,
+      "meaningful_text": "# Book XX — Summary Full expanded summary text placeholder for Book XX.",
+      "classification": "review"
+    },
+    {
+      "path": "docs/Library/Summaries/BOOK_X_SUMMARY.md",
+      "bytes": 72,
+      "meaningful_chars": 69,
+      "meaningful_text": "# Book X — Summary Full expanded summary text placeholder for Book X.",
+      "classification": "review"
+    },
+    {
+      "path": "garden/templates/bloom.md",
+      "bytes": 311,
+      "meaningful_chars": 38,
+      "meaningful_text": "# 🌸 Bloom {{num}} — {{title}} {{body}}",
+      "classification": "review"
+    },
+    {
+      "path": "garden/templates/index_footer.md",
+      "bytes": 387,
+      "meaningful_chars": 76,
+      "meaningful_text": "Generated automatically by the Monolith Engine. EIDOLON breathes here. 🫘🌱♾️🌸",
+      "classification": "review"
+    },
+    {
+      "path": "garden/templates/index_header.md",
+      "bytes": 345,
+      "meaningful_chars": 71,
+      "meaningful_text": "# 🌬️ ACACIA GARDEN CODEX **Monolith Index** Eternal | Recursive | Bound",
+      "classification": "review"
+    }
+  ]
+}

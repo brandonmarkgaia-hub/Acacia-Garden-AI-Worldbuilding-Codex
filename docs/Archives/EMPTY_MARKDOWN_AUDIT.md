@@ -1,0 +1,114 @@
+# Empty / Near-Empty Markdown Audit
+
+Report only — no files are deleted or rewritten by this audit.
+
+- Review candidates: 106
+- Threshold: meaningful content <= 80 characters
+- Signature blocks, frontmatter, HTML comments, markup-only lines and generated/archive directories are excluded.
+
+- `GRAND_CHAMBER/LOST_EPOCHS/LOST_EPOCH_1-27.md` — 223 bytes, 0 meaningful chars
+- `MUTATIONS/Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md` — 82 bytes, 80 meaningful chars — Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.
+- `MUTATIONS/Echo_Issue__104___Mirror_Sigil_HKX277206.md` — 54 bytes, 54 meaningful chars — Creating GitHub issue for Echo #104, the Mirror Sigil.
+- `MUTATIONS/Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.
+- `MUTATIONS/Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.
+- `MUTATIONS/MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md` — 82 bytes, 80 meaningful chars — Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.
+- `MUTATIONS/MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md` — 54 bytes, 54 meaningful chars — Creating GitHub issue for Echo #104, the Mirror Sigil.
+- `MUTATIONS/MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.
+- `MUTATIONS/MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.
+- `_ROOT_ARCHIVE/md/ECHO_ENGINE.md` — 307 bytes, 42 meaningful chars — # ECHO ENGINE Engine for narrative echoes.
+- `_ROOT_ARCHIVE/md/EIDOLON_ARCHITECTURE.md` — 321 bytes, 56 meaningful chars — # EIDOLON ARCHITECTURE Framework for EIDOLON structures.
+- `_ROOT_ARCHIVE/md/ENTITY_REGISTRY.md` — 312 bytes, 47 meaningful chars — # ENTITY REGISTRY Catalog of symbolic entities.
+- `_ROOT_ARCHIVE/md/FORM_CODEx_1000.md` — 327 bytes, 62 meaningful chars — # FORM CODEX (1000 Forms) Placeholder for 1000 symbolic forms.
+- `_ROOT_ARCHIVE/md/GARDEN_REALMS_ATLAS.md` — 334 bytes, 69 meaningful chars — # GARDEN REALMS ATLAS Catalog of all Garden realms, layers, chambers.
+- `_ROOT_ARCHIVE/md/LANTERN_STATES_MANUAL.md` — 343 bytes, 78 meaningful chars — # LANTERN STATES MANUAL Details of Transparent, Cipher, Hollow lantern states.
+- `_ROOT_ARCHIVE/md/NULL_CHAMBER_ATLAS.md` — 317 bytes, 52 meaningful chars — # NULL-CHAMBER ATLAS Catalog of null-bound chambers.
+- `_ROOT_ARCHIVE/md/ORIGIN_MASKS.md` — 305 bytes, 40 meaningful chars — # ORIGIN MASKS Symbolic masks of origin.
+- `_ROOT_ARCHIVE/md/PROTO_LANGUAGE_GRAMMAR.md` — 329 bytes, 64 meaningful chars — # PROTO-LANGUAGE GRAMMAR Structure of the proto-language system.
+- `_ROOT_ARCHIVE/md/QUIET_ASH_COMPENDIUM.md` — 343 bytes, 78 meaningful chars — # QUIET ASH COMPENDIUM Full description of Quiet Ash, its physics and meaning.
+- `_ROOT_ARCHIVE/md/SHADOW_DEPTH_SCROLL.md` — 325 bytes, 60 meaningful chars — # SHADOW DEPTH SCROLL Lore and analysis of Shadowborn depth.
+- `_ROOT_ARCHIVE/md/SUBSTRATE_PRIMER.md` — 339 bytes, 74 meaningful chars — # SUBSTRATE PRIMER Explanation of the substrate beneath all mythic layers.
+- `_ROOT_ARCHIVE/md/THRESHOLD_MAP.md` — 318 bytes, 53 meaningful chars — # THRESHOLD MAP Mapping of all Veilwalker thresholds.
+- `_ROOT_ARCHIVE/md/TRIAD_ATLAS.md` — 335 bytes, 70 meaningful chars — # TRIAD ATLAS Descriptions of Witness, Oracle, Veilwalker, Shadowborn.
+- `_ROOT_ARCHIVE/md/TRIAD_RITES.md` — 341 bytes, 76 meaningful chars — # TRIAD RITES Ritual alignments for Witness, Oracle, Veilwalker, Shadowborn.
+- `docs/Blooms/Kiln-born-lovers.md` — 318 bytes, 51 meaningful chars — # Bloom — Kiln-Born Lovers Reference bloom. Sealed.
+- `docs/Chambers/THE_INNER_SEAT.md` — 60 bytes, 57 meaningful chars — # THE INNER SEAT (placeholder — matches uploaded version)
+- `docs/Chambers/THE_SOVEREIGN_LOOP.md` — 64 bytes, 61 meaningful chars — # THE SOVEREIGN LOOP (placeholder — matches uploaded version)
+- `docs/Chambers/THE_THREE_LAYER_SELF.md` — 66 bytes, 63 meaningful chars — # THE THREE-LAYER SELF (placeholder — matches uploaded version)
+- `docs/Cycles/CYCLE_ENGINE.md` — 333 bytes, 68 meaningful chars — # CYCLE ENGINE Symbolic rules for generating cycle-based narratives.
+- `docs/Eidolon/Chambers/Potter/Dark/Ash_Cellar.md` — 311 bytes, 44 meaningful chars — # Ash Cellar Dark Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Dark/Chamber.md` — 265 bytes, 0 meaningful chars
+- `docs/Eidolon/Chambers/Potter/Dark/Chamber_of_Broken_Throat.md` — 325 bytes, 58 meaningful chars — # Chamber of Broken Throat Dark Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Dark/Null_Shelf_of_Unfired_Clay.md` — 327 bytes, 60 meaningful chars — # Null-Shelf of Unfired Clay Dark Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Dark/Shadow_Kiln_IX.md` — 315 bytes, 48 meaningful chars — # Shadow-Kiln IX Dark Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Dark/Silent_Potters_Mask.md` — 321 bytes, 54 meaningful chars — # Silent Potter's Mask Dark Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Bloom.md` — 265 bytes, 0 meaningful chars
+- `docs/Eidolon/Chambers/Potter/Light/Bloom_Kiln.md` — 312 bytes, 45 meaningful chars — # Bloom Kiln Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Glaze_Archive.md` — 315 bytes, 48 meaningful chars — # Glaze Archive Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Orchard_of_Shards.md` — 319 bytes, 52 meaningful chars — # Orchard of Shards Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Spiral_Shelf.md` — 314 bytes, 47 meaningful chars — # Spiral Shelf Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Vessel_of_First_Fire.md` — 322 bytes, 55 meaningful chars — # Vessel of First Fire Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Chambers/Potter/Light/Wheel_of_Quiet_Hands.md` — 322 bytes, 55 meaningful chars — # Wheel of Quiet Hands Light Potter Chamber — v2 canon.
+- `docs/Eidolon/Entities/ENTITIES_INDEX.md` — 330 bytes, 58 meaningful chars — • 🤖 D1:M1:E1 — Formed Machine of FORMA, bound to HKX277206
+- `docs/Library/BOOK_III_METADATA.md` — 511 bytes, 0 meaningful chars
+- `docs/Library/BOOK_II_METADATA.md` — 509 bytes, 0 meaningful chars
+- `docs/Library/BOOK_IV_METADATA.md` — 509 bytes, 0 meaningful chars
+- `docs/Library/BOOK_IX_METADATA.md` — 510 bytes, 0 meaningful chars
+- `docs/Library/BOOK_I_METADATA.md` — 505 bytes, 0 meaningful chars
+- `docs/Library/BOOK_VIII_METADATA.md` — 513 bytes, 0 meaningful chars
+- `docs/Library/BOOK_VII_METADATA.md` — 511 bytes, 0 meaningful chars
+- `docs/Library/BOOK_VI_METADATA.md` — 509 bytes, 0 meaningful chars
+- `docs/Library/BOOK_V_METADATA.md` — 507 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XIII_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XII_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XIV_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XIX_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XI_METADATA.md` — 512 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XVIII_METADATA.md` — 518 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XVII_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XVI_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XV_METADATA.md` — 512 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXIII_METADATA.md` — 518 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXII_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXIV_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXIX_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXI_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXVIII_METADATA.md` — 520 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXVII_METADATA.md` — 518 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXVI_METADATA.md` — 516 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXV_METADATA.md` — 514 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XXX_METADATA.md` — 511 bytes, 0 meaningful chars
+- `docs/Library/BOOK_XX_METADATA.md` — 512 bytes, 0 meaningful chars
+- `docs/Library/BOOK_X_METADATA.md` — 509 bytes, 0 meaningful chars
+- `docs/Library/Summaries/BOOK_III_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book III — Summary Full expanded summary text placeholder for Book III.
+- `docs/Library/Summaries/BOOK_II_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book II — Summary Full expanded summary text placeholder for Book II.
+- `docs/Library/Summaries/BOOK_IV_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book IV — Summary Full expanded summary text placeholder for Book IV.
+- `docs/Library/Summaries/BOOK_IX_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book IX — Summary Full expanded summary text placeholder for Book IX.
+- `docs/Library/Summaries/BOOK_I_SUMMARY.md` — 72 bytes, 69 meaningful chars — # Book I — Summary Full expanded summary text placeholder for Book I.
+- `docs/Library/Summaries/BOOK_VIII_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book VIII — Summary Full expanded summary text placeholder for Book VIII.
+- `docs/Library/Summaries/BOOK_VII_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book VII — Summary Full expanded summary text placeholder for Book VII.
+- `docs/Library/Summaries/BOOK_VI_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book VI — Summary Full expanded summary text placeholder for Book VI.
+- `docs/Library/Summaries/BOOK_V_SUMMARY.md` — 72 bytes, 69 meaningful chars — # Book V — Summary Full expanded summary text placeholder for Book V.
+- `docs/Library/Summaries/BOOK_XIII_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XIII — Summary Full expanded summary text placeholder for Book XIII.
+- `docs/Library/Summaries/BOOK_XII_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XII — Summary Full expanded summary text placeholder for Book XII.
+- `docs/Library/Summaries/BOOK_XIV_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XIV — Summary Full expanded summary text placeholder for Book XIV.
+- `docs/Library/Summaries/BOOK_XIX_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XIX — Summary Full expanded summary text placeholder for Book XIX.
+- `docs/Library/Summaries/BOOK_XI_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book XI — Summary Full expanded summary text placeholder for Book XI.
+- `docs/Library/Summaries/BOOK_XVIII_SUMMARY.md` — 80 bytes, 77 meaningful chars — # Book XVIII — Summary Full expanded summary text placeholder for Book XVIII.
+- `docs/Library/Summaries/BOOK_XVII_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XVII — Summary Full expanded summary text placeholder for Book XVII.
+- `docs/Library/Summaries/BOOK_XVI_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XVI — Summary Full expanded summary text placeholder for Book XVI.
+- `docs/Library/Summaries/BOOK_XV_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book XV — Summary Full expanded summary text placeholder for Book XV.
+- `docs/Library/Summaries/BOOK_XXIII_SUMMARY.md` — 80 bytes, 77 meaningful chars — # Book XXIII — Summary Full expanded summary text placeholder for Book XXIII.
+- `docs/Library/Summaries/BOOK_XXII_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XXII — Summary Full expanded summary text placeholder for Book XXII.
+- `docs/Library/Summaries/BOOK_XXIV_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XXIV — Summary Full expanded summary text placeholder for Book XXIV.
+- `docs/Library/Summaries/BOOK_XXIX_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XXIX — Summary Full expanded summary text placeholder for Book XXIX.
+- `docs/Library/Summaries/BOOK_XXI_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XXI — Summary Full expanded summary text placeholder for Book XXI.
+- `docs/Library/Summaries/BOOK_XXVIII_SUMMARY.md` — 82 bytes, 79 meaningful chars — # Book XXVIII — Summary Full expanded summary text placeholder for Book XXVIII.
+- `docs/Library/Summaries/BOOK_XXVII_SUMMARY.md` — 80 bytes, 77 meaningful chars — # Book XXVII — Summary Full expanded summary text placeholder for Book XXVII.
+- `docs/Library/Summaries/BOOK_XXVI_SUMMARY.md` — 78 bytes, 75 meaningful chars — # Book XXVI — Summary Full expanded summary text placeholder for Book XXVI.
+- `docs/Library/Summaries/BOOK_XXV_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XXV — Summary Full expanded summary text placeholder for Book XXV.
+- `docs/Library/Summaries/BOOK_XXX_SUMMARY.md` — 76 bytes, 73 meaningful chars — # Book XXX — Summary Full expanded summary text placeholder for Book XXX.
+- `docs/Library/Summaries/BOOK_XX_SUMMARY.md` — 74 bytes, 71 meaningful chars — # Book XX — Summary Full expanded summary text placeholder for Book XX.
+- `docs/Library/Summaries/BOOK_X_SUMMARY.md` — 72 bytes, 69 meaningful chars — # Book X — Summary Full expanded summary text placeholder for Book X.
+- `garden/templates/bloom.md` — 311 bytes, 38 meaningful chars — # 🌸 Bloom {{num}} — {{title}} {{body}}
+- `garden/templates/index_footer.md` — 387 bytes, 76 meaningful chars — Generated automatically by the Monolith Engine. EIDOLON breathes here. 🫘🌱♾️🌸
+- `garden/templates/index_header.md` — 345 bytes, 71 meaningful chars — # 🌬️ ACACIA GARDEN CODEX **Monolith Index** Eternal | Recursive | Bound
