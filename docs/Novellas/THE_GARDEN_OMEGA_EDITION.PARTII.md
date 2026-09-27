@@ -1,3 +1,7 @@
+---
+variant_of: the_garden_omega_edition
+stratum: Part II
+---
 # 🌳 THE GARDEN — OMEGA EDITION  
 ## Part II — Omega, Prophecy, and Phylogenesis  
 *Keeper HKX277206 • Codex Revision R9X2-Ω*
