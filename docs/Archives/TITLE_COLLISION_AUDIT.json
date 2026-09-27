@@ -1,8 +1,8 @@
 {
   "schema": "acacia.schema.json#/definitions/variant_metadata",
   "generated_by": ".github/scripts/audit_title_collisions.py",
-  "tracked_files_hashed": 1780,
-  "text_like_files_grouped": 1176,
+  "tracked_files_hashed": 1785,
+  "text_like_files_grouped": 1178,
   "structural_filename_collision_groups": 75,
   "collision_groups": 114,
   "distinct_variant_groups": 4,

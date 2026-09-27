@@ -1205,7 +1205,7 @@
     "category": "",
     "name": "STATUS.json",
     "ext": ".json",
-    "size_bytes": 60976
+    "size_bytes": 60915
   },
   {
     "path": "STATUS.md",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 483026
+    "size_bytes": 283497
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -7309,7 +7309,7 @@
     "category": "Echoes",
     "name": "echoes_index.json",
     "ext": ".json",
-    "size_bytes": 66003
+    "size_bytes": 65848
   },
   {
     "path": "docs/Echoes/index.html",
@@ -10309,7 +10309,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 53616
+    "size_bytes": 53714
   },
   {
     "path": "docs/docs_urls.json",
@@ -10317,7 +10317,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 56152
+    "size_bytes": 56262
   },
   {
     "path": "docs/echoes.md",
@@ -11165,7 +11165,7 @@
     "category": "",
     "name": "machine-index.json",
     "ext": ".json",
-    "size_bytes": 122575
+    "size_bytes": 122307
   },
   {
     "path": "machine.html",
