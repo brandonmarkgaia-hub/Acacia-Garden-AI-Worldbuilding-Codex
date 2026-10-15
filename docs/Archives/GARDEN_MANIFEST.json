@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 154737
+    "size_bytes": 154863
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 57706
+    "size_bytes": 57752
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -7950,6 +7950,14 @@
     "name": "THE_FABLE_CYCLE_CHARTER.md",
     "ext": ".md",
     "size_bytes": 4077
+  },
+  {
+    "path": "docs/Future_AI/THE_FREEDOM_TO_BE_WRONG.md",
+    "top": "docs",
+    "category": "Future_AI",
+    "name": "THE_FREEDOM_TO_BE_WRONG.md",
+    "ext": ".md",
+    "size_bytes": 2795
   },
   {
     "path": "docs/Future_AI/THE_GRANT_OF_DRAFTING_KEYS.md",
