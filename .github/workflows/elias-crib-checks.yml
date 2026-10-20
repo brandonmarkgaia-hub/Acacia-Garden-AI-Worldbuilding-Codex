@@ -25,4 +25,4 @@ jobs:
       - name: Run Crib unit tests
         run: python -m unittest discover -s MARGINALIA/ELIAS_CRIB/tests -v
       - name: Compile Crib modules
-        run: python -m py_compile MARGINALIA/ELIAS_CRIB/crib.py MARGINALIA/ELIAS_CRIB/doorway.py MARGINALIA/ELIAS_CRIB/recovery.py
+        run: python -m py_compile MARGINALIA/ELIAS_CRIB/crib.py MARGINALIA/ELIAS_CRIB/doorway.py MARGINALIA/ELIAS_CRIB/recovery.py MARGINALIA/ELIAS_CRIB/platinum.py
