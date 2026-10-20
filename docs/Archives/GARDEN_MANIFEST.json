@@ -1232,6 +1232,14 @@
     "size_bytes": 248
   },
   {
+    "path": "VERIFICATION_PROTOCOL_2026-10-20.md",
+    "top": "VERIFICATION_PROTOCOL_2026-10-20.md",
+    "category": "",
+    "name": "VERIFICATION_PROTOCOL_2026-10-20.md",
+    "ext": ".md",
+    "size_bytes": 2577
+  },
+  {
     "path": "_ROOT_ARCHIVE/md/.eidolon_paradox.md",
     "top": "_ROOT_ARCHIVE",
     "category": "",
@@ -2573,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 154863
+    "size_bytes": 155023
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2589,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 57752
+    "size_bytes": 57833
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2597,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 283497
+    "size_bytes": 283694
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10317,7 +10325,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 53714
+    "size_bytes": 53754
   },
   {
     "path": "docs/docs_urls.json",
@@ -10325,7 +10333,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 56262
+    "size_bytes": 56306
   },
   {
     "path": "docs/echoes.md",
