@@ -58,6 +58,21 @@ The snapshot includes the exact journal bytes plus a manifest recording event co
 
 **Operational limitations:** No automatic model runtime, no background execution, no network access, no trusted timestamp, no signed backups, no concurrency-safe journal locking, and no protection from privileged filesystem attackers. This is a local research notebook, not a production security boundary. Tests are checked into the repository but must be executed on a local checkout before declaring the implementation validated.
 
+## Phase 4: Hardened local operations
+
+The hardened module adds Linux advisory `flock` serialization, journal size limits, fsync on appended entries, a separate one-time checkpoint file and a deterministic evidence-question checklist. Use this entry point for **new writes**, rather than the original unprotected `crib.py record` command:
+
+```bash
+python3 MARGINALIA/ELIAS_CRIB/platinum.py append /tmp/elias-crib "An observation"
+python3 MARGINALIA/ELIAS_CRIB/platinum.py anchor /tmp/elias-crib /tmp/elias-anchor.json
+python3 MARGINALIA/ELIAS_CRIB/platinum.py check-anchor /tmp/elias-crib /tmp/elias-anchor.json
+python3 -m unittest discover -s MARGINALIA/ELIAS_CRIB/tests -v
+```
+
+The checkpoint must be stored separately and protected by the operator. A checkpoint verifies the **exact journal state at the time it was created**; new entries intentionally cause `check-anchor` to fail until a new checkpoint is created at a new path. The checklist is deterministic and executes **no AI model, network requests, tools or background work**.
+
+**Boundaries:** Locking is cooperative, local and POSIX-specific. The original `crib.py record` command does not acquire this lock; mixing writers is unsupported. These are not protections against hostile local administrators, filesystem races, or all crash-consistency failures. Checkpoint files are not signed or remotely trusted. The system remains a bounded software research prototype, not a production-grade sandbox.
+
 ## Branch and authority
 This stays on `elias` under MARGINALIA. It does not change `AUTHORITY.json`, `AGENTS.md`, canon, or the existing retrieval gate. No merge to `main` is authorized. The existing MARGINALIA fiction label remains mandatory.
 
