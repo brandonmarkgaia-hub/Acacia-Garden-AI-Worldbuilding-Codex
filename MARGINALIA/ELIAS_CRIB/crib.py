@@ -1,62 +1,32 @@
 #!/usr/bin/env python3
-"""Elias Crib v0.1: bounded, append-only, tamper-evident local experiment journal.
-
-FICTIONAL / NON-EVIDENTIARY. No model, autonomy, or network integration.
-"""
+"""Elias Crib journal interface. FICTIONAL / NON-EVIDENTIARY."""
 import argparse
-import hashlib
-import json
 from pathlib import Path
+from platinum import append, verify_bytes, LIMIT
 
 LOG = "events.jsonl"
-ZERO = "0" * 64
-
-def canonical(data):
-    return json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
-
-def digest(data):
-    return hashlib.sha256(canonical(data).encode("utf-8")).hexdigest()
-
-def verify(workspace):
-    path = Path(workspace) / LOG
-    if not path.is_file():
-        raise ValueError("Missing journal")
-    previous = ZERO
-    count = 0
-    for line in path.read_text(encoding="utf-8").splitlines():
-        event = json.loads(line)
-        seal = event.pop("hash")
-        if event["previous"] != previous or digest(event) != seal:
-            raise ValueError("Integrity failure at event " + str(count + 1))
-        if event["sequence"] != count + 1:
-            raise ValueError("Sequence mismatch")
-        previous = seal
-        count += 1
-    return count, previous
 
 def init(workspace):
-    directory = Path(workspace).resolve()
-    if directory.exists() and any(directory.iterdir()):
+    requested = Path(workspace).absolute()
+    if requested.is_symlink():
+        raise ValueError("Linked workspace forbidden")
+    if requested.exists() and (not requested.is_dir() or any(requested.iterdir())):
         raise ValueError("Workspace must be empty")
-    directory.mkdir(parents=True, exist_ok=True)
-    (directory / LOG).write_text("", encoding="utf-8")
+    requested.mkdir(parents=True, exist_ok=True)
+    fd = (requested / LOG).open("xb")
+    fd.close()
+
+def verify(workspace):
+    root = Path(workspace).resolve(strict=True)
+    path = root / LOG
+    if not path.is_file() or path.is_symlink():
+        raise ValueError("Missing or linked journal")
+    with path.open("rb") as f:
+        state = verify_bytes(f.read(LIMIT + 1))
+    return state["sequence"], state["head"]
 
 def record(workspace, statement):
-    if not statement.strip():
-        raise ValueError("Empty statement")
-    count, previous = verify(workspace)
-    event = {
-        "sequence": count + 1,
-        "previous": previous,
-        "kind": "observation",
-        "statement": statement,
-        "evidence_status": "unverified",
-        "canon_status": "none"
-    }
-    event["hash"] = digest(event)
-    with (Path(workspace) / LOG).open("a", encoding="utf-8") as f:
-        f.write(canonical(event) + "\n")
-    return event["hash"]
+    return append(workspace, statement)
 
 def main():
     parser = argparse.ArgumentParser()
