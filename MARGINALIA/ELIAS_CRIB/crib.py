@@ -2,7 +2,13 @@
 """Elias Crib journal interface. FICTIONAL / NON-EVIDENTIARY."""
 import argparse
 from pathlib import Path
-from platinum import append, verify_bytes, LIMIT
+import importlib.util
+
+_module_path = Path(__file__).with_name("platinum.py")
+_spec = importlib.util.spec_from_file_location("elias_platinum", _module_path)
+_platinum = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_platinum)
+append, verify_bytes, LIMIT = _platinum.append, _platinum.verify_bytes, _platinum.LIMIT
 
 LOG = "events.jsonl"
 
