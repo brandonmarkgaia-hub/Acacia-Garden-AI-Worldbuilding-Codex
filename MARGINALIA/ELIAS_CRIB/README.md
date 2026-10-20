@@ -42,6 +42,22 @@ The doorway returns the exact source text with its SHA-256 digest and relative p
 
 **Limits:** No Git commit pinning yet; the digest binds bytes, not an authoritative historical commit. No snapshot restoration or safe concurrent journal writer yet. The tests are provided but have not been executed by this GitHub commit operation.
 
+## Phase 3: Checkpoints and verified recovery
+
+From a local checkout, create a separate snapshot and restore it into a new empty path:
+
+```bash
+python3 MARGINALIA/ELIAS_CRIB/recovery.py snapshot /tmp/elias-crib /tmp/elias-backup
+python3 MARGINALIA/ELIAS_CRIB/recovery.py check /tmp/elias-backup
+python3 MARGINALIA/ELIAS_CRIB/recovery.py restore /tmp/elias-backup /tmp/elias-restored
+python3 MARGINALIA/ELIAS_CRIB/crib.py verify /tmp/elias-restored
+python3 -m unittest discover -s MARGINALIA/ELIAS_CRIB/tests -v
+```
+
+The snapshot includes the exact journal bytes plus a manifest recording event count, chain head and SHA-256. Restores refuse existing destinations and verify the restored bytes. The independent manifest detects accidental truncation or alteration of the journal **when the manifest is trusted**. It is not a signed or remote backup: an attacker who can rewrite both journal and manifest can forge a snapshot. Store trusted manifest hashes separately for stronger assurance.
+
+**Operational limitations:** No automatic model runtime, no background execution, no network access, no trusted timestamp, no signed backups, no concurrency-safe journal locking, and no protection from privileged filesystem attackers. This is a local research notebook, not a production security boundary. Tests are checked into the repository but must be executed on a local checkout before declaring the implementation validated.
+
 ## Branch and authority
 This stays on `elias` under MARGINALIA. It does not change `AUTHORITY.json`, `AGENTS.md`, canon, or the existing retrieval gate. No merge to `main` is authorized. The existing MARGINALIA fiction label remains mandatory.
 
