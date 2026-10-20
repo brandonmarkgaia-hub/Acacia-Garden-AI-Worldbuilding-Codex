@@ -73,6 +73,28 @@ The checkpoint must be stored separately and protected by the operator. A checkp
 
 **Boundaries:** Locking is cooperative, local and POSIX-specific. The original `crib.py record` command does not acquire this lock; mixing writers is unsupported. These are not protections against hostile local administrators, filesystem races, or all crash-consistency failures. Checkpoint files are not signed or remotely trusted. The system remains a bounded software research prototype, not a production-grade sandbox.
 
+## Platinum audit and operational acceptance
+
+The original `crib.py record` command now delegates to the same cooperative locked writer as `platinum.py append`. The end-to-end test `tests/test_integration.py` checks the complete sequence: read an unchanged source, record its digest, append a revision, snapshot, verify, restore and re-verify. The repository's GitHub Actions workflow is scoped to `elias` changes and executes the test suite.
+
+### Acceptance checklist
+
+1. Check GitHub Actions for a **completed successful** run at the intended `elias` commit. A workflow file being committed does not establish that it has run or passed.
+2. In a clean Linux Python 3.12 checkout, run `python3 -m unittest discover -s MARGINALIA/ELIAS_CRIB/tests -v`.
+3. Create an empty workspace outside the checkout. Initialize, append, snapshot and restore using the commands above.
+4. Store a copy of `manifest.json` or an anchor hash **outside the same machine/account** using an operator-controlled, access-restricted destination. Independently verify the copied digest. Local anchors alone are not trustworthy against a fully compromised machine.
+5. Check read-only source files against expected SHA-256 digests or a reviewed Git commit before treating them as historical evidence.
+6. Perform a recovery drill from an offline backup to a fresh directory and compare journal bytes, chain head and sequence.
+7. Keep network access and external tools disabled. Do not use this code to execute arbitrary model-generated commands.
+
+### Remaining security boundaries
+
+This is a *local experimental notebook*, not a hardened operating-system sandbox. It cannot prevent privileged filesystem modification, rollback of both journal and checkpoint, compromised dependencies, or manipulation of evidence by a dishonest source. The `flock` mechanism is POSIX-only and cooperative. No cryptographic signatures, remote attestation, independent trusted backup provider, persistent AI runtime or autonomous agent are provided. The owner must configure off-machine backup storage and permissions; no remote credentials are bundled.
+
+### Governance
+
+All changes remain on the `elias` branch. Canonical Garden files, the Keeper's authority and `main` remain untouched. All literary marker files are authored and non-evidentiary.
+
 ## Branch and authority
 This stays on `elias` under MARGINALIA. It does not change `AUTHORITY.json`, `AGENTS.md`, canon, or the existing retrieval gate. No merge to `main` is authorized. The existing MARGINALIA fiction label remains mandatory.
 
