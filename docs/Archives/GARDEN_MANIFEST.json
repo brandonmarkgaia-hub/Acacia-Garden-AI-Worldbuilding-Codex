@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 156380
+    "size_bytes": 156528
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58318
+    "size_bytes": 58370
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 289688
+    "size_bytes": 289874
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11464,6 +11464,14 @@
     "size_bytes": 2745
   },
   {
+    "path": "tools/KEEPER_ATTESTATION_COMPLETION_PROTOCOL.md",
+    "top": "tools",
+    "category": "",
+    "name": "KEEPER_ATTESTATION_COMPLETION_PROTOCOL.md",
+    "ext": ".md",
+    "size_bytes": 2007
+  },
+  {
     "path": "tools/KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
     "top": "tools",
     "category": "",
@@ -11526,6 +11534,22 @@
     "name": "conflict_review_register.py",
     "ext": ".py",
     "size_bytes": 1307
+  },
+  {
+    "path": "tools/corpus_integrity_audit.py",
+    "top": "tools",
+    "category": "",
+    "name": "corpus_integrity_audit.py",
+    "ext": ".py",
+    "size_bytes": 4170
+  },
+  {
+    "path": "tools/exhaustive_canon_inventory.py",
+    "top": "tools",
+    "category": "",
+    "name": "exhaustive_canon_inventory.py",
+    "ext": ".py",
+    "size_bytes": 2792
   },
   {
     "path": "tools/full_corpus_envelopes.py",
@@ -11662,6 +11686,14 @@
     "name": "test_conflict_review_register.py",
     "ext": ".py",
     "size_bytes": 1760
+  },
+  {
+    "path": "tools/test_corpus_integrity_audit.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_corpus_integrity_audit.py",
+    "ext": ".py",
+    "size_bytes": 1816
   },
   {
     "path": "tools/test_external_attestation.py",
