@@ -13,7 +13,7 @@ from pathlib import Path
 
 SIGNATURE = re.compile(r"<!--SIG-->.*?<!--ENDSIG-->", re.S)
 STATUS = re.compile(r'(?im)^\s*(?:status|canon_status|voice_class)\s*[:=]')
-LINK = re.compile(r'(?<!!)\[[^]]+\]\(([^)]+)\')
+LINK = re.compile(r'(?<!!)\[[^]]+\]\(([^)]+)\)')
 
 
 def audit(root):
