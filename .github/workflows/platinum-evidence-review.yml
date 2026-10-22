@@ -1,0 +1,24 @@
+name: Platinum evidence review checks
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/conflict_review_register.py'
+      - 'tools/test_conflict_review_register.py'
+      - 'tools/PLATINUM_EVIDENCE_REVIEW_REGISTER.md'
+      - '.github/workflows/platinum-evidence-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run existing and new review tests
+        run: python -m unittest -v tools/test_conflict_review_register.py tools/test_source_bound_retrieval.py tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
