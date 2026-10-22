@@ -5735,6 +5735,11 @@
     "name": "0001_AETHERWIND_OVERREACH.md"
   },
   {
+    "path": "tools/COLD_READER_CANON_REMEDIATION_REGISTER.md",
+    "top": "tools",
+    "name": "COLD_READER_CANON_REMEDIATION_REGISTER.md"
+  },
+  {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
     "top": "tools",
     "name": "EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md"

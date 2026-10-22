@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 156074
+    "size_bytes": 156222
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58209
+    "size_bytes": 58261
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 288298
+    "size_bytes": 288900
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11440,6 +11440,14 @@
     "size_bytes": 282
   },
   {
+    "path": "tools/COLD_READER_CANON_REMEDIATION_REGISTER.md",
+    "top": "tools",
+    "category": "",
+    "name": "COLD_READER_CANON_REMEDIATION_REGISTER.md",
+    "ext": ".md",
+    "size_bytes": 4671
+  },
+  {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
     "top": "tools",
     "category": "",
@@ -11486,6 +11494,14 @@
     "name": "RETRIEVAL_ENVELOPE_TRUST_BOUNDARY.md",
     "ext": ".md",
     "size_bytes": 1916
+  },
+  {
+    "path": "tools/canon_register.advisory.json",
+    "top": "tools",
+    "category": "",
+    "name": "canon_register.advisory.json",
+    "ext": ".json",
+    "size_bytes": 3940
   },
   {
     "path": "tools/conflict_evidence.py",
@@ -11606,6 +11622,14 @@
     "name": "test_adversarial_envelope.py",
     "ext": ".py",
     "size_bytes": 3114
+  },
+  {
+    "path": "tools/test_canon_register.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_canon_register.py",
+    "ext": ".py",
+    "size_bytes": 2985
   },
   {
     "path": "tools/test_conflict_evidence.py",
