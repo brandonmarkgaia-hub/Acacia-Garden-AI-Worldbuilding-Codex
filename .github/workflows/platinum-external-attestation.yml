@@ -1,0 +1,24 @@
+name: Platinum external attestation boundary
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/verify_external_attestation.py'
+      - 'tools/test_external_attestation.py'
+      - 'tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md'
+      - '.github/workflows/platinum-external-attestation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify external attestation boundary and existing gates
+        run: python -m unittest -v tools/test_external_attestation.py tools/test_adversarial_envelope.py tools/test_conflict_review_register.py tools/test_source_bound_retrieval.py tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
