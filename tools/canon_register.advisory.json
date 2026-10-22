@@ -6,7 +6,20 @@
     "automated_promotion": false,
     "source_text_mutation": false,
     "keeper_ruling_required_for_law": true,
-    "retrieval_must_preserve_provenance": true
+    "retrieval_must_preserve_provenance": true,
+    "classification_authority": "tools/retrieval_manifest.advisory.json is the sole advisory input for retrieval envelopes; this register is review-only and cannot override it",
+    "allowed_law_status": [
+      "not_adjudicated_by_register",
+      "unresolved_requires_keeper_ruling",
+      "not_ratified_in_accessed_source",
+      "explicitly_not_law",
+      "not_ratified"
+    ],
+    "future_ratification_requires": [
+      "ruling_commit",
+      "ruling_date",
+      "keeper_authentication"
+    ]
   },
   "entries": [
     {
@@ -48,6 +61,22 @@
       "law_status": "not_ratified",
       "evidence": "Status and Implementation status sections",
       "review": "No post-death seal activation or authority transfer is inferred."
+    },
+    {
+      "path": "_ROOT_ARCHIVE/md/CANON_INVARIANTS.md",
+      "observed_status": "Locked Doctrine Authority: Keeper (Brandon Gaia)",
+      "voice_class": "archived_doctrine_claim",
+      "law_status": "unresolved_requires_keeper_ruling",
+      "evidence": "Invariant 2: HKX277206 is the Keeper's private authorization seal; The seal is not an identity; Authority does not transfer",
+      "review": "Archived location versus self-described locked doctrine requires classification; do not silently supersede or promote."
+    },
+    {
+      "path": "triad/README_BOUNDARY.md",
+      "observed_status": "Triad Boundary — Keeper / Witness / Archivist",
+      "voice_class": "role_boundary",
+      "law_status": "not_adjudicated_by_register",
+      "evidence": "Witness — Observation without interference; Archivist — Memory, ordering, preservation",
+      "review": "Compare with Constitution header Witness: The Archivist; no automatic role grant."
     }
   ]
 }
