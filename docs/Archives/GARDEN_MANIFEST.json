@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 155762
+    "size_bytes": 155904
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58097
+    "size_bytes": 58146
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 287538
+    "size_bytes": 287722
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11440,6 +11440,14 @@
     "size_bytes": 282
   },
   {
+    "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
+    "top": "tools",
+    "category": "",
+    "name": "EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
+    "ext": ".md",
+    "size_bytes": 1926
+  },
+  {
     "path": "tools/INDEPENDENT_COLD_READER_SURVEY_PROTOCOL_DRAFT.md",
     "top": "tools",
     "category": "",
@@ -11600,6 +11608,14 @@
     "size_bytes": 1760
   },
   {
+    "path": "tools/test_external_attestation.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_external_attestation.py",
+    "ext": ".py",
+    "size_bytes": 2847
+  },
+  {
     "path": "tools/test_full_corpus_envelopes.py",
     "top": "tools",
     "category": "",
@@ -11630,6 +11646,14 @@
     "name": "test_source_bound_retrieval.py",
     "ext": ".py",
     "size_bytes": 3467
+  },
+  {
+    "path": "tools/verify_external_attestation.py",
+    "top": "tools",
+    "category": "",
+    "name": "verify_external_attestation.py",
+    "ext": ".py",
+    "size_bytes": 2753
   },
   {
     "path": "triad/README_BOUNDARY.md",
