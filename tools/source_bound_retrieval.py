@@ -16,9 +16,35 @@ except ImportError:
     from retrieval_envelope import digest, verify_record
     from retrieval_safety_gate import assess
 
-def verify_against_checkout(root, record):
+def validate_envelope_shape(record):
+    """Reject malformed untrusted metadata before touching the checkout."""
+    required_strings = ("source_path", "source_sha256", "chunk_sha256", "text",
+                        "document_status", "voice_class", "authority_scope",
+                        "authorship_status", "authorization_status",
+                        "keeper_approval", "canonical_effect", "metadata_trust")
     if not isinstance(record, dict):
-        return False, "invalid_record"
+        return False
+    if any(not isinstance(record.get(key), str) for key in required_strings):
+        return False
+    if any(not isinstance(record.get(key), int) or isinstance(record.get(key), bool)
+           for key in ("start_offset", "end_offset")):
+        return False
+    if record["start_offset"] < 0 or record["end_offset"] <= record["start_offset"]:
+        return False
+    if not isinstance(record.get("unresolved_conflicts"), list):
+        return False
+    if any(not isinstance(x, str) for x in record["unresolved_conflicts"]):
+        return False
+    if any(not isinstance(record.get(k), str) or len(record[k]) != 64
+           or any(c not in "0123456789abcdef" for c in record[k])
+           for k in ("source_sha256", "chunk_sha256")):
+        return False
+    return True
+
+
+def verify_against_checkout(root, record):
+    if not validate_envelope_shape(record):
+        return False, "invalid_envelope_schema"
     rel = record.get("source_path")
     if not isinstance(rel, str) or not rel or "\\" in rel:
         return False, "invalid_source_path"
