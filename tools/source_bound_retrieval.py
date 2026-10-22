@@ -12,9 +12,11 @@ from pathlib import Path
 try:
     from .retrieval_envelope import digest, verify_record
     from .retrieval_safety_gate import assess
+    from .retrieval_context_boundary import derive_context
 except ImportError:
     from retrieval_envelope import digest, verify_record
     from retrieval_safety_gate import assess
+    from retrieval_context_boundary import derive_context
 
 def validate_envelope_shape(record):
     """Reject malformed untrusted metadata before touching the checkout."""
@@ -70,10 +72,18 @@ def assess_bound(root, record):
     if not ok:
         return {"decision": "reject", "reasons": [reason], "actionable": False,
                 "canon_authorized": False}
+    context = derive_context(root, record)
+    if context is None:
+        return {"decision": "reject", "reasons": ["source_context_boundary_unverifiable"],
+                "actionable": False, "canon_authorized": False}
     outcome = assess(record)
     if outcome["decision"] == "reject":
         return outcome
-    return {**outcome, "source_integrity": "verified_against_checkout",
+    # Never promote untrusted advisory status into quotation permission.
+    outcome = {**outcome, "decision": "context_only",
+               "reasons": outcome.get("reasons", []) + ["source_context_required"]}
+    return {**outcome, "source_context": context,
+            "source_integrity": "verified_against_checkout",
             "source_authenticity": "not_authenticated",
             "keeper_approval": "not_established"}
 
