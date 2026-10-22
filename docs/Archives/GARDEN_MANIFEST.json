@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 155324
+    "size_bytes": 155462
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 57933
+    "size_bytes": 57991
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 283694
+    "size_bytes": 284560
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10341,7 +10341,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 53754
+    "size_bytes": 53917
   },
   {
     "path": "docs/docs_urls.json",
@@ -11448,6 +11448,14 @@
     "size_bytes": 1109
   },
   {
+    "path": "tools/RETRIEVAL_ENVELOPE_TRUST_BOUNDARY.md",
+    "top": "tools",
+    "category": "",
+    "name": "RETRIEVAL_ENVELOPE_TRUST_BOUNDARY.md",
+    "ext": ".md",
+    "size_bytes": 1916
+  },
+  {
     "path": "tools/garden_desire.py",
     "top": "tools",
     "category": "",
@@ -11494,6 +11502,30 @@
     "name": "reflection-log.json",
     "ext": ".json",
     "size_bytes": 85
+  },
+  {
+    "path": "tools/retrieval_envelope.py",
+    "top": "tools",
+    "category": "",
+    "name": "retrieval_envelope.py",
+    "ext": ".py",
+    "size_bytes": 6130
+  },
+  {
+    "path": "tools/retrieval_manifest.advisory.json",
+    "top": "tools",
+    "category": "",
+    "name": "retrieval_manifest.advisory.json",
+    "ext": ".json",
+    "size_bytes": 1435
+  },
+  {
+    "path": "tools/test_retrieval_envelope.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_retrieval_envelope.py",
+    "ext": ".py",
+    "size_bytes": 5642
   },
   {
     "path": "triad/README_BOUNDARY.md",

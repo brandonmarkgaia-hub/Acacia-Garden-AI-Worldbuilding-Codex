@@ -5735,6 +5735,11 @@
     "name": "0001_AETHERWIND_OVERREACH.md"
   },
   {
+    "path": "tools/RETRIEVAL_ENVELOPE_TRUST_BOUNDARY.md",
+    "top": "tools",
+    "name": "RETRIEVAL_ENVELOPE_TRUST_BOUNDARY.md"
+  },
+  {
     "path": "triad/README_BOUNDARY.md",
     "top": "triad",
     "name": "README_BOUNDARY.md"
