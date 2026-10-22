@@ -3,9 +3,9 @@
   "purpose": "Machine-verifiable identity and integrity metadata for one Git repository state. This file does not define canon or authority.",
   "repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
   "git": {
-    "commit": "7126be03e559b983d8d3da0e6c90663a74784c0d",
-    "tree": "0646fdae3a72ad8f58248c90709d8475830daa6f",
-    "commit_time": "2026-10-22T19:31:00Z",
+    "commit": "b60693a61b8f80db729da599be033ecfdfbc5300",
+    "tree": "aed1c332bdae543255bcde641cc7d898388a844e",
+    "commit_time": "2026-10-22T19:31:33Z",
     "default_branch": "main"
   },
   "authority_source": "AUTHORITY.json",
