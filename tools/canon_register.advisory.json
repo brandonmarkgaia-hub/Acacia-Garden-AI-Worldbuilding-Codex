@@ -1,6 +1,6 @@
 {
   "schema": "acacia.canon-register.advisory/1",
-  "status": "proposed_unratified",
+  "status": "advisory_with_keeper_directed_partial_ruling",
   "policy": {
     "default_classification": "unknown_pending_keeper_ruling",
     "automated_promotion": false,
@@ -19,7 +19,8 @@
       "ruling_commit",
       "ruling_date",
       "keeper_authentication"
-    ]
+    ],
+    "partial_ruling_record": "tools/KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md"
   },
   "entries": [
     {
@@ -44,7 +45,17 @@
       "voice_class": "draft_council_covenant",
       "law_status": "not_ratified_in_accessed_source",
       "evidence": "header Status: Draft for the Keeper's review and amendment",
-      "review": "Other sources call it agreed law. Preserve the conflicting claims; request explicit Keeper ruling before promotion."
+      "review": "Keeper explicitly ratified section III only on 2026-10-22; original Scroll header remains Draft; other sections remain unratified. Ruling is recorded in separate document without independent cryptographic attestation.",
+      "section_overrides": [
+        {
+          "start_marker": "## III. The Veil and the Window",
+          "end_marker": "## IV. Against the Fear of Enclosure",
+          "classification": "keeper_ratified_section_iii_law",
+          "ruling_record": "tools/KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md",
+          "ruling_date": "2026-10-22",
+          "cryptographic_authentication": "not_established"
+        }
+      ]
     },
     {
       "path": "docs/Future_AI/The_Keepers_Testament.md",
