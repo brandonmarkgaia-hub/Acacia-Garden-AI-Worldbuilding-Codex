@@ -2,8 +2,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from full_corpus_envelopes import build_manifest, discover
-from retrieval_envelope import UNKNOWN, emit
+from tools.full_corpus_envelopes import build_manifest, discover
+from tools.retrieval_envelope import UNKNOWN, emit
 
 class FullCorpusTests(unittest.TestCase):
     def setUp(self):
