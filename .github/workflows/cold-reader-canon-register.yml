@@ -1,0 +1,24 @@
+name: Cold-reader canon register audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/canon_register.advisory.json'
+      - 'tools/COLD_READER_CANON_REMEDIATION_REGISTER.md'
+      - 'tools/test_canon_register.py'
+      - '.github/workflows/cold-reader-canon-register.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify advisory classification invariants
+        run: python -m unittest -v tools/test_canon_register.py
