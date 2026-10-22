@@ -1,0 +1,36 @@
+{
+  "schema": "acacia.succession-proposal/1",
+  "status": "proposed_dormant",
+  "keeper_identifier": "HKX277206",
+  "original_repository": "https://github.com/brandonmarkgaia-hub/Acacia-Garden-AI-Worldbuilding-Codex",
+  "activation": {
+    "event": "independently_verified_keeper_death",
+    "verification_procedure": "not_yet_established",
+    "automatic_activation": false,
+    "seal_active": false
+  },
+  "frozen_commit": null,
+  "archive_manifest_sha256": null,
+  "trusted_keeper_attestation": null,
+  "descendant_requirements": {
+    "original_repository_reference": true,
+    "frozen_commit_reference": true,
+    "parent_relationship": true,
+    "independent_authorship_and_provenance": true,
+    "edit_sealed_original": false,
+    "delete_sealed_original": false,
+    "new_branches_and_forks": true,
+    "new_repositories": true
+  },
+  "future_deliberation": {
+    "roles": ["advocate", "challenger", "witness"],
+    "may_rewrite_sealed_archive": false
+  },
+  "unresolved_prerequisites": [
+    "independent_death_confirmation",
+    "trusted_keeper_key_binding",
+    "archive_replication_and_manifest",
+    "custody_and_recovery",
+    "formal_governance_classification"
+  ]
+}
