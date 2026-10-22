@@ -27,6 +27,13 @@ class CorpusAuditTests(unittest.TestCase):
             result = audit(root)
             self.assertEqual(result["checksum"]["mismatches"], ["a.md"])
 
+    def test_missing_relative_link_is_detected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "a.md").write_text("[Missing](not-here.md)\n", encoding="utf-8")
+            result = audit(root)
+            self.assertEqual(result["missing_link_count"], 1)
+
     def test_no_source_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
