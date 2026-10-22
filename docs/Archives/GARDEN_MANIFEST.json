@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 156222
+    "size_bytes": 156380
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58261
+    "size_bytes": 58318
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 288900
+    "size_bytes": 289468
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11445,7 +11445,7 @@
     "category": "",
     "name": "COLD_READER_CANON_REMEDIATION_REGISTER.md",
     "ext": ".md",
-    "size_bytes": 4671
+    "size_bytes": 5081
   },
   {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
@@ -11470,6 +11470,14 @@
     "name": "KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
     "ext": ".md",
     "size_bytes": 3888
+  },
+  {
+    "path": "tools/KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md",
+    "top": "tools",
+    "category": "",
+    "name": "KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md",
+    "ext": ".md",
+    "size_bytes": 2839
   },
   {
     "path": "tools/PLATINUM_EVIDENCE_REVIEW_REGISTER.md",
@@ -11501,7 +11509,7 @@
     "category": "",
     "name": "canon_register.advisory.json",
     "ext": ".json",
-    "size_bytes": 3940
+    "size_bytes": 4580
   },
   {
     "path": "tools/conflict_evidence.py",
@@ -11629,7 +11637,7 @@
     "category": "",
     "name": "test_canon_register.py",
     "ext": ".py",
-    "size_bytes": 2985
+    "size_bytes": 3785
   },
   {
     "path": "tools/test_conflict_evidence.py",
