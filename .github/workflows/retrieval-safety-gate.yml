@@ -5,6 +5,8 @@ on:
     paths:
       - 'tools/retrieval_safety_gate.py'
       - 'tools/test_retrieval_safety_gate.py'
+      - 'tools/conflict_evidence.py'
+      - 'tools/test_conflict_evidence.py'
       - '.github/workflows/retrieval-safety-gate.yml'
   workflow_dispatch:
 
@@ -22,7 +24,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run safety and prior envelope tests
-        run: python -m unittest -v tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
+        run: python -m unittest -v tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
       - name: Build full-corpus envelopes
         run: python tools/full_corpus_envelopes.py --root . > /tmp/acacia-envelopes.jsonl
       - name: Assess every corpus window
