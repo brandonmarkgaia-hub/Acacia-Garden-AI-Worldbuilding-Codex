@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 286964
+    "size_bytes": 287538
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11573,7 +11573,15 @@
     "category": "",
     "name": "source_bound_retrieval.py",
     "ext": ".py",
-    "size_bytes": 3009
+    "size_bytes": 4283
+  },
+  {
+    "path": "tools/test_adversarial_envelope.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_adversarial_envelope.py",
+    "ext": ".py",
+    "size_bytes": 3114
   },
   {
     "path": "tools/test_conflict_evidence.py",
