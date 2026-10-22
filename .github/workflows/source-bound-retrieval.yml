@@ -1,0 +1,48 @@
+name: Source-bound retrieval adversarial audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/source_bound_retrieval.py'
+      - 'tools/test_source_bound_retrieval.py'
+      - '.github/workflows/source-bound-retrieval.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Adversarial regression suite and previous tests
+        run: python -m unittest -v tools/test_source_bound_retrieval.py tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
+      - name: Generate source-bound corpus
+        run: |
+          python tools/full_corpus_envelopes.py --root . > /tmp/envelopes.jsonl
+          python tools/source_bound_retrieval.py --root . --input /tmp/envelopes.jsonl --output /tmp/source-bound-results.jsonl
+      - name: Verify every record is source-bound and non-actionable
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          records = [json.loads(s) for s in Path('/tmp/source-bound-results.jsonl').read_text().splitlines()]
+          assert len(records) > 0
+          assert all(r['decision'] in ('context_only', 'quote_with_provenance') for r in records)
+          assert all(r['source_integrity'] == 'verified_against_checkout' for r in records)
+          assert all(r['source_authenticity'] == 'not_authenticated' for r in records)
+          assert all(not r['actionable'] and not r['canon_authorized'] for r in records)
+          print('PASS: source-bound, non-actionable windows:', len(records), dict(Counter(r['decision'] for r in records)))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-bound-advisory-audit
+          path: /tmp/source-bound-results.jsonl
+          retention-days: 30
