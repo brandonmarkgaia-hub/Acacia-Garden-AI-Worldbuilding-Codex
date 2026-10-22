@@ -83,6 +83,24 @@ class EnvelopeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "ascending"):
             list(emit(self.root, self.manifest))
 
+    def test_authentication_never_inferred_from_manifest(self):
+        self.manifest["documents"][0].update({
+            "keeper_approval": "approved",
+            "authorization_status": "authenticated",
+            "canonical_effect": "binding",
+            "authorship_status": "keeper_signed",
+        })
+        record = next(emit(self.root, self.manifest))
+        self.assertEqual(record["keeper_approval"], "not_established")
+        self.assertEqual(record["authorization_status"], "not_authenticated")
+        self.assertEqual(record["canonical_effect"], "none")
+        self.assertEqual(record["metadata_trust"], "advisory_manifest_unverified")
+        self.assertEqual(record["classification_provenance"]["cryptographic_attestation"], "absent")
+        self.assertEqual(record["authorship_status"], "keeper_signed")
+        # Authorship is merely an unverified manifest assertion, not proof.
+        self.assertTrue(verify_record(record, (self.root / "safe.md").read_text(),
+                                      digest((self.root / "safe.md").read_text())))
+
     def test_nonadvisory_manifest_rejected(self):
         self.manifest["status"] = "canon"
         with self.assertRaisesRegex(ValueError, "advisory"):
