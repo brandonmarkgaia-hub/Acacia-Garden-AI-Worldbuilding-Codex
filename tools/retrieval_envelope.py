@@ -85,13 +85,25 @@ def emit(root, manifest, size=1000, overlap=0.2):
                 "chunk_sha256": digest(part),
                 **{field: (voice if field == "voice_class" else doc.get(field, UNKNOWN)) for field in FIELDS},
                 "classification_basis": doc.get("classification_basis", "not_classified"),
+                "metadata_trust": "advisory_manifest_unverified",
+                "authorization_status": "not_authenticated",
+                "keeper_approval": "not_established",
+                "canonical_effect": "none",
+                "classification_provenance": {
+                    "manifest_status": "advisory_not_canon",
+                    "method": "human_review_pending",
+                    "cryptographic_attestation": "absent"
+                },
                 "voice_boundary_basis": voice_basis,
                 "unresolved_conflicts": doc.get("unresolved_conflicts", []),
                 "text": part,
             }
 
 def verify_record(record, original_source_text, trusted_source_sha256):
-    """Integrity only. Trusted hash must arrive independently of the record."""
+    """Integrity only. Trusted hash must arrive independently of the record.
+
+    Successful integrity checks never establish Keeper identity, approval, or canon.
+    """
     if not isinstance(trusted_source_sha256, str) or len(trusted_source_sha256) != 64:
         return False
     if digest(original_source_text) != trusted_source_sha256:
