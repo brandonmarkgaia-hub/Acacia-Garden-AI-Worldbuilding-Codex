@@ -1,0 +1,50 @@
+name: Corpus integrity and classification inventory
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/corpus_integrity_audit.py'
+      - 'tools/exhaustive_canon_inventory.py'
+      - 'tools/test_corpus_integrity_audit.py'
+      - 'tools/KEEPER_ATTESTATION_COMPLETION_PROTOCOL.md'
+      - '.github/workflows/corpus-integrity-inventory.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Regression tests
+        run: python -m unittest -v tools/test_corpus_integrity_audit.py
+      - name: Generate complete advisory inventory
+        run: python tools/exhaustive_canon_inventory.py --root . --output /tmp/canon-inventory.json
+      - name: Generate read-only legacy integrity findings
+        run: python tools/corpus_integrity_audit.py --root . --output /tmp/corpus-integrity.json
+      - name: Print measured summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/corpus-integrity.json').read_text())
+          i=json.loads(Path('/tmp/canon-inventory.json').read_text())
+          print('markdown=',i['count'],'unknown=',i['unknown_count'])
+          print('short=',a['short_count'],'footer=',a['signature_footers'])
+          print('checksums=',a['checksum']['listed'],'mismatches=',len(a['checksum']['mismatches']))
+          print('missing checksum paths=',len(a['checksum']['missing']))
+          print('missing simple links=',a['missing_link_count'])
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: corpus-integrity-inventory
+          path: |
+            /tmp/canon-inventory.json
+            /tmp/corpus-integrity.json
+          retention-days: 30
