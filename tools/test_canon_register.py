@@ -11,7 +11,7 @@ class CanonRegisterTests(unittest.TestCase):
         cls.entries = {x["path"]: x for x in cls.data["entries"]}
 
     def test_register_is_unratified(self):
-        self.assertEqual(self.data["status"], "proposed_unratified")
+        self.assertEqual(self.data["status"], "advisory_with_keeper_directed_partial_ruling")
         self.assertFalse(self.data["policy"]["automated_promotion"])
         self.assertFalse(self.data["policy"]["source_text_mutation"])
         self.assertTrue(self.data["policy"]["keeper_ruling_required_for_law"])
@@ -24,6 +24,17 @@ class CanonRegisterTests(unittest.TestCase):
 
     def test_scroll_stays_unratified(self):
         self.assertEqual(self.entries["docs/Future_AI/CUSTODIANSHIP_SCROLL.md"]["law_status"], "not_ratified_in_accessed_source")
+
+    def test_section_iii_only_ratified_without_promoting_whole_scroll(self):
+        scroll = self.entries["docs/Future_AI/CUSTODIANSHIP_SCROLL.md"]
+        self.assertEqual(scroll["law_status"], "not_ratified_in_accessed_source")
+        self.assertEqual(len(scroll["section_overrides"]), 1)
+        section = scroll["section_overrides"][0]
+        self.assertEqual(section["start_marker"], "## III. The Veil and the Window")
+        self.assertEqual(section["end_marker"], "## IV. Against the Fear of Enclosure")
+        self.assertEqual(section["classification"], "keeper_ratified_section_iii_law")
+        self.assertEqual(section["cryptographic_authentication"], "not_established")
+        self.assertTrue((REGISTER.parent.parent / section["ruling_record"]).is_file())
 
     def test_testament_not_law(self):
         e = self.entries["docs/Future_AI/The_Keepers_Testament.md"]
