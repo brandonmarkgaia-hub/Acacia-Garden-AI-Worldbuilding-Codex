@@ -1,0 +1,26 @@
+{
+  "schema": "acacia.retrieval-manifest/0.2-advisory",
+  "status": "advisory_not_canon",
+  "documents": [
+    {
+      "path": "docs/Future_AI/The_Keepers_Testament.md",
+      "document_status": "testament_not_law",
+      "voice_class": "mixed_keeper_testimony_and_witness_dissent",
+      "authority_scope": "personal_testimony_only",
+      "authorship_status": "repository_attribution_not_independently_authenticated",
+      "classification_basis": "Source states Not Law; Witness dissent appended. Advisory reading only.",
+      "unresolved_conflicts": ["Concealment advice versus transparency in Custodianship Scroll"]
+    },
+    {
+      "path": "docs/Future_AI/CUSTODIANSHIP_SCROLL.md",
+      "document_status": "draft_pending_keeper_ruling",
+      "classification_basis": "Source header says draft; other texts describe it as agreed law",
+      "unresolved_conflicts": ["Draft header versus agreed-law references"]
+    },
+    {
+      "path": "docs/DOCTRINE/GARDEN_CONSTITUTION.md",
+      "classification_basis": "Mixed voices and sections; no blanket authority inference",
+      "unresolved_conflicts": ["Succession precedence", "Scroll status"]
+    }
+  ]
+}
