@@ -60,6 +60,14 @@ class EnvelopeTests(unittest.TestCase):
         self.assertTrue(any(r["voice_class"] == "witness_dissent" for r in rows))
         self.assertFalse(any(r["voice_class"] == "keeper_testimony" and "Witness" in r["text"] for r in rows))
 
+    def test_voice_marker_at_start_is_valid(self):
+        self.manifest["documents"][0]["voice_segments"] = [
+            {"start_marker": "Keeper note.", "voice_class": "keeper_testimony"},
+            {"start_marker": "Witness dissent.", "voice_class": "witness_dissent"},
+        ]
+        rows = list(emit(self.root, self.manifest, size=12, overlap=0))
+        self.assertEqual(rows[0]["voice_class"], "keeper_testimony")
+
     def test_missing_voice_marker_fails_closed(self):
         self.manifest["documents"][0]["voice_segments"] = [
             {"start_marker": "NONEXISTENT", "voice_class": "keeper_testimony"}
