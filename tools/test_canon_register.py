@@ -30,9 +30,29 @@ class CanonRegisterTests(unittest.TestCase):
         self.assertEqual(e["law_status"], "explicitly_not_law")
         self.assertIn("dissent", e["voice_class"])
 
-    def test_no_unverified_law_promotion(self):
+    def test_fail_closed_allowlist(self):
+        allowed = set(self.data["policy"]["allowed_law_status"])
+        self.assertTrue(allowed)
         for entry in self.data["entries"]:
-            self.assertNotEqual(entry["law_status"], "ratified_law")
+            self.assertIn(entry["law_status"], allowed)
+        for forbidden in ("law", "ratified", "ratified_law", "canonical_law", "approved"):
+            self.assertNotIn(forbidden, allowed)
+
+    def test_ruling_evidence_required_before_future_law(self):
+        self.assertEqual(self.data["policy"]["future_ratification_requires"],
+                         ["ruling_commit", "ruling_date", "keeper_authentication"])
+        self.assertFalse(any(e["law_status"] in ("law", "ratified", "ratified_law") for e in self.data["entries"]))
+
+    def test_manifest_precedence(self):
+        self.assertIn("tools/retrieval_manifest.advisory.json", self.data["policy"]["classification_authority"])
+        manifest = json.loads(REGISTER.with_name("retrieval_manifest.advisory.json").read_text(encoding="utf-8"))
+        self.assertTrue({e["path"] for e in manifest["documents"]}.issubset(self.entries))
+        scroll = next(e for e in manifest["documents"] if e["path"] == "docs/Future_AI/CUSTODIANSHIP_SCROLL.md")
+        self.assertEqual(scroll["document_status"], "draft_pending_keeper_ruling")
+
+    def test_archived_invariant_and_role_boundary(self):
+        self.assertIn("_ROOT_ARCHIVE/md/CANON_INVARIANTS.md", self.entries)
+        self.assertIn("triad/README_BOUNDARY.md", self.entries)
 
 if __name__ == "__main__":
     unittest.main()
