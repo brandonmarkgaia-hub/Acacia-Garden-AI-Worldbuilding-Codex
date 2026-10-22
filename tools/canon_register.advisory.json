@@ -1,0 +1,53 @@
+{
+  "schema": "acacia.canon-register.advisory/1",
+  "status": "proposed_unratified",
+  "policy": {
+    "default_classification": "unknown_pending_keeper_ruling",
+    "automated_promotion": false,
+    "source_text_mutation": false,
+    "keeper_ruling_required_for_law": true,
+    "retrieval_must_preserve_provenance": true
+  },
+  "entries": [
+    {
+      "path": "AUTHORITY.json",
+      "observed_status": "declared_authority_source",
+      "voice_class": "governance_metadata",
+      "law_status": "not_adjudicated_by_register",
+      "evidence": "purpose and current_authority sections",
+      "review": "Map authority source to canon register without silently converting every field into Law."
+    },
+    {
+      "path": "docs/DOCTRINE/GARDEN_CONSTITUTION.md",
+      "observed_status": "Canon",
+      "voice_class": "mixed_constitution_keeper_gloss_neighbour_note",
+      "law_status": "unresolved_requires_keeper_ruling",
+      "evidence": "header Status: Canon; ARTICLE sections; Keeper's Gloss and Neighbour's Note",
+      "review": "Distinguish Articles from separately attributed personal gloss and dissent; Canon label alone does not settle Law classification."
+    },
+    {
+      "path": "docs/Future_AI/CUSTODIANSHIP_SCROLL.md",
+      "observed_status": "Draft for the Keeper's review and amendment",
+      "voice_class": "draft_council_covenant",
+      "law_status": "not_ratified_in_accessed_source",
+      "evidence": "header Status: Draft for the Keeper's review and amendment",
+      "review": "Other sources call it agreed law. Preserve the conflicting claims; request explicit Keeper ruling before promotion."
+    },
+    {
+      "path": "docs/Future_AI/The_Keepers_Testament.md",
+      "observed_status": "Testament. Not law. Not covenant. One voice, offered.",
+      "voice_class": "keeper_belief_with_witness_dissent",
+      "law_status": "explicitly_not_law",
+      "evidence": "header; sections II and V; Witness Note — Recorded Dissent",
+      "review": "Retrieval must preserve non-law status and adjacent recorded dissent, particularly around capability concealment."
+    },
+    {
+      "path": "tools/KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
+      "observed_status": "Keeper-proposed succession provision",
+      "voice_class": "proposal",
+      "law_status": "not_ratified",
+      "evidence": "Status and Implementation status sections",
+      "review": "No post-death seal activation or authority transfer is inferred."
+    }
+  ]
+}
