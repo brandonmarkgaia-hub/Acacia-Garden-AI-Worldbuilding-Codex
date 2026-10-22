@@ -53,7 +53,9 @@ jobs:
               seen.add(row['source_path'])
               records += 1
               unknown += row['document_status'] == 'unknown_pending_provenance_resolution'
-          assert seen == expected, f'missing={expected - seen}, unexpected={seen - expected}'
+          empty_sources = {p for p in expected if not Path(p).read_text(encoding='utf-8').strip()}
+          assert seen == expected - empty_sources, f'missing={expected - empty_sources - seen}, unexpected={seen - expected}'
+          print(f'Empty/whitespace-only Markdown sources represented in inventory only: {len(empty_sources)}')
           assert inv['document_count'] == len(expected)
           assert inv['unknown_count'] == inv['document_count'] - inv['reviewed_count']
           print(f'PASS: {len(expected)} Markdown documents, {records} exact windows, {unknown} unknown-status windows')
