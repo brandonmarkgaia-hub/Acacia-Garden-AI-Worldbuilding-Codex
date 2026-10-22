@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 155462
+    "size_bytes": 155624
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 57991
+    "size_bytes": 58050
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 285666
+    "size_bytes": 286374
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11440,6 +11440,14 @@
     "size_bytes": 282
   },
   {
+    "path": "tools/INDEPENDENT_COLD_READER_SURVEY_PROTOCOL_DRAFT.md",
+    "top": "tools",
+    "category": "",
+    "name": "INDEPENDENT_COLD_READER_SURVEY_PROTOCOL_DRAFT.md",
+    "ext": ".md",
+    "size_bytes": 2745
+  },
+  {
     "path": "tools/README.md",
     "top": "tools",
     "category": "",
@@ -11544,6 +11552,14 @@
     "size_bytes": 3097
   },
   {
+    "path": "tools/source_bound_retrieval.py",
+    "top": "tools",
+    "category": "",
+    "name": "source_bound_retrieval.py",
+    "ext": ".py",
+    "size_bytes": 3009
+  },
+  {
     "path": "tools/test_conflict_evidence.py",
     "top": "tools",
     "category": "",
@@ -11574,6 +11590,14 @@
     "name": "test_retrieval_safety_gate.py",
     "ext": ".py",
     "size_bytes": 2673
+  },
+  {
+    "path": "tools/test_source_bound_retrieval.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_source_bound_retrieval.py",
+    "ext": ".py",
+    "size_bytes": 3467
   },
   {
     "path": "triad/README_BOUNDARY.md",
