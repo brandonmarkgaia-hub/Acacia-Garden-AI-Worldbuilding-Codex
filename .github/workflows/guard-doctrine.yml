@@ -36,7 +36,7 @@ jobs:
           CHANGED="$(git diff --name-only "origin/${BASE_REF}...HEAD")"
           printf '%s\n' "$CHANGED"
 
-          PROTECTED_RE='^(AUTHORITY\.json|AGENTS\.md|CANON_INVARIANTS\.md|docs/PROTOCOLS/keeper_protocol\.v2\.md)$'
+          PROTECTED_RE='^(AUTHORITY\.json|AGENTS\.md|CANON_INVARIANTS\.md|_ROOT_ARCHIVE/md/CANON_INVARIANTS\.md|docs/PROTOCOLS/keeper_protocol\.v2\.md)$'
 
           TOUCHED="$(printf '%s\n' "$CHANGED" | grep -E "$PROTECTED_RE" || true)"
 
