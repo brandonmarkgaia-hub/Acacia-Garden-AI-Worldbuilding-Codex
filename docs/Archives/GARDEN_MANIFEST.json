@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 155904
+    "size_bytes": 156074
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58146
+    "size_bytes": 58209
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 287722
+    "size_bytes": 288298
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11456,6 +11456,14 @@
     "size_bytes": 2745
   },
   {
+    "path": "tools/KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
+    "top": "tools",
+    "category": "",
+    "name": "KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
+    "ext": ".md",
+    "size_bytes": 3888
+  },
+  {
     "path": "tools/PLATINUM_EVIDENCE_REVIEW_REGISTER.md",
     "top": "tools",
     "category": "",
@@ -11526,6 +11534,14 @@
     "name": "garden_state.py",
     "ext": ".py",
     "size_bytes": 9976
+  },
+  {
+    "path": "tools/keeper_final_seal.advisory.json",
+    "top": "tools",
+    "category": "",
+    "name": "keeper_final_seal.advisory.json",
+    "ext": ".json",
+    "size_bytes": 1182
   },
   {
     "path": "tools/main_retrieval_context_audit.py",
@@ -11622,6 +11638,14 @@
     "name": "test_full_corpus_envelopes.py",
     "ext": ".py",
     "size_bytes": 2713
+  },
+  {
+    "path": "tools/test_keeper_final_seal.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_keeper_final_seal.py",
+    "ext": ".py",
+    "size_bytes": 1652
   },
   {
     "path": "tools/test_retrieval_envelope.py",

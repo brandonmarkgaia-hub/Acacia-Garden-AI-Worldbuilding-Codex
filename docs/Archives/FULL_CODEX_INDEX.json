@@ -5745,6 +5745,11 @@
     "name": "INDEPENDENT_COLD_READER_SURVEY_PROTOCOL_DRAFT.md"
   },
   {
+    "path": "tools/KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md",
+    "top": "tools",
+    "name": "KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md"
+  },
+  {
     "path": "tools/PLATINUM_EVIDENCE_REVIEW_REGISTER.md",
     "top": "tools",
     "name": "PLATINUM_EVIDENCE_REVIEW_REGISTER.md"
