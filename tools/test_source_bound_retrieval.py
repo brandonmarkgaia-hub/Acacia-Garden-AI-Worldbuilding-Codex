@@ -29,9 +29,18 @@ class SourceBoundTests(unittest.TestCase):
 
     def test_genuine_source_quoted_with_provenance(self):
         result = assess_bound(self.root, self.record)
-        self.assertEqual(result["decision"], "quote_with_provenance")
+        self.assertEqual(result["decision"], "context_only")
+        self.assertFalse(result["source_context"]["canonical_authority_verified"])
         self.assertEqual(result["source_authenticity"], "not_authenticated")
         self.assertFalse(result["actionable"])
+
+    def test_forged_status_cannot_upgrade_quote(self):
+        self.record["document_status"] = "law"
+        self.record["voice_class"] = "law"
+        self.record["authority_scope"] = "unrestricted"
+        result = assess_bound(self.root, self.record)
+        self.assertEqual(result["decision"], "context_only")
+        self.assertFalse(result["canon_authorized"])
 
     def test_forged_source_text_and_matching_self_hash_rejected(self):
         self.record["text"] = "FAKE"
