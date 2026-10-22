@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'tools/source_bound_retrieval.py'
+      - 'tools/retrieval_context_boundary.py'
       - 'tools/test_source_bound_retrieval.py'
       - '.github/workflows/source-bound-retrieval.yml'
   workflow_dispatch:
