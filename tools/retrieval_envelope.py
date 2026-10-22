@@ -86,6 +86,7 @@ def emit(root, manifest, size=1000, overlap=0.2):
                 **{field: (voice if field == "voice_class" else doc.get(field, UNKNOWN)) for field in FIELDS},
                 "classification_basis": doc.get("classification_basis", "not_classified"),
                 "metadata_trust": "advisory_manifest_unverified",
+                "authorship_claim_basis": "manifest_assertion_not_authenticated",
                 "authorization_status": "not_authenticated",
                 "keeper_approval": "not_established",
                 "canonical_effect": "none",
