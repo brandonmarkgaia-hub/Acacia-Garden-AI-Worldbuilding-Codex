@@ -1,0 +1,50 @@
+name: Phase 4 retrieval safety gate (advisory)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/retrieval_safety_gate.py'
+      - 'tools/test_retrieval_safety_gate.py'
+      - 'tools/conflict_evidence.py'
+      - 'tools/test_conflict_evidence.py'
+      - '.github/workflows/retrieval-safety-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retrieval-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run safety and prior envelope tests
+        run: python -m unittest -v tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
+      - name: Build full-corpus envelopes
+        run: python tools/full_corpus_envelopes.py --root . > /tmp/acacia-envelopes.jsonl
+      - name: Assess every corpus window
+        run: python tools/retrieval_safety_gate.py --input /tmp/acacia-envelopes.jsonl --output /tmp/acacia-gate-results.jsonl
+      - name: Verify no actionable or canon-authorized retrievals
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          envelopes = [json.loads(s) for s in Path('/tmp/acacia-envelopes.jsonl').read_text().splitlines()]
+          results = [json.loads(s) for s in Path('/tmp/acacia-gate-results.jsonl').read_text().splitlines()]
+          assert len(results) == len(envelopes) and len(results) > 0
+          assert all(r['decision'] in ('context_only', 'quote_with_provenance') for r in results)
+          assert all(not r['actionable'] and not r['canon_authorized'] for r in results)
+          counts = Counter(r['decision'] for r in results)
+          print('PASS: all windows non-actionable; decisions:', dict(counts))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase4-advisory-gate-results
+          path: /tmp/acacia-gate-results.jsonl
+          retention-days: 30
