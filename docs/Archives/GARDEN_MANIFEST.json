@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 289468
+    "size_bytes": 289688
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11592,6 +11592,14 @@
     "size_bytes": 85
   },
   {
+    "path": "tools/retrieval_context_boundary.py",
+    "top": "tools",
+    "category": "",
+    "name": "retrieval_context_boundary.py",
+    "ext": ".py",
+    "size_bytes": 3468
+  },
+  {
     "path": "tools/retrieval_envelope.py",
     "top": "tools",
     "category": "",
@@ -11621,7 +11629,7 @@
     "category": "",
     "name": "source_bound_retrieval.py",
     "ext": ".py",
-    "size_bytes": 4283
+    "size_bytes": 4872
   },
   {
     "path": "tools/test_adversarial_envelope.py",
@@ -11701,7 +11709,7 @@
     "category": "",
     "name": "test_source_bound_retrieval.py",
     "ext": ".py",
-    "size_bytes": 3467
+    "size_bytes": 3911
   },
   {
     "path": "tools/verify_external_attestation.py",
