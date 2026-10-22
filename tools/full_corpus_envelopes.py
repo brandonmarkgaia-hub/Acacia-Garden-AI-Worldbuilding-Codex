@@ -9,7 +9,10 @@ import json
 import sys
 from pathlib import Path
 
-from retrieval_envelope import UNKNOWN, emit
+try:
+    from .retrieval_envelope import UNKNOWN, emit
+except ImportError:
+    from retrieval_envelope import UNKNOWN, emit
 
 def discover(root):
     root = Path(root).resolve()
