@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 285304
+    "size_bytes": 285666
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11456,6 +11456,14 @@
     "size_bytes": 1916
   },
   {
+    "path": "tools/conflict_evidence.py",
+    "top": "tools",
+    "category": "",
+    "name": "conflict_evidence.py",
+    "ext": ".py",
+    "size_bytes": 2458
+  },
+  {
     "path": "tools/full_corpus_envelopes.py",
     "top": "tools",
     "category": "",
@@ -11528,6 +11536,22 @@
     "size_bytes": 1435
   },
   {
+    "path": "tools/retrieval_safety_gate.py",
+    "top": "tools",
+    "category": "",
+    "name": "retrieval_safety_gate.py",
+    "ext": ".py",
+    "size_bytes": 3097
+  },
+  {
+    "path": "tools/test_conflict_evidence.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_conflict_evidence.py",
+    "ext": ".py",
+    "size_bytes": 2374
+  },
+  {
     "path": "tools/test_full_corpus_envelopes.py",
     "top": "tools",
     "category": "",
@@ -11542,6 +11566,14 @@
     "name": "test_retrieval_envelope.py",
     "ext": ".py",
     "size_bytes": 5642
+  },
+  {
+    "path": "tools/test_retrieval_safety_gate.py",
+    "top": "tools",
+    "category": "",
+    "name": "test_retrieval_safety_gate.py",
+    "ext": ".py",
+    "size_bytes": 2673
   },
   {
     "path": "triad/README_BOUNDARY.md",
