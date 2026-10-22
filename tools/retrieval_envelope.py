@@ -36,6 +36,9 @@ def voice_for_window(content, doc, start, end):
         if content.count(marker) != 1:
             raise ValueError("Voice marker must occur exactly once: " + marker)
         boundaries.append((content.index(marker), voice))
+    # A first marker at offset zero replaces the default unknown region.
+    if len(boundaries) > 1 and boundaries[1][0] == 0:
+        boundaries.pop(0)
     offsets = [p for p, _ in boundaries]
     if offsets != sorted(set(offsets)):
         raise ValueError("Voice markers must be in ascending source order")
