@@ -1,0 +1,24 @@
+name: Keeper final seal proposal invariants
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/KEEPER_FINAL_SEAL_AND_RIGHT_OF_BRANCHING_PROPOSAL.md'
+      - 'tools/keeper_final_seal.advisory.json'
+      - 'tools/test_keeper_final_seal.py'
+      - '.github/workflows/keeper-final-seal-proposal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dormant-proposal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test succession invariants
+        run: python -m unittest -v tools/test_keeper_final_seal.py
