@@ -1,0 +1,43 @@
+name: Retrieval context audit (advisory)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/main_retrieval_context_audit.py'
+      - 'docs/PROVENANCE/**'
+      - '.github/workflows/retrieval-context-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  context-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check Python syntax
+        run: python -m py_compile tools/main_retrieval_context_audit.py
+      - name: Run advisory audit on full checkout
+        run: python tools/main_retrieval_context_audit.py > retrieval-context-results.json
+      - name: Validate result structure
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('retrieval-context-results.json').read_text())
+          assert len(data['results']) == 3
+          assert all('tests' in result for result in data['results'])
+          assert all(len(result['tests']) == 3 for result in data['results'])
+          print('Validated three source documents and three chunk sizes.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retrieval-context-results
+          path: retrieval-context-results.json
+          retention-days: 30
