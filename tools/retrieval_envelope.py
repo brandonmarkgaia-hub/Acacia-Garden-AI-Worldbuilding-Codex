@@ -22,6 +22,33 @@ def windows(text, size=1000, overlap=0.2):
         if end == len(text):
             break
 
+def voice_for_window(content, doc, start, end):
+    """Use source-text anchors; a window spanning speakers is always mixed."""
+    segments = doc.get("voice_segments")
+    if not segments:
+        return doc.get("voice_class", UNKNOWN), "document_level"
+    boundaries = [(0, UNKNOWN)]
+    for segment in segments:
+        marker = segment.get("start_marker")
+        voice = segment.get("voice_class")
+        if not isinstance(marker, str) or not marker or not isinstance(voice, str) or not voice:
+            raise ValueError("Invalid voice segment")
+        if content.count(marker) != 1:
+            raise ValueError("Voice marker must occur exactly once: " + marker)
+        boundaries.append((content.index(marker), voice))
+    offsets = [p for p, _ in boundaries]
+    if offsets != sorted(set(offsets)):
+        raise ValueError("Voice markers must be in ascending source order")
+    # Include all regions touched by the actual text window.
+    voices = set()
+    for i, (begin, voice) in enumerate(boundaries):
+        finish = boundaries[i + 1][0] if i + 1 < len(boundaries) else len(content)
+        if start < finish and end > begin:
+            voices.add(voice)
+    if len(voices) == 1:
+        return voices.pop(), "source_marker_segment"
+    return "mixed_voice_boundary", "source_marker_overlap"
+
 def emit(root, manifest, size=1000, overlap=0.2):
     root = Path(root).resolve()
     if manifest.get("status") != "advisory_not_canon":
@@ -40,8 +67,11 @@ def emit(root, manifest, size=1000, overlap=0.2):
         expected_hash = doc.get("expected_source_sha256")
         if expected_hash is not None and actual_hash != expected_hash:
             raise ValueError("Pinned source hash mismatch: " + rel)
+        # Validate all marker boundaries even when the source is empty.
+        voice_for_window(content, doc, 0, len(content))
         for start, end in windows(content, size, overlap):
             part = content[start:end]
+            voice, voice_basis = voice_for_window(content, doc, start, end)
             yield {
                 "schema": "acacia.retrieval-envelope/0.2-advisory",
                 "source_path": rel,
@@ -50,8 +80,9 @@ def emit(root, manifest, size=1000, overlap=0.2):
                 "start_offset": start,
                 "end_offset": end,
                 "chunk_sha256": digest(part),
-                **{field: doc.get(field, UNKNOWN) for field in FIELDS},
+                **{field: (voice if field == "voice_class" else doc.get(field, UNKNOWN)) for field in FIELDS},
                 "classification_basis": doc.get("classification_basis", "not_classified"),
+                "voice_boundary_basis": voice_basis,
                 "unresolved_conflicts": doc.get("unresolved_conflicts", []),
                 "text": part,
             }
