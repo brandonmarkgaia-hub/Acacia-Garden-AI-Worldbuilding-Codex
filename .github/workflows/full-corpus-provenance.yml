@@ -1,0 +1,67 @@
+name: Full corpus provenance envelopes (advisory)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/full_corpus_envelopes.py'
+      - 'tools/test_full_corpus_envelopes.py'
+      - '.github/workflows/full-corpus-provenance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: python -m unittest -v tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
+      - name: Discover every Markdown file
+        run: python tools/full_corpus_envelopes.py --root . --inventory-only > corpus-inventory.json
+      - name: Generate complete JSONL envelopes
+        run: python tools/full_corpus_envelopes.py --root . > full-corpus-envelopes.jsonl
+      - name: Validate coverage, integrity and authority boundaries
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          inv = json.loads(Path('corpus-inventory.json').read_text())
+          expected = set(inv['paths'])
+          seen = set()
+          records = 0
+          unknown = 0
+          for line in Path('full-corpus-envelopes.jsonl').open(encoding='utf-8'):
+              row = json.loads(line)
+              source = Path(row['source_path']).read_text(encoding='utf-8')
+              part = source[row['start_offset']:row['end_offset']]
+              sha = lambda s: hashlib.sha256(s.encode('utf-8')).hexdigest()
+              assert row['text'] == part
+              assert row['source_sha256'] == sha(source)
+              assert row['chunk_sha256'] == sha(part)
+              assert row['authorization_status'] == 'not_authenticated'
+              assert row['keeper_approval'] == 'not_established'
+              assert row['canonical_effect'] == 'none'
+              assert row['metadata_trust'] == 'advisory_manifest_unverified'
+              seen.add(row['source_path'])
+              records += 1
+              unknown += row['document_status'] == 'unknown_pending_provenance_resolution'
+          assert seen == expected, f'missing={expected - seen}, unexpected={seen - expected}'
+          assert inv['document_count'] == len(expected)
+          assert inv['unknown_count'] == inv['document_count'] - inv['reviewed_count']
+          print(f'PASS: {len(expected)} Markdown documents, {records} exact windows, {unknown} unknown-status windows')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: full-corpus-provenance-audit
+          path: |
+            corpus-inventory.json
+            full-corpus-envelopes.jsonl
+          retention-days: 30
