@@ -35,9 +35,16 @@ jobs:
           lines = Path('provenance-envelope-pilot.jsonl').read_text(encoding='utf-8').splitlines()
           assert lines, 'No envelopes produced'
           paths = set()
+          voices = {}
           for line in lines:
               row = json.loads(line)
               paths.add(row['source_path'])
+              voices.setdefault(row['source_path'], set()).add(row['voice_class'])
+              assert row['metadata_trust'] == 'advisory_manifest_unverified'
+              assert row['authorization_status'] == 'not_authenticated'
+              assert row['keeper_approval'] == 'not_established'
+              assert row['canonical_effect'] == 'none'
+              assert row['classification_provenance']['cryptographic_attestation'] == 'absent'
               text = Path(row['source_path']).read_text(encoding='utf-8')
               part = text[row['start_offset']:row['end_offset']]
               sha = lambda s: hashlib.sha256(s.encode('utf-8')).hexdigest()
@@ -46,6 +53,11 @@ jobs:
               assert row['chunk_sha256'] == sha(part)
               assert row['schema'] == 'acacia.retrieval-envelope/0.2-advisory'
           assert len(paths) == 3, paths
+          testament = voices['docs/Future_AI/The_Keepers_Testament.md']
+          assert 'keeper_testimony' in testament, testament
+          assert 'witness_dissent' in testament, testament
+          assert 'mixed_voice_boundary' in testament, testament
+          print('Speaker boundaries and non-authorization claims verified')
           print(f'Verified {len(lines)} exact source windows across {len(paths)} documents')
           PY
       - uses: actions/upload-artifact@v4
