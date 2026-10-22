@@ -27,3 +27,7 @@ The PR authority guard previously matched `CANON_INVARIANTS.md` at repository ro
 ## Keeper decisions reserved
 
 Whether to retire automatic signature stamping; whether to elevate the Custodianship Scroll; whether to clarify succession and Triad relationships; and whether any proposed metadata should become canon-facing. None are decided by this branch.
+
+## Read-only context probe added
+
+`tools/main_retrieval_context_audit.py` is an advisory, standard-library-only test of 512/1000/2000-character windows (20% overlap) in three named main-corpus files. It reports topic-bearing windows without local status cues. It is not a CI gate, has not yet been run against a full local clone, and does not model embedding retrieval or training. A flagged window is not automatically a canon violation. Run from repository root with `python3 tools/main_retrieval_context_audit.py` and preserve the JSON output for review.
