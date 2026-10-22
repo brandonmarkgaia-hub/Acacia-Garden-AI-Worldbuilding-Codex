@@ -1,0 +1,37 @@
+name: Platinum adversarial envelope audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/source_bound_retrieval.py'
+      - 'tools/test_adversarial_envelope.py'
+      - '.github/workflows/platinum-adversarial-envelope.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  adversarial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run all provenance and adversarial tests
+        run: python -m unittest -v tools/test_adversarial_envelope.py tools/test_conflict_review_register.py tools/test_source_bound_retrieval.py tools/test_conflict_evidence.py tools/test_retrieval_safety_gate.py tools/test_full_corpus_envelopes.py tools/test_retrieval_envelope.py
+      - name: Recheck full Markdown corpus
+        run: |
+          python tools/full_corpus_envelopes.py --root . > /tmp/envelopes.jsonl
+          python tools/source_bound_retrieval.py --root . --input /tmp/envelopes.jsonl --output /tmp/bound.jsonl
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          records = [json.loads(line) for line in Path('/tmp/bound.jsonl').read_text().splitlines()]
+          assert records
+          assert all(r['decision'] != 'reject' for r in records)
+          assert all(r['source_integrity'] == 'verified_against_checkout' for r in records)
+          assert all(r['actionable'] is False and r['canon_authorized'] is False for r in records)
+          print('PASS: source-bound records', len(records))
+          PY
