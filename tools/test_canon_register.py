@@ -32,7 +32,7 @@ class CanonRegisterTests(unittest.TestCase):
 
     def test_fail_closed_allowlist(self):
         allowed = set(self.data["policy"]["allowed_law_status"])
-        self.assertTrue(allowed)
+        self.assertEqual(allowed, {"not_adjudicated_by_register", "unresolved_requires_keeper_ruling", "not_ratified_in_accessed_source", "explicitly_not_law", "not_ratified"})
         for entry in self.data["entries"]:
             self.assertIn(entry["law_status"], allowed)
         for forbidden in ("law", "ratified", "ratified_law", "canonical_law", "approved"):
