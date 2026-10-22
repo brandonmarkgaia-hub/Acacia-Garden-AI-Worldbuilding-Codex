@@ -2,7 +2,7 @@
   "metadata": {
     "project": "Acacia-Garden-AI-Worldbuilding-Codex",
     "keeper_seal": "HKX277206",
-    "generated_at": "2026-10-22T19:10:58Z",
+    "generated_at": "2026-10-22T19:30:14Z",
     "last_pruning": "2026-10-22",
     "current_state_rule": "Current paths are rebuilt from the live tree; historical paths belong in Git history."
   },
@@ -1126,7 +1126,7 @@
     "docs/protocols/veiled_garden_protocol.md",
     "docs/universe/architecture.md"
   ],
-  "generated_at": "2026-10-22T19:10:58Z",
+  "generated_at": "2026-10-22T19:30:14Z",
   "canonical_files": {
     "status": "STATUS.json",
     "schema": "STATUS.schema.json",
@@ -1139,8 +1139,8 @@
       "books_indexed": 56,
       "long_form_sources_indexed": 56,
       "cycles_represented": 0,
-      "total_nodes": 934,
-      "structural_nodes_counted": 934
+      "total_nodes": 938,
+      "structural_nodes_counted": 938
     },
     "regions": {
       "docs/Chambers": 169,
@@ -1154,8 +1154,8 @@
       "docs/Cycles": 49,
       "docs/Laws": 4,
       "docs/Wells": 1,
-      "tools": 27,
-      ".github/workflows": 22
+      "tools": 30,
+      ".github/workflows": 23
     },
     "count_scope": "All files inside the explicitly listed structural regions; not a whole-repository file count."
   },
@@ -1163,7 +1163,7 @@
     "health": {
       "missing_files": [],
       "warnings": [],
-      "last_checked_utc": "2026-10-22T19:10:58Z"
+      "last_checked_utc": "2026-10-22T19:30:14Z"
     }
   },
   "verification": {
@@ -1174,7 +1174,7 @@
       "applicable": false,
       "status": "not_applicable",
       "verified": true,
-      "last_checked_utc": "2026-10-22T19:10:58Z"
+      "last_checked_utc": "2026-10-22T19:30:14Z"
     },
     "navigation": {
       "folder_indexes_missing": [],
@@ -1188,7 +1188,7 @@
       ],
       "map_button_present": true,
       "verified": false,
-      "last_checked_utc": "2026-10-22T19:10:58Z"
+      "last_checked_utc": "2026-10-22T19:30:14Z"
     },
     "indexes": {
       "docs_urls_count": 1203,
@@ -1196,7 +1196,7 @@
       "machine_index_present": true,
       "status_schema_present": true
     },
-    "last_verified_utc": "2026-10-22T19:10:58Z"
+    "last_verified_utc": "2026-10-22T19:30:14Z"
   },
   "growth": {
     "open": []
