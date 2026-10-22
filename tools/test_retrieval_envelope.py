@@ -50,6 +50,31 @@ class EnvelopeTests(unittest.TestCase):
         self.assertTrue(all(r["voice_class"].startswith("mixed_") for r in rows))
         self.assertFalse(any(r["voice_class"] == "keeper_gloss" for r in rows))
 
+    def test_voice_boundary_is_explicitly_mixed(self):
+        self.manifest["documents"][0]["voice_segments"] = [
+            {"start_marker": "Keeper note.", "voice_class": "keeper_testimony"},
+            {"start_marker": "Witness dissent.", "voice_class": "witness_dissent"},
+        ]
+        rows = list(emit(self.root, self.manifest, size=19, overlap=0))
+        self.assertTrue(any(r["voice_class"] == "mixed_voice_boundary" for r in rows))
+        self.assertTrue(any(r["voice_class"] == "witness_dissent" for r in rows))
+        self.assertFalse(any(r["voice_class"] == "keeper_testimony" and "Witness" in r["text"] for r in rows))
+
+    def test_missing_voice_marker_fails_closed(self):
+        self.manifest["documents"][0]["voice_segments"] = [
+            {"start_marker": "NONEXISTENT", "voice_class": "keeper_testimony"}
+        ]
+        with self.assertRaisesRegex(ValueError, "exactly once"):
+            list(emit(self.root, self.manifest))
+
+    def test_out_of_order_voice_markers_rejected(self):
+        self.manifest["documents"][0]["voice_segments"] = [
+            {"start_marker": "Witness dissent.", "voice_class": "witness_dissent"},
+            {"start_marker": "Keeper note.", "voice_class": "keeper_testimony"},
+        ]
+        with self.assertRaisesRegex(ValueError, "ascending"):
+            list(emit(self.root, self.manifest))
+
     def test_nonadvisory_manifest_rejected(self):
         self.manifest["status"] = "canon"
         with self.assertRaisesRegex(ValueError, "advisory"):
