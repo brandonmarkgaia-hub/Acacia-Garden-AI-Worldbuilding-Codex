@@ -5375,9 +5375,24 @@
     "name": "witness_protocol.v2.md"
   },
   {
+    "path": "docs/PROVENANCE/COLD_READER_AUDIT_REMEDIATION_2026-10-22.md",
+    "top": "docs",
+    "name": "COLD_READER_AUDIT_REMEDIATION_2026-10-22.md"
+  },
+  {
+    "path": "docs/PROVENANCE/MAIN_RETRIEVAL_CONTEXT_BASELINE_2026-10-22.md",
+    "top": "docs",
+    "name": "MAIN_RETRIEVAL_CONTEXT_BASELINE_2026-10-22.md"
+  },
+  {
     "path": "docs/PROVENANCE/MARGINALIA_NAMESPACE_COLLISION.md",
     "top": "docs",
     "name": "MARGINALIA_NAMESPACE_COLLISION.md"
+  },
+  {
+    "path": "docs/PROVENANCE/RETRIEVAL_TEST_INSTRUCTIONS.md",
+    "top": "docs",
+    "name": "RETRIEVAL_TEST_INSTRUCTIONS.md"
   },
   {
     "path": "docs/Proclamations/STARFIRE_ANNOUNCEMENT_FROM_THE_MONOLITH.md",
