@@ -25,7 +25,7 @@ def audit(root):
                 "checkout_head": None, "markdown_files": len(md),
                 "empty_or_short_markdown": [], "signature_footers": 0,
                 "files_with_status_marker": 0, "relative_markdown_links_missing": [],
-                "checksum": {"listed": 0, "checked": 0, "mismatches": [], "missing": [], "invalid_lines": []},
+                "checksum": {"listed": 0, "checked": 0, "mismatches": [], "mismatch_evidence": [], "missing": [], "invalid_lines": []},
                 "limits": ["No semantic classification", "No authentication of Keeper",
                            "Link check covers only simple Markdown links",
                            "Checksum format is sha256sum-compatible lines only"]}
@@ -53,7 +53,10 @@ def audit(root):
             if not (p.parent / target).resolve().is_relative_to(root):
                 continue
             if not (p.parent / target).exists():
-                findings["relative_markdown_links_missing"].append({"source": rel, "target": target})
+                findings["relative_markdown_links_missing"].append({
+                    "source": rel, "target": target,
+                    "resolution": "candidate_requires_manual_review"
+                })
     checks = root / "CHECKSUMS.sha256"
     if checks.exists():
         for line_number, line in enumerate(checks.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
@@ -70,8 +73,14 @@ def audit(root):
                 findings["checksum"]["missing"].append(path)
                 continue
             findings["checksum"]["checked"] += 1
-            if hashlib.sha256(candidate.read_bytes()).hexdigest() != digest.lower():
+            actual = hashlib.sha256(candidate.read_bytes()).hexdigest()
+            if actual != digest.lower():
                 findings["checksum"]["mismatches"].append(path)
+                findings["checksum"]["mismatch_evidence"].append({
+                    "path": path, "line": line_number,
+                    "expected_sha256": digest.lower(), "checkout_sha256": actual,
+                    "resolution": "unreviewed_no_automatic_rewrite"
+                })
     findings["short_count"] = len(findings["empty_or_short_markdown"])
     findings["missing_link_count"] = len(findings["relative_markdown_links_missing"])
     return findings

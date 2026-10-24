@@ -26,6 +26,12 @@ class CorpusAuditTests(unittest.TestCase):
             (root / "CHECKSUMS.sha256").write_text("0" * 64 + "  a.md\n", encoding="utf-8")
             result = audit(root)
             self.assertEqual(result["checksum"]["mismatches"], ["a.md"])
+            evidence = result["checksum"]["mismatch_evidence"]
+            self.assertEqual(len(evidence), 1)
+            self.assertEqual(evidence[0]["expected_sha256"], "0" * 64)
+            self.assertEqual(evidence[0]["line"], 1)
+            self.assertEqual(len(evidence[0]["checkout_sha256"]), 64)
+            self.assertEqual(evidence[0]["resolution"], "unreviewed_no_automatic_rewrite")
 
     def test_missing_relative_link_is_detected(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -33,6 +39,8 @@ class CorpusAuditTests(unittest.TestCase):
             (root / "a.md").write_text("[Missing](not-here.md)\n", encoding="utf-8")
             result = audit(root)
             self.assertEqual(result["missing_link_count"], 1)
+            self.assertEqual(result["relative_markdown_links_missing"][0]["resolution"],
+                             "candidate_requires_manual_review")
 
     def test_no_source_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
