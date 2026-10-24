@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 291468
+    "size_bytes": 291688
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11582,6 +11582,14 @@
     "name": "corpus_integrity_audit.py",
     "ext": ".py",
     "size_bytes": 4614
+  },
+  {
+    "path": "tools/diamond_checksum_provenance.py",
+    "top": "tools",
+    "category": "",
+    "name": "diamond_checksum_provenance.py",
+    "ext": ".py",
+    "size_bytes": 2316
   },
   {
     "path": "tools/exhaustive_canon_inventory.py",
