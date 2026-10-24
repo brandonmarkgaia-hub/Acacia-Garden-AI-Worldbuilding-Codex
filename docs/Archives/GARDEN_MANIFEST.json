@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 157778
+    "size_bytes": 157946
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58819
+    "size_bytes": 58881
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -11462,6 +11462,14 @@
     "name": "DIAMOND_BUILDER_CHECKSUM_DRIFT_ROOT_CAUSE_2026-10-24.md",
     "ext": ".md",
     "size_bytes": 3248
+  },
+  {
+    "path": "tools/DIAMOND_CHECKSUM_RESIDUAL_DISPOSITION_2026-10-24.md",
+    "top": "tools",
+    "category": "",
+    "name": "DIAMOND_CHECKSUM_RESIDUAL_DISPOSITION_2026-10-24.md",
+    "ext": ".md",
+    "size_bytes": 2324
   },
   {
     "path": "tools/DIAMOND_CHECKSUM_TEN_CURRENT_MATCH_2026-10-24.md",
