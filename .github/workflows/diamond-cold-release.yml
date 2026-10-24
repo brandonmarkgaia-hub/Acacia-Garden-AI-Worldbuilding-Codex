@@ -66,6 +66,7 @@ jobs:
           Path('/tmp/diamond-release-verdict.json').write_text(json.dumps(report,indent=2)+'\n')
           print(json.dumps(report['technical_checks'],indent=2))
           print('technical_integrity_gate_passed=',report['technical_integrity_gate_passed'])
+print('checksum_mismatch_paths=', json.dumps(a['checksum']['mismatches']))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
