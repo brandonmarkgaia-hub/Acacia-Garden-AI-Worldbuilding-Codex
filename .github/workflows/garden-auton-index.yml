@@ -62,6 +62,19 @@ jobs:
       - name: Rebuild current STATUS and Novellas inventory
         run: python tools/garden_state.py
 
+      - name: Verify byte-identical repeat generation
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum STATUS.json machine-index.json docs/Novellas/garden_index.json docs/docs_urls.json docs/Chambers/chambers_index.json docs/Echoes/echoes_index.json docs/Chambers/index.html docs/Echoes/index.html docs/GardenOS/index.html docs/Vaults/index.html > /tmp/garden-first.sha256
+          python .github/scripts/build_docs_folder_indexes.py
+          python .github/scripts/fix_archives_base.py
+          python .github/scripts/build_docs_url_dump.py
+          node scripts/generate_codex_indices.mjs
+          python .github/scripts/build_machine_index.py
+          python tools/garden_state.py
+          sha256sum -c /tmp/garden-first.sha256
+
       - name: Save generated changes for review (no push)
         run: |
           git diff --binary > /tmp/garden-generated-changes.patch
