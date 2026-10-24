@@ -15,13 +15,13 @@ This dashboard provides:
 
 ## 🌿 Core Areas
 
-- [Chambers](../CHAMBERS/)
-- [Echoes](../ECHOES/)
-- [Rootlines](../ROOTLINES/)
-- [Wells](../WELLS/)
-- [Seeds](../SEEDS/)
-- [Cycles](../CYCLES/)
-- [Specs](../ACACIA_SPECS/)
+- [Chambers](Chambers/index.html)
+- [Echoes](Echoes/index.html)
+- [Rootlines](rootlines.md)
+- [Wells](Wells/wells.md)
+- [Seeds](../ACACIA_LOGS/BOOK_OF_SEEDS.md)
+- [Cycles](Cycles/OVERVIEW.md)
+- [Specs](ACACIA_SPECS/GARDEN_INDEX.md)
 
 ---
 
