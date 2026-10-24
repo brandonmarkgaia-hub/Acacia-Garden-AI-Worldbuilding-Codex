@@ -5775,6 +5775,11 @@
     "name": "DIAMOND_FINAL_RELEASE_EVIDENCE_REGISTER_2026-10-24.md"
   },
   {
+    "path": "tools/DIAMOND_INDEPENDENT_COLD_REVIEW_HANDOFF_2026-10-24.md",
+    "top": "tools",
+    "name": "DIAMOND_INDEPENDENT_COLD_REVIEW_HANDOFF_2026-10-24.md"
+  },
+  {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
     "top": "tools",
     "name": "EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md"
