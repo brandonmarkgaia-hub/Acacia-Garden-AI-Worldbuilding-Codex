@@ -66,6 +66,8 @@ jobs:
           Path('/tmp/diamond-release-verdict.json').write_text(json.dumps(report,indent=2)+'\n')
           print(json.dumps(report['technical_checks'],indent=2))
           print('technical_integrity_gate_passed=',report['technical_integrity_gate_passed'])
+          if not report['technical_integrity_gate_passed']:
+            print('Integrity findings remain: see uploaded verdict and mismatch evidence')
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -76,3 +78,13 @@ jobs:
             /tmp/diamond-checksum-provenance.json
             /tmp/diamond-release-verdict.json
           retention-days: 30
+      - name: Enforce integrity gate after artifact preservation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          v=json.loads(Path('/tmp/diamond-release-verdict.json').read_text())
+          if not v['technical_integrity_gate_passed']:
+              raise SystemExit('FAIL: frozen-checkout checksum integrity gate did not pass; inspect artifact')
+          print('PASS: frozen-checkout checksum integrity gate')
+          PY
