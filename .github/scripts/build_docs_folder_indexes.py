@@ -23,8 +23,16 @@ TEMPLATE="""<!doctype html>
 </head><body><main class="wrap"><section class="card"><h1>{h1}</h1><div class="meta">Generated: {ts}</div><nav class="toplinks" aria-label="Garden navigation"><a class="pill" href="../index.html">← docs/index</a><a class="pill" href="../docs_urls.html">Document Registry</a><a class="pill" href="../../map.html">Garden Map</a><a class="pill" href="../../index.html">Home</a></nav><div style="height:14px"></div><ul>{items}</ul></section></main></body></html>
 """
 
+
+# Deterministic source revision clock. Do not use the runner's wall clock.
+def source_stamp():
+    import subprocess
+    from datetime import datetime, timezone
+    seconds = int(subprocess.check_output(["git", "show", "-s", "--format=%ct", "HEAD"], cwd=ROOT, text=True).strip())
+    return datetime.fromtimestamp(seconds, timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
 def main():
-    ts=datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z")
+    ts=source_stamp()
     for folder in FOLDERS:
         p=DOCS/folder
         if not p.is_dir(): continue
