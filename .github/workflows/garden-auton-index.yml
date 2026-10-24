@@ -1,4 +1,4 @@
-name: Garden Crowned Builder (Deterministic)
+name: Garden Crowned Builder (advisory, read-only)
 
 on:
   push:
@@ -13,13 +13,9 @@ on:
       - "STATUS.schema.json"
       - "machine-index.json"
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "Garden Codex Maintenance"
-    types: [completed]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: garden-crowned-builder
@@ -27,9 +23,6 @@ concurrency:
 
 jobs:
   build-index:
-    if: >-
-      ${{ github.event_name != 'workflow_run' ||
-          github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -38,7 +31,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Setup Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -69,73 +62,18 @@ jobs:
       - name: Rebuild current STATUS and Novellas inventory
         run: python tools/garden_state.py
 
-      - name: Commit and push owned artifacts
+      - name: Preserve generated diff as advisory evidence (never push main)
         shell: bash
         run: |
           set -euo pipefail
-
-          if git diff --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git config user.name "acacia-auton"
-          git config user.email "actions@github.com"
-
-          ARTIFACTS=(
-            "STATUS.json"
-            "docs/Novellas/garden_index.json"
-            "machine-index.json"
-            "docs/docs_urls.html"
-            "docs/docs_urls.json"
-            "docs/Chambers/index.html"
-            "docs/Vaults/index.html"
-            "docs/Echoes/index.html"
-            "docs/GardenOS/index.html"
-            "docs/Novellas/index.html"
-            "docs/Chambers/chambers_index.json"
-            "docs/Echoes/echoes_index.json"
-          )
-
-          shopt -s nullglob
-          ARCHIVES=(docs/Archives/*.html)
-          shopt -u nullglob
-
-          mkdir -p /tmp/acacia_artifacts
-          for f in "${ARTIFACTS[@]}"; do
-            if [ -f "$f" ]; then
-              mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
-              cp -f "$f" "/tmp/acacia_artifacts/$f"
-            fi
-          done
-          for f in "${ARCHIVES[@]}"; do
-            mkdir -p "/tmp/acacia_artifacts/$(dirname "$f")"
-            cp -f "$f" "/tmp/acacia_artifacts/$f"
-          done
-
-          for i in 1 2 3 4 5; do
-            echo "Publish attempt $i..."
-            git fetch origin main
-            git reset --hard origin/main
-            rsync -a --ignore-times /tmp/acacia_artifacts/ ./
-
-            git add -- "${ARTIFACTS[@]}"
-            if [ "${#ARCHIVES[@]}" -gt 0 ]; then
-              git add -- "${ARCHIVES[@]}"
-            fi
-
-            if git diff --cached --quiet; then
-              echo "After reset+restore, nothing to commit."
-              exit 0
-            fi
-
-            git commit -m "chore: refresh Garden artifacts [auton]" || true
-            if git push origin HEAD:main; then
-              echo "Push succeeded."
-              exit 0
-            fi
-            sleep $((i * 2))
-          done
-
-          echo "Push failed after retries."
-          exit 1
+          git diff --binary > /tmp/garden-generated-changes.patch
+          git status --short > /tmp/garden-generated-status.txt
+          echo "Builder is read-only. Generated changes are review evidence, not committed."
+          cat /tmp/garden-generated-status.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: garden-generated-diff-review
+          path: |
+            /tmp/garden-generated-changes.patch
+            /tmp/garden-generated-status.txt
+          retention-days: 30
