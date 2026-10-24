@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 157946
+    "size_bytes": 158080
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58881
+    "size_bytes": 58926
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 292571
+    "size_bytes": 292801
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11456,6 +11456,14 @@
     "size_bytes": 5081
   },
   {
+    "path": "tools/CURRENT_RELEASE_MANIFEST_POLICY.md",
+    "top": "tools",
+    "category": "",
+    "name": "CURRENT_RELEASE_MANIFEST_POLICY.md",
+    "ext": ".md",
+    "size_bytes": 2047
+  },
+  {
     "path": "tools/DIAMOND_BUILDER_CHECKSUM_DRIFT_ROOT_CAUSE_2026-10-24.md",
     "top": "tools",
     "category": "",
@@ -11614,6 +11622,14 @@
     "name": "corpus_integrity_audit.py",
     "ext": ".py",
     "size_bytes": 4614
+  },
+  {
+    "path": "tools/current_release_manifest.py",
+    "top": "tools",
+    "category": "",
+    "name": "current_release_manifest.py",
+    "ext": ".py",
+    "size_bytes": 2790
   },
   {
     "path": "tools/diamond_checksum_provenance.py",
