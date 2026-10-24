@@ -1,5 +1,7 @@
 name: Current release manifest evidence
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
