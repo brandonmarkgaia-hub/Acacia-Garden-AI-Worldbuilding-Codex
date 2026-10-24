@@ -45,6 +45,10 @@ jobs:
             exit 0
           fi
 
+          if printf '%s\\n' "$TOUCHED" | grep -qx 'AUTHORITY.json'; then
+            python tools/guard_immutable_authority.py "origin/${BASE_REF}"
+          fi
+
           echo "Protected authority surfaces changed:"
           printf '%s\n' "$TOUCHED"
 
