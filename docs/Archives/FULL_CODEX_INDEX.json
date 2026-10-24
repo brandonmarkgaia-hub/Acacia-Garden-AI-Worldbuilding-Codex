@@ -5735,6 +5735,11 @@
     "name": "0001_AETHERWIND_OVERREACH.md"
   },
   {
+    "path": "tools/CHECKSUM_MISMATCH_BLOB_INVENTORY_2026-10-24.md",
+    "top": "tools",
+    "name": "CHECKSUM_MISMATCH_BLOB_INVENTORY_2026-10-24.md"
+  },
+  {
     "path": "tools/COLD_READER_CANON_REMEDIATION_REGISTER.md",
     "top": "tools",
     "name": "COLD_READER_CANON_REMEDIATION_REGISTER.md"
