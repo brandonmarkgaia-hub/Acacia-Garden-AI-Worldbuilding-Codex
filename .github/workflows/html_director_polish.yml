@@ -9,7 +9,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: acacia-html-director-polish
@@ -33,17 +33,8 @@ jobs:
       - name: Polish every tracked HTML document
         run: python scripts/polish_html.py
 
-      - name: Commit deterministic HTML repairs
+      - name: Report generated artifact drift
         shell: bash
         run: |
           set -euo pipefail
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add -- '*.html'
-          if git diff --cached --quiet; then
-            echo "No HTML repairs required."
-            exit 0
-          fi
-          git commit -m "chore: normalize HTML structure and discovery metadata"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git diff --exit-code -- '*.html'
