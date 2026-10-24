@@ -5750,6 +5750,11 @@
     "name": "DIAMOND_CHECKSUM_TEN_CURRENT_MATCH_2026-10-24.md"
   },
   {
+    "path": "tools/DIAMOND_COLD_RELEASE_RESIDUAL_REGISTER_2026-10-24.md",
+    "top": "tools",
+    "name": "DIAMOND_COLD_RELEASE_RESIDUAL_REGISTER_2026-10-24.md"
+  },
+  {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
     "top": "tools",
     "name": "EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md"
