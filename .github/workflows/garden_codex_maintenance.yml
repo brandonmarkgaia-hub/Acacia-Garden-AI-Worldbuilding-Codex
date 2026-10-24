@@ -2,6 +2,9 @@ name: Garden Codex Maintenance
 
 on:
   workflow_dispatch: {}
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
@@ -15,7 +18,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: acacia-main-autocommit
+  group: acacia-codex-drift-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -353,15 +356,25 @@ jobs:
                   }
               )
 
-          MANIFEST_JSON.write_text(
-              json.dumps(
-                  manifest_entries,
-                  indent=2,
-                  ensure_ascii=False,
-              )
-              + "\n",
-              encoding="utf-8",
-          )
+          # The manifest lists itself. Resolve its size to a fixed point
+          # rather than recording the size of the previous committed version.
+          self_entries = [
+              entry for entry in manifest_entries
+              if entry["path"] == "docs/Archives/GARDEN_MANIFEST.json"
+          ]
+          if len(self_entries) != 1:
+              raise RuntimeError("Expected exactly one manifest self-entry")
+          for _ in range(10):
+              rendered = json.dumps(
+                  manifest_entries, indent=2, ensure_ascii=False
+              ) + "\n"
+              actual_size = len(rendered.encode("utf-8"))
+              if self_entries[0]["size_bytes"] == actual_size:
+                  break
+              self_entries[0]["size_bytes"] = actual_size
+          else:
+              raise RuntimeError("Manifest self-size did not converge")
+          MANIFEST_JSON.write_text(rendered, encoding="utf-8")
 
           print(
               f"[MANIFEST] Wrote → {MANIFEST_JSON}"
