@@ -7,13 +7,9 @@ on:
       - "scripts/build_provenance.py"
       - ".github/workflows/provenance_refresh.yml"
   workflow_dispatch: {}
-  workflow_run:
-    workflows:
-      - "Garden Crowned Builder (Deterministic)"
-    types: [completed]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: acacia-provenance-refresh
@@ -21,9 +17,6 @@ concurrency:
 
 jobs:
   provenance:
-    if: >-
-      ${{ github.event_name != 'workflow_run' ||
-          github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -38,20 +31,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build SHA-256 provenance artifacts
-        run: python scripts/build_provenance.py
+      - name: Preserve historical checksum snapshot
+        run: |
+          echo "CHECKSUMS.sha256 is historical evidence; no automatic restamping."
+          test -s CHECKSUMS.sha256
 
-      - name: Commit provenance artifacts
+      - name: Detect generated drift without writing to main
         shell: bash
         run: |
           set -euo pipefail
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add CHECKSUMS.sha256 GARDEN_VERSION.json
-          if git diff --cached --quiet; then
-            echo "Provenance artifacts already current."
-            exit 0
-          fi
-          git commit -m "chore: refresh machine-verifiable repository provenance"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git diff --exit-code -- GARDEN_VERSION.json
