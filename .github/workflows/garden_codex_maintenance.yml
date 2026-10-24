@@ -415,4 +415,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git diff --exit-code -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json
+          git diff --binary -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json > /tmp/codex-generated-drift.patch
+          if [ -s /tmp/codex-generated-drift.patch ]; then
+            echo "Generated artifacts differ from committed files. See review artifact."
+            exit 1
+          fi
+          echo "Generated artifacts match committed files."
+
+      - name: Upload generated drift patch for human review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: codex-generated-drift-patch
+          path: /tmp/codex-generated-drift.patch
+          if-no-files-found: ignore
+          retention-days: 30
