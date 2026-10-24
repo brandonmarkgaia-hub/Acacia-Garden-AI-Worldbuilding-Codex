@@ -12,7 +12,7 @@ env:
   GIT_CONFIG_VALUE_0: main
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: acacia-main-autocommit
@@ -411,52 +411,8 @@ jobs:
             exit "$status"
           fi
 
-      - name: Commit and push changes
+      - name: Report generated artifact drift
         shell: bash
-        env:
-          TARGET_BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
-
-          git config --local user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git config --local user.name \
-            "github-actions[bot]"
-
-          git add \
-            docs/Novellas \
-            docs/Archives/EMPTY_MARKDOWN_AUDIT.json \
-            docs/Archives/EMPTY_MARKDOWN_AUDIT.md \
-            docs/Archives/TITLE_COLLISION_AUDIT.json \
-            docs/Archives/TITLE_COLLISION_AUDIT.md \
-            docs/Archives/FULL_CODEX_INDEX.md \
-            docs/Archives/FULL_CODEX_INDEX.json \
-            docs/Archives/GARDEN_MANIFEST.json \
-            docs/api/GARDEN_API_INDEX.json
-
-          if git diff --cached --quiet; then
-            echo "No Codex maintenance changes to commit."
-            exit 0
-          fi
-
-          git commit -m \
-            "chore: refresh codex indexes, manifest and API [skip ci]"
-
-          for i in 1 2 3 4 5; do
-            echo "Push attempt $i..."
-
-            git fetch origin "$TARGET_BRANCH"
-            git rebase "origin/$TARGET_BRANCH"
-
-            if git push origin HEAD:"$TARGET_BRANCH"; then
-              echo "Push succeeded."
-              exit 0
-            fi
-
-            echo "Push rejected, retrying..."
-            sleep $((i * 2))
-          done
-
-          echo "Push failed after 5 retries."
-          exit 1
+          git diff --exit-code -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json
