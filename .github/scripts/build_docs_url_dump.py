@@ -33,9 +33,17 @@ HTML='''<!doctype html>
 <script>const paths={PATHS};const q=document.getElementById('q'),list=document.getElementById('list'),count=document.getElementById('count');function base(){const p=location.pathname.split('/').filter(Boolean);return p.length?'/'+p[0]+'/':'/'}function href(p){return base()+'docs/'+p.split('/').map(encodeURIComponent).join('/')}function render(a){list.innerHTML='';count.textContent=String(a.length);for(const p of a){const li=document.createElement('li'),x=document.createElement('a');x.href=href(p);x.textContent=p;li.appendChild(x);list.appendChild(li)}}q.addEventListener('input',()=>{const t=q.value.toLowerCase().trim();render(t?paths.filter(p=>p.toLowerCase().includes(t)):paths)});render(paths);</script>
 </body></html>'''
 
+
+# Deterministic source revision clock. Do not use the runner's wall clock.
+def source_stamp():
+    import subprocess
+    from datetime import datetime, timezone
+    seconds = int(subprocess.check_output(["git", "show", "-s", "--format=%ct", "HEAD"], cwd=ROOT, text=True).strip())
+    return datetime.fromtimestamp(seconds, timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
 def main():
     DOCS_DIR.mkdir(parents=True,exist_ok=True); paths=git_ls_files_docs()
-    payload={"generated_at":datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z"),"scope":"tracked files under docs/ with extensions .html, .md, .json, and .txt","purpose":"Broad document-path registry for discovery. Its count is not expected to match machine-index.json.","count":len(paths),"paths":paths,"source":"git ls-files docs"}
+    payload={"generated_at":source_stamp(),"scope":"tracked files under docs/ with extensions .html, .md, .json, and .txt","purpose":"Broad document-path registry for discovery. Its count is not expected to match machine-index.json.","count":len(paths),"paths":paths,"source":"git ls-files docs"}
     OUT_JSON.write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     OUT_HTML.write_text(HTML.replace("{PATHS}",json.dumps(paths,ensure_ascii=False)),encoding="utf-8")
     print(f"Wrote {OUT_JSON} ({len(paths)} paths) and {OUT_HTML}"); return 0

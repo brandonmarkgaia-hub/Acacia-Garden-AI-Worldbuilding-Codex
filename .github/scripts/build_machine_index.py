@@ -15,16 +15,19 @@ ENTRY_SCOPE = "Echo"
 
 
 def utc_now() -> str:
-    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    import subprocess
+    seconds = int(subprocess.check_output(['git', 'show', '-s', '--format=%ct', 'HEAD'], cwd=ROOT, text=True).strip())
+    return dt.datetime.fromtimestamp(seconds, dt.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 
 def iso_from_mtime(p: Path) -> str:
-    try:
-        ts = dt.datetime.fromtimestamp(p.stat().st_mtime, tz=dt.timezone.utc)
-        return ts.replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    except Exception:
+    # Commit history gives a stable per-file change timestamp across checkouts.
+    import subprocess
+    rel = p.relative_to(ROOT).as_posix()
+    seconds = subprocess.check_output(['git', 'log', '-1', '--format=%ct', '--', rel], cwd=ROOT, text=True).strip()
+    if not seconds:
         return utc_now()
-
+    return dt.datetime.fromtimestamp(int(seconds), dt.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 def title_from_md(p: Path) -> str:
     try:

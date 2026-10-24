@@ -56,12 +56,9 @@ MAP_EXEMPT = {"docs_urls.html", "aquila_sender.html"}
 
 
 def now_utc() -> str:
-    return (
-        dt.datetime.now(dt.timezone.utc)
-        .replace(microsecond=0)
-        .isoformat()
-        .replace("+00:00", "Z")
-    )
+    import subprocess
+    seconds = int(subprocess.check_output(['git', 'show', '-s', '--format=%ct', 'HEAD'], cwd=ROOT, text=True).strip())
+    return dt.datetime.fromtimestamp(seconds, dt.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 
 def read_json(path: Path) -> dict[str, Any]:
