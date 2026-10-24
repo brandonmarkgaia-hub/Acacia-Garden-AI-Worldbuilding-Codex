@@ -5745,6 +5745,11 @@
     "name": "COLD_READER_CANON_REMEDIATION_REGISTER.md"
   },
   {
+    "path": "tools/DIAMOND_BUILDER_CHECKSUM_DRIFT_ROOT_CAUSE_2026-10-24.md",
+    "top": "tools",
+    "name": "DIAMOND_BUILDER_CHECKSUM_DRIFT_ROOT_CAUSE_2026-10-24.md"
+  },
+  {
     "path": "tools/DIAMOND_CHECKSUM_TEN_CURRENT_MATCH_2026-10-24.md",
     "top": "tools",
     "name": "DIAMOND_CHECKSUM_TEN_CURRENT_MATCH_2026-10-24.md"
