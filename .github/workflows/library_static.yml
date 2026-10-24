@@ -14,7 +14,7 @@ env:
   GIT_CONFIG_VALUE_0: main
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: acacia-main-autocommit
@@ -39,30 +39,8 @@ jobs:
       - name: Build library index
         run: node scripts/build-library.mjs
 
-      - name: Commit owned artifact if changed
+      - name: Detect generated drift without writing to main
         shell: bash
         run: |
           set -euo pipefail
-
-          if git diff --quiet -- docs/library_index.json; then
-            echo "No library-index changes."
-            exit 0
-          fi
-
-          git config user.name "garden-library-bot"
-          git config user.email "actions@github.com"
-          git add docs/library_index.json
-          git commit -m "chore(library): rebuild docs/library_index.json"
-
-          for i in 1 2 3 4 5; do
-            git fetch origin main
-            git rebase origin/main || (git rebase --abort && git pull --rebase origin main)
-            if git push origin HEAD:main; then
-              echo "Pushed."
-              exit 0
-            fi
-            sleep 2
-          done
-
-          echo "Push failed after retries."
-          exit 1
+          git diff --exit-code -- docs/library_index.json
