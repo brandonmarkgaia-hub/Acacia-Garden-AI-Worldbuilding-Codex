@@ -1,0 +1,14 @@
+name: Diamond release authorization
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  authorization:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refuse release without independently verified authority
+        run: |
+          echo "DENIED: no independently verified Keeper attestation or external release baseline."
+          echo "This workflow does not approve or issue a Final Seal."
+          exit 1
