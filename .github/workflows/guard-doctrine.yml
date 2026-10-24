@@ -23,6 +23,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Test immutable authority guard against deliberate tampering
+        run: python -m unittest tools/test_guard_immutable_authority.py
+
       - name: Check protected authority surfaces
         shell: bash
         env:
@@ -45,7 +48,7 @@ jobs:
             exit 0
           fi
 
-          if printf '%s\\n' "$TOUCHED" | grep -qx 'AUTHORITY.json'; then
+          if printf '%s\n' "$TOUCHED" | grep -qx 'AUTHORITY.json'; then
             python tools/guard_immutable_authority.py "origin/${BASE_REF}"
           fi
 
