@@ -15,16 +15,14 @@ ENTRY_SCOPE = "Echo"
 
 
 def utc_now() -> str:
-    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    import subprocess
+    seconds = int(subprocess.check_output(['git', 'show', '-s', '--format=%ct', 'HEAD'], cwd=ROOT, text=True).strip())
+    return dt.datetime.fromtimestamp(seconds, dt.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
 
 
 def iso_from_mtime(p: Path) -> str:
-    try:
-        ts = dt.datetime.fromtimestamp(p.stat().st_mtime, tz=dt.timezone.utc)
-        return ts.replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    except Exception:
-        return utc_now()
-
+    # Filesystem mtimes change on checkout and cannot attest source history.
+    return utc_now()
 
 def title_from_md(p: Path) -> str:
     try:
