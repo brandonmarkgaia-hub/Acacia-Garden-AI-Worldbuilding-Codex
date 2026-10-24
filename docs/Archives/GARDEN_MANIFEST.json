@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 291256
+    "size_bytes": 291468
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10333,7 +10333,7 @@
     "category": "dashboard.md",
     "name": "dashboard.md",
     "ext": ".md",
-    "size_bytes": 648
+    "size_bytes": 708
   },
   {
     "path": "docs/docs_urls.html",
