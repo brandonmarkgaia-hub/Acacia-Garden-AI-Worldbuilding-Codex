@@ -76,3 +76,13 @@ jobs:
             /tmp/diamond-checksum-provenance.json
             /tmp/diamond-release-verdict.json
           retention-days: 30
+      - name: Enforce integrity gate after evidence upload
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          verdict=json.loads(Path('/tmp/diamond-release-verdict.json').read_text())
+          if not verdict['technical_integrity_gate_passed']:
+              raise SystemExit('FAIL: frozen-checkout checksum integrity; inspect uploaded evidence')
+          print('PASS: frozen-checkout checksum integrity')
+          PY
