@@ -84,7 +84,7 @@ jobs:
               'simple_relative_link_findings':a['relative_markdown_links_missing'],
               'ten_path_unmatched':[x for x in b['findings'] if not x['match']],
             },
-            'technical_integrity_gate_passed':not(a['checksum']['missing'] or a['checksum']['invalid_lines']),
+            'technical_integrity_gate_passed':False,\n            'independent_trust_anchor_verified':False,\n            'independent_trust_anchor_reason':'No externally anchored approved baseline or Keeper signature has been verified',
             'historical_snapshot_matches_current_checkout':not a['checksum']['mismatches'],
             'keeper_attestation':'not_tested_not_established',
             'semantic_governance_conflicts':'not_tested_not_established',
@@ -113,6 +113,6 @@ jobs:
           from pathlib import Path
           verdict=json.loads(Path('/tmp/diamond-release-verdict.json').read_text())
           if not verdict['technical_integrity_gate_passed']:
-              raise SystemExit('FAIL: frozen-checkout checksum integrity; inspect uploaded evidence')
-          print('PASS: current checkout manifest verified; historical checksum drift retained as residual evidence')
+              raise SystemExit('FAIL CLOSED: independently anchored Diamond integrity not established; inspect uploaded evidence')
+          print('PASS: independently anchored Diamond integrity established')
           PY
