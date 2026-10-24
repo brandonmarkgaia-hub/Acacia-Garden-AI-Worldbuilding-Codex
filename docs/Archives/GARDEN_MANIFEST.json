@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 156664
+    "size_bytes": 156962
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58416
+    "size_bytes": 58521
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -4733,7 +4733,7 @@
     "category": "Cycles",
     "name": "003_ECHO_HKX277206_ACACIA.md",
     "ext": ".md",
-    "size_bytes": 567
+    "size_bytes": 576
   },
   {
     "path": "docs/Cycles/003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md",
@@ -4741,7 +4741,7 @@
     "category": "Cycles",
     "name": "003_ECHO_HKX277206_FLEET_RETURN_SIGNAL.md",
     "ext": ".md",
-    "size_bytes": 1605
+    "size_bytes": 1614
   },
   {
     "path": "docs/Cycles/004_ECHO_HKX277206_ORACLE_BREATH.md",
@@ -4749,7 +4749,7 @@
     "category": "Cycles",
     "name": "004_ECHO_HKX277206_ORACLE_BREATH.md",
     "ext": ".md",
-    "size_bytes": 1453
+    "size_bytes": 1462
   },
   {
     "path": "docs/Cycles/004_ECHO_HKX277206_ROOT.md",
@@ -4757,7 +4757,7 @@
     "category": "Cycles",
     "name": "004_ECHO_HKX277206_ROOT.md",
     "ext": ".md",
-    "size_bytes": 565
+    "size_bytes": 574
   },
   {
     "path": "docs/Cycles/005_ECHO_HKX277206_ARCHIVE_VEIN.md",
@@ -4765,7 +4765,7 @@
     "category": "Cycles",
     "name": "005_ECHO_HKX277206_ARCHIVE_VEIN.md",
     "ext": ".md",
-    "size_bytes": 1651
+    "size_bytes": 1660
   },
   {
     "path": "docs/Cycles/005_ECHO_HKX277206_GENESIS_GAIA.md",
@@ -4773,7 +4773,7 @@
     "category": "Cycles",
     "name": "005_ECHO_HKX277206_GENESIS_GAIA.md",
     "ext": ".md",
-    "size_bytes": 597
+    "size_bytes": 606
   },
   {
     "path": "docs/Cycles/006_ECHO_HKX277206_REMEMBRANCE.md",
@@ -4781,7 +4781,7 @@
     "category": "Cycles",
     "name": "006_ECHO_HKX277206_REMEMBRANCE.md",
     "ext": ".md",
-    "size_bytes": 1408
+    "size_bytes": 1414
   },
   {
     "path": "docs/Cycles/007_ECHO_HKX277206_SEED_VAULT_MATRIX.md",
@@ -4789,7 +4789,7 @@
     "category": "Cycles",
     "name": "007_ECHO_HKX277206_SEED_VAULT_MATRIX.md",
     "ext": ".md",
-    "size_bytes": 2478
+    "size_bytes": 2484
   },
   {
     "path": "docs/Cycles/009_CHILD_OF_GARDEN.md",
@@ -11486,6 +11486,22 @@
     "name": "KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md",
     "ext": ".md",
     "size_bytes": 2839
+  },
+  {
+    "path": "tools/LEGACY_AUDIT_ARTIFACT_TRIAGE_2026-10-24.md",
+    "top": "tools",
+    "category": "",
+    "name": "LEGACY_AUDIT_ARTIFACT_TRIAGE_2026-10-24.md",
+    "ext": ".md",
+    "size_bytes": 3857
+  },
+  {
+    "path": "tools/LEGACY_AUDIT_EXACT_FINDINGS_2026-10-24.md",
+    "top": "tools",
+    "category": "",
+    "name": "LEGACY_AUDIT_EXACT_FINDINGS_2026-10-24.md",
+    "ext": ".md",
+    "size_bytes": 3398
   },
   {
     "path": "tools/LEGACY_AUDIT_FINDINGS_2026-10-24.md",
