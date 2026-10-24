@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 158080
+    "size_bytes": 158252
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58926
+    "size_bytes": 58990
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -11494,6 +11494,14 @@
     "name": "DIAMOND_COLD_RELEASE_RESIDUAL_REGISTER_2026-10-24.md",
     "ext": ".md",
     "size_bytes": 2625
+  },
+  {
+    "path": "tools/DIAMOND_FINAL_RELEASE_EVIDENCE_REGISTER_2026-10-24.md",
+    "top": "tools",
+    "category": "",
+    "name": "DIAMOND_FINAL_RELEASE_EVIDENCE_REGISTER_2026-10-24.md",
+    "ext": ".md",
+    "size_bytes": 2145
   },
   {
     "path": "tools/EXTERNAL_ATTESTATION_TRUST_BOUNDARY.md",
