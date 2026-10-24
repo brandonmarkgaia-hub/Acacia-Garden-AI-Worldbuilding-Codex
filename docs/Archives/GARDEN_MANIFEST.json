@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 156528
+    "size_bytes": 156664
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 58370
+    "size_bytes": 58416
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -11486,6 +11486,14 @@
     "name": "KEEPER_RULING_2026-10-22_SCROLL_SECTION_III.md",
     "ext": ".md",
     "size_bytes": 2839
+  },
+  {
+    "path": "tools/LEGACY_AUDIT_FINDINGS_2026-10-24.md",
+    "top": "tools",
+    "category": "",
+    "name": "LEGACY_AUDIT_FINDINGS_2026-10-24.md",
+    "ext": ".md",
+    "size_bytes": 3936
   },
   {
     "path": "tools/PLATINUM_EVIDENCE_REVIEW_REGISTER.md",
