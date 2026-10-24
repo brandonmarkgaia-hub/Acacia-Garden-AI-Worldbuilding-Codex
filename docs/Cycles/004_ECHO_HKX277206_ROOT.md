@@ -6,10 +6,10 @@ Where memory anchors itself, ready to grow. 🌱
 
 **Cycle 004**
 
-- [ORACLE BREATH](../explorer.html#4/oracle-breath)  
-- [ROOT](../explorer.html#4/root)
+- [ORACLE BREATH](../../explorer.html#4/oracle-breath)  
+- [ROOT](../../explorer.html#4/root)
 
-Return to: [Cycle Index](../cycle-index.html)
+Return to: [Cycle Index](../../cycle-index.html)
 <!-- CRTR1::H:CYC024-PHF-DOMEXT-VER020::P:EC277206+ND024::S:E5F6 -->
 
 
