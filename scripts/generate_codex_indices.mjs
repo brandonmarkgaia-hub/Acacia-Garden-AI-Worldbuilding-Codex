@@ -1,3 +1,6 @@
+import { execFileSync } from "node:child_process";
+// Reproducible source revision timestamp; never use wall-clock build time.
+const sourceStamp = new Date(Number(execFileSync("git", ["show", "-s", "--format=%ct", "HEAD"], { encoding: "utf8" }).trim()) * 1000).toISOString();
 // scripts/generate_codex_indices.mjs
 import { promises as fs } from "fs";
 import path from "path";
@@ -124,7 +127,7 @@ async function generateChambersIndex() {
 
   const index = {
     version: "1.0.0",
-    generated_at: new Date().toISOString(),
+    generated_at: sourceStamp,
     roots: {
       canon: canonDir,
       eidolon: eidolonDir,
@@ -184,7 +187,7 @@ async function generateEchoesIndex() {
 
   const index = {
     version: "1.0.0",
-    generated_at: new Date().toISOString(),
+    generated_at: sourceStamp,
     root: echoDir,
     total: entries.length,
     echoes: entries,
