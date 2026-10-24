@@ -1,0 +1,78 @@
+name: Diamond cold release evidence
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/diamond-cold-release.yml'
+      - 'tools/diamond_checksum_provenance.py'
+      - 'tools/corpus_integrity_audit.py'
+      - 'tools/exhaustive_canon_inventory.py'
+permissions:
+  contents: read
+jobs:
+  cold-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Regression tests
+        run: python -m unittest -v tools/test_corpus_integrity_audit.py
+      - name: Frozen-checkout corpus and classification inventories
+        run: |
+          python tools/corpus_integrity_audit.py --root . --output /tmp/diamond-corpus-integrity.json
+          python tools/exhaustive_canon_inventory.py --root . --output /tmp/diamond-canon-inventory.json
+      - name: Exact ten-path checksum and commit provenance
+        run: python tools/diamond_checksum_provenance.py
+      - name: Evaluate gates and preserve residual findings
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path('/tmp/diamond-corpus-integrity.json').read_text())
+          b=json.loads(Path('/tmp/diamond-checksum-provenance.json').read_text())
+          i=json.loads(Path('/tmp/diamond-canon-inventory.json').read_text())
+          report={
+            'schema':'acacia.diamond-cold-release/1',
+            'checkout_head':a['checkout_head'],
+            'technical_checks':{
+              'checksum_entries_checked':a['checksum']['checked'],
+              'checksum_mismatches':len(a['checksum']['mismatches']),
+              'checksum_missing_paths':len(a['checksum']['missing']),
+              'checksum_invalid_lines':len(a['checksum']['invalid_lines']),
+              'ten_path_matches':sum(x['match'] for x in b['findings']),
+              'ten_path_total':len(b['findings']),
+              'simple_relative_link_findings':a['missing_link_count'],
+              'short_markdown':a['short_count'],
+              'unknown_classifications':i['unknown_count'],
+            },
+            'residual_findings':{
+              'checksum_mismatch_evidence':a['checksum']['mismatch_evidence'],
+              'checksum_missing_paths':a['checksum']['missing'],
+              'simple_relative_link_findings':a['relative_markdown_links_missing'],
+              'ten_path_unmatched':[x for x in b['findings'] if not x['match']],
+            },
+            'technical_integrity_gate_passed':not(a['checksum']['mismatches'] or a['checksum']['missing'] or a['checksum']['invalid_lines']),
+            'keeper_attestation':'not_tested_not_established',
+            'semantic_governance_conflicts':'not_tested_not_established',
+            'external_cold_reader':'not_performed',
+            'status':'advisory_not_final_seal',
+          }
+          Path('/tmp/diamond-release-verdict.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(report['technical_checks'],indent=2))
+          print('technical_integrity_gate_passed=',report['technical_integrity_gate_passed'])
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: diamond-cold-release-evidence
+          path: |
+            /tmp/diamond-corpus-integrity.json
+            /tmp/diamond-canon-inventory.json
+            /tmp/diamond-checksum-provenance.json
+            /tmp/diamond-release-verdict.json
+          retention-days: 30
