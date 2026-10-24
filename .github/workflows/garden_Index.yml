@@ -13,7 +13,7 @@ env:
   GIT_CONFIG_VALUE_0: main
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: acacia-main-autocommit
@@ -37,25 +37,8 @@ jobs:
       - name: Generate human Novellas index
         run: python tools/garden_index.py
 
-      - name: Commit human index if changed
+      - name: Report generated index drift
+        shell: bash
         run: |
           set -euo pipefail
-
-          if git diff --quiet -- docs/Novellas/GARDEN_MASTER_INDEX.md; then
-            echo "No human-index changes to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/Novellas/GARDEN_MASTER_INDEX.md
-          git commit -m "chore: update Novellas human index [autogen]"
-
-          for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            echo "Push conflicted, retrying ($i)..."
-            sleep $((RANDOM % 8 + 2))
-          done
-
-          echo "Push failed after retries."
-          exit 1
+          git diff --exit-code -- docs/Novellas/GARDEN_MASTER_INDEX.md
