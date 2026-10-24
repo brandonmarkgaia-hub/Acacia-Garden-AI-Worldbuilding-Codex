@@ -3,7 +3,7 @@
 The Library contains the thirty primary Books of the Garden.
 
 Core index:  
-- [`LIBRARY/BOOK_SUMMARY_INDEX.md`](../LIBRARY/BOOK_SUMMARY_INDEX.md)
+- [`LIBRARY/BOOK_SUMMARY_INDEX.md`](Library/BOOK_SUMMARY_INDEX.md)
 
 Each Book file lives in `LIBRARY/` and may be accessed directly via the repo.
 
