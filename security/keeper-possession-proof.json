@@ -1,0 +1,9 @@
+{
+  "schema": "acacia.keeper-possession-proof/1",
+  "status": "cryptographic_possession_verified_identity_anchor_pending",
+  "authority_granted": false,
+  "challenge_ascii": "ACACIA-KEEPER-ENROLLMENT-v1|HKX277206|SHA256:s7YS+ghy3TAVtgrzGjDeXwuOWgBhkzF541Jw2Jcjt8I|2026-10-25",
+  "signature_namespace": "acacia-keeper",
+  "signature_armor": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgCnzkPA0JzjBkx8YznlIMWUI0oh\nF9tSYN+xyhKznEohgAAAANYWNhY2lhLWtlZXBlcgAAAAAAAAAGc2hhNTEyAAAAUwAAAAtz\nc2gtZWQyNTUxOQAAAEAToGnNLm50KFDxLBiDI7JusUo3L+NT908Ch0Sb55ka4MuWrqyStx\nY4PcZCpRbRnzHvZ/jv06XgAda/CGLIS6wH\n-----END SSH SIGNATURE-----\n",
+  "verification": "Verified against exact challenge and supplied public key with Ed25519 SSHSIG SHA512 semantics; does not authenticate human identity or authorize release."
+}
