@@ -61,6 +61,17 @@ jobs:
           b=json.loads(Path('/tmp/diamond-checksum-provenance.json').read_text())
           i=json.loads(Path('/tmp/diamond-canon-inventory.json').read_text())
           m=json.loads(Path('/tmp/diamond-current-release-manifest.json').read_text())
+          # Fail closed until both checksum integrity and an independently verified
+          # trust anchor exist. A self-generated manifest is not an external anchor.
+          checksum_integrity_passed = not(
+              a['checksum']['mismatches'] or
+              a['checksum']['missing'] or
+              a['checksum']['invalid_lines']
+          )
+          independent_trust_anchor_verified = False
+          technical_integrity_gate_passed = (
+              checksum_integrity_passed and independent_trust_anchor_verified
+          )
           report={
             'schema':'acacia.diamond-cold-release/2',
             'checkout_head':a['checkout_head'],
@@ -84,7 +95,13 @@ jobs:
               'simple_relative_link_findings':a['relative_markdown_links_missing'],
               'ten_path_unmatched':[x for x in b['findings'] if not x['match']],
             },
-            'technical_integrity_gate_passed':not(a['checksum']['missing'] or a['checksum']['invalid_lines']),
+            'checksum_integrity_passed':checksum_integrity_passed,
+            'independent_trust_anchor_verified':independent_trust_anchor_verified,
+            'technical_integrity_gate_passed':technical_integrity_gate_passed,
+            'technical_integrity_gate_reason':(
+                'FAIL CLOSED: checksum integrity must be clean and an independent trust anchor '
+                'must be verified; this workflow does not yet verify an authenticated Keeper attestation'
+            ),
             'historical_snapshot_matches_current_checkout':not a['checksum']['mismatches'],
             'keeper_attestation':'not_tested_not_established',
             'semantic_governance_conflicts':'not_tested_not_established',
