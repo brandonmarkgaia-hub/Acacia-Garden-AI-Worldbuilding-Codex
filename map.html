@@ -184,13 +184,28 @@
         nodes: { font: { color: '#e5e7eb', face: 'system-ui' }, borderWidth: 2 },
         layout: { improvedLayout: false },
         physics: {
-          stabilization: false,
-          barnesHut: { gravitationalConstant: -3000, springLength: 150, springConstant: 0.04 }
+          enabled: true,
+          solver: 'barnesHut',
+          stabilization: { enabled: true, iterations: 400, updateInterval: 25, fit: true },
+          maxVelocity: 25,
+          minVelocity: 0.75,
+          barnesHut: { gravitationalConstant: -1600, springLength: 125, springConstant: 0.025, damping: 0.45 }
         },
         interaction: { hover: true, tooltipDelay: 200 }
       };
 
       const network = new vis.Network(container, data, options);
+      // Keep the initial constellation layout, but never let it drift forever.
+      network.once('stabilizationIterationsDone', () => {
+        network.setOptions({ physics: { enabled: false } });
+      });
+      // Deterministic finite fallback if the solver cannot converge normally.
+      let remainingTicks = 500;
+      network.on('afterDrawing', () => {
+        if (--remainingTicks <= 0) {
+          network.setOptions({ physics: { enabled: false } });
+        }
+      });
       
       // Click event to open files
       network.on("click", function (params) {
