@@ -1,0 +1,10 @@
+{
+  "schema": "acacia.keeper-key-candidate/1",
+  "status": "pending_signed_possession_proof_and_independent_fingerprint_anchor",
+  "authority_granted": false,
+  "keeper_marker": "HKX277206",
+  "algorithm": "ssh-ed25519",
+  "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAp85DwNCc4wZMfGM55SDFlCNKIRfbUmDfscoSs5xKIY Acacia Garden Keeper HKX277206",
+  "sha256_fingerprint": "SHA256:s7YS+ghy3TAVtgrzGjDeXwuOWgBhkzF541Jw2Jcjt8I",
+  "notes": "Candidate only. Matching fingerprint confirms key bytes, not human identity or Keeper authorization. Never promote based solely on repository content. Require signed challenge, independent fingerprint anchor, reviewed promotion, and tested verifier."
+}
