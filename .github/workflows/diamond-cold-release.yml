@@ -61,6 +61,17 @@ jobs:
           b=json.loads(Path('/tmp/diamond-checksum-provenance.json').read_text())
           i=json.loads(Path('/tmp/diamond-canon-inventory.json').read_text())
           m=json.loads(Path('/tmp/diamond-current-release-manifest.json').read_text())
+          # Fail closed until both checksum integrity and an independently verified
+          # trust anchor exist. A self-generated manifest is not an external anchor.
+          checksum_integrity_passed = not(
+              a['checksum']['mismatches'] or
+              a['checksum']['missing'] or
+              a['checksum']['invalid_lines']
+          )
+          independent_trust_anchor_verified = False
+          technical_integrity_gate_passed = (
+              checksum_integrity_passed and independent_trust_anchor_verified
+          )
           report={
             'schema':'acacia.diamond-cold-release/2',
             'checkout_head':a['checkout_head'],
@@ -84,7 +95,13 @@ jobs:
               'simple_relative_link_findings':a['relative_markdown_links_missing'],
               'ten_path_unmatched':[x for x in b['findings'] if not x['match']],
             },
-            'technical_integrity_gate_passed':not(a['checksum']['missing'] or a['checksum']['invalid_lines']),
+            'checksum_integrity_passed':checksum_integrity_passed,
+            'independent_trust_anchor_verified':independent_trust_anchor_verified,
+            'technical_integrity_gate_passed':technical_integrity_gate_passed,
+            'technical_integrity_gate_reason':(
+                'FAIL CLOSED: checksum integrity must be clean and an independent trust anchor '
+                'must be verified; this workflow does not yet verify an authenticated Keeper attestation'
+            ),
             'historical_snapshot_matches_current_checkout':not a['checksum']['mismatches'],
             'keeper_attestation':'not_tested_not_established',
             'semantic_governance_conflicts':'not_tested_not_established',
@@ -93,7 +110,10 @@ jobs:
           }
           Path('/tmp/diamond-release-verdict.json').write_text(json.dumps(report,indent=2)+'\n')
           print(json.dumps(report['technical_checks'],indent=2))
-          print('technical_integrity_gate_passed=',report['technical_integrity_gate_passed'])
+          print('checksum_integrity_passed=', report['checksum_integrity_passed'])
+          print('independent_trust_anchor_verified=', report['independent_trust_anchor_verified'])
+          print('technical_integrity_gate_passed=', report['technical_integrity_gate_passed'])
+          print('technical_integrity_gate_reason=', report['technical_integrity_gate_reason'])
           print('checksum_mismatch_paths=', json.dumps(a['checksum']['mismatches']))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -113,6 +133,9 @@ jobs:
           from pathlib import Path
           verdict=json.loads(Path('/tmp/diamond-release-verdict.json').read_text())
           if not verdict['technical_integrity_gate_passed']:
-              raise SystemExit('FAIL: frozen-checkout checksum integrity; inspect uploaded evidence')
+              raise SystemExit(
+                  'FAIL CLOSED: checksum integrity and/or independent trust anchor not established; '
+                  'inspect uploaded evidence artifact'
+              )
           print('PASS: current checkout manifest verified; historical checksum drift retained as residual evidence')
           PY
