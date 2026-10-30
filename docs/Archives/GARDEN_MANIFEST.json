@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 294268
+    "size_bytes": 294658
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11334,6 +11334,22 @@
     "name": "robots.txt",
     "ext": ".txt",
     "size_bytes": 120
+  },
+  {
+    "path": "security/keeper-possession-proof.json",
+    "top": "security",
+    "category": "",
+    "name": "keeper-possession-proof.json",
+    "ext": ".json",
+    "size_bytes": 832
+  },
+  {
+    "path": "security/keeper-public-key-candidate.json",
+    "top": "security",
+    "category": "",
+    "name": "keeper-public-key-candidate.json",
+    "ext": ".json",
+    "size_bytes": 853
   },
   {
     "path": "seed_leaves.sh",
