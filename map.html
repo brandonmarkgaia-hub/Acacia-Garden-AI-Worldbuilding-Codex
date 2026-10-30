@@ -184,13 +184,32 @@
         nodes: { font: { color: '#e5e7eb', face: 'system-ui' }, borderWidth: 2 },
         layout: { improvedLayout: false },
         physics: {
-          stabilization: false,
-          barnesHut: { gravitationalConstant: -3000, springLength: 150, springConstant: 0.04 }
+          enabled: true,
+          solver: 'barnesHut',
+          stabilization: { enabled: true, iterations: 1000, updateInterval: 50, fit: true },
+          maxVelocity: 20,
+          minVelocity: 1.5,
+          barnesHut: {
+            gravitationalConstant: -350,
+            centralGravity: 0.35,
+            springLength: 70,
+            springConstant: 0.06,
+            damping: 0.85,
+            avoidOverlap: 0.25
+          }
         },
         interaction: { hover: true, tooltipDelay: 200 }
       };
 
       const network = new vis.Network(container, data, options);
+      // Freeze the constellation as soon as vis-network completes stabilization.
+      // stopSimulation() is explicit: disabling physics alone can leave a queued
+      // simulation running until the next frame on some browsers.
+      network.once('stabilizationIterationsDone', () => {
+        network.stopSimulation();
+        network.setOptions({ physics: { enabled: false } });
+        network.fit({ animation: false });
+      });
       
       // Click event to open files
       network.on("click", function (params) {
