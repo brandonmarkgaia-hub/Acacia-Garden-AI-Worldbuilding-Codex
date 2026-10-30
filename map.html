@@ -186,25 +186,29 @@
         physics: {
           enabled: true,
           solver: 'barnesHut',
-          stabilization: { enabled: true, iterations: 400, updateInterval: 25, fit: true },
-          maxVelocity: 25,
-          minVelocity: 0.75,
-          barnesHut: { gravitationalConstant: -1600, springLength: 125, springConstant: 0.025, damping: 0.45 }
+          stabilization: { enabled: true, iterations: 1000, updateInterval: 50, fit: true },
+          maxVelocity: 20,
+          minVelocity: 1.5,
+          barnesHut: {
+            gravitationalConstant: -350,
+            centralGravity: 0.35,
+            springLength: 70,
+            springConstant: 0.06,
+            damping: 0.85,
+            avoidOverlap: 0.25
+          }
         },
         interaction: { hover: true, tooltipDelay: 200 }
       };
 
       const network = new vis.Network(container, data, options);
-      // Keep the initial constellation layout, but never let it drift forever.
+      // Freeze the constellation as soon as vis-network completes stabilization.
+      // stopSimulation() is explicit: disabling physics alone can leave a queued
+      // simulation running until the next frame on some browsers.
       network.once('stabilizationIterationsDone', () => {
+        network.stopSimulation();
         network.setOptions({ physics: { enabled: false } });
-      });
-      // Deterministic finite fallback if the solver cannot converge normally.
-      let remainingTicks = 500;
-      network.on('afterDrawing', () => {
-        if (--remainingTicks <= 0) {
-          network.setOptions({ physics: { enabled: false } });
-        }
+        network.fit({ animation: false });
       });
       
       // Click event to open files
