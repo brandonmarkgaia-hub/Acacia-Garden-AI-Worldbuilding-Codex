@@ -95,7 +95,7 @@ def audit(root):
     try:
         tracked = subprocess.check_output(
             ["git", "-C", str(root), "ls-files", "-z"], stderr=subprocess.DEVNULL
-        ).decode("utf-8", errors="replace").split("\\0")
+        ).decode("utf-8", errors="replace").split(chr(0))
         tracked = {p for p in tracked if p and p != "CHECKSUMS.sha256"}
         findings["checksum"]["uncovered_tracked"] = sorted(tracked - (seen if checks.exists() else set()))
     except (OSError, subprocess.CalledProcessError):
