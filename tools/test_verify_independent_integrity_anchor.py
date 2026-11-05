@@ -102,6 +102,32 @@ class IndependentAnchorTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.check()
 
+    def test_external_repository_binding_rejected(self):
+        inv, att = self.sign()
+        pub = self.key.public_key().public_bytes(serialization.Encoding.Raw, serialization.PublicFormat.Raw)
+        with self.assertRaises(ValueError):
+            verify(self.root, inv, att, digest(pub), self.now, self.commit,
+                   expected_repository="other/repository")
+
+    def test_external_challenge_binding_rejected(self):
+        inv, att = self.sign()
+        pub = self.key.public_key().public_bytes(serialization.Encoding.Raw, serialization.PublicFormat.Raw)
+        with self.assertRaises(ValueError):
+            verify(self.root, inv, att, digest(pub), self.now, self.commit,
+                   expected_challenge="independent-other-challenge-0123456789")
+
+    def test_signed_exclusions_still_rejected_pending_policy(self):
+        self.inventory["exclusions"] = ["b.txt"]
+        self.inventory["entries"].pop()
+        self.statement["exclusions"] = ["b.txt"]
+        with self.assertRaises(ValueError):
+            self.check()
+
+    def test_malformed_digest_rejected(self):
+        self.inventory["entries"][0]["sha256"] = "not-a-digest"
+        with self.assertRaises(ValueError):
+            self.check()
+
     def test_co_updated_content_and_inventory_without_external_signature_rejected(self):
         (self.root / "a.txt").write_text("tampered")
         inv, att = self.sign()
