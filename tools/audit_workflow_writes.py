@@ -44,6 +44,8 @@ def audit_text(path, text):
             writes.update(_permission_writes(job.get("permissions")))
     if writes and path not in REVIEWED_WRITE_WORKFLOWS:
         findings.append("unreviewed_write_permission:" + ",".join(sorted(writes)))
+    if re.search(r"\\bgit\\s+push\\b|\\bgh\\s+pr\\s+merge\\b", text):
+        findings.append("potential_direct_or_indirect_write")
     if "write-all" in writes:
         findings.append("write_all_permission")
     triggers = doc.get("on", {})
