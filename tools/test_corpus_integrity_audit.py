@@ -62,7 +62,7 @@ class CorpusAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "a.md").write_text("changed", encoding="utf-8")
-            (root / "CHECKSUMS.sha256").write_text("#" + "0" * 64 + "  a.md\\n", encoding="utf-8")
+            (root / "CHECKSUMS.sha256").write_text("#" + "0" * 64 + "  a.md\n", encoding="utf-8")
             result = audit(root)["checksum"]
             self.assertEqual(result["invalid_lines"], [1])
             self.assertTrue(result["empty"])
@@ -71,7 +71,7 @@ class CorpusAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "a.md").write_text("data", encoding="utf-8")
-            entry = "0" * 64 + "  a.md\\n"
+            entry = "0" * 64 + "  a.md\n"
             (root / "CHECKSUMS.sha256").write_text(entry + entry, encoding="utf-8")
             self.assertEqual(audit(root)["checksum"]["duplicate_paths"], ["a.md"])
 
