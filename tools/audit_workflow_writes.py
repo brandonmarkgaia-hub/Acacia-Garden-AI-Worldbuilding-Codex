@@ -33,7 +33,7 @@ def audit_text(path, text):
         return ["invalid_yaml"]
     if not isinstance(doc, dict):
         return ["invalid_workflow_document"]
-    if re.search(r"\\bgit\\s+push\\b|\\bgh\\s+pr\\s+merge\\b|\\bsubprocess\\.run\\s*\\(", text):
+    if ("git push" in text or "gh pr merge" in text or "subprocess.run(" in text):
         findings.append("potential_direct_or_indirect_write")
     jobs = doc.get("jobs", {})
     if jobs is None:
