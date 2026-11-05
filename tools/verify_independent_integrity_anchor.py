@@ -19,7 +19,8 @@ def canonical(value):
 def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
-def verify(root, inventory_bytes, attestation_bytes, expected_fingerprint, now, expected_commit,\n           expected_repository=None, expected_challenge=None):
+def verify(root, inventory_bytes, attestation_bytes, expected_fingerprint, now, expected_commit,
+           expected_repository=None, expected_challenge=None):
     root = Path(root).resolve()
     inventory = json.loads(inventory_bytes)
     attestation = json.loads(attestation_bytes)
@@ -77,7 +78,10 @@ def verify(root, inventory_bytes, attestation_bytes, expected_fingerprint, now, 
             raise ValueError("Content mismatch: " + path)
     if seen != tracked - set(exclusions):
         raise ValueError("Incomplete tracked-file coverage")
-    dirty = subprocess.check_output(["git", "-C", str(root), "status", "--porcelain", "--untracked-files=no"])\n    if dirty:\n        raise ValueError("Tracked checkout is dirty")\n    actual_commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+    dirty = subprocess.check_output(["git", "-C", str(root), "status", "--porcelain", "--untracked-files=no"])
+    if dirty:
+        raise ValueError("Tracked checkout is dirty")
+    actual_commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
     if actual_commit != expected_commit:
         raise ValueError("Checkout differs from attested commit")
     return {"status": "technical_inventory_verified", "commit": actual_commit,
@@ -94,10 +98,13 @@ def main():
     p.add_argument("--attestation", required=True)
     p.add_argument("--expected-signer-sha256", required=True)
     p.add_argument("--expected-commit", required=True)
-    p.add_argument("--now-unix", type=int, required=True)\n    p.add_argument("--expected-repository", required=True)\n    p.add_argument("--expected-challenge", required=True)
+    p.add_argument("--now-unix", type=int, required=True)
+    p.add_argument("--expected-repository", required=True)
+    p.add_argument("--expected-challenge", required=True)
     a = p.parse_args()
     result = verify(a.root, Path(a.inventory).read_bytes(), Path(a.attestation).read_bytes(),
-                    a.expected_signer_sha256, a.now_unix, a.expected_commit,\n                    a.expected_repository, a.expected_challenge)
+                    a.expected_signer_sha256, a.now_unix, a.expected_commit,
+                    a.expected_repository, a.expected_challenge)
     print(json.dumps(result, indent=2))
 
 if __name__ == "__main__":
