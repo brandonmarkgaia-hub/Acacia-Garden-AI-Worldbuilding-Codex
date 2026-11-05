@@ -25,7 +25,7 @@ def audit(root):
                 "checkout_head": None, "markdown_files": len(md),
                 "empty_or_short_markdown": [], "signature_footers": 0,
                 "files_with_status_marker": 0, "relative_markdown_links_missing": [],
-                "checksum": {"listed": 0, "checked": 0, "mismatches": [], "mismatch_evidence": [], "missing": [], "invalid_lines": []},
+                "checksum": {"listed": 0, "checked": 0, "mismatches": [], "mismatch_evidence": [], "missing": [], "invalid_lines": [], "duplicate_paths": [], "uncovered_tracked": [], "checksum_file_missing": False, "empty": False},
                 "limits": ["No semantic classification", "No authentication of Keeper",
                            "Link check covers only simple Markdown links",
                            "Checksum format is sha256sum-compatible lines only"]}
@@ -58,9 +58,15 @@ def audit(root):
                     "resolution": "candidate_requires_manual_review"
                 })
     checks = root / "CHECKSUMS.sha256"
-    if checks.exists():
+    if not checks.exists():
+        findings["checksum"]["checksum_file_missing"] = True
+    else:
+        seen = set()
         for line_number, line in enumerate(checks.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
-            if not line.strip() or line.lstrip().startswith("#"):
+            if not line.strip():
+                continue
+            if line.lstrip().startswith("#"):
+                findings["checksum"]["invalid_lines"].append(line_number)
                 continue
             match = re.fullmatch(r"([a-fA-F0-9]{64})  [*]?(.+)", line)
             if not match:
@@ -68,6 +74,10 @@ def audit(root):
                 continue
             digest, path = match.groups()
             findings["checksum"]["listed"] += 1
+            if path in seen:
+                findings["checksum"]["duplicate_paths"].append(path)
+                continue
+            seen.add(path)
             candidate = (root / path).resolve()
             if not candidate.is_relative_to(root) or not candidate.is_file():
                 findings["checksum"]["missing"].append(path)
@@ -81,6 +91,15 @@ def audit(root):
                     "expected_sha256": digest.lower(), "checkout_sha256": actual,
                     "resolution": "unreviewed_no_automatic_rewrite"
                 })
+    findings["checksum"]["empty"] = findings["checksum"]["checked"] == 0
+    try:
+        tracked = subprocess.check_output(
+            ["git", "-C", str(root), "ls-files", "-z"], stderr=subprocess.DEVNULL
+        ).decode("utf-8", errors="replace").split("\\0")
+        tracked = {p for p in tracked if p and p != "CHECKSUMS.sha256"}
+        findings["checksum"]["uncovered_tracked"] = sorted(tracked - (seen if checks.exists() else set()))
+    except (OSError, subprocess.CalledProcessError):
+        findings["limits"].append("Tracked-file coverage unavailable outside Git")
     findings["short_count"] = len(findings["empty_or_short_markdown"])
     findings["missing_link_count"] = len(findings["relative_markdown_links_missing"])
     return findings
