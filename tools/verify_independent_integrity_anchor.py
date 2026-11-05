@@ -41,6 +41,10 @@ def verify(root, inventory_bytes, attestation_bytes, expected_fingerprint, now, 
         raise ValueError("Attestation expired or issued in future")
     if not isinstance(statement.get("challenge"), str) or len(statement["challenge"]) < 24:
         raise ValueError("Missing reviewer challenge")
+    if expected_repository is not None and statement.get("repository") != expected_repository:
+        raise ValueError("Unexpected repository identity")
+    if expected_challenge is not None and statement.get("challenge") != expected_challenge:
+        raise ValueError("Unexpected reviewer challenge")
     if not statement.get("repository"):
         raise ValueError("Missing repository binding")
     if statement.get("repository") != inventory.get("repository"):
@@ -57,6 +61,8 @@ def verify(root, inventory_bytes, attestation_bytes, expected_fingerprint, now, 
         raise ValueError("Invalid exclusions")
     if set(exclusions) != set(statement.get("exclusions", [])):
         raise ValueError("Exclusions not signed")
+    if exclusions:
+        raise ValueError("Exclusions require independent policy review")
     if len(exclusions) != len(set(exclusions)) or not set(exclusions) <= tracked:
         raise ValueError("Invalid excluded paths")
     seen = set()
