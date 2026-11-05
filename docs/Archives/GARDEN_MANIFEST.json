@@ -11621,7 +11621,7 @@
     "category": "",
     "name": "audit_workflow_writes.py",
     "ext": ".py",
-    "size_bytes": 2759
+    "size_bytes": 4898
   },
   {
     "path": "tools/canon_register.advisory.json",
@@ -11805,7 +11805,7 @@
     "category": "",
     "name": "test_audit_workflow_writes.py",
     "ext": ".py",
-    "size_bytes": 1216
+    "size_bytes": 2208
   },
   {
     "path": "tools/test_canon_register.py",
