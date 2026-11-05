@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 294630
+    "size_bytes": 294849
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10422,6 +10422,14 @@
     "name": "rootlines.md",
     "ext": ".md",
     "size_bytes": 166
+  },
+  {
+    "path": "docs/security/DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
+    "top": "docs",
+    "category": "security",
+    "name": "DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
+    "ext": ".md",
+    "size_bytes": 2594
   },
   {
     "path": "docs/sidebar.md",
