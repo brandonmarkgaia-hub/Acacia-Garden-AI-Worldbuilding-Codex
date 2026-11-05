@@ -66,7 +66,11 @@ jobs:
           checksum_integrity_passed = not(
               a['checksum']['mismatches'] or
               a['checksum']['missing'] or
-              a['checksum']['invalid_lines']
+              a['checksum']['invalid_lines'] or
+              a['checksum']['duplicate_paths'] or
+              a['checksum']['uncovered_tracked'] or
+              a['checksum']['checksum_file_missing'] or
+              a['checksum']['empty']
           )
           independent_trust_anchor_verified = False
           technical_integrity_gate_passed = (
@@ -83,6 +87,10 @@ jobs:
               'checksum_mismatches':len(a['checksum']['mismatches']),
               'checksum_missing_paths':len(a['checksum']['missing']),
               'checksum_invalid_lines':len(a['checksum']['invalid_lines']),
+              'checksum_duplicate_paths':len(a['checksum']['duplicate_paths']),
+              'checksum_uncovered_tracked':len(a['checksum']['uncovered_tracked']),
+              'checksum_empty':a['checksum']['empty'],
+              'checksum_file_missing':a['checksum']['checksum_file_missing'],
               'ten_path_matches':sum(x['match'] for x in b['findings']),
               'ten_path_total':len(b['findings']),
               'simple_relative_link_findings':a['missing_link_count'],
@@ -92,6 +100,8 @@ jobs:
             'residual_findings':{
               'checksum_mismatch_evidence':a['checksum']['mismatch_evidence'],
               'checksum_missing_paths':a['checksum']['missing'],
+              'checksum_uncovered_tracked':a['checksum']['uncovered_tracked'],
+              'checksum_duplicate_paths':a['checksum']['duplicate_paths'],
               'simple_relative_link_findings':a['relative_markdown_links_missing'],
               'ten_path_unmatched':[x for x in b['findings'] if not x['match']],
             },
@@ -99,7 +109,7 @@ jobs:
             'independent_trust_anchor_verified':independent_trust_anchor_verified,
             'technical_integrity_gate_passed':technical_integrity_gate_passed,
             'technical_integrity_gate_reason':(
-                'FAIL CLOSED: checksum integrity must be clean and an independent trust anchor '
+                'HOLD: checksum integrity must be clean and an independent trust anchor '
                 'must be verified; this workflow does not yet verify an authenticated Keeper attestation'
             ),
             'historical_snapshot_matches_current_checkout':not a['checksum']['mismatches'],
