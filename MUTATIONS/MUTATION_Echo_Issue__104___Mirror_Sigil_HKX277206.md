@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #104, the Mirror Sigil.
