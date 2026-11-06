@@ -12,7 +12,7 @@ args = parser.parse_args()
 script = pathlib.Path(args.script).read_text()
 operations = re.findall(r'^([dq]) "([^"]+)"\s*$', script, re.M)
 errors, rows = [], []
-operation_lines = [line.strip() for line in script.splitlines() if re.match(r"^[dq]\\s", line.strip())]
+operation_lines = [line.strip() for line in script.splitlines() if re.match(r"^[dq](?![A-Za-z0-9_])", line.strip())]
 parsed_lines = [f'{action} "{source}"' for action, source in operations]
 if operation_lines != parsed_lines:
     errors.append("Unparsed or malformed cull operation line; fail closed")
