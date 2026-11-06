@@ -11661,7 +11661,7 @@
     "category": "",
     "name": "corpus_integrity_audit.py",
     "ext": ".py",
-    "size_bytes": 4614
+    "size_bytes": 5648
   },
   {
     "path": "tools/current_release_manifest.py",
@@ -11845,7 +11845,7 @@
     "category": "",
     "name": "test_corpus_integrity_audit.py",
     "ext": ".py",
-    "size_bytes": 2680
+    "size_bytes": 4614
   },
   {
     "path": "tools/test_external_attestation.py",
