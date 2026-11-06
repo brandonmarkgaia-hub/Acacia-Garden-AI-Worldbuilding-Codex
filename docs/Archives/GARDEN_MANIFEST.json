@@ -2168,6 +2168,22 @@
     "size_bytes": 1972
   },
   {
+    "path": "audits/CULL_DECISION_REVIEW_2026-11-06.md",
+    "top": "audits",
+    "category": "",
+    "name": "CULL_DECISION_REVIEW_2026-11-06.md",
+    "ext": ".md",
+    "size_bytes": 1335
+  },
+  {
+    "path": "audits/CULL_EXECUTION_GATE_2026-11-06.md",
+    "top": "audits",
+    "category": "",
+    "name": "CULL_EXECUTION_GATE_2026-11-06.md",
+    "ext": ".md",
+    "size_bytes": 2117
+  },
+  {
     "path": "audits/GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md",
     "top": "audits",
     "category": "",
@@ -2589,7 +2605,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 159006
+    "size_bytes": 159276
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2597,7 +2613,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59286
+    "size_bytes": 59377
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2605,7 +2621,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 295645
+    "size_bytes": 296039
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
