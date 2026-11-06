@@ -1,0 +1,33 @@
+name: Read-only cull reference census
+on:
+  pull_request:
+    paths:
+      - 'tools/garden_cull_reference_census.py'
+      - 'audits/golden_path_mutation_duplicate_pairs_2026-11-06.csv'
+      - '.github/workflows/cull-reference-census.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Run SHA256 and reference census (read-only)
+        run: |
+          python3 tools/garden_cull_reference_census.py \
+            --pairs-csv audits/golden_path_mutation_duplicate_pairs_2026-11-06.csv \
+            --output /tmp/cull-reference-census.json
+      - name: Publish evidence artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cull-reference-census
+          path: /tmp/cull-reference-census.json
+          if-no-files-found: warn
+          retention-days: 30
