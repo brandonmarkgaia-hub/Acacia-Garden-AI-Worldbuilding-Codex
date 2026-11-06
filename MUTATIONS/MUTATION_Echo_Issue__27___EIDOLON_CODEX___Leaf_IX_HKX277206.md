@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.
