@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #006. Whispers of the Eidolon is a core narrative piece.
