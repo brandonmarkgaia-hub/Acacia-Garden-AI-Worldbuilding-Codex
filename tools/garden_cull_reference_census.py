@@ -32,7 +32,7 @@ def main():
                 raise SystemExit(f"FAIL CLOSED: mismatched CSV survivor {expected}")
     else:
         script = args.cull_script.read_text(encoding="utf-8")
-        operations = re.findall(r'^d\s+"(MUTATIONS/MUTATION_[^"\n]+)"\s*
+        operations = re.findall(r'^d\s+"(MUTATIONS/MUTATION_[^"\n]+)"\s*$', script, flags=re.M)
     if len(operations) != 23 or len(set(operations)) != 23:
         raise SystemExit(f"FAIL CLOSED: expected exactly 23 distinct mutation deletions; got {len(operations)}")
     tracked_set = set(tracked)
