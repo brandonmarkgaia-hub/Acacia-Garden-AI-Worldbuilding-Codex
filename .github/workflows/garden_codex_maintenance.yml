@@ -437,6 +437,9 @@ jobs:
             echo "::group::Generated diff summary"
             git diff --stat -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json
             echo "::endgroup::"
+            echo "::group::Collision audit exact drift (bounded)"
+            git diff -- docs/Archives/TITLE_COLLISION_AUDIT.json docs/Archives/TITLE_COLLISION_AUDIT.md | head -120
+            echo "::endgroup::"
             exit 1
           fi
           echo "Generated artifacts match committed files."
