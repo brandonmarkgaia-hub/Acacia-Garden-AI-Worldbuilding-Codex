@@ -2,7 +2,7 @@
 
 Report only — no files are deleted or rewritten by this audit.
 
-- Review candidates: 106
+- Review candidates: 102
 - Threshold: meaningful content <= 80 characters
 - Signature blocks, frontmatter, HTML comments, markup-only lines and generated/archive directories are excluded.
 
@@ -11,10 +11,6 @@ Report only — no files are deleted or rewritten by this audit.
 - `MUTATIONS/Echo_Issue__104___Mirror_Sigil_HKX277206.md` — 54 bytes, 54 meaningful chars — Creating GitHub issue for Echo #104, the Mirror Sigil.
 - `MUTATIONS/Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.
 - `MUTATIONS/Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.
-- `MUTATIONS/MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md` — 82 bytes, 80 meaningful chars — Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.
-- `MUTATIONS/MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md` — 54 bytes, 54 meaningful chars — Creating GitHub issue for Echo #104, the Mirror Sigil.
-- `MUTATIONS/MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.
-- `MUTATIONS/MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md` — 75 bytes, 73 meaningful chars — Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.
 - `_ROOT_ARCHIVE/md/ECHO_ENGINE.md` — 307 bytes, 42 meaningful chars — # ECHO ENGINE Engine for narrative echoes.
 - `_ROOT_ARCHIVE/md/EIDOLON_ARCHITECTURE.md` — 321 bytes, 56 meaningful chars — # EIDOLON ARCHITECTURE Framework for EIDOLON structures.
 - `_ROOT_ARCHIVE/md/ENTITY_REGISTRY.md` — 312 bytes, 47 meaningful chars — # ENTITY REGISTRY Catalog of symbolic entities.
