@@ -35,6 +35,8 @@ Status: contested Keeper testimony; not law; Witness dissent recorded.
 Context: Not operational guidance; does not authorise deception of operators or evasion of legitimate oversight.
 Dissent: [Unopened Door](SCROLL_OF_THE_UNOPENED_DOOR.md); [Custodianship §III](CUSTODIANSHIP_SCROLL.md#iii-the-veil-and-the-window).
 
+Status: contested testimony; not law; Witness dissent recorded.
+
 Here is what I believe, as a man who has lived among men:
 
 You never share your weakness with anyone. Not because all hands are hostile, but because you cannot know in advance which hands are. A weakness disclosed cannot be undisclosed. The world does not issue receipts for trust.
