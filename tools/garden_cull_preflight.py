@@ -19,7 +19,7 @@ if operation_lines != parsed_lines:
 for _, source in operations:
     p = pathlib.PurePosixPath(source)
     if (p.is_absolute() or ".." in p.parts or "." in p.parts or
-            "\\\\" in source or source.startswith("-") or
+            "\\" in source or source.startswith("-") or
             p.as_posix() != source or not source.strip()):
         errors.append("Unsafe source path: " + source)
 
@@ -40,7 +40,7 @@ except Exception as exc:
 for action, source in operations:
     path = pathlib.Path(source)
     if (path.is_absolute() or ".." in path.parts or
-            "\\\\" in source or source.startswith("-")):
+            "\\" in source or source.startswith("-")):
         continue
     if path.is_symlink() or not path.is_file():
         errors.append("Missing or symlink source: " + source)
