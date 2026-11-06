@@ -2629,7 +2629,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 296777
+    "size_bytes": 296967
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11750,6 +11750,14 @@
     "name": "garden_cull_preflight.py",
     "ext": ".py",
     "size_bytes": 3867
+  },
+  {
+    "path": "tools/garden_cull_reference_census.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_cull_reference_census.py",
+    "ext": ".py",
+    "size_bytes": 2985
   },
   {
     "path": "tools/garden_cull_reference_scan.py",
