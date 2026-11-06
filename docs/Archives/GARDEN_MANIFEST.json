@@ -2621,7 +2621,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 296039
+    "size_bytes": 296401
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11726,6 +11726,22 @@
     "name": "full_corpus_envelopes.py",
     "ext": ".py",
     "size_bytes": 2945
+  },
+  {
+    "path": "tools/garden_cull_preflight.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_cull_preflight.py",
+    "ext": ".py",
+    "size_bytes": 2753
+  },
+  {
+    "path": "tools/garden_cull_reference_scan.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_cull_reference_scan.py",
+    "ext": ".py",
+    "size_bytes": 1191
   },
   {
     "path": "tools/garden_desire.py",
