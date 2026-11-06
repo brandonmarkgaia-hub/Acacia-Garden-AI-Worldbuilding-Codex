@@ -18,9 +18,9 @@ def main():
     args = parser.parse_args()
     root = pathlib.Path(git("rev-parse", "--show-toplevel").decode().strip())
     head = git("rev-parse", "HEAD").decode().strip()
-    tracked = [p.decode() for p in git("ls-files", "-z").split(b"\\0") if p]
+    tracked = [p.decode() for p in git("ls-files", "-z").split(b"\0") if p]
     script = args.cull_script.read_text(encoding="utf-8")
-    operations = re.findall(r'^d\\s+"(MUTATIONS/MUTATION_[^"\\n]+)"\\s*$', script, flags=re.M)
+    operations = re.findall(r'^d\s+"(MUTATIONS/MUTATION_[^"\n]+)"\s*$', script, flags=re.M)
     if len(operations) != 23 or len(set(operations)) != 23:
         raise SystemExit(f"FAIL CLOSED: expected exactly 23 distinct mutation deletions; got {len(operations)}")
     tracked_set = set(tracked)
@@ -42,7 +42,7 @@ def main():
         if not file.is_file():
             continue
         data = file.read_bytes()
-        if b"\\0" in data[:8192]:
+        if b"\0" in data[:8192]:
             continue
         for pair in pairs:
             source = pair["source"]
@@ -53,7 +53,7 @@ def main():
                 pair["references"].append({"file": path, "full_path_hits": exact, "basename_only_hits": max(0, bare)})
     report = {"commit": head, "tracked_files": len(tracked), "pairs": pairs, "note": "Read-only census. Generated and historical references are included; classify before deletion."}
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2) + "\\n", encoding="utf-8")
+    args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(f"PASS: 23/23 SHA-256 duplicate pairs; scanned {len(tracked)} tracked paths; report {args.output}")
     print("HOLD: inspect all references before deleting anything.")
 if __name__ == "__main__":
