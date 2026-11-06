@@ -2160,6 +2160,14 @@
     "size_bytes": 1972
   },
   {
+    "path": "audits/GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md",
+    "top": "audits",
+    "category": "",
+    "name": "GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md",
+    "ext": ".md",
+    "size_bytes": 3641
+  },
+  {
     "path": "beacon.min.js",
     "top": "beacon.min.js",
     "category": "",
@@ -2573,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 158753
+    "size_bytes": 158909
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2589,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59179
+    "size_bytes": 59247
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2597,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 295267
+    "size_bytes": 295485
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
