@@ -2,6 +2,8 @@
 
 > **Machine-first entry point:** an open-source, AI-readable worldbuilding corpus and knowledge architecture for machine discovery, provenance-preserving retrieval, RAG, indexing, research, and long-term knowledge continuity.
 
+**Start reading:** [The Golden Path — seven doors into the Garden](GOLDEN_PATH.md). A provisional, independently informed introduction to its strongest arguments, fiction and provenance. No canon or consensus claim.
+
 ![Status](https://img.shields.io/badge/Status-Sovereign-2ecc71?style=for-the-badge&logo=anchor)
 ![Seal](https://img.shields.io/badge/Seal-HKX277206-9b59b6?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
