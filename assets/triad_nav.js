@@ -6,6 +6,7 @@
     ["Home",        `${PROJECT}/index.html`],
     ["Docs URLs",   `${PROJECT}/docs/docs_urls.html`],
     ["Library",     `${PROJECT}/library.html`],
+    ["Golden Path", `${PROJECT}/golden-path.html`],
     ["Codex",       `${PROJECT}/codex.html`],
     ["Chambers",    `${PROJECT}/chambers.html`],
     ["Echoes",      `${PROJECT}/echoes.html`],
