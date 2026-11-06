@@ -31,16 +31,24 @@ try:
     branch = git("branch", "--show-current")
     if branch in ("", "main", "master"):
         errors.append("Refusing default branch or detached HEAD")
+    tracked = set(git("ls-files", "-z").split("\\0"))
     dirty = [line for line in git("status", "--porcelain").splitlines() if line[3:] != args.script]
     if dirty:
         errors.append("Working tree not clean except cull script")
 except Exception as exc:
     branch = "unknown"
+    tracked = set()
     errors.append("Git preflight failed: " + str(exc))
 for action, source in operations:
     path = pathlib.Path(source)
     if (path.is_absolute() or ".." in path.parts or
             "\\" in source or source.startswith("-")):
+        continue
+    if any(parent.is_symlink() for parent in path.parents if parent != pathlib.Path(".")):
+        errors.append("Symlink parent directory: " + source)
+        continue
+    if source not in tracked:
+        errors.append("Source is not tracked by Git: " + source)
         continue
     if path.is_symlink() or not path.is_file():
         errors.append("Missing or symlink source: " + source)
@@ -52,7 +60,7 @@ for action, source in operations:
     if action == "q":
         dest = pathlib.Path("_ROOT_ARCHIVE/generated_era") / source
         row["destination"] = dest.as_posix()
-        if dest.exists():
+        if dest.exists() or dest.as_posix() in tracked:
             errors.append("Destination already exists: " + str(dest))
     elif source.startswith("MUTATIONS/MUTATION_"):
         twin = pathlib.Path("MUTATIONS") / path.name.removeprefix("MUTATION_")
