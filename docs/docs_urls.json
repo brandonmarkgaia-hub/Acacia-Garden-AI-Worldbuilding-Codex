@@ -2,7 +2,7 @@
   "generated_at": "2026-10-24T16:09:56Z",
   "scope": "tracked files under docs/ with extensions .html, .md, .json, and .txt",
   "purpose": "Broad document-path registry for discovery. Its count is not expected to match machine-index.json.",
-  "count": 1203,
+  "count": 1204,
   "paths": [
     "ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "ACACIA_SPECS/ARCHETYPE_INTERACTION_MAP.md",
@@ -1204,6 +1204,7 @@
     "projects/C_SYMBOLIC_PROJECTS.md",
     "protocols/veiled_garden_protocol.md",
     "rootlines.md",
+    "security/DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
     "sidebar.md",
     "specs.md",
     "universe/architecture.md"
