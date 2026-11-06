@@ -528,6 +528,14 @@
     "size_bytes": 2072
   },
   {
+    "path": "GOLDEN_PATH.md",
+    "top": "GOLDEN_PATH.md",
+    "category": "",
+    "name": "GOLDEN_PATH.md",
+    "ext": ".md",
+    "size_bytes": 4265
+  },
+  {
     "path": "GRAND_CHAMBER/ANCIENT_CHAMBERS/CHAMBER_A_SAND_ARCHIVE_KHYREM.md",
     "top": "GRAND_CHAMBER",
     "category": "",
@@ -1165,7 +1173,7 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 9841
+    "size_bytes": 10060
   },
   {
     "path": "SCHEMAS/chamber_index.schema.json",
@@ -2589,7 +2597,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 295267
+    "size_bytes": 295427
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
