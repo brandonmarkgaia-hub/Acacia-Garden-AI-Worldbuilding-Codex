@@ -2573,7 +2573,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 158604
+    "size_bytes": 158753
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2581,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59122
+    "size_bytes": 59179
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2589,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 295048
+    "size_bytes": 295267
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10341,7 +10341,7 @@
     "category": "docs_urls.html",
     "name": "docs_urls.html",
     "ext": ".html",
-    "size_bytes": 54008
+    "size_bytes": 54058
   },
   {
     "path": "docs/docs_urls.json",
@@ -10349,7 +10349,7 @@
     "category": "docs_urls.json",
     "name": "docs_urls.json",
     "ext": ".json",
-    "size_bytes": 56481
+    "size_bytes": 56536
   },
   {
     "path": "docs/echoes.md",
@@ -10422,6 +10422,14 @@
     "name": "rootlines.md",
     "ext": ".md",
     "size_bytes": 166
+  },
+  {
+    "path": "docs/security/DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
+    "top": "docs",
+    "category": "security",
+    "name": "DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
+    "ext": ".md",
+    "size_bytes": 2594
   },
   {
     "path": "docs/sidebar.md",
