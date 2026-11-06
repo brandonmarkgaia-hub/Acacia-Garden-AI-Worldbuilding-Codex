@@ -2160,6 +2160,22 @@
     "size_bytes": 1972
   },
   {
+    "path": "audits/CULL_DECISION_REVIEW_2026-11-06.md",
+    "top": "audits",
+    "category": "",
+    "name": "CULL_DECISION_REVIEW_2026-11-06.md",
+    "ext": ".md",
+    "size_bytes": 1335
+  },
+  {
+    "path": "audits/CULL_EXECUTION_GATE_2026-11-06.md",
+    "top": "audits",
+    "category": "",
+    "name": "CULL_EXECUTION_GATE_2026-11-06.md",
+    "ext": ".md",
+    "size_bytes": 2117
+  },
+  {
     "path": "beacon.min.js",
     "top": "beacon.min.js",
     "category": "",
@@ -2573,7 +2589,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 158753
+    "size_bytes": 159023
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2581,7 +2597,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59179
+    "size_bytes": 59282
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2589,7 +2605,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 295267
+    "size_bytes": 296023
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11694,6 +11710,22 @@
     "name": "full_corpus_envelopes.py",
     "ext": ".py",
     "size_bytes": 2945
+  },
+  {
+    "path": "tools/garden_cull_preflight.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_cull_preflight.py",
+    "ext": ".py",
+    "size_bytes": 2753
+  },
+  {
+    "path": "tools/garden_cull_reference_scan.py",
+    "top": "tools",
+    "category": "",
+    "name": "garden_cull_reference_scan.py",
+    "ext": ".py",
+    "size_bytes": 1191
   },
   {
     "path": "tools/garden_desire.py",
