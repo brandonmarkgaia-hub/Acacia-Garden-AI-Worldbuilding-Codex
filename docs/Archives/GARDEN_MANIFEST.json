@@ -2157,7 +2157,7 @@
     "category": "",
     "name": "triad_nav.js",
     "ext": ".js",
-    "size_bytes": 3683
+    "size_bytes": 3735
   },
   {
     "path": "assets/void_reconstruction.json",
@@ -2621,7 +2621,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 296401
+    "size_bytes": 296569
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -10952,6 +10952,14 @@
     "size_bytes": 2360
   },
   {
+    "path": "golden-path.html",
+    "top": "golden-path.html",
+    "category": "",
+    "name": "golden-path.html",
+    "ext": ".html",
+    "size_bytes": 16891
+  },
+  {
     "path": "gravity_manifest.yml",
     "top": "gravity_manifest.yml",
     "category": "",
@@ -10997,7 +11005,7 @@
     "category": "",
     "name": "index.html",
     "ext": ".html",
-    "size_bytes": 16688
+    "size_bytes": 17092
   },
   {
     "path": "js/app.js",
