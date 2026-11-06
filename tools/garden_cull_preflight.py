@@ -10,7 +10,7 @@ parser.add_argument("--script", default="cull.sh")
 parser.add_argument("--report", default="cull_preflight.json")
 args = parser.parse_args()
 script = pathlib.Path(args.script).read_text()
-operations = re.findall(r'^([dq]) "([^"]+)"\\s*$', script, re.M)
+operations = re.findall(r'^([dq]) "([^"]+)"\s*$', script, re.M)
 errors, rows = [], []
 if len(operations) != 242 or len({p for _, p in operations}) != 242:
     errors.append("Expected 242 distinct operations")
