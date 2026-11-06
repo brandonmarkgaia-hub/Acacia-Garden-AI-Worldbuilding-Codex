@@ -5575,6 +5575,11 @@
     "name": "rootlines.md"
   },
   {
+    "path": "docs/security/DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md",
+    "top": "docs",
+    "name": "DIAMOND_INDEPENDENT_ANCHOR_CONTRACT.md"
+  },
+  {
     "path": "docs/sidebar.md",
     "top": "docs",
     "name": "sidebar.md"
