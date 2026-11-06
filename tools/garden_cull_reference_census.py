@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only, pinned-commit census of 23 prefixed mutation duplicate pairs."""
 import argparse
+import csv
 import hashlib
 import json
 import pathlib
@@ -13,14 +14,25 @@ def git(*args):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--cull-script", required=True, type=pathlib.Path)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--cull-script", type=pathlib.Path)
+    group.add_argument("--pairs-csv", type=pathlib.Path)
     parser.add_argument("--output", type=pathlib.Path, default=pathlib.Path("/tmp/garden-cull-reference-census.json"))
     args = parser.parse_args()
     root = pathlib.Path(git("rev-parse", "--show-toplevel").decode().strip())
     head = git("rev-parse", "HEAD").decode().strip()
     tracked = [p.decode() for p in git("ls-files", "-z").split(b"\0") if p]
-    script = args.cull_script.read_text(encoding="utf-8")
-    operations = re.findall(r'^d\s+"(MUTATIONS/MUTATION_[^"\n]+)"\s*$', script, flags=re.M)
+    if args.pairs_csv:
+        with args.pairs_csv.open(encoding="utf-8", newline="") as stream:
+            rows = list(csv.DictReader(stream))
+        operations = [row["prefixed_path"] for row in rows]
+        for row in rows:
+            expected = "MUTATIONS/" + row["prefixed_path"][len("MUTATIONS/MUTATION_"):]
+            if row["unprefixed_path"] != expected:
+                raise SystemExit(f"FAIL CLOSED: mismatched CSV survivor {expected}")
+    else:
+        script = args.cull_script.read_text(encoding="utf-8")
+        operations = re.findall(r'^d\s+"(MUTATIONS/MUTATION_[^"\n]+)"\s*$', script, flags=re.M)
     if len(operations) != 23 or len(set(operations)) != 23:
         raise SystemExit(f"FAIL CLOSED: expected exactly 23 distinct mutation deletions; got {len(operations)}")
     tracked_set = set(tracked)
