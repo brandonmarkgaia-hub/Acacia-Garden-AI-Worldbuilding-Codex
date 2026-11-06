@@ -960,6 +960,11 @@
     "name": "garden_signature_report.md"
   },
   {
+    "path": "audits/GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md",
+    "top": "audits",
+    "name": "GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md"
+  },
+  {
     "path": "docs/ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "top": "docs",
     "name": "AQL_SPEC_v0.1.md"
