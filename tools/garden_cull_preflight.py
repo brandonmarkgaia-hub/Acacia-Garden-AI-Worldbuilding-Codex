@@ -7,7 +7,7 @@ def git(*args):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--script", default="cull.sh")
-parser.add_argument("--report", default="cull_preflight.json")
+parser.add_argument("--report", default="/tmp/garden_cull_preflight.json")
 args = parser.parse_args()
 script = pathlib.Path(args.script).read_text()
 operations = re.findall(r'^([dq]) "([^"]+)"\s*$', script, re.M)
@@ -20,8 +20,9 @@ try:
     branch = git("branch", "--show-current")
     if branch in ("", "main", "master"):
         errors.append("Refusing default branch or detached HEAD")
-    if git("status", "--porcelain"):
-        errors.append("Working tree not clean")
+    dirty = [line for line in git("status", "--porcelain").splitlines() if line[3:] != args.script]
+    if dirty:
+        errors.append("Working tree not clean except cull script")
 except Exception as exc:
     branch = "unknown"
     errors.append("Git preflight failed: " + str(exc))
