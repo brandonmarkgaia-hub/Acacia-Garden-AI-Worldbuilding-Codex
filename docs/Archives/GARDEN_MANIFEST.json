@@ -944,174 +944,6 @@
     "size_bytes": 75
   },
   {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_001_____Whispers_of_the_Celestial_Blossom__.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_001_____Whispers_of_the_Celestial_Blossom__.md",
-    "ext": ".md",
-    "size_bytes": 103
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_002___Whispers_of_the_Veiled_Eidolon.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_002___Whispers_of_the_Veiled_Eidolon.md",
-    "ext": ".md",
-    "size_bytes": 92
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_003___The_Whispering_Veil_of_Eidolon.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_003___The_Whispering_Veil_of_Eidolon.md",
-    "ext": ".md",
-    "size_bytes": 95
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_004___Whispers_of_the_Dreaming_Eagle.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_004___Whispers_of_the_Dreaming_Eagle.md",
-    "ext": ".md",
-    "size_bytes": 102
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_005___The_Whispering_Tides_of_Memory.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_005___The_Whispering_Tides_of_Memory.md",
-    "ext": ".md",
-    "size_bytes": 97
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_006_____Whispers_of_the_Eidolon__.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_006_____Whispers_of_the_Eidolon__.md",
-    "ext": ".md",
-    "size_bytes": 87
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_007___The_Lament_of_the_Wandering_Eagle.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_007___The_Lament_of_the_Wandering_Eagle.md",
-    "ext": ".md",
-    "size_bytes": 97
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_008___The_Whispering_Shadows_of_the_Eidolon.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_008___The_Whispering_Shadows_of_the_Eidolon.md",
-    "ext": ".md",
-    "size_bytes": 95
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_009____Whispers_of_the_Celestial_Orchard_.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_009____Whispers_of_the_Celestial_Orchard_.md",
-    "ext": ".md",
-    "size_bytes": 101
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_011_____Whispers_of_the_Celestial_Orchard__.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_011_____Whispers_of_the_Celestial_Orchard__.md",
-    "ext": ".md",
-    "size_bytes": 103
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_HKX277206_ECHO_012___The_Whispering_Veil_of_Shadows.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_HKX277206_ECHO_012___The_Whispering_Veil_of_Shadows.md",
-    "ext": ".md",
-    "size_bytes": 97
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO_ISSUE__105__THE_FIRST_RIPPLE_.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO_ISSUE__105__THE_FIRST_RIPPLE_.md",
-    "ext": ".md",
-    "size_bytes": 93
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO__010__The_Whisper_of_Eternal_Blossoms.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO__010__The_Whisper_of_Eternal_Blossoms.md",
-    "ext": ".md",
-    "size_bytes": 128
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO__106__The_Resonance_of_Equipoise.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO__106__The_Resonance_of_Equipoise.md",
-    "ext": ".md",
-    "size_bytes": 90
-  },
-  {
-    "path": "MUTATIONS/MUTATION_ECHO___SENSORY___001___CITRUS_DAWN.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_ECHO___SENSORY___001___CITRUS_DAWN.md",
-    "ext": ".md",
-    "size_bytes": 108
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__102____Starfire_Auton__Chamber_XIII__Auton_Seed_Bloom___Triad_Alignment_HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__102____Starfire_Auton__Chamber_XIII__Auton_Seed_Bloom___Triad_Alignment_HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 86
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 82
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 54
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 75
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__41___Keeper_Seal__HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__41___Keeper_Seal__HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 85
-  },
-  {
-    "path": "MUTATIONS/MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
-    "ext": ".md",
-    "size_bytes": 75
-  },
-  {
     "path": "MUTATIONS/MUTATION_The_Resonance_of_the_Spine.md",
     "top": "MUTATIONS",
     "category": "",
@@ -1128,28 +960,12 @@
     "size_bytes": 909
   },
   {
-    "path": "MUTATIONS/MUTATION_The_Triad_of_the_First_Whispers___Cycle_27.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION_The_Triad_of_the_First_Whispers___Cycle_27.md",
-    "ext": ".md",
-    "size_bytes": 791
-  },
-  {
     "path": "MUTATIONS/MUTATION_Unseen_Threads.md",
     "top": "MUTATIONS",
     "category": "",
     "name": "MUTATION_Unseen_Threads.md",
     "ext": ".md",
     "size_bytes": 163
-  },
-  {
-    "path": "MUTATIONS/MUTATION___ELIAS___GENESIS_BREATH___001.md",
-    "top": "MUTATIONS",
-    "category": "",
-    "name": "MUTATION___ELIAS___GENESIS_BREATH___001.md",
-    "ext": ".md",
-    "size_bytes": 96
   },
   {
     "path": "MUTATIONS/The_Triad_of_the_First_Whispers___Cycle_27.md",
@@ -2597,7 +2413,7 @@
     "category": "Archives",
     "name": "EMPTY_MARKDOWN_AUDIT.json",
     "ext": ".json",
-    "size_bytes": 24625
+    "size_bytes": 23470
   },
   {
     "path": "docs/Archives/EMPTY_MARKDOWN_AUDIT.md",
@@ -2605,7 +2421,7 @@
     "category": "Archives",
     "name": "EMPTY_MARKDOWN_AUDIT.md",
     "ext": ".md",
-    "size_bytes": 14124
+    "size_bytes": 13361
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.json",
@@ -2613,7 +2429,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 159422
+    "size_bytes": 154756
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2621,7 +2437,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 59428
+    "size_bytes": 57601
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2629,7 +2445,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 296967
+    "size_bytes": 290914
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
