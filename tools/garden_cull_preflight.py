@@ -12,6 +12,15 @@ args = parser.parse_args()
 script = pathlib.Path(args.script).read_text()
 operations = re.findall(r'^([dq]) "([^"]+)"\s*$', script, re.M)
 errors, rows = [], []
+if operation_lines != parsed_lines:
+    errors.append("Unparsed or malformed cull operation line; fail closed")
+for _, source in operations:
+    p = pathlib.PurePosixPath(source)
+    if (p.is_absolute() or ".." in p.parts or "." in p.parts or
+            "\\\\" in source or source.startswith("-") or
+            p.as_posix() != source or not source.strip()):
+        errors.append("Unsafe source path: " + source)
+
 if len(operations) != 242 or len({p for _, p in operations}) != 242:
     errors.append("Expected 242 distinct operations")
 if sum(k == "d" for k, _ in operations) != 61 or sum(k == "q" for k, _ in operations) != 181:
@@ -28,6 +37,9 @@ except Exception as exc:
     errors.append("Git preflight failed: " + str(exc))
 for action, source in operations:
     path = pathlib.Path(source)
+    if (path.is_absolute() or ".." in path.parts or
+            "\\\\" in source or source.startswith("-")):
+        continue
     if path.is_symlink() or not path.is_file():
         errors.append("Missing or symlink source: " + source)
         continue
