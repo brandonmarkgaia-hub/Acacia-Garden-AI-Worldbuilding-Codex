@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #105. This is the first ripple in a significant narrative arc.
