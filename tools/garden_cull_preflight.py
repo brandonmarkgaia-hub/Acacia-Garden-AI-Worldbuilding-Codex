@@ -37,6 +37,7 @@ try:
         errors.append("Working tree not clean except cull script")
 except Exception as exc:
     branch = "unknown"
+    tracked = set()
     errors.append("Git preflight failed: " + str(exc))
 for action, source in operations:
     path = pathlib.Path(source)
