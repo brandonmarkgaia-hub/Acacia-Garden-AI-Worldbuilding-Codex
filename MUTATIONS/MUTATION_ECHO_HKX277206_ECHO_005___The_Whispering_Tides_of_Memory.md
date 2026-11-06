@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #005. The Whispering Tides of Memory is vital for lore continuity.

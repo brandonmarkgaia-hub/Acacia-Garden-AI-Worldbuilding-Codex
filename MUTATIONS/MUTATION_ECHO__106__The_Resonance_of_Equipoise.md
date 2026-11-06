@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #106. The Resonance of Equipoise is a foundational concept.

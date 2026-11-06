@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #003. The Whispering Veil of Eidolon expands on previous themes.

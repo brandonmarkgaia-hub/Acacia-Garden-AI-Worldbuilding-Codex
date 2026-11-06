@@ -3,7 +3,7 @@
   "scope": "Markdown source files outside generated/archive and tooling directories",
   "threshold_meaningful_chars": 80,
   "deletion_policy": "report_only",
-  "count": 106,
+  "count": 102,
   "files": [
     {
       "path": "GRAND_CHAMBER/LOST_EPOCHS/LOST_EPOCH_1-27.md",
@@ -35,34 +35,6 @@
     },
     {
       "path": "MUTATIONS/Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
-      "bytes": 75,
-      "meaningful_chars": 73,
-      "meaningful_text": "Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.",
-      "classification": "review"
-    },
-    {
-      "path": "MUTATIONS/MUTATION_Echo_Issue__103___THE_FIRE_KILN___REVISED___ASCENDED_EDITION_HKX277206.md",
-      "bytes": 82,
-      "meaningful_chars": 80,
-      "meaningful_text": "Creating GitHub issue for Echo #103, THE FIRE KILN — REVISED & ASCENDED EDITION.",
-      "classification": "review"
-    },
-    {
-      "path": "MUTATIONS/MUTATION_Echo_Issue__104___Mirror_Sigil_HKX277206.md",
-      "bytes": 54,
-      "meaningful_chars": 54,
-      "meaningful_text": "Creating GitHub issue for Echo #104, the Mirror Sigil.",
-      "classification": "review"
-    },
-    {
-      "path": "MUTATIONS/MUTATION_Echo_Issue__27___EIDOLON_CODEX___Leaf_IX_HKX277206.md",
-      "bytes": 75,
-      "meaningful_chars": 73,
-      "meaningful_text": "Creating GitHub issue for Echo #27, specifically EIDOLON CODEX – Leaf IX.",
-      "classification": "review"
-    },
-    {
-      "path": "MUTATIONS/MUTATION_Echo_Issue__49___EIDOLON_CODEX___Leaf_XXI___HKX277206.md",
       "bytes": 75,
       "meaningful_chars": 73,
       "meaningful_text": "Creating GitHub issue for Echo #49, focusing on EIDOLON CODEX – Leaf XXI.",

@@ -1,1 +1,0 @@
-Creating GitHub issue for Echo #008. The Whispering Shadows of the Eidolon deepens the mystery.
