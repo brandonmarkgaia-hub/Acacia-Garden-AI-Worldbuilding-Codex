@@ -1,0 +1,31 @@
+{
+  "schema": "acacia.cev/0.1",
+  "records": [
+    {
+      "id": "cev-001",
+      "claim": "The Garden uses an AUTHORITY.json authority file.",
+      "claim_type": "observed_text",
+      "verification": "evidence_checked",
+      "evidence": [
+        {
+          "path": "AUTHORITY.json",
+          "excerpt": "\"schema\": \"acacia.authority/1.0\"",
+          "sha256": null
+        }
+      ],
+      "limitations": [
+        "Excerpt match confirms only the file text, not correctness of all authority assertions."
+      ]
+    },
+    {
+      "id": "cev-002",
+      "claim": "A future parser could support read-only structured queries.",
+      "claim_type": "proposal",
+      "verification": "unverified",
+      "evidence": [],
+      "limitations": [
+        "No operational ANTLR4 parser demonstrated."
+      ]
+    }
+  ]
+}

@@ -2453,7 +2453,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 291136
+    "size_bytes": 291831
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -2853,7 +2853,7 @@
     "category": "Archives",
     "name": "TITLE_COLLISION_AUDIT.json",
     "ext": ".json",
-    "size_bytes": 199988
+    "size_bytes": 200033
   },
   {
     "path": "docs/Archives/TITLE_COLLISION_AUDIT.md",
@@ -2861,7 +2861,7 @@
     "category": "Archives",
     "name": "TITLE_COLLISION_AUDIT.md",
     "ext": ".md",
-    "size_bytes": 27247
+    "size_bytes": 27283
   },
   {
     "path": "docs/Blooms/Auton-Seed.md",
@@ -11190,6 +11190,38 @@
     "name": "r9x2.html",
     "ext": ".html",
     "size_bytes": 5355
+  },
+  {
+    "path": "research/claim_evidence/README.md",
+    "top": "research",
+    "category": "",
+    "name": "README.md",
+    "ext": ".md",
+    "size_bytes": 1573
+  },
+  {
+    "path": "research/claim_evidence/examples.json",
+    "top": "research",
+    "category": "",
+    "name": "examples.json",
+    "ext": ".json",
+    "size_bytes": 823
+  },
+  {
+    "path": "research/claim_evidence/test_validate.py",
+    "top": "research",
+    "category": "",
+    "name": "test_validate.py",
+    "ext": ".py",
+    "size_bytes": 1516
+  },
+  {
+    "path": "research/claim_evidence/validate.py",
+    "top": "research",
+    "category": "",
+    "name": "validate.py",
+    "ext": ".py",
+    "size_bytes": 3598
   },
   {
     "path": "rings.html",
