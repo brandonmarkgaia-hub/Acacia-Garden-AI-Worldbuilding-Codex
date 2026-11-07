@@ -865,6 +865,11 @@
     "name": "GOLDEN_PATH_PRESERVATION_AUDIT_2026-11-06.md"
   },
   {
+    "path": "audits/remaining_cull_candidates_review_2026-11-07.md",
+    "top": "audits",
+    "name": "remaining_cull_candidates_review_2026-11-07.md"
+  },
+  {
     "path": "docs/ACACIA_SPECS/AQL_SPEC_v0.1.md",
     "top": "docs",
     "name": "AQL_SPEC_v0.1.md"
