@@ -1,8 +1,8 @@
 {
   "schema": "acacia.schema.json#/definitions/variant_metadata",
   "generated_by": ".github/scripts/audit_title_collisions.py",
-  "tracked_files_hashed": 1851,
-  "text_like_files_grouped": 1211,
+  "tracked_files_hashed": 1855,
+  "text_like_files_grouped": 1212,
   "structural_filename_collision_groups": 75,
   "collision_groups": 114,
   "distinct_variant_groups": 4,
@@ -5429,6 +5429,7 @@
         "docs/Library/Summaries/README.md",
         "docs/Rites/README.md",
         "memory/README.md",
+        "research/claim_evidence/README.md",
         "tools/README.md"
       ]
     },
