@@ -2016,6 +2016,14 @@
     "size_bytes": 3641
   },
   {
+    "path": "audits/remaining_cull_candidates_review_2026-11-07.md",
+    "top": "audits",
+    "category": "",
+    "name": "remaining_cull_candidates_review_2026-11-07.md",
+    "ext": ".md",
+    "size_bytes": 3161
+  },
+  {
     "path": "beacon.min.js",
     "top": "beacon.min.js",
     "category": "",
@@ -2429,7 +2437,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.json",
     "ext": ".json",
-    "size_bytes": 154756
+    "size_bytes": 154916
   },
   {
     "path": "docs/Archives/FULL_CODEX_INDEX.md",
@@ -2437,7 +2445,7 @@
     "category": "Archives",
     "name": "FULL_CODEX_INDEX.md",
     "ext": ".md",
-    "size_bytes": 57601
+    "size_bytes": 57659
   },
   {
     "path": "docs/Archives/GARDEN_MANIFEST.json",
@@ -2445,7 +2453,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 290914
+    "size_bytes": 291136
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
