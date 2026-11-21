@@ -18,7 +18,7 @@ def validate(data, root=ROOT):
     if not isinstance(data, dict) or data.get("schema") != "acacia.cev/0.1" or not isinstance(data.get("records"), list):
         return ["Invalid CEV envelope"]
     seen = set()
-    allowed_record_keys = {"id", "claim", "claim_type", "verification", "evidence"}
+    allowed_record_keys = {"id", "claim", "claim_type", "verification", "evidence", "limitations"}
     allowed_evidence_keys = {"path", "excerpt", "sha256"}
     for i, record in enumerate(data["records"]):
         tag = f"records[{i}]"
@@ -27,6 +27,9 @@ def validate(data, root=ROOT):
             continue
         for key in record.keys() - allowed_record_keys:
             errors.append(f"{tag}: unknown record field {key!r}")
+        limitations = record.get("limitations", [])
+        if not isinstance(limitations, list) or any(not isinstance(value, str) or not value.strip() for value in limitations):
+            errors.append(f"{tag}: limitations must be a list of nonempty strings")
         identifier = record.get("id")
         if not isinstance(identifier, str) or not identifier or identifier in seen:
             errors.append(f"{tag}: missing or duplicate id")
