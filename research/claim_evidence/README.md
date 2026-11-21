@@ -20,4 +20,6 @@ python3 -m unittest discover -s research/claim_evidence -p 'test_*.py'
 - A citation to `AUTHORITY.json` never grants the claim or the validator authority. Authority remains governed by that file.
 - Negative controls deliberately test false evidence and unsafe paths.
 
-Hardening rule: `independently_verified` is deliberately rejected until a separate, auditable independent-review protocol is implemented. `evidence_checked` means only that the local excerpt matches; SHA-256 remains optional in v0.1 for backward compatibility and must not be described as mandatory provenance.\n\nNext: commit-pinned provenance, claim/evidence entailment evaluation, calibration and contradiction fixtures, and a separate non-circular independent-review protocol.
+Hardening rule: `independently_verified` is deliberately rejected until a separate, auditable independent-review protocol is implemented. `evidence_checked` means only that the local excerpt matches; SHA-256 remains optional in v0.1 for backward compatibility and must not be described as mandatory provenance.
+
+Next: commit-pinned provenance, claim/evidence entailment evaluation, calibration and contradiction fixtures, and a separate non-circular independent-review protocol.
