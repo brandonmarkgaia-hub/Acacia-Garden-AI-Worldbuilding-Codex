@@ -37,6 +37,17 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Refuse tracked symlinks and submodules
+        shell: bash
+        run: |
+          # Refuse tracked non-regular files before generators read or write paths.
+          bad="$(git ls-files --stage | awk '$1 != "100644" && $1 != "100755"')"
+          if [ -n "$bad" ]; then
+            printf '%s\n' "$bad"
+            echo "::error::Tracked symlinks or submodules are not allowed in this job's inputs."
+            exit 1
+          fi
+
       - name: Audit empty and near-empty Markdown files
         shell: bash
         run: |
@@ -428,7 +439,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git diff --binary -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json > /tmp/codex-generated-drift.patch
+          # Include newly regenerated files in drift detection without staging their content.
+          # Compare raw bytes: both commands read attributes from the empty tree, so no committed
+          # .gitattributes (an LFS filter, eol or ident) can stand between regenerated files and the commit.
+          no_attrs="$(git hash-object -t tree /dev/null)"
+          git --attr-source="$no_attrs" add --intent-to-add --force -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json
+          git --attr-source="$no_attrs" diff --binary -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json > /tmp/codex-generated-drift.patch
           if [ -s /tmp/codex-generated-drift.patch ]; then
             echo "Generated artifacts differ from committed files. See review artifact."
             echo "::group::Changed generated paths"

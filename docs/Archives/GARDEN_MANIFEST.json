@@ -2453,7 +2453,7 @@
     "category": "Archives",
     "name": "GARDEN_MANIFEST.json",
     "ext": ".json",
-    "size_bytes": 291831
+    "size_bytes": 292411
   },
   {
     "path": "docs/Archives/INFRASTRUCTURE_HARDENING_2026-08.md",
@@ -11197,7 +11197,7 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 1573
+    "size_bytes": 1885
   },
   {
     "path": "research/claim_evidence/examples.json",
@@ -11208,12 +11208,36 @@
     "size_bytes": 823
   },
   {
+    "path": "research/claim_evidence/test_adversarial_regressions.py",
+    "top": "research",
+    "category": "",
+    "name": "test_adversarial_regressions.py",
+    "ext": ".py",
+    "size_bytes": 11518
+  },
+  {
+    "path": "research/claim_evidence/test_cold_wall.py",
+    "top": "research",
+    "category": "",
+    "name": "test_cold_wall.py",
+    "ext": ".py",
+    "size_bytes": 2825
+  },
+  {
+    "path": "research/claim_evidence/test_review_263.py",
+    "top": "research",
+    "category": "",
+    "name": "test_review_263.py",
+    "ext": ".py",
+    "size_bytes": 4806
+  },
+  {
     "path": "research/claim_evidence/test_validate.py",
     "top": "research",
     "category": "",
     "name": "test_validate.py",
     "ext": ".py",
-    "size_bytes": 1516
+    "size_bytes": 2689
   },
   {
     "path": "research/claim_evidence/validate.py",
@@ -11221,7 +11245,7 @@
     "category": "",
     "name": "validate.py",
     "ext": ".py",
-    "size_bytes": 3598
+    "size_bytes": 6106
   },
   {
     "path": "rings.html",
