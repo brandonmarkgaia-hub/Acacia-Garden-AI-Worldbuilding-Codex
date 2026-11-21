@@ -57,7 +57,11 @@ def validate(data, root=ROOT):
             if file.is_symlink() or not file.is_file():
                 errors.append(f"{prefix}: missing or symlink source")
                 continue
-            content = file.read_bytes()
+            try:
+                content = file.read_bytes()
+            except OSError as exc:
+                errors.append(f"{prefix}: unreadable source ({type(exc).__name__})")
+                continue
             excerpt = item.get("excerpt")
             if not isinstance(excerpt, str) or not excerpt or excerpt.encode("utf-8") not in content:
                 errors.append(f"{prefix}: excerpt absent")
