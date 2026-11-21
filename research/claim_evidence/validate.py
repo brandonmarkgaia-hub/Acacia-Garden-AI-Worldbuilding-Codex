@@ -54,16 +54,20 @@ def validate(data, root=ROOT):
                 errors.append(f"{prefix}: path not allowlisted")
                 continue
             file = root / path
-            if file.is_symlink() or not file.is_file():
-                errors.append(f"{prefix}: missing or symlink source")
-                continue
             try:
+                if file.is_symlink() or not file.is_file():
+                    errors.append(f"{prefix}: missing or symlink source")
+                    continue
                 content = file.read_bytes()
             except OSError as exc:
                 errors.append(f"{prefix}: unreadable source ({type(exc).__name__})")
                 continue
             excerpt = item.get("excerpt")
-            if not isinstance(excerpt, str) or not excerpt or excerpt.encode("utf-8") not in content:
+            try:
+                needle = excerpt.encode("utf-8") if isinstance(excerpt, str) else b""
+            except UnicodeEncodeError:
+                needle = b""
+            if not needle or needle not in content:
                 errors.append(f"{prefix}: excerpt absent")
             digest = item.get("sha256")
             if digest is not None and (not isinstance(digest, str) or digest != hashlib.sha256(content).hexdigest()):
@@ -102,7 +106,8 @@ def main():
         return 2
     for error in errors:
         print(error, file=sys.stderr)
-    print(f"CEV records: {len(data.get('records', [])) if isinstance(data, dict) else 0}; errors: {len(errors)}")
+    records = data.get("records") if isinstance(data, dict) else None
+    print(f"CEV records: {len(records) if isinstance(records, list) else 0}; errors: {len(errors)}")
     return 1 if errors else 0
 
 
