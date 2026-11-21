@@ -428,6 +428,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Include newly regenerated files in drift detection without staging their content.
+          git add --intent-to-add -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json
           git diff --binary -- docs/Novellas docs/Archives docs/api/GARDEN_API_INDEX.json > /tmp/codex-generated-drift.patch
           if [ -s /tmp/codex-generated-drift.patch ]; then
             echo "Generated artifacts differ from committed files. See review artifact."
