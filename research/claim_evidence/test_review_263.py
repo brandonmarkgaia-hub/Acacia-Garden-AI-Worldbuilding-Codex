@@ -41,7 +41,7 @@ class Review263Findings(unittest.TestCase):
             proc = subprocess.run([sys.executable, str(HERE / "validate.py"), str(p)], capture_output=True, timeout=60)
         self.assertEqual(proc.returncode, 2)
         self.assertFalse([line for line in proc.stderr.decode("utf-8", "replace").splitlines() if line.startswith("::")])
-        self.assertNotIn(b"\\x1b", proc.stderr)
+        self.assertNotIn(b"\x1b", proc.stderr)
 
     def test_L3_unknown_field_errors_are_sorted(self):
         errors = validate(envelope(record(zeta=1, alpha=2, mu=3, beta=4)))
@@ -58,7 +58,7 @@ class Review263Coverage(unittest.TestCase):
             self.assertTrue(any(f"unknown evidence field {key!r}" in e for e in errors))
 
     def test_C_bad_limitations_rejected(self):
-        for bad in ("a note", {}, None, [1], [""], ["   \\t"], [None], ["ok", 2]):
+        for bad in ("a note", {}, None, [1], [""], ["   \t"], [None], ["ok", 2]):
             with self.subTest(value=bad):
                 errors = validate(envelope(record(limitations=bad)))
                 self.assertTrue(any("limitations must be a list of nonempty strings" in e for e in errors))
@@ -70,10 +70,10 @@ class Review263Coverage(unittest.TestCase):
         self.assertEqual(validate(envelope(record())), [])
 
     def test_C_unknown_field_names_are_escaped(self):
-        errors = validate(envelope(record(**{"x\\n::warning::spoof": 1})))
+        errors = validate(envelope(record(**{"x\n::warning::spoof": 1})))
         unknown = [e for e in errors if "unknown record field" in e]
         self.assertEqual(len(unknown), 1)
-        self.assertNotIn("\\n", unknown[0])
+        self.assertNotIn("\n", unknown[0])
 
     @unittest.skipUnless(hasattr(os, "mkfifo") and hasattr(signal, "SIGALRM"), "FIFOs/SIGALRM unavailable")
     def test_C_lstat_recheck_rejects_non_regular_file(self):
