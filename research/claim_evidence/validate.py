@@ -4,6 +4,8 @@ import hashlib
 import json
 import pathlib
 import sys
+import os
+import stat
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 ALLOWED = {"AUTHORITY.json", "AGENTS.md", "DISCOVERY.md", "STATUS.json", "llms.txt"}
@@ -16,11 +18,15 @@ def validate(data, root=ROOT):
     if not isinstance(data, dict) or data.get("schema") != "acacia.cev/0.1" or not isinstance(data.get("records"), list):
         return ["Invalid CEV envelope"]
     seen = set()
+    allowed_record_keys = {"id", "claim", "claim_type", "verification", "evidence"}
+    allowed_evidence_keys = {"path", "excerpt", "sha256"}
     for i, record in enumerate(data["records"]):
         tag = f"records[{i}]"
         if not isinstance(record, dict):
             errors.append(f"{tag}: not an object")
             continue
+        for key in record.keys() - allowed_record_keys:
+            errors.append(f"{tag}: unknown record field {key!r}")
         identifier = record.get("id")
         if not isinstance(identifier, str) or not identifier or identifier in seen:
             errors.append(f"{tag}: missing or duplicate id")
@@ -49,6 +55,8 @@ def validate(data, root=ROOT):
             if not isinstance(item, dict):
                 errors.append(f"{prefix}: not an object")
                 continue
+            for key in item.keys() - allowed_evidence_keys:
+                errors.append(f"{prefix}: unknown evidence field {key!r}")
             path = item.get("path")
             if not isinstance(path, str) or path not in ALLOWED:
                 errors.append(f"{prefix}: path not allowlisted")
@@ -57,6 +65,10 @@ def validate(data, root=ROOT):
             try:
                 if file.is_symlink() or not file.is_file():
                     errors.append(f"{prefix}: missing or symlink source")
+                    continue
+                metadata = file.stat(follow_symlinks=False)
+                if not stat.S_ISREG(metadata.st_mode) or metadata.st_nlink != 1:
+                    errors.append(f"{prefix}: source is not a single-link regular file")
                     continue
                 content = file.read_bytes()
             except OSError as exc:
@@ -67,7 +79,7 @@ def validate(data, root=ROOT):
                 needle = excerpt.encode("utf-8") if isinstance(excerpt, str) else b""
             except UnicodeEncodeError:
                 needle = b""
-            if not needle or needle not in content:
+            if not needle or not needle.strip() or needle not in content:
                 errors.append(f"{prefix}: excerpt absent")
             digest = item.get("sha256")
             if digest is not None and (not isinstance(digest, str) or digest != hashlib.sha256(content).hexdigest()):
