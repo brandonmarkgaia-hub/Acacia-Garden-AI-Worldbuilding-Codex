@@ -88,7 +88,7 @@ class Review263Coverage(unittest.TestCase):
             previous = signal.signal(signal.SIGALRM, blocked)
             signal.alarm(5)
             try:
-                with mock.patch.object(pathlib.Path, "is_symlink", return_value=False), \\
+                with mock.patch.object(pathlib.Path, "is_symlink", return_value=False), \
                      mock.patch.object(pathlib.Path, "is_file", return_value=True):
                     errors = validate(envelope(record(evidence=[{"path": "AGENTS.md", "excerpt": "x"}])), root=root)
             finally:
