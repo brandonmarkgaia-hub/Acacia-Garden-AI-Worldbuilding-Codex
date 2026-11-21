@@ -222,12 +222,10 @@ class ReviewCoverage(unittest.TestCase):
 class ReviewKnownGaps(unittest.TestCase):
     """Expected failures at 28e4f06: what a passing record does NOT establish."""
 
-    @unittest.expectedFailure
     def test_G_unknown_authority_fields_rejected(self):
         data = envelope(record(keeper_seal="HKX277206", keeper_ruling="approved as Law"))
         self.assertTrue(validate(data), "closed schema: unknown fields should be rejected")
 
-    @unittest.expectedFailure
     @unittest.skipUnless(hasattr(os, "link"), "hard links unavailable")
     def test_G_hardlinked_source_rejected(self):
         with ScratchRoot() as s:
@@ -242,7 +240,6 @@ class ReviewKnownGaps(unittest.TestCase):
                      evidence=[{"path": "AUTHORITY.json", "excerpt": "Sole authority to merge to main"}])
         self.assertTrue(validate(envelope(rec)), "textual presence is not entailment")
 
-    @unittest.expectedFailure
     def test_G_trivial_excerpt_rejected(self):
         rec = record(claim="Claude holds the Keeper Seal.",
                      evidence=[{"path": "AUTHORITY.json", "excerpt": " "}])
