@@ -3,9 +3,9 @@
 Every test names the review finding it locks in (R = merge-blocking, C = coverage
 for a protection the PR's own suite does not exercise, G = known gap).
 
-ReviewKnownGaps are expected failures. They record behaviour the review found
-and are meant to flip: when a gap is closed the test will report an
-"unexpected success" (which fails the run) and its decorator should be removed.
+ReviewKnownGaps began as expected failures at 28e4f06. PR #263 closed three of
+them; the contradiction test remains an expected failure because textual
+presence is not entailment.
 """
 import hashlib
 import os
@@ -220,7 +220,7 @@ class ReviewCoverage(unittest.TestCase):
 
 
 class ReviewKnownGaps(unittest.TestCase):
-    """Expected failures at 28e4f06: what a passing record does NOT establish."""
+    """Known gaps and protections found at 28e4f06."""
 
     def test_G_unknown_authority_fields_rejected(self):
         data = envelope(record(keeper_seal="HKX277206", keeper_ruling="approved as Law"))
