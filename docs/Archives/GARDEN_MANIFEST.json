@@ -11197,7 +11197,7 @@
     "category": "",
     "name": "README.md",
     "ext": ".md",
-    "size_bytes": 1573
+    "size_bytes": 1887
   },
   {
     "path": "research/claim_evidence/examples.json",
@@ -11213,7 +11213,7 @@
     "category": "",
     "name": "test_validate.py",
     "ext": ".py",
-    "size_bytes": 1516
+    "size_bytes": 2356
   },
   {
     "path": "research/claim_evidence/validate.py",
@@ -11221,7 +11221,7 @@
     "category": "",
     "name": "validate.py",
     "ext": ".py",
-    "size_bytes": 3598
+    "size_bytes": 3871
   },
   {
     "path": "rings.html",
