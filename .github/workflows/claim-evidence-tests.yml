@@ -48,3 +48,64 @@ jobs:
         run: python3 -c "import sys, unittest; n = unittest.defaultTestLoader.discover('research/claim_evidence', 'test_*.py').countTestCases(); print(n, 'CEV tests discovered'); sys.exit(0 if n else 1)"
       - name: Run CEV negative controls
         run: python3 -m unittest discover -s research/claim_evidence -p 'test_*.py' -v
+
+  artifact-regeneration-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout exact PR correction branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Rebuild collision audit and manifest in ephemeral checkout
+        shell: bash
+        run: |
+          set -uo pipefail
+          python .github/scripts/audit_title_collisions.py
+          audit_exit=$?
+          echo "COLLISION_GENERATOR_EXIT=$audit_exit"
+          python - <<'PY'
+          import pathlib, subprocess, sys
+          workflow = pathlib.Path(".github/workflows/garden_codex_maintenance.yml").read_text()
+          start = "          python - << 'PY'\n"
+          end = "\n          PY"
+          if workflow.count(start) != 1:
+              sys.exit("Cannot uniquely locate canonical manifest generator")
+          source = workflow.split(start, 1)[1].split(end, 1)[0]
+          code = "\n".join(line[10:] if line.startswith("          ") else line for line in source.splitlines())
+          result = subprocess.run([sys.executable, "-c", code], check=False)
+          if result.returncode:
+              sys.exit(result.returncode)
+          PY
+          generator_exit=$?
+          echo "MANIFEST_GENERATOR_EXIT=$generator_exit"
+          echo "Regeneration changes (no files committed):"
+          git status --short
+          echo "Authorized artifact diff:"
+          git diff --stat -- docs/Archives/GARDEN_MANIFEST.json docs/Archives/TITLE_COLLISION_AUDIT.json docs/Archives/TITLE_COLLISION_AUDIT.md
+          python - <<'PY'
+          import pathlib, subprocess, sys
+          allowed = {
+              "docs/Archives/GARDEN_MANIFEST.json",
+              "docs/Archives/TITLE_COLLISION_AUDIT.json",
+              "docs/Archives/TITLE_COLLISION_AUDIT.md",
+          }
+          paths = set(subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines())
+          extra = sorted(paths - allowed)
+          print("CHANGED_ARTIFACTS:", sorted(paths & allowed))
+          print("UNAUTHORIZED_DRIFT:", extra)
+          if extra:
+              sys.exit(1)
+          PY
+          scope_exit=$?
+          if (( audit_exit != 0 || generator_exit != 0 || scope_exit != 0 )); then
+            echo "::error::Artifact regeneration requires review: audit=$audit_exit manifest=$generator_exit scope=$scope_exit"
+            exit 1
+          fi
