@@ -30,7 +30,8 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
-    runs-on: ubuntu-latest
+    # Python 3.9 is unavailable on the current ubuntu-latest (26.04) image.
+    runs-on: ${{ matrix.python-version == '3.9' && 'ubuntu-24.04' || 'ubuntu-latest' }}
     timeout-minutes: 5
     steps:
       - name: Checkout repository
