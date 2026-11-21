@@ -30,17 +30,19 @@ def validate(data, root=ROOT):
             errors.append(f"{tag}: missing claim")
         kind = record.get("claim_type")
         status = record.get("verification")
-        if kind not in KINDS:
+        if not isinstance(kind, str) or kind not in KINDS:
             errors.append(f"{tag}: invalid claim_type")
-        if status not in STATUSES:
+        if not isinstance(status, str) or status not in STATUSES:
             errors.append(f"{tag}: invalid verification")
+        if status == "independently_verified":
+            errors.append(f"{tag}: independent verification unsupported without external review protocol")
         evidence = record.get("evidence")
         if not isinstance(evidence, list):
             errors.append(f"{tag}: evidence must be a list")
             continue
         if status != "unverified" and not evidence:
             errors.append(f"{tag}: verified status requires evidence")
-        if kind in {"proposal", "historical_narrative"} and status != "unverified":
+        if isinstance(kind, str) and kind in {"proposal", "historical_narrative"} and status != "unverified":
             errors.append(f"{tag}: proposal/narrative cannot be verified as operational fact")
         for j, item in enumerate(evidence):
             prefix = f"{tag}.evidence[{j}]"
@@ -55,12 +57,16 @@ def validate(data, root=ROOT):
             if file.is_symlink() or not file.is_file():
                 errors.append(f"{prefix}: missing or symlink source")
                 continue
-            content = file.read_bytes()
+            try:
+                content = file.read_bytes()
+            except OSError as exc:
+                errors.append(f"{prefix}: unreadable source ({type(exc).__name__})")
+                continue
             excerpt = item.get("excerpt")
             if not isinstance(excerpt, str) or not excerpt or excerpt.encode("utf-8") not in content:
                 errors.append(f"{prefix}: excerpt absent")
             digest = item.get("sha256")
-            if digest is not None and digest != hashlib.sha256(content).hexdigest():
+            if digest is not None and (not isinstance(digest, str) or digest != hashlib.sha256(content).hexdigest()):
                 errors.append(f"{prefix}: sha256 mismatch")
     return errors
 
