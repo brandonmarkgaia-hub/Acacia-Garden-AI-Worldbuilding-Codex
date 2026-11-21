@@ -42,7 +42,7 @@ def validate(data, root=ROOT):
             continue
         if status != "unverified" and not evidence:
             errors.append(f"{tag}: verified status requires evidence")
-        if kind in {"proposal", "historical_narrative"} and status != "unverified":
+        if isinstance(kind, str) and kind in {"proposal", "historical_narrative"} and status != "unverified":
             errors.append(f"{tag}: proposal/narrative cannot be verified as operational fact")
         for j, item in enumerate(evidence):
             prefix = f"{tag}.evidence[{j}]"
