@@ -11213,7 +11213,7 @@
     "category": "",
     "name": "test_adversarial_regressions.py",
     "ext": ".py",
-    "size_bytes": 11681
+    "size_bytes": 11591
   },
   {
     "path": "research/claim_evidence/test_cold_wall.py",
@@ -11237,7 +11237,7 @@
     "category": "",
     "name": "validate.py",
     "ext": ".py",
-    "size_bytes": 4956
+    "size_bytes": 5936
   },
   {
     "path": "rings.html",
