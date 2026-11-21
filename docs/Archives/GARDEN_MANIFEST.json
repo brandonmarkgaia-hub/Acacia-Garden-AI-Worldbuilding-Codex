@@ -11213,7 +11213,7 @@
     "category": "",
     "name": "test_validate.py",
     "ext": ".py",
-    "size_bytes": 2356
+    "size_bytes": 2689
   },
   {
     "path": "research/claim_evidence/validate.py",
@@ -11221,7 +11221,7 @@
     "category": "",
     "name": "validate.py",
     "ext": ".py",
-    "size_bytes": 3871
+    "size_bytes": 4037
   },
   {
     "path": "rings.html",
