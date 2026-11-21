@@ -17,6 +17,8 @@ def validate(data, root=ROOT):
     errors = []
     if not isinstance(data, dict) or data.get("schema") != "acacia.cev/0.1" or not isinstance(data.get("records"), list):
         return ["Invalid CEV envelope"]
+    for key in sorted(data.keys() - {"schema", "records"}, key=repr):
+        errors.append(f"unknown envelope field {key!r}")
     seen = set()
     allowed_record_keys = {"id", "claim", "claim_type", "verification", "evidence", "limitations"}
     allowed_evidence_keys = {"path", "excerpt", "sha256"}
@@ -25,7 +27,7 @@ def validate(data, root=ROOT):
         if not isinstance(record, dict):
             errors.append(f"{tag}: not an object")
             continue
-        for key in record.keys() - allowed_record_keys:
+        for key in sorted(record.keys() - allowed_record_keys, key=repr):
             errors.append(f"{tag}: unknown record field {key!r}")
         limitations = record.get("limitations", [])
         if not isinstance(limitations, list) or any(not isinstance(value, str) or not value.strip() for value in limitations):
@@ -58,7 +60,7 @@ def validate(data, root=ROOT):
             if not isinstance(item, dict):
                 errors.append(f"{prefix}: not an object")
                 continue
-            for key in item.keys() - allowed_evidence_keys:
+            for key in sorted(item.keys() - allowed_evidence_keys, key=repr):
                 errors.append(f"{prefix}: unknown evidence field {key!r}")
             path = item.get("path")
             if not isinstance(path, str) or path not in ALLOWED:
@@ -69,7 +71,7 @@ def validate(data, root=ROOT):
                 if file.is_symlink() or not file.is_file():
                     errors.append(f"{prefix}: missing or symlink source")
                     continue
-                metadata = file.stat(follow_symlinks=False)
+                metadata = file.lstat()  # Python 3.9 compatible
                 if not stat.S_ISREG(metadata.st_mode) or metadata.st_nlink != 1:
                     errors.append(f"{prefix}: source is not a single-link regular file")
                     continue
@@ -99,7 +101,7 @@ def main():
             result = {}
             for key, value in pairs:
                 if key in result:
-                    raise ValueError(f"Duplicate JSON key: {key}")
+                    raise ValueError(f"Duplicate JSON key: {key!r}")
                 result[key] = value
             return result
 
