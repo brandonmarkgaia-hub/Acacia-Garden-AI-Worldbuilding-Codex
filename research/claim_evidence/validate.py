@@ -76,11 +76,30 @@ def main():
         print("usage: validate.py RECORDS.json", file=sys.stderr)
         return 2
     try:
-        data = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"))
-    except (OSError, ValueError) as exc:
+        def reject_duplicate_keys(pairs):
+            result = {}
+            for key, value in pairs:
+                if key in result:
+                    raise ValueError(f"Duplicate JSON key: {key}")
+                result[key] = value
+            return result
+
+        def reject_nonfinite(value):
+            raise ValueError(f"Non-finite JSON number: {value}")
+
+        data = json.loads(
+            pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"),
+            object_pairs_hook=reject_duplicate_keys,
+            parse_constant=reject_nonfinite,
+        )
+    except (OSError, ValueError, UnicodeError, RecursionError) as exc:
         print(f"Input error: {exc}", file=sys.stderr)
         return 2
-    errors = validate(data)
+    try:
+        errors = validate(data)
+    except (OSError, ValueError, TypeError, UnicodeError, RecursionError, OverflowError) as exc:
+        print(f"Validation error: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2
     for error in errors:
         print(error, file=sys.stderr)
     print(f"CEV records: {len(data.get('records', [])) if isinstance(data, dict) else 0}; errors: {len(errors)}")
