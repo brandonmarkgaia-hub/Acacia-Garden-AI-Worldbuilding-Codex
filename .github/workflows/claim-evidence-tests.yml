@@ -5,11 +5,21 @@ on:
     paths:
       - 'research/claim_evidence/**'
       - '.github/workflows/claim-evidence-tests.yml'
+      - 'AUTHORITY.json'
+      - 'AGENTS.md'
+      - 'DISCOVERY.md'
+      - 'STATUS.json'
+      - 'llms.txt'
   push:
     branches: [main]
     paths:
       - 'research/claim_evidence/**'
       - '.github/workflows/claim-evidence-tests.yml'
+      - 'AUTHORITY.json'
+      - 'AGENTS.md'
+      - 'DISCOVERY.md'
+      - 'STATUS.json'
+      - 'llms.txt'
 
 permissions:
   contents: read
@@ -29,5 +39,7 @@ jobs:
           python-version: '3.11'
       - name: Validate CEV example records
         run: python3 research/claim_evidence/validate.py research/claim_evidence/examples.json
+      - name: Require discovered negative controls
+        run: python3 -c "import sys, unittest; n = unittest.defaultTestLoader.discover('research/claim_evidence', 'test_*.py').countTestCases(); print(n, 'CEV tests discovered'); sys.exit(0 if n else 1)"
       - name: Run CEV negative controls
         run: python3 -m unittest discover -s research/claim_evidence -p 'test_*.py' -v
