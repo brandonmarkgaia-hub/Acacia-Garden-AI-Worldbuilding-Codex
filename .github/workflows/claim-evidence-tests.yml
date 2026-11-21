@@ -109,3 +109,15 @@ jobs:
             echo "::error::Artifact regeneration requires review: audit=$audit_exit manifest=$generator_exit scope=$scope_exit"
             exit 1
           fi
+
+      - name: Upload generated artifact evidence for independent review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pr264-generated-artifacts
+          path: |
+            docs/Archives/GARDEN_MANIFEST.json
+            docs/Archives/TITLE_COLLISION_AUDIT.json
+            docs/Archives/TITLE_COLLISION_AUDIT.md
+          if-no-files-found: error
+          retention-days: 30
